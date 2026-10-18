@@ -38,6 +38,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import http.cookiejar
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -159,14 +160,22 @@ def image_of(x) -> str | None:
 
 # ---------------------------------------------------------------- http
 
+# keeps cookies between requests: some venue sites redirect in a loop without them
+OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+
+
 def get(url: str, params: dict | None = None, timeout: int = 25) -> str:
     if params:
         url = f"{url}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    })
     last = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
+            with OPENER.open(req, timeout=timeout) as r:
                 return r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
         except urllib.error.HTTPError as e:
             last = e
@@ -541,6 +550,10 @@ def main() -> int:
 
     if ok_sources == 0:
         log("Every source failed; keeping the existing events.json.")
+        return 1
+
+    if not collected:
+        log("No shows found tonight; keeping the existing events.json. Check the source lines above.")
         return 1
 
     placements = active_placements(Path(args.sponsored), night)
