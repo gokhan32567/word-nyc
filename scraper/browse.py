@@ -149,7 +149,7 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
             snap.error = "robots.txt asks automated readers not to visit this page"
             return snap
         ctx = await browser.new_context(user_agent=BROWSER_UA, locale="en-US", timezone_id="America/New_York",
-                                        viewport={"width": 1280, "height": 1600})
+                                        viewport={"width": 1280, "height": 1600}, ignore_https_errors=True)
         try:
             page = await ctx.new_page()
 
@@ -160,7 +160,18 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                     await route.continue_()
             await page.route("**/*", block_heavy)
 
-            data = await _capture(page, url, timeout_ms)
+            try:
+                data = await _capture(page, url, timeout_ms)
+            except Exception as first:  # noqa: BLE001 - one retry: flaky DNS/timeouts, or the other www form
+                if not re.search(r"ERR_NAME_NOT_RESOLVED|ERR_CONNECTION|Timeout", str(first)):
+                    raise
+                parts = urllib.parse.urlsplit(url)
+                host = parts.netloc[4:] if parts.netloc.startswith("www.") else "www." + parts.netloc
+                await asyncio.sleep(3)
+                try:
+                    data = await _capture(page, url, timeout_ms)
+                except Exception:  # noqa: BLE001
+                    data = await _capture(page, parts._replace(netloc=host).geturl(), timeout_ms)
             pat = tonight_pattern(night)
             if not pat.search(data["text"] or ""):
                 for cand in _calendar_candidates(data["links"], data["final_url"] or url):
@@ -181,7 +192,7 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
             snap.links, snap.jsonld, snap.tribe = data["links"], data["jsonld"], data["tribe"]
             snap.ical = [ln["href"] for ln in data["links"]
                          if re.search(r"\.ics\b|webcal:|[?&]ical=1|outlook-ical|/ical/?$", ln["href"], re.I)][:3]
-            if (snap.status or 200) in (401, 403, 429, 503) or (len(snap.text) < 1500 and BLOCK_SIGNS.search(snap.text)):
+            if (snap.status or 200) in (401, 403, 406, 409, 429, 503) or (len(snap.text) < 1500 and BLOCK_SIGNS.search(snap.text)):
                 snap.blocked = True
             elif (snap.status or 200) >= 400:
                 snap.error = f"page returned HTTP {snap.status}"

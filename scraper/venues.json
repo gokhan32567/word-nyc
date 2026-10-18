@@ -132,12 +132,6 @@
    "genre": "Jazz"
   },
   {
-   "name": "Rue B",
-   "address": "188 Avenue B, New York, NY 10009",
-   "url": "https://www.rueb-nyc.com/",
-   "genre": "Jazz"
-  },
-  {
    "name": "The Flatiron Room",
    "address": "37 W 26th St, New York, NY 10010",
    "url": "https://www.theflatironroom.com/",
@@ -274,19 +268,25 @@
    "name": "David Geffen Hall",
    "address": "10 Lincoln Center Plaza, New York, NY 10023",
    "url": "https://www.nyphil.org/concerts-tickets/",
-   "genre": "Classical"
+   "genre": "Classical",
+   "lat": 40.7724,
+   "lng": -73.9834
   },
   {
    "name": "Metropolitan Opera House",
    "address": "30 Lincoln Center Plaza, New York, NY 10023",
    "url": "https://www.metopera.org/season/calendar/",
-   "genre": "Opera"
+   "genre": "Opera",
+   "lat": 40.7725,
+   "lng": -73.9843
   },
   {
    "name": "David H. Koch Theater",
    "address": "20 Lincoln Center Plaza, New York, NY 10023",
    "url": "https://www.nycballet.com/season-and-tickets/",
-   "genre": "Ballet & Dance"
+   "genre": "Ballet & Dance",
+   "lat": 40.7718,
+   "lng": -73.9837
   },
   {
    "name": "Chamber Music Society of Lincoln Center",
@@ -298,7 +298,9 @@
    "name": "The Juilliard School",
    "address": "60 Lincoln Center Plaza, New York, NY 10023",
    "url": "https://www.juilliard.edu/calendar",
-   "genre": "Classical"
+   "genre": "Classical",
+   "lat": 40.7737,
+   "lng": -73.9829
   },
   {
    "name": "Manhattan School of Music",
@@ -321,8 +323,9 @@
   {
    "name": "Merkin Hall",
    "address": "129 W 67th St, New York, NY 10023",
-   "url": "https://www.kaufmanmusiccenter.org/mch/",
-   "genre": "Classical"
+   "url": "https://www.kaufmanmusiccenter.org/",
+   "genre": "Classical",
+   "note": "Only concerts in Merkin Hall"
   },
   {
    "name": "Symphony Space",

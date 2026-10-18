@@ -16,6 +16,7 @@ from datetime import date, datetime, timedelta
 from common import (NY, address_of, clean_text, clock, get, has_time, image_of, in_night,
                     names_of, night_window, parse_clock, parse_iso, price_label)
 from genres import GENRES, bucket
+from shows import same_place
 
 EVENT_TYPES = {"event", "musicevent", "comedyevent", "theaterevent", "danceevent", "festival",
                "socialevent", "educationevent", "screeningevent"}
@@ -99,6 +100,10 @@ def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> 
             performers = names_of(d.get("performer"))
             title = (names_of(d.get("name")) or performers or ["TBA"])[0]
             loc = d.get("location") if isinstance(d.get("location"), dict) else {}
+            loc_addr = loc.get("address")
+            region = loc_addr.get("addressRegion") if isinstance(loc_addr, dict) else None
+            if same_place(venue, (names_of(loc.get("name")) or [None])[0], address_of(loc_addr), region) is False:
+                continue  # a promoter's page listing shows at its other venues
             day, t = _date_time(when, raw_start)
             out.append(base_event(
                 venue, title=title, performers=performers,
@@ -110,6 +115,7 @@ def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> 
                 subgenre=clean_text(raw_genre, 60), price=offers_price(d.get("offers")),
                 program=names_of(d.get("workPerformed")), image=image_of(d.get("image")),
                 source="venue-data", listing_url=page_url,
+                _hint=f"{d.get('@type', '')} {raw_genre}",
             ))
     return out
 
@@ -132,6 +138,11 @@ def tribe_events(site_url: str, venue: dict, night: date) -> list[dict]:
         when = parse_iso(str(e.get("start_date", "")))
         if not when or not in_night(when, night):
             continue
+        place = e.get("venue") if isinstance(e.get("venue"), dict) else {}
+        if same_place(venue, html.unescape(place.get("venue") or ""),
+                      " ".join(filter(None, [place.get("address"), place.get("city")])),
+                      place.get("stateprovince") or place.get("state") or place.get("province")) is False:
+            continue  # the same site's calendar for another location
         end_dt = parse_iso(str(e.get("end_date", "")))
         cats = ", ".join(c.get("name", "") for c in e.get("categories") or [])
         day, t = _date_time(when, str(e.get("start_date")))
@@ -142,7 +153,7 @@ def tribe_events(site_url: str, venue: dict, night: date) -> list[dict]:
             genre=bucket(cats, venue.get("genre", "")) if cats else venue.get("genre", "Other"),
             subgenre=clean_text(cats, 60), price=clean_text(e.get("cost"), 40),
             image=image_of((e.get("image") or {}).get("url")) if isinstance(e.get("image"), dict) else None,
-            source="venue-data", listing_url=site_url,
+            source="venue-data", listing_url=site_url, _hint=cats,
         ))
     return out
 

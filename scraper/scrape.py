@@ -39,6 +39,7 @@ from genres import GENRES, bucket  # noqa: E402
 import feeds  # noqa: E402
 import geo  # noqa: E402
 import report  # noqa: E402
+from shows import is_show, is_strict  # noqa: E402
 import tm  # noqa: E402
 
 # Claude Haiku 5.5 list price per million tokens (prompts up to 100K tokens)
@@ -69,15 +70,21 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
         attempts.append(("iCal", lambda ics=ics: feeds.ical_events(ics, v, night)))
     if v.get("eventbrite") and eb_token:
         attempts.append(("Eventbrite", lambda: feeds.eventbrite_events(v["eventbrite"], eb_token, v, night)))
+    strict = is_strict(v)
     for label, fn in attempts:
         try:
-            found = fn()
+            listed = fn()
         except Exception as e:  # noqa: BLE001
             log(f"  {v['name']}: {label} failed ({type(e).__name__}: {str(e)[:100]})")
             continue
-        if found:
-            row.update(method=label, status="ok", shows=len(found))
-            return found, row
+        if not listed:
+            continue
+        found = [e for e in listed if is_show(e["title"], e.pop("_hint", ""), strict)]
+        dropped = len(listed) - len(found)
+        note = f"left out {dropped} non-performance listing{'s' * (dropped != 1)}" if dropped else None
+        # The venue's own calendar data covers the whole night, so no need to read the page with AI too.
+        row.update(method=label, status="ok" if found else "none-tonight", shows=len(found), detail=note)
+        return found, row
 
     if snap.blocked:
         row.update(status="blocked", detail=f"HTTP {snap.status}" if snap.status else "bot check page")
@@ -94,6 +101,7 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
     except ai.AIError as e:
         row.update(status="error", method="AI", detail=str(e)[:200])
         return [], row
+    found = [e for e in found if is_show(e["title"])]
     row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found),
                detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
                        if info["rejected"] else info["page_kind"]),
@@ -282,7 +290,7 @@ def main() -> int:
     key = os.environ.get("TICKETMASTER_API_KEY", "").strip()
     if key:
         try:
-            found = tm.from_ticketmaster(night, key)
+            found = [e for e in tm.from_ticketmaster(night, key) if is_show(e["title"])]
             log(f"  ticketmaster: {len(found)} events")
             collected += found
             ok_sources += 1
