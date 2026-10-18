@@ -1,0 +1,1405 @@
+{
+ "date": "2026-10-18",
+ "generated": "2026-10-18T19:32:00-04:00",
+ "totals": {
+  "venues": 154,
+  "shows": 78,
+  "ok": 13,
+  "none-tonight": 0,
+  "blocked": 12,
+  "error": 12,
+  "robots": 0,
+  "no-location": 4,
+  "skipped": 113
+ },
+ "shows_by_source": {
+  "venue-data": 50,
+  "ticketmaster": 28
+ },
+ "ai": {
+  "calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "venues": [
+  {
+   "name": "54 Below",
+   "url": "https://54below.org/",
+   "read_url": "https://54below.org/calendar/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "92NY",
+   "url": "https://www.92ny.org/",
+   "read_url": "https://www.92ny.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Americas Society",
+   "url": "https://www.as-coa.org/",
+   "read_url": "https://www.as-coa.org/articles/music-americas-fall-2026-concerts",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Apollo Theater",
+   "url": "https://www.apollotheater.org/",
+   "read_url": "https://www.apollotheater.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Areté Venue & Gallery",
+   "url": "https://www.aretevenue.com/",
+   "read_url": "https://www.aretevenue.com/calendar",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Arlene's Grocery",
+   "url": "https://www.arlenesgrocery.net/",
+   "read_url": "https://www.arlenesgrocery.net/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Arthur's Tavern",
+   "url": "https://www.arthurstavernnyc.com/",
+   "read_url": "https://arthurstavernnyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Austrian Cultural Forum",
+   "url": "https://www.acfny.org/",
+   "read_url": "https://acfny.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Baby's All Right",
+   "url": "https://babysallright.com/",
+   "read_url": "https://babysallright.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "BAM",
+   "url": "https://www.bam.org/",
+   "read_url": "https://www.bam.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Bar Bayeux",
+   "url": "https://www.barbayeux.com/",
+   "read_url": "https://www.barbayeux.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Barbès",
+   "url": "https://www.barbesbrooklyn.com/",
+   "read_url": "https://www.barbesbrooklyn.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Baryshnikov Arts",
+   "url": "https://bacnyc.org/",
+   "read_url": "https://baryshnikovarts.org/explore/performance-history/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Bembe",
+   "url": "https://www.bembe.us/",
+   "read_url": "https://www.bembe.us/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Berlin",
+   "url": "https://www.berlinundera.com/",
+   "read_url": "https://www.berlinundera.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.berlinundera.com/"
+  },
+  {
+   "name": "Bill's Place",
+   "url": "https://www.billsplaceharlem.com/",
+   "read_url": "https://billsplaceharlem.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Birdland",
+   "url": "https://www.birdlandjazz.com/",
+   "read_url": "https://www.birdlandjazz.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Blue Note Jazz Club",
+   "url": "https://www.bluenotejazz.com/nyc/shows/",
+   "read_url": "https://www.bluenotejazz.com/nyc/shows/?calendar_view",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Bowery Ballroom",
+   "url": "https://www.boweryballroom.com/",
+   "read_url": "https://mercuryeastpresents.com/boweryballroom/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "BRIC House",
+   "url": "https://bricartsmedia.org/",
+   "read_url": "https://bricartsmedia.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Brooklyn Bowl",
+   "url": "https://www.brooklynbowl.com/brooklyn",
+   "read_url": "https://www.brooklynbowl.com/brooklyn",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Cafe Wha?",
+   "url": "https://cafewha.com/",
+   "read_url": "https://www.cafewha.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Caffe Vivaldi",
+   "url": "https://www.caffevivaldi.com/",
+   "read_url": "https://caffevivaldi.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Café Carlyle",
+   "url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/cafe-carlyle",
+   "read_url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/cafe-carlyle",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Carnegie Hall",
+   "url": "https://www.carnegiehall.org/Calendar",
+   "read_url": "https://www.carnegiehall.org/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Cathedral of St. John the Divine",
+   "url": "https://www.stjohndivine.org/",
+   "read_url": "https://www.stjohndivine.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Cellar Dog",
+   "url": "https://www.cellardog.net/",
+   "read_url": "https://www.cellardog.net/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Chamber Music Society of Lincoln Center",
+   "url": "https://www.chambermusicsociety.org/",
+   "read_url": "https://www.chambermusicsociety.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Chelsea Table + Stage",
+   "url": "https://www.chelseatableandstage.com/",
+   "read_url": "https://chelseatableandstage.com/new-york-city-chelsea-table-and-stage-events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Christ & St. Stephen's Church",
+   "url": "https://www.csschurch.org/",
+   "read_url": "https://www.csschurch.org/music-history",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Church of Saint Mary the Virgin",
+   "url": "https://www.stmvnyc.org/",
+   "read_url": "https://www.stmvnyc.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Church of St. Ignatius Loyola",
+   "url": "https://www.smssconcerts.org/",
+   "read_url": "https://bevardantesplads.com/English",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Church of St. Luke in the Fields",
+   "url": "https://www.stlukeinthefields.org/",
+   "read_url": "https://stlukeinthefields.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Church of the Ascension",
+   "url": "https://www.voicesofascension.org/",
+   "read_url": "https://www.voicesofascension.org/concerts-tickets",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "City Winery",
+   "url": "https://citywinery.com/new-york-city",
+   "read_url": "https://citywinery.com/pages/locations/new-york-city",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Close Up",
+   "url": "https://www.closeupnyc.com/",
+   "read_url": "https://www.closeupnyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Club Bonafide",
+   "url": "https://www.clubbonafide.com/",
+   "read_url": "https://www.clubbonafide.com/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "Danspace Project",
+   "url": "https://danspaceproject.org/",
+   "read_url": "https://danspaceproject.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "David Geffen Hall",
+   "url": "https://www.nyphil.org/concerts-tickets/",
+   "status": "no-location",
+   "shows": 0,
+   "detail": "10 Lincoln Center Plaza, New York, NY 10023"
+  },
+  {
+   "name": "David H. Koch Theater",
+   "url": "https://www.nycballet.com/season-and-tickets/",
+   "status": "no-location",
+   "shows": 0,
+   "detail": "20 Lincoln Center Plaza, New York, NY 10023"
+  },
+  {
+   "name": "DiMenna Center for Classical Music",
+   "url": "https://www.dimennacenter.org/",
+   "read_url": "https://dimennacenter.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Don't Tell Mama",
+   "url": "https://www.donttellmamanyc.com/",
+   "read_url": "https://donttellmamanyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Downtown Music Gallery",
+   "url": "https://www.downtownmusicgallery.com/",
+   "read_url": "https://www.downtownmusicgallery.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
+  },
+  {
+   "name": "Drom",
+   "url": "https://www.dromnyc.com/",
+   "read_url": "https://dromnyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Elsewhere",
+   "url": "https://www.elsewherebrooklyn.com/",
+   "read_url": "https://www.elsewhere.club/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Fifth Avenue Presbyterian Church",
+   "url": "https://www.fapc.org/",
+   "read_url": "https://www.fapc.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Flushing Town Hall",
+   "url": "https://www.flushingtownhall.org/",
+   "read_url": "https://www.flushingtownhall.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Gibney",
+   "url": "https://gibneydance.org/",
+   "read_url": "https://gibneydance.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Ginny's Supper Club",
+   "url": "https://www.ginnyssupperclub.com/",
+   "read_url": "https://www.ginnyssupperclub.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Gold Sounds",
+   "url": "https://www.goldsoundsbar.com/",
+   "read_url": "https://www.goldsoundsbar.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.goldsoundsbar.com/"
+  },
+  {
+   "name": "Good Room",
+   "url": "https://goodroombk.com/",
+   "read_url": "https://goodroombk.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://goodroombk.com/"
+  },
+  {
+   "name": "Groove",
+   "url": "https://www.clubgroovenyc.com/",
+   "read_url": "https://www.clubgroovenyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Harlem Stage",
+   "url": "https://www.harlemstage.org/",
+   "read_url": "https://www.harlemstage.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Holy Trinity Lutheran Church",
+   "url": "https://www.holytrinitynyc.org/",
+   "read_url": "https://www.holytrinitynyc.org/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Ibeam Brooklyn",
+   "url": "https://www.ibeambrooklyn.com/",
+   "read_url": "https://www.ibeambrooklyn.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "ISSUE Project Room",
+   "url": "https://issueprojectroom.org/",
+   "read_url": "https://issueprojectroom.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Jazz at Lincoln Center",
+   "url": "https://jazz.org/",
+   "read_url": "https://jazz.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Joe's Pub",
+   "url": "https://publictheater.org/joes-pub/",
+   "read_url": "https://publictheater.org/joes-pub/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "Knockdown Center",
+   "url": "https://knockdown.center/",
+   "read_url": "https://knockdown.center/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 429"
+  },
+  {
+   "name": "Kupferberg Center for the Arts",
+   "url": "https://www.kupferbergcenter.org/",
+   "read_url": "https://kupferbergcenter.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "La MaMa",
+   "url": "https://www.lamama.org/",
+   "read_url": "https://lamama.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Le Poisson Rouge",
+   "url": "https://lpr.com/",
+   "read_url": "https://lpr.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Lehman Center for the Performing Arts",
+   "url": "https://www.lehmancenter.org/",
+   "read_url": "https://www.lehmancenter.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Littlefield",
+   "url": "https://littlefieldnyc.com/",
+   "read_url": "https://littlefieldnyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Manhattan School of Music",
+   "url": "https://www.msmnyc.edu/calendar/",
+   "read_url": "https://www.msmnyc.edu/calendar/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.msmnyc.edu/calendar/"
+  },
+  {
+   "name": "Mannes School of Music",
+   "url": "https://www.newschool.edu/mannes/events/",
+   "read_url": "https://www.newschool.edu/mannes/events/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 429"
+  },
+  {
+   "name": "Market Hotel",
+   "url": "https://www.markethotel.org/",
+   "read_url": "https://www.markethotel.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Mehanata Bulgarian Bar",
+   "url": "https://www.mehanata.com/",
+   "read_url": "https://mehanata.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Mercury Lounge",
+   "url": "https://www.mercuryeastpresents.com/mercurylounge/",
+   "read_url": "https://mercuryeastpresents.com/mercurylounge/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Merkin Hall",
+   "url": "https://www.kaufmanmusiccenter.org/mch/",
+   "read_url": "https://www.kaufmanmusiccenter.org/mch/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "page returned HTTP 404"
+  },
+  {
+   "name": "Metropolitan Opera House",
+   "url": "https://www.metopera.org/season/calendar/",
+   "status": "no-location",
+   "shows": 0,
+   "detail": "30 Lincoln Center Plaza, New York, NY 10023"
+  },
+  {
+   "name": "Mezzrow",
+   "url": "https://www.smallslive.com/",
+   "read_url": "https://www.smallslive.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Miller Theatre",
+   "url": "https://www.millertheatre.com/events",
+   "read_url": "https://www.millertheatre.com/events?page=1",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Minton's Playhouse",
+   "url": "https://www.mintonsharlem.com/",
+   "read_url": "https://mintonsharlem.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Music Hall of Williamsburg",
+   "url": "https://www.musichallofwilliamsburg.com/",
+   "read_url": "https://www.bowerypresents.com/calendar/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "National Jazz Museum in Harlem",
+   "url": "https://jmih.org/",
+   "read_url": "https://jmih.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "National Sawdust",
+   "url": "https://www.nationalsawdust.org/",
+   "read_url": "https://www.nationalsawdust.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "New York City Center",
+   "url": "https://www.nycitycenter.org/",
+   "read_url": "https://www.nycitycenter.org/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "New York Live Arts",
+   "url": "https://newyorklivearts.org/",
+   "read_url": "https://newyorklivearts.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Nowadays",
+   "url": "https://nowadays.nyc/",
+   "read_url": "https://nowadays.nyc/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Nublu Classic",
+   "url": "https://nublu.net/",
+   "read_url": "https://nublu.net/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "OPERA America National Opera Center",
+   "url": "https://www.operaamerica.org/",
+   "read_url": "https://www.operaamerica.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Ornithology Jazz Club",
+   "url": "https://www.ornithologyjazzclub.com/",
+   "read_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Paddy Reilly's Music Bar",
+   "url": "https://www.paddyreillys.com/",
+   "read_url": "https://www.paddyreillys.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.paddyreillys.com/"
+  },
+  {
+   "name": "Pangea",
+   "url": "https://www.pangeanyc.com/",
+   "read_url": "https://www.pangeanyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Park Avenue Armory",
+   "url": "https://www.armoryonpark.org/",
+   "read_url": "https://www.armoryonpark.org/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "Pioneer Works",
+   "url": "https://pioneerworks.org/",
+   "read_url": "https://pioneerworks.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Public Records",
+   "url": "https://publicrecords.nyc/",
+   "read_url": "https://publicrecords.nyc/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Purgatory",
+   "url": "https://www.purgatorybk.com/",
+   "read_url": "https://www.purgatorybk.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Racket",
+   "url": "https://www.racketnyc.com/",
+   "read_url": "https://www.racketnyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Rockwood Music Hall",
+   "url": "https://www.rockwoodmusichall.com/",
+   "read_url": "https://www.rockwoodmusichall.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.rockwoodmusichall.com/"
+  },
+  {
+   "name": "Room 623 at B2 Harlem",
+   "url": "https://www.room623.com/",
+   "read_url": "https://www.room623.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "page returned HTTP 404"
+  },
+  {
+   "name": "Roulette",
+   "url": "https://roulette.org/",
+   "read_url": "https://roulette.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Rue B",
+   "url": "https://www.rueb-nyc.com/",
+   "read_url": "https://www.rueb-nyc.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.rueb-nyc.com/"
+  },
+  {
+   "name": "S.O.B.'s",
+   "url": "https://sobs.com/",
+   "read_url": "https://sobs.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Saint Peter's Church",
+   "url": "https://www.saintpeters.org/",
+   "read_url": "https://www.saintpeters.org/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Saint Thomas Church Fifth Avenue",
+   "url": "https://www.saintthomaschurch.org/",
+   "read_url": "https://www.saintthomaschurch.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Scandinavia House",
+   "url": "https://www.scandinaviahouse.org/",
+   "read_url": "https://www.scandinaviahouse.org/event/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Scholes Street Studio",
+   "url": "https://scholesstreetstudio.com/",
+   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Sheen Center",
+   "url": "https://www.sheencenter.org/",
+   "read_url": "https://www.sheencenter.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Silvana",
+   "url": "https://www.silvana-nyc.com/",
+   "read_url": "https://www.silvana-nyc.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Sistas' Place",
+   "url": "https://www.sistasplace.org/",
+   "read_url": "https://sistasplace.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Skinny Dennis",
+   "url": "https://www.skinnydennisbar.com/",
+   "read_url": "https://circlesealcontrols.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Smalls Jazz Club",
+   "url": "https://www.smallslive.com/",
+   "read_url": "https://www.smallslive.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Smoke Jazz Club",
+   "url": "https://www.smokejazz.com/",
+   "read_url": "https://tickets.smokejazz.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Snug Harbor Cultural Center",
+   "url": "https://snug-harbor.org/",
+   "read_url": "https://snug-harbor.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Soapbox Gallery",
+   "url": "https://www.soapboxgallery.org/",
+   "read_url": "https://www.soapboxgallery.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "St. Bartholomew's Church",
+   "url": "https://stbarts.org/",
+   "read_url": "https://stbarts.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "St. George Theatre",
+   "url": "https://www.stgeorgetheatre.com/",
+   "read_url": "https://stgeorgetheatre.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "St. Patrick's Cathedral",
+   "url": "https://saintpatrickscathedral.org/",
+   "read_url": "https://saintpatrickscathedral.org/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "Sunnyvale",
+   "url": "https://www.sunnyvalebk.com/",
+   "read_url": "https://www.sunnyvalebk.com/calendar/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Swing 46",
+   "url": "https://www.swing46.nyc/",
+   "read_url": "https://swing46.nyc/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Symphony Space",
+   "url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Tenri Cultural Institute",
+   "url": "https://tenri.org/",
+   "read_url": "https://tenri.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Terra Blues",
+   "url": "https://www.terrablues.com/",
+   "read_url": "https://www.terrablues.com/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Terraza 7",
+   "url": "https://www.terraza7.com/",
+   "read_url": "https://www.terraza7.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Bitter End",
+   "url": "https://www.bitterend.com/",
+   "read_url": "https://bitterend.com/#/events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Bowery Electric",
+   "url": "https://www.theboweryelectric.com/",
+   "read_url": "https://www.theboweryelectric.com/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "The Cutting Room",
+   "url": "https://www.thecuttingroomnyc.com/",
+   "read_url": "https://www.thecuttingroomnyc.com/?ki-cf-botcl=1",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "The Duplex",
+   "url": "https://www.theduplex.com/",
+   "read_url": "https://www.theduplex.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Flatiron Room",
+   "url": "https://www.theflatironroom.com/",
+   "read_url": "https://www.theflatironroom.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "page returned HTTP 409"
+  },
+  {
+   "name": "The Green Room 42",
+   "url": "https://www.thegreenroom42.com/",
+   "read_url": "https://www.thegreenroom42.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Iridium",
+   "url": "https://www.theiridium.com/",
+   "read_url": "https://www.theiridium.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Jazz Gallery",
+   "url": "https://jazzgallery.org/",
+   "read_url": "https://jazzgallery.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Joyce Theater",
+   "url": "https://www.joyce.org/",
+   "read_url": "https://www.joyce.org/theme/spring-summer-26-z24j",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Juilliard School",
+   "url": "https://www.juilliard.edu/calendar",
+   "status": "no-location",
+   "shows": 0,
+   "detail": "60 Lincoln Center Plaza, New York, NY 10023"
+  },
+  {
+   "name": "The Metropolitan Museum of Art",
+   "url": "https://www.metmuseum.org/events",
+   "read_url": "https://www.metmuseum.org/events",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 429"
+  },
+  {
+   "name": "The Morgan Library & Museum",
+   "url": "https://www.themorgan.org/programs",
+   "read_url": "https://www.themorgan.org/programs",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "The Owl Music Parlor",
+   "url": "https://www.theowl.nyc/",
+   "read_url": "https://theowl.nyc/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Shed",
+   "url": "https://theshed.org/",
+   "read_url": "https://www.theshed.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Stone",
+   "url": "https://thestonenyc.com/",
+   "read_url": "https://thestonenyc.com/",
+   "method": null,
+   "status": "error",
+   "shows": 0,
+   "detail": "Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://thestonenyc.com/"
+  },
+  {
+   "name": "The Sultan Room",
+   "url": "https://www.thesultanroom.com/",
+   "read_url": "https://thesultanroom.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "The Town Hall",
+   "url": "https://thetownhall.org/",
+   "read_url": "https://www.thetownhall.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Trinity Church Wall Street",
+   "url": "https://trinitywallstreet.org/music-arts",
+   "read_url": "https://trinitychurchnyc.org/music-events",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "TV Eye",
+   "url": "https://www.tveyenyc.com/",
+   "read_url": "https://www.tveyenyc.com/?ki-cf-botcl=1",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
+   "name": "Union Hall",
+   "url": "https://www.unionhallny.com/",
+   "read_url": "https://unionhallny.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Village Vanguard",
+   "url": "https://villagevanguard.com/",
+   "read_url": "https://villagevanguard.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Wonderville",
+   "url": "https://www.wonderville.nyc/",
+   "read_url": "https://www.wonderville.nyc/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Works & Process at the Guggenheim",
+   "url": "https://worksandprocess.org/",
+   "read_url": "https://www.worksandprocess.org/calendar",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Zinc Bar",
+   "url": "https://www.zincbar.com/",
+   "read_url": "https://www.zincbar.com/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Alphaville",
+   "url": "https://www.alphavillebk.com/",
+   "read_url": "https://www.alphavillebk.com/",
+   "method": "event data",
+   "status": "ok",
+   "shows": 2,
+   "detail": null
+  },
+  {
+   "name": "Bargemusic",
+   "url": "https://www.bargemusic.org/",
+   "read_url": "https://www.bargemusic.org/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Brooklyn Center for the Performing Arts",
+   "url": "https://www.brooklyncenter.org/",
+   "read_url": "https://www.brooklyn.edu/towcenter/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Grace Church",
+   "url": "https://gracechurchnyc.org/",
+   "read_url": "https://gracechurchnyc.org/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 10,
+   "detail": null
+  },
+  {
+   "name": "Greenwich House Music School",
+   "url": "https://www.greenwichhouse.org/",
+   "read_url": "https://greenwichhouse.org/calendar/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 2,
+   "detail": null
+  },
+  {
+   "name": "Pianos",
+   "url": "https://www.pianosnyc.com/",
+   "read_url": "https://pianosnyc.com/shows",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Saint Vitus",
+   "url": "https://www.saintvitusbar.com/",
+   "read_url": "https://www.saintvitusbar.com/",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Sid Gold's Request Room",
+   "url": "https://www.sidgolds.com/",
+   "read_url": "https://sidgolds.com/detroit/events/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 2,
+   "detail": null
+  },
+  {
+   "name": "St. Ann & the Holy Trinity",
+   "url": "https://www.stannholytrinity.org/",
+   "read_url": "https://www.stannholytrinity.org/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Terminal 5",
+   "url": "https://www.terminal5nyc.com/",
+   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
+   "method": "event data",
+   "status": "ok",
+   "shows": 11,
+   "detail": null
+  },
+  {
+   "name": "The Bell House",
+   "url": "https://www.thebellhouseny.com/",
+   "read_url": "https://www.thebellhouseny.com/",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "The Riverside Church",
+   "url": "https://www.trcnyc.org/",
+   "read_url": "https://www.trcnyc.org/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 17,
+   "detail": null
+  },
+  {
+   "name": "Union Pool",
+   "url": "https://www.union-pool.com/",
+   "read_url": "https://www.union-pool.com/calendar",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  }
+ ]
+}
