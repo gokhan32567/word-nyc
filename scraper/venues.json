@@ -1,0 +1,22 @@
+{
+  "_comment": "Venue calendars to read. Works for pages that publish schema.org Event data (JSON-LD). 'genre' and 'address' are used when the page doesn't give them. Add or remove venues freely.",
+  "venues": [
+    { "name": "Village Vanguard",         "address": "178 7th Ave S, New York, NY",          "url": "https://villagevanguard.com/",                  "lat": 40.7360, "lng": -74.0016, "genre": "Jazz" },
+    { "name": "Smalls Jazz Club",         "address": "183 W 10th St, New York, NY",          "url": "https://www.smallslive.com/",                   "lat": 40.7340, "lng": -74.0029, "genre": "Jazz" },
+    { "name": "Blue Note Jazz Club",      "address": "131 W 3rd St, New York, NY",           "url": "https://www.bluenotejazz.com/nyc/shows/",       "lat": 40.7309, "lng": -74.0006, "genre": "Jazz" },
+    { "name": "LPR",                      "address": "158 Bleecker St, New York, NY",        "url": "https://lpr.com/",                              "lat": 40.7289, "lng": -74.0001, "genre": "Other" },
+    { "name": "Barbès",                   "address": "376 9th St, Brooklyn, NY",             "url": "https://www.barbesbrooklyn.com/events",         "lat": 40.6668, "lng": -73.9818, "genre": "World" },
+    { "name": "Ibeam Brooklyn",           "address": "168 7th St, Brooklyn, NY",             "url": "https://www.ibeambrooklyn.com/",                "lat": 40.6750, "lng": -73.9850, "genre": "Avant-garde" },
+
+    { "name": "Metropolitan Opera House", "address": "30 Lincoln Center Plaza, New York, NY", "url": "https://www.metopera.org/season/calendar/",     "lat": 40.7725, "lng": -73.9843, "genre": "Opera" },
+    { "name": "David Geffen Hall",        "address": "10 Lincoln Center Plaza, New York, NY", "url": "https://www.nyphil.org/concerts-tickets/",      "lat": 40.7737, "lng": -73.9832, "genre": "Classical" },
+    { "name": "David H. Koch Theater",    "address": "20 Lincoln Center Plaza, New York, NY", "url": "https://www.nycballet.com/season-and-tickets/", "lat": 40.7719, "lng": -73.9833, "genre": "Ballet & Dance" },
+    { "name": "Carnegie Hall",            "address": "881 7th Ave, New York, NY",            "url": "https://www.carnegiehall.org/Calendar",         "lat": 40.7651, "lng": -73.9799, "genre": "Classical" },
+    { "name": "Miller Theatre",           "address": "2960 Broadway, New York, NY",          "url": "https://www.millertheatre.com/events",          "lat": 40.8076, "lng": -73.9640, "genre": "Classical" },
+    { "name": "BAM",                      "address": "30 Lafayette Ave, Brooklyn, NY",       "url": "https://www.bam.org/whats-on",                  "lat": 40.6862, "lng": -73.9776, "genre": "Ballet & Dance" },
+    { "name": "The Joyce Theater",        "address": "175 8th Ave, New York, NY",            "url": "https://www.joyce.org/performances",            "lat": 40.7428, "lng": -74.0003, "genre": "Ballet & Dance" },
+    { "name": "Roulette",                 "address": "509 Atlantic Ave, Brooklyn, NY",       "url": "https://roulette.org/events/",                  "lat": 40.6852, "lng": -73.9787, "genre": "Avant-garde" },
+    { "name": "The Stone",                "address": "55 W 13th St, New York, NY",           "url": "https://www.thestonenyc.com/",                  "lat": 40.7359, "lng": -73.9967, "genre": "Avant-garde" },
+    { "name": "National Sawdust",         "address": "80 N 6th St, Brooklyn, NY",            "url": "https://nationalsawdust.org/events/",           "lat": 40.7193, "lng": -73.9612, "genre": "Avant-garde" }
+  ]
+}

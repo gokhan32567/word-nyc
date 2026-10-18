@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Word NYC | Live shows in New York tonight</title>
+  <meta name="description" content="Word NYC maps live shows in New York tonight, from jazz clubs and indie rooms to the Met and Carnegie Hall.">
+  <meta name="theme-color" content="#0d1230">
+  <link rel="canonical" href="https://word-nyc.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://word-nyc.com/">
+  <meta property="og:title" content="Word NYC: live shows in New York tonight">
+  <meta property="og:description" content="Jazz clubs, indie rooms, the Met, Carnegie Hall and more, on one live map that updates every morning.">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+  <!-- MapLibre GL + OpenFreeMap tiles: free, no API key -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+  <style>
+    /* Marquee at night: a midnight-navy city, and gold means "lit" (playing right now).
+       Listings read like a theater program, led by big condensed show times. */
+    :root {
+      --ink: #0d1230;        /* page + map base */
+      --ink-2: #131940;      /* panels */
+      --ink-3: #1b2250;      /* raised / hover */
+      --line: rgba(214, 220, 255, 0.11);
+      --paper: #f3eee4;      /* main text */
+      --soft: #c9cde6;       /* secondary text */
+      --muted: #8c93be;      /* tertiary text */
+      --gold: #ffc24b;       /* lit: playing now, primary actions */
+      --gold-dim: rgba(255, 194, 75, 0.13);
+      --peri: #8ea2ff;       /* later tonight */
+      --slate: #4a5183;      /* ended */
+      --display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+      --text: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --panel-w: 420px;
+      --drawer-h: 40vh;
+      color-scheme: dark;
+    }
+    @supports (height: 100dvh) { :root { --drawer-h: 40dvh; } }
+    body.drawer-collapsed { --drawer-h: 76px; }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html, body {
+      margin: 0; height: 100%; overflow: hidden;
+      background: var(--ink); color: var(--paper);
+      font: 15px/1.45 var(--text); -webkit-font-smoothing: antialiased;
+    }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ---------- Map ---------- */
+    #map { position: fixed; inset: 0; z-index: 1; background: var(--ink); }
+    .map-error { position: absolute; top: 38%; left: 0; right: 0; padding: 0 24px; text-align: center; color: var(--muted); }
+    .maplibregl-ctrl-bottom-right, .maplibregl-ctrl-bottom-left { bottom: var(--drawer-h); transition: bottom .25s ease; }
+    .maplibregl-ctrl.maplibregl-ctrl-attrib { background: rgba(13, 18, 48, .75); color: var(--muted); font: 11px var(--text); }
+    .maplibregl-ctrl-attrib a { color: var(--soft); }
+
+    .tn-pin { width: 28px; height: 28px; display: grid; place-items: center; cursor: pointer; border-radius: 50%; }
+    .pin { border-radius: 50%; transition: transform .2s ease; }
+    .pin.live  { width: 14px; height: 14px; background: var(--gold);
+                 box-shadow: 0 0 0 3px rgba(255, 194, 75, .25), 0 0 18px 6px rgba(255, 194, 75, .5);
+                 animation: bulb 2.4s ease-in-out infinite; }
+    .pin.soon  { width: 14px; height: 14px; background: var(--ink); border: 3px solid var(--gold);
+                 box-shadow: 0 0 10px 2px rgba(255, 194, 75, .3); }
+    .pin.later { width: 11px; height: 11px; background: var(--peri); border: 2px solid var(--ink);
+                 box-shadow: 0 0 0 1px rgba(142, 162, 255, .45); }
+    .pin.ended { width: 8px; height: 8px; background: var(--slate); }
+    .tn-pin.selected { z-index: 10 !important; }
+    .tn-pin.selected .pin { transform: scale(1.5); outline: 2px solid var(--paper); outline-offset: 2px; }
+    @keyframes bulb {
+      50% { box-shadow: 0 0 0 6px rgba(255, 194, 75, .1), 0 0 28px 10px rgba(255, 194, 75, .32); }
+    }
+
+    /* ---------- Header ---------- */
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      padding: max(14px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) 28px max(18px, env(safe-area-inset-left));
+      background: linear-gradient(to bottom, rgba(13, 18, 48, .95) 40%, rgba(13, 18, 48, 0));
+      pointer-events: none;
+    }
+    .topbar > * { pointer-events: auto; }
+    .wordmark { margin: 0; font: 800 34px/0.9 var(--display); color: var(--gold); letter-spacing: .01em;
+                text-shadow: 0 0 22px rgba(255, 194, 75, .35); }
+    .dateline { margin: 6px 0 0; font-size: 13px; color: var(--soft); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line);
+      background: transparent; color: var(--paper); text-decoration: none; cursor: pointer;
+      font: 600 14px var(--text); white-space: nowrap; transition: background .15s, border-color .15s;
+    }
+    .btn:hover { background: rgba(255, 255, 255, .05); border-color: rgba(214, 220, 255, .25); }
+    .btn.primary { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .btn.primary:hover { background: #ffcf70; border-color: #ffcf70; }
+    .btn:disabled { opacity: .6; cursor: progress; }
+
+    /* ---------- Listings (bottom drawer on phones, left column on wide screens) ---------- */
+    .drawer {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+      height: var(--drawer-h); display: flex; flex-direction: column;
+      background: var(--ink-2); border-top: 1px solid var(--line); border-radius: 18px 18px 0 0;
+      box-shadow: 0 -12px 34px rgba(3, 5, 20, .55);
+      transition: height .25s ease;
+    }
+    .drawer-head {
+      flex: none; position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+      width: 100%; padding: 20px max(18px, env(safe-area-inset-right)) 12px max(18px, env(safe-area-inset-left));
+      background: none; border: 0; text-align: left; cursor: pointer;
+    }
+    .drawer-head::before { /* grab handle */
+      content: ""; position: absolute; top: 8px; left: 50%; width: 36px; height: 4px; margin-left: -18px;
+      border-radius: 4px; background: rgba(214, 220, 255, .22);
+    }
+    .list-title { margin: 0; font-size: 18px; font-weight: 600; }
+    .summary { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .chev { flex: none; margin-bottom: 4px; color: var(--muted); transition: transform .25s; }
+    body.drawer-collapsed .chev { transform: rotate(180deg); }
+    .drawer-body { flex: 1; min-height: 0; overflow-y: auto; padding: 0 max(18px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
+    .note { margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
+
+    .chips {
+      position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; overflow-x: auto;
+      margin: 0 calc(-1 * max(18px, env(safe-area-inset-left))); padding: 4px max(18px, env(safe-area-inset-left)) 12px;
+      background: var(--ink-2); scrollbar-width: none;
+    }
+    .chips::-webkit-scrollbar { display: none; }
+    .chip {
+      flex: none; padding: 6px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap;
+      font-size: 13px; font-weight: 500; color: var(--soft); background: transparent; border: 1px solid var(--line);
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .chip:hover { border-color: rgba(214, 220, 255, .3); color: var(--paper); }
+    .chip .n { margin-left: 5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .chip[aria-pressed="true"] .n { color: rgba(13, 18, 48, .6); }
+
+    .list { display: flex; flex-direction: column; }
+    .row {
+      display: grid; grid-template-columns: 66px minmax(0, 1fr) auto; gap: 14px; align-items: start;
+      width: 100%; padding: 14px 8px; margin: 0; border: 0; border-bottom: 1px solid var(--line);
+      background: none; text-align: left; cursor: pointer; border-radius: 0;
+    }
+    .row:hover { background: rgba(255, 255, 255, .03); }
+    .row.is-selected { background: var(--gold-dim); border-radius: 10px; }
+    .row:focus-visible { outline-offset: -2px; border-radius: 10px; }
+    .when { display: flex; flex-direction: column; gap: 3px; }
+    .when .t { font: 800 26px/0.95 var(--display); font-variant-numeric: tabular-nums; letter-spacing: .01em; color: var(--paper); white-space: nowrap; }
+    .when .t small { margin-left: 2px; font: 600 11px var(--text); color: var(--muted); }
+    .when .s { font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap; }
+    .row.is-live .t, .row.is-live .s { color: var(--gold); }
+    .row.is-live .s::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 5px 1px 0; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 1.6s infinite; }
+    .row.is-soon .s { color: #ffd88c; }
+    .row.is-ended { opacity: .5; }
+    .row.is-ended.is-selected { opacity: .85; }
+    .what { display: flex; flex-direction: column; min-width: 0; }
+    .what > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .what .title { font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--paper);
+                   white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .what .who { font-size: 14px; color: var(--soft); }
+    .what .where { margin-top: 1px; font-size: 13.5px; color: var(--muted); }
+    .row .side { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; max-width: 92px; padding-top: 3px; }
+    .row .genre { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--muted); text-align: right; }
+    .tag { display: inline-block; padding: 2px 7px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--gold); background: var(--gold-dim); white-space: nowrap; }
+    .row.is-sponsored:not(.is-ended) { background: linear-gradient(90deg, rgba(255, 194, 75, .07), rgba(255, 194, 75, 0) 70%); }
+    .tn-pin.sponsored .pin { outline: 2px solid rgba(255, 194, 75, .55); outline-offset: 3px; }
+
+    .ad-slot { margin: 20px 0 0; padding-top: 12px; border-top: 1px solid var(--line); min-height: 90px; }
+    .ad-slot .ad-label { display: block; margin-bottom: 6px; font-size: 11px; color: var(--muted); }
+    .foot { margin: 22px 0 4px; font-size: 12.5px; color: var(--muted); }
+    .foot p { margin: 0 0 6px; }
+    .foot a { margin-right: 16px; color: var(--soft); text-decoration: none; }
+    .foot a:hover { color: var(--paper); text-decoration: underline; }
+    .empty { margin: 18px 0; color: var(--muted); }
+    @keyframes blink { 50% { opacity: .35; } }
+
+    /* ---------- Show details (bottom sheet on phones, replaces the listings column on wide screens) ---------- */
+    .details {
+      position: fixed; z-index: 1200; left: 0; right: 0; bottom: 0;
+      max-height: min(80vh, 700px); overflow-y: auto; overscroll-behavior: contain;
+      background: var(--ink-2); border-top: 1px solid var(--line); border-radius: 20px 20px 0 0;
+      box-shadow: 0 -14px 40px rgba(3, 5, 20, .6);
+      transform: translateY(105%); visibility: hidden;
+      transition: transform .3s ease, visibility 0s linear .3s;
+    }
+    .details.open { transform: none; visibility: visible; transition: transform .3s ease; }
+    .d-close {
+      position: absolute; top: 12px; right: 12px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 6px; height: 36px; min-width: 36px; padding: 0 10px;
+      border: 0; border-radius: 999px; cursor: pointer; background: rgba(13, 18, 48, .78); color: var(--paper);
+      font-size: 14px; font-weight: 600;
+    }
+    .d-close .back { display: none; }
+    .d-close svg { flex: none; }
+    .d-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--ink-3); }
+    .d-body { display: flex; flex-direction: column; gap: 14px; padding: 22px max(22px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-left)); }
+    .d-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-right: 48px; }
+    .d-status { margin: 0; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .d-note { margin: -4px 0 0; font-size: 12.5px; color: var(--muted); }
+    .d-status.live { color: var(--gold); }
+    .d-status.live::before { content: ""; display: inline-block; width: 7px; height: 7px; margin: 0 6px 1px 0; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 1.6s infinite; }
+    .d-status.soon { color: #ffd88c; }
+    .d-status.later { color: var(--peri); }
+    .d-title { margin: -6px 0 0; font: 800 38px/0.98 var(--display); letter-spacing: .005em; color: var(--paper); text-wrap: balance; }
+    .d-with { margin: -4px 0 0; font-size: 16px; color: var(--soft); }
+    .d-facts { display: grid; gap: 12px; margin: 4px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); }
+    .d-facts div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
+    .d-facts dt { font-size: 13px; color: var(--muted); }
+    .d-facts dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+    .d-facts dd span { display: block; font-size: 13.5px; color: var(--muted); }
+    .d-desc { margin: 0; font-size: 15px; line-height: 1.55; color: var(--soft); }
+    .d-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+    .d-actions .btn { flex: 1 1 140px; padding: 12px 16px; font-size: 15px; }
+
+    /* ---------- Share modal ---------- */
+    .modal {
+      position: fixed; inset: 0; z-index: 2500; display: none; align-items: center; justify-content: center;
+      padding: 20px; background: rgba(5, 7, 24, .78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .modal.open { display: flex; }
+    .sheet {
+      width: min(420px, 100%); max-height: calc(100vh - 40px); display: flex; flex-direction: column; gap: 14px;
+      padding: 18px; border-radius: 18px; background: var(--ink-2); border: 1px solid var(--line);
+    }
+    .sheet-head { display: flex; justify-content: space-between; align-items: center; }
+    .sheet-head h3 { margin: 0; font-size: 17px; font-weight: 600; }
+    .icon-btn { width: 36px; height: 36px; border: 0; border-radius: 50%; background: none; color: var(--muted); font-size: 24px; line-height: 1; cursor: pointer; }
+    .icon-btn:hover { color: var(--paper); background: rgba(255, 255, 255, .06); }
+    .preview { display: block; min-height: 0; max-width: 100%; max-height: 58vh; margin: 0 auto; border-radius: 12px; aspect-ratio: 9 / 16; object-fit: contain; background: var(--ink); }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .actions .btn { flex: 1 1 110px; }
+
+    /* ---------- Toast ---------- */
+    #toast {
+      position: fixed; left: 50%; bottom: calc(var(--drawer-h) + 20px); z-index: 3000;
+      max-width: calc(100vw - 32px); padding: 12px 18px; border-radius: 12px; text-align: center;
+      background: var(--paper); color: var(--ink); font-weight: 600; font-size: 14px; box-shadow: 0 10px 28px rgba(3, 5, 20, .5);
+      opacity: 0; transform: translate(-50%, 12px); pointer-events: none; transition: opacity .25s, transform .25s;
+    }
+    #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    /* ---------- Wide screens: listings column on the left, map on the right ---------- */
+    @media (min-width: 900px) {
+      body, body.drawer-collapsed { --drawer-h: 0px; }
+      #map { left: var(--panel-w); }
+      .topbar {
+        right: auto; width: var(--panel-w); height: 104px; padding: 26px 24px 0;
+        align-items: flex-start; background: var(--ink-2); border-right: 1px solid var(--line);
+      }
+      .wordmark { font-size: 40px; }
+      .drawer {
+        top: 104px; right: auto; width: var(--panel-w); height: auto;
+        border-top: 0; border-right: 1px solid var(--line); border-radius: 0; box-shadow: none;
+      }
+      .drawer-head { padding: 14px 24px 12px; cursor: default; }
+      .drawer-head::before, .chev { display: none; }
+      .drawer-body { padding: 0 24px 24px; }
+      .chips { margin: 0 -24px; padding: 4px 24px 12px; }
+      .details {
+        top: 0; right: auto; width: var(--panel-w); max-height: none;
+        border-top: 0; border-right: 1px solid var(--line); border-radius: 0; box-shadow: 12px 0 30px rgba(3, 5, 20, .35);
+        transform: translateX(-100%);
+      }
+      .d-close { position: sticky; top: 12px; right: auto; margin: 14px 0 2px 16px; background: var(--ink-3); }
+      .d-close:hover { background: #242c62; }
+      .d-body { padding-top: 14px; }
+      .d-close .x { display: none; }
+      .d-close .back { display: inline; }
+      #toast { left: calc(var(--panel-w) + (100vw - var(--panel-w)) / 2); bottom: 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div>
+      <h1 class="wordmark">Word NYC</h1>
+      <p class="dateline" id="date-line">&nbsp;</p>
+    </div>
+    <button id="share-btn" class="btn primary" type="button">Share tonight</button>
+  </header>
+
+  <div id="map" aria-label="Map of tonight's shows"></div>
+
+  <section class="drawer" id="drawer" aria-label="Tonight's shows">
+    <button class="drawer-head" id="drawer-toggle" type="button" aria-expanded="true">
+      <div>
+        <h2 class="list-title" id="list-title">Playing now</h2>
+        <p class="summary" id="list-summary"></p>
+      </div>
+      <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="drawer-body">
+      <p class="note" id="list-note" hidden></p>
+      <div class="chips" id="genre-chips" role="group" aria-label="Filter by genre"></div>
+      <div class="list" id="event-list"></div>
+      <div class="ad-slot" id="ad-slot" hidden><span class="ad-label">Advertisement</span></div>
+      <footer class="foot">
+        <p>Some ticket links earn Word NYC a small commission, at no extra cost to you.</p>
+        <p><a href="advertise.html">Advertise your show</a><a href="privacy.html">Privacy</a></p>
+      </footer>
+    </div>
+  </section>
+
+  <aside class="details" id="details" aria-hidden="true" aria-labelledby="d-title">
+    <button class="d-close" id="details-close" type="button" aria-label="Close show details">
+      <span class="x" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </span>
+      <span class="back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+        All shows
+      </span>
+    </button>
+    <div id="details-content"></div>
+  </aside>
+
+  <div class="modal" id="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-title">
+    <div class="sheet">
+      <div class="sheet-head">
+        <h3 id="share-title">Your story graphic</h3>
+        <button class="icon-btn" id="share-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <img class="preview" id="share-preview" alt="Story graphic of tonight's shows">
+      <div class="actions">
+        <button class="btn" id="act-share" type="button" hidden>Share…</button>
+        <button class="btn" id="act-copy" type="button" hidden>Copy image</button>
+        <a class="btn" id="act-download" download="word-nyc-story.png" href="#">Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  /* =========================================================
+     Settings
+     ========================================================= */
+  const CONFIG = {
+    tz: 'America/New_York',   // statuses are computed in NYC time, wherever the viewer is
+    defaultSetMinutes: 120,   // assumed length of a show when the data has no `end`
+    soonMinutes: 60,          // "starting soon" window
+    nightRolloverHour: 5,     // times before 5 AM count as part of the previous night
+    refreshMs: 30000,         // how often statuses update
+    dataUrl: 'events.json',   // daily lineup written by the scraper (see README)
+    siteLabel: 'word-nyc.com', // footer text on the story graphic
+    mapStyle: 'https://tiles.openfreemap.org/styles/dark', // free, no API key
+
+    // ----- Making money: paste your IDs once each program approves you. Empty = switched off. -----
+    affiliate: {
+      ticketmaster: '',  // your Impact tracking link for Ticketmaster (from Impact > Create link); ticket URLs are added as ?u=
+      seatgeekAid: '',   // your SeatGeek partner ID, added to SeatGeek links as ?aid=
+    },
+    adsense: { client: '', slot: '' }, // e.g. client 'ca-pub-1234567890123456', slot '1234567890'
+    analyticsToken: '',                 // Cloudflare Web Analytics token: cookie-free visitor counts
+  };
+
+  // Map colors: the dark base style is re-tinted to midnight navy after it loads.
+  const MAP_TINT = {
+    background: '#0d1230', residential: '#0f1436', water: '#070a1f', park: '#101839', building: '#141a40',
+    roadMinor: '#1a2150', roadMajor: '#242c60', motorway: '#2e3874', rail: '#1a2150',
+    label: '#7f86b3', labelHalo: '#0d1230',
+  };
+
+  // Sample lineup, used only until events.json exists. Same fields the scraper writes:
+  // title, performers, venue, address, lat, lng, date, time, end, genre, subgenre, price, program, description, url, image.
+  const FALLBACK_EVENTS = [
+    { id: 1, title: "Robert Glasper", venue: "Blue Note Jazz Club", address: "131 W 3rd St, New York, NY", lat: 40.7309, lng: -74.0006,
+      time: "10:30 PM", end: "12:00 AM", genre: "Jazz", subgenre: "Jazz / R&B", price: "$45–$85",
+      description: "Late set from the pianist and producer whose music moves between jazz, hip-hop and R&B.", url: "https://www.bluenotejazz.com/nyc/" },
+    { id: 2, title: "Giancarlo Vulcano", venue: "Barbès", address: "376 9th St, Brooklyn, NY", lat: 40.6668, lng: -73.9818,
+      time: "6:00 PM", genre: "Avant-garde", subgenre: "Composer / guitar", price: "Suggested donation",
+      description: "An early set of atmospheric guitar compositions in Barbès' back room.", url: "https://www.barbesbrooklyn.com/" },
+    { id: 3, title: "Immanuel Wilkins Quartet", performers: ["Immanuel Wilkins"], venue: "Village Vanguard", address: "178 7th Ave S, New York, NY", lat: 40.7360, lng: -74.0016,
+      time: "8:00 PM", end: "9:30 PM", genre: "Jazz", subgenre: "Modern jazz", price: "$40",
+      description: "The alto saxophonist leads his quartet. Second set at 10 PM.", url: "https://villagevanguard.com/" },
+    { id: 4, title: "Saul Rubin Zebtet", performers: ["Saul Rubin"], venue: "Smalls Jazz Club", address: "183 W 10th St, New York, NY", lat: 40.7340, lng: -74.0029,
+      time: "11:55 PM", end: "2:00 AM", genre: "Jazz", subgenre: "Late-night session", price: "$25",
+      description: "Guitarist Saul Rubin's band closes out the night.", url: "https://www.smallslive.com/" },
+    { id: 5, title: "NY Burlesque Fest", venue: "LPR", address: "158 Bleecker St, New York, NY", lat: 40.7289, lng: -74.0001,
+      time: "8:00 PM", genre: "Cabaret & Musicals", subgenre: "Burlesque", url: "https://lpr.com/" },
+    { id: 6, title: "Sunjay Jayaram", venue: "Ibeam Brooklyn", address: "168 7th St, Brooklyn, NY", lat: 40.6750, lng: -73.9850,
+      time: "6:00 PM", genre: "Avant-garde", subgenre: "Improvised music", url: "https://www.ibeambrooklyn.com/" },
+    { id: 7, title: "La Bohème", performers: ["Metropolitan Opera Orchestra and Chorus"], venue: "Metropolitan Opera House", address: "30 Lincoln Center Plaza, New York, NY", lat: 40.7725, lng: -73.9843,
+      time: "7:30 PM", end: "10:30 PM", genre: "Opera", subgenre: "Italian opera", price: "From $35",
+      program: ["Puccini: La Bohème (sung in Italian, with Met Titles)"],
+      description: "Franco Zeffirelli's staging of Puccini's story of young artists in Paris.", url: "https://www.metopera.org/" },
+    { id: 8, title: "Mahler's Fifth Symphony", performers: ["New York Philharmonic"], venue: "David Geffen Hall", address: "10 Lincoln Center Plaza, New York, NY", lat: 40.7737, lng: -73.9832,
+      time: "7:30 PM", end: "9:30 PM", genre: "Classical", subgenre: "Orchestral", price: "From $39",
+      program: ["Mahler: Symphony No. 5 in C-sharp minor"],
+      description: "The orchestra plays Mahler's Fifth, from the funeral march to the famous Adagietto.", url: "https://www.nyphil.org/" },
+    { id: 9, title: "Balanchine & Robbins", performers: ["New York City Ballet"], venue: "David H. Koch Theater", address: "20 Lincoln Center Plaza, New York, NY", lat: 40.7719, lng: -73.9833,
+      time: "8:00 PM", end: "10:15 PM", genre: "Ballet & Dance", subgenre: "Ballet",
+      program: ["Balanchine: Serenade (Tchaikovsky)", "Robbins: Glass Pieces (Philip Glass)"],
+      description: "A mixed repertory evening from the company's fall season.", url: "https://www.nycballet.com/" },
+    { id: 10, title: "Beethoven: Late Quartets", performers: ["Brentano String Quartet"], venue: "Carnegie Hall (Zankel Hall)", address: "881 7th Ave, New York, NY", lat: 40.7651, lng: -73.9799,
+      time: "7:30 PM", end: "9:30 PM", genre: "Classical", subgenre: "Chamber music",
+      program: ["Beethoven: String Quartet No. 14 in C-sharp minor, Op. 131"], url: "https://www.carnegiehall.org/" },
+    { id: 11, title: "Improvised Music Series", venue: "Roulette", address: "509 Atlantic Ave, Brooklyn, NY", lat: 40.6852, lng: -73.9787,
+      time: "8:00 PM", genre: "Avant-garde", subgenre: "Free improvisation", price: "$20",
+      description: "Two sets of free improvisation and new compositions.", url: "https://roulette.org/" },
+    { id: 12, title: "Contemporary Dance Double Bill", venue: "The Joyce Theater", address: "175 8th Ave, New York, NY", lat: 40.7428, lng: -74.0003,
+      time: "7:30 PM", end: "9:15 PM", genre: "Ballet & Dance", subgenre: "Contemporary dance", url: "https://www.joyce.org/" },
+    { id: 13, title: "Indie Rock Triple Bill", venue: "Bowery Ballroom", address: "6 Delancey St, New York, NY", lat: 40.7204, lng: -73.9934,
+      time: "9:00 PM", genre: "Indie & Alternative", subgenre: "Indie rock", price: "$25", url: "https://www.boweryballroom.com/" },
+    { id: 14, title: "Afrobeats Night", venue: "S.O.B.'s", address: "204 Varick St, New York, NY", lat: 40.7280, lng: -74.0053,
+      time: "10:00 PM", end: "2:00 AM", genre: "African", subgenre: "Afrobeats", url: "https://sobs.com/" },
+    { id: 15, title: "Blues Jam", venue: "Terra Blues", address: "149 Bleecker St, New York, NY", lat: 40.7284, lng: -74.0000,
+      time: "9:30 PM", genre: "Blues", subgenre: "Electric blues", url: "https://www.terrablues.com/" },
+    { id: 16, title: "Late-Night DJ Sets", venue: "Elsewhere", address: "599 Johnson Ave, Brooklyn, NY", lat: 40.7097, lng: -73.9230,
+      time: "11:00 PM", end: "4:00 AM", genre: "Electronic & DJ", subgenre: "House / techno", url: "https://www.elsewherebrooklyn.com/" },
+    { id: 17, title: "Honky-Tonk Night", venue: "Skinny Dennis", address: "152 Metropolitan Ave, Brooklyn, NY", lat: 40.7146, lng: -73.9606,
+      time: "9:00 PM", genre: "Country", subgenre: "Honky-tonk", price: "Free" },
+    { id: 18, title: "Salsa Night with Live Band", venue: "Terraza 7", address: "40-19 Gleane St, Queens, NY", lat: 40.7470, lng: -73.8829,
+      time: "9:00 PM", end: "1:00 AM", genre: "Latin", subgenre: "Salsa" }
+  ];
+
+  /* =========================================================
+     Helpers
+     ========================================================= */
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeUrl = (u) => (/^https?:\/\//i.test(String(u || '')) ? String(u) : null);
+  const squash = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const toList = (v) => (Array.isArray(v) ? v : v ? [v] : []).map((s) => String(s || '').trim()).filter(Boolean);
+  const isWide = () => window.matchMedia('(min-width: 900px)').matches;
+
+  // "8:00 PM", "8 PM", "8pm", "20:00" -> minutes after midnight
+  function parseClock(str) {
+    const s = String(str || '').trim().toUpperCase().replace(/\./g, '');
+    let m = s.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM|A|P)$/);
+    if (m) return ((+m[1] % 12) + (m[3][0] === 'P' ? 12 : 0)) * 60 + (+m[2] || 0);
+    m = s.match(/^(\d{1,2}):(\d{2})$/);
+    if (m) return +m[1] * 60 + +m[2];
+    return null;
+  }
+  // put after-midnight times at the end of the same night
+  const toNight = (min) => (min < CONFIG.nightRolloverHour * 60 ? min + 1440 : min);
+
+  function clockParts(min) {
+    const m = ((min % 1440) + 1440) % 1440;
+    const h = Math.floor(m / 60), mm = m % 60;
+    return { hm: `${h % 12 || 12}:${String(mm).padStart(2, '0')}`, ap: h < 12 ? 'am' : 'pm' };
+  }
+  const formatClock = (min) => { const p = clockParts(min); return `${p.hm} ${p.ap.toUpperCase()}`; };
+  const prettyClock = (min) => { const p = clockParts(min); return `${p.hm} ${p.ap}`; };
+  function formatDuration(min) {
+    if (min < 60) return `${min} min`;
+    const h = Math.floor(min / 60), m = min % 60;
+    return m ? `${h} h ${m} min` : `${h} h`;
+  }
+
+  // current NYC time in "night minutes"; ?now=9:15pm overrides it for previews
+  function nycNow() {
+    const override = new URLSearchParams(location.search).get('now');
+    let min = override != null ? parseClock(override) : null;
+    if (min == null) {
+      const parts = new Intl.DateTimeFormat('en-US', { timeZone: CONFIG.tz, hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+      min = +parts.find((p) => p.type === 'hour').value * 60 + +parts.find((p) => p.type === 'minute').value;
+    }
+    return toNight(min);
+  }
+  // shift back by the rollover so 1 AM still counts as the previous night
+  const nightDate = () => new Date(Date.now() - CONFIG.nightRolloverHour * 3600e3);
+  const tonightLabel = () => new Intl.DateTimeFormat('en-US', { timeZone: CONFIG.tz, weekday: 'long', month: 'long', day: 'numeric' }).format(nightDate());
+  const tonightISO = () => new Intl.DateTimeFormat('en-CA', { timeZone: CONFIG.tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(nightDate());
+
+  function normalize(raw) {
+    return raw
+      .filter((e) => e && Number.isFinite(+e.lat) && Number.isFinite(+e.lng))
+      .map((e, i) => {
+        const s = parseClock(e.time);
+        const start = s == null ? null : toNight(s);
+        const endParsed = parseClock(e.end);
+        let end = null;
+        if (start != null) {
+          end = endParsed == null ? start + CONFIG.defaultSetMinutes : toNight(endParsed);
+          if (end <= start) end += 1440;
+        }
+        const title = String(e.title || e.artist || 'TBA').trim();
+        let performers = toList(e.performers);
+        if (!performers.length && e.artist) performers = toList(e.artist);
+        performers = performers.filter((p) => squash(p) !== squash(title));
+        return {
+          id: String(e.id ?? i + 1), title, performers,
+          venue: String(e.venue || '').trim(), address: String(e.address || '').trim(),
+          lat: +e.lat, lng: +e.lng,
+          date: /^\d{4}-\d{2}-\d{2}$/.test(e.date || '') ? e.date : null,
+          start, end, endKnown: start != null && endParsed != null,
+          timeLabel: start == null ? 'Time TBA' : formatClock(start),
+          genre: String(e.genre || 'Other').trim() || 'Other',
+          subgenre: String(e.subgenre || '').trim(),
+          price: String(e.price || '').trim(),
+          program: toList(e.program),
+          description: String(e.description || '').trim(),
+          url: safeUrl(e.url), image: safeUrl(e.image),
+          sponsored: e.sponsored === true,
+        };
+      });
+  }
+
+  // short = shown under the time in the list; long = shown in the details panel
+  function statusOf(ev, now) {
+    if (ev.start == null) return { key: 'later', short: '', long: 'Time to be announced', rank: 3 };
+    if (now >= ev.end)    return { key: 'ended', short: 'Ended', long: 'Ended', rank: 4 };
+    if (now >= ev.start)  return { key: 'live',  short: 'Live', long: 'Playing now', rank: 0 };
+    const until = ev.start - now;
+    if (until <= CONFIG.soonMinutes) return { key: 'soon', short: `In ${formatDuration(until)}`, long: `Starts in ${formatDuration(until)}`, rank: 1 };
+    return { key: 'later', short: '', long: 'Later tonight', rank: 2 };
+  }
+
+  // "Sat, Oct 17, 7:30 pm – 9:30 pm"
+  function whenLabel(ev) {
+    const [y, m, d] = (ev.date || tonightISO()).split('-').map(Number);
+    const nextDay = !ev.date && ev.start != null && ev.start >= 1440; // after-midnight show without an explicit date
+    const day = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' })
+      .format(new Date(Date.UTC(y, m - 1, d + (nextDay ? 1 : 0))));
+    if (ev.start == null) return `${day}, time to be announced`;
+    return `${day}, ${prettyClock(ev.start)}${ev.endKnown ? ` – ${prettyClock(ev.end)}` : ''}`;
+  }
+  // Turn a ticket URL into an affiliate link when the matching program is set up in CONFIG.affiliate.
+  function ticketLink(url) {
+    if (!url) return null;
+    let u;
+    try { u = new URL(url); } catch (_) { return { href: url, paid: false }; }
+    const host = u.hostname.toLowerCase(), A = CONFIG.affiliate || {};
+    if (/(^|\.)(evyy\.net|sjv\.io|pxf\.io|impact\.com)$/.test(host)) return { href: url, paid: true }; // already tracked
+    if (A.ticketmaster && /(^|\.)(ticketmaster|livenation)\.com$/.test(host)) {
+      return { href: `${A.ticketmaster}${A.ticketmaster.includes('?') ? '&' : '?'}u=${encodeURIComponent(url)}`, paid: true };
+    }
+    if (A.seatgeekAid && /(^|\.)seatgeek\.com$/.test(host)) {
+      u.searchParams.set('aid', A.seatgeekAid);
+      return { href: u.toString(), paid: true };
+    }
+    return { href: url, paid: false };
+  }
+  const mapsUrl = (ev) => 'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent([ev.venue, ev.address].filter(Boolean).join(', ') || `${ev.lat},${ev.lng}`);
+
+  async function loadEvents() {
+    try {
+      const r = await fetch(CONFIG.dataUrl, { cache: 'no-store' });
+      if (r.ok) {
+        const j = await r.json();
+        const arr = Array.isArray(j) ? j : j && j.events;
+        if (Array.isArray(arr)) return { events: arr, date: (j && j.date) || null, source: 'file' };
+      }
+    } catch (_) { /* no events.json (or opened from disk) -> use the sample lineup */ }
+    return { events: FALLBACK_EVENTS, date: null, source: 'sample' };
+  }
+
+  let toastTimer;
+  function toast(msg) {
+    const t = $('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  /* =========================================================
+     State + genre filter
+     ========================================================= */
+  let EVENTS = [];
+  let DATA_DATE = null, DATA_SOURCE = null;
+  let selectedId = null;
+  const markers = new Map(); // id -> { marker, pin, el, shown }
+
+  const GENRE_KEY = 'wordnyc.genres';
+  let selectedGenres = new Set();
+  function loadGenreSelection() {
+    const fromUrl = new URLSearchParams(location.search).get('genre');
+    if (fromUrl != null) return new Set(fromUrl.split(',').map((s) => s.trim()).filter(Boolean));
+    try { return new Set(JSON.parse(localStorage.getItem(GENRE_KEY) || '[]')); } catch (_) { return new Set(); }
+  }
+  function saveGenreSelection() {
+    try { localStorage.setItem(GENRE_KEY, JSON.stringify([...selectedGenres])); } catch (_) {}
+    try {
+      const u = new URL(location.href);
+      if (selectedGenres.size) u.searchParams.set('genre', [...selectedGenres].join(',')); else u.searchParams.delete('genre');
+      history.replaceState(null, '', u);
+    } catch (_) {}
+  }
+  const passesGenre = (ev) => !selectedGenres.size || selectedGenres.has(ev.genre);
+
+  function renderChips() {
+    const counts = new Map();
+    EVENTS.forEach((e) => counts.set(e.genre, (counts.get(e.genre) || 0) + 1));
+    selectedGenres = new Set([...selectedGenres].filter((g) => counts.has(g))); // drop genres not on tonight's list
+    const genres = [...counts.keys()].sort((a, b) => (a === 'Other') - (b === 'Other') || counts.get(b) - counts.get(a) || a.localeCompare(b));
+    const box = $('genre-chips');
+    box.hidden = genres.length < 2;
+    box.innerHTML =
+      `<button class="chip" type="button" data-genre="" aria-pressed="${!selectedGenres.size}">All<span class="n">${EVENTS.length}</span></button>` +
+      genres.map((g) => `<button class="chip" type="button" data-genre="${esc(g)}" aria-pressed="${selectedGenres.has(g)}">${esc(g)}<span class="n">${counts.get(g)}</span></button>`).join('');
+  }
+
+  $('genre-chips').addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    const g = chip.dataset.genre;
+    if (!g) selectedGenres.clear();
+    else if (selectedGenres.has(g)) selectedGenres.delete(g);
+    else selectedGenres.add(g);
+    saveGenreSelection();
+    renderChips();
+    render();
+    fitAll(true);
+  });
+
+  /* =========================================================
+     Map
+     ========================================================= */
+  // Re-tint the dark base style to midnight navy. Unknown layers are left as they are.
+  function tintMap(m) {
+    const style = m.getStyle();
+    if (!style || !style.layers) return;
+    const T = MAP_TINT;
+    for (const layer of style.layers) {
+      const id = layer.id.toLowerCase(), type = layer.type;
+      const set = (prop, value) => { try { m.setPaintProperty(layer.id, prop, value); } catch (_) {} };
+      if (type === 'background') set('background-color', T.background);
+      else if (type === 'fill') {
+        if (id.includes('water')) set('fill-color', T.water);
+        else if (id.includes('building')) set('fill-color', T.building);
+        else if (id.includes('residential')) set('fill-color', T.residential);
+        else if (/park|wood|grass|landcover|cemetery|pitch/.test(id)) set('fill-color', T.park);
+        else if (/aeroway|pier/.test(id)) set('fill-color', T.roadMinor);
+      } else if (type === 'line') {
+        if (id.includes('water')) set('line-color', T.water);
+        else if (id.includes('casing') || id.includes('dashline')) set('line-color', T.background); // thin, quiet streets
+        else if (id.includes('motorway')) set('line-color', T.motorway);
+        else if (/major|primary|trunk/.test(id)) set('line-color', T.roadMajor);
+        else if (/highway|road|street|path|minor|bridge|tunnel|aeroway|pier/.test(id)) set('line-color', T.roadMinor);
+        else if (/rail|boundary/.test(id)) set('line-color', T.rail);
+      } else if (type === 'symbol') { set('text-color', T.label); set('text-halo-color', T.labelHalo); }
+    }
+  }
+
+  let map = null;
+  try {
+    map = new maplibregl.Map({
+      container: 'map',
+      style: CONFIG.mapStyle,
+      center: [-73.99, 40.725],
+      zoom: 12,
+      attributionControl: false,
+      dragRotate: false,
+      pitchWithRotate: false,
+      touchPitch: false,
+    });
+    map.touchZoomRotate.disableRotation();
+    map.addControl(new maplibregl.AttributionControl({ compact: false }), 'bottom-right');
+    map.on('load', () => tintMap(map));
+    // tapping empty map closes the details panel
+    map.on('click', (e) => {
+      const t = e.originalEvent && e.originalEvent.target;
+      if (!(t && t.closest && t.closest('.tn-pin'))) closeDetails();
+    });
+  } catch (err) {
+    console.error('Map failed to start', err);
+    map = null;
+    $('map').innerHTML = '<p class="map-error">The map can’t load on this device. Tonight’s shows are still listed.</p>';
+  }
+
+  function ensureMarker(ev) {
+    if (!map) return null;
+    let m = markers.get(ev.id);
+    if (m) return m;
+    const el = document.createElement('div');
+    el.className = 'tn-pin';
+    el.title = `${ev.title}, ${ev.venue}`;
+    el.tabIndex = 0;
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-label', `${ev.title} at ${ev.venue}, ${ev.timeLabel}`);
+    const pin = document.createElement('div');
+    el.appendChild(pin); // animate the child: MapLibre positions the outer element with transform
+    el.addEventListener('click', (e) => { e.stopPropagation(); openDetails(ev.id); });
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetails(ev.id); } });
+    const marker = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).addTo(map);
+    m = { marker, pin, el, shown: true };
+    markers.set(ev.id, m);
+    return m;
+  }
+
+  /* =========================================================
+     Listings + pins
+     ========================================================= */
+  const prio = (r) => (r.ev.sponsored && r.st.key !== 'ended' ? -1 : r.st.rank);
+
+  function rowHtml(ev, st) {
+    const t = ev.start == null ? { hm: 'TBA', ap: '' } : clockParts(ev.start);
+    return `
+      <button class="row is-${st.key}${ev.sponsored ? ' is-sponsored' : ''}${ev.id === selectedId ? ' is-selected' : ''}" type="button" data-id="${esc(ev.id)}">
+        <span class="when"><span class="t">${t.hm}<small>${t.ap}</small></span>${st.short ? `<span class="s">${esc(st.short)}</span>` : ''}</span>
+        <span class="what">
+          <span class="title">${esc(ev.title)}</span>
+          ${ev.performers.length ? `<span class="who">${esc(ev.performers.join(', '))}</span>` : ''}
+          <span class="where">${esc(ev.venue)}</span>
+        </span>
+        <span class="side">${ev.sponsored ? '<span class="tag">Sponsored</span>' : ''}<span class="genre">${esc(ev.genre)}</span></span>
+      </button>`;
+  }
+
+  function render() {
+    const now = nycNow();
+    const rows = EVENTS
+      .filter(passesGenre)
+      .map((ev) => ({ ev, st: statusOf(ev, now) }))
+      // sponsored shows go first until they end; then live, starting soon, later, ended
+      .sort((a, b) => prio(a) - prio(b) || (a.ev.start ?? 1e9) - (b.ev.start ?? 1e9));
+
+    // pins (hide the ones filtered out by genre)
+    const visible = new Set(rows.map((r) => r.ev.id));
+    markers.forEach((m, id) => {
+      if (!visible.has(id) && m.shown) { m.marker.remove(); m.shown = false; }
+    });
+    for (const { ev, st } of rows) {
+      const m = ensureMarker(ev);
+      if (!m) continue;
+      if (!m.shown) { m.marker.addTo(map); m.shown = true; }
+      m.pin.className = `pin ${st.key}`;
+      m.el.style.zIndex = { live: 4, soon: 3, later: 2, ended: 1 }[st.key];
+      m.el.classList.toggle('selected', ev.id === selectedId);
+      m.el.classList.toggle('sponsored', ev.sponsored && st.key !== 'ended');
+      if (ev.sponsored && st.key !== 'ended') m.el.style.zIndex = 5;
+    }
+
+    // header + list
+    const count = (k) => rows.filter((r) => r.st.key === k).length;
+    const live = count('live'), upcoming = count('soon') + count('later'), ended = count('ended');
+    $('list-title').textContent = live ? 'Playing now' : upcoming ? 'Coming up tonight' : 'Tonight';
+    $('list-summary').textContent =
+      [live && `${live} live`, upcoming && `${upcoming} coming up`, ended && `${ended} ended`].filter(Boolean).join(', ') ||
+      (selectedGenres.size ? 'Nothing in this genre tonight' : 'No shows listed yet');
+    const note = $('list-note');
+    if (DATA_SOURCE === 'sample') { note.hidden = false; note.textContent = 'Sample lineup. Real shows appear after the first daily update.'; }
+    else if (DATA_DATE && DATA_DATE !== tonightISO()) { note.hidden = false; note.textContent = `Showing the ${DATA_DATE} lineup until today's update arrives.`; }
+    else note.hidden = true;
+
+    $('event-list').innerHTML = rows.length
+      ? rows.map(({ ev, st }) => rowHtml(ev, st)).join('')
+      : `<p class="empty">${selectedGenres.size ? 'No shows in the selected genres tonight. Tap All to see everything.' : 'No shows listed for tonight yet.'}</p>`;
+
+    // keep the open details panel in step (status changes, or the show was filtered out)
+    if (selectedId) {
+      if (!visible.has(selectedId)) closeDetails();
+      else {
+        const sel = rows.find((r) => r.ev.id === selectedId);
+        const s = document.querySelector('#details-content .d-status');
+        if (s && sel) { s.className = `d-status ${sel.st.key}`; s.textContent = sel.st.long; }
+      }
+    }
+
+    $('date-line').textContent = `Live shows tonight, ${tonightLabel()}`;
+    return rows;
+  }
+
+  /* =========================================================
+     Show details
+     ========================================================= */
+  function renderDetails(ev) {
+    const st = statusOf(ev, nycNow());
+    const facts = [
+      ['When', esc(whenLabel(ev))],
+      ['Where', `${esc(ev.venue)}${ev.address ? `<span>${esc(ev.address)}</span>` : ''}`],
+      ev.program.length ? ['Program', ev.program.map(esc).join('<br>')] : null,
+      ev.price ? ['Tickets', esc(ev.price)] : null,
+      ['Genre', `${esc(ev.genre)}${ev.subgenre && squash(ev.subgenre) !== squash(ev.genre) ? `<span>${esc(ev.subgenre)}</span>` : ''}`],
+    ].filter(Boolean);
+    const tix = ticketLink(ev.url);
+    const box = $('details-content');
+    box.innerHTML = `
+      ${ev.image ? `<img class="d-img" src="${esc(ev.image)}" alt="">` : ''}
+      <div class="d-body">
+        <div class="d-top"><p class="d-status ${st.key}">${esc(st.long)}</p>${ev.sponsored ? '<span class="tag">Sponsored</span>' : ''}</div>
+        <h3 class="d-title" id="d-title">${esc(ev.title)}</h3>
+        ${ev.performers.length ? `<p class="d-with">${esc(ev.performers.join(', '))}</p>` : ''}
+        <dl class="d-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+        ${ev.description ? `<p class="d-desc">${esc(ev.description)}</p>` : ''}
+        <div class="d-actions">
+          ${tix ? `<a class="btn primary" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">Get tickets</a>` : ''}
+          <a class="btn${tix ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        ${tix && tix.paid ? '<p class="d-note">Word NYC may earn a commission if you buy tickets through this link.</p>' : ''}
+      </div>`;
+    const img = box.querySelector('.d-img');
+    if (img) img.addEventListener('error', () => img.remove());
+  }
+
+  function openDetails(id) {
+    const ev = EVENTS.find((e) => e.id === id);
+    if (!ev) return;
+    selectedId = id;
+    renderDetails(ev);
+    const panel = $('details');
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    panel.scrollTop = 0;
+    markers.forEach((m, mid) => m.el.classList.toggle('selected', mid === id));
+    document.querySelectorAll('.row').forEach((r) => r.classList.toggle('is-selected', r.dataset.id === id));
+    $('details-close').focus({ preventScroll: true });
+    flyTo(ev);
+  }
+
+  function closeDetails() {
+    if (!selectedId) return;
+    const wasId = selectedId;
+    selectedId = null;
+    const panel = $('details');
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    markers.forEach((m) => m.el.classList.remove('selected'));
+    document.querySelectorAll('.row.is-selected').forEach((r) => r.classList.remove('is-selected'));
+    const row = document.querySelector(`.row[data-id="${CSS.escape(wasId)}"]`);
+    if (row && isWide()) row.focus({ preventScroll: false });
+  }
+
+  $('details-close').addEventListener('click', closeDetails);
+
+  // the part of the map not covered by the header, the listings or the details sheet
+  function insets() {
+    if (isWide()) return { top: 0, bottom: 0 };
+    const top = $('topbar').offsetHeight, bottom = $('drawer').offsetHeight;
+    const spare = window.innerHeight - top - bottom;
+    return spare > 160 ? { top, bottom } : { top: 0, bottom: 0 }; // tiny screens: ignore overlays
+  }
+  function viewPadding() {
+    let { top, bottom } = insets();
+    const panel = $('details');
+    if (!isWide() && panel.classList.contains('open')) bottom = Math.max(bottom, panel.offsetHeight);
+    bottom = Math.min(bottom, Math.max(0, window.innerHeight - top - 140));
+    return { top, bottom, left: 0, right: 0 };
+  }
+
+  function boundsOf(list) {
+    const b = new maplibregl.LngLatBounds();
+    list.forEach((e) => b.extend([e.lng, e.lat]));
+    return b;
+  }
+
+  function fitAll(animate = false) {
+    const list = EVENTS.filter(passesGenre);
+    if (!map || !list.length) return;
+    const { top, bottom } = insets();
+    const pad = isWide() ? { top: 60, bottom: 60, left: 60, right: 60 } : { top: top + 24, bottom: bottom + 24, left: 36, right: 36 };
+    map.fitBounds(boundsOf(list), { padding: pad, maxZoom: 15, animate, duration: animate ? 700 : 0 });
+  }
+
+  function flyTo(ev) {
+    if (!map) return;
+    map.flyTo({ center: [ev.lng, ev.lat], zoom: Math.max(map.getZoom(), 15), padding: viewPadding(), duration: 800, essential: true });
+  }
+
+  $('event-list').addEventListener('click', (e) => {
+    const row = e.target.closest('.row');
+    if (row) openDetails(row.dataset.id);
+  });
+
+  $('drawer-toggle').addEventListener('click', () => {
+    if (isWide()) return;
+    const collapsed = document.body.classList.toggle('drawer-collapsed');
+    $('drawer-toggle').setAttribute('aria-expanded', String(!collapsed));
+  });
+
+  /* =========================================================
+     Story graphic (1080x1920 PNG)
+     ========================================================= */
+  const DISPLAY_FONT = '"Big Shoulders Display", "Arial Narrow", Impact, sans-serif';
+  const TEXT_FONT = '"Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif';
+  const PIN_STYLE = { live: '#ffc24b', soon: '#ffc24b', later: '#8ea2ff', ended: '#4a5183' };
+
+  function rrect(x, X, Y, W, H, r) {
+    x.beginPath();
+    x.moveTo(X + r, Y);
+    x.arcTo(X + W, Y, X + W, Y + H, r);
+    x.arcTo(X + W, Y + H, X, Y + H, r);
+    x.arcTo(X, Y + H, X, Y, r);
+    x.arcTo(X, Y, X + W, Y, r);
+    x.closePath();
+  }
+  function glow(x, cx, cy, r, color) {
+    const g = x.createRadialGradient(cx, cy, 0, cx, cy, r);
+    g.addColorStop(0, color);
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    x.fillStyle = g;
+    x.fillRect(cx - r, cy - r, r * 2, r * 2);
+  }
+  function clip(x, text, maxW) {
+    if (x.measureText(text).width <= maxW) return text;
+    let s = text;
+    while (s.length > 1 && x.measureText(s + '…').width > maxW) s = s.slice(0, -1);
+    return s.trimEnd() + '…';
+  }
+
+  // Renders the tinted basemap for the given shows off-screen and returns the image plus pin positions.
+  async function renderStoryBasemap(rows, cssW, cssH, ratio) {
+    if (!map) return null;
+    const holder = document.createElement('div');
+    holder.style.cssText = `position:fixed;left:-10000px;top:0;width:${cssW}px;height:${cssH}px;`;
+    document.body.appendChild(holder);
+    let m = null;
+    try {
+      m = new maplibregl.Map({
+        container: holder, style: CONFIG.mapStyle,
+        bounds: boundsOf(rows.map((r) => r.ev)), fitBoundsOptions: { padding: 60, maxZoom: 15 },
+        interactive: false, attributionControl: false, preserveDrawingBuffer: true,
+        pixelRatio: ratio, fadeDuration: 0,
+      });
+      m.once('load', () => tintMap(m));
+      await new Promise((resolve, reject) => {
+        const t = setTimeout(() => reject(new Error('basemap timeout')), 12000);
+        m.once('load', () => m.once('idle', () => { clearTimeout(t); resolve(); }));
+      });
+      const img = document.createElement('canvas');
+      img.width = cssW * ratio;
+      img.height = cssH * ratio;
+      img.getContext('2d').drawImage(m.getCanvas(), 0, 0, img.width, img.height);
+      const points = rows.map(({ ev }) => { const p = m.project([ev.lng, ev.lat]); return [p.x * ratio, p.y * ratio]; });
+      return { img, points };
+    } catch (err) {
+      console.warn('Story basemap unavailable:', err);
+      return null;
+    } finally {
+      if (m) m.remove();
+      holder.remove();
+    }
+  }
+
+  // fallback projection (Web Mercator) when the basemap can't render
+  function fallbackPoints(rows, w, h, pad) {
+    const merc = ({ lat, lng }) => {
+      const s = Math.sin((lat * Math.PI) / 180);
+      return [(lng + 180) / 360, 0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)];
+    };
+    const p = rows.map(({ ev }) => merc(ev));
+    const xs = p.map((q) => q[0]), ys = p.map((q) => q[1]);
+    const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+    const k = Math.min((w - 2 * pad) / Math.max(maxX - minX, 1e-9), (h - 2 * pad) / Math.max(maxY - minY, 1e-9), 2 ** 23);
+    return p.map(([px, py]) => [w / 2 + (px - (minX + maxX) / 2) * k, h / 2 + (py - (minY + maxY) / 2) * k]);
+  }
+
+  function drawStoryPin(x, X, Y, key) {
+    if (key === 'live') {
+      glow(x, X, Y, 70, 'rgba(255,194,75,0.55)');
+      x.beginPath(); x.arc(X, Y, 15, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.live; x.fill();
+    } else if (key === 'soon') {
+      glow(x, X, Y, 44, 'rgba(255,194,75,0.3)');
+      x.beginPath(); x.arc(X, Y, 13, 0, Math.PI * 2); x.fillStyle = '#0d1230'; x.fill();
+      x.lineWidth = 6; x.strokeStyle = PIN_STYLE.soon; x.stroke();
+    } else if (key === 'later') {
+      x.beginPath(); x.arc(X, Y, 11, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.later; x.fill();
+      x.lineWidth = 4; x.strokeStyle = '#0d1230'; x.stroke();
+    } else {
+      x.beginPath(); x.arc(X, Y, 8, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.ended; x.fill();
+    }
+  }
+
+  async function drawStoryMap(x, box, rows) {
+    x.save();
+    rrect(x, box.x, box.y, box.w, box.h, box.r);
+    x.clip();
+    x.fillStyle = MAP_TINT.background;
+    x.fillRect(box.x, box.y, box.w, box.h);
+
+    const base = await renderStoryBasemap(rows, box.w / 2, box.h / 2, 2);
+    let points;
+    if (base) {
+      x.drawImage(base.img, box.x, box.y, box.w, box.h);
+      points = base.points;
+    } else {
+      x.strokeStyle = 'rgba(214,220,255,0.05)';
+      x.lineWidth = 2;
+      for (let gx = box.x; gx < box.x + box.w; gx += 60) { x.beginPath(); x.moveTo(gx, box.y); x.lineTo(gx, box.y + box.h); x.stroke(); }
+      for (let gy = box.y; gy < box.y + box.h; gy += 60) { x.beginPath(); x.moveTo(box.x, gy); x.lineTo(box.x + box.w, gy); x.stroke(); }
+      points = fallbackPoints(rows, box.w, box.h, 120);
+    }
+
+    const order = { ended: 0, later: 1, soon: 2, live: 3 }; // lit pins on top
+    rows.map((r, i) => ({ key: r.st.key, pt: points[i] }))
+      .sort((a, b) => order[a.key] - order[b.key])
+      .forEach(({ key, pt }) => drawStoryPin(x, box.x + pt[0], box.y + pt[1], key));
+
+    if (base) { // map data attribution
+      x.font = `500 18px ${TEXT_FONT}`;
+      const t = '© OpenFreeMap © OpenMapTiles © OpenStreetMap contributors';
+      const tw = x.measureText(t).width;
+      x.fillStyle = 'rgba(13,18,48,0.75)';
+      x.fillRect(box.x + box.w - tw - 28, box.y + box.h - 36, tw + 28, 36);
+      x.fillStyle = '#8c93be';
+      x.fillText(t, box.x + box.w - tw - 14, box.y + box.h - 12);
+    }
+    x.restore();
+
+    rrect(x, box.x, box.y, box.w, box.h, box.r);
+    x.lineWidth = 2;
+    x.strokeStyle = 'rgba(214,220,255,0.14)';
+    x.stroke();
+  }
+
+  async function buildStory(rows) {
+    // make sure the web fonts are ready before drawing text onto the canvas
+    await Promise.all([`800 100px ${DISPLAY_FONT}`, `700 40px ${TEXT_FONT}`, `500 30px ${TEXT_FONT}`]
+      .map((f) => document.fonts.load(f).catch(() => null)));
+
+    const W = 1080, H = 1920;
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const x = c.getContext('2d');
+
+    x.fillStyle = '#0d1230';
+    x.fillRect(0, 0, W, H);
+    glow(x, 200, 120, 700, 'rgba(255,194,75,0.16)');
+    glow(x, 1000, 1850, 760, 'rgba(142,162,255,0.10)');
+
+    // wordmark + date
+    x.textBaseline = 'alphabetic';
+    x.fillStyle = '#ffc24b';
+    x.shadowColor = 'rgba(255,194,75,0.45)';
+    x.shadowBlur = 40;
+    x.font = `800 176px ${DISPLAY_FONT}`;
+    const wm = x.measureText('Word NYC').width;
+    if (wm > 950) x.font = `800 ${Math.floor(176 * 950 / wm)}px ${DISPLAY_FONT}`; // fallback font is wider
+    x.fillText('Word NYC', 64, 230);
+    x.shadowBlur = 0;
+    x.fillStyle = '#c9cde6';
+    x.font = `500 40px ${TEXT_FONT}`;
+    x.fillText(`Live shows tonight, ${tonightLabel()}`, 70, 300);
+
+    // show live + upcoming; if everything has ended, show the whole night
+    const remaining = rows.filter((r) => r.st.key !== 'ended');
+    const list = remaining.length ? remaining : rows;
+    await drawStoryMap(x, { x: 60, y: 350, w: 960, h: 760, r: 36 }, list);
+
+    // lineup heading
+    const live = list.filter((r) => r.st.key === 'live').length;
+    const heading = live ? 'Playing now and coming up' : remaining.length ? 'Coming up tonight' : 'Tonight';
+    const genreTag = selectedGenres.size ? `: ${[...selectedGenres].join(', ')}` : '';
+    x.fillStyle = '#f3eee4';
+    x.font = `700 40px ${TEXT_FONT}`;
+    x.fillText(clip(x, heading + genreTag, 940), 70, 1190);
+
+    // rows: big time on the left, show and venue on the right
+    const maxRows = 6, rowH = 92, top = 1230;
+    list.slice(0, maxRows).forEach(({ ev, st }, i) => {
+      const y = top + i * rowH;
+      const t = ev.start == null ? { hm: 'TBA', ap: '' } : clockParts(ev.start);
+      const lit = st.key === 'live';
+      x.fillStyle = lit ? '#ffc24b' : '#f3eee4';
+      x.font = `800 58px ${DISPLAY_FONT}`;
+      x.fillText(t.hm, 70, y + 52);
+      const tw = x.measureText(t.hm).width;
+      x.fillStyle = lit ? '#ffc24b' : '#8c93be';
+      x.font = `600 22px ${TEXT_FONT}`;
+      x.fillText(st.short || t.ap, 70 + (st.short ? 0 : tw + 6), st.short ? y + 84 : y + 52);
+
+      x.fillStyle = '#f3eee4';
+      x.font = `700 38px ${TEXT_FONT}`;
+      x.fillText(clip(x, ev.title, 740), 270, y + 42);
+      x.fillStyle = '#8c93be';
+      x.font = `500 28px ${TEXT_FONT}`;
+      x.fillText(clip(x, ev.venue, 740), 270, y + 80);
+    });
+    if (list.length > maxRows) {
+      x.fillStyle = '#8c93be';
+      x.font = `600 28px ${TEXT_FONT}`;
+      x.fillText(`and ${list.length - maxRows} more on the map`, 270, top + maxRows * rowH + 20);
+    }
+
+    // footer
+    x.fillStyle = '#8c93be';
+    x.font = `600 28px ${TEXT_FONT}`;
+    x.textAlign = 'center';
+    x.fillText(CONFIG.siteLabel, W / 2, H - 36);
+    x.textAlign = 'left';
+
+    return new Promise((resolve, reject) =>
+      c.toBlob((b) => (b ? resolve(b) : reject(new Error('Could not export image'))), 'image/png'));
+  }
+
+  /* =========================================================
+     Share flow
+     ========================================================= */
+  let storyFile = null, storyUrl = null;
+  const modal = $('share-modal');
+
+  function canShareFile() {
+    try { return !!(navigator.canShare && navigator.canShare({ files: [storyFile] })); } catch (_) { return false; }
+  }
+  const canCopyImage = () => !!(window.isSecureContext && window.ClipboardItem && navigator.clipboard && navigator.clipboard.write);
+
+  function openModal() {
+    $('share-preview').src = storyUrl;
+    $('act-download').href = storyUrl;
+    const share = canShareFile(), copy = canCopyImage();
+    $('act-share').hidden = !share;
+    $('act-copy').hidden = !copy;
+    const primary = share ? 'act-share' : copy ? 'act-copy' : 'act-download';
+    ['act-share', 'act-copy', 'act-download'].forEach((id) => $(id).classList.toggle('primary', id === primary));
+    modal.classList.add('open');
+    $('share-close').focus();
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    $('share-btn').focus();
+  }
+
+  $('share-btn').addEventListener('click', async () => {
+    const btn = $('share-btn'), label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Making graphic…';
+    try {
+      const blob = await buildStory(render());
+      if (storyUrl) URL.revokeObjectURL(storyUrl);
+      storyUrl = URL.createObjectURL(blob);
+      storyFile = new File([blob], 'word-nyc-story.png', { type: 'image/png' });
+      openModal();
+    } catch (err) {
+      console.error(err);
+      toast("Couldn't create the graphic. Try again.");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = label;
+    }
+  });
+
+  $('act-share').addEventListener('click', async () => {
+    try {
+      await navigator.share({ files: [storyFile], title: "Tonight's shows in NYC" });
+      closeModal();
+    } catch (err) {
+      if (err.name !== 'AbortError') toast('Sharing failed. Use Download instead.');
+    }
+  });
+
+  $('act-copy').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': storyFile })]);
+      closeModal();
+      toast('Story graphic copied');
+    } catch (_) {
+      toast('Copying is blocked here. Use Download instead.');
+    }
+  });
+
+  $('act-download').addEventListener('click', () => toast('Story graphic downloaded'));
+  $('share-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (modal.classList.contains('open')) closeModal();
+    else closeDetails();
+  });
+
+  /* =========================================================
+     Start
+     ========================================================= */
+  // One ad unit below the listings. It sits outside the list that re-renders, so it loads once
+  // and is never refreshed automatically (AdSense doesn't allow auto-refresh).
+  function initAds() {
+    const { client, slot } = CONFIG.adsense || {};
+    if (!client || !slot) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(client)}`;
+    document.head.appendChild(s);
+    const box = $('ad-slot');
+    const ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.dataset.adClient = client;
+    ins.dataset.adSlot = slot;
+    ins.dataset.adFormat = 'auto';
+    ins.dataset.fullWidthResponsive = 'true';
+    box.appendChild(ins);
+    box.hidden = false;
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+  // Cookie-free visitor counts (Cloudflare Web Analytics), useful when selling sponsorships.
+  function initAnalytics() {
+    if (!CONFIG.analyticsToken) return;
+    const s = document.createElement('script');
+    s.defer = true;
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.dataset.cfBeacon = JSON.stringify({ token: CONFIG.analyticsToken });
+    document.head.appendChild(s);
+  }
+
+  let loadedFor = null;     // which night the current data was loaded for
+  let lastFetch = 0;
+
+  async function loadData() {
+    const data = await loadEvents();
+    DATA_DATE = data.date;
+    DATA_SOURCE = data.source;
+    loadedFor = tonightISO();
+    lastFetch = Date.now();
+    closeDetails();
+    markers.forEach((m) => m.marker.remove());
+    markers.clear();
+    EVENTS = normalize(data.events);
+    renderChips();
+    render();
+    fitAll();
+    // refit once the map has finished sizing itself (first paint can run before layout settles)
+    if (map && !map.loaded()) map.once('load', () => fitAll());
+  }
+
+  // after the 5 AM rollover, pull the new lineup (retry every 10 min until the daily update lands)
+  function tick() {
+    const night = tonightISO();
+    const waiting = DATA_DATE && DATA_DATE !== night && Date.now() - lastFetch > 10 * 60e3;
+    if (night !== loadedFor || waiting) loadData(); else render();
+  }
+
+  (async function init() {
+    selectedGenres = loadGenreSelection();
+    initAnalytics();
+    await loadData();
+    initAds();
+    setInterval(tick, CONFIG.refreshMs);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
+    let lastWide = isWide();
+    window.addEventListener('resize', () => { if (isWide() !== lastWide) { lastWide = isWide(); fitAll(); } });
+  })();
+  </script>
+</body>
+</html>

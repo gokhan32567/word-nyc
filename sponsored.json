@@ -1,0 +1,4 @@
+{
+  "_comment": "Paid placements. Each one marks shows as Sponsored (top of the list, highlighted pin) on nights between 'from' and 'until' (YYYY-MM-DD, both included). Match by 'venue' and, optionally, words from the show title in 'title_contains'. To list a show the daily sources miss, use 'event' with at least title, venue, lat, lng and time. See README for examples.",
+  "placements": []
+}

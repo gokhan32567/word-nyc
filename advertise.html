@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Advertise on Word NYC</title>
+  <meta name="description" content="Put your show at the top of Word NYC's map of live music in New York tonight.">
+  <meta name="theme-color" content="#0d1230">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="home" href="./">Word NYC</a>
+
+    <h1>Put your show on the map</h1>
+    <p class="lede">Word NYC shows New Yorkers what's playing tonight, from jazz clubs and indie rooms to the Met and Carnegie Hall. People open it when they're deciding where to go in the next few hours.</p>
+
+    <h2>What a sponsored listing gets</h2>
+    <ul>
+      <li>Your show at the top of the list on the nights you choose, labeled Sponsored.</li>
+      <li>A highlighted pin on the map, drawn above the others.</li>
+      <li>A place in the story graphic people share to Instagram and other apps.</li>
+      <li>Your own ticket link, show photo, program and description in the show's details.</li>
+    </ul>
+
+    <h2>Who it's for</h2>
+    <p>Venues, promoters, festivals, ensembles and artists with a show in New York City.</p>
+
+    <!-- advertise@word-nyc.com is forwarded to the owner's inbox by Porkbun email forwarding. -->
+    <div class="card">
+      <p>To book dates or ask for rates, email</p>
+      <p class="email" id="email">advertise@word-nyc.com</p>
+      <p><button class="btn" type="button" id="copy">Copy email address</button></p>
+      <p class="small">Include the show, venue, dates and a ticket link.</p>
+    </div>
+
+    <footer>
+      <a href="./">Tonight's map</a><a href="privacy.html">Privacy</a>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('copy').addEventListener('click', async (e) => {
+      const email = document.getElementById('email').textContent.trim();
+      try { await navigator.clipboard.writeText(email); e.target.textContent = 'Copied'; }
+      catch (_) { getSelection().selectAllChildren(document.getElementById('email')); e.target.textContent = 'Press Ctrl+C or Cmd+C to copy'; }
+    });
+  </script>
+</body>
+</html>

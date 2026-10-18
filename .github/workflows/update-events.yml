@@ -1,0 +1,65 @@
+name: Update tonight's lineup
+
+# Runs at 5:00 AM New York time every day, all year.
+# GitHub cron is UTC, so it fires at 09:00 UTC (5 AM during daylight time) and
+# 10:00 UTC (5 AM during standard time); the check step below skips whichever run
+# is not needed. 11:00 UTC is a retry in case an earlier run failed or was delayed.
+on:
+  schedule:
+    - cron: "0 9 * * *"
+    - cron: "0 10 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch: {}   # "Run workflow" button for a manual refresh
+  push:                   # editing sponsored placements republishes tonight's lineup right away
+    paths: ["sponsored.json", "scraper/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is a refresh due?
+        id: due
+        run: |
+          night=$(TZ=America/New_York date -d '-5 hours' +%F)
+          current=$(python3 -c "import json;print(json.load(open('events.json')).get('date',''))" 2>/dev/null || echo "")
+          echo "night=$night current=$current"
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$current" != "$night" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Lineup for $night is already published; nothing to do."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.due.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Build events.json
+        if: steps.due.outputs.run == 'true'
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: python scraper/scrape.py
+
+      - name: Commit and publish
+        if: steps.due.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Lineup for $(TZ=America/New_York date -d '-5 hours' +%F)"
+            git push
+          fi
