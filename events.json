@@ -1,404 +1,8 @@
 {
   "date": "2026-10-18",
-  "generated": "2026-10-18T19:32:00-04:00",
-  "count": 78,
+  "generated": "2026-10-18T19:49:07-04:00",
+  "count": 44,
   "events": [
-    {
-      "title": "Nursery Care",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "8:30 AM",
-      "end": "12:30 PM",
-      "url": "https://gracechurchnyc.org/event/nursery-care/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "Children, Youth, and Families",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Nursery Care",
-      "id": 1
-    },
-    {
-      "title": "Enter, Rest, Pray",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "8:30 AM",
-      "end": "5:00 PM",
-      "url": "https://gracechurchnyc.org/event/enter-rest-pray-2/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Enter, Rest, Pray",
-      "id": 2
-    },
-    {
-      "title": "Fresh Start",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "8:30 AM",
-      "end": "9:00 AM",
-      "url": "https://www.trcnyc.org/event/freshstart/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "*Online, Upcoming, Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2025/09/Fresh-Start-4.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Fresh Start",
-      "id": 3
-    },
-    {
-      "title": "Holy Eucharist Rite II",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "9:00 AM",
-      "end": "10:00 AM",
-      "url": "https://gracechurchnyc.org/event/holy-eucharist-rite-ii/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Holy Eucharist Rite II",
-      "id": 4
-    },
-    {
-      "title": "Hudson Valley Pottery Tour",
-      "performers": [],
-      "venue": "Greenwich House Music School",
-      "address": "46 Barrow St, New York, NY 10014",
-      "lat": 40.73216,
-      "lng": -74.00452,
-      "date": "2026-10-18",
-      "time": "9:00 AM",
-      "end": "5:00 PM",
-      "url": "https://greenwichhouse.org/event/hudson-valley-pottery-tour/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "Pottery, Special Event",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://greenwichhouse.org/wp-content/uploads/2026/09/HVPT-e1789309681556.png",
-      "source": "venue-data",
-      "listing_url": "https://greenwichhouse.org/calendar/",
-      "artist": "Hudson Valley Pottery Tour",
-      "id": 5
-    },
-    {
-      "title": "The Seekers Book Study",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "9:00 AM",
-      "end": "10:30 AM",
-      "url": "https://www.trcnyc.org/event/the-seekers-book-study/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Online, *Onsite, Education, Faith Formation, Life Of The…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2026/06/The-Seekers-Book-Study.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "The Seekers Book Study",
-      "id": 6
-    },
-    {
-      "title": "Discovering the Bible",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "9:00 AM",
-      "end": "10:30 AM",
-      "url": "https://www.trcnyc.org/event/discovering-the-bible/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Online, *Onsite, Education, Education, Faith Formation…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2026/08/Education-Website-Header-8.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Discovering the Bible",
-      "id": 7
-    },
-    {
-      "title": "Open Bible Study",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "9:30 AM",
-      "end": "10:30 AM",
-      "url": "https://www.trcnyc.org/event/open-bible-study-2026-08-16/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Online, *Onsite, Faith Formation",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2024/02/Open-Bible-Study-Banner-1-1.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Open Bible Study",
-      "id": 8
-    },
-    {
-      "title": "Biblical Hebrew – Beginners",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "9:30 AM",
-      "end": "10:45 AM",
-      "url": "https://www.trcnyc.org/event/biblical-hebrew-beginners-2/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "Education, Education, Faith Formation, Life Of The Community",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Biblical Hebrew – Beginners",
-      "id": 9
-    },
-    {
-      "title": "Undergraduate Open House",
-      "performers": [],
-      "venue": "Brooklyn Center for the Performing Arts",
-      "address": "2900 Campus Rd, Brooklyn, NY 11210",
-      "lat": 40.63219,
-      "lng": -73.94924,
-      "date": "2026-10-18",
-      "time": "10:00 AM",
-      "end": "1:00 PM",
-      "url": "https://www.brooklyn.edu/event/undergraduate-open-house/",
-      "genre": "Other",
-      "subgenre": "Admissions, Admissions, Undergraduate, Leonard & Claire Tow…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.brooklyn.edu/wp-content/uploads/2026/01/Handelman_2025_0040_Class_Change_5_1200x960.jpg",
-      "source": "venue-data",
-      "listing_url": "https://www.brooklyn.edu/towcenter/",
-      "artist": "Undergraduate Open House",
-      "id": 10
-    },
-    {
-      "title": "The Sunday Forum",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "10:00 AM",
-      "end": "10:45 AM",
-      "url": "https://gracechurchnyc.org/event/the-sunday-forum-2/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "Adults",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "The Sunday Forum",
-      "id": 11
-    },
-    {
-      "title": "Nursery",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "10:00 AM",
-      "end": "1:00 PM",
-      "url": "https://www.trcnyc.org/event/nursey-childcare/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Education, Education, Faith Formation",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Nursery",
-      "id": 12
-    },
-    {
-      "title": "ParentConnect",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "10:00 AM",
-      "end": "11:00 AM",
-      "url": "https://www.trcnyc.org/event/parentconnect-2/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Education, Education, Faith Formation, Life Of The…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "ParentConnect",
-      "id": 13
-    },
-    {
-      "title": "Rising Voices and Youth Choir",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "10:00 AM",
-      "end": "11:00 AM",
-      "url": "https://www.trcnyc.org/event/rising-voices-holding/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "*Onsite, Education, Education, Faith Formation, Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Rising Voices and Youth Choir",
-      "id": 14
-    },
-    {
-      "title": "Intergenerational Service Project: Holiday Care Packages for Interfaith Prison Partnership",
-      "performers": [],
-      "venue": "St. Ann & the Holy Trinity",
-      "address": "157 Montague St, Brooklyn, NY 11201",
-      "lat": 40.69459,
-      "lng": -73.99273,
-      "date": "2026-10-18",
-      "time": "10:15 AM",
-      "end": "11:00 AM",
-      "url": "https://www.stannholytrinity.org/event/intergenerational-service-project-20261018/",
-      "genre": "Classical",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.stannholytrinity.org/wp-content/uploads/2026/09/ipp_holiday_care_packages_16-9.jpeg",
-      "source": "venue-data",
-      "listing_url": "https://www.stannholytrinity.org/",
-      "artist": "Intergenerational Service Project: Holiday Care Packages for Interfaith Prison Partnership",
-      "id": 15
-    },
-    {
-      "title": "Morning Prayer & Sermon Rite I",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "11:00 AM",
-      "end": "12:15 PM",
-      "url": "https://gracechurchnyc.org/event/morning-prayer-sermon-rite-i/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Morning Prayer & Sermon Rite I",
-      "id": 16
-    },
-    {
-      "title": "Discover Pottery Open House",
-      "performers": [],
-      "venue": "Greenwich House Music School",
-      "address": "46 Barrow St, New York, NY 10014",
-      "lat": 40.73216,
-      "lng": -74.00452,
-      "date": "2026-10-18",
-      "time": "11:00 AM",
-      "end": "5:00 PM",
-      "url": "https://greenwichhouse.org/event/discover-pottery-open-house-2026/",
-      "genre": "Classical",
-      "subgenre": "Pottery",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://greenwichhouse.org/wp-content/uploads/2026/09/Discover-Pottery-7-x-5-in-e1789313197711.png",
-      "source": "venue-data",
-      "listing_url": "https://greenwichhouse.org/calendar/",
-      "artist": "Discover Pottery Open House",
-      "id": 17
-    },
-    {
-      "title": "Sunday Morning Worship: Children’s Sabbath",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "11:00 AM",
-      "end": "12:00 PM",
-      "url": "https://www.trcnyc.org/event/sunday-morning-worship-2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "*Online, *Onsite, Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2020/05/1.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Sunday Morning Worship: Children’s Sabbath",
-      "id": 18
-    },
     {
       "title": "Sunday Songwriter's Open Mic Every Week at Lucinda's",
       "performers": [],
@@ -418,73 +22,7 @@
       "image": "https://s1.ticketm.net/dam/c/779/d4bc7e11-1b50-4aa4-a2be-0a21569f5779_106531_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Sunday Songwriter's Open Mic Every Week at Lucinda's",
-      "id": 19
-    },
-    {
-      "title": "New Worship Leader Open House (Refreshments Provided)",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "12:15 PM",
-      "end": "1:30 PM",
-      "url": "https://gracechurchnyc.org/event/new-worship-leader-open-house-refreshments-provided/",
-      "genre": "Classical",
-      "subgenre": "Adults, Students",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "New Worship Leader Open House (Refreshments Provided)",
-      "id": 20
-    },
-    {
-      "title": "Virtual Coffee Hour",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "12:30 PM",
-      "end": "1:30 PM",
-      "url": "https://www.trcnyc.org/event/vch/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "*Online, Faith Formation, Public Events, Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2020/03/Virtual-Coffee-Hour-2.jpg",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Virtual Coffee Hour",
-      "id": 21
-    },
-    {
-      "title": "Women of the Bible",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "1:00 PM",
-      "end": "2:00 PM",
-      "url": "https://www.trcnyc.org/event/women-of-the-bible-2/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Education, Education, Faith Formation, Life Of The…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Women of the Bible",
-      "id": 22
+      "id": 1
     },
     {
       "title": "Sunday Afternoon Carillon Recital",
@@ -506,73 +44,7 @@
       "source": "venue-data",
       "listing_url": "https://www.trcnyc.org/",
       "artist": "Sunday Afternoon Carillon Recital",
-      "id": 23
-    },
-    {
-      "title": "Men’s Class",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "1:30 PM",
-      "end": "2:30 PM",
-      "url": "https://www.trcnyc.org/event/mens-class/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, MCPL, Meetings, Parish Care, Parish Care",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Men’s Class",
-      "id": 24
-    },
-    {
-      "title": "Children’s Sabbath Art Workshop",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "1:30 PM",
-      "end": "3:00 PM",
-      "url": "https://www.trcnyc.org/event/childrens-sabbath-art-workshop/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Education, Education, Faith Formation, Life Of The…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2026/09/art-workshop-email-banner.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Children’s Sabbath Art Workshop",
-      "id": 25
-    },
-    {
-      "title": "Biblical Hebrew – Advanced",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "1:30 PM",
-      "end": "4:00 PM",
-      "url": "https://www.trcnyc.org/event/biblical-hebrew-advanced/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Education, Education, Faith Formation, Life Of The…",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "Biblical Hebrew – Advanced",
-      "id": 26
+      "id": 2
     },
     {
       "title": "“From Paris to Vermont: A Musical Lineage 75 Years in the Making” with Deborah Buck and Orli Shaham",
@@ -594,72 +66,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bargemusic.org/",
       "artist": "“From Paris to Vermont: A Musical Lineage 75 Years in the Making” with Deborah Buck and Orli Shaham",
-      "id": 27
-    },
-    {
-      "title": "The Riverside Strings and Bridgemusik Concert",
-      "performers": [],
-      "venue": "The Riverside Church",
-      "address": "490 Riverside Dr, New York, NY 10027",
-      "lat": 40.81207,
-      "lng": -73.96301,
-      "date": "2026-10-18",
-      "time": "3:00 PM",
-      "end": "4:30 PM",
-      "url": "https://www.trcnyc.org/event/bridgemusik/",
-      "genre": "Classical",
-      "subgenre": "*Onsite, Life Of The Community, Music, Music: Concerts",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://www.trcnyc.org/wp-content/uploads/2026/09/The-Riverside-Strings-and-Bridgemusik-Concert-Website-Header-3840x1530px.png",
-      "source": "venue-data",
-      "listing_url": "https://www.trcnyc.org/",
-      "artist": "The Riverside Strings and Bridgemusik Concert",
-      "id": 28
-    },
-    {
-      "title": "BrownstoneJAZZ  SUNDAY AFTER BRUNCH TRIO",
-      "performers": [],
-      "venue": "BrownstoneJAZZ",
-      "address": "107 Macon Street, Brooklyn , NY",
-      "lat": 40.68152,
-      "lng": -73.94702,
-      "date": "2026-10-18",
-      "time": "4:00 PM",
-      "end": null,
-      "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbrownstonejazz-sunday-after-brunch-brownstonejazz-tickets%2F14194164&utm_medium=affiliate",
-      "genre": "Jazz",
-      "subgenre": "Jazz Standards",
-      "price": "$54.27",
-      "program": [],
-      "description": "-Please read fully to enjoy- BrownstoneJAZZ up close and personal. Intimate acoustic room live concerts SUNDAYS TRIOS 4:00 PM & 6:00 PM Experience the JazzFest in a restored 19th Century Victorian Brownstone located in Bedford Stuyvesant's Central Brooklyn Landmarked Historical Community. Where ou will feel transported back to earlier time as you walk through the doors. BrownstoneJAZZ Ensasmbles present the best of…",
-      "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
-      "artist": "BrownstoneJAZZ  SUNDAY AFTER BRUNCH TRIO",
-      "id": 29
-    },
-    {
-      "title": "Hymns from Grace",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "4:00 PM",
-      "end": "4:45 PM",
-      "url": "https://gracechurchnyc.org/event/hymns-from-grace-2/",
-      "genre": "Classical",
-      "subgenre": "Music",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Hymns from Grace",
-      "id": 30
+      "id": 3
     },
     {
       "title": "Aida Cuevas & Flor de Toloache",
@@ -683,7 +90,7 @@
       "image": "https://s1.ticketm.net/dam/e/c41/22b92855-5105-4cd7-8bdb-20e57201ec41_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Aida Cuevas, Flor de Toloache",
-      "id": 31
+      "id": 4
     },
     {
       "title": "The 7th Annual Danny Awards",
@@ -704,7 +111,7 @@
       "image": "https://s1.ticketm.net/dam/e/418/3cfbe0c9-f791-449e-b501-51fdd985c418_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The 7th Annual Danny Awards",
-      "id": 32
+      "id": 5
     },
     {
       "title": "Hair of the Dog Hootenanny",
@@ -725,7 +132,7 @@
       "image": "https://s1.ticketm.net/dam/c/779/d4bc7e11-1b50-4aa4-a2be-0a21569f5779_106531_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Hair of the Dog Hootenanny",
-      "id": 33
+      "id": 6
     },
     {
       "title": "Valories",
@@ -749,7 +156,7 @@
       "image": "https://s1.ticketm.net/dam/a/2ad/d91f94d6-35f3-4b9d-bb07-0529ff5762ad_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Nate Livingston, YANKEEGIRL",
-      "id": 34
+      "id": 7
     },
     {
       "title": "Adi Yeshaya Jazz Orchestra feat. Jennifer Grimm",
@@ -770,94 +177,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Adi Yeshaya Jazz Orchestra feat. Jennifer Grimm",
-      "id": 35
-    },
-    {
-      "title": "Jack O Lantern Carving Contest",
-      "performers": [],
-      "venue": "Alphaville",
-      "address": "140 Wilson Ave, New York, New York 11237",
-      "lat": 40.70053,
-      "lng": -73.92582,
-      "date": "2026-10-18",
-      "time": "6:00 PM",
-      "end": "10:00 PM",
-      "url": "https://dice.fm/event/jack-o-lantern-carving-contest-18th-oct-alphaville-new-york-tickets",
-      "genre": "Punk & Hardcore",
-      "subgenre": null,
-      "price": "Free",
-      "program": [],
-      "description": null,
-      "image": "https://dice-media.imgix.net/attachments/2026-10-01/9dd37e77-ba0a-4131-9ecb-1b31a76207de.jpg?rect=0%2C504%2C3024%2C3024?min-w=720&fit=crop",
-      "source": "venue-data",
-      "listing_url": "https://www.alphavillebk.com/",
-      "artist": "Jack O Lantern Carving Contest",
-      "id": 36
-    },
-    {
-      "title": "BrownstoneJAZZ SUNDAY AFTER BRUNCH TRIO",
-      "performers": [],
-      "venue": "BrownstoneJAZZ",
-      "address": "107 Macon Street, Brooklyn , NY",
-      "lat": 40.68152,
-      "lng": -73.94702,
-      "date": "2026-10-18",
-      "time": "6:00 PM",
-      "end": null,
-      "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbrownstonejazz-sunday-after-brunch-trio-brownstonejazz-tickets%2F14194664&utm_medium=affiliate",
-      "genre": "Jazz",
-      "subgenre": "Jazz Standards",
-      "price": "$54.27",
-      "program": [],
-      "description": "-Please read fully- BrownstoneJAZZ up close and personal. Intimate acoustic room live concerts SUNDAYS 4:00 PM & 6:00 PM Experience the JazzFest in a restored 19th Century Victorian Brownstone located in Bedford Stuyvesant's Central Brooklyn Landmarked Historical Community. Where ou will feel transported back to earlier time as you walk through the doors. BrownstoneJAZZ Ensasmbles present the best of yesteryear's…",
-      "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
-      "artist": "BrownstoneJAZZ SUNDAY AFTER BRUNCH TRIO",
-      "id": 37
-    },
-    {
-      "title": "Holy Eucharist Rite II",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "6:00 PM",
-      "end": "6:45 PM",
-      "url": "https://gracechurchnyc.org/event/holy-eucharist-rite-ii-2/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Holy Eucharist Rite II",
-      "id": 38
-    },
-    {
-      "title": "Canterbury Downtown",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "6:00 PM",
-      "end": "8:30 PM",
-      "url": "https://gracechurchnyc.org/event/canterbury-downtown/2026-10-18/",
-      "genre": "Gospel",
-      "subgenre": "Students, Worship",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Canterbury Downtown",
-      "id": 39
+      "id": 8
     },
     {
       "title": "Plini - An Unnameable Desire North American Tour",
@@ -882,7 +202,7 @@
       "image": "https://s1.ticketm.net/dam/a/6d2/64cfb21b-5033-4e19-a0fd-bf2e287736d2_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Plini, Night Verses, Portraits",
-      "id": 40
+      "id": 9
     },
     {
       "title": "SPY, Empty Shell Casing, Spite House, Pyrex",
@@ -904,7 +224,7 @@
       "source": "venue-data",
       "listing_url": "https://www.saintvitusbar.com/",
       "artist": "SPY, Empty Shell Casing, Spite House, Pyrex",
-      "id": 41
+      "id": 10
     },
     {
       "title": "PeelingFlesh",
@@ -929,7 +249,7 @@
       "image": "https://s1.ticketm.net/dam/a/ea8/cb97aa18-8a9d-44ca-ad83-9690cf9c4ea8_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Gridiron, Final Resting Place, Fatal Realm",
-      "id": 42
+      "id": 11
     },
     {
       "title": "Max Hoffman | Dogs Downstate | Joanie",
@@ -950,29 +270,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Max Hoffman | Dogs Downstate | Joanie",
-      "id": 43
-    },
-    {
-      "title": "Bible Passages for Bad Days | Sunday Evening Adult Formation",
-      "performers": [],
-      "venue": "Grace Church",
-      "address": "802 Broadway, New York, NY 10003",
-      "lat": 40.73197,
-      "lng": -73.9909,
-      "date": "2026-10-18",
-      "time": "6:45 PM",
-      "end": "8:30 PM",
-      "url": "https://gracechurchnyc.org/event/bible-passages-for-bad-days-sunday-evening-adult-formation/2026-10-18/",
-      "genre": "Classical",
-      "subgenre": "Adults",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://gracechurchnyc.org/",
-      "artist": "Bible Passages for Bad Days | Sunday Evening Adult Formation",
-      "id": 44
+      "id": 12
     },
     {
       "title": "Carole J. Bufford: Chanteuse",
@@ -993,7 +291,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Carole J. Bufford: Chanteuse",
-      "id": 45
+      "id": 13
     },
     {
       "title": "@NICKCHEO the *TOUR* the *MOVIE*",
@@ -1017,7 +315,7 @@
       "image": "https://s1.ticketm.net/dam/a/11a/fad6ecbe-d56e-4624-ae85-b2ff822f011a_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Nick Cheo, tomcbumpz",
-      "id": 46
+      "id": 14
     },
     {
       "title": "SIMRIT with the Live Room Orchestra",
@@ -1040,7 +338,7 @@
       "image": "https://s1.ticketm.net/dam/e/042/142fc155-c16b-4eea-93e0-34f60cde7042_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "SIMRIT",
-      "id": 47
+      "id": 15
     },
     {
       "title": "Dani Offline - Lover's Discourse Live",
@@ -1061,7 +359,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Dani Offline - Lover's Discourse Live",
-      "id": 48
+      "id": 16
     },
     {
       "title": "Stereo Mandrax (FREE w/ RSVP) Paul Wallfisch • Secret Music Society •  Anna Johnson",
@@ -1083,29 +381,7 @@
       "source": "venue-data",
       "listing_url": "https://pianosnyc.com/shows",
       "artist": "Stereo Mandrax (FREE w/ RSVP) Paul Wallfisch • Secret Music Society •  Anna Johnson",
-      "id": 49
-    },
-    {
-      "title": "Nightmare B4 Xmas",
-      "performers": [],
-      "venue": "Sid Gold's Request Room",
-      "address": "165 W 26th St, New York, NY 10001",
-      "lat": 40.74595,
-      "lng": -73.99358,
-      "date": "2026-10-18",
-      "time": "7:00 PM",
-      "end": "8:30 PM",
-      "url": "https://sidgolds.com/event/nightmare-b4-xmas/",
-      "genre": "Country",
-      "subgenre": "Nashville Events",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://sidgolds.com/wp-content/uploads/2026/08/Nightmare-Before-Christmas-SAL-2026.png",
-      "source": "venue-data",
-      "listing_url": "https://sidgolds.com/detroit/events/",
-      "artist": "Nightmare B4 Xmas",
-      "id": 50
+      "id": 17
     },
     {
       "title": "Lucas Zelnick",
@@ -1127,7 +403,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Lucas Zelnick",
-      "id": 51
+      "id": 18
     },
     {
       "title": "Allison Russell",
@@ -1149,7 +425,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Allison Russell",
-      "id": 52
+      "id": 19
     },
     {
       "title": "SUGAR",
@@ -1171,7 +447,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "SUGAR",
-      "id": 53
+      "id": 20
     },
     {
       "title": "Robby Hecht & Antje Duvekot",
@@ -1195,7 +471,7 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robby Hecht, Antje Duvekot",
-      "id": 54
+      "id": 21
     },
     {
       "title": "Growing • Ryan Sawyer Shaker Ensemble",
@@ -1217,7 +493,7 @@
       "source": "venue-data",
       "listing_url": "https://www.union-pool.com/calendar",
       "artist": "Growing • Ryan Sawyer Shaker Ensemble",
-      "id": 55
+      "id": 22
     },
     {
       "title": "Boobees Live: A Variety Show",
@@ -1239,7 +515,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Boobees Live: A Variety Show",
-      "id": 56
+      "id": 23
     },
     {
       "title": "guardin w/ kennedyxoxo, Fijimar",
@@ -1263,7 +539,7 @@
       "image": "https://s1.ticketm.net/dam/a/2a9/b557222f-0c9e-4a8e-b0dc-79ad677822a9_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Guardin, Kennedyxoxo",
-      "id": 57
+      "id": 24
     },
     {
       "title": "Rebecca Black – Exhibitionism on Tour",
@@ -1285,7 +561,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Rebecca Black – Exhibitionism on Tour",
-      "id": 58
+      "id": 25
     },
     {
       "title": "Johnny Pemberton",
@@ -1307,7 +583,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thebellhouseny.com/",
       "artist": "Johnny Pemberton",
-      "id": 59
+      "id": 26
     },
     {
       "title": "Robert Glasper OG Acoustic Piano Trio",
@@ -1331,7 +607,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Damion Reid",
-      "id": 60
+      "id": 27
     },
     {
       "title": "Cannons (16 and Over)",
@@ -1355,7 +631,7 @@
       "image": "https://s1.ticketm.net/dam/a/fc6/3bb1b959-d48a-4ad1-b917-20a58b9a7fc6_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Cannons, Caroline Kingsbury",
-      "id": 61
+      "id": 28
     },
     {
       "title": "The Suitcase Junket",
@@ -1378,7 +654,7 @@
       "image": "https://s1.ticketm.net/dam/a/901/a776b92f-c048-42c4-99ab-7228e80f2901_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Jocelyn Mackenzie",
-      "id": 62
+      "id": 29
     },
     {
       "title": "Open Air Season Closing ft. Marco Carola, PAWSA - Ages 21+",
@@ -1402,7 +678,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Marco Carola, Pawsa - DJ",
-      "id": 63
+      "id": 30
     },
     {
       "title": "Kranium",
@@ -1423,7 +699,7 @@
       "image": "https://s1.ticketm.net/dam/e/afa/f8034470-07ef-4482-8809-202818e83afa_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Kranium",
-      "id": 64
+      "id": 31
     },
     {
       "title": "Carly Pearce",
@@ -1445,7 +721,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Carly Pearce",
-      "id": 65
+      "id": 32
     },
     {
       "title": "Brand New",
@@ -1467,7 +743,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Brand New",
-      "id": 66
+      "id": 33
     },
     {
       "title": "The Tallest Man on Earth",
@@ -1489,7 +765,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "The Tallest Man on Earth",
-      "id": 67
+      "id": 34
     },
     {
       "title": "JOHNNYSWIM",
@@ -1511,7 +787,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "JOHNNYSWIM",
-      "id": 68
+      "id": 35
     },
     {
       "title": "Cannons",
@@ -1533,7 +809,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Cannons",
-      "id": 69
+      "id": 36
     },
     {
       "title": "Johnny Blue Skies & the Dark Clouds",
@@ -1555,7 +831,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Johnny Blue Skies & the Dark Clouds",
-      "id": 70
+      "id": 37
     },
     {
       "title": "Chasing Abbey",
@@ -1577,7 +853,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "Chasing Abbey",
-      "id": 71
+      "id": 38
     },
     {
       "title": "The Birdland Latin Jazz Orchestra",
@@ -1598,29 +874,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Birdland Latin Jazz Orchestra",
-      "id": 72
-    },
-    {
-      "title": "PIANO KARAOKE w/Kira Small",
-      "performers": [],
-      "venue": "Sid Gold's Request Room",
-      "address": "165 W 26th St, New York, NY 10001",
-      "lat": 40.74595,
-      "lng": -73.99358,
-      "date": "2026-10-18",
-      "time": "8:30 PM",
-      "end": "12:00 AM",
-      "url": "https://sidgolds.com/event/piano-karaoke-w-kira-small-10-2/",
-      "genre": "Country",
-      "subgenre": "Nashville Events",
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": "https://sidgolds.com/wp-content/uploads/2026/02/kira-clara-screenshot.png",
-      "source": "venue-data",
-      "listing_url": "https://sidgolds.com/detroit/events/",
-      "artist": "PIANO KARAOKE w/Kira Small",
-      "id": 73
+      "id": 39
     },
     {
       "title": "Carole J. Bufford: Chanteuse",
@@ -1641,7 +895,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Carole J. Bufford: Chanteuse",
-      "id": 74
+      "id": 40
     },
     {
       "title": "Kiki Kramer | Hannah Hannah | RubyBlue | Damin Tyler",
@@ -1662,7 +916,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Kiki Kramer | Hannah Hannah | RubyBlue | Damin Tyler",
-      "id": 75
+      "id": 41
     },
     {
       "title": "The Birdland Latin Jazz Orchestra",
@@ -1683,7 +937,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Birdland Latin Jazz Orchestra",
-      "id": 76
+      "id": 42
     },
     {
       "title": "Robert Glasper OG Acoustic Piano Trio",
@@ -1707,7 +961,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Damion Reid",
-      "id": 77
+      "id": 43
     },
     {
       "title": "The Midnight Special",
@@ -1728,7 +982,7 @@
       "image": "https://s1.ticketm.net/dam/c/677/c58dd0af-cda8-49b2-bdaf-068540c3a677_106541_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Midnight Special",
-      "id": 78
+      "id": 44
     }
   ]
 }

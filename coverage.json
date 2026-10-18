@@ -1,20 +1,20 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T19:32:00-04:00",
+ "generated": "2026-10-18T19:49:07-04:00",
  "totals": {
-  "venues": 154,
-  "shows": 78,
-  "ok": 13,
-  "none-tonight": 0,
-  "blocked": 12,
-  "error": 12,
-  "robots": 0,
-  "no-location": 4,
-  "skipped": 113
+  "venues": 153,
+  "shows": 44,
+  "ok": 8,
+  "none-tonight": 1,
+  "blocked": 15,
+  "error": 9,
+  "robots": 1,
+  "no-location": 0,
+  "skipped": 119
  },
  "shows_by_source": {
-  "venue-data": 50,
-  "ticketmaster": 28
+  "ticketmaster": 26,
+  "venue-data": 18
  },
  "ai": {
   "calls": 0,
@@ -143,7 +143,7 @@
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/explore/performance-history/",
+   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:52.234.43.177:1792367147.464",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -154,9 +154,9 @@
    "url": "https://www.bembe.us/",
    "read_url": "https://www.bembe.us/",
    "method": null,
-   "status": "skipped",
+   "status": "error",
    "shows": 0,
-   "detail": "no ANTHROPIC_API_KEY"
+   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
   },
   {
    "name": "Berlin",
@@ -165,7 +165,7 @@
    "method": null,
    "status": "error",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.berlinundera.com/"
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://berlinundera.com/"
   },
   {
    "name": "Bill's Place",
@@ -216,6 +216,15 @@
    "name": "Brooklyn Bowl",
    "url": "https://www.brooklynbowl.com/brooklyn",
    "read_url": "https://www.brooklynbowl.com/brooklyn",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Brooklyn Center for the Performing Arts",
+   "url": "https://www.brooklyncenter.org/",
+   "read_url": "https://www.brooklyn.edu/towcenter/",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -377,16 +386,20 @@
   {
    "name": "David Geffen Hall",
    "url": "https://www.nyphil.org/concerts-tickets/",
-   "status": "no-location",
+   "read_url": "https://www.nyphil.org/concerts-tickets/",
+   "method": null,
+   "status": "robots",
    "shows": 0,
-   "detail": "10 Lincoln Center Plaza, New York, NY 10023"
+   "detail": "robots.txt asks automated readers not to visit this page"
   },
   {
    "name": "David H. Koch Theater",
    "url": "https://www.nycballet.com/season-and-tickets/",
-   "status": "no-location",
+   "read_url": "https://www.nycballet.com/season-and-tickets/seasons",
+   "method": null,
+   "status": "skipped",
    "shows": 0,
-   "detail": "20 Lincoln Center Plaza, New York, NY 10023"
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "DiMenna Center for Classical Music",
@@ -476,16 +489,34 @@
    "method": null,
    "status": "error",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.goldsoundsbar.com/"
+   "detail": "Error: Page.goto: Navigation to \"https://goldsoundsbar.com/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\""
   },
   {
    "name": "Good Room",
    "url": "https://goodroombk.com/",
-   "read_url": "https://goodroombk.com/",
+   "read_url": "https://www.goodroombk.com/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://goodroombk.com/"
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Grace Church",
+   "url": "https://gracechurchnyc.org/",
+   "read_url": "https://gracechurchnyc.org/",
+   "method": "WordPress calendar",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "left out 10 non-performance listings"
+  },
+  {
+   "name": "Greenwich House Music School",
+   "url": "https://www.greenwichhouse.org/",
+   "read_url": "https://greenwichhouse.org/calendar/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Groove",
@@ -528,9 +559,9 @@
    "url": "https://issueprojectroom.org/",
    "read_url": "https://issueprojectroom.org/",
    "method": null,
-   "status": "skipped",
+   "status": "error",
    "shows": 0,
-   "detail": "no ANTHROPIC_API_KEY"
+   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
   },
   {
    "name": "Jazz at Lincoln Center",
@@ -598,7 +629,7 @@
   {
    "name": "Littlefield",
    "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/",
+   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367266.741",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -611,7 +642,7 @@
    "method": null,
    "status": "error",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.msmnyc.edu/calendar/"
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://msmnyc.edu/calendar/"
   },
   {
    "name": "Mannes School of Music",
@@ -651,19 +682,21 @@
   },
   {
    "name": "Merkin Hall",
-   "url": "https://www.kaufmanmusiccenter.org/mch/",
-   "read_url": "https://www.kaufmanmusiccenter.org/mch/",
+   "url": "https://www.kaufmanmusiccenter.org/",
+   "read_url": "https://www.kaufmanmusiccenter.org/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "page returned HTTP 404"
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Metropolitan Opera House",
    "url": "https://www.metopera.org/season/calendar/",
-   "status": "no-location",
+   "read_url": "https://www.metopera.org/season/calendar/",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "30 Lincoln Center Plaza, New York, NY 10023"
+   "detail": "HTTP 403"
   },
   {
    "name": "Mezzrow",
@@ -780,7 +813,7 @@
    "method": null,
    "status": "error",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.paddyreillys.com/"
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://paddyreillys.com/"
   },
   {
    "name": "Pangea",
@@ -843,7 +876,7 @@
    "method": null,
    "status": "error",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.rockwoodmusichall.com/"
+   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://rockwoodmusichall.com/"
   },
   {
    "name": "Room 623 at B2 Harlem",
@@ -862,15 +895,6 @@
    "status": "skipped",
    "shows": 0,
    "detail": "no ANTHROPIC_API_KEY"
-  },
-  {
-   "name": "Rue B",
-   "url": "https://www.rueb-nyc.com/",
-   "read_url": "https://www.rueb-nyc.com/",
-   "method": null,
-   "status": "error",
-   "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.rueb-nyc.com/"
   },
   {
    "name": "S.O.B.'s",
@@ -921,6 +945,15 @@
    "name": "Sheen Center",
    "url": "https://www.sheencenter.org/",
    "read_url": "https://www.sheencenter.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Sid Gold's Request Room",
+   "url": "https://www.sidgolds.com/",
+   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367041.038",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -984,6 +1017,15 @@
    "name": "Soapbox Gallery",
    "url": "https://www.soapboxgallery.org/",
    "read_url": "https://www.soapboxgallery.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "St. Ann & the Holy Trinity",
+   "url": "https://www.stannholytrinity.org/",
+   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367136.460",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1111,9 +1153,9 @@
    "url": "https://www.theflatironroom.com/",
    "read_url": "https://www.theflatironroom.com/",
    "method": null,
-   "status": "error",
+   "status": "blocked",
    "shows": 0,
-   "detail": "page returned HTTP 409"
+   "detail": "HTTP 409"
   },
   {
    "name": "The Green Room 42",
@@ -1154,9 +1196,11 @@
   {
    "name": "The Juilliard School",
    "url": "https://www.juilliard.edu/calendar",
-   "status": "no-location",
+   "read_url": "https://www.juilliard.edu/calendar",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "60 Lincoln Center Plaza, New York, NY 10023"
+   "detail": "HTTP 403"
   },
   {
    "name": "The Metropolitan Museum of Art",
@@ -1199,9 +1243,9 @@
    "url": "https://thestonenyc.com/",
    "read_url": "https://thestonenyc.com/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://thestonenyc.com/"
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "The Sultan Room",
@@ -1278,7 +1322,7 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/",
+   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:52.234.43.177:1792366979.859",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1290,8 +1334,8 @@
    "read_url": "https://www.alphavillebk.com/",
    "method": "event data",
    "status": "ok",
-   "shows": 2,
-   "detail": null
+   "shows": 1,
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "Bargemusic",
@@ -1300,33 +1344,6 @@
    "method": "WordPress calendar",
    "status": "ok",
    "shows": 1,
-   "detail": null
-  },
-  {
-   "name": "Brooklyn Center for the Performing Arts",
-   "url": "https://www.brooklyncenter.org/",
-   "read_url": "https://www.brooklyn.edu/towcenter/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 1,
-   "detail": null
-  },
-  {
-   "name": "Grace Church",
-   "url": "https://gracechurchnyc.org/",
-   "read_url": "https://gracechurchnyc.org/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 10,
-   "detail": null
-  },
-  {
-   "name": "Greenwich House Music School",
-   "url": "https://www.greenwichhouse.org/",
-   "read_url": "https://greenwichhouse.org/calendar/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 2,
    "detail": null
   },
   {
@@ -1343,24 +1360,6 @@
    "url": "https://www.saintvitusbar.com/",
    "read_url": "https://www.saintvitusbar.com/",
    "method": "event data",
-   "status": "ok",
-   "shows": 1,
-   "detail": null
-  },
-  {
-   "name": "Sid Gold's Request Room",
-   "url": "https://www.sidgolds.com/",
-   "read_url": "https://sidgolds.com/detroit/events/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 2,
-   "detail": null
-  },
-  {
-   "name": "St. Ann & the Holy Trinity",
-   "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/",
-   "method": "WordPress calendar",
    "status": "ok",
    "shows": 1,
    "detail": null
@@ -1389,7 +1388,7 @@
    "read_url": "https://www.trcnyc.org/",
    "method": "WordPress calendar",
    "status": "ok",
-   "shows": 17,
+   "shows": 1,
    "detail": null
   },
   {
