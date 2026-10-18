@@ -1,427 +1,132 @@
 #!/usr/bin/env python3
-"""Build events.json with tonight's NYC music shows.
+"""Build events.json with tonight's NYC shows.
 
 "Tonight" runs from 5:00 AM today to 5:00 AM tomorrow, New York time, matching the page.
 
-Sources (each optional, failures are logged and skipped):
-  1. Venue calendars (venues.json)  - pages that publish schema.org Event JSON-LD
-  2. Ticketmaster Discovery API     - needs TICKETMASTER_API_KEY (free at developer.ticketmaster.com)
+Sources, merged into one lineup:
+  1. Venue calendars (venues.json). Each venue page is opened in a headless browser, then read with
+     the first method that works:
+       a. schema.org event data on the page (JSON-LD)
+       b. The Events Calendar for WordPress (public REST API)
+       c. an iCal feed linked from the page
+       d. Eventbrite organizer feed (needs EVENTBRITE_TOKEN and the venue's organizer id)
+       e. AI reading of the page text (needs ANTHROPIC_API_KEY), with every show checked against the page
+  2. Ticketmaster Discovery API (needs TICKETMASTER_API_KEY); also covers TicketWeb and Universe venues
+  3. Approved rows from the "Submit your show" form (published sheet in SUBMISSIONS_CSV_URL)
+  4. Paid placements in sponsored.json
 
-Each event in events.json:
-  title        show name ("La Bohème", "Mahler's Fifth Symphony", "Big Thief")
-  performers   list of performers (may be empty when the title is the performer)
-  artist       performers joined, or the title (kept for older page versions)
-  venue, address, lat, lng
-  date         YYYY-MM-DD (calendar date the show starts)
-  time, end    "8:00 PM" ("end" only when the source says)
-  genre        one of the site's buckets (see genres.py); subgenre = the source's own label
-  price        "$25", "$35–$120", "Free"
-  program      list of works performed (classical, opera, dance)
-  description  short text from the source
-  image, url   picture and tickets/info link
+Outputs: events.json (the lineup), coverage.json (what each venue produced), scraper/geocache.json.
 
 Usage:
-  python scraper/scrape.py                     # writes events.json in the repo root
-  python scraper/scrape.py --out path.json
-  python scraper/scrape.py --date 2026-10-18   # build for a specific night
-Standard library only.
+  python scraper/scrape.py                       # tonight, writes events.json + coverage.json
+  python scraper/scrape.py --date 2026-10-31
+  python scraper/scrape.py --only "Smalls,Birdland"   # just these venues (for testing)
 """
 from __future__ import annotations
 
 import argparse
-import html
 import json
 import os
 import re
 import sys
-import time
-import urllib.error
-import urllib.parse
-import urllib.request
-import http.cookiejar
-from datetime import date, datetime, timedelta, timezone
+from concurrent.futures import ThreadPoolExecutor
+from datetime import date, datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from genres import GENRES, VAGUE, bucket  # noqa: E402
+from common import HERE, NY, ROOT, current_night, log, minutes, norm  # noqa: E402
+from genres import GENRES, bucket  # noqa: E402
+import feeds  # noqa: E402
+import geo  # noqa: E402
+import report  # noqa: E402
+import tm  # noqa: E402
 
-NY = ZoneInfo("America/New_York")
-ROOT = Path(__file__).resolve().parent.parent
-ROLLOVER_HOUR = 5
-CENTER = (40.7300, -73.9950)   # lower Manhattan
-RADIUS_MILES = 12              # covers Manhattan, most of Brooklyn and Queens
-USER_AGENT = "WordNYC/1.0 (+https://word-nyc.com; daily lineup builder)"
-
-
-def log(msg: str) -> None:
-    print(msg, file=sys.stderr, flush=True)
+# Claude Haiku 5.5 list price per million tokens (prompts up to 100K tokens)
+AI_PRICE_IN, AI_PRICE_OUT = 0.10, 0.50
 
 
-# ---------------------------------------------------------------- small helpers
+# ---------------------------------------------------------------- reading one venue
 
-def night_window(night: date) -> tuple[datetime, datetime]:
-    start = datetime(night.year, night.month, night.day, ROLLOVER_HOUR, tzinfo=NY)
-    return start, start + timedelta(days=1)
+def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[list[dict], dict]:
+    """Returns (events, coverage row). Structured data first, AI reading as the fallback."""
+    row = {"name": v["name"], "url": v["url"], "read_url": None, "method": None, "status": "error",
+           "shows": 0, "detail": None}
+    if snap is None:
+        row.update(status="skipped", detail="browser not available")
+        return [], row
+    row["read_url"] = snap.final_url or snap.url
+    if snap.error and "robots.txt" in snap.error:
+        row.update(status="robots", detail=snap.error)
+        return [], row
+    page_url = snap.final_url or v["url"]
 
-
-def current_night() -> date:
-    return (datetime.now(NY) - timedelta(hours=ROLLOVER_HOUR)).date()
-
-
-def clock(dt: datetime) -> str:
-    """datetime -> '8:00 PM' in New York time."""
-    dt = dt.astimezone(NY)
-    return f"{dt.hour % 12 or 12}:{dt.minute:02d} {'AM' if dt.hour < 12 else 'PM'}"
-
-
-def parse_iso(value: str) -> datetime | None:
-    if not value:
-        return None
-    v = value.strip().replace("Z", "+00:00")
-    try:
-        dt = datetime.fromisoformat(v)
-    except ValueError:
-        m = re.match(r"(\d{4}-\d{2}-\d{2})(?:[T ](\d{1,2}):(\d{2}))?", v)
-        if not m:
-            return None
-        d = date.fromisoformat(m.group(1))
-        dt = datetime(d.year, d.month, d.day, int(m.group(2) or 0), int(m.group(3) or 0))
-    return dt if dt.tzinfo else dt.replace(tzinfo=NY)
-
-
-def has_time(value: str) -> bool:
-    return bool(re.search(r"[T ]\d{1,2}:\d{2}", value or ""))
-
-
-def clean_text(value, limit: int = 420) -> str | None:
-    if not value:
-        return None
-    text = html.unescape(re.sub(r"<[^>]+>", " ", str(value)))
-    text = re.sub(r"\s+", " ", text).strip()
-    if not text:
-        return None
-    if len(text) > limit:
-        text = text[:limit].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
-    return text
-
-
-def money(v: float, cur: str) -> str:
-    s = f"{v:,.0f}" if float(v).is_integer() else f"{v:,.2f}"
-    return f"${s}" if cur in ("", "USD") else f"{s} {cur}"
-
-
-def price_label(lo, hi=None, cur: str = "USD") -> str | None:
-    try:
-        lo = float(lo) if lo not in (None, "") else None
-        hi = float(hi) if hi not in (None, "") else None
-    except (TypeError, ValueError):
-        return None
-    if lo is None and hi is None:
-        return None
-    lo = hi if lo is None else lo
-    cur = (cur or "USD").upper()
-    first = "Free" if lo == 0 else money(lo, cur)
-    if hi is None or hi == lo:
-        return first
-    return f"{first}–{money(hi, cur)}"
-
-
-def names_of(x) -> list[str]:
-    """Names from a JSON-LD value that may be a string, a dict or a list of either."""
-    items = x if isinstance(x, list) else [x]
-    out = []
-    for it in items:
-        name = it.get("name") if isinstance(it, dict) else it
-        name = html.unescape(str(name or "")).strip()
-        if name and name not in out:
-            out.append(name)
-    return out
-
-
-def address_of(a) -> str | None:
-    if isinstance(a, list):
-        a = a[0] if a else None
-    if isinstance(a, str):
-        return clean_text(a, 160)
-    if isinstance(a, dict):
-        parts = [a.get("streetAddress"), a.get("addressLocality"), a.get("addressRegion")]
-        return ", ".join(str(p).strip() for p in parts if p) or None
-    return None
-
-
-def image_of(x) -> str | None:
-    if isinstance(x, list):
-        x = x[0] if x else None
-    if isinstance(x, dict):
-        x = x.get("url") or x.get("contentUrl")
-    return x if isinstance(x, str) and x.startswith("http") else None
-
-
-# ---------------------------------------------------------------- http
-
-# keeps cookies between requests: some venue sites redirect in a loop without them
-OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-
-
-def get(url: str, params: dict | None = None, timeout: int = 25) -> str:
-    if params:
-        url = f"{url}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={
-        "User-Agent": USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-    })
-    last = None
-    for attempt in range(3):
+    attempts = []
+    if snap.jsonld:
+        attempts.append(("event data", lambda: feeds.jsonld_events(snap.jsonld, v, night, page_url)))
+    if snap.tribe or v.get("method") == "tribe":
+        attempts.append(("WordPress calendar", lambda: feeds.tribe_events(page_url, v, night)))
+    for ics in ([v["ical"]] if v.get("ical") else []) + snap.ical[:1]:
+        attempts.append(("iCal", lambda ics=ics: feeds.ical_events(ics, v, night)))
+    if v.get("eventbrite") and eb_token:
+        attempts.append(("Eventbrite", lambda: feeds.eventbrite_events(v["eventbrite"], eb_token, v, night)))
+    for label, fn in attempts:
         try:
-            with OPENER.open(req, timeout=timeout) as r:
-                return r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
-        except urllib.error.HTTPError as e:
-            last = e
-            if e.code == 429 or e.code >= 500:
-                time.sleep(2 * (attempt + 1))
-                continue
-            raise
-        except urllib.error.URLError as e:
-            last = e
-            time.sleep(2 * (attempt + 1))
-    raise last  # type: ignore[misc]
-
-
-# ---------------------------------------------------------------- Ticketmaster
-
-_GH = "0123456789bcdefghjkmnpqrstuvwxyz"
-
-
-def geohash(lat: float, lng: float, precision: int = 9) -> str:
-    lat_r, lng_r, bits, out, ch, even = [-90.0, 90.0], [-180.0, 180.0], 0, [], 0, True
-    while len(out) < precision:
-        rng, val = (lng_r, lng) if even else (lat_r, lat)
-        mid = (rng[0] + rng[1]) / 2
-        if val >= mid:
-            ch = (ch << 1) | 1
-            rng[0] = mid
-        else:
-            ch <<= 1
-            rng[1] = mid
-        even, bits = not even, bits + 1
-        if bits == 5:
-            out.append(_GH[ch])
-            bits, ch = 0, 0
-    return "".join(out)
-
-
-def utc_param(dt: datetime) -> str:
-    return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-
-def from_ticketmaster(night: date, api_key: str) -> list[dict]:
-    start, end = night_window(night)
-    events, page = [], 0
-    while True:
-        data = json.loads(get("https://app.ticketmaster.com/discovery/v2/events.json", {
-            "apikey": api_key,
-            # music plus the performing arts the site covers (opera, ballet, classical, dance)
-            "classificationName": "Music,Classical,Opera,Ballet,Dance",
-            "geoPoint": geohash(*CENTER),
-            "radius": RADIUS_MILES,
-            "unit": "miles",
-            "startDateTime": utc_param(start),
-            "endDateTime": utc_param(end),
-            "size": 200,
-            "page": page,
-            "sort": "date,asc",
-        }))
-        for e in data.get("_embedded", {}).get("events", []):
-            ev = tm_event(e)
-            if ev:
-                events.append(ev)
-        info = data.get("page", {})
-        page += 1
-        if page >= info.get("totalPages", 0) or page * 200 >= 1000:  # API cap: size * page < 1000
-            break
-        time.sleep(0.25)  # stay under 5 requests/second
-    return events
-
-
-def tm_image(images: list) -> str | None:
-    wide = [i for i in images or [] if i.get("ratio") == "16_9" and i.get("width", 0) >= 600]
-    pick = min(wide, key=lambda i: i["width"]) if wide else (images[0] if images else None)
-    return pick.get("url") if pick else None
-
-
-def tm_price(pr: dict) -> str | None:
-    """Ticketmaster uses 0 for 'no price on file', so a 0 is dropped rather than shown as Free."""
-    def num(x):
-        try:
-            return float(x) if x not in (None, "") and float(x) > 0 else None
-        except (TypeError, ValueError):
-            return None
-    lo, hi = num(pr.get("min")), num(pr.get("max"))
-    if lo is None and hi is None:
-        return None
-    if lo is None:
-        return f"Up to {money(hi, (pr.get('currency') or 'USD').upper())}"
-    return price_label(lo, hi, pr.get("currency", "USD"))
-
-
-def tm_event(e: dict) -> dict | None:
-    venues = e.get("_embedded", {}).get("venues") or []
-    if not venues:
-        return None
-    v = venues[0]
-    loc = v.get("location") or {}
-    try:
-        lat, lng = float(loc["latitude"]), float(loc["longitude"])
-    except (KeyError, TypeError, ValueError):
-        return None
-    if e.get("dates", {}).get("status", {}).get("code") in {"cancelled", "canceled", "postponed"}:
-        return None
-    if (v.get("state") or {}).get("stateCode", "NY") != "NY":  # the radius reaches into New Jersey
-        return None
-    st = e.get("dates", {}).get("start", {})
-    when = parse_iso(st.get("dateTime", "")) if st.get("dateTime") else None
-    t = clock(when) if when and not st.get("timeTBA") and not st.get("noSpecificTime") else None
-    c = (e.get("classifications") or [{}])[0]
-    sub = (c.get("subGenre") or {}).get("name", "") or ""
-    gen = (c.get("genre") or {}).get("name", "") or ""
-    performers = [a["name"] for a in e.get("_embedded", {}).get("attractions") or [] if a.get("name")]
-    title = e.get("name") or (performers[0] if performers else "TBA")
-    addr = v.get("address") or {}
-    address = ", ".join(x for x in [addr.get("line1"), (v.get("city") or {}).get("name"),
-                                    (v.get("state") or {}).get("stateCode")] if x) or None
-    pr = (e.get("priceRanges") or [{}])[0]
-    return {
-        "title": title,
-        "performers": performers,
-        "venue": v.get("name", ""),
-        "address": address,
-        "lat": round(lat, 5),
-        "lng": round(lng, 5),
-        "date": st.get("localDate") or (when.astimezone(NY).date().isoformat() if when else None),
-        "time": t,
-        "end": None,
-        "url": e.get("url"),
-        "genre": bucket(sub, gen, title),
-        "subgenre": next((x for x in (sub, gen) if x.strip().lower() not in VAGUE), None),
-        "price": tm_price(pr),
-        "program": [],
-        "description": clean_text(e.get("info") or e.get("description") or e.get("pleaseNote")),
-        "image": tm_image(e.get("images") or []),
-        "source": "ticketmaster",
-    }
-
-
-# ---------------------------------------------------------------- venue calendars (JSON-LD)
-
-LD_RE = re.compile(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.S | re.I)
-EVENT_TYPES = {"event", "musicevent", "comedyevent", "theaterevent", "danceevent", "festival",
-               "socialevent", "educationevent"}
-
-
-def walk_ld(node):
-    """Yield every dict in a JSON-LD blob (handles @graph, lists, nested objects)."""
-    if isinstance(node, list):
-        for n in node:
-            yield from walk_ld(n)
-    elif isinstance(node, dict):
-        yield node
-        for k in ("@graph", "itemListElement", "item", "subEvent", "event", "events"):
-            if k in node:
-                yield from walk_ld(node[k])
-
-
-def is_event(d: dict) -> bool:
-    t = d.get("@type", "")
-    types = t if isinstance(t, list) else [t]
-    return any(str(x).lower() in EVENT_TYPES for x in types)
-
-
-def offers_price(offers) -> str | None:
-    items = offers if isinstance(offers, list) else [offers]
-    vals, cur = [], "USD"
-    for o in items:
-        if not isinstance(o, dict):
+            found = fn()
+        except Exception as e:  # noqa: BLE001
+            log(f"  {v['name']}: {label} failed ({type(e).__name__}: {str(e)[:100]})")
             continue
-        cur = o.get("priceCurrency") or cur
-        for k in ("price", "lowPrice", "highPrice"):
-            try:
-                if o.get(k) not in (None, ""):
-                    vals.append(float(str(o[k]).replace("$", "").replace(",", "")))
-            except ValueError:
-                pass
-    return price_label(min(vals), max(vals), cur) if vals else None
+        if found:
+            row.update(method=label, status="ok", shows=len(found))
+            return found, row
+
+    if snap.blocked:
+        row.update(status="blocked", detail=f"HTTP {snap.status}" if snap.status else "bot check page")
+        return [], row
+    if snap.error:
+        row.update(status="error", detail=snap.error)
+        return [], row
+    if not ai_key:
+        row.update(status="skipped", detail="no ANTHROPIC_API_KEY")
+        return [], row
+    import ai
+    try:
+        found, info = ai.extract(snap, v, night, ai_key)
+    except ai.AIError as e:
+        row.update(status="error", method="AI", detail=str(e)[:200])
+        return [], row
+    row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found),
+               detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
+                       if info["rejected"] else info["page_kind"]),
+               tokens=[info["input_tokens"], info["output_tokens"]])
+    return found, row
 
 
-def from_venue_page(venue: dict, night: date) -> list[dict]:
-    page = get(venue["url"])
-    start, end = night_window(night)
-    out = []
-    for blob in LD_RE.findall(page):
-        try:
-            data = json.loads(html.unescape(blob.strip()))
-        except json.JSONDecodeError:
-            continue
-        for d in walk_ld(data):
-            if not is_event(d):
-                continue
-            raw_start = str(d.get("startDate", ""))
-            when = parse_iso(raw_start)
-            if not when or not (start <= when < end):
-                continue
-            status = str(d.get("eventStatus", "")).lower()
-            if "cancel" in status or "postpon" in status:
-                continue
-            loc = d.get("location") if isinstance(d.get("location"), dict) else {}
-            geo = loc.get("geo") or {}
-            try:
-                lat, lng = float(geo["latitude"]), float(geo["longitude"])
-            except (KeyError, TypeError, ValueError):
-                lat, lng = venue["lat"], venue["lng"]
-            raw_end = str(d.get("endDate", ""))
-            end_dt = parse_iso(raw_end)
-            raw_genre = d.get("genre") or ""
-            if isinstance(raw_genre, list):
-                raw_genre = ", ".join(map(str, raw_genre))
-            performers = names_of(d.get("performer"))
-            title = (names_of(d.get("name")) or performers or ["TBA"])[0]
-            out.append({
-                "title": title,
-                "performers": performers,
-                "venue": venue["name"],
-                "address": address_of(loc.get("address")) or venue.get("address"),
-                "lat": round(lat, 5),
-                "lng": round(lng, 5),
-                "date": when.astimezone(NY).date().isoformat(),
-                "time": clock(when) if has_time(raw_start) else None,
-                "end": clock(end_dt) if end_dt and has_time(raw_end) and end_dt > when else None,
-                "url": d.get("url") if str(d.get("url", "")).startswith("http") else venue["url"],
-                "genre": bucket(str(raw_genre), venue.get("genre", "")),
-                "subgenre": clean_text(raw_genre, 60),
-                "price": offers_price(d.get("offers")),
-                "program": names_of(d.get("workPerformed")),
-                "description": clean_text(d.get("description")),
-                "image": image_of(d.get("image")),
-                "source": "venue",
-            })
-    return out
-
-
-# ---------------------------------------------------------------- merge + write
+# ---------------------------------------------------------------- merging sources
 
 STOP = {"live", "with", "presents", "featuring", "night", "tour", "concert", "show", "special", "guest",
         "guests", "evening", "performance", "performs", "plays", "season"}
-FILL = ["address", "time", "end", "url", "price", "description", "image", "subgenre", "date"]
-
-
-def norm(s: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+VENUE_NOISE = re.compile(r"\b(the|jazz|club|nyc|new york|theat(er|re)|hall|bar|music|room|lounge|cafe|café|"
+                         r"brooklyn|manhattan|at|and|presents|powered by \w+)\b", re.I)
+FILL = ["address", "time", "end", "price", "description", "image", "subgenre", "date", "listing_url"]
 
 
 def tokens(e: dict) -> set[str]:
     text = " ".join([e.get("title") or ""] + list(e.get("performers") or []))
     return {t for t in re.findall(r"[a-z0-9]+", text.lower()) if len(t) > 3 and t not in STOP}
+
+
+def venue_key(name: str) -> str:
+    return norm(VENUE_NOISE.sub(" ", name or ""))
+
+
+def same_venue(a: dict, b: dict) -> bool:
+    ka, kb = venue_key(a["venue"]), venue_key(b["venue"])
+    if ka and kb and len(min(ka, kb, key=len)) >= 4 and (ka in kb or kb in ka):
+        return True
+    try:
+        return geo.distance_m((a["lat"], a["lng"]), (b["lat"], b["lng"])) <= 60
+    except (KeyError, TypeError):
+        return False
 
 
 def same_show(a: dict, b: dict) -> bool:
@@ -430,7 +135,7 @@ def same_show(a: dict, b: dict) -> bool:
     Exception: one listing's title containing the other's ("X" vs "Promoter Presents X") within
     90 minutes is one show listed twice. Identical titles at different times are separate sets.
     """
-    if norm(a["venue"])[:10] != norm(b["venue"])[:10]:
+    if not same_venue(a, b):
         return False
     ta, tb = norm(a["title"]), norm(b["title"])
     if a.get("time") and b.get("time") and a["time"] != b["time"]:
@@ -444,24 +149,21 @@ def absorb(into: dict, other: dict) -> None:
     for f in FILL:
         if not into.get(f) and other.get(f):
             into[f] = other[f]
+    # a Ticketmaster link is where the tickets are actually sold (and can earn a commission)
+    if other.get("source") == "ticketmaster" and other.get("url"):
+        into["url"] = other["url"]
+    elif not into.get("url"):
+        into["url"] = other.get("url")
     if into.get("genre") == "Other" and other.get("genre") != "Other":
         into["genre"] = other["genre"]
     for key in ("performers", "program"):
         for x in other.get(key) or []:
-            if x not in into.setdefault(key, []):
+            if norm(x) not in {norm(y) for y in into.setdefault(key, [])}:
                 into[key].append(x)
     if other.get("sponsored"):
         into["sponsored"] = True
     if other.get("source") and other["source"] not in into.get("source", ""):
         into["source"] = f"{into.get('source', '')}+{other['source']}".strip("+")
-
-
-def minutes(t: str | None) -> int:
-    if not t:
-        return 99999
-    h, m = map(int, re.match(r"(\d+):(\d+)", t).groups())
-    mins = (h % 12 + (12 if t.endswith("PM") else 0)) * 60 + m
-    return mins + 1440 if mins < ROLLOVER_HOUR * 60 else mins
 
 
 def merge(events: list[dict]) -> list[dict]:
@@ -482,8 +184,9 @@ def merge(events: list[dict]) -> list[dict]:
     return out
 
 
+# ---------------------------------------------------------------- sponsored placements
+
 def active_placements(path: Path, night: date) -> list[dict]:
-    """Paid placements from sponsored.json that run on this night."""
     if not path.exists():
         return []
     try:
@@ -497,7 +200,6 @@ def active_placements(path: Path, night: date) -> list[dict]:
 
 
 def sponsored_events(placements: list[dict], night: date) -> list[dict]:
-    """Shows a sponsor paid to list that the daily sources may not have."""
     out = []
     for p in placements:
         e = p.get("event")
@@ -518,81 +220,116 @@ def sponsored_events(placements: list[dict], night: date) -> list[dict]:
 
 
 def mark_sponsored(events: list[dict], placements: list[dict]) -> int:
-    """Flag shows matching a placement's venue (and optional title words) as sponsored."""
     count = 0
     for p in placements:
         if p.get("event") or not p.get("venue"):
             continue
-        venue, words = norm(p["venue"])[:10], (p.get("title_contains") or "").lower()
+        key, words = venue_key(p["venue"]), (p.get("title_contains") or "").lower()
         for e in events:
-            if norm(e["venue"])[:10] == venue and (not words or words in e["title"].lower()):
-                if not e.get("sponsored"):
-                    count += 1
+            if key and venue_key(e["venue"]) == key and (not words or words in e["title"].lower()):
+                count += 0 if e.get("sponsored") else 1
                 e["sponsored"] = True
     return count
 
 
+# ---------------------------------------------------------------- main
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "events.json"))
+    ap.add_argument("--coverage", default=str(ROOT / "coverage.json"))
     ap.add_argument("--date", help="night to build, YYYY-MM-DD (default: current NYC night)")
-    ap.add_argument("--venues", default=str(Path(__file__).resolve().parent / "venues.json"))
+    ap.add_argument("--venues", default=str(HERE / "venues.json"))
     ap.add_argument("--sponsored", default=str(ROOT / "sponsored.json"))
+    ap.add_argument("--only", default=os.environ.get("VENUE_FILTER", ""), help="comma-separated text; read only venues whose name contains one of them")
+    ap.add_argument("--no-browser", action="store_true", help="skip venue pages (Ticketmaster etc. only)")
     args = ap.parse_args()
 
     night = date.fromisoformat(args.date) if args.date else current_night()
     log(f"Building lineup for the night of {night.isoformat()}")
+    ai_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    eb_token = os.environ.get("EVENTBRITE_TOKEN", "").strip()
+    geocoder = geo.Geocoder()
+
+    venues = json.loads(Path(args.venues).read_text())["venues"]
+    if args.only.strip():
+        wanted = {norm(x) for x in args.only.split(",") if x.strip()}
+        venues = [v for v in venues if any(w in norm(v["name"]) for w in wanted)]
+    placed = geo.place_venues([dict(v) for v in venues], geocoder)
+    rows = [{"name": v["name"], "url": v["url"], "status": "no-location", "shows": 0,
+             "detail": v.get("address")} for v in venues if v["name"] not in {p["name"] for p in placed}]
 
     collected: list[dict] = []
-    ok_sources, failed_sources = 0, 0
+    ok_sources = 0
 
-    # venue calendars first: their titles and programs are usually the most descriptive
-    venues = json.loads(Path(args.venues).read_text())["venues"]
-    for v in venues:
-        try:
-            found = from_venue_page(v, night)
-            log(f"  {v['name']}: {len(found)} events")
+    # 1. venue calendars
+    if placed and not args.no_browser:
+        import browse
+        log(f"  reading {len(placed)} venue pages in the browser…")
+        snaps = browse.snapshot_all(placed, night)
+        results: list[tuple[list[dict], dict]] = []
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(lambda v: read_venue(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
+        for (found, row), v in zip(results, placed):
+            log(f"  {v['name']}: {row['status']} {row['shows']} {row.get('method') or ''} {row.get('detail') or ''}".rstrip())
             collected += found
-            ok_sources += 1
-        except Exception as e:  # noqa: BLE001
-            log(f"  {v['name']} FAILED: {e}")
-            failed_sources += 1
+            rows.append(row)
+        ok_sources += sum(1 for _, r in results if r["status"] in ("ok", "none-tonight"))
+        if not ai_key:
+            log("  AI reading skipped: add ANTHROPIC_API_KEY to read venue pages without structured data")
 
+    # 2. Ticketmaster
     key = os.environ.get("TICKETMASTER_API_KEY", "").strip()
     if key:
         try:
-            tm = from_ticketmaster(night, key)
-            log(f"  ticketmaster: {len(tm)} events")
-            collected += tm
+            found = tm.from_ticketmaster(night, key)
+            log(f"  ticketmaster: {len(found)} events")
+            collected += found
             ok_sources += 1
         except Exception as e:  # noqa: BLE001
             log(f"  ticketmaster FAILED: {e}")
-            failed_sources += 1
     else:
         log("  ticketmaster: skipped (no TICKETMASTER_API_KEY)")
 
-    if ok_sources == 0:
-        log("Every source failed; keeping the existing events.json.")
-        return 1
+    # 3. form submissions
+    csv_url = os.environ.get("SUBMISSIONS_CSV_URL", "").strip()
+    if csv_url:
+        try:
+            found = feeds.submission_events(csv_url, night, geocoder)
+            log(f"  submissions: {len(found)} approved for tonight")
+            collected += found
+        except Exception as e:  # noqa: BLE001
+            log(f"  submissions FAILED: {e}")
+
+    geocoder.save()
+    calls = [r["tokens"] for r in rows if r.get("tokens")]
+    tin, tout = sum(c[0] for c in calls), sum(c[1] for c in calls)
+    ai_usage = {"calls": len(calls), "input_tokens": tin, "output_tokens": tout,
+                "cost_usd": round(tin / 1e6 * AI_PRICE_IN + tout / 1e6 * AI_PRICE_OUT, 4)}
 
     if not collected:
-        log("No shows found tonight; keeping the existing events.json. Check the source lines above.")
+        report.write(night, rows, [], ai_usage, Path(args.coverage))
+        log("No shows found tonight; keeping the existing events.json. See coverage.json for each venue.")
         return 1
 
+    # 4. sponsored placements, then merge everything
     placements = active_placements(Path(args.sponsored), night)
     extra = sponsored_events(placements, night)
     events = merge(collected + extra)
     flagged = mark_sponsored(events, placements)
     if placements:
-        log(f"  sponsored: {len(placements)} active placement(s), {len(extra)} added show(s), {flagged} matched show(s)")
-    payload = {
+        log(f"  sponsored: {len(placements)} active placement(s), {len(extra)} added, {flagged} matched")
+    for e in events:
+        e.pop("tokens", None)
+
+    Path(args.out).write_text(json.dumps({
         "date": night.isoformat(),
         "generated": datetime.now(NY).isoformat(timespec="seconds"),
         "count": len(events),
         "events": events,
-    }
-    Path(args.out).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-    log(f"Wrote {len(events)} events to {args.out} ({failed_sources} source(s) failed)")
+    }, ensure_ascii=False, indent=2) + "\n")
+    report.write(night, rows, events, ai_usage, Path(args.coverage))
+    log(f"Wrote {len(events)} shows to {args.out}; AI cost about ${ai_usage['cost_usd']:.3f}")
     return 0
 
 

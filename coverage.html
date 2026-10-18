@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Word NYC Venue Coverage</title>
+  <meta name="theme-color" content="#0d1230">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
+  <link rel="stylesheet" href="page.css">
+  <style>
+    .wrap { max-width: 1040px; }
+    .totals { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 8px 0 24px; color: var(--soft); }
+    .totals b { color: var(--paper); font-variant-numeric: tabular-nums; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .filters button { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: none; color: var(--soft); font: 500 13px var(--text); cursor: pointer; }
+    .filters button[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .table { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 12.5px; }
+    td.n { font-variant-numeric: tabular-nums; text-align: right; }
+    td a { color: var(--paper); }
+    .st { white-space: nowrap; font-weight: 600; }
+    .st.ok { color: #7ee2b8; } .st.none-tonight { color: var(--soft); }
+    .st.blocked, .st.error, .st.robots, .st.no-location { color: #ffb38a; } .st.skipped { color: var(--muted); }
+    .detail { color: var(--muted); font-size: 13px; max-width: 360px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="home" href="./">Word NYC</a>
+    <h1>Venue coverage</h1>
+    <p id="when" class="small">Loading…</p>
+    <div class="totals" id="totals"></div>
+    <div class="filters" id="filters"></div>
+    <div class="table"><table>
+      <thead><tr><th>Status</th><th>Venue</th><th>Shows</th><th>Read with</th><th>Detail</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <footer><a href="./">Tonight's map</a></footer>
+  </main>
+  <script>
+    const LABEL = { ok: 'Shows found', 'none-tonight': 'Nothing tonight', blocked: 'Blocked', error: "Didn't load",
+                    robots: 'Asks not to be read', 'no-location': 'Address not found', skipped: 'Not read' };
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    let data, filter = '';
+    function draw() {
+      const rows = data.venues.filter((v) => !filter || v.status === filter);
+      document.getElementById('rows').innerHTML = rows.map((v) => `
+        <tr><td class="st ${esc(v.status)}">${esc(LABEL[v.status] || v.status)}</td>
+        <td><a href="${esc(v.read_url || v.url)}" target="_blank" rel="noopener">${esc(v.name)}</a></td>
+        <td class="n">${v.shows || 0}</td><td>${esc(v.method || '')}</td><td class="detail">${esc(v.detail || '')}</td></tr>`).join('');
+      document.querySelectorAll('#filters button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.s === filter)));
+    }
+    fetch('coverage.json', { cache: 'no-store' }).then((r) => r.json()).then((d) => {
+      data = d;
+      const t = d.totals;
+      document.getElementById('when').textContent = `Lineup for ${d.date}, updated ${new Date(d.generated).toLocaleString('en-US', { timeZone: 'America/New_York' })}`;
+      document.getElementById('totals').innerHTML =
+        `<span><b>${t.shows}</b> shows</span><span><b>${t.venues}</b> venues read</span><span><b>${t.ok}</b> with shows</span>` +
+        `<span><b>${t['none-tonight']}</b> nothing tonight</span><span><b>${t.blocked + t.error + t.robots + (t['no-location'] || 0)}</b> need attention</span>` +
+        (d.ai && d.ai.calls ? `<span>AI: <b>${d.ai.calls}</b> pages, about <b>$${d.ai.cost_usd.toFixed(3)}</b></span>` : '');
+      const counts = {};
+      d.venues.forEach((v) => { counts[v.status] = (counts[v.status] || 0) + 1; });
+      document.getElementById('filters').innerHTML = `<button data-s="">All ${d.venues.length}</button>` +
+        Object.keys(LABEL).filter((k) => counts[k]).map((k) => `<button data-s="${k}">${LABEL[k]} ${counts[k]}</button>`).join('');
+      document.getElementById('filters').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) { filter = b.dataset.s; draw(); } });
+      draw();
+    }).catch(() => { document.getElementById('when').textContent = 'No coverage report yet. It appears after the next daily update.'; });
+  </script>
+</body>
+</html>

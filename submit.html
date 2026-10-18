@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Submit a show to Word NYC</title>
+  <meta name="description" content="Playing in New York? Send your show to Word NYC's map of live shows tonight.">
+  <meta name="theme-color" content="#0d1230">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
+  <link rel="stylesheet" href="page.css">
+  <style>
+    form { display: grid; gap: 16px; margin: 28px 0; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
+    label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--paper); }
+    label span { font-weight: 400; color: var(--muted); }
+    input, select, textarea {
+      width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line);
+      background: var(--ink-2); color: var(--paper); font: 15px/1.4 var(--text);
+    }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: transparent; }
+    textarea { min-height: 90px; resize: vertical; }
+    .btn { justify-self: start; padding: 12px 20px; font-size: 15px; border: 0; }
+    .done { display: none; }
+    .done.show { display: block; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="home" href="./">Word NYC</a>
+
+    <h1>Submit a show</h1>
+    <p class="lede">Playing in New York? Tell us about your show and it can appear on the map on the night it happens. Listings are free.</p>
+    <p>We check every submission before it goes up. For a highlighted spot at the top of the list, see <a href="advertise.html">Advertise</a>.</p>
+
+    <form id="submit-form" novalidate>
+      <label>Show title<input id="f-title" name="title" required maxlength="140" placeholder="e.g. Maria Ortiz Quintet"></label>
+      <label>Performers <span>separate names with commas</span><input id="f-performers" name="performers" maxlength="300"></label>
+      <div class="row2">
+        <label>Venue<input id="f-venue" name="venue" required maxlength="120"></label>
+        <label>Venue address<input id="f-address" name="address" required maxlength="200" placeholder="Street, borough"></label>
+      </div>
+      <div class="row2">
+        <label>Date<input id="f-date" name="date" type="date" required></label>
+        <label>Start time<input id="f-time" name="time" type="time" required></label>
+      </div>
+      <div class="row2">
+        <label>Genre
+          <select id="f-genre" name="genre">
+            <option>Jazz</option><option>Classical</option><option>Opera</option><option>Ballet &amp; Dance</option>
+            <option>Avant-garde</option><option>Cabaret &amp; Musicals</option><option>Folk &amp; Americana</option>
+            <option>Blues</option><option>Country</option><option>Rock</option><option>Indie &amp; Alternative</option>
+            <option>Punk &amp; Hardcore</option><option>Metal</option><option>Pop</option><option>Hip-Hop &amp; Rap</option>
+            <option>R&amp;B &amp; Soul</option><option>Electronic &amp; DJ</option><option>Latin</option><option>African</option>
+            <option>Reggae &amp; Caribbean</option><option>World</option><option>Gospel</option><option>Comedy</option><option>Other</option>
+          </select>
+        </label>
+        <label>Price <span>optional</span><input id="f-price" name="price" maxlength="60" placeholder="$20, Free"></label>
+      </div>
+      <label>Ticket or info link<input id="f-link" name="link" type="url" maxlength="400" placeholder="https://"></label>
+      <label>A sentence about the show <span>optional</span><textarea id="f-desc" name="description" maxlength="400"></textarea></label>
+      <label>Your email <span>only used if we have a question</span><input id="f-email" name="email" type="email" required maxlength="200"></label>
+      <p class="small" id="form-error" role="alert"></p>
+      <button class="btn" type="submit">Send show</button>
+    </form>
+
+    <div class="card done" id="done" role="status">
+      <p class="email" style="font-size:20px">Thanks, we got it.</p>
+      <p>We'll review your show and add it to the map for that night.</p>
+    </div>
+
+    <footer>
+      <a href="./">Tonight's map</a><a href="advertise.html">Advertise</a><a href="privacy.html">Privacy</a>
+    </footer>
+  </main>
+  <script>
+    // Submissions go to a Google Form when it's configured (see README), otherwise to an email draft.
+    const GOOGLE_FORM = {
+      action: '',   // e.g. 'https://docs.google.com/forms/d/e/FORM_ID/formResponse'
+      fields: {},   // map of our field names to the form's entry ids, e.g. { title: 'entry.123456' }
+    };
+    const EMAIL = 'advertise@word-nyc.com';
+
+    const form = document.getElementById('submit-form');
+    const err = document.getElementById('form-error');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const missing = ['title', 'venue', 'address', 'date', 'time', 'email'].filter((k) => !String(data[k] || '').trim());
+      if (missing.length) { err.textContent = 'Please fill in: ' + missing.join(', ') + '.'; return; }
+      err.textContent = '';
+      if (GOOGLE_FORM.action) {
+        const body = new URLSearchParams();
+        for (const [k, id] of Object.entries(GOOGLE_FORM.fields)) body.append(id, data[k] || '');
+        try { await fetch(GOOGLE_FORM.action, { method: 'POST', mode: 'no-cors', body }); }
+        catch (_) { err.textContent = "Couldn't send. Check your connection and try again."; return; }
+        form.hidden = true;
+        document.getElementById('done').classList.add('show');
+      } else {
+        const text = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n');
+        location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Show submission: ' + data.title)}&body=${encodeURIComponent(text)}`;
+      }
+    });
+  </script>
+</body>
+</html>

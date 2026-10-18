@@ -9,9 +9,15 @@ on:
     - cron: "0 9 * * *"
     - cron: "0 10 * * *"
     - cron: "0 11 * * *"
-  workflow_dispatch: {}   # "Run workflow" button for a manual refresh
-  push:                   # editing sponsored placements republishes tonight's lineup right away
-    paths: ["sponsored.json", "scraper/**"]
+  workflow_dispatch:      # "Run workflow" button for a manual refresh
+    inputs:
+      venues:
+        description: "Only read venues whose name contains this text (blank = all)"
+        required: false
+        default: ""
+  push:                   # editing sponsored placements or the scraper republishes tonight's lineup
+    branches: [main]
+    paths: ["sponsored.json", "scraper/**", ".github/workflows/update-events.yml"]
 
 permissions:
   contents: write
@@ -23,7 +29,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -45,21 +51,41 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Cache the browser
+        if: steps.due.outputs.run == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.56.0-${{ runner.os }}
+
+      - name: Install the browser
+        if: steps.due.outputs.run == 'true'
+        run: |
+          pip install --quiet playwright==1.56.0
+          python -m playwright install --with-deps chromium
+
       - name: Build events.json
         if: steps.due.outputs.run == 'true'
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_TOKEN }}
+          SUBMISSIONS_CSV_URL: ${{ vars.SUBMISSIONS_CSV_URL }}
+          VENUE_FILTER: ${{ github.event.inputs.venues }}
         run: python scraper/scrape.py
 
       - name: Commit and publish
-        if: steps.due.outputs.run == 'true'
+        # A run limited to a few venues is a test: it shows results in the log but doesn't publish.
+        if: steps.due.outputs.run == 'true' && !github.event.inputs.venues
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add events.json
+          git add events.json coverage.json
+          [ -f scraper/geocache.json ] && git add scraper/geocache.json
           if git diff --cached --quiet; then
             echo "No changes."
           else
             git commit -m "Lineup for $(TZ=America/New_York date -d '-5 hours' +%F)"
+            git pull --rebase --autostash
             git push
           fi

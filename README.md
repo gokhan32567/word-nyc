@@ -3,30 +3,32 @@
 A live map of tonight's music shows in New York. The lineup refreshes automatically at **5:00 AM New York time every day**.
 
 - `index.html`: the whole site (map, list, genre filters, show details, story-graphic sharing)
+- `submit.html`: "Submit a show" form for artists and venues (also brings in sponsorship leads)
+- `coverage.html`: the daily venue coverage report (not linked from the site, not indexed)
 - `advertise.html`, `privacy.html`, `page.css`: the Advertise and Privacy pages
 - `events.json`: tonight's lineup, rewritten each morning by the workflow
+- `coverage.json`: what each venue produced this morning
 - `sponsored.json`: paid placements you sell to venues (edit by hand)
-- `scraper/`: builds `events.json` (Python, standard library only)
+- `scraper/`: builds `events.json` (Python; Playwright for the browser, everything else standard library)
+- `scraper/venues.json`: the venues read every morning (add your own)
 - `.github/workflows/update-events.yml`: the daily 5 AM job
 
-## Launch checklist
+## Setup
 
-1. **Create the repo and turn on GitHub Pages:** push these files to a public repo, then
-   Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)` → Save.
-   The site appears at `https://<your-username>.github.io/<repo-name>/`.
-2. **Add the Ticketmaster key** (main data source, free):
-   - Create an app at <https://developer.ticketmaster.com> and copy its *Consumer Key*.
-   - Repo → Settings → Secrets and variables → Actions → *New repository secret*
-     → Name `TICKETMASTER_API_KEY`, value = the key.
-3. **Run it once now:** Actions tab → *Update tonight's lineup* → *Run workflow*.
-   After that it runs on its own every morning. Until the first run, the page shows sample shows.
-4. **Use your own domain** (needed for AdSense, and better for a business): buy one from any registrar,
-   then Settings → Pages → *Custom domain*, and follow GitHub's DNS instructions
-   (<https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site>). Tick *Enforce HTTPS*.
-5. **Fill in your details:**
-   - the contact emails in `advertise.html` and `privacy.html` (search for `your-domain.com`);
-   - `siteLabel` in `index.html` (shown at the bottom of the share graphic; put your domain there).
-6. **Review `privacy.html`.** It's a template matching how the site works, not legal advice.
+The site is live at <https://word-nyc.com> (GitHub Pages, repo `gokhan32567/word-nyc`). Secrets live in
+repo → Settings → Secrets and variables → Actions.
+
+| Secret / variable | What it turns on | Where to get it |
+|---|---|---|
+| `TICKETMASTER_API_KEY` (secret) | Ticketmaster, TicketWeb and Universe shows | Consumer Key of an app at <https://developer.ticketmaster.com> |
+| `ANTHROPIC_API_KEY` (secret) | AI reading of venue calendars | <https://console.anthropic.com> → API keys. Add a few dollars of credit and set a monthly spend limit. |
+| `EVENTBRITE_TOKEN` (secret, optional) | Eventbrite organizer feeds for venues that have an `eventbrite` id | Eventbrite → Account settings → Developer links → API keys → private token |
+| `SUBMISSIONS_CSV_URL` (variable, optional) | Approved form submissions | See "Submit a show" below |
+
+Run the job by hand: Actions → *Update tonight's lineup* → *Run workflow*. Type a few venue names in the box
+(e.g. `Smalls, Birdland`) for a test run that reads only those venues and doesn't publish.
+
+Before relying on it commercially: review `privacy.html` (a template, not legal advice).
 
 ## Making money
 
@@ -77,12 +79,78 @@ Edit `sponsored.json` on GitHub (pencil icon); saving it republishes tonight's l
 
 ## Where the shows come from
 
-| Source | What it adds | Notes |
-|---|---|---|
-| Ticketmaster Discovery API | Most ticketed shows within ~12 miles of lower Manhattan, with genre | Needs the free key above. 5,000 calls/day free; the job uses ~5. |
-| Venue calendars in `scraper/venues.json` | Venues that sell tickets elsewhere (jazz clubs, Lincoln Center, Carnegie Hall, BAM, the Joyce, Roulette, The Stone…) | Only works for sites that publish schema.org event data. The job log shows how many shows each venue returned; a venue showing 0 every day needs a custom parser or removal. |
+Every morning the job reads, in this order:
 
-When the same show turns up in more than one source (same venue, same start time, overlapping names), the records are merged into one and each fills in what the other is missing: the venue page usually supplies the program, Ticketmaster the price range and photo. If **every** source fails, the job leaves the previous `events.json` in place and retries at the next scheduled time.
+1. **Venue calendars** (`scraper/venues.json`, about 150 venues: jazz clubs, concert halls, church concert
+   series, new-music spaces, indie rooms). A real browser (headless Chromium) opens each venue's calendar page.
+   If the page doesn't mention tonight's date, it follows the page's "calendar"/"events" link once. Then the
+   first method that works is used:
+   - schema.org event data embedded in the page (JSON-LD);
+   - The Events Calendar for WordPress (its public REST API);
+   - an iCal feed linked from the page (or the venue's `ical` field);
+   - an Eventbrite organizer feed (the venue's `eventbrite` id, needs `EVENTBRITE_TOKEN`);
+   - **AI reading**: Claude Haiku reads the page text and reports tonight's shows (title, performers, time,
+     program, price). Each show is then checked against the page itself: the date and time it quotes must
+     appear on the page and be tonight, the title must be on the page, and performers, program and price are
+     kept only if they're on the page too. Anything else is thrown out. Descriptions are short and in our own
+     words (a description that copies the page is dropped).
+2. **Ticketmaster Discovery API**: ticketed shows within ~12 miles of lower Manhattan (NY state only), which
+   also covers TicketWeb venues such as Birdland.
+3. **Approved submissions** from the Submit form.
+4. **Sponsored placements** in `sponsored.json`.
+
+When the same show turns up in more than one source (same venue, same start time, overlapping names), the
+records are merged and each fills in what the other is missing; the Ticketmaster ticket link wins. Shows read
+from a venue's own calendar carry a "Listing from {venue}'s calendar" note linking back to that page. If
+**every** source fails, the job leaves the previous `events.json` in place and retries at the next scheduled time.
+
+Limits: the browser identifies itself as Word NYC, respects each site's `robots.txt`, and loads one page per
+venue (plus at most one calendar link). Some sites block automated visitors outright (they show as *Blocked*
+in the coverage report). Check a venue's terms if in doubt; the site only republishes facts (who, when,
+where, price) with a link back.
+
+### Adding a venue
+
+Add an entry to `scraper/venues.json`:
+
+```json
+{ "name": "Smalls Jazz Club", "address": "183 W 10th St, New York, NY 10014",
+  "url": "https://www.smallslive.com/", "genre": "Jazz" }
+```
+
+- `url`: the venue's calendar or events page (the more specific, the better and cheaper).
+- `genre`: used when the page doesn't say. Any label works; it's grouped by `scraper/genres.py`.
+- Optional: `lat`/`lng` (otherwise the address is looked up once on OpenStreetMap and cached in
+  `scraper/geocache.json`), `ical` (feed URL), `eventbrite` (organizer id), `method: "tribe"` (force the
+  WordPress calendar API), `note` (an instruction for the AI reader, e.g. "Only concerts in the Sanctuary").
+
+### Coverage report
+
+Each run writes `coverage.json`, viewable at <https://word-nyc.com/coverage.html>, and a summary on the
+run's page in the Actions tab. Every venue gets a status: *Shows found*, *Nothing tonight*, *Blocked*,
+*Didn't load*, *Asks not to be read* (robots.txt), *Address not found*, or *Not read* (no AI key). A venue
+that's blocked or broken day after day needs a better `url` (its calendar page, an iCal feed) or removal.
+
+### Cost
+
+GitHub's servers are free for a public repo. AI reading costs about $0.10 per million input tokens and
+$0.50 per million output tokens (Claude Haiku 5.5); a page is capped at ~24,000 characters, so a full
+morning is roughly 150 pages × ~7,000 tokens ≈ $0.10–0.30, or about $5–10 a month. The coverage report
+shows each run's actual token use and cost. Change the model with the `AI_MODEL` environment variable.
+
+## Submit a show
+
+`submit.html` collects show title, performers, venue, address, date, start time, genre, price, link,
+a short description and the submitter's email.
+
+- **Until a Google Form is connected**, pressing *Send show* opens an email draft to
+  `advertise@word-nyc.com` (set up forwarding for that address at Porkbun → Email).
+- **To collect submissions in a sheet:** create a Google Form with those questions plus an **Approved**
+  column in its response sheet. Put the form's `formResponse` URL and each question's `entry.…` id into
+  `GOOGLE_FORM` at the bottom of `submit.html`. Then in the sheet: File → Share → Publish to web →
+  the responses sheet as CSV, and save that link as the repo variable `SUBMISSIONS_CSV_URL`. Rows where
+  *Approved* is `yes` are added on their date. Columns are matched by name (date, start time, venue name,
+  address, title, performers, ticket link, genre, price, description).
 
 ## What each show carries
 
@@ -104,12 +172,15 @@ GitHub schedules run in UTC, so the workflow fires at 09:00, 10:00 and 11:00 UTC
 Run it locally:
 
 ```bash
-TICKETMASTER_API_KEY=xxxx python scraper/scrape.py            # tonight
-python scraper/scrape.py --date 2026-10-31 --out /tmp/test.json # a specific night
+pip install playwright==1.56.0 && python -m playwright install chromium
+TICKETMASTER_API_KEY=xxxx ANTHROPIC_API_KEY=xxxx python scraper/scrape.py   # tonight
+python scraper/scrape.py --date 2026-10-31 --out /tmp/test.json            # a specific night
+python scraper/scrape.py --only "smalls,birdland"                            # a few venues
+python scraper/scrape.py --no-browser                                        # Ticketmaster etc. only
 ```
 
 ## Before going commercial
 
 - **Ticketmaster:** follow the Discovery API terms (attribution, linking to Ticketmaster for tickets). Their affiliate program can pay commission on ticket links.
-- **Venue sites:** check each site's terms before scraping commercially; asking venues for a feed or partnership is the durable route.
+- **Venue sites:** check each site's terms before reading it commercially; asking venues for a feed or partnership is the durable route. Remove a venue from `venues.json` if it asks.
 - **Map:** OpenFreeMap is free for commercial use; keep the OpenStreetMap credit visible (already on the map and the share image).

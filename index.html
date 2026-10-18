@@ -200,6 +200,7 @@
     .d-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-right: 48px; }
     .d-status { margin: 0; font-size: 13px; font-weight: 600; color: var(--muted); }
     .d-note { margin: -4px 0 0; font-size: 12.5px; color: var(--muted); }
+    .d-note a { color: var(--soft); }
     .d-status.live { color: var(--gold); }
     .d-status.live::before { content: ""; display: inline-block; width: 7px; height: 7px; margin: 0 6px 1px 0; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 1.6s infinite; }
     .d-status.soon { color: #ffd88c; }
@@ -303,7 +304,7 @@
       <div class="ad-slot" id="ad-slot" hidden><span class="ad-label">Advertisement</span></div>
       <footer class="foot">
         <p>Some ticket links earn Word NYC a small commission, at no extra cost to you.</p>
-        <p><a href="advertise.html">Advertise your show</a><a href="privacy.html">Privacy</a></p>
+        <p><a href="submit.html">Submit a show</a><a href="advertise.html">Advertise</a><a href="privacy.html">Privacy</a></p>
       </footer>
     </div>
   </section>
@@ -499,7 +500,8 @@
           price: String(e.price || '').trim(),
           program: toList(e.program),
           description: String(e.description || '').trim(),
-          url: safeUrl(e.url), image: safeUrl(e.image),
+          url: safeUrl(e.url), image: safeUrl(e.image), listingUrl: safeUrl(e.listing_url),
+          fromVenue: /venue/.test(String(e.source || '')),
           sponsored: e.sponsored === true,
         };
       });
@@ -789,6 +791,7 @@
           <a class="btn${tix ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
         </div>
         ${tix && tix.paid ? '<p class="d-note">Word NYC may earn a commission if you buy tickets through this link.</p>' : ''}
+        ${ev.fromVenue && ev.listingUrl ? `<p class="d-note">From the <a href="${esc(ev.listingUrl)}" target="_blank" rel="noopener">venue's own calendar</a>. Check there before you go.</p>` : ''}
       </div>`;
     const img = box.querySelector('.d-img');
     if (img) img.addEventListener('error', () => img.remove());
