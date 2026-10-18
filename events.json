@@ -1,7 +1,7 @@
 {
   "date": "2026-10-18",
-  "generated": "2026-10-18T19:49:07-04:00",
-  "count": 44,
+  "generated": "2026-10-18T19:58:15-04:00",
+  "count": 33,
   "events": [
     {
       "title": "Sunday Songwriter's Open Mic Every Week at Lucinda's",
@@ -384,72 +384,6 @@
       "id": 17
     },
     {
-      "title": "Lucas Zelnick",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "7:00 PM",
-      "end": "8:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Lucas Zelnick",
-      "id": 18
-    },
-    {
-      "title": "Allison Russell",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "7:00 PM",
-      "end": "8:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Allison Russell",
-      "id": 19
-    },
-    {
-      "title": "SUGAR",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "7:00 PM",
-      "end": "8:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "SUGAR",
-      "id": 20
-    },
-    {
       "title": "Robby Hecht & Antje Duvekot",
       "performers": [
         "Robby Hecht",
@@ -471,7 +405,7 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robby Hecht, Antje Duvekot",
-      "id": 21
+      "id": 18
     },
     {
       "title": "Growing • Ryan Sawyer Shaker Ensemble",
@@ -493,7 +427,7 @@
       "source": "venue-data",
       "listing_url": "https://www.union-pool.com/calendar",
       "artist": "Growing • Ryan Sawyer Shaker Ensemble",
-      "id": 22
+      "id": 19
     },
     {
       "title": "Boobees Live: A Variety Show",
@@ -515,7 +449,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Boobees Live: A Variety Show",
-      "id": 23
+      "id": 20
     },
     {
       "title": "guardin w/ kennedyxoxo, Fijimar",
@@ -539,29 +473,7 @@
       "image": "https://s1.ticketm.net/dam/a/2a9/b557222f-0c9e-4a8e-b0dc-79ad677822a9_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Guardin, Kennedyxoxo",
-      "id": 24
-    },
-    {
-      "title": "Rebecca Black – Exhibitionism on Tour",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "7:30 PM",
-      "end": "9:00 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Rebecca Black – Exhibitionism on Tour",
-      "id": 25
+      "id": 21
     },
     {
       "title": "Johnny Pemberton",
@@ -583,7 +495,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thebellhouseny.com/",
       "artist": "Johnny Pemberton",
-      "id": 26
+      "id": 22
     },
     {
       "title": "Robert Glasper OG Acoustic Piano Trio",
@@ -607,7 +519,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Damion Reid",
-      "id": 27
+      "id": 23
     },
     {
       "title": "Cannons (16 and Over)",
@@ -631,7 +543,7 @@
       "image": "https://s1.ticketm.net/dam/a/fc6/3bb1b959-d48a-4ad1-b917-20a58b9a7fc6_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Cannons, Caroline Kingsbury",
-      "id": 28
+      "id": 24
     },
     {
       "title": "The Suitcase Junket",
@@ -654,7 +566,7 @@
       "image": "https://s1.ticketm.net/dam/a/901/a776b92f-c048-42c4-99ab-7228e80f2901_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Jocelyn Mackenzie",
-      "id": 29
+      "id": 25
     },
     {
       "title": "Open Air Season Closing ft. Marco Carola, PAWSA - Ages 21+",
@@ -678,7 +590,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Marco Carola, Pawsa - DJ",
-      "id": 30
+      "id": 26
     },
     {
       "title": "Kranium",
@@ -699,161 +611,7 @@
       "image": "https://s1.ticketm.net/dam/e/afa/f8034470-07ef-4482-8809-202818e83afa_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Kranium",
-      "id": 31
-    },
-    {
-      "title": "Carly Pearce",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Carly Pearce",
-      "id": 32
-    },
-    {
-      "title": "Brand New",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Brand New",
-      "id": 33
-    },
-    {
-      "title": "The Tallest Man on Earth",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "The Tallest Man on Earth",
-      "id": 34
-    },
-    {
-      "title": "JOHNNYSWIM",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "JOHNNYSWIM",
-      "id": 35
-    },
-    {
-      "title": "Cannons",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Cannons",
-      "id": 36
-    },
-    {
-      "title": "Johnny Blue Skies & the Dark Clouds",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Johnny Blue Skies & the Dark Clouds",
-      "id": 37
-    },
-    {
-      "title": "Chasing Abbey",
-      "performers": [],
-      "venue": "Terminal 5",
-      "address": "610 W 56th St, New York, NY 10019",
-      "lat": 40.76975,
-      "lng": -73.99274,
-      "date": "2026-10-18",
-      "time": "8:00 PM",
-      "end": "9:30 PM",
-      "url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "genre": "Indie & Alternative",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": null,
-      "image": null,
-      "source": "venue-data",
-      "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
-      "artist": "Chasing Abbey",
-      "id": 38
+      "id": 27
     },
     {
       "title": "The Birdland Latin Jazz Orchestra",
@@ -874,7 +632,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Birdland Latin Jazz Orchestra",
-      "id": 39
+      "id": 28
     },
     {
       "title": "Carole J. Bufford: Chanteuse",
@@ -895,7 +653,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Carole J. Bufford: Chanteuse",
-      "id": 40
+      "id": 29
     },
     {
       "title": "Kiki Kramer | Hannah Hannah | RubyBlue | Damin Tyler",
@@ -916,7 +674,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Kiki Kramer | Hannah Hannah | RubyBlue | Damin Tyler",
-      "id": 41
+      "id": 30
     },
     {
       "title": "The Birdland Latin Jazz Orchestra",
@@ -937,7 +695,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Birdland Latin Jazz Orchestra",
-      "id": 42
+      "id": 31
     },
     {
       "title": "Robert Glasper OG Acoustic Piano Trio",
@@ -961,7 +719,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Damion Reid",
-      "id": 43
+      "id": 32
     },
     {
       "title": "The Midnight Special",
@@ -982,7 +740,7 @@
       "image": "https://s1.ticketm.net/dam/c/677/c58dd0af-cda8-49b2-bdaf-068540c3a677_106541_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Midnight Special",
-      "id": 44
+      "id": 33
     }
   ]
 }

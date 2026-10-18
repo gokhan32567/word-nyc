@@ -1,20 +1,20 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T19:49:07-04:00",
+ "generated": "2026-10-18T19:58:15-04:00",
  "totals": {
-  "venues": 153,
-  "shows": 44,
-  "ok": 8,
+  "venues": 152,
+  "shows": 33,
+  "ok": 7,
   "none-tonight": 1,
   "blocked": 15,
-  "error": 9,
+  "error": 4,
   "robots": 1,
   "no-location": 0,
-  "skipped": 119
+  "skipped": 124
  },
  "shows_by_source": {
   "ticketmaster": 26,
-  "venue-data": 18
+  "venue-data": 7
  },
  "ai": {
   "calls": 0,
@@ -143,7 +143,7 @@
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:52.234.43.177:1792367147.464",
+   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:52.190.221.85:1792367719.344",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -154,9 +154,9 @@
    "url": "https://www.bembe.us/",
    "read_url": "https://www.bembe.us/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Berlin",
@@ -484,12 +484,12 @@
   },
   {
    "name": "Gold Sounds",
-   "url": "https://www.goldsoundsbar.com/",
-   "read_url": "https://www.goldsoundsbar.com/",
+   "url": "https://goldsoundsbar.com/",
+   "read_url": "https://www.goldsounds.bar/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "Error: Page.goto: Navigation to \"https://goldsoundsbar.com/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\""
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Good Room",
@@ -559,9 +559,9 @@
    "url": "https://issueprojectroom.org/",
    "read_url": "https://issueprojectroom.org/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Jazz at Lincoln Center",
@@ -629,7 +629,7 @@
   {
    "name": "Littlefield",
    "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367266.741",
+   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.190.221.85:1792367793.310",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -808,12 +808,12 @@
   },
   {
    "name": "Paddy Reilly's Music Bar",
-   "url": "https://www.paddyreillys.com/",
-   "read_url": "https://www.paddyreillys.com/",
+   "url": "https://www.paddyreillysmusicbar.com/",
+   "read_url": "https://www.paddyreillysmusicbar.com/",
    "method": null,
-   "status": "error",
+   "status": "skipped",
    "shows": 0,
-   "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://paddyreillys.com/"
+   "detail": "no ANTHROPIC_API_KEY"
   },
   {
    "name": "Pangea",
@@ -877,15 +877,6 @@
    "status": "error",
    "shows": 0,
    "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://rockwoodmusichall.com/"
-  },
-  {
-   "name": "Room 623 at B2 Harlem",
-   "url": "https://www.room623.com/",
-   "read_url": "https://www.room623.com/",
-   "method": null,
-   "status": "error",
-   "shows": 0,
-   "detail": "page returned HTTP 404"
   },
   {
    "name": "Roulette",
@@ -953,7 +944,7 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367041.038",
+   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.190.221.85:1792367592.669",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1025,7 +1016,7 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:52.234.43.177:1792367136.460",
+   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:52.190.221.85:1792367697.385",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1089,6 +1080,15 @@
    "name": "Tenri Cultural Institute",
    "url": "https://tenri.org/",
    "read_url": "https://tenri.org/",
+   "method": null,
+   "status": "skipped",
+   "shows": 0,
+   "detail": "no ANTHROPIC_API_KEY"
+  },
+  {
+   "name": "Terminal 5",
+   "url": "https://www.terminal5nyc.com/",
+   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1322,7 +1322,7 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:52.234.43.177:1792366979.859",
+   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.190.221.85:1792367534.301",
    "method": null,
    "status": "skipped",
    "shows": 0,
@@ -1362,15 +1362,6 @@
    "method": "event data",
    "status": "ok",
    "shows": 1,
-   "detail": null
-  },
-  {
-   "name": "Terminal 5",
-   "url": "https://www.terminal5nyc.com/",
-   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
-   "method": "event data",
-   "status": "ok",
-   "shows": 11,
    "detail": null
   },
   {
