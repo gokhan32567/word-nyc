@@ -7,6 +7,7 @@ the most likely "Calendar / Events / Shows" link once.
 from __future__ import annotations
 
 import asyncio
+import json
 import re
 import urllib.parse
 import urllib.robotparser
@@ -203,16 +204,46 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
     return snap
 
 
+def _resolve(host: str) -> str | None:
+    """Look a host up over DNS-over-HTTPS, for names the runner's own DNS fails on."""
+    try:
+        data = json.loads(get("https://dns.google/resolve", {"name": host, "type": "A"}, timeout=10))
+    except Exception:  # noqa: BLE001
+        return None
+    ips = [a["data"] for a in data.get("Answer") or [] if a.get("type") == 1]
+    return ips[0] if ips else None
+
+
 async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeout_ms: int) -> dict[str, Snapshot]:
     from playwright.async_api import async_playwright
     sem = asyncio.Semaphore(concurrency)
+    args = ["--disable-dev-shm-usage"]
     async with async_playwright() as pw:
-        browser = await pw.chromium.launch(args=["--disable-dev-shm-usage"])
+        browser = await pw.chromium.launch(args=args)
         try:
-            snaps = await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in venues])
+            snaps = {s.venue: s for s in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms)
+                                                                for v in venues])}
         finally:
             await browser.close()
-    return {s.venue: s for s in snaps}
+
+        # Second chance for sites whose names didn't resolve: look them up elsewhere and pin the address.
+        retry = [v for v in venues if "ERR_NAME_NOT_RESOLVED" in (snaps[v["name"]].error or "")]
+        rules = []
+        for v in retry:
+            host = urllib.parse.urlsplit(v["url"]).netloc
+            for h in {host, host[4:] if host.startswith("www.") else "www." + host}:
+                ip = await asyncio.to_thread(_resolve, h)
+                if ip:
+                    rules.append(f"MAP {h} {ip}")
+        if rules:
+            log(f"  retrying {len(retry)} site(s) with DNS-over-HTTPS addresses")
+            browser = await pw.chromium.launch(args=args + ["--host-resolver-rules=" + ", ".join(rules)])
+            try:
+                for s in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in retry]):
+                    snaps[s.venue] = s
+            finally:
+                await browser.close()
+    return snaps
 
 
 def snapshot_all(venues: list[dict], night: date, concurrency: int = 6, timeout_ms: int = 30000) -> dict[str, Snapshot]:

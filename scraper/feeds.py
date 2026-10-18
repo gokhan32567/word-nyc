@@ -75,6 +75,25 @@ def offers_price(offers) -> str | None:
     return price_label(min(vals), max(vals), cur) if vals else None
 
 
+def location_of(loc) -> tuple[str | None, str | None, str | None]:
+    """(name, address, state) from a schema.org location: a Place, a list of them, or plain text."""
+    if isinstance(loc, list):
+        loc = next((x for x in loc if isinstance(x, (dict, str))), None)
+    if isinstance(loc, str):
+        parts = [p.strip() for p in loc.split(",") if p.strip()]
+        while parts and re.fullmatch(r"(usa|us|united states( of america)?)", parts[-1], re.I):
+            parts.pop()
+        if not parts:
+            return None, None, None
+        region = parts[-1].split()[0] if len(parts) >= 3 else None
+        return parts[0], ", ".join(parts[1:]) or None, region
+    if isinstance(loc, dict):
+        addr = loc.get("address")
+        region = addr.get("addressRegion") if isinstance(addr, dict) else None
+        return (names_of(loc.get("name")) or [None])[0], address_of(addr), region
+    return None, None, None
+
+
 def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> list[dict]:
     out = []
     for blob in blobs:
@@ -99,15 +118,13 @@ def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> 
                 raw_genre = ", ".join(map(str, raw_genre))
             performers = names_of(d.get("performer"))
             title = (names_of(d.get("name")) or performers or ["TBA"])[0]
-            loc = d.get("location") if isinstance(d.get("location"), dict) else {}
-            loc_addr = loc.get("address")
-            region = loc_addr.get("addressRegion") if isinstance(loc_addr, dict) else None
-            if same_place(venue, (names_of(loc.get("name")) or [None])[0], address_of(loc_addr), region) is False:
-                continue  # a promoter's page listing shows at its other venues
+            loc_name, loc_address, region = location_of(d.get("location"))
+            if same_place(venue, loc_name, loc_address, region) is False:
+                continue  # a promoter's page listing shows at its other venues or in other cities
             day, t = _date_time(when, raw_start)
             out.append(base_event(
                 venue, title=title, performers=performers,
-                address=address_of(loc.get("address")) or venue.get("address"),
+                address=loc_address or venue.get("address"),
                 date=day, time=t,
                 end=clock(end_dt) if end_dt and has_time(raw_end) and end_dt > when else None,
                 url=d.get("url") if str(d.get("url", "")).startswith("http") else page_url,
