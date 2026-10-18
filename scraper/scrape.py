@@ -251,6 +251,21 @@ def tm_image(images: list) -> str | None:
     return pick.get("url") if pick else None
 
 
+def tm_price(pr: dict) -> str | None:
+    """Ticketmaster uses 0 for 'no price on file', so a 0 is dropped rather than shown as Free."""
+    def num(x):
+        try:
+            return float(x) if x not in (None, "") and float(x) > 0 else None
+        except (TypeError, ValueError):
+            return None
+    lo, hi = num(pr.get("min")), num(pr.get("max"))
+    if lo is None and hi is None:
+        return None
+    if lo is None:
+        return f"Up to {money(hi, (pr.get('currency') or 'USD').upper())}"
+    return price_label(lo, hi, pr.get("currency", "USD"))
+
+
 def tm_event(e: dict) -> dict | None:
     venues = e.get("_embedded", {}).get("venues") or []
     if not venues:
@@ -262,6 +277,8 @@ def tm_event(e: dict) -> dict | None:
     except (KeyError, TypeError, ValueError):
         return None
     if e.get("dates", {}).get("status", {}).get("code") in {"cancelled", "canceled", "postponed"}:
+        return None
+    if (v.get("state") or {}).get("stateCode", "NY") != "NY":  # the radius reaches into New Jersey
         return None
     st = e.get("dates", {}).get("start", {})
     when = parse_iso(st.get("dateTime", "")) if st.get("dateTime") else None
@@ -288,7 +305,7 @@ def tm_event(e: dict) -> dict | None:
         "url": e.get("url"),
         "genre": bucket(sub, gen, title),
         "subgenre": next((x for x in (sub, gen) if x.strip().lower() not in VAGUE), None),
-        "price": price_label(pr.get("min"), pr.get("max"), pr.get("currency", "USD")),
+        "price": tm_price(pr),
         "program": [],
         "description": clean_text(e.get("info") or e.get("description") or e.get("pleaseNote")),
         "image": tm_image(e.get("images") or []),
@@ -408,12 +425,18 @@ def tokens(e: dict) -> set[str]:
 
 
 def same_show(a: dict, b: dict) -> bool:
-    """Same venue, same start time (when both known) and overlapping names."""
+    """Same venue and overlapping names, at the same start time (when both known).
+
+    Exception: one listing's title containing the other's ("X" vs "Promoter Presents X") within
+    90 minutes is one show listed twice. Identical titles at different times are separate sets.
+    """
     if norm(a["venue"])[:10] != norm(b["venue"])[:10]:
         return False
+    ta, tb = norm(a["title"]), norm(b["title"])
     if a.get("time") and b.get("time") and a["time"] != b["time"]:
-        return False
-    return norm(a["title"]) == norm(b["title"]) or bool(tokens(a) & tokens(b))
+        nested = ta != tb and min(len(ta), len(tb)) >= 6 and (ta in tb or tb in ta)
+        return nested and abs(minutes(a["time"]) - minutes(b["time"])) <= 90
+    return ta == tb or bool(tokens(a) & tokens(b))
 
 
 def absorb(into: dict, other: dict) -> None:
