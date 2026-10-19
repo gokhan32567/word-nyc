@@ -1,29 +1,42 @@
 {
- "date": "2026-10-18",
- "generated": "2026-10-18T23:50:21-04:00",
+ "date": "2026-10-19",
+ "generated": "2026-10-19T10:41:42-04:00",
  "totals": {
   "venues": 153,
-  "shows": 64,
-  "ok": 22,
-  "none-tonight": 112,
-  "blocked": 13,
+  "shows": 45,
+  "ok": 18,
+  "none-tonight": 115,
+  "blocked": 14,
   "error": 4,
   "robots": 0,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
-  "venue-ai": 46,
-  "ticketmaster": 24,
-  "venue-data": 3
+  "venue-ai": 31,
+  "ticketmaster": 14,
+  "venue-data": 5
  },
  "ai": {
-  "calls": 130,
-  "input_tokens": 890189,
-  "output_tokens": 23505,
-  "cost_usd": 0.1008
+  "calls": 126,
+  "input_tokens": 875423,
+  "output_tokens": 20323,
+  "cost_usd": 0.0977
  },
  "venues": [
+  {
+   "name": "54 Below",
+   "url": "https://54below.org/",
+   "read_url": "https://54below.org/calendar/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× listed at another venue",
+   "tokens": [
+    11784,
+    397
+   ]
+  },
   {
    "name": "92NY",
    "url": "https://www.92ny.org/",
@@ -31,23 +44,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
-   "tokens": [
-    10805,
-    63
-   ]
-  },
-  {
-   "name": "Alphaville",
-   "url": "https://www.alphavillebk.com/",
-   "read_url": "https://www.alphavillebk.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4498,
-    59
+    10804,
+    512
    ]
   },
   {
@@ -59,7 +59,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    8982,
+    8981,
     63
    ]
   },
@@ -72,7 +72,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    10713,
+    10712,
     63
    ]
   },
@@ -85,7 +85,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15875,
+    15874,
     59
    ]
   },
@@ -98,7 +98,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    7073,
+    7072,
     63
    ]
   },
@@ -111,7 +111,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5545,
+    5544,
     63
    ]
   },
@@ -124,7 +124,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2897,
+    2896,
     63
    ]
   },
@@ -137,7 +137,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2500,
+    2499,
     63
    ]
   },
@@ -148,10 +148,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    8170,
-    63
+    8069,
+    59
    ]
   },
   {
@@ -163,21 +163,8 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2117,
+    2116,
     63
-   ]
-  },
-  {
-   "name": "Bar LunÀtico",
-   "url": "https://www.barlunatico.com/",
-   "read_url": "https://www.barlunatico.com/music",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    14138,
-    59
    ]
   },
   {
@@ -189,21 +176,34 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2389,
+    2388,
+    63
+   ]
+  },
+  {
+   "name": "Bargemusic",
+   "url": "https://www.bargemusic.org/",
+   "read_url": "https://www.bargemusic.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "no_events_tonight",
+   "tokens": [
+    5698,
     63
    ]
   },
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:172.212.164.27:1792381590.121",
+   "read_url": "https://baryshnikovarts.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "None; dropped 1× not a public performance",
    "tokens": [
-    2001,
-    60
+    5496,
+    203
    ]
   },
   {
@@ -215,7 +215,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2471,
+    2470,
     63
    ]
   },
@@ -237,7 +237,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3333,
+    3332,
     63
    ]
   },
@@ -248,10 +248,23 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× date quote not found on page",
+   "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    8240,
-    545
+    8239,
+    236
+   ]
+  },
+  {
+   "name": "Bowery Ballroom",
+   "url": "https://www.boweryballroom.com/",
+   "read_url": "https://mercuryeastpresents.com/boweryballroom/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× listed at another venue",
+   "tokens": [
+    8925,
+    512
    ]
   },
   {
@@ -261,23 +274,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    4596,
+    5352,
     63
-   ]
-  },
-  {
-   "name": "Brooklyn Bowl",
-   "url": "https://www.brooklynbowl.com/brooklyn",
-   "read_url": "https://www.brooklynbowl.com/brooklyn",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    13002,
-    59
    ]
   },
   {
@@ -289,7 +289,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8715,
+    8710,
     63
    ]
   },
@@ -302,7 +302,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2901,
+    2900,
     63
    ]
   },
@@ -315,7 +315,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2148,
+    2147,
     63
    ]
   },
@@ -328,21 +328,21 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6328,
+    6327,
     63
    ]
   },
   {
-   "name": "Carnegie Hall",
-   "url": "https://www.carnegiehall.org/Calendar",
-   "read_url": "https://www.carnegiehall.org/events",
+   "name": "Cathedral of St. John the Divine",
+   "url": "https://www.stjohndivine.org/",
+   "read_url": "https://www.stjohndivine.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    7667,
-    63
+    8437,
+    257
    ]
   },
   {
@@ -352,9 +352,22 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    3299,
+    3298,
+    63
+   ]
+  },
+  {
+   "name": "Chamber Music Society of Lincoln Center",
+   "url": "https://www.chambermusicsociety.org/",
+   "read_url": "https://www.chambermusicsociety.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "no_events_tonight",
+   "tokens": [
+    12269,
     63
    ]
   },
@@ -365,10 +378,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    9925,
-    453
+    9877,
+    59
    ]
   },
   {
@@ -380,7 +393,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5599,
+    5598,
     63
    ]
   },
@@ -393,7 +406,7 @@
    "shows": 0,
    "detail": "unreadable",
    "tokens": [
-    1907,
+    1906,
     60
    ]
   },
@@ -406,7 +419,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6560,
+    6559,
     63
    ]
   },
@@ -419,8 +432,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5356,
-    789
+    5355,
+    255
    ]
   },
   {
@@ -432,7 +445,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    9421,
+    9420,
     63
    ]
   },
@@ -445,7 +458,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8128,
+    8127,
     59
    ]
   },
@@ -458,7 +471,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2142,
+    2141,
     63
    ]
   },
@@ -480,7 +493,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3987,
+    3986,
     63
    ]
   },
@@ -498,10 +511,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "not_a_calendar",
    "tokens": [
-    9880,
-    228
+    9387,
+    63
    ]
   },
   {
@@ -513,7 +526,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3665,
+    3664,
     63
    ]
   },
@@ -526,7 +539,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    4747,
+    4746,
     63
    ]
   },
@@ -540,6 +553,19 @@
    "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
   },
   {
+   "name": "Drom",
+   "url": "https://www.dromnyc.com/",
+   "read_url": "https://dromnyc.com/events/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    14442,
+    59
+   ]
+  },
+  {
    "name": "Elsewhere",
    "url": "https://www.elsewherebrooklyn.com/",
    "read_url": "https://www.elsewhere.club/",
@@ -548,7 +574,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3852,
+    3851,
     63
    ]
   },
@@ -559,22 +585,22 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "no_events_tonight",
    "tokens": [
-    5766,
-    237
+    5758,
+    63
    ]
   },
   {
    "name": "Flushing Town Hall",
    "url": "https://www.flushingtownhall.org/",
-   "read_url": "https://www.flushingtownhall.org/",
+   "read_url": "https://www.flushingtownhall.org/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8823,
+    12991,
     59
    ]
   },
@@ -587,7 +613,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4324,
+    4323,
     59
    ]
   },
@@ -600,7 +626,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2585,
+    2584,
     63
    ]
   },
@@ -613,7 +639,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2162,
+    2161,
     63
    ]
   },
@@ -624,20 +650,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    3930,
-    246
+    3929,
+    59
    ]
   },
   {
    "name": "Grace Church",
    "url": "https://gracechurchnyc.org/",
-   "read_url": "https://gracechurchnyc.org/",
+   "read_url": "https://gracechurchnyc.org/events/",
    "method": "WordPress calendar",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "left out 10 non-performance listings"
+   "detail": "left out 2 non-performance listings"
   },
   {
    "name": "Greenwich House Music School",
@@ -648,8 +674,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    10202,
-    289
+    10199,
+    330
    ]
   },
   {
@@ -659,9 +685,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2640,
+    2639,
     63
    ]
   },
@@ -674,20 +700,33 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5652,
+    5651,
     63
    ]
   },
   {
    "name": "Holy Trinity Lutheran Church",
    "url": "https://www.holytrinitynyc.org/",
-   "read_url": "https://www.holytrinitynyc.org/events",
+   "read_url": "https://www.holytrinitynyc.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5452,
+    3688,
+    63
+   ]
+  },
+  {
+   "name": "Ibeam Brooklyn",
+   "url": "https://www.ibeambrooklyn.com/",
+   "read_url": "https://www.ibeambrooklyn.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "no_events_tonight",
+   "tokens": [
+    13165,
     63
    ]
   },
@@ -698,10 +737,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    12039,
-    63
+    12069,
+    59
    ]
   },
   {
@@ -711,10 +750,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "None; dropped 1× time quote not found on page",
    "tokens": [
-    7130,
-    63
+    7148,
+    287
    ]
   },
   {
@@ -742,9 +781,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    4898,
+    4897,
     63
    ]
   },
@@ -755,9 +794,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    6859,
+    6858,
     63
    ]
   },
@@ -770,7 +809,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4134,
+    4104,
     59
    ]
   },
@@ -783,21 +822,34 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2644,
+    2643,
     63
+   ]
+  },
+  {
+   "name": "Lincoln Center",
+   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× listed at another venue",
+   "tokens": [
+    10717,
+    447
    ]
   },
   {
    "name": "Littlefield",
    "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.212.164.27:1792381677.213",
+   "read_url": "https://littlefieldnyc.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar",
    "tokens": [
-    2000,
-    60
+    5259,
+    59
    ]
   },
   {
@@ -827,7 +879,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2267,
+    2266,
     63
    ]
   },
@@ -840,7 +892,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5695,
+    5694,
     63
    ]
   },
@@ -853,7 +905,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3874,
+    3873,
     63
    ]
   },
@@ -865,6 +917,19 @@
    "detail": "site can't be read; shows come from the Lincoln Center calendar"
   },
   {
+   "name": "Mezzrow",
+   "url": "https://www.smallslive.com/",
+   "read_url": "https://www.smallslive.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    18354,
+    1097
+   ]
+  },
+  {
    "name": "Miller Theatre",
    "url": "https://www.millertheatre.com/events",
    "read_url": "https://www.millertheatre.com/events?page=1",
@@ -873,7 +938,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4320,
+    4319,
     59
    ]
   },
@@ -886,7 +951,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    16958,
+    17027,
     63
    ]
   },
@@ -899,7 +964,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    19123,
+    19013,
     59
    ]
   },
@@ -910,10 +975,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    3473,
-    63
+    3472,
+    273
    ]
   },
   {
@@ -923,10 +988,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    5626,
-    59
+    5625,
+    63
    ]
   },
   {
@@ -947,7 +1012,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    9173,
+    9172,
     63
    ]
   },
@@ -960,7 +1025,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2126,
+    2125,
     63
    ]
   },
@@ -971,9 +1036,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    5476,
+    5468,
     63
    ]
   },
@@ -986,7 +1051,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8649,
+    8648,
     63
    ]
   },
@@ -999,7 +1064,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2835,
+    2834,
     63
    ]
   },
@@ -1012,7 +1077,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2779,
+    2778,
     63
    ]
   },
@@ -1034,7 +1099,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2574,
+    2573,
     63
    ]
   },
@@ -1047,7 +1112,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3567,
+    3698,
     63
    ]
   },
@@ -1060,7 +1125,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15823,
+    15822,
     59
    ]
   },
@@ -1071,9 +1136,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2249,
+    2248,
     63
    ]
   },
@@ -1086,7 +1151,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8707,
+    8706,
     59
    ]
   },
@@ -1108,8 +1173,34 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5094,
+    5097,
     63
+   ]
+  },
+  {
+   "name": "S.O.B.'s",
+   "url": "https://sobs.com/",
+   "read_url": "https://sobs.com/private-events/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "not_a_calendar",
+   "tokens": [
+    4023,
+    63
+   ]
+  },
+  {
+   "name": "Saint Thomas Church Fifth Avenue",
+   "url": "https://www.saintthomaschurch.org/",
+   "read_url": "https://www.saintthomaschurch.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× not a public performance",
+   "tokens": [
+    11544,
+    262
    ]
   },
   {
@@ -1121,34 +1212,21 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5892,
+    5877,
     63
-   ]
-  },
-  {
-   "name": "Scandinavia House",
-   "url": "https://www.scandinaviahouse.org/",
-   "read_url": "https://www.scandinaviahouse.org/event/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    10551,
-    59
    ]
   },
   {
    "name": "Scholes Street Studio",
    "url": "https://scholesstreetstudio.com/",
-   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
+   "read_url": "https://scholesstreetstudio.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "detail": "not_a_calendar",
    "tokens": [
-    3904,
-    373
+    2728,
+    63
    ]
   },
   {
@@ -1160,21 +1238,21 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5516,
+    5515,
     63
    ]
   },
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.212.164.27:1792381476.818",
+   "read_url": "https://sidgolds.com/detroit/events/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar",
    "tokens": [
-    1998,
-    60
+    7043,
+    59
    ]
   },
   {
@@ -1186,7 +1264,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    4585,
+    4584,
     63
    ]
   },
@@ -1199,7 +1277,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2015,
+    2014,
     63
    ]
   },
@@ -1212,7 +1290,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2525,
+    2524,
     63
    ]
   },
@@ -1223,10 +1301,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    9963,
-    542
+    9598,
+    242
    ]
   },
   {
@@ -1238,34 +1316,34 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3368,
+    3367,
     63
    ]
   },
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:172.212.164.27:1792381580.104",
+   "read_url": "https://www.stannholytrinity.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "no_events_tonight",
    "tokens": [
-    2008,
-    60
+    5492,
+    63
    ]
   },
   {
    "name": "St. Bartholomew's Church",
    "url": "https://stbarts.org/",
-   "read_url": "https://stbarts.org/",
+   "read_url": "https://stbarts.org/music/concerts/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 3× not a public performance",
+   "detail": "no_events_tonight",
    "tokens": [
-    5848,
-    700
+    7586,
+    63
    ]
   },
   {
@@ -1275,35 +1353,31 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    11534,
-    59
+    11533,
+    63
    ]
   },
   {
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": "AI",
-   "status": "none-tonight",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "not_a_calendar",
-   "tokens": [
-    6272,
-    63
-   ]
+   "detail": "HTTP 403"
   },
   {
    "name": "Sunnyvale",
    "url": "https://www.sunnyvalebk.com/",
-   "read_url": "https://www.sunnyvalebk.com/calendar/",
+   "read_url": "https://www.sunnyvalebk.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6012,
+    4168,
     59
    ]
   },
@@ -1316,20 +1390,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3534,
-    63
-   ]
-  },
-  {
-   "name": "Symphony Space",
-   "url": "https://www.symphonyspace.org/",
-   "read_url": "https://www.symphonyspace.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "no_events_tonight",
-   "tokens": [
-    8049,
+    3533,
     63
    ]
   },
@@ -1342,7 +1403,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2760,
+    2759,
     63
    ]
   },
@@ -1355,7 +1416,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    16505,
+    16408,
     59
    ]
   },
@@ -1368,7 +1429,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4147,
+    4146,
     59
    ]
   },
@@ -1399,7 +1460,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2212,
+    2211,
     63
    ]
   },
@@ -1419,9 +1480,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2191,
+    2190,
     63
    ]
   },
@@ -1434,7 +1495,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2756,
+    2755,
     63
    ]
   },
@@ -1445,10 +1506,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    13332,
-    166
+    13331,
+    59
    ]
   },
   {
@@ -1458,9 +1519,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    8830,
+    8829,
     63
    ]
   },
@@ -1498,11 +1559,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2975,
+    2974,
     63
    ]
+  },
+  {
+   "name": "The Riverside Church",
+   "url": "https://www.trcnyc.org/",
+   "read_url": "https://www.trcnyc.org/music/",
+   "method": "WordPress calendar",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "The Shed",
@@ -1513,7 +1583,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5361,
+    5512,
     63
    ]
   },
@@ -1526,7 +1596,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2447,
+    2446,
     63
    ]
   },
@@ -1537,10 +1607,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "no_events_tonight; dropped 1× date quote is not tonight",
    "tokens": [
-    6318,
-    63
+    6317,
+    330
    ]
   },
   {
@@ -1552,7 +1622,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12317,
+    12316,
     63
    ]
   },
@@ -1565,7 +1635,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12703,
+    12702,
     59
    ]
   },
@@ -1579,42 +1649,16 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Union Hall",
-   "url": "https://www.unionhallny.com/",
-   "read_url": "https://unionhallny.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    16426,
-    59
-   ]
-  },
-  {
-   "name": "Union Pool",
-   "url": "https://www.union-pool.com/",
-   "read_url": "https://www.union-pool.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "not_a_calendar",
-   "tokens": [
-    2309,
-    63
-   ]
-  },
-  {
    "name": "Village Vanguard",
    "url": "https://villagevanguard.com/",
    "read_url": "https://villagevanguard.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    4325,
-    279
+    4324,
+    164
    ]
   },
   {
@@ -1626,44 +1670,44 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2130,
+    2129,
     63
    ]
   },
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:172.212.164.27:1792381416.999",
+   "read_url": "https://www.zincbar.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    1993,
-    60
+    3899,
+    270
    ]
   },
   {
-   "name": "54 Below",
-   "url": "https://54below.org/",
-   "read_url": "https://54below.org/calendar/",
+   "name": "Alphaville",
+   "url": "https://www.alphavillebk.com/",
+   "read_url": "https://www.alphavillebk.com/",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": "left out 1 non-performance listing"
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
    "method": "AI",
    "status": "ok",
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11866,
-    468
+    15052,
+    616
    ]
-  },
-  {
-   "name": "Bargemusic",
-   "url": "https://www.bargemusic.org/",
-   "read_url": "https://www.bargemusic.org/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 1,
-   "detail": null
   },
   {
    "name": "Birdland",
@@ -1674,86 +1718,34 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    7748,
-    1203
+    7064,
+    1147
    ]
   },
   {
-   "name": "Bowery Ballroom",
-   "url": "https://www.boweryballroom.com/",
-   "read_url": "https://mercuryeastpresents.com/boweryballroom/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    8941,
-    271
-   ]
-  },
-  {
-   "name": "Cathedral of St. John the Divine",
-   "url": "https://www.stjohndivine.org/",
-   "read_url": "https://www.stjohndivine.org/",
+   "name": "Brooklyn Bowl",
+   "url": "https://www.brooklynbowl.com/brooklyn",
+   "read_url": "https://www.brooklynbowl.com/brooklyn",
    "method": "AI",
    "status": "ok",
    "shows": 1,
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    8486,
-    413
+    13107,
+    539
    ]
   },
   {
-   "name": "Chamber Music Society of Lincoln Center",
-   "url": "https://www.chambermusicsociety.org/",
-   "read_url": "https://www.chambermusicsociety.org/",
+   "name": "Carnegie Hall",
+   "url": "https://www.carnegiehall.org/Calendar",
+   "read_url": "https://www.carnegiehall.org/events",
    "method": "AI",
    "status": "ok",
-   "shows": 4,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    12218,
-    1020
-   ]
-  },
-  {
-   "name": "Drom",
-   "url": "https://www.dromnyc.com/",
-   "read_url": "https://dromnyc.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    5476,
-    240
-   ]
-  },
-  {
-   "name": "Ibeam Brooklyn",
-   "url": "https://www.ibeambrooklyn.com/",
-   "read_url": "https://www.ibeambrooklyn.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 3,
-   "detail": "calendar",
-   "tokens": [
-    13911,
-    749
-   ]
-  },
-  {
-   "name": "Lincoln Center",
-   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "method": "AI",
-   "status": "ok",
-   "shows": 8,
-   "detail": "calendar",
-   "tokens": [
-    10664,
-    1737
+    7666,
+    477
    ]
   },
   {
@@ -1765,21 +1757,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8537,
-    470
-   ]
-  },
-  {
-   "name": "Mezzrow",
-   "url": "https://www.smallslive.com/",
-   "read_url": "https://www.smallslive.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 4,
-   "detail": "calendar",
-   "tokens": [
-    18586,
-    965
+    8686,
+    483
    ]
   },
   {
@@ -1791,60 +1770,39 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    5489,
-    481
-   ]
-  },
-  {
-   "name": "S.O.B.'s",
-   "url": "https://sobs.com/",
-   "read_url": "https://sobs.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    7452,
-    242
+    5346,
+    623
    ]
   },
   {
    "name": "Saint Peter's Church",
    "url": "https://www.saintpeters.org/",
-   "read_url": "https://www.saintpeters.org/events",
-   "method": "AI",
+   "read_url": "https://www.saintpeters.org/",
+   "method": "event data",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    17873,
-    294
-   ]
+   "detail": "left out 1 non-performance listing"
   },
   {
-   "name": "Saint Thomas Church Fifth Avenue",
-   "url": "https://www.saintthomaschurch.org/",
-   "read_url": "https://www.saintthomaschurch.org/",
-   "method": "AI",
+   "name": "Scandinavia House",
+   "url": "https://www.scandinaviahouse.org/",
+   "read_url": "https://www.scandinaviahouse.org/",
+   "method": "WordPress calendar",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    11573,
-    304
-   ]
+   "detail": null
   },
   {
    "name": "Silvana",
    "url": "https://www.silvana-nyc.com/",
-   "read_url": "https://www.silvana-nyc.com/musiccalendar",
+   "read_url": "https://www.silvana-nyc.com/",
    "method": "AI",
    "status": "ok",
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    7151,
-    561
+    10448,
+    618
    ]
   },
   {
@@ -1853,11 +1811,24 @@
    "read_url": "https://www.smallslive.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 6,
+   "shows": 5,
    "detail": "calendar",
    "tokens": [
-    18588,
-    1440
+    18356,
+    1338
+   ]
+  },
+  {
+   "name": "Symphony Space",
+   "url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    8048,
+    506
    ]
   },
   {
@@ -1869,8 +1840,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    17248,
-    506
+    17838,
+    499
    ]
   },
   {
@@ -1888,18 +1859,31 @@
    "read_url": "https://bitterend.com/#/events",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
-    15259,
-    463
+    15043,
+    583
    ]
   },
   {
-   "name": "The Riverside Church",
-   "url": "https://www.trcnyc.org/",
-   "read_url": "https://www.trcnyc.org/",
-   "method": "WordPress calendar",
+   "name": "Union Hall",
+   "url": "https://www.unionhallny.com/",
+   "read_url": "https://unionhallny.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    16425,
+    289
+   ]
+  },
+  {
+   "name": "Union Pool",
+   "url": "https://www.union-pool.com/",
+   "read_url": "https://www.union-pool.com/calendar",
+   "method": "event data",
    "status": "ok",
    "shows": 1,
    "detail": null
@@ -1907,14 +1891,14 @@
   {
    "name": "Wonderville",
    "url": "https://www.wonderville.nyc/",
-   "read_url": "https://www.wonderville.nyc/events",
+   "read_url": "https://www.wonderville.nyc/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× not a public performance",
+   "shows": 2,
+   "detail": "calendar",
    "tokens": [
-    10312,
-    692
+    4974,
+    570
    ]
   }
  ]
