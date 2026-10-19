@@ -20,7 +20,6 @@ import urllib.request
 from datetime import date, timedelta
 
 from common import ROLLOVER_HOUR, clock_from_minutes, norm, parse_clock
-from shows import same_place
 from browse import DAYS, MONTHS, Snapshot, tonight_pattern
 from genres import GENRES
 
@@ -66,11 +65,15 @@ TOOL = {
                         "venue_shown": {"type": ["string", "null"],
                                         "description": "The venue name the page shows for this event, copied exactly, "
                                                        "or null if the page doesn't name a venue for each event."},
+                        "at_this_venue": {"type": "boolean",
+                                          "description": "True if the event is at the named venue, including any of its own "
+                                                         "rooms, stages or halls. False if it is at a different venue or "
+                                                         "in another city."},
                         "public_performance": {"type": "boolean",
                                                "description": "False for private events, classes, tours, closures, brunch or dining."},
                     },
                     "required": ["title", "start_time", "date_evidence", "time_evidence", "genre", "venue_shown",
-                                 "public_performance"],
+                                 "at_this_venue", "public_performance"],
                 },
             },
         },
@@ -86,7 +89,8 @@ Rules:
 - Each separate set or performance time is its own event (e.g. 7:30 PM and 9:30 PM sets are two events).
 - Copy titles, names, times and prices exactly as written. date_evidence and time_evidence must be exact text copied from the page.
 - Only report events at the named venue. Promoter and ticketing pages often list shows at other venues and in
-  other cities: skip every event whose listed venue is not the named venue, and copy the listed venue into venue_shown.
+  other cities: skip every event whose listed venue is not the named venue (its own rooms, stages and halls count
+  as the named venue), and copy the listed venue into venue_shown.
 - Write descriptions in your own words (max 25 words). Do not copy sentences from the page.
 - If the page shows nothing for that night, return an empty events list with the right page_kind."""
 
@@ -233,7 +237,8 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     if words and (not present or (len(words) >= 3 and len(present) < len(words) / 2)):
         return None, "title not on page"
     shown = (raw.get("venue_shown") or "").strip()
-    if shown and same_place(venue, shown, None) is False:
+    state = re.search(r",\s*([A-Z]{2})\b", shown)
+    if raw.get("at_this_venue") is False or (state and state.group(1) != "NY"):
         return None, "listed at another venue"
     anchor = _squash(title) if _squash(title) in page else max(present or [""], key=len)
     if anchor and not near(page, anchor, _squash(te), 2500):
