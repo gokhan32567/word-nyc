@@ -160,7 +160,10 @@ def _date_regex(d: date) -> re.Pattern:
 
 def which_night(evidence: str, night: date) -> str | None:
     """'tonight' if the quote names tonight's date, 'next' if tomorrow's, else None."""
-    if re.search(r"\b(today|tonight)\b", evidence, re.I) or _date_regex(night).search(evidence):
+    from datetime import datetime
+    from common import NY
+    relative_ok = datetime.now(NY).date() == night
+    if (relative_ok and re.search(r"\b(today|tonight)\b", evidence, re.I)) or _date_regex(night).search(evidence):
         return "tonight"
     if _date_regex(night + timedelta(days=1)).search(evidence):
         return "next"
@@ -311,6 +314,17 @@ def call_claude(api_key: str, prompt: str, max_tokens: int = 3000) -> tuple[dict
     raise AIError("API kept failing")
 
 
+def loaded_note(night: date) -> str:
+    """Pages often say 'Today 8:00 PM' with no date; tell the model what 'today' means."""
+    from datetime import datetime
+    from common import NY
+    today = datetime.now(NY).date()
+    if today == night:
+        return ("The page was loaded on that same day in New York, so 'Today' or 'Tonight' on the page means "
+                "the night to report; quote that word as date_evidence.")
+    return "The page was not loaded on that day, so ignore 'Today' and 'Tonight' on the page."
+ 
+
 def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[list[dict], dict]:
     page_excerpt = excerpt(snap.text, night)
     links = link_list(snap, page_excerpt)
@@ -320,7 +334,8 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
     prompt = (
         f"Venue: {venue['name']} ({venue.get('address', 'New York')})\n"
         f"Page: {snap.final_url or snap.url}\n"
-        f"Night to report: {nice} (from 5 AM that day until 5 AM the next morning){note}\n\n"
+        f"Night to report: {nice} (from 5 AM that day until 5 AM the next morning){note}\n"
+        f"{loaded_note(night)}\n\n"
         f"PAGE TEXT:\n<<<\n{page_excerpt}\n>>>\n\n"
         "LINKS (number: text -> url):\n" +
         "\n".join(f"{i}: {ln['text'][:70]} -> {ln['href'][:160]}" for i, ln in enumerate(links))
