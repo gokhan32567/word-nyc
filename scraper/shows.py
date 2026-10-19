@@ -15,7 +15,8 @@ HARD = re.compile(
     r"info(rmation)? sessions?|open house|orientation|registration|meetings?|volunteers?|service project|"
     r"care packages?|support group|yoga|meditation|tai chi|fitness|pottery|ceramics|carving|crafts?|trivia|"
     r"bingo|karaoke|brunch|screenings?|rehearsals?|auditions?|office hours|formation|parking|"
-    r"guided tours?|walking tours?|house tours?|building tours?|garden tours?|tours? of|private event|"
+    r"guided tours?|walking tours?|house tours?|building tours?|garden tours?|historical tours?|history tours?|"
+    r"heritage tours?|museum tours?|campus tours?|tours? of|private event|"
     r"closed to the public|members only)\b", re.I)
 
 # Usually not a show unless the title also names a performance.
@@ -36,7 +37,7 @@ SHOW = re.compile(
 # Multi-purpose places whose calendars are mostly not performances: an entry needs a performance word.
 STRICT_VENUE = re.compile(r"church|cathedral|chapel|synagogue|temple|parish|abbey|basilica|holy|school|"
                           r"universit|college|conservatory|juilliard|institute|museum|library|armory|"
-                          r"americas society|asia society|japan society|community|ymca|92ny|greenwich house", re.I)
+                          r"americas society|asia society|japan society|community|cultural cent|ymca|92ny|greenwich house", re.I)
 
 
 def is_strict(venue: dict) -> bool:

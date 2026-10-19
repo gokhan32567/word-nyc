@@ -20,6 +20,7 @@ import urllib.request
 from datetime import date, timedelta
 
 from common import ROLLOVER_HOUR, clock_from_minutes, norm, parse_clock
+from shows import same_place
 from browse import DAYS, MONTHS, Snapshot, tonight_pattern
 from genres import GENRES
 
@@ -62,10 +63,14 @@ TOOL = {
                                         "description": "At most 25 words in your own words. Factual, no hype, no copied sentences."},
                         "link_number": {"type": ["integer", "null"],
                                         "description": "Number of the link for this event's page or tickets, from the LINKS list."},
+                        "venue_shown": {"type": ["string", "null"],
+                                        "description": "The venue name the page shows for this event, copied exactly, "
+                                                       "or null if the page doesn't name a venue for each event."},
                         "public_performance": {"type": "boolean",
                                                "description": "False for private events, classes, tours, closures, brunch or dining."},
                     },
-                    "required": ["title", "start_time", "date_evidence", "time_evidence", "genre", "public_performance"],
+                    "required": ["title", "start_time", "date_evidence", "time_evidence", "genre", "venue_shown",
+                                 "public_performance"],
                 },
             },
         },
@@ -80,7 +85,8 @@ Rules:
 - Late sets after midnight that belong to the requested night count (the night runs until 5 AM).
 - Each separate set or performance time is its own event (e.g. 7:30 PM and 9:30 PM sets are two events).
 - Copy titles, names, times and prices exactly as written. date_evidence and time_evidence must be exact text copied from the page.
-- Only report events at the named venue. If the page lists several venues, ignore the others.
+- Only report events at the named venue. Promoter and ticketing pages often list shows at other venues and in
+  other cities: skip every event whose listed venue is not the named venue, and copy the listed venue into venue_shown.
 - Write descriptions in your own words (max 25 words). Do not copy sentences from the page.
 - If the page shows nothing for that night, return an empty events list with the right page_kind."""
 
@@ -199,6 +205,13 @@ def copied_phrase(desc: str, page_words: str, n: int = 8) -> bool:
     return any(" ".join(words[i:i + n]) in page_words for i in range(0, max(0, len(words) - n + 1)))
 
 
+def near(page: str, a: str, b: str, span: int) -> bool:
+    """True if some occurrence of a is within span characters of some occurrence of b."""
+    pa = [m.start() for m in re.finditer(re.escape(a), page)][:200]
+    pb = [m.start() for m in re.finditer(re.escape(b), page)][:200]
+    return any(abs(x - y) <= span for x in pa for y in pb)
+
+
 def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict, page: str, page_norm: str) -> tuple[dict | None, str]:
     title = (raw.get("title") or "").strip()
     if not raw.get("public_performance", True) or not title or GENERIC.match(title):
@@ -219,6 +232,12 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     present = [w for w in words if w in page]
     if words and (not present or (len(words) >= 3 and len(present) < len(words) / 2)):
         return None, "title not on page"
+    shown = (raw.get("venue_shown") or "").strip()
+    if shown and same_place(venue, shown, None) is False:
+        return None, "listed at another venue"
+    anchor = _squash(title) if _squash(title) in page else max(present or [""], key=len)
+    if anchor and not near(page, anchor, _squash(te), 2500):
+        return None, "time quote is far from the title"
     page_words = " ".join(WORD.findall(page))
 
     performers = [p.strip() for p in raw.get("performers") or [] if p.strip() and norm(p) and norm(p) in page_norm]
