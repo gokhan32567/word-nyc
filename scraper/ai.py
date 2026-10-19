@@ -329,7 +329,16 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
     page = _squash(snap.text)
     page_norm = norm(snap.text)
     kept, reasons = [], {}
-    for raw in answer.get("events") or []:
+    events = answer.get("events") or []
+    if isinstance(events, str):  # the model occasionally sends the list as a JSON string
+        try:
+            events = json.loads(events)
+        except ValueError:
+            events = []
+    if isinstance(events, dict):
+        events = [events]
+    answer["events"] = events = [e for e in events if isinstance(e, dict)] if isinstance(events, list) else []
+    for raw in events:
         ev, why = check(raw, snap, links, night, venue, page, page_norm)
         if ev:
             kept.append(ev)

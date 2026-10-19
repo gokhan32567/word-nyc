@@ -113,6 +113,16 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
     return found, row
 
 
+def safe_read(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[list[dict], dict]:
+    """One venue's problem must never stop the whole lineup."""
+    try:
+        return read_venue(v, snap, night, ai_key, eb_token)
+    except Exception as e:  # noqa: BLE001
+        log(f"  {v['name']}: FAILED {type(e).__name__}: {str(e)[:160]}")
+        return [], {"name": v["name"], "url": v["url"], "read_url": None, "method": None, "status": "error",
+                    "shows": 0, "detail": f"{type(e).__name__}: {str(e)[:160]}"}
+
+
 def assign_presenter(e: dict, targets: dict) -> dict | None:
     who = norm(e.get("_presenter") or "")
     for org, t in targets.items():
@@ -302,7 +312,7 @@ def main() -> int:
         snaps = browse.snapshot_all(placed, night)
         results: list[tuple[list[dict], dict]] = []
         with ThreadPoolExecutor(max_workers=4) as pool:
-            results = list(pool.map(lambda v: read_venue(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
+            results = list(pool.map(lambda v: safe_read(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
         for (found, row), v in zip(results, placed):
             log(f"  {v['name']}: {row['status']} {row['shows']} {row.get('method') or ''} {row.get('detail') or ''}".rstrip())
             collected += found
