@@ -89,7 +89,8 @@ jobs:
           git reset --quiet --hard origin/main
           cp "$out"/events.json "$out"/coverage.json .
           [ -f "$out"/geocache.json ] && cp "$out"/geocache.json scraper/
-          git add events.json coverage.json
+          python scraper/pages.py
+          git add events.json coverage.json sitemap.xml tonight venues
           [ -f scraper/geocache.json ] && git add scraper/geocache.json
           if git diff --cached --quiet; then
             echo "No changes."

@@ -5,6 +5,8 @@ A live map of tonight's music shows in New York. The lineup refreshes automatica
 - `index.html`: the whole site (map, list, genre filters, show details, story-graphic sharing)
 - `submit.html`: "Submit a show" form for artists and venues (also brings in sponsorship leads)
 - `coverage.html`: the daily venue coverage report (not linked from the site, not indexed)
+- `tonight/`, `venues/`, `sitemap.xml`: search pages rebuilt every morning by `scraper/pages.py` (all shows, one page per
+  genre, one per venue, with schema.org Event data for Google's event listings); `listing.css` styles them
 - `advertise.html`, `privacy.html`, `page.css`: the Advertise and Privacy pages
 - `events.json`: tonight's lineup, rewritten each morning by the workflow
 - `coverage.json`: what each venue produced this morning

@@ -8,6 +8,14 @@
   <meta name="theme-color" content="#0d1230">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
   <link rel="stylesheet" href="page.css">
+  <style>
+    .rates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 10px; }
+    .rate { padding: 16px 16px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--ink-2); }
+    .rate p { margin: 0 0 6px; font-size: 14.5px; }
+    .rname { color: var(--paper) !important; font-weight: 600; }
+    .price { font: 800 36px/1 var(--display); color: var(--gold) !important; margin: 4px 0 10px !important; }
+    @media (max-width: 600px) { .rates { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
   <main class="wrap">
@@ -24,6 +32,14 @@
       <li>Your own ticket link, show photo, program and description in the show's details.</li>
     </ul>
 
+    <h2>Rates</h2>
+    <div class="rates">
+      <div class="rate"><p class="rname">One night</p><p class="price">$25</p><p>Top of the map and list for one night, highlighted pin, first in the share graphic.</p></div>
+      <div class="rate"><p class="rname">One week</p><p class="price">$99</p><p>Seven nights in a row, plus the top of your genre's page (for example Jazz tonight).</p></div>
+      <div class="rate"><p class="rname">One month</p><p class="price">$299</p><p>Every show you have that month featured, on the map, the list and your genre's page.</p></div>
+    </div>
+    <p class="small">Introductory rates. First night free for new venues. Festivals, series and multi-venue promoters: ask about a package.</p>
+
     <h2>Who it's for</h2>
     <p>Venues, promoters, festivals, ensembles and artists with a show in New York City.</p>
 
@@ -32,7 +48,7 @@
       <p>To book dates or ask for rates, email</p>
       <p class="email" id="email">advertise@word-nyc.com</p>
       <p><button class="btn" type="button" id="copy">Copy email address</button></p>
-      <p class="small">Include the show, venue, dates and a ticket link.</p>
+      <p class="small">Include the show, venue, dates and a ticket link. You can also <a href="submit.html">submit a show</a> for a free listing.</p>
     </div>
 
     <footer>
