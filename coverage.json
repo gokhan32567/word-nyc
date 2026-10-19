@@ -1,9 +1,9 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T23:04:17-04:00",
+ "generated": "2026-10-18T23:12:25-04:00",
  "totals": {
   "venues": 153,
-  "shows": 58,
+  "shows": 63,
   "ok": 22,
   "none-tonight": 111,
   "blocked": 14,
@@ -13,15 +13,15 @@
   "skipped": 2
  },
  "shows_by_source": {
+  "venue-ai": 45,
   "ticketmaster": 24,
-  "venue-ai": 40,
   "venue-data": 3
  },
  "ai": {
-  "calls": 129,
-  "input_tokens": 885755,
-  "output_tokens": 21694,
-  "cost_usd": 0.0994
+  "calls": 128,
+  "input_tokens": 898361,
+  "output_tokens": 23524,
+  "cost_usd": 0.1016
  },
  "venues": [
   {
@@ -33,7 +33,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    10805,
+    10807,
     63
    ]
   },
@@ -72,7 +72,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    10721,
+    10713,
     63
    ]
   },
@@ -142,19 +142,6 @@
    ]
   },
   {
-   "name": "BAM",
-   "url": "https://www.bam.org/",
-   "read_url": "https://www.bam.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    8170,
-    186
-   ]
-  },
-  {
    "name": "Bar Bayeux",
    "url": "https://www.barbayeux.com/",
    "read_url": "https://www.barbayeux.com/",
@@ -165,6 +152,19 @@
    "tokens": [
     2117,
     63
+   ]
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× date quote not found on page",
+   "tokens": [
+    15194,
+    609
    ]
   },
   {
@@ -183,14 +183,14 @@
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:172.184.210.212:1792378837.699",
+   "read_url": "https://baryshnikovarts.org/explore/performance-history/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "not_a_calendar",
    "tokens": [
-    2001,
-    60
+    6503,
+    63
    ]
   },
   {
@@ -237,8 +237,8 @@
    "shows": 0,
    "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
-    8247,
-    496
+    8240,
+    472
    ]
   },
   {
@@ -355,7 +355,7 @@
    "detail": "calendar; dropped 2× start time not in time quote",
    "tokens": [
     9925,
-    436
+    456
    ]
   },
   {
@@ -404,10 +404,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× date quote not found on page, 2× not a public performance",
+   "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
     5356,
-    769
+    675
    ]
   },
   {
@@ -488,7 +488,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     9880,
-    249
+    264
    ]
   },
   {
@@ -535,7 +535,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3846,
+    3852,
     63
    ]
   },
@@ -549,7 +549,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     5766,
-    234
+    229
    ]
   },
   {
@@ -572,10 +572,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     4324,
-    59
+    63
    ]
   },
   {
@@ -614,7 +614,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     3930,
-    259
+    229
    ]
   },
   {
@@ -633,10 +633,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× not a public performance",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     10202,
-    615
+    289
    ]
   },
   {
@@ -646,7 +646,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2640,
     63
@@ -685,10 +685,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    12070,
-    63
+    12039,
+    59
    ]
   },
   {
@@ -742,9 +742,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    6890,
+    6859,
     63
    ]
   },
@@ -790,14 +790,14 @@
   {
    "name": "Littlefield",
    "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.184.210.212:1792378922.971",
+   "read_url": "https://littlefieldnyc.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar",
    "tokens": [
-    2000,
-    60
+    5260,
+    59
    ]
   },
   {
@@ -897,10 +897,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    19277,
-    137
+    19159,
+    59
    ]
   },
   {
@@ -923,10 +923,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    5833,
-    63
+    5892,
+    59
    ]
   },
   {
@@ -1010,7 +1010,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2779,
     63
@@ -1132,10 +1132,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     10551,
-    63
+    59
    ]
   },
   {
@@ -1145,10 +1145,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
     3904,
-    195
+    399
    ]
   },
   {
@@ -1167,14 +1167,14 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.184.210.212:1792378703.274",
+   "read_url": "https://sidgolds.com/detroit/events/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "not_a_calendar",
    "tokens": [
-    1998,
-    60
+    7044,
+    63
    ]
   },
   {
@@ -1210,7 +1210,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2525,
     63
@@ -1226,7 +1226,7 @@
    "detail": "calendar",
    "tokens": [
     9963,
-    554
+    557
    ]
   },
   {
@@ -1245,15 +1245,11 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:172.184.210.212:1792378809.844",
-   "method": "AI",
+   "read_url": "https://www.stannholytrinity.org/",
+   "method": "WordPress calendar",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
-   "tokens": [
-    2008,
-    60
-   ]
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "St. Bartholomew's Church",
@@ -1262,10 +1258,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× start time not in time quote, 2× not a public performance",
    "tokens": [
     5848,
-    249
+    692
    ]
   },
   {
@@ -1349,10 +1345,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
-    16567,
-    63
+    16485,
+    197
    ]
   },
   {
@@ -1444,7 +1440,7 @@
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     13332,
-    378
+    244
    ]
   },
   {
@@ -1559,10 +1555,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    12696,
-    59
+    12698,
+    63
    ]
   },
   {
@@ -1596,7 +1592,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2289,
+    2309,
     63
    ]
   },
@@ -1607,10 +1603,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "None; dropped 1× not a public performance",
    "tokens": [
     4325,
-    269
+    281
    ]
   },
   {
@@ -1629,14 +1625,14 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.184.210.212:1792378638.375",
+   "read_url": "https://www.zincbar.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    1993,
-    60
+    3904,
+    230
    ]
   },
   {
@@ -1646,23 +1642,23 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
-    11808,
-    466
+    11866,
+    690
    ]
   },
   {
-   "name": "Bar LunÀtico",
-   "url": "https://www.barlunatico.com/",
-   "read_url": "https://www.barlunatico.com/music",
+   "name": "BAM",
+   "url": "https://www.bam.org/",
+   "read_url": "https://www.bam.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    15194,
-    634
+    8170,
+    500
    ]
   },
   {
@@ -1684,7 +1680,7 @@
    "detail": "calendar",
    "tokens": [
     7748,
-    1208
+    1233
    ]
   },
   {
@@ -1697,7 +1693,7 @@
    "detail": "calendar",
    "tokens": [
     8941,
-    257
+    277
    ]
   },
   {
@@ -1710,7 +1706,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     8486,
-    421
+    420
    ]
   },
   {
@@ -1719,11 +1715,11 @@
    "read_url": "https://www.chambermusicsociety.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 4,
    "detail": "calendar",
    "tokens": [
     12218,
-    305
+    1033
    ]
   },
   {
@@ -1736,7 +1732,7 @@
    "detail": "calendar",
    "tokens": [
     5476,
-    241
+    255
    ]
   },
   {
@@ -1749,7 +1745,7 @@
    "detail": "calendar",
    "tokens": [
     13911,
-    753
+    762
    ]
   },
   {
@@ -1762,7 +1758,7 @@
    "detail": "calendar",
    "tokens": [
     8652,
-    472
+    445
    ]
   },
   {
@@ -1775,7 +1771,7 @@
    "detail": "calendar",
    "tokens": [
     18586,
-    963
+    1033
    ]
   },
   {
@@ -1788,7 +1784,7 @@
    "detail": "calendar",
    "tokens": [
     5489,
-    531
+    509
    ]
   },
   {
@@ -1801,7 +1797,7 @@
    "detail": "calendar",
    "tokens": [
     7452,
-    234
+    241
    ]
   },
   {
@@ -1814,7 +1810,7 @@
    "detail": "calendar",
    "tokens": [
     17873,
-    299
+    261
    ]
   },
   {
@@ -1823,11 +1819,11 @@
    "read_url": "https://www.saintthomaschurch.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11573,
-    303
+    11598,
+    509
    ]
   },
   {
@@ -1840,7 +1836,7 @@
    "detail": "calendar",
    "tokens": [
     7151,
-    561
+    597
    ]
   },
   {
@@ -1853,7 +1849,7 @@
    "detail": "calendar",
    "tokens": [
     18588,
-    1490
+    1481
    ]
   },
   {
@@ -1866,7 +1862,7 @@
    "detail": "calendar",
    "tokens": [
     17248,
-    455
+    480
    ]
   },
   {
@@ -1888,7 +1884,7 @@
    "detail": "calendar",
    "tokens": [
     15259,
-    428
+    437
    ]
   },
   {
@@ -1910,7 +1906,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     10312,
-    681
+    695
    ]
   }
  ]
