@@ -122,7 +122,10 @@ Add an entry to `scraper/venues.json`:
 - `genre`: used when the page doesn't say. Any label works; it's grouped by `scraper/genres.py`.
 - Optional: `lat`/`lng` (otherwise the address is looked up once on OpenStreetMap and cached in
   `scraper/geocache.json`), `ical` (feed URL), `eventbrite` (organizer id), `method: "tribe"` (force the
-  WordPress calendar API), `note` (an instruction for the AI reader, e.g. "Only concerts in the Sanctuary").
+  WordPress calendar API), `note` (an instruction for the AI reader, e.g. "Only concerts in the Sanctuary"), `strict` (true/false: whether
+  titles need a performance word), `narrow: true` (read the page at phone width), `via` (don't read this site; its
+  shows come from another entry's calendar), `presenters` (a campus calendar: maps each presenting organization to
+  the venue entry its shows go to; see the Lincoln Center entry).
 
 ### Coverage report
 

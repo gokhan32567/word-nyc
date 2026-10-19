@@ -150,7 +150,8 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
             snap.error = "robots.txt asks automated readers not to visit this page"
             return snap
         ctx = await browser.new_context(user_agent=BROWSER_UA, locale="en-US", timezone_id="America/New_York",
-                                        viewport={"width": 1280, "height": 1600}, ignore_https_errors=True)
+                                        viewport={"width": 400, "height": 1600} if venue.get("narrow")
+                                        else {"width": 1280, "height": 1600}, ignore_https_errors=True)
         try:
             page = await ctx.new_page()
 
