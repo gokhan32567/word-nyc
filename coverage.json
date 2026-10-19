@@ -1,9 +1,9 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T23:21:29-04:00",
+ "generated": "2026-10-18T23:31:12-04:00",
  "totals": {
   "venues": 153,
-  "shows": 73,
+  "shows": 66,
   "ok": 23,
   "none-tonight": 110,
   "blocked": 14,
@@ -13,15 +13,15 @@
   "skipped": 2
  },
  "shows_by_source": {
-  "venue-ai": 54,
+  "venue-ai": 48,
   "ticketmaster": 24,
   "venue-data": 3
  },
  "ai": {
   "calls": 129,
-  "input_tokens": 885600,
-  "output_tokens": 26889,
-  "cost_usd": 0.102
+  "input_tokens": 892633,
+  "output_tokens": 24789,
+  "cost_usd": 0.1017
  },
  "venues": [
   {
@@ -44,10 +44,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     4498,
-    59
+    63
    ]
   },
   {
@@ -142,6 +142,19 @@
    ]
   },
   {
+   "name": "BAM",
+   "url": "https://www.bam.org/",
+   "read_url": "https://www.bam.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× listed at another venue",
+   "tokens": [
+    8170,
+    341
+   ]
+  },
+  {
    "name": "Bar Bayeux",
    "url": "https://www.barbayeux.com/",
    "read_url": "https://www.barbayeux.com/",
@@ -152,6 +165,19 @@
    "tokens": [
     2117,
     63
+   ]
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× date quote not found on page",
+   "tokens": [
+    15194,
+    600
    ]
   },
   {
@@ -170,14 +196,14 @@
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:135.119.77.148:1792379860.163",
+   "read_url": "https://baryshnikovarts.org/explore/performance-history/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "not_a_calendar",
    "tokens": [
-    2001,
-    60
+    6564,
+    63
    ]
   },
   {
@@ -222,10 +248,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× date quote is not tonight",
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     8240,
-    490
+    270
    ]
   },
   {
@@ -326,7 +352,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     3299,
     63
@@ -339,10 +365,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× time quote not found on page",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     9925,
-    475
+    277
    ]
   },
   {
@@ -380,7 +406,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6560,
+    6300,
     63
    ]
   },
@@ -391,10 +417,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote not found on page",
+   "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
     5356,
-    492
+    655
    ]
   },
   {
@@ -472,10 +498,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "None; dropped 1× time quote not found on page",
    "tokens": [
     9880,
-    259
+    240
    ]
   },
   {
@@ -536,7 +562,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     5766,
-    229
+    239
    ]
   },
   {
@@ -546,10 +572,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     8823,
-    63
+    59
    ]
   },
   {
@@ -559,10 +585,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     4324,
-    59
+    63
    ]
   },
   {
@@ -601,7 +627,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     3930,
-    238
+    187
    ]
   },
   {
@@ -623,7 +649,7 @@
    "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
     10202,
-    635
+    668
    ]
   },
   {
@@ -659,7 +685,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5452,
     63
@@ -674,7 +700,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12039,
+    12070,
     63
    ]
   },
@@ -731,7 +757,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6890,
+    6859,
     63
    ]
   },
@@ -762,29 +788,16 @@
    ]
   },
   {
-   "name": "Lincoln Center",
-   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 9× listed at another venue",
-   "tokens": [
-    10719,
-    1721
-   ]
-  },
-  {
    "name": "Littlefield",
    "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:135.119.77.148:1792379948.046",
+   "read_url": "https://littlefieldnyc.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar",
    "tokens": [
-    2000,
-    60
+    5260,
+    59
    ]
   },
   {
@@ -912,7 +925,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5864,
+    5833,
     63
    ]
   },
@@ -1119,23 +1132,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    10551,
-    63
-   ]
-  },
-  {
-   "name": "Scholes Street Studio",
-   "url": "https://scholesstreetstudio.com/",
-   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    3904,
-    406
+    10072,
+    59
    ]
   },
   {
@@ -1154,7 +1154,7 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:135.119.77.148:1792379752.620",
+   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:172.212.206.114:1792380336.489",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
@@ -1197,7 +1197,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     2525,
     63
@@ -1210,10 +1210,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     9963,
-    567
+    730
    ]
   },
   {
@@ -1232,7 +1232,7 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:135.119.77.148:1792379849.106",
+   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:172.212.206.114:1792380434.002",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
@@ -1252,7 +1252,7 @@
    "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
     5848,
-    418
+    419
    ]
   },
   {
@@ -1339,7 +1339,7 @@
    "detail": "None; dropped 1× start time not in time quote",
    "tokens": [
     16505,
-    163
+    164
    ]
   },
   {
@@ -1402,7 +1402,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2191,
     63
@@ -1415,7 +1415,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2756,
     63
@@ -1428,10 +1428,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     13332,
-    157
+    243
    ]
   },
   {
@@ -1494,7 +1494,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     5361,
     63
@@ -1583,7 +1583,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2309,
+    2289,
     63
    ]
   },
@@ -1594,10 +1594,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     4325,
-    272
+    276
    ]
   },
   {
@@ -1616,7 +1616,7 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:135.119.77.148:1792379693.147",
+   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:172.212.206.114:1792380287.195",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
@@ -1632,37 +1632,11 @@
    "read_url": "https://54below.org/calendar/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
     11866,
-    464
-   ]
-  },
-  {
-   "name": "BAM",
-   "url": "https://www.bam.org/",
-   "read_url": "https://www.bam.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 10,
-   "detail": "calendar; dropped 8× time quote not found on page",
-   "tokens": [
-    8170,
-    2844
-   ]
-  },
-  {
-   "name": "Bar LunÀtico",
-   "url": "https://www.barlunatico.com/",
-   "read_url": "https://www.barlunatico.com/music",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
-   "tokens": [
-    15194,
-    653
+    691
    ]
   },
   {
@@ -1684,7 +1658,7 @@
    "detail": "calendar",
    "tokens": [
     7748,
-    1257
+    1217
    ]
   },
   {
@@ -1697,7 +1671,7 @@
    "detail": "calendar",
    "tokens": [
     8941,
-    268
+    285
    ]
   },
   {
@@ -1707,10 +1681,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
     8486,
-    421
+    407
    ]
   },
   {
@@ -1723,7 +1697,7 @@
    "detail": "calendar",
    "tokens": [
     12218,
-    1009
+    1071
    ]
   },
   {
@@ -1736,7 +1710,7 @@
    "detail": "calendar",
    "tokens": [
     5476,
-    253
+    255
    ]
   },
   {
@@ -1745,11 +1719,24 @@
    "read_url": "https://www.ibeambrooklyn.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 4,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
     13911,
-    945
+    735
+   ]
+  },
+  {
+   "name": "Lincoln Center",
+   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "method": "AI",
+   "status": "ok",
+   "shows": 8,
+   "detail": "calendar; dropped 1× start time not in time quote",
+   "tokens": [
+    10719,
+    1901
    ]
   },
   {
@@ -1762,7 +1749,7 @@
    "detail": "calendar",
    "tokens": [
     8652,
-    437
+    471
    ]
   },
   {
@@ -1775,7 +1762,7 @@
    "detail": "calendar",
    "tokens": [
     18586,
-    1029
+    931
    ]
   },
   {
@@ -1788,7 +1775,7 @@
    "detail": "calendar",
    "tokens": [
     5489,
-    498
+    504
    ]
   },
   {
@@ -1801,7 +1788,7 @@
    "detail": "calendar",
    "tokens": [
     7452,
-    243
+    234
    ]
   },
   {
@@ -1814,7 +1801,7 @@
    "detail": "calendar",
    "tokens": [
     17873,
-    293
+    304
    ]
   },
   {
@@ -1824,10 +1811,23 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     11598,
-    294
+    525
+   ]
+  },
+  {
+   "name": "Scholes Street Studio",
+   "url": "https://scholesstreetstudio.com/",
+   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    3904,
+    416
    ]
   },
   {
@@ -1840,7 +1840,7 @@
    "detail": "calendar",
    "tokens": [
     7151,
-    564
+    590
    ]
   },
   {
@@ -1853,7 +1853,7 @@
    "detail": "calendar",
    "tokens": [
     18588,
-    1400
+    1433
    ]
   },
   {
@@ -1866,7 +1866,7 @@
    "detail": "calendar",
    "tokens": [
     17248,
-    465
+    460
    ]
   },
   {
@@ -1884,11 +1884,11 @@
    "read_url": "https://bitterend.com/#/events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "shows": 2,
+   "detail": "calendar",
    "tokens": [
     15259,
-    431
+    450
    ]
   },
   {
@@ -1910,7 +1910,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     10312,
-    688
+    687
    ]
   }
  ]
