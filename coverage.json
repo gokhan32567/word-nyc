@@ -1,11 +1,11 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T20:13:40-04:00",
+ "generated": "2026-10-18T20:20:37-04:00",
  "totals": {
   "venues": 152,
-  "shows": 67,
-  "ok": 29,
-  "none-tonight": 103,
+  "shows": 64,
+  "ok": 28,
+  "none-tonight": 104,
   "blocked": 15,
   "error": 4,
   "robots": 1,
@@ -14,14 +14,14 @@
  },
  "shows_by_source": {
   "ticketmaster": 24,
-  "venue-ai": 45,
+  "venue-ai": 42,
   "venue-data": 7
  },
  "ai": {
   "calls": 123,
-  "input_tokens": 800333,
-  "output_tokens": 19215,
-  "cost_usd": 0.0896
+  "input_tokens": 799666,
+  "output_tokens": 18999,
+  "cost_usd": 0.0895
  },
  "venues": [
   {
@@ -222,10 +222,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
     7971,
-    208
+    412
    ]
   },
   {
@@ -342,7 +342,7 @@
    "detail": "calendar; dropped 2× time quote not found on page",
    "tokens": [
     9649,
-    387
+    391
    ]
   },
   {
@@ -391,10 +391,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× not a public performance",
+   "detail": "calendar; dropped 4× not a public performance",
    "tokens": [
     5087,
-    585
+    569
    ]
   },
   {
@@ -419,7 +419,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7859,
+    7801,
     59
    ]
   },
@@ -474,10 +474,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     9611,
-    204
+    240
    ]
   },
   {
@@ -538,7 +538,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     5497,
-    200
+    203
    ]
   },
   {
@@ -648,7 +648,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     5383,
     63
@@ -676,7 +676,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    11770,
+    11801,
     59
    ]
   },
@@ -731,7 +731,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     6590,
     63
@@ -801,7 +801,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5426,
     63
@@ -888,10 +888,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    5564,
-    63
+    5357,
+    59
    ]
   },
   {
@@ -936,7 +936,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5207,
     63
@@ -1065,19 +1065,6 @@
    ]
   },
   {
-   "name": "S.O.B.'s",
-   "url": "https://sobs.com/",
-   "read_url": "https://sobs.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
-   "tokens": [
-    7183,
-    223
-   ]
-  },
-  {
    "name": "Saint Peter's Church",
    "url": "https://www.saintpeters.org/",
    "read_url": "https://www.saintpeters.org/events",
@@ -1087,7 +1074,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     17604,
-    211
+    183
    ]
   },
   {
@@ -1100,6 +1087,19 @@
    "detail": "calendar",
    "tokens": [
     9803,
+    59
+   ]
+  },
+  {
+   "name": "Scholes Street Studio",
+   "url": "https://scholesstreetstudio.com/",
+   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    3635,
     59
    ]
   },
@@ -1200,7 +1200,7 @@
    "detail": "calendar",
    "tokens": [
     5579,
-    242
+    233
    ]
   },
   {
@@ -1254,14 +1254,14 @@
   {
    "name": "Symphony Space",
    "url": "https://www.symphonyspace.org/",
-   "read_url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    7780,
-    59
+    7383,
+    63
    ]
   },
   {
@@ -1275,6 +1275,19 @@
    "tokens": [
     2491,
     63
+   ]
+  },
+  {
+   "name": "Terminal 5",
+   "url": "https://www.terminal5nyc.com/",
+   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    16279,
+    59
    ]
   },
   {
@@ -1337,7 +1350,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     1922,
     63
@@ -1366,7 +1379,7 @@
    "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     13063,
-    147
+    139
    ]
   },
   {
@@ -1442,10 +1455,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "not_a_calendar",
    "tokens": [
     2178,
-    60
+    63
    ]
   },
   {
@@ -1455,10 +1468,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     6049,
-    59
+    63
    ]
   },
   {
@@ -1468,7 +1481,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     12048,
     63
@@ -1503,10 +1516,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     4056,
-    252
+    243
    ]
   },
   {
@@ -1519,7 +1532,7 @@
    "detail": "calendar",
    "tokens": [
     4714,
-    243
+    254
    ]
   },
   {
@@ -1532,7 +1545,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     3635,
-    214
+    211
    ]
   },
   {
@@ -1541,11 +1554,11 @@
    "read_url": "https://54below.org/calendar/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
     11681,
-    408
+    629
    ]
   },
   {
@@ -1567,7 +1580,7 @@
    "detail": "calendar",
    "tokens": [
     14925,
-    591
+    573
    ]
   },
   {
@@ -1589,7 +1602,7 @@
    "detail": "calendar",
    "tokens": [
     7374,
-    1002
+    952
    ]
   },
   {
@@ -1602,7 +1615,7 @@
    "detail": "calendar",
    "tokens": [
     8674,
-    232
+    234
    ]
   },
   {
@@ -1615,7 +1628,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     8217,
-    344
+    340
    ]
   },
   {
@@ -1628,7 +1641,7 @@
    "detail": "calendar; dropped 3× not a public performance",
    "tokens": [
     11949,
-    893
+    915
    ]
   },
   {
@@ -1641,7 +1654,7 @@
    "detail": "calendar",
    "tokens": [
     10220,
-    246
+    251
    ]
   },
   {
@@ -1654,7 +1667,7 @@
    "detail": "calendar",
    "tokens": [
     13642,
-    629
+    613
    ]
   },
   {
@@ -1667,7 +1680,7 @@
    "detail": "calendar",
    "tokens": [
     5053,
-    530
+    532
    ]
   },
   {
@@ -1680,7 +1693,7 @@
    "detail": "calendar",
    "tokens": [
     8307,
-    346
+    357
    ]
   },
   {
@@ -1689,11 +1702,11 @@
    "read_url": "https://www.smallslive.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 5,
+   "shows": 4,
    "detail": "calendar",
    "tokens": [
     18317,
-    901
+    773
    ]
   },
   {
@@ -1706,7 +1719,7 @@
    "detail": "calendar",
    "tokens": [
     5220,
-    436
+    412
    ]
   },
   {
@@ -1719,6 +1732,19 @@
    "detail": null
   },
   {
+   "name": "S.O.B.'s",
+   "url": "https://sobs.com/",
+   "read_url": "https://sobs.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    7183,
+    206
+   ]
+  },
+  {
    "name": "Saint Thomas Church Fifth Avenue",
    "url": "https://www.saintthomaschurch.org/",
    "read_url": "https://www.saintthomaschurch.org/",
@@ -1728,7 +1754,7 @@
    "detail": "calendar",
    "tokens": [
     11329,
-    260
+    259
    ]
   },
   {
@@ -1739,19 +1765,6 @@
    "status": "ok",
    "shows": 1,
    "detail": null
-  },
-  {
-   "name": "Scholes Street Studio",
-   "url": "https://scholesstreetstudio.com/",
-   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
-   "tokens": [
-    3635,
-    388
-   ]
   },
   {
    "name": "Silvana",
@@ -1776,7 +1789,7 @@
    "detail": "calendar",
    "tokens": [
     18319,
-    1225
+    1250
    ]
   },
   {
@@ -1789,20 +1802,7 @@
    "detail": "calendar",
    "tokens": [
     9694,
-    462
-   ]
-  },
-  {
-   "name": "Terminal 5",
-   "url": "https://www.terminal5nyc.com/",
-   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    16315,
-    225
+    465
    ]
   },
   {
@@ -1815,7 +1815,7 @@
    "detail": "calendar",
    "tokens": [
     16979,
-    411
+    461
    ]
   },
   {
@@ -1837,7 +1837,7 @@
    "detail": "calendar",
    "tokens": [
     14990,
-    342
+    345
    ]
   },
   {
@@ -1859,7 +1859,7 @@
    "detail": "calendar",
    "tokens": [
     16101,
-    219
+    226
    ]
   },
   {
@@ -1881,7 +1881,7 @@
    "detail": "calendar",
    "tokens": [
     3243,
-    338
+    332
    ]
   }
  ]
