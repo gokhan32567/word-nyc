@@ -79,6 +79,16 @@ jobs:
           VENUE_FILTER: ${{ github.event.inputs.venues }}
         run: python scraper/scrape.py
 
+      - name: Save test-run details to the debug branch
+        if: steps.due.outputs.run == 'true' && github.event.inputs.venues
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --quiet -B debug
+          git add -f debug.txt events.json coverage.json
+          git commit --quiet -m "Test run: ${{ github.event.inputs.venues }}"
+          git push --quiet -f origin debug
+
       - name: Commit and publish
         # A run limited to a few venues is a test: it shows results in the log but doesn't publish.
         if: steps.due.outputs.run == 'true' && !github.event.inputs.venues
