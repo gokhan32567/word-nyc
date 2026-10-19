@@ -308,6 +308,13 @@ def main() -> int:
             collected += found
             rows.append(row)
         ok_sources += sum(1 for _, r in results if r["status"] in ("ok", "none-tonight"))
+        if args.only.strip() and os.environ.get("GITHUB_STEP_SUMMARY"):  # test runs: show what the browser saw
+            with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+                for v in placed:
+                    sn = snaps.get(v["name"])
+                    if sn:
+                        f.write(f"\n### {v['name']}\n{sn.final_url} (HTTP {sn.status}, {len(sn.text)} chars)\n\n"
+                                f"```\n{sn.text[:3000]}\n```\n")
         if not ai_key:
             log("  AI reading skipped: add ANTHROPIC_API_KEY to read venue pages without structured data")
 
