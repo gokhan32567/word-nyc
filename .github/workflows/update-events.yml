@@ -1,14 +1,19 @@
 name: Update tonight's lineup
 
 # Runs at 5:00 AM New York time every day, all year.
-# GitHub cron is UTC, so it fires at 09:00 UTC (5 AM during daylight time) and
-# 10:00 UTC (5 AM during standard time); the check step below skips whichever run
-# is not needed. 11:00 UTC is a retry in case an earlier run failed or was delayed.
+# GitHub cron is UTC and busy at the top of the hour (scheduled runs there can be dropped), so the job
+# is scheduled a few minutes past, several times: 09:07 UTC is 5:07 AM in daylight time, 10:07 UTC is
+# 5:07 AM in standard time, and the later ones are retries. The check step below makes every run after
+# the first successful one a no-op.
 on:
   schedule:
-    - cron: "0 9 * * *"
-    - cron: "0 10 * * *"
-    - cron: "0 11 * * *"
+    - cron: "7 9 * * *"
+    - cron: "37 9 * * *"
+    - cron: "7 10 * * *"
+    - cron: "37 10 * * *"
+    - cron: "17 11 * * *"
+    - cron: "17 12 * * *"
+    - cron: "17 14 * * *"
   workflow_dispatch:      # "Run workflow" button for a manual refresh
     inputs:
       venues:
