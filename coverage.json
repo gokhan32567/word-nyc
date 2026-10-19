@@ -1,27 +1,27 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18T20:27:39-04:00",
+ "generated": "2026-10-18T20:37:00-04:00",
  "totals": {
   "venues": 152,
-  "shows": 62,
-  "ok": 26,
-  "none-tonight": 105,
-  "blocked": 16,
+  "shows": 70,
+  "ok": 31,
+  "none-tonight": 102,
+  "blocked": 14,
   "error": 4,
   "robots": 1,
   "no-location": 0,
   "skipped": 0
  },
  "shows_by_source": {
+  "venue-ai": 47,
   "ticketmaster": 24,
-  "venue-ai": 40,
   "venue-data": 7
  },
  "ai": {
-  "calls": 123,
-  "input_tokens": 841547,
-  "output_tokens": 22363,
-  "cost_usd": 0.0953
+  "calls": 124,
+  "input_tokens": 876486,
+  "output_tokens": 22195,
+  "cost_usd": 0.0987
  },
  "venues": [
   {
@@ -31,10 +31,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    10648,
-    59
+    10740,
+    63
    ]
   },
   {
@@ -44,10 +44,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    8825,
-    63
+    8917,
+    59
    ]
   },
   {
@@ -59,7 +59,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    10556,
+    10648,
     59
    ]
   },
@@ -72,7 +72,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15718,
+    15810,
     59
    ]
   },
@@ -85,7 +85,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6916,
+    7008,
     63
    ]
   },
@@ -98,7 +98,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5388,
+    5480,
     63
    ]
   },
@@ -111,7 +111,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2740,
+    2832,
     63
    ]
   },
@@ -124,7 +124,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2343,
+    2435,
     63
    ]
   },
@@ -137,7 +137,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8013,
+    8105,
     59
    ]
   },
@@ -150,7 +150,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    1960,
+    2052,
     63
    ]
   },
@@ -163,21 +163,21 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2232,
+    2324,
     63
    ]
   },
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:52.150.29.100:1792369439.974",
+   "read_url": "https://baryshnikovarts.org/explore/performance-history/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "no_events_tonight",
    "tokens": [
-    1844,
-    60
+    6438,
+    63
    ]
   },
   {
@@ -189,7 +189,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2314,
+    2406,
     63
    ]
   },
@@ -211,7 +211,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3176,
+    3268,
     63
    ]
   },
@@ -224,7 +224,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8083,
+    8175,
     59
    ]
   },
@@ -237,7 +237,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4411,
+    4503,
     63
    ]
   },
@@ -248,10 +248,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    12845,
-    59
+    12937,
+    220
    ]
   },
   {
@@ -263,7 +263,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8558,
+    8655,
     63
    ]
   },
@@ -276,7 +276,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2744,
+    2836,
     63
    ]
   },
@@ -289,7 +289,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    1991,
+    2083,
     63
    ]
   },
@@ -302,7 +302,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6171,
+    6263,
     63
    ]
   },
@@ -315,21 +315,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7510,
+    7602,
     59
-   ]
-  },
-  {
-   "name": "Cathedral of St. John the Divine",
-   "url": "https://www.stjohndivine.org/",
-   "read_url": "https://www.stjohndivine.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance, 1× time quote not found on page",
-   "tokens": [
-    8329,
-    861
    ]
   },
   {
@@ -341,21 +328,8 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3124,
+    3234,
     63
-   ]
-  },
-  {
-   "name": "Chamber Music Society of Lincoln Center",
-   "url": "https://www.chambermusicsociety.org/",
-   "read_url": "https://www.chambermusicsociety.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 3× not a public performance, 1× listed at another venue",
-   "tokens": [
-    12061,
-    1009
    ]
   },
   {
@@ -365,10 +339,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× not a public performance",
+   "detail": "calendar; dropped 2× time quote not found on page",
    "tokens": [
-    9761,
-    350
+    9853,
+    468
    ]
   },
   {
@@ -380,7 +354,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5442,
+    5534,
     63
    ]
   },
@@ -393,7 +367,7 @@
    "shows": 0,
    "detail": "unreadable",
    "tokens": [
-    1750,
+    1842,
     60
    ]
   },
@@ -406,7 +380,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6403,
+    6495,
     63
    ]
   },
@@ -417,10 +391,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance",
+   "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
-    5199,
-    690
+    5291,
+    681
    ]
   },
   {
@@ -432,7 +406,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9264,
+    9356,
     59
    ]
   },
@@ -445,7 +419,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7971,
+    8063,
     59
    ]
   },
@@ -458,7 +432,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    1985,
+    2077,
     63
    ]
   },
@@ -480,7 +454,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3830,
+    3922,
     63
    ]
   },
@@ -502,8 +476,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    9723,
-    258
+    9815,
+    239
    ]
   },
   {
@@ -515,7 +489,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3508,
+    3600,
     63
    ]
   },
@@ -528,7 +502,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4590,
+    4682,
     63
    ]
   },
@@ -542,19 +516,6 @@
    "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
   },
   {
-   "name": "Elsewhere",
-   "url": "https://www.elsewherebrooklyn.com/",
-   "read_url": "https://www.elsewhere.club/events",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    10332,
-    282
-   ]
-  },
-  {
    "name": "Fifth Avenue Presbyterian Church",
    "url": "https://www.fapc.org/",
    "read_url": "https://www.fapc.org/",
@@ -563,8 +524,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    5609,
-    220
+    5701,
+    219
    ]
   },
   {
@@ -576,7 +537,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8666,
+    8758,
     59
    ]
   },
@@ -589,7 +550,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4167,
+    4259,
     59
    ]
   },
@@ -602,7 +563,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2428,
+    2520,
     63
    ]
   },
@@ -615,7 +576,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2005,
+    2097,
     63
    ]
   },
@@ -626,10 +587,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    3773,
-    212
+    3865,
+    187
    ]
   },
   {
@@ -648,10 +609,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    10045,
-    306
+    10137,
+    59
    ]
   },
   {
@@ -663,7 +624,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2483,
+    2575,
     63
    ]
   },
@@ -676,7 +637,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5495,
+    5587,
     63
    ]
   },
@@ -689,7 +650,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5295,
+    5387,
     63
    ]
   },
@@ -700,10 +661,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    11882,
-    59
+    11974,
+    63
    ]
   },
   {
@@ -713,10 +674,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    6973,
-    59
+    7065,
+    63
    ]
   },
   {
@@ -744,10 +705,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    4741,
-    59
+    4833,
+    63
    ]
   },
   {
@@ -757,9 +718,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    6733,
+    6794,
     63
    ]
   },
@@ -772,7 +733,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    3977,
+    4069,
     59
    ]
   },
@@ -783,10 +744,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    2487,
-    63
+    2579,
+    59
    ]
   },
   {
@@ -816,7 +777,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2110,
+    2202,
     63
    ]
   },
@@ -829,7 +790,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5538,
+    5630,
     63
    ]
   },
@@ -842,7 +803,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3717,
+    3809,
     63
    ]
   },
@@ -864,7 +825,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4163,
+    4255,
     59
    ]
   },
@@ -877,7 +838,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    16967,
+    17059,
     63
    ]
   },
@@ -890,7 +851,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    19046,
+    19138,
     59
    ]
   },
@@ -901,10 +862,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    3316,
-    63
+    3408,
+    59
    ]
   },
   {
@@ -914,10 +875,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    5676,
-    59
+    5760,
+    63
    ]
   },
   {
@@ -938,7 +899,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    9016,
+    9108,
     63
    ]
   },
@@ -951,7 +912,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    1969,
+    2061,
     63
    ]
   },
@@ -962,9 +923,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    5319,
+    5411,
     63
    ]
   },
@@ -977,7 +938,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8492,
+    8584,
     63
    ]
   },
@@ -990,7 +951,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2678,
+    2770,
     63
    ]
   },
@@ -1003,7 +964,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2622,
+    2714,
     63
    ]
   },
@@ -1025,21 +986,8 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3542,
+    3634,
     63
-   ]
-  },
-  {
-   "name": "Public Records",
-   "url": "https://publicrecords.nyc/",
-   "read_url": "https://publicrecords.nyc/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    15782,
-    247
    ]
   },
   {
@@ -1051,7 +999,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2092,
+    2184,
     63
    ]
   },
@@ -1064,7 +1012,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8550,
+    8642,
     59
    ]
   },
@@ -1086,7 +1034,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    4937,
+    5029,
     63
    ]
   },
@@ -1099,20 +1047,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    10394,
-    59
-   ]
-  },
-  {
-   "name": "Scholes Street Studio",
-   "url": "https://scholesstreetstudio.com/",
-   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    3747,
+    10486,
     59
    ]
   },
@@ -1125,21 +1060,21 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5359,
+    5451,
     63
    ]
   },
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.150.29.100:1792369331.945",
+   "read_url": "https://sidgolds.com/detroit/events/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar",
    "tokens": [
-    1841,
-    60
+    6979,
+    59
    ]
   },
   {
@@ -1151,7 +1086,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    4428,
+    4520,
     63
    ]
   },
@@ -1164,21 +1099,21 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    1858,
+    1950,
     63
    ]
   },
   {
    "name": "Smoke Jazz Club",
    "url": "https://www.smokejazz.com/",
-   "read_url": "https://tickets.smokejazz.com/",
+   "read_url": "https://smokejazz.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× start time not in time quote",
+   "detail": "no_events_tonight",
    "tokens": [
-    5488,
-    355
+    2460,
+    63
    ]
   },
   {
@@ -1188,10 +1123,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    9806,
-    495
+    9898,
+    248
    ]
   },
   {
@@ -1203,22 +1138,18 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3211,
+    3303,
     63
    ]
   },
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:52.150.29.100:1792369428.321",
-   "method": "AI",
+   "read_url": "https://www.stannholytrinity.org/",
+   "method": "WordPress calendar",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
-   "tokens": [
-    1851,
-    60
-   ]
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "St. Bartholomew's Church",
@@ -1227,29 +1158,37 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× start time not in time quote",
+   "detail": "calendar; dropped 3× not a public performance",
    "tokens": [
-    5691,
-    370
+    5783,
+    732
    ]
   },
   {
    "name": "St. George Theatre",
    "url": "https://www.stgeorgetheatre.com/",
-   "read_url": "https://www.stgeorgetheatre.com/",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://stgeorgetheatre.com/",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 403"
+   "detail": "no_events_tonight",
+   "tokens": [
+    11469,
+    63
+   ]
   },
   {
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": null,
-   "status": "blocked",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 403"
+   "detail": "not_a_calendar",
+   "tokens": [
+    6207,
+    63
+   ]
   },
   {
    "name": "Sunnyvale",
@@ -1260,7 +1199,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5855,
+    5947,
     59
    ]
   },
@@ -1273,20 +1212,20 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3377,
+    3469,
     63
    ]
   },
   {
    "name": "Symphony Space",
    "url": "https://www.symphonyspace.org/",
-   "read_url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7826,
+    7587,
     59
    ]
   },
@@ -1299,7 +1238,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2603,
+    2695,
     63
    ]
   },
@@ -1310,23 +1249,23 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
-    16451,
-    59
+    16547,
+    197
    ]
   },
   {
    "name": "Terraza 7",
    "url": "https://www.terraza7.com/",
-   "read_url": "https://www.terraza7.com/",
+   "read_url": "https://www.terraza7.com/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× start time not in time quote",
+   "detail": "calendar",
    "tokens": [
-    4391,
-    239
+    4082,
+    59
    ]
   },
   {
@@ -1356,7 +1295,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2055,
+    2147,
     63
    ]
   },
@@ -1376,9 +1315,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2034,
+    2126,
     63
    ]
   },
@@ -1389,9 +1328,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2599,
+    2691,
     63
    ]
   },
@@ -1402,10 +1341,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    13175,
-    173
+    13267,
+    59
    ]
   },
   {
@@ -1417,7 +1356,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8685,
+    8765,
     63
    ]
   },
@@ -1457,7 +1396,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2818,
+    2910,
     63
    ]
   },
@@ -1470,7 +1409,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5204,
+    5296,
     63
    ]
   },
@@ -1483,7 +1422,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2290,
+    2382,
     63
    ]
   },
@@ -1494,10 +1433,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    6161,
-    59
+    6253,
+    63
    ]
   },
   {
@@ -1509,7 +1448,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12160,
+    12252,
     63
    ]
   },
@@ -1520,10 +1459,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    12541,
-    63
+    12632,
+    59
    ]
   },
   {
@@ -1542,10 +1481,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    4168,
-    226
+    4260,
+    302
    ]
   },
   {
@@ -1555,23 +1494,23 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    4826,
-    248
+    4918,
+    268
    ]
   },
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipc:52.150.29.100:1792369274.109",
+   "read_url": "https://www.zincbar.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    1836,
-    60
+    3839,
+    233
    ]
   },
   {
@@ -1583,8 +1522,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    11793,
-    611
+    11885,
+    668
    ]
   },
   {
@@ -1602,11 +1541,11 @@
    "read_url": "https://www.barlunatico.com/music",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
+   "shows": 1,
+   "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    15037,
-    536
+    15129,
+    556
    ]
   },
   {
@@ -1627,8 +1566,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    7564,
-    1123
+    7683,
+    1170
    ]
   },
   {
@@ -1640,8 +1579,34 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    8786,
-    271
+    8878,
+    257
+   ]
+  },
+  {
+   "name": "Cathedral of St. John the Divine",
+   "url": "https://www.stjohndivine.org/",
+   "read_url": "https://www.stjohndivine.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    8421,
+    418
+   ]
+  },
+  {
+   "name": "Chamber Music Society of Lincoln Center",
+   "url": "https://www.chambermusicsociety.org/",
+   "read_url": "https://www.chambermusicsociety.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 4,
+   "detail": "calendar",
+   "tokens": [
+    12153,
+    969
    ]
   },
   {
@@ -1653,8 +1618,21 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    5319,
-    251
+    5411,
+    258
+   ]
+  },
+  {
+   "name": "Elsewhere",
+   "url": "https://www.elsewherebrooklyn.com/",
+   "read_url": "https://www.elsewhere.club/events",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    10424,
+    269
    ]
   },
   {
@@ -1666,8 +1644,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    13754,
-    714
+    13846,
+    777
    ]
   },
   {
@@ -1676,11 +1654,11 @@
    "read_url": "https://littlefieldnyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 1,
    "detail": "calendar",
    "tokens": [
-    4878,
-    533
+    5226,
+    292
    ]
   },
   {
@@ -1692,8 +1670,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8419,
-    422
+    8511,
+    429
    ]
   },
   {
@@ -1705,8 +1683,8 @@
    "shows": 4,
    "detail": "calendar",
    "tokens": [
-    18429,
-    937
+    18521,
+    1013
    ]
   },
   {
@@ -1718,8 +1696,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    5332,
-    477
+    5424,
+    495
    ]
   },
   {
@@ -1732,6 +1710,19 @@
    "detail": null
   },
   {
+   "name": "Public Records",
+   "url": "https://publicrecords.nyc/",
+   "read_url": "https://publicrecords.nyc/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    15874,
+    229
+   ]
+  },
+  {
    "name": "S.O.B.'s",
    "url": "https://sobs.com/",
    "read_url": "https://sobs.com/",
@@ -1740,8 +1731,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    7295,
-    219
+    7387,
+    232
    ]
   },
   {
@@ -1751,10 +1742,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 4× not a public performance",
+   "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
-    17716,
-    1094
+    17808,
+    589
    ]
   },
   {
@@ -1763,11 +1754,11 @@
    "read_url": "https://www.saintthomaschurch.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11416,
-    266
+    11533,
+    479
    ]
   },
   {
@@ -1780,6 +1771,19 @@
    "detail": null
   },
   {
+   "name": "Scholes Street Studio",
+   "url": "https://scholesstreetstudio.com/",
+   "read_url": "https://scholesstreetstudio.com/news-events/index.html",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    3839,
+    448
+   ]
+  },
+  {
    "name": "Silvana",
    "url": "https://www.silvana-nyc.com/",
    "read_url": "https://www.silvana-nyc.com/",
@@ -1788,8 +1792,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    10339,
-    223
+    10431,
+    225
    ]
   },
   {
@@ -1801,8 +1805,8 @@
    "shows": 6,
    "detail": "calendar",
    "tokens": [
-    18431,
-    1303
+    18523,
+    1518
    ]
   },
   {
@@ -1814,8 +1818,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    17091,
-    471
+    17183,
+    438
    ]
   },
   {
@@ -1833,10 +1837,10 @@
    "read_url": "https://bitterend.com/#/events",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
+   "shows": 1,
+   "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
-    15102,
+    15194,
     399
    ]
   },
@@ -1858,8 +1862,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    16213,
-    246
+    16305,
+    280
    ]
   },
   {
@@ -1880,8 +1884,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    3355,
-    360
+    3447,
+    348
    ]
   }
  ]
