@@ -325,7 +325,9 @@ def main() -> int:
                 for v in placed:
                     sn = snaps.get(v["name"])
                     if sn:
-                        f.write(f"\n### {v['name']}\n{sn.final_url} (HTTP {sn.status}, {len(sn.text)} chars)\n\n"
+                        f.write(f"\n### {v['name']}\n{sn.final_url} (HTTP {sn.status}, {len(sn.text)} chars)\n"
+                                f"followed: {sn.followed}\ntried: {sn.tried}\n"
+                                f"links: {[(l['text'][:30], l['href']) for l in sn.first_links[:60]]}\n\n"
                                 f"```\n{sn.text[:12000]}\n```\n")
         if not ai_key:
             log("  AI reading skipped: add ANTHROPIC_API_KEY to read venue pages without structured data")

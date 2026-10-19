@@ -56,6 +56,8 @@ class Snapshot:
     blocked: bool = False
     error: str | None = None
     followed: str | None = None   # calendar link we followed from the first page
+    tried: list = field(default_factory=list)  # (url, usable?) for calendar links tried
+    first_links: list = field(default_factory=list)
 
     @property
     def ok(self) -> bool:
@@ -188,20 +190,24 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                 t = d["text"] or ""
                 return bool(pat.search(t) and CLOCK.search(t))
 
+            first_links = data["links"]
             if not usable(data):
                 for cand in _calendar_candidates(data["links"], data["final_url"] or url):
                     if not await asyncio.to_thread(allowed, cand):
                         continue
                     try:
                         data2 = await _capture(page, cand, timeout_ms)
-                    except Exception:  # noqa: BLE001
+                    except Exception as e:  # noqa: BLE001
+                        snap.tried.append((cand, f"error {type(e).__name__}"))
                         continue
+                    snap.tried.append((cand, f"usable={usable(data2)} chars={len(data2['text'] or '')}"))
                     if usable(data2):
                         data2["links"] += data["links"][:100]
                         data2["jsonld"] += data["jsonld"]
                         data2["tribe"] = data2["tribe"] or data["tribe"]
                         data, snap.followed = data2, cand
                         break
+            snap.first_links = first_links
             snap.final_url, snap.status = data["final_url"], data["status"]
             snap.text = (data["text"] or "")[:400_000]
             snap.links, snap.jsonld, snap.tribe = data["links"], data["jsonld"], data["tribe"]
