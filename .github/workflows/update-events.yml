@@ -80,12 +80,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Publish on top of the latest main (another run or a push may have landed meanwhile);
+          # this run's freshly built files win.
+          out=$(mktemp -d)
+          cp events.json coverage.json "$out"/
+          [ -f scraper/geocache.json ] && cp scraper/geocache.json "$out"/
+          git fetch --quiet origin main
+          git reset --quiet --hard origin/main
+          cp "$out"/events.json "$out"/coverage.json .
+          [ -f "$out"/geocache.json ] && cp "$out"/geocache.json scraper/
           git add events.json coverage.json
           [ -f scraper/geocache.json ] && git add scraper/geocache.json
           if git diff --cached --quiet; then
             echo "No changes."
           else
             git commit -m "Lineup for $(TZ=America/New_York date -d '-5 hours' +%F)"
-            git pull --rebase --autostash
-            git push
+            git push origin HEAD:main
           fi
