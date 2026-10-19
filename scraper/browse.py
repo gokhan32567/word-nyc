@@ -19,7 +19,8 @@ from common import USER_AGENT, get, log
 BROWSER_UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
               "Chrome/141.0.0.0 Safari/537.36 WordNYC/1.0 (+https://word-nyc.com)")
 CALENDAR_WORDS = re.compile(r"calendar|events?\b|schedule|shows?\b|concerts?|performances?|what'?s on|"
-                            r"line-?up|upcoming|season|music|tickets", re.I)
+                            r"line-?up|upcoming|season|music|tickets|jazz|live|program", re.I)
+CLOCK = re.compile(r"\b\d{1,2}(?::\d{2})?\s*(?:a\.?m\.?|p\.?m\.?)(?![a-z])|\b\d{1,2}:\d{2}\b", re.I)
 BLOCK_SIGNS = re.compile(r"just a moment|verify you are human|access denied|attention required|"
                          r"are you a robot|captcha|request blocked|forbidden", re.I)
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
@@ -114,6 +115,13 @@ async def _capture(page, url: str, timeout_ms: int) -> dict:
     except Exception:  # noqa: BLE001
         pass
     data = await page.evaluate(EXTRACT_JS)
+    for frame in page.frames[1:8]:  # embedded calendars (Google Calendar, ticketing widgets) live in iframes
+        try:
+            inner = await frame.evaluate("document.body ? document.body.innerText : ''")
+            if inner and len(inner) > 40:
+                data["text"] = (data["text"] or "") + "\n\n[embedded: " + frame.url[:120] + "]\n" + inner
+        except Exception:  # noqa: BLE001
+            pass
     data["status"] = resp.status if resp else None
     data["final_url"] = page.url
     return data
@@ -175,7 +183,12 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                 except Exception:  # noqa: BLE001
                     data = await _capture(page, parts._replace(netloc=host).geturl(), timeout_ms)
             pat = tonight_pattern(night)
-            if not pat.search(data["text"] or ""):
+
+            def usable(d) -> bool:  # names tonight AND shows clock times (a home page often lists dates only)
+                t = d["text"] or ""
+                return bool(pat.search(t) and CLOCK.search(t))
+
+            if not usable(data):
                 for cand in _calendar_candidates(data["links"], data["final_url"] or url):
                     if not await asyncio.to_thread(allowed, cand):
                         continue
@@ -183,7 +196,7 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                         data2 = await _capture(page, cand, timeout_ms)
                     except Exception:  # noqa: BLE001
                         continue
-                    if pat.search(data2["text"] or ""):
+                    if usable(data2):
                         data2["links"] += data["links"][:100]
                         data2["jsonld"] += data["jsonld"]
                         data2["tribe"] = data2["tribe"] or data["tribe"]
