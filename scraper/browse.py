@@ -236,10 +236,11 @@ async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeo
                 if ip:
                     rules.append(f"MAP {h} {ip}")
         if rules:
-            log(f"  retrying {len(retry)} site(s) with DNS-over-HTTPS addresses")
+            log(f"  retrying {len(retry)} site(s) with DNS-over-HTTPS addresses: {'; '.join(rules)}")
             browser = await pw.chromium.launch(args=args + ["--host-resolver-rules=" + ", ".join(rules)])
             try:
                 for s in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in retry]):
+                    log(f"    {s.venue}: {s.error or 'loaded'}")
                     snaps[s.venue] = s
             finally:
                 await browser.close()
