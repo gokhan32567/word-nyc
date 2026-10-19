@@ -1,11 +1,11 @@
 {
  "date": "2026-10-19",
- "generated": "2026-10-19T10:41:42-04:00",
+ "generated": "2026-10-19T10:52:54-04:00",
  "totals": {
   "venues": 153,
-  "shows": 45,
-  "ok": 18,
-  "none-tonight": 115,
+  "shows": 56,
+  "ok": 21,
+  "none-tonight": 112,
   "blocked": 14,
   "error": 4,
   "robots": 0,
@@ -13,15 +13,15 @@
   "skipped": 2
  },
  "shows_by_source": {
-  "venue-ai": 31,
+  "venue-ai": 42,
   "ticketmaster": 14,
   "venue-data": 5
  },
  "ai": {
   "calls": 126,
-  "input_tokens": 875423,
-  "output_tokens": 20323,
-  "cost_usd": 0.0977
+  "input_tokens": 881829,
+  "output_tokens": 21407,
+  "cost_usd": 0.0989
  },
  "venues": [
   {
@@ -33,8 +33,8 @@
    "shows": 0,
    "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
-    11784,
-    397
+    11866,
+    406
    ]
   },
   {
@@ -46,8 +46,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    10804,
-    512
+    10835,
+    497
    ]
   },
   {
@@ -57,10 +57,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    8981,
-    63
+    9030,
+    59
    ]
   },
   {
@@ -70,10 +70,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    10712,
-    63
+    10761,
+    59
    ]
   },
   {
@@ -85,7 +85,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15874,
+    15923,
     59
    ]
   },
@@ -98,7 +98,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    7072,
+    7121,
     63
    ]
   },
@@ -111,7 +111,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5544,
+    5593,
     63
    ]
   },
@@ -124,7 +124,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2896,
+    2945,
     63
    ]
   },
@@ -137,7 +137,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2499,
+    2548,
     63
    ]
   },
@@ -148,10 +148,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    8069,
-    59
+    8118,
+    63
    ]
   },
   {
@@ -163,7 +163,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2116,
+    2165,
     63
    ]
   },
@@ -176,7 +176,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2388,
+    2452,
     63
    ]
   },
@@ -189,21 +189,8 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5698,
+    5747,
     63
-   ]
-  },
-  {
-   "name": "Baryshnikov Arts",
-   "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "None; dropped 1× not a public performance",
-   "tokens": [
-    5496,
-    203
    ]
   },
   {
@@ -215,7 +202,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2470,
+    2519,
     63
    ]
   },
@@ -235,10 +222,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    3332,
-    63
+    3381,
+    59
    ]
   },
   {
@@ -250,8 +237,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    8239,
-    236
+    8288,
+    280
    ]
   },
   {
@@ -263,8 +250,8 @@
    "shows": 0,
    "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
-    8925,
-    512
+    8974,
+    479
    ]
   },
   {
@@ -276,7 +263,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5352,
+    5401,
     63
    ]
   },
@@ -287,9 +274,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    8710,
+    8759,
     63
    ]
   },
@@ -302,7 +289,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2900,
+    2949,
     63
    ]
   },
@@ -315,7 +302,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2147,
+    2196,
     63
    ]
   },
@@ -328,7 +315,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6327,
+    6376,
     63
    ]
   },
@@ -341,8 +328,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8437,
-    257
+    8486,
+    243
    ]
   },
   {
@@ -352,9 +339,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    3298,
+    3329,
     63
    ]
   },
@@ -367,7 +354,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12269,
+    12318,
     63
    ]
   },
@@ -378,10 +365,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    9877,
-    59
+    9926,
+    63
    ]
   },
   {
@@ -391,9 +378,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    5598,
+    5647,
     63
    ]
   },
@@ -406,7 +393,7 @@
    "shows": 0,
    "detail": "unreadable",
    "tokens": [
-    1906,
+    1955,
     60
    ]
   },
@@ -419,7 +406,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6559,
+    6608,
     63
    ]
   },
@@ -430,10 +417,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    5355,
-    255
+    5404,
+    245
    ]
   },
   {
@@ -443,10 +430,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    9420,
-    63
+    9469,
+    59
    ]
   },
   {
@@ -458,7 +445,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8127,
+    8176,
     59
    ]
   },
@@ -471,7 +458,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2141,
+    2190,
     63
    ]
   },
@@ -493,7 +480,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3986,
+    4035,
     63
    ]
   },
@@ -511,9 +498,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    9387,
+    9436,
     63
    ]
   },
@@ -526,7 +513,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3664,
+    3713,
     63
    ]
   },
@@ -537,9 +524,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    4746,
+    4795,
     63
    ]
   },
@@ -559,10 +546,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    14442,
-    59
+    14491,
+    63
    ]
   },
   {
@@ -572,9 +559,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    3851,
+    3900,
     63
    ]
   },
@@ -585,10 +572,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    5758,
-    63
+    5807,
+    59
    ]
   },
   {
@@ -598,10 +585,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    12991,
-    59
+    13040,
+    257
    ]
   },
   {
@@ -611,10 +598,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    4323,
-    59
+    4372,
+    63
    ]
   },
   {
@@ -626,7 +613,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2584,
+    2633,
     63
    ]
   },
@@ -639,7 +626,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2161,
+    2210,
     63
    ]
   },
@@ -652,7 +639,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    3929,
+    3978,
     59
    ]
   },
@@ -672,10 +659,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    10199,
-    330
+    10248,
+    59
    ]
   },
   {
@@ -685,9 +672,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    2639,
+    2688,
     63
    ]
   },
@@ -700,7 +687,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5651,
+    5700,
     63
    ]
   },
@@ -713,7 +700,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3688,
+    3737,
     63
    ]
   },
@@ -726,7 +713,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    13165,
+    13214,
     63
    ]
   },
@@ -739,7 +726,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12069,
+    12087,
     59
    ]
   },
@@ -750,10 +737,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    7148,
-    287
+    7197,
+    312
    ]
   },
   {
@@ -781,9 +768,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    4897,
+    4946,
     63
    ]
   },
@@ -796,7 +783,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6858,
+    6907,
     63
    ]
   },
@@ -809,7 +796,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4104,
+    4153,
     59
    ]
   },
@@ -822,21 +809,8 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2643,
+    2692,
     63
-   ]
-  },
-  {
-   "name": "Lincoln Center",
-   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    10717,
-    447
    ]
   },
   {
@@ -848,7 +822,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5259,
+    5308,
     59
    ]
   },
@@ -879,7 +853,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2266,
+    2315,
     63
    ]
   },
@@ -890,9 +864,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    5694,
+    5743,
     63
    ]
   },
@@ -905,7 +879,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3873,
+    3922,
     63
    ]
   },
@@ -917,19 +891,6 @@
    "detail": "site can't be read; shows come from the Lincoln Center calendar"
   },
   {
-   "name": "Mezzrow",
-   "url": "https://www.smallslive.com/",
-   "read_url": "https://www.smallslive.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    18354,
-    1097
-   ]
-  },
-  {
    "name": "Miller Theatre",
    "url": "https://www.millertheatre.com/events",
    "read_url": "https://www.millertheatre.com/events?page=1",
@@ -938,7 +899,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4319,
+    4368,
     59
    ]
   },
@@ -951,7 +912,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    17027,
+    17076,
     63
    ]
   },
@@ -964,7 +925,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    19013,
+    19062,
     59
    ]
   },
@@ -975,10 +936,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    3472,
-    273
+    3521,
+    220
    ]
   },
   {
@@ -990,7 +951,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5625,
+    5881,
     63
    ]
   },
@@ -1012,7 +973,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    9172,
+    9221,
     63
    ]
   },
@@ -1025,7 +986,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2125,
+    2174,
     63
    ]
   },
@@ -1036,10 +997,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    5468,
-    63
+    5517,
+    59
    ]
   },
   {
@@ -1051,7 +1012,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8648,
+    8697,
     63
    ]
   },
@@ -1062,9 +1023,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    2834,
+    2883,
     63
    ]
   },
@@ -1077,7 +1038,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2778,
+    2827,
     63
    ]
   },
@@ -1099,7 +1060,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2573,
+    2622,
     63
    ]
   },
@@ -1112,7 +1073,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3698,
+    3747,
     63
    ]
   },
@@ -1125,7 +1086,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15822,
+    15871,
     59
    ]
   },
@@ -1138,7 +1099,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2248,
+    2297,
     63
    ]
   },
@@ -1149,10 +1110,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    8706,
-    59
+    8755,
+    63
    ]
   },
   {
@@ -1171,10 +1132,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    5097,
-    63
+    5146,
+    59
    ]
   },
   {
@@ -1186,7 +1147,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4023,
+    4072,
     63
    ]
   },
@@ -1197,10 +1158,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    11544,
-    262
+    11593,
+    59
    ]
   },
   {
@@ -1212,7 +1173,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5877,
+    5926,
     63
    ]
   },
@@ -1225,7 +1186,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2728,
+    2777,
     63
    ]
   },
@@ -1238,7 +1199,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5515,
+    5564,
     63
    ]
   },
@@ -1249,10 +1210,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    7043,
-    59
+    7092,
+    63
    ]
   },
   {
@@ -1262,10 +1223,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    4584,
-    63
+    4633,
+    59
    ]
   },
   {
@@ -1277,7 +1238,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2014,
+    2063,
     63
    ]
   },
@@ -1288,9 +1249,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    2524,
+    2573,
     63
    ]
   },
@@ -1303,7 +1264,7 @@
    "shows": 0,
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    9598,
+    9647,
     242
    ]
   },
@@ -1316,7 +1277,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3367,
+    3416,
     63
    ]
   },
@@ -1329,7 +1290,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5492,
+    5541,
     63
    ]
   },
@@ -1342,7 +1303,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    7586,
+    7635,
     63
    ]
   },
@@ -1353,10 +1314,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    11533,
-    63
+    11582,
+    59
    ]
   },
   {
@@ -1377,7 +1338,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4168,
+    4217,
     59
    ]
   },
@@ -1390,7 +1351,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    3533,
+    3582,
     63
    ]
   },
@@ -1403,7 +1364,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2759,
+    2808,
     63
    ]
   },
@@ -1416,7 +1377,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    16408,
+    16421,
     59
    ]
   },
@@ -1429,7 +1390,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4146,
+    4195,
     59
    ]
   },
@@ -1460,7 +1421,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2211,
+    2260,
     63
    ]
   },
@@ -1482,7 +1443,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2190,
+    2239,
     63
    ]
   },
@@ -1493,9 +1454,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    2755,
+    2804,
     63
    ]
   },
@@ -1508,7 +1469,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13331,
+    13380,
     59
    ]
   },
@@ -1521,7 +1482,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8829,
+    8890,
     63
    ]
   },
@@ -1559,9 +1520,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    2974,
+    3023,
     63
    ]
   },
@@ -1583,7 +1544,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5512,
+    5561,
     63
    ]
   },
@@ -1596,7 +1557,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2446,
+    2495,
     63
    ]
   },
@@ -1609,8 +1570,8 @@
    "shows": 0,
    "detail": "no_events_tonight; dropped 1× date quote is not tonight",
    "tokens": [
-    6317,
-    330
+    6366,
+    306
    ]
   },
   {
@@ -1622,7 +1583,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12316,
+    12365,
     63
    ]
   },
@@ -1635,7 +1596,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12702,
+    12747,
     59
    ]
   },
@@ -1655,10 +1616,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
-    4324,
-    164
+    4373,
+    447
    ]
   },
   {
@@ -1670,7 +1631,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    2129,
+    2178,
     63
    ]
   },
@@ -1681,10 +1642,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
-    3899,
-    270
+    3948,
+    243
    ]
   },
   {
@@ -1705,8 +1666,21 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    15052,
-    616
+    15101,
+    607
+   ]
+  },
+  {
+   "name": "Baryshnikov Arts",
+   "url": "https://bacnyc.org/",
+   "read_url": "https://baryshnikovarts.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    5545,
+    230
    ]
   },
   {
@@ -1718,8 +1692,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    7064,
-    1147
+    7113,
+    1139
    ]
   },
   {
@@ -1729,10 +1703,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    13107,
-    539
+    13123,
+    306
    ]
   },
   {
@@ -1744,8 +1718,21 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    7666,
-    477
+    7715,
+    443
+   ]
+  },
+  {
+   "name": "Lincoln Center",
+   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "method": "AI",
+   "status": "ok",
+   "shows": 6,
+   "detail": "calendar",
+   "tokens": [
+    10766,
+    1630
    ]
   },
   {
@@ -1757,8 +1744,21 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8686,
-    483
+    8735,
+    440
+   ]
+  },
+  {
+   "name": "Mezzrow",
+   "url": "https://www.smallslive.com/",
+   "read_url": "https://www.smallslive.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 5,
+   "detail": "calendar",
+   "tokens": [
+    18403,
+    1339
    ]
   },
   {
@@ -1770,14 +1770,14 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    5346,
-    623
+    5395,
+    557
    ]
   },
   {
    "name": "Saint Peter's Church",
    "url": "https://www.saintpeters.org/",
-   "read_url": "https://www.saintpeters.org/",
+   "read_url": "https://www.saintpeters.org/events",
    "method": "event data",
    "status": "ok",
    "shows": 1,
@@ -1801,8 +1801,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    10448,
-    618
+    10497,
+    611
    ]
   },
   {
@@ -1814,8 +1814,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    18356,
-    1338
+    18405,
+    1509
    ]
   },
   {
@@ -1827,8 +1827,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8048,
-    506
+    8202,
+    462
    ]
   },
   {
@@ -1840,7 +1840,7 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    17838,
+    17887,
     499
    ]
   },
@@ -1862,8 +1862,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    15043,
-    583
+    15092,
+    601
    ]
   },
   {
@@ -1875,8 +1875,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    16425,
-    289
+    16474,
+    277
    ]
   },
   {
@@ -1897,8 +1897,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    4974,
-    570
+    5023,
+    572
    ]
   }
  ]

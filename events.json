@@ -1,7 +1,7 @@
 {
   "date": "2026-10-19",
-  "generated": "2026-10-19T10:41:42-04:00",
-  "count": 45,
+  "generated": "2026-10-19T10:52:54-04:00",
+  "count": 56,
   "events": [
     {
       "title": "VINCE GIORDANO AND THE NIGHTHAWKS",
@@ -18,7 +18,7 @@
       "subgenre": "Pop",
       "price": "$24.91",
       "program": [],
-      "description": "Traditional jazz band show in the Theater room.",
+      "description": "Early Monday set by the Nighthawks band in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
@@ -35,7 +35,7 @@
       "date": "2026-10-19",
       "time": "5:30 PM",
       "end": "7:30 PM",
-      "url": "https://www.saintpeters.org/",
+      "url": "https://www.saintpeters.org/events",
       "genre": "Jazz",
       "subgenre": null,
       "price": null,
@@ -43,7 +43,7 @@
       "description": null,
       "image": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/fa1cd493-95fa-4100-b471-385d23f655d2/image-5.webp",
       "source": "venue-data",
-      "listing_url": "https://www.saintpeters.org/",
+      "listing_url": "https://www.saintpeters.org/events",
       "artist": "Jazz Memorial: Keith Ingham",
       "id": 2
     },
@@ -86,7 +86,7 @@
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Solo performance with Gwen opening, doors at 6 PM at Mercury Lounge.",
+      "description": "Solo performer show at Mercury Lounge with a guest named With Gwen; doors at 6 PM.",
       "image": "https://s1.ticketm.net/dam/a/884/ec915039-269c-4fad-9bd9-6aedeeea5884_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
@@ -94,7 +94,33 @@
       "id": 4
     },
     {
-      "title": "Adam Niewood Quartet",
+      "title": "SPIKE WILNER TRIO",
+      "performers": [
+        "SPIKE WILNER / PIANO",
+        "JOHN SIMS / BASS",
+        "AARON KIMMEL / DRUMS"
+      ],
+      "venue": "Mezzrow",
+      "address": "163 W 10th St, New York, NY 10014",
+      "lat": 40.73454,
+      "lng": -74.00184,
+      "date": "2026-10-19",
+      "time": "6:00 PM",
+      "end": null,
+      "url": "https://www.smallslive.com/events/34141-spike-wilner-trio/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Early set by the Spike Wilner trio at Mezzrow.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.smallslive.com/",
+      "artist": "SPIKE WILNER / PIANO, JOHN SIMS / BASS, AARON KIMMEL / DRUMS",
+      "id": 5
+    },
+    {
+      "title": "ADAM NIEWOOD QUARTET",
       "performers": [
         "ADAM NIEWOOD / TENOR SAX",
         "ERIC LEWIS / PIANO",
@@ -113,12 +139,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quartet led by tenor saxophonist Adam Niewood, first set of the evening.",
+      "description": "Quartet set at Smalls, first of two evening performances.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "ADAM NIEWOOD / TENOR SAX, ERIC LEWIS / PIANO, SEAN CONLY / BASS",
-      "id": 5
+      "id": 6
     },
     {
       "title": "Yard Sale Comedy Open Mic",
@@ -140,18 +166,18 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Yard Sale Comedy Open Mic",
-      "id": 6
+      "id": 7
     },
     {
       "title": "MODERN JAZZ LEADERS SERIES",
       "performers": [
-        "Stephen Byth (ts)",
-        "Nathan Reising (as)",
-        "Noah Halpern (tp)",
-        "Sam Rowley (trombone)",
-        "Dillon Acey (bass clarinet)",
-        "Tom Oren (p)",
-        "Angus Mason (d)"
+        "Stephen Byth",
+        "Nathan Reising",
+        "Noah Halpern",
+        "Sam Rowley",
+        "Dillon Acey",
+        "Tom Oren",
+        "Angus Mason"
       ],
       "venue": "Ornithology Jazz Club",
       "address": "6 Suydam St, Brooklyn, NY 11221",
@@ -165,12 +191,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Modern jazz leaders series concert with a septet-style lineup of saxophone, trombone, trumpet and rhythm section.",
+      "description": "Jazz leaders series evening set featuring a large ensemble of horns, piano, bass and drums.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
-      "artist": "Stephen Byth (ts), Nathan Reising (as), Noah Halpern (tp)",
-      "id": 7
+      "artist": "Stephen Byth, Nathan Reising, Noah Halpern",
+      "id": 8
+    },
+    {
+      "title": "Fall Fête",
+      "performers": [],
+      "venue": "Baryshnikov Arts",
+      "address": "450 W 37th St, New York, NY 10018",
+      "lat": 40.75605,
+      "lng": -73.99731,
+      "date": "2026-10-19",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://baryshnikovarts.org/fall-fete-2026/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Special event celebrating Making Gay History's podcast series about the history in the musical The Gorgeous Nothings.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://baryshnikovarts.org/",
+      "artist": "Fall Fête",
+      "id": 9
     },
     {
       "title": "JULIE BENKO: BROADWAY GOES TO THE MOVIES",
@@ -189,12 +237,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Singer presents Broadway songs from movies in the Jazz Club; sales ended, call for assistance.",
+      "description": "Singer Julie Benko performs Broadway music from movies in the Jazz Club; sales have ended.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Julie Benko",
-      "id": 8
+      "id": 10
     },
     {
       "title": "Earl Sweatshirt & MIKE  Home on the Range Tour 2026",
@@ -220,7 +268,29 @@
       "image": "https://s1.ticketm.net/dam/a/469/f6db8121-664a-4972-9853-b1eb4d318469_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Earl Sweatshirt, MIKE, Surf Gang",
-      "id": 9
+      "id": 11
+    },
+    {
+      "title": "Juilliard Jazz Ensembles: Jazz Music of the 1970’s: Don Pullen, Charles Tolliver, John Hicks and Thad Jones",
+      "performers": [],
+      "venue": "Jazz at Lincoln Center",
+      "address": "10 Columbus Circle, New York, NY 10019",
+      "lat": 40.76825,
+      "lng": -73.98285,
+      "date": "2026-10-19",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://ticketing.jazz.org/21543/21544",
+      "genre": "Classical",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Juilliard Jazz Ensembles: Jazz Music of the 1970’s: Don Pullen, Charles Tolliver, John Hicks and Thad Jones",
+      "id": 12
     },
     {
       "title": "Elanor Moss, Jana Horn",
@@ -244,7 +314,7 @@
       "image": "https://s1.ticketm.net/dam/a/dab/c561ffcc-be05-496d-bb0c-fada7b292dab_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Elanor Moss, Jana Horn",
-      "id": 10
+      "id": 13
     },
     {
       "title": "Quddus Quartet",
@@ -261,12 +331,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz performance by the Quddus Quartet at Silvana's downstairs music space.",
+      "description": "Jazz quartet performing at Silvana's downstairs music room on the evening listed.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Quddus Quartet",
-      "id": 11
+      "id": 14
     },
     {
       "title": "THE IMPROVISED SHAKESPEARE COMPANY®",
@@ -283,12 +353,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Improvised Shakespeare comedy show with audience-suggested themes, performed in a single evening set.",
+      "description": "Improvised Shakespeare comedy show performed by an ensemble, with audience-suggested themes.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.symphonyspace.org/",
       "artist": "THE IMPROVISED SHAKESPEARE COMPANY®",
-      "id": 12
+      "id": 15
     },
     {
       "title": "David “Doc” French Acoustic",
@@ -312,7 +382,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "David \"Doc\" French",
-      "id": 13
+      "id": 16
     },
     {
       "title": "Lulu Rose",
@@ -325,16 +395,40 @@
       "time": "7:00 PM",
       "end": null,
       "url": "https://bitterend.com/#/events/201309",
-      "genre": "Folk & Americana",
+      "genre": "Pop",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Singer-songwriter show at the Bitter End's early Monday slot.",
+      "description": "Solo performance listed at The Bitter End on Monday evening.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Lulu Rose",
-      "id": 14
+      "id": 17
+    },
+    {
+      "title": "Juilliard Jazz Ensembles | Jazz Music of the 1970s: Don Pullen, Charles Tolliver, John Hicks, and Thad Jones",
+      "performers": [
+        "Jeffrey Milarsky"
+      ],
+      "venue": "The Juilliard School",
+      "address": "60 Lincoln Center Plaza, New York, NY 10023",
+      "lat": 40.7737,
+      "lng": -73.9829,
+      "date": "2026-10-19",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.juilliard.edu/event/185746/juilliard-jazz-ensembles-jazz-music-1970s-don-pullen-charles-tolliver-john-hicks-and",
+      "genre": "Classical",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Juilliard Orchestra concert led by conductor Jeffrey Milarsky.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Jeffrey Milarsky",
+      "id": 18
     },
     {
       "title": "Lifehouse - Best Of Acoustic",
@@ -357,7 +451,7 @@
       "image": "https://s1.ticketm.net/dam/a/17b/9445d95a-f397-4c43-8fd8-c23da9f8917b_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Lifehouse",
-      "id": 15
+      "id": 19
     },
     {
       "title": "Comic Relief Live",
@@ -374,12 +468,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Comedy show presented by Comic Relief in Stern Auditorium's Perelman Stage.",
+      "description": "Comedy show presented by Comic Relief at Stern Auditorium / Perelman Stage.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "Comic Relief Live",
-      "id": 16
+      "id": 20
     },
     {
       "title": "From Mozart to Piazzolla and Beyond",
@@ -396,15 +490,63 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Chamber music concert presented by the New York Chamber Music Festival in Weill Recital Hall.",
+      "description": "Chamber music concert presented by New York Chamber Music Festival at Weill Recital Hall.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "From Mozart to Piazzolla and Beyond",
-      "id": 17
+      "id": 21
     },
     {
-      "title": "Adam Niewood Quartet",
+      "title": "Mazzoli's Lincoln in the Bardo",
+      "performers": [],
+      "venue": "Metropolitan Opera House",
+      "address": "30 Lincoln Center Plaza, New York, NY 10023",
+      "lat": 40.7725,
+      "lng": -73.9843,
+      "date": "2026-10-19",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.metopera.org/season/2026-27-season/lincoln-in-the-bardo/",
+      "genre": "Opera",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Metropolitan Opera staging of Mazzoli's opera Lincoln in the Bardo.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Mazzoli's Lincoln in the Bardo",
+      "id": 22
+    },
+    {
+      "title": "SPIKE WILNER TRIO",
+      "performers": [
+        "SPIKE WILNER / PIANO",
+        "JOHN SIMS / BASS",
+        "AARON KIMMEL / DRUMS"
+      ],
+      "venue": "Mezzrow",
+      "address": "163 W 10th St, New York, NY 10014",
+      "lat": 40.73454,
+      "lng": -74.00184,
+      "date": "2026-10-19",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.smallslive.com/events/34141-spike-wilner-trio/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Second early set by the Spike Wilner trio at Mezzrow.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.smallslive.com/",
+      "artist": "SPIKE WILNER / PIANO, JOHN SIMS / BASS, AARON KIMMEL / DRUMS",
+      "id": 23
+    },
+    {
+      "title": "ADAM NIEWOOD QUARTET",
       "performers": [
         "ADAM NIEWOOD / TENOR SAX",
         "ERIC LEWIS / PIANO",
@@ -423,12 +565,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quartet led by tenor saxophonist Adam Niewood, second set of the evening.",
+      "description": "Quartet set at Smalls, second evening performance.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "ADAM NIEWOOD / TENOR SAX, ERIC LEWIS / PIANO, SEAN CONLY / BASS",
-      "id": 18
+      "id": 24
     },
     {
       "title": "Michelle Buteau",
@@ -450,7 +592,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thebellhouseny.com/",
       "artist": "Michelle Buteau",
-      "id": 19
+      "id": 25
     },
     {
       "title": "Frankenstein's Baby",
@@ -474,12 +616,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Comedy show listed on the Oct 19 calendar entry with a 7:30pm start.",
+      "description": "Comedy show with a lineup of performers, listed on the Union Hall calendar for this date.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://unionhallny.com/",
       "artist": "Joyelle Nicole Johnson, Tyrone Thornhill, Ike Ufomadu",
-      "id": 20
+      "id": 26
     },
     {
       "title": "Amber Mark",
@@ -500,7 +642,7 @@
       "image": "https://s1.ticketm.net/dam/a/9cf/7c352cc2-904b-4cdb-b424-981f9fba99cf_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Amber Mark",
-      "id": 21
+      "id": 27
     },
     {
       "title": "Downstate",
@@ -521,7 +663,7 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Downstate",
-      "id": 22
+      "id": 28
     },
     {
       "title": "Siichaq | Suddenly | Kay Keels | Heart Department",
@@ -542,10 +684,10 @@
       "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Siichaq | Suddenly | Kay Keels | Heart Department",
-      "id": 23
+      "id": 29
     },
     {
-      "title": "AJ MCLEAN PRESENTS ALEXANDER JAMES : THE BETTER MAN TOUR",
+      "title": "AJ McLean Presents Alexander James : The Better Man Tour",
       "performers": [
         "Matt Bloyd",
         "DJ Gab Wright",
@@ -563,12 +705,34 @@
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Alexander James: The Better Man Tour show with support from Matt Bloyd and DJ Gab Wright.",
+      "description": "Alexander James tour show with openers Matt Bloyd and DJ Gab Wright, presented by AJ McLean.",
       "image": "https://s1.ticketm.net/dam/a/6b5/840992b1-69c9-4339-9643-227101ea36b5_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.brooklynbowl.com/brooklyn",
       "artist": "Matt Bloyd, DJ Gab Wright, AJ McLean",
-      "id": 24
+      "id": 30
+    },
+    {
+      "title": "Juilliard Jazz Ensembles: Jazz Music of the 1970’s: Don Pullen, Charles Tolliver, John Hicks and Thad Jones",
+      "performers": [],
+      "venue": "Jazz at Lincoln Center",
+      "address": "10 Columbus Circle, New York, NY 10019",
+      "lat": 40.76825,
+      "lng": -73.98285,
+      "date": "2026-10-19",
+      "time": "8:00 PM",
+      "end": null,
+      "url": "https://ticketing.jazz.org/21543/21545",
+      "genre": "Classical",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Juilliard Jazz Ensembles: Jazz Music of the 1970’s: Don Pullen, Charles Tolliver, John Hicks and Thad Jones",
+      "id": 31
     },
     {
       "title": "Metropolitan Opera presents Lincoln in the Bardo",
@@ -591,7 +755,7 @@
       "image": "https://s1.ticketm.net/dam/c/038/cddd6a14-c959-4d67-8db3-93170b1a9038_105551_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Metropolitan Opera",
-      "id": 25
+      "id": 32
     },
     {
       "title": "Toad The Wet Sprocket - Rings: The Acoustic Tour",
@@ -615,7 +779,7 @@
       "image": "https://s1.ticketm.net/dam/a/f52/f771cbe4-8697-4e07-b14c-bd645c8b8f52_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Toad the Wet Sprocket, Willy Porter",
-      "id": 26
+      "id": 33
     },
     {
       "title": "Into The Unknown: an Over The Garden Wall drag show",
@@ -632,12 +796,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "A drag show themed around the Over the Garden Wall animated series, held at Wonderville.",
+      "description": "A drag show themed around the Over the Garden Wall animated series.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.wonderville.nyc/",
       "artist": "Into The Unknown: an Over The Garden Wall drag show",
-      "id": 27
+      "id": 34
     },
     {
       "title": "the FORT90 BROADCAST SYSTEM presents: FORT90 TV",
@@ -654,12 +818,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "A FORT90 broadcast-system television event starting at 8:00 PM on October 19 at Wonderville.",
+      "description": "A broadcast-style show presented by the FORT90 Broadcast System.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.wonderville.nyc/",
       "artist": "the FORT90 BROADCAST SYSTEM presents: FORT90 TV",
-      "id": 28
+      "id": 35
     },
     {
       "title": "VINCE GIORDANO AND THE NIGHTHAWKS",
@@ -678,12 +842,12 @@
       "subgenre": "Pop",
       "price": "$24.91 - $45.76",
       "program": [],
-      "description": "Traditional jazz band show in the Theater room.",
+      "description": "Evening set by the Nighthawks band in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Vince Giordano",
-      "id": 29
+      "id": 36
     },
     {
       "title": "John DeNicola & Friends",
@@ -700,12 +864,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Evening performance led by John DeNicola with guest musicians.",
+      "description": "Evening set with John DeNicola and guests at The Bitter End.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "John DeNicola & Friends",
-      "id": 30
+      "id": 37
     },
     {
       "title": "Rev. Vince Anderson & The Love Choir!",
@@ -727,7 +891,7 @@
       "source": "venue-data",
       "listing_url": "https://www.union-pool.com/calendar",
       "artist": "Rev. Vince Anderson & The Love Choir!",
-      "id": 31
+      "id": 38
     },
     {
       "title": "SERGIO TABANICO W/ESTEBAN CASTRO | JOE DYSON | DION KERR",
@@ -749,12 +913,12 @@
       "subgenre": null,
       "price": "$10 (CASH) SUGGESTED DONATION",
       "program": [],
-      "description": "Saxophonist Sergio Tabanico leads an experimental groove project with a new lineup of young musicians.",
+      "description": "Saxophonist Sergio Tabanico leads a groovy experimental project with adventurous young musicians; first of two sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barlunatico.com/music",
       "artist": "Sergio Tabanico, Esteban Castro, Joe Dyson",
-      "id": 32
+      "id": 39
     },
     {
       "title": "Jordan Galland, James Levy, NY Grim",
@@ -771,24 +935,50 @@
       "time": "9:00 PM",
       "end": null,
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjordan-galland-james-levy-ny-grim-new-york-new-york-10-19-2026%2Fevent%2F0000652FE2018E83&utm_medium=affiliate",
-      "genre": "Indie & Alternative",
+      "genre": "Pop",
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Evening show by three acts, doors at 9 PM at Mercury Lounge.",
+      "description": "Evening bill of three acts at Mercury Lounge; doors at 9 PM.",
       "image": "https://s1.ticketm.net/dam/a/4b7/8e509c8d-00c5-420f-9f5b-3ff06dce54b7_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "artist": "Jordan Galland, James Levy, NY Grim",
-      "id": 33
+      "id": 40
+    },
+    {
+      "title": "ED CHERRY TRIO",
+      "performers": [
+        "ED CHERRY / GUITAR",
+        "JOHN DI MARTINO / PIANO",
+        "GARY WANG / BASS"
+      ],
+      "venue": "Mezzrow",
+      "address": "163 W 10th St, New York, NY 10014",
+      "lat": 40.73454,
+      "lng": -74.00184,
+      "date": "2026-10-19",
+      "time": "9:00 PM",
+      "end": null,
+      "url": "https://www.smallslive.com/events/34142-ed-cherry-trio/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Late-evening set by the Ed Cherry trio at Mezzrow.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.smallslive.com/",
+      "artist": "ED CHERRY / GUITAR, JOHN DI MARTINO / PIANO, GARY WANG / BASS",
+      "id": 41
     },
     {
       "title": "GIUSEPPE CUCCHIARA QUARTET",
       "performers": [
-        "Giuseppe Cucchiara (b)",
-        "Kendric McCallister (saxophone)",
-        "Chris McCarthy (p)",
-        "Adam Arruda (d)"
+        "Giuseppe Cucchiara",
+        "Kendric McCallister",
+        "Chris McCarthy",
+        "Adam Arruda"
       ],
       "venue": "Ornithology Jazz Club",
       "address": "6 Suydam St, Brooklyn, NY 11221",
@@ -802,12 +992,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet led by bassist Giuseppe Cucchiara with saxophone, piano and drums.",
+      "description": "Jazz quartet with bass, saxophone, piano and drums performing a late set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
-      "artist": "Giuseppe Cucchiara (b), Kendric McCallister (saxophone), Chris McCarthy (p)",
-      "id": 34
+      "artist": "Giuseppe Cucchiara, Kendric McCallister, Chris McCarthy",
+      "id": 42
     },
     {
       "title": "Anthony Dom",
@@ -824,15 +1014,15 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz set by Anthony Dom at Silvana.",
+      "description": "Jazz performance at Silvana listed for the late evening slot.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Anthony Dom",
-      "id": 35
+      "id": 43
     },
     {
-      "title": "Mike Clark Quartet",
+      "title": "MIKE CLARK QUARTET",
       "performers": [
         "MIKE CLARK / DRUMS",
         "MIKE DIRUBBO / ALTO SAX",
@@ -851,12 +1041,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quartet led by drummer Mike Clark, first set of the night.",
+      "description": "Quartet set at Smalls, first of two late-evening performances.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "MIKE CLARK / DRUMS, MIKE DIRUBBO / ALTO SAX, DAVID KIKOSKI / PIANO",
-      "id": 36
+      "id": 44
+    },
+    {
+      "title": "Juilliard Jazz Ensembles | Jazz Music of the 1970s: Don Pullen, Charles Tolliver, John Hicks, and Thad Jones",
+      "performers": [],
+      "venue": "The Juilliard School",
+      "address": "60 Lincoln Center Plaza, New York, NY 10023",
+      "lat": 40.7737,
+      "lng": -73.9829,
+      "date": "2026-10-19",
+      "time": "9:00 PM",
+      "end": null,
+      "url": "https://www.juilliard.edu/event/185756/juilliard-jazz-ensembles-jazz-music-1970s-don-pullen-charles-tolliver-john-hicks-and",
+      "genre": "Classical",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Juilliard Jazz Ensembles | Jazz Music of the 1970s: Don Pullen, Charles Tolliver, John Hicks, and Thad Jones",
+      "id": 45
     },
     {
       "title": "THE IMPROVISED SHAKESPEARE COMPANY®",
@@ -873,12 +1085,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Improvised Shakespeare comedy show with audience-suggested themes, performed as a second evening set.",
+      "description": "Improvised Shakespeare comedy show performed by an ensemble, with audience-suggested themes.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.symphonyspace.org/",
       "artist": "THE IMPROVISED SHAKESPEARE COMPANY®",
-      "id": 37
+      "id": 46
     },
     {
       "title": "JIM CARUSO'S CAST PARTY WITH BILLY STRITCH",
@@ -898,12 +1110,12 @@
       "subgenre": null,
       "price": "$35.46 - $45.76",
       "program": [],
-      "description": "Cabaret show with Jim Caruso and Billy Stritch in the Jazz Club.",
+      "description": "Cabaret show hosted by Jim Caruso with guest Billy Stritch in the Jazz Club.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Jim Caruso, Billy Stritch",
-      "id": 38
+      "id": 47
     },
     {
       "title": "Oscar Suchanek",
@@ -920,12 +1132,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Contemporary performance by Oscar Suchanek at Silvana.",
+      "description": "Contemporary performance at Silvana listed for the late night slot.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Oscar Suchanek",
-      "id": 39
+      "id": 48
     },
     {
       "title": "T Blues Band | Mack / Crenshaw",
@@ -952,7 +1164,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Jr Mack, SaRon Crenshaw, Steve Kirsty",
-      "id": 40
+      "id": 49
     },
     {
       "title": "Richie Cannata's Monday Night Jam",
@@ -971,12 +1183,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night weekly jam session hosted by Richie Cannata.",
+      "description": "Late Monday jam session hosted by Richie Cannata at The Bitter End.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Richie Cannata",
-      "id": 41
+      "id": 50
     },
     {
       "title": "SERGIO TABANICO W/ESTEBAN CASTRO | JOE DYSON | DION KERR",
@@ -998,12 +1210,12 @@
       "subgenre": null,
       "price": "$10 (CASH) SUGGESTED DONATION",
       "program": [],
-      "description": "Second set of Sergio Tabanico's experimental groove project with a new lineup.",
+      "description": "Saxophonist Sergio Tabanico leads a groovy experimental project with adventurous young musicians; second of two sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barlunatico.com/music",
       "artist": "Sergio Tabanico, Esteban Castro, Joe Dyson",
-      "id": 42
+      "id": 51
     },
     {
       "title": "Amber Mark",
@@ -1024,10 +1236,36 @@
       "image": "https://s1.ticketm.net/dam/a/9cf/7c352cc2-904b-4cdb-b424-981f9fba99cf_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Amber Mark",
-      "id": 43
+      "id": 52
     },
     {
-      "title": "Mike Clark Quartet",
+      "title": "ED CHERRY TRIO",
+      "performers": [
+        "ED CHERRY / GUITAR",
+        "JOHN DI MARTINO / PIANO",
+        "GARY WANG / BASS"
+      ],
+      "venue": "Mezzrow",
+      "address": "163 W 10th St, New York, NY 10014",
+      "lat": 40.73454,
+      "lng": -74.00184,
+      "date": "2026-10-19",
+      "time": "10:30 PM",
+      "end": null,
+      "url": "https://www.smallslive.com/events/34142-ed-cherry-trio/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Second late set by the Ed Cherry trio at Mezzrow.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.smallslive.com/",
+      "artist": "ED CHERRY / GUITAR, JOHN DI MARTINO / PIANO, GARY WANG / BASS",
+      "id": 53
+    },
+    {
+      "title": "MIKE CLARK QUARTET",
       "performers": [
         "MIKE CLARK / DRUMS",
         "MIKE DIRUBBO / ALTO SAX",
@@ -1046,15 +1284,37 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quartet led by drummer Mike Clark, second set of the night.",
+      "description": "Quartet set at Smalls, second late-evening performance.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "MIKE CLARK / DRUMS, MIKE DIRUBBO / ALTO SAX, DAVID KIKOSKI / PIANO",
-      "id": 44
+      "id": 54
     },
     {
-      "title": "Jam Session Hosted By Adam Ray",
+      "title": "VINYL AFTER HOURS",
+      "performers": [],
+      "venue": "Mezzrow",
+      "address": "163 W 10th St, New York, NY 10014",
+      "lat": 40.73454,
+      "lng": -74.00184,
+      "date": "2026-10-19",
+      "time": "11:30 PM",
+      "end": "12:45 AM",
+      "url": "https://www.smallslive.com/events/34167-vinyl-after-hours/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Late-night after-hours session at Mezzrow.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.smallslive.com/",
+      "artist": "VINYL AFTER HOURS",
+      "id": 55
+    },
+    {
+      "title": "JAM SESSION HOSTED BY ADAM RAY",
       "performers": [
         "ADAM RAY / DRUMS",
         "BRANDON SUAREZ / TENOR SAX",
@@ -1073,12 +1333,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night jam session hosted by drummer Adam Ray at Smalls.",
+      "description": "Late-night jam session hosted by Adam Ray at Smalls, running until 4 AM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "ADAM RAY / DRUMS, BRANDON SUAREZ / TENOR SAX, SACHA PERRY / PIANO",
-      "id": 45
+      "id": 56
     }
   ]
 }
