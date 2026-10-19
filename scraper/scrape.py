@@ -102,11 +102,24 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
         row.update(status="error", method="AI", detail=str(e)[:200])
         return [], row
     found = [e for e in found if is_show(e["title"], "", strict)]
+    if v.get("_targets"):  # a campus calendar: put each show at its presenter's hall, skip other presenters
+        found = [e for e in (assign_presenter(e, v["_targets"]) for e in found) if e]
+    for e in found:
+        e.pop("_presenter", None)
     row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found),
                detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
                        if info["rejected"] else info["page_kind"]),
                tokens=[info["input_tokens"], info["output_tokens"]])
     return found, row
+
+
+def assign_presenter(e: dict, targets: dict) -> dict | None:
+    who = norm(e.get("_presenter") or "")
+    for org, t in targets.items():
+        if who and (norm(org) in who or who in norm(org)):
+            e.update(venue=t["name"], address=t.get("address"), lat=t["lat"], lng=t["lng"])
+            return e
+    return None
 
 
 # ---------------------------------------------------------------- merging sources
@@ -264,11 +277,23 @@ def main() -> int:
         wanted = {norm(x) for x in args.only.split(",") if x.strip()}
         venues = [v for v in venues if any(w in norm(v["name"]) for w in wanted)]
     placed = geo.place_venues([dict(v) for v in venues], geocoder)
+    by_name = {p["name"]: p for p in placed}
+    everyone = by_name
+    if any(p.get("presenters") for p in placed) and args.only.strip():  # targets may be outside the --only filter
+        everyone = {p["name"]: p for p in geo.place_venues(
+            [dict(x) for x in json.loads(Path(args.venues).read_text())["venues"]], geocoder)}
+    for p in placed:
+        if p.get("presenters"):
+            p["_targets"] = {org: {k: everyone[name][k] for k in ("name", "address", "lat", "lng")}
+                             for org, name in p["presenters"].items() if name in everyone}
     rows = [{"name": v["name"], "url": v["url"], "status": "no-location", "shows": 0,
              "detail": v.get("address")} for v in venues if v["name"] not in {p["name"] for p in placed}]
 
     collected: list[dict] = []
     ok_sources = 0
+    rows += [{"name": p["name"], "url": p["url"], "status": "skipped", "shows": 0,
+              "detail": f"site can't be read; shows come from the {p['via']} calendar"} for p in placed if p.get("via")]
+    placed = [p for p in placed if not p.get("via")]
 
     # 1. venue calendars
     if placed and not args.no_browser:

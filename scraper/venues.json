@@ -2,6 +2,24 @@
  "_comment": "Venues read every morning. Each needs name, address and the page that lists its shows (url). 'genre' is used when a show's genre isn't clear; 'note' gives the AI reader extra instructions for that page. Coordinates are looked up from the address automatically (cached in geocache.json); set lat/lng to override. Optional: 'ical' (feed URL), 'eventbrite' (organizer id).",
  "venues": [
   {
+   "name": "Lincoln Center",
+   "address": "Lincoln Center Plaza, New York, NY 10023",
+   "url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+   "genre": "Classical",
+   "lat": 40.7725,
+   "lng": -73.9835,
+   "note": "This is Lincoln Center's campus calendar. Events by all its resident organizations count as this venue, including Jazz at Lincoln Center at Columbus Circle. Copy each event's organization name into presenter.",
+   "presenters": {
+    "New York Philharmonic": "David Geffen Hall",
+    "Metropolitan Opera": "Metropolitan Opera House",
+    "New York City Ballet": "David H. Koch Theater",
+    "Chamber Music Society": "Chamber Music Society of Lincoln Center",
+    "Jazz at Lincoln Center": "Jazz at Lincoln Center",
+    "Juilliard": "The Juilliard School",
+    "Lincoln Center Presents": "Lincoln Center"
+   }
+  },
+  {
    "name": "Village Vanguard",
    "address": "178 7th Ave S, New York, NY 10014",
    "url": "https://villagevanguard.com/",
@@ -264,7 +282,8 @@
    "url": "https://www.nyphil.org/concerts-tickets/",
    "genre": "Classical",
    "lat": 40.7724,
-   "lng": -73.9834
+   "lng": -73.9834,
+   "via": "Lincoln Center"
   },
   {
    "name": "Metropolitan Opera House",
@@ -272,7 +291,8 @@
    "url": "https://www.metopera.org/season/calendar/",
    "genre": "Opera",
    "lat": 40.7725,
-   "lng": -73.9843
+   "lng": -73.9843,
+   "via": "Lincoln Center"
   },
   {
    "name": "David H. Koch Theater",

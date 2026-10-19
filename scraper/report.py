@@ -15,7 +15,7 @@ STATUS_TEXT = {
     "error": "Page didn't load",
     "robots": "Site asks not to be read automatically",
     "no-location": "Address not found on the map",
-    "skipped": "Not read (no AI key)",
+    "skipped": "Not read",
 }
 
 

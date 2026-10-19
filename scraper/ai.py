@@ -62,6 +62,9 @@ TOOL = {
                                         "description": "At most 25 words in your own words. Factual, no hype, no copied sentences."},
                         "link_number": {"type": ["integer", "null"],
                                         "description": "Number of the link for this event's page or tickets, from the LINKS list."},
+                        "presenter": {"type": ["string", "null"],
+                                      "description": "The presenting organization shown for this event, copied exactly "
+                                                     "(e.g. 'New York City Ballet'), or null if none is shown."},
                         "venue_shown": {"type": ["string", "null"],
                                         "description": "The venue name the page shows for this event, copied exactly, "
                                                        "or null if the page doesn't name a venue for each event."},
@@ -267,6 +270,7 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
         "url": url, "genre": genre, "subgenre": None, "price": price[:60] if price else None,
         "program": program[:12], "description": desc, "image": None,
         "source": "venue-ai", "listing_url": snap.final_url or snap.url,
+        "_presenter": (raw.get("presenter") or "").strip(),
     }, "ok"
 
 
