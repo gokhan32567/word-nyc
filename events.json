@@ -1,7 +1,7 @@
 {
   "date": "2026-10-20",
-  "generated": "2026-10-20T09:48:49-04:00",
-  "count": 81,
+  "generated": "2026-10-20T10:16:17-04:00",
+  "count": 103,
   "events": [
     {
       "title": "Alessandro Bianchi: Bach at Noon",
@@ -26,6 +26,72 @@
       "id": 1
     },
     {
+      "title": "LIVERPOOL VS. VILLARREAL (CHAMPIONS LEAGUE)",
+      "performers": [],
+      "venue": "11th Street Bar",
+      "address": "510 E 11th St, New York, NY 10009",
+      "lat": 40.72804,
+      "lng": -73.98126,
+      "date": "2026-10-20",
+      "time": "2:00 PM",
+      "end": null,
+      "url": "http://lfcny.org/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Liverpool supporters club screening of the Champions League match; first come, first served, no reservations.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://11thstbar.com/",
+      "artist": "LIVERPOOL VS. VILLARREAL (CHAMPIONS LEAGUE)",
+      "id": 2
+    },
+    {
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "4:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film following Elizabeth Holmes as she documents her final weeks before prison, with director Nathan Fielder.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 3
+    },
+    {
+      "title": "Ken Russell's The Devils",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "4:15 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-devils",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Uncut theatrical screening of Ken Russell's 1971 film The Devils.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Ken Russell's The Devils",
+      "id": 4
+    },
+    {
       "title": "Naza",
       "performers": [],
       "venue": "BAM",
@@ -40,12 +106,56 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Documentary film about the systems behind Israel's mass killing of Palestinians.",
+      "description": null,
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Naza",
-      "id": 2
+      "id": 5
+    },
+    {
+      "title": "The History of Concrete",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "4:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-history-of-concrete",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "John Wilson documentary attempting to make the definitive film about concrete.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "The History of Concrete",
+      "id": 6
+    },
+    {
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "4:45 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film following Elizabeth Holmes as she documents her final weeks before prison, with director Nathan Fielder.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 7
     },
     {
       "title": "VINCE GIORDANO AND THE NIGHTHAWKS",
@@ -64,34 +174,12 @@
       "subgenre": "Pop",
       "price": "$24.91 - $45.76",
       "program": [],
-      "description": "Early Tuesday show in the Theater featuring Vince Giordano and the Nighthawks, with doors at 4:30 PM.",
+      "description": "Early show by a New Orleans-style and swing dance band in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Vince Giordano",
-      "id": 3
-    },
-    {
-      "title": "Knicks Watch Party: Season Opener + Ring Ceremony",
-      "performers": [],
-      "venue": "S.O.B.'s",
-      "address": "204 Varick St, New York, NY 10014",
-      "lat": 40.72837,
-      "lng": -74.00546,
-      "date": "2026-10-20",
-      "time": "5:30 PM",
-      "end": null,
-      "url": "https://sobs.com/events/knicks-watch-party-season-opener/",
-      "genre": "Other",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": "Watch party for the Knicks season opener with a ring ceremony. Doors open at 5:30 PM.",
-      "image": null,
-      "source": "venue-ai",
-      "listing_url": "https://sobs.com/",
-      "artist": "Knicks Watch Party: Season Opener + Ring Ceremony",
-      "id": 4
+      "id": 8
     },
     {
       "title": "Choral Evensong",
@@ -108,15 +196,15 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Service of music and scripture sung by the choir, offered during the academic term.",
+      "description": "Choral evensong service of music and scripture at Saint Thomas Church, offered during the academic term.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.saintthomaschurch.org/",
       "artist": "Choral Evensong",
-      "id": 5
+      "id": 9
     },
     {
-      "title": "WILL VARLEY",
+      "title": "Will Varley",
       "performers": [],
       "venue": "Bowery Ballroom",
       "address": "6 Delancey St, New York, NY 10002",
@@ -128,14 +216,38 @@
       "url": "https://mercuryeastpresents.com/tm-event/will-varley/",
       "genre": "Folk & Americana",
       "subgenre": null,
-      "price": "0.00",
+      "price": null,
       "program": [],
-      "description": "Singer-songwriter Will Varley performs at Bowery Ballroom in the Today's Shows listing at 6 PM.",
+      "description": "Singer-songwriter Will Varley plays a show at Bowery Ballroom listed under today's shows.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
-      "artist": "WILL VARLEY",
-      "id": 6
+      "artist": "Will Varley",
+      "id": 10
+    },
+    {
+      "title": "Make It with Brini Maxwell",
+      "performers": [
+        "Brini Maxwell"
+      ],
+      "venue": "Club Cumming",
+      "address": "505 E 6th St, New York, NY 10009",
+      "lat": 40.7254,
+      "lng": -73.98338,
+      "date": "2026-10-20",
+      "time": "6:00 PM",
+      "end": "8:00 PM",
+      "url": "https://clubcummingnyc.com/schedule/9m94bn44p4czydk-hb4cr-kn8x3-e4f3r-st7ks-9acnk",
+      "genre": "Comedy",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Drag-style variety show hosted by Brini Maxwell at Club Cumming.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://clubcummingnyc.com/",
+      "artist": "Brini Maxwell",
+      "id": 11
     },
     {
       "title": "Choral Evensong",
@@ -157,7 +269,7 @@
       "source": "venue-data",
       "listing_url": "https://gracechurchnyc.org/",
       "artist": "Choral Evensong",
-      "id": 7
+      "id": 12
     },
     {
       "title": "Will Varley",
@@ -176,19 +288,19 @@
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Singer-songwriter show at Mercury Lounge; doors at 6 PM, with support from Will Lawrence.",
+      "description": "Singer-songwriter show at Mercury Lounge with support from Will Lawrence; doors at 6 PM.",
       "image": "https://s1.ticketm.net/dam/a/806/d82b401f-8742-41d1-a4ce-715098a18806_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "artist": "Will Lawrence",
-      "id": 8
+      "id": 13
     },
     {
       "title": "RAY GALLON TRIO",
       "performers": [
-        "RAY GALLON / PIANO",
-        "PETER WASHINGTON / BASS",
-        "KENNY WASHINGTON / DRUMS"
+        "Ray Gallon",
+        "Peter Washington",
+        "Kenny Washington"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -202,20 +314,20 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz piano trio set at Mezzrow, first of two evening performances.",
+      "description": "Jazz piano trio with Ray Gallon, Peter Washington and Kenny Washington, first set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "RAY GALLON / PIANO, PETER WASHINGTON / BASS, KENNY WASHINGTON / DRUMS",
-      "id": 9
+      "artist": "Ray Gallon, Peter Washington, Kenny Washington",
+      "id": 14
     },
     {
       "title": "Tim Hegarty Band",
       "performers": [
-        "Tim Hegarty",
-        "Charlie Sigler",
-        "Anthony Perez",
-        "Tim Horner"
+        "Tim Hegarty / Tenor Sax",
+        "Charlie Sigler / Guitar",
+        "Anthony Perez / Bass",
+        "Tim Horner / Drums"
       ],
       "venue": "Smalls Jazz Club",
       "address": "183 W 10th St, New York, NY 10014",
@@ -229,12 +341,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Tenor saxophone-led band performing the first of two sets at Smalls.",
+      "description": "Tenor saxophone-led quartet performing the first of two early sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "Tim Hegarty, Charlie Sigler, Anthony Perez",
-      "id": 10
+      "artist": "Tim Hegarty / Tenor Sax, Charlie Sigler / Guitar, Anthony Perez / Bass",
+      "id": 15
     },
     {
       "title": "Free Pure Chaos Open Mic Comedy",
@@ -256,7 +368,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Free Pure Chaos Open Mic Comedy",
-      "id": 11
+      "id": 16
     },
     {
       "title": "Allison Russell: In The Hour of Chaos Tour",
@@ -264,23 +376,24 @@
         "Allison Russell",
         "Autumn Nicholas"
       ],
-      "venue": "Irving Plaza Powered By Verizon 5G",
+      "venue": "Irving Plaza",
       "address": "17 Irving Place, New York, NY",
-      "lat": 40.73492,
-      "lng": -73.98845,
+      "lat": 40.73491,
+      "lng": -73.98827,
       "date": "2026-10-20",
       "time": "6:30 PM",
       "end": null,
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fallison-russell-in-the-hour-of-new-york-new-york-10-20-2026%2Fevent%2F0000650AC63E0A3F&utm_medium=affiliate",
-      "genre": "Indie & Alternative",
+      "genre": "Rock",
       "subgenre": "Alternative Rock",
       "price": null,
       "program": [],
       "description": "Accessible accommodations should purchase a General Admission ticket and will be taken care of at the venue day of event.",
-      "image": "https://s1.ticketm.net/dam/a/040/c9f0db82-ff09-4348-85b2-2798cfcdd040_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
+      "image": "https://s1.ticketm.net/dam/a/040/c9f0db82-ff09-4348-85b2-2798cfcdd040_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+      "source": "venue-data+ticketmaster",
+      "listing_url": "https://www.irvingplaza.com/shows",
       "artist": "Allison Russell, Autumn Nicholas",
-      "id": 12
+      "id": 17
     },
     {
       "title": "JUANA MOLINA",
@@ -302,7 +415,7 @@
       "source": "venue-ai",
       "listing_url": "https://lpr.com/",
       "artist": "JUANA MOLINA",
-      "id": 13
+      "id": 18
     },
     {
       "title": "DAVID SULEIMAN QUINTET",
@@ -325,12 +438,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quintet led by saxophonist David Suleiman, early evening set on the Tuesday schedule.",
+      "description": "Early set led by saxophonist David Suleiman with trombone, piano, bass and drums.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
       "artist": "David Suleiman (saxophone), Nate Jones (trombone), Papuna Sharikadze (p)",
-      "id": 14
+      "id": 19
     },
     {
       "title": "8TURN",
@@ -347,12 +460,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Show at Racket with doors at 6:30 PM; no separate set time listed.",
+      "description": "Show at Racket with doors at 6:30 PM; no other details listed.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.racketnyc.com/",
       "artist": "8TURN",
-      "id": 15
+      "id": 20
     },
     {
       "title": "Naza",
@@ -369,12 +482,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Documentary film about the systems behind Israel's mass killing of Palestinians.",
+      "description": null,
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Naza",
-      "id": 16
+      "id": 21
+    },
+    {
+      "title": "Ken Russell's The Devils",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "6:45 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-devils",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Uncut theatrical screening of Ken Russell's 1971 film The Devils.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Ken Russell's The Devils",
+      "id": 22
     },
     {
       "title": "John Lloyd Young: Songs from the Road",
@@ -393,18 +528,39 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "John Lloyd Young performs songs from his touring career in a cabaret setting.",
+      "description": "Cabaret concert by John Lloyd Young drawn from his touring repertoire.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://54below.org/calendar/",
       "artist": "John Lloyd Young",
-      "id": 17
+      "id": 23
+    },
+    {
+      "title": "The History of Concrete",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-history-of-concrete",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "John Wilson documentary attempting to make the definitive film about concrete.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "The History of Concrete",
+      "id": 24
     },
     {
       "title": "TAMAR KORN & A KORNUCOPIA",
       "performers": [
-        "Tamar Korn",
-        "A Kornucopia"
+        "Tamar Korn"
       ],
       "venue": "Barbès",
       "address": "376 9th St, Brooklyn, NY 11215",
@@ -418,12 +574,12 @@
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "Tamar Korn leads a free-ranging set moving from early jazz and Western swing to Yiddish songs and poetry.",
+      "description": "Tamar Korn leads her band through a wide-ranging set of early jazz, roots, Yiddish songs and poetry.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
-      "artist": "Tamar Korn, A Kornucopia",
-      "id": 18
+      "artist": "Tamar Korn",
+      "id": 25
     },
     {
       "title": "Revelation Nights Presented By Revelation Church LA",
@@ -449,7 +605,7 @@
       "image": "https://s1.ticketm.net/dam/e/403/a741e993-2b5a-4fdf-b280-15986091d403_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Lovy Elias, Maggy Elias, Chandler Moore",
-      "id": 19
+      "id": 26
     },
     {
       "title": "ANDERSON BROTHERS PLAY BENNY GOODMAN",
@@ -468,12 +624,12 @@
       "subgenre": "Jazz",
       "price": "$35.46 - $45.76",
       "program": [],
-      "description": "Tuesday early set in the Jazz Club tribute to Benny Goodman by the Anderson Brothers, doors at 5:30 PM.",
+      "description": "Tribute to Benny Goodman performed by the Anderson Brothers in the Jazz Club.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Anderson Brothers",
-      "id": 20
+      "id": 27
     },
     {
       "title": "Lexi Jayde",
@@ -497,11 +653,13 @@
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
       "artist": "Ally Salort",
-      "id": 21
+      "id": 28
     },
     {
       "title": "CHAMPIONS NIGHT: OFFICIAL KNICKS WATCH PARTY",
-      "performers": [],
+      "performers": [
+        "DugLust"
+      ],
       "venue": "Brooklyn Bowl",
       "address": "61 Wythe Ave, Brooklyn, NY 11249",
       "lat": 40.72205,
@@ -514,12 +672,12 @@
       "subgenre": null,
       "price": "FREE RSVP",
       "program": [],
-      "description": "Free-RSVP Knicks watch party hosted by DugLust at Brooklyn Bowl; doors at 5:30 PM.",
+      "description": "Free-RSVP Knicks watch party hosted by DugLust at Brooklyn Bowl, with doors at 5:30 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.brooklynbowl.com/brooklyn",
-      "artist": "CHAMPIONS NIGHT: OFFICIAL KNICKS WATCH PARTY",
-      "id": 22
+      "artist": "DugLust",
+      "id": 29
     },
     {
       "title": "Faculty Recital: Abendlider/Liebeslieder",
@@ -541,7 +699,7 @@
       "source": "venue-data",
       "listing_url": "https://www.brooklyn.edu/towcenter/",
       "artist": "Faculty Recital: Abendlider/Liebeslieder",
-      "id": 23
+      "id": 30
     },
     {
       "title": "Paris Paloma: The Fatal Flaw Tour",
@@ -551,21 +709,22 @@
       ],
       "venue": "Brooklyn Paramount",
       "address": "385 Flatbush Ave. Extension, Brooklyn, NY",
-      "lat": 40.69137,
-      "lng": -73.98124,
+      "lat": 40.68949,
+      "lng": -73.98104,
       "date": "2026-10-20",
       "time": "7:00 PM",
       "end": null,
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fparis-paloma-the-fatal-flaw-tour-brooklyn-new-york-10-20-2026%2Fevent%2F000064A4E12EF369&utm_medium=affiliate",
-      "genre": "Pop",
+      "genre": "Indie & Alternative",
       "subgenre": "Electro Pop",
       "price": null,
       "program": [],
       "description": "Doors: 7PM Show: 8PM All set times and opening acts are subject to change without notice. $1 from each ticket sold will be donated to Planned Parenthood to support access to sexual and reproductive care and education. For accessible seating inquiries, please email us directly at Info@BrooklynParamount.com to reserve accommodations. Balcony Includes: Exclusive Entrance via Dekalb Ave. Balcony Access Private Bar…",
-      "image": "https://s1.ticketm.net/dam/a/67f/0b8cc3eb-78c4-4c29-8176-08c15df6167f_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
+      "image": "https://s1.ticketm.net/dam/a/67f/0b8cc3eb-78c4-4c29-8176-08c15df6167f_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+      "source": "venue-data+ticketmaster",
+      "listing_url": "https://www.brooklynparamount.com/shows",
       "artist": "Paris Paloma, Susannah Joffe",
-      "id": 24
+      "id": 31
     },
     {
       "title": "Richard Dawkins - Genes and The Meaning of Life",
@@ -584,12 +743,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Talk on genes and the meaning of life by Richard Dawkins at Stern Auditorium.",
+      "description": "Talk by Richard Dawkins on genes and the meaning of life, presented by How To Academy.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "Richard Dawkins",
-      "id": 25
+      "id": 32
     },
     {
       "title": "Lifehouse -  Best Of Acoustic",
@@ -598,21 +757,22 @@
       ],
       "venue": "Gramercy Theatre",
       "address": "127 East 23rd Street, New York, NY",
-      "lat": 40.73975,
-      "lng": -73.98501,
+      "lat": 40.73987,
+      "lng": -73.98494,
       "date": "2026-10-20",
       "time": "7:00 PM",
       "end": null,
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flifehouse-best-of-acoustic-new-york-new-york-10-20-2026%2Fevent%2F0000649C9E700C4C&utm_medium=affiliate",
-      "genre": "Indie & Alternative",
+      "genre": "Rock",
       "subgenre": "Alternative Rock",
       "price": null,
       "program": [],
       "description": "DOORS - 7:00 PM SHOW - 8:00 PM *Showtime subject to change Age Restriction: 16+ Unless Accompanied by a Guardian",
-      "image": "https://s1.ticketm.net/dam/a/17b/9445d95a-f397-4c43-8fd8-c23da9f8917b_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
+      "image": "https://s1.ticketm.net/dam/a/17b/9445d95a-f397-4c43-8fd8-c23da9f8917b_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+      "source": "venue-data+ticketmaster",
+      "listing_url": "https://www.thegramercytheatre.com/shows",
       "artist": "Lifehouse",
-      "id": 26
+      "id": 33
     },
     {
       "title": "FRANCE'S NO(W) BEAUTY: AN EVENING OF CINEMATIC JAZZ",
@@ -629,12 +789,37 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": null,
+      "description": "Cinematic jazz evening listed for October 20; venue not named on the page for this event.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://jazz.org/",
       "artist": "FRANCE'S NO(W) BEAUTY: AN EVENING OF CINEMATIC JAZZ",
-      "id": 27
+      "id": 34
+    },
+    {
+      "title": "TYLER HENDERSON QUINTET FEATURING AANYA SENGUPTA",
+      "performers": [
+        "Tyler Henderson",
+        "Aanya Sengupta"
+      ],
+      "venue": "Jazz at Lincoln Center",
+      "address": "10 Columbus Circle, New York, NY 10019",
+      "lat": 40.76825,
+      "lng": -73.98285,
+      "date": "2026-10-20",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://ticketing.jazz.org/21996/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Quintet led by Tyler Henderson with guest Aanya Sengupta, listed for October 20.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://jazz.org/",
+      "artist": "Tyler Henderson, Aanya Sengupta",
+      "id": 35
     },
     {
       "title": "DJ TASMIN",
@@ -656,7 +841,7 @@
       "source": "venue-ai",
       "listing_url": "https://nublu.net/program",
       "artist": "DJ TASMIN",
-      "id": 28
+      "id": 36
     },
     {
       "title": "Lost Boys Musical w/ Unknown Mortal Orchestra",
@@ -680,7 +865,29 @@
       "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Lost Boys Musical, Unknown Mortal Orchestra",
-      "id": 29
+      "id": 37
+    },
+    {
+      "title": "BUMPY NIGHT",
+      "performers": [],
+      "venue": "Pete's Candy Store",
+      "address": "709 Lorimer St, Brooklyn, NY 11211",
+      "lat": 40.71809,
+      "lng": -73.95029,
+      "date": "2026-10-20",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.petescandystore.com/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Listed on tonight's lineup at Pete's Candy Store at 7:00 PM.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.petescandystore.com/",
+      "artist": "BUMPY NIGHT",
+      "id": 38
     },
     {
       "title": "Claud • Me And The Music Album Release Show",
@@ -702,7 +909,7 @@
       "source": "venue-data",
       "listing_url": "https://pianosnyc.com/shows",
       "artist": "Claud • Me And The Music Album Release Show",
-      "id": 30
+      "id": 39
     },
     {
       "title": "Punchdrunk Mag Presents: Vampyros Lesbos",
@@ -724,7 +931,7 @@
       "source": "venue-data",
       "listing_url": "https://pianosnyc.com/shows",
       "artist": "Punchdrunk Mag Presents: Vampyros Lesbos",
-      "id": 31
+      "id": 40
     },
     {
       "title": "gentle—noise",
@@ -741,12 +948,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Listed calendar event in the Sound Room; no further details shown on the page.",
+      "description": "Listed event in the Sound Room on Tuesday evening, October 20.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://publicrecords.nyc/",
       "artist": "gentle—noise",
-      "id": 32
+      "id": 41
     },
     {
       "title": "DOWNSTAIRS: Level Up! Video Game Club",
@@ -768,7 +975,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.purgatorybk.com/events",
       "artist": "DOWNSTAIRS: Level Up! Video Game Club",
-      "id": 33
+      "id": 42
     },
     {
       "title": "ORION Live!",
@@ -790,7 +997,7 @@
       "source": "venue-data",
       "listing_url": "https://sidgolds.com/detroit/events/",
       "artist": "ORION Live!",
-      "id": 34
+      "id": 43
     },
     {
       "title": "Robin Hackett",
@@ -807,12 +1014,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Folk and jazz performer listed on the upcoming shows calendar for an evening set.",
+      "description": "Folk and jazz performance listed on the Silvana music calendar.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Robin Hackett",
-      "id": 35
+      "id": 44
     },
     {
       "title": "Jr Mack Acoustic",
@@ -831,12 +1038,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Self-taught New Jersey guitarist playing acoustic blues, known for work with the Allman Brothers Band and Robert Randolph.",
+      "description": "Self-taught New Jersey blues guitarist known for a hypnotic stage presence and soulful interpretations.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Jr Mack",
-      "id": 36
+      "id": 45
     },
     {
       "title": "Maggie Feldman",
@@ -853,12 +1060,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Singer-songwriter performance at The Bitter End.",
+      "description": "Singer-songwriter performance at The Bitter End, an all-ages early evening show.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Maggie Feldman",
-      "id": 37
+      "id": 46
     },
     {
       "title": "The Courettes • The Dracu-Las • Todd-O-Phonic Todd",
@@ -880,7 +1087,53 @@
       "source": "venue-data",
       "listing_url": "https://www.union-pool.com/calendar",
       "artist": "The Courettes • The Dracu-Las • Todd-O-Phonic Todd",
-      "id": 38
+      "id": 47
+    },
+    {
+      "title": "THE TALLEST MAN ON EARTH",
+      "performers": [
+        "Gwenifer Raymond"
+      ],
+      "venue": "Webster Hall",
+      "address": "125 E 11th St, New York, NY 10003",
+      "lat": 40.73176,
+      "lng": -73.98909,
+      "date": "2026-10-20",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.axs.com/events/1462879/the-tallest-man-on-earth-tickets?skin=websterhall",
+      "genre": "Folk & Americana",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Solo folk performance with opening set by Gwenifer Raymond, listed at Webster Hall.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.websterhall.com/shows/",
+      "artist": "Gwenifer Raymond",
+      "id": 48
+    },
+    {
+      "title": "Shorts: Transmissions",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Short film program listed under BAM's film schedule.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Shorts: Transmissions",
+      "id": 49
     },
     {
       "title": "The Knights",
@@ -897,15 +1150,15 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Chamber orchestra performance at Zankel Hall.",
+      "description": "Performance by the ensemble The Knights in Zankel Hall.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "The Knights",
-      "id": 39
+      "id": 50
     },
     {
-      "title": "Elmira Darvarova, Violin: From Bach to Blues",
+      "title": "Elmira Darvarova, Violin - From Bach to Blues",
       "performers": [
         "Elmira Darvarova"
       ],
@@ -923,19 +1176,19 @@
       "program": [
         "From Bach to Blues"
       ],
-      "description": "Violin recital at Weill Recital Hall, programmed from Bach through blues.",
+      "description": "Violin recital by Elmira Darvarova in Weill Recital Hall, part of the New York Chamber Music Festival.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "Elmira Darvarova",
-      "id": 40
+      "id": 51
     },
     {
       "title": "RAY GALLON TRIO",
       "performers": [
-        "RAY GALLON / PIANO",
-        "PETER WASHINGTON / BASS",
-        "KENNY WASHINGTON / DRUMS"
+        "Ray Gallon",
+        "Peter Washington",
+        "Kenny Washington"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -949,20 +1202,20 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz piano trio set at Mezzrow, second early evening performance.",
+      "description": "Jazz piano trio with Ray Gallon, Peter Washington and Kenny Washington, second set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "RAY GALLON / PIANO, PETER WASHINGTON / BASS, KENNY WASHINGTON / DRUMS",
-      "id": 41
+      "artist": "Ray Gallon, Peter Washington, Kenny Washington",
+      "id": 52
     },
     {
       "title": "Tim Hegarty Band",
       "performers": [
-        "Tim Hegarty",
-        "Charlie Sigler",
-        "Anthony Perez",
-        "Tim Horner"
+        "Tim Hegarty / Tenor Sax",
+        "Charlie Sigler / Guitar",
+        "Anthony Perez / Bass",
+        "Tim Horner / Drums"
       ],
       "venue": "Smalls Jazz Club",
       "address": "183 W 10th St, New York, NY 10014",
@@ -976,12 +1229,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Tenor saxophone-led band performing the second set at Smalls.",
+      "description": "Tenor saxophone-led quartet performing the second early set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "Tim Hegarty, Charlie Sigler, Anthony Perez",
-      "id": 42
+      "artist": "Tim Hegarty / Tenor Sax, Charlie Sigler / Guitar, Anthony Perez / Bass",
+      "id": 53
     },
     {
       "title": "A Benefit for Little Essentials with David Cross & Friends",
@@ -1003,10 +1256,32 @@
       "source": "venue-data",
       "listing_url": "https://www.thebellhouseny.com/",
       "artist": "A Benefit for Little Essentials with David Cross & Friends",
-      "id": 43
+      "id": 54
     },
     {
-      "title": "Jam Session. House Band Set",
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "7:45 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film following Elizabeth Holmes as she documents her final weeks before prison, with director Nathan Fielder.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 55
+    },
+    {
+      "title": "TUES 8-11pm Jam Session. House Band Set - Gilad Hekselman, Ugonna Okegwo, Diego Voglino",
       "performers": [
         "Gilad Hekselman",
         "Ugonna Okegwo",
@@ -1024,12 +1299,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Open jam session led by the house band, with singers and instrumentalists welcome to sit in.",
+      "description": null,
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
       "artist": "Gilad Hekselman, Ugonna Okegwo, Diego Voglino",
-      "id": 44
+      "id": 56
     },
     {
       "title": "Amber Mark",
@@ -1050,7 +1325,7 @@
       "image": "https://s1.ticketm.net/dam/a/9cf/7c352cc2-904b-4cdb-b424-981f9fba99cf_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Amber Mark",
-      "id": 45
+      "id": 57
     },
     {
       "title": "Downstate",
@@ -1071,39 +1346,63 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Downstate",
-      "id": 46
+      "id": 58
     },
     {
-      "title": "Quadeca (16 and Over)",
+      "title": "Quadeca",
       "performers": [
-        "Quadeca",
         "Derby"
       ],
       "venue": "Brooklyn Steel",
-      "address": "319 Frost St, Brooklyn, NY",
-      "lat": 40.7272,
-      "lng": -73.9456,
+      "address": "319 Frost Street, Brooklyn, NY",
+      "lat": 40.71939,
+      "lng": -73.93875,
       "date": "2026-10-20",
       "time": "8:00 PM",
-      "end": null,
+      "end": "9:30 PM",
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZFea&utm_medium=affiliate",
-      "genre": "Hip-Hop & Rap",
+      "genre": "Indie & Alternative",
       "subgenre": "Urban",
       "price": null,
       "program": [],
       "description": null,
       "image": "https://s1.ticketm.net/dam/a/d38/bfdf6cc9-fb63-4771-b3f8-b6548259cd38_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
-      "artist": "Quadeca, Derby",
-      "id": 47
+      "source": "venue-data+ticketmaster",
+      "listing_url": "https://www.bowerypresents.com/venues/brooklyn-steel",
+      "artist": "Derby",
+      "id": 59
     },
     {
-      "title": "Live Weekly Bluegrass with  Allison Kelly",
+      "title": "SAFKA & Friends, a New Music Residency- new bands monthly (3rd Tuesdays)",
       "performers": [],
+      "venue": "Freddy's Bar",
+      "address": "627 5th Ave, Brooklyn, NY 11215",
+      "lat": 40.66329,
+      "lng": -73.99114,
+      "date": "2026-10-20",
+      "time": "8:00 PM",
+      "end": "11:00 PM",
+      "url": "https://www.freddysbar.com/events/original-music-open-mic-4",
+      "genre": "Indie & Alternative",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Monthly residency showcasing new bands, held on the third Tuesday of the month.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.freddysbar.com/events",
+      "artist": "SAFKA & Friends, a New Music Residency- new bands monthly (3rd Tuesdays)",
+      "id": 60
+    },
+    {
+      "title": "Live Weekly Bluegrass with Allison Kelly",
+      "performers": [
+        "Allison Kelly"
+      ],
       "venue": "Lucinda's",
-      "address": "169 Avenue A, New York, NY",
+      "address": "169 Avenue A, New York, NY 10009",
       "lat": 40.72833,
-      "lng": -73.9822,
+      "lng": -73.98219,
       "date": "2026-10-20",
       "time": "8:00 PM",
       "end": null,
@@ -1112,11 +1411,12 @@
       "subgenre": "Bluegrass",
       "price": null,
       "program": [],
-      "description": null,
+      "description": "Weekly bluegrass session hosted by Allison Kelly at Lucinda's.",
       "image": "https://s1.ticketm.net/dam/c/677/c58dd0af-cda8-49b2-bdaf-068540c3a677_106541_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
-      "artist": "Live Weekly Bluegrass with  Allison Kelly",
-      "id": 48
+      "source": "venue-ai+ticketmaster",
+      "listing_url": "https://www.lucindasnyc.com/",
+      "artist": "Allison Kelly",
+      "id": 61
     },
     {
       "title": "Prophet II, Continental Shelf, and Slackmagic",
@@ -1137,15 +1437,15 @@
       "subgenre": null,
       "price": "$13.60",
       "program": [],
-      "description": "Live bill of three bands at Purgatory in Brooklyn.",
+      "description": "Live music bill with three bands at Purgatory.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.purgatorybk.com/events",
       "artist": "Prophet II, Continental Shelf, Slackmagic",
-      "id": 49
+      "id": 62
     },
     {
-      "title": "Contemporaneous, Recap, and Mantra present: Seeing in the Dark",
+      "title": "CONTEMPORANEOUS, RECAP, AND MANTRA PRESENT: SEEING IN THE DARK",
       "performers": [
         "Brendon Randall-Myers",
         "Lila Meretzky",
@@ -1159,7 +1459,7 @@
       "time": "8:00 PM",
       "end": null,
       "url": "https://roulette.org/event/contemporaneous-mantra-percussion-recap-percussion-seeing-in-the-dark/",
-      "genre": "Avant-garde",
+      "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
@@ -1168,7 +1468,7 @@
       "source": "venue-ai",
       "listing_url": "https://roulette.org/calendar/",
       "artist": "Brendon Randall-Myers, Lila Meretzky, Paul Pinto",
-      "id": 50
+      "id": 63
     },
     {
       "title": "Jen Howard",
@@ -1181,16 +1481,38 @@
       "time": "8:00 PM",
       "end": "9:00 PM",
       "url": "https://www.silvana-nyc.com/event/jen-howard",
-      "genre": "Folk & Americana",
+      "genre": "Pop",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Singer and guitarist listed in the upcoming shows for an evening set.",
+      "description": "Singer-guitarist performance listed on the Silvana music calendar.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Jen Howard",
-      "id": 51
+      "id": 64
+    },
+    {
+      "title": "The Binoculars",
+      "performers": [],
+      "venue": "Sunny's Red Hook",
+      "address": "253 Conover St, Brooklyn, NY 11231",
+      "lat": 40.67561,
+      "lng": -74.0168,
+      "date": "2026-10-20",
+      "time": "8:00 PM",
+      "end": null,
+      "url": "https://www.sunnysredhook.com/calendar2/",
+      "genre": "Folk & Americana",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.sunnysredhook.com/calendar2/",
+      "artist": "The Binoculars",
+      "id": 65
     },
     {
       "title": "Julian Miltenberger Trio— Jazz | First Set",
@@ -1209,33 +1531,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "First set by the Julian Miltenberger Trio, a jazz performance listed for Tuesday, October 20.",
+      "description": "First set by the Julian Miltenberger Trio, a jazz performance on Tuesday night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terraza7.com/",
       "artist": "Julian Miltenberger Trio",
-      "id": 52
+      "id": 66
     },
     {
-      "title": "The End of the Line Motel Presents FATALES",
+      "title": "THE END OF THE LINE MOTEL PRESENTS FATALES",
       "performers": [],
       "venue": "Wild Horses",
-      "address": "327 Bowery, New York, NY",
-      "lat": 40.72569,
-      "lng": -73.99169,
+      "address": "327 Bowery, New York, NY 10003",
+      "lat": 40.7257,
+      "lng": -73.99167,
       "date": "2026-10-20",
       "time": "8:00 PM",
       "end": null,
       "url": "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-end-of-the-line-wild-horses-tickets%2F14381104&utm_medium=affiliate",
       "genre": "Rock",
       "subgenre": "Folk Rock",
-      "price": null,
+      "price": "FREE EVENT - NO TICKETS REQUIRED",
       "program": [],
-      "description": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund.",
+      "description": "Free showcase presented by The End of the Line Motel at Wild Horses; 21 and up.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
-      "source": "ticketmaster",
-      "artist": "The End of the Line Motel Presents FATALES",
-      "id": 53
+      "source": "venue-ai+ticketmaster",
+      "listing_url": "https://wildhorsesnyc.com/",
+      "artist": "THE END OF THE LINE MOTEL PRESENTS FATALES",
+      "id": 67
     },
     {
       "title": "Synthesthesia",
@@ -1252,12 +1575,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Event listed at Wonderville starting at 8:00 PM on October 20, running into the next day.",
+      "description": "Event listed on Wonderville's events calendar starting the evening of October 20, running into October 21.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.wonderville.nyc/",
       "artist": "Synthesthesia",
-      "id": 54
+      "id": 68
     },
     {
       "title": "Wild Card Comedy Free Every Tuesday",
@@ -1279,7 +1602,29 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Wild Card Comedy Free Every Tuesday",
-      "id": 55
+      "id": 69
+    },
+    {
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "8:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film following Elizabeth Holmes as she documents her final weeks before prison, with director Nathan Fielder.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 70
     },
     {
       "title": "VINCE GIORDANO AND THE NIGHTHAWKS",
@@ -1298,12 +1643,12 @@
       "subgenre": "Pop",
       "price": "$24.91 - $35.46",
       "program": [],
-      "description": "Tuesday evening Theater show by Vince Giordano and the Nighthawks, doors at 7:30 PM.",
+      "description": "Evening show by a New Orleans-style and swing dance band in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Vince Giordano",
-      "id": 56
+      "id": 71
     },
     {
       "title": "Drunk Bollywood Live",
@@ -1320,12 +1665,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live Bollywood-themed party show on the Main Stage. Currently sold out, with a waitlist available.",
+      "description": "Live Bollywood-themed show on the Main Stage. Currently sold out, with a waitlist available.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://citywinery.com/pages/locations/new-york-city",
       "artist": "Drunk Bollywood Live",
-      "id": 57
+      "id": 72
     },
     {
       "title": "Bywater Call",
@@ -1346,7 +1691,29 @@
       "image": "https://s1.ticketm.net/dam/a/0b4/5ce1576e-b1a9-4956-820c-4539fc7340b4_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Bywater Call",
-      "id": 58
+      "id": 73
+    },
+    {
+      "title": "ARIA LISSLO",
+      "performers": [],
+      "venue": "Pete's Candy Store",
+      "address": "709 Lorimer St, Brooklyn, NY 11211",
+      "lat": 40.71809,
+      "lng": -73.95029,
+      "date": "2026-10-20",
+      "time": "8:30 PM",
+      "end": null,
+      "url": "https://www.petescandystore.com/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Listed on tonight's lineup at Pete's Candy Store at 8:30 PM.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.petescandystore.com/",
+      "artist": "ARIA LISSLO",
+      "id": 74
     },
     {
       "title": "Debbie Deane",
@@ -1366,12 +1733,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Evening show with Debbie Deane, joined by Jim Whitney and Adrian Harpham.",
+      "description": "Early-evening-to-night show at The Bitter End with guests Jim Whitney and Adrian Harpham.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Jim Whitney, Adrian Harpham",
-      "id": 59
+      "id": 75
     },
     {
       "title": "Patty Smyth at Café Carlyle",
@@ -1390,12 +1757,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Singer-songwriter Patty Smyth opens a five-night Café Carlyle engagement running October 20 through 24, 2026.",
+      "description": "Grammy- and Oscar-nominated singer-songwriter's debut five-night engagement at Café Carlyle, October 20-24, 2026.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/experiences/calendar",
       "artist": "Patty Smyth",
-      "id": 60
+      "id": 76
+    },
+    {
+      "title": "Primetime",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "9:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/primetime",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Chris Hansen's 2006 plan to make television history with To Catch a Predator.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Primetime",
+      "id": 77
     },
     {
       "title": "DAN WEISS TRIO W/THOMAS MORGAN & JACOB SACKS",
@@ -1416,12 +1805,12 @@
       "subgenre": null,
       "price": "$10 suggested donation",
       "program": [],
-      "description": "Dan Weiss leads his trio with bassist Thomas Morgan and pianist Jacob Sacks in an improvised jazz set.",
+      "description": "Dan Weiss leads his trio with bassist Thomas Morgan and pianist Jacob Sacks at this Bar LunÀtico show.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barlunatico.com/music",
       "artist": "Dan Weiss, Thomas Morgan, Jacob Sacks",
-      "id": 61
+      "id": 78
     },
     {
       "title": "SLAVIC SOUL PARTY",
@@ -1447,15 +1836,15 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Nine-piece brass band blending Balkan brass, funk, Roma accordion and jazz in a weekly Tuesday party.",
+      "description": "Weekly Tuesday night brass band party blending Balkan brass, funk, Roma accordion and jazz.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "John Carlson, Kenny Warren, Peter Hess",
-      "id": 62
+      "id": 79
     },
     {
-      "title": "KNEW THEM WHEN FEST: PERFORMANCES BY NYU RISING STARS",
+      "title": "Knew Them When Fest: Performances by NYU Rising Stars",
       "performers": [
         "NYU Rising Stars"
       ],
@@ -1469,14 +1858,39 @@
       "url": "https://mercuryeastpresents.com/tm-event/knew-them-when-fest-performances-by-nyu-rising-stars/",
       "genre": "Other",
       "subgenre": null,
-      "price": "0.00",
+      "price": null,
       "program": [],
-      "description": "Knew Them When Fest showcase featuring NYU Rising Stars performers at Bowery Ballroom at 9 PM.",
+      "description": "Knew Them When Fest showcase featuring NYU student performers at Bowery Ballroom, listed under today's shows.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
       "artist": "NYU Rising Stars",
-      "id": 63
+      "id": 80
+    },
+    {
+      "title": "TYLER HENDERSON QUINTET FEATURING AANYA SENGUPTA",
+      "performers": [
+        "Tyler Henderson",
+        "Aanya Sengupta"
+      ],
+      "venue": "Dizzy's Club",
+      "address": "10 Columbus Circle, New York, NY 10019",
+      "lat": 40.76825,
+      "lng": -73.98285,
+      "date": "2026-10-20",
+      "time": "9:00 PM",
+      "end": null,
+      "url": "https://ticketing.jazz.org/21996/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Pianist Tyler Henderson leads his quintet with guest vocalist Aanya Sengupta, celebrating his new recording The Long Game.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://jazz.org/dizzys/",
+      "artist": "Tyler Henderson, Aanya Sengupta",
+      "id": 81
     },
     {
       "title": "Sun of Goldfinger - Tim Berne David Torn Ches Smith",
@@ -1497,12 +1911,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz performance by Tim Berne, David Torn and Ches Smith, listed for Tuesday evening.",
+      "description": "Jazz performance by Tim Berne, David Torn and Ches Smith.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.lowlandsbar.com/events",
       "artist": "Tim Berne, David Torn, Ches Smith",
-      "id": 64
+      "id": 82
     },
     {
       "title": "Knew Them When Fest: Performances By NYU Rising Stars",
@@ -1521,19 +1935,19 @@
       "subgenre": "Electro Pop",
       "price": null,
       "program": [],
-      "description": "Showcase festival featuring performances by NYU Rising Stars at Mercury Lounge; doors at 9 PM.",
+      "description": "Showcase festival featuring student performers from NYU; doors at 9 PM.",
       "image": "https://s1.ticketm.net/dam/e/7be/f925d998-dac3-43c2-a02a-149e50ffb7be_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "artist": "NYU Rising Stars",
-      "id": 65
+      "id": 83
     },
     {
       "title": "TARDO HAMMER TRIO",
       "performers": [
-        "TARDO HAMMER / PIANO",
-        "LEE HUDSON / BASS",
-        "KEITH BALLA / DRUMS"
+        "Tardo Hammer",
+        "Lee Hudson",
+        "Keith Balla"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -1547,12 +1961,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz piano trio set at Mezzrow, first of two late evening performances.",
+      "description": "Jazz piano trio led by Tardo Hammer, first set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "TARDO HAMMER / PIANO, LEE HUDSON / BASS, KEITH BALLA / DRUMS",
-      "id": 66
+      "artist": "Tardo Hammer, Lee Hudson, Keith Balla",
+      "id": 84
     },
     {
       "title": "BROOKLYN CIRCLE",
@@ -1573,12 +1987,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late set by the Brooklyn Circle trio featuring tenor saxophone, bass and drums.",
+      "description": "Late set led by tenor saxophonist Stacy Dillard with bass and drums.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
       "artist": "Stacy Dillard (ts), Diallo House (b), Ismail Lawal (d)",
-      "id": 67
+      "id": 85
     },
     {
       "title": "Tianxiao Wang Trio",
@@ -1595,20 +2009,20 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio listed in the upcoming shows for a late-evening set.",
+      "description": "Jazz trio performance listed on the Silvana music calendar.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Tianxiao Wang Trio",
-      "id": 68
+      "id": 86
     },
     {
       "title": "David Gibson Quartet",
       "performers": [
-        "David Gibson",
-        "Cameron Campbell",
-        "Joseph Lepore",
-        "Jay Sawyer"
+        "David Gibson / Trombone",
+        "Cameron Campbell / Piano",
+        "Joseph Lepore / Bass",
+        "Jay Sawyer / Drums"
       ],
       "venue": "Smalls Jazz Club",
       "address": "183 W 10th St, New York, NY 10014",
@@ -1622,12 +2036,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Trombone-led quartet performing the first of two sets at Smalls.",
+      "description": "Trombone-led quartet performing the first of two late-evening sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "David Gibson, Cameron Campbell, Joseph Lepore",
-      "id": 69
+      "artist": "David Gibson / Trombone, Cameron Campbell / Piano, Joseph Lepore / Bass",
+      "id": 87
     },
     {
       "title": "The Tallest Man on Earth",
@@ -1648,7 +2062,51 @@
       "image": "https://s1.ticketm.net/dam/a/f3f/60b51953-3814-4d47-be0e-6724bc570f3f_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "The Tallest Man on Earth",
-      "id": 70
+      "id": 88
+    },
+    {
+      "title": "CAROLINE MEADE",
+      "performers": [],
+      "venue": "Pete's Candy Store",
+      "address": "709 Lorimer St, Brooklyn, NY 11211",
+      "lat": 40.71809,
+      "lng": -73.95029,
+      "date": "2026-10-20",
+      "time": "9:05 PM",
+      "end": null,
+      "url": "https://www.petescandystore.com/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Listed on tonight's lineup at Pete's Candy Store at 9:05 PM.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.petescandystore.com/",
+      "artist": "CAROLINE MEADE",
+      "id": 89
+    },
+    {
+      "title": "Ken Russell's The Devils",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "9:15 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-devils",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Uncut theatrical screening of Ken Russell's 1971 film The Devils.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Ken Russell's The Devils",
+      "id": 90
     },
     {
       "title": "You’re Like, Really Pretty: Broadway’s Best Makeovers, Glow-ups and Transformations",
@@ -1665,12 +2123,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "A late-night cabaret revue celebrating Broadway makeovers, glow-ups and transformations.",
+      "description": "Late-night cabaret show themed around Broadway makeovers and transformation songs.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://54below.org/calendar/",
       "artist": "You’re Like, Really Pretty: Broadway’s Best Makeovers, Glow-ups and Transformations",
-      "id": 71
+      "id": 91
+    },
+    {
+      "title": "The History of Concrete",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-10-20",
+      "time": "9:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/the-history-of-concrete",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "John Wilson documentary attempting to make the definitive film about concrete.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "The History of Concrete",
+      "id": 92
     },
     {
       "title": "ANDERSON BROTHERS PLAY BENNY GOODMAN",
@@ -1689,12 +2169,12 @@
       "subgenre": "Jazz",
       "price": "$35.46 - $45.76",
       "program": [],
-      "description": "Late Tuesday Jazz Club set tribute to Benny Goodman by the Anderson Brothers, doors at 9:00 PM.",
+      "description": "Late tribute to Benny Goodman performed by the Anderson Brothers in the Jazz Club.",
       "image": "https://i.ticketweb.com/i/00/12/94/53/14_Edp.jpg?v=2",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Anderson Brothers",
-      "id": 72
+      "id": 93
     },
     {
       "title": "saoirse dream, Anita Velveeta, Estelle Allen",
@@ -1715,7 +2195,7 @@
       "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "saoirse dream, Anita Velveeta, Estelle Allen",
-      "id": 73
+      "id": 94
     },
     {
       "title": "I LOVE ROCKSTARS",
@@ -1732,12 +2212,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late night set listed for Tuesday from 10pm to 2am.",
+      "description": "Late-night set listed for Tuesday from 10pm to 2am.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://nublu.net/program",
       "artist": "I LOVE ROCKSTARS",
-      "id": 74
+      "id": 95
     },
     {
       "title": "Doc / Bryan Band",
@@ -1759,12 +2239,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late set by Doc French, Bobby Bryan and bandmates; the band plays until 2 AM.",
+      "description": null,
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Doc French, Bobby Bryan, Mike Nuno",
-      "id": 75
+      "id": 96
     },
     {
       "title": "A Beautiful Noise at The Bitter End",
@@ -1777,16 +2257,38 @@
       "time": "10:00 PM",
       "end": null,
       "url": "https://bitterend.com/#/events/202261",
-      "genre": "Cabaret & Musicals",
+      "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "National tour send-off concert at The Bitter End.",
+      "description": "National tour send-off concert at The Bitter End, late show.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "A Beautiful Noise at The Bitter End",
-      "id": 76
+      "id": 97
+    },
+    {
+      "title": "LARK LEPAGE",
+      "performers": [],
+      "venue": "Pete's Candy Store",
+      "address": "709 Lorimer St, Brooklyn, NY 11211",
+      "lat": 40.71809,
+      "lng": -73.95029,
+      "date": "2026-10-20",
+      "time": "10:15 PM",
+      "end": null,
+      "url": "https://www.petescandystore.com/",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Listed on tonight's lineup at Pete's Candy Store at 10:15 PM.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.petescandystore.com/",
+      "artist": "LARK LEPAGE",
+      "id": 98
     },
     {
       "title": "Amber Mark",
@@ -1807,14 +2309,14 @@
       "image": "https://s1.ticketm.net/dam/a/9cf/7c352cc2-904b-4cdb-b424-981f9fba99cf_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Amber Mark",
-      "id": 77
+      "id": 99
     },
     {
       "title": "TARDO HAMMER TRIO",
       "performers": [
-        "TARDO HAMMER / PIANO",
-        "LEE HUDSON / BASS",
-        "KEITH BALLA / DRUMS"
+        "Tardo Hammer",
+        "Lee Hudson",
+        "Keith Balla"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -1828,20 +2330,20 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz piano trio set at Mezzrow, second late evening performance.",
+      "description": "Jazz piano trio led by Tardo Hammer, second set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "TARDO HAMMER / PIANO, LEE HUDSON / BASS, KEITH BALLA / DRUMS",
-      "id": 78
+      "artist": "Tardo Hammer, Lee Hudson, Keith Balla",
+      "id": 100
     },
     {
       "title": "David Gibson Quartet",
       "performers": [
-        "David Gibson",
-        "Cameron Campbell",
-        "Joseph Lepore",
-        "Jay Sawyer"
+        "David Gibson / Trombone",
+        "Cameron Campbell / Piano",
+        "Joseph Lepore / Bass",
+        "Jay Sawyer / Drums"
       ],
       "venue": "Smalls Jazz Club",
       "address": "183 W 10th St, New York, NY 10014",
@@ -1855,12 +2357,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Trombone-led quartet performing the second set at Smalls.",
+      "description": "Trombone-led quartet performing the second late-evening set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "David Gibson, Cameron Campbell, Joseph Lepore",
-      "id": 79
+      "artist": "David Gibson / Trombone, Cameron Campbell / Piano, Joseph Lepore / Bass",
+      "id": 101
     },
     {
       "title": "VINYL AFTER HOURS",
@@ -1877,19 +2379,19 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night vinyl listening session at Mezzrow, running until 12:45 AM.",
+      "description": "Late-night vinyl listening session at Mezzrow.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "VINYL AFTER HOURS",
-      "id": 80
+      "id": 102
     },
     {
       "title": "Jam Session Hosted By Jason Clotter",
       "performers": [
-        "Jason Maximo Clotter",
-        "Maki Nientao",
-        "Samuel Bolduc"
+        "Jason Maximo Clotter / Bass",
+        "Maki Nientao / Piano",
+        "Samuel Bolduc / Drums"
       ],
       "venue": "Smalls Jazz Club",
       "address": "183 W 10th St, New York, NY 10014",
@@ -1903,12 +2405,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night jam session hosted by Jason Clotter at Smalls.",
+      "description": "Late-night jam session hosted by bassist Jason Clotter with a rhythm section.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
-      "artist": "Jason Maximo Clotter, Maki Nientao, Samuel Bolduc",
-      "id": 81
+      "artist": "Jason Maximo Clotter / Bass, Maki Nientao / Piano, Samuel Bolduc / Drums",
+      "id": 103
     }
   ]
 }
