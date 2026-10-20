@@ -109,7 +109,7 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
     row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found),
                detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
                        if info["rejected"] else info["page_kind"]),
-               tokens=[info["input_tokens"], info["output_tokens"]])
+               tokens=[info["input_tokens"], info["output_tokens"]], examples=info.get("examples"))
     return found, row
 
 

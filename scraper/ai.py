@@ -215,6 +215,21 @@ def copied_phrase(desc: str, page_words: str, n: int = 8) -> bool:
     return any(" ".join(words[i:i + n]) in page_words for i in range(0, max(0, len(words) - n + 1)))
 
 
+def _loose(s: str) -> str:
+    return " ".join(WORD.findall(_squash(s)))
+
+
+_LOOSE_CACHE: dict[int, str] = {}
+
+
+def on_page(quote: str, page: str) -> bool:
+    """The quote appears on the page, ignoring punctuation, line breaks and case."""
+    if _squash(quote) in page:
+        return True
+    lp = _LOOSE_CACHE.setdefault(id(page), _loose(page))
+    return bool(_loose(quote)) and _loose(quote) in lp
+
+
 def near(page: str, a: str, b: str, span: int) -> bool:
     """True if some occurrence of a is within span characters of some occurrence of b."""
     pa = [m.start() for m in re.finditer(re.escape(a), page)][:200]
@@ -227,9 +242,9 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     if not raw.get("public_performance", True) or not title or GENERIC.match(title):
         return None, "not a public performance"
     de, te = raw.get("date_evidence") or "", raw.get("time_evidence") or ""
-    if not (2 <= len(de) <= 200 and _squash(de) in page):
+    if not (2 <= len(de) <= 200 and on_page(de, page)):
         return None, "date quote not found on page"
-    if not (2 <= len(te) <= 200 and _squash(te) in page):
+    if not (2 <= len(te) <= 200 and on_page(te, page)):
         return None, "time quote not found on page"
     start = parse_clock(raw.get("start_time"))
     if start is None or start not in times_in(te):
@@ -343,7 +358,7 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
     answer, usage = call_claude(api_key, prompt)
     page = _squash(snap.text)
     page_norm = norm(snap.text)
-    kept, reasons = [], {}
+    kept, reasons, examples = [], {}, []
     events = answer.get("events") or []
     if isinstance(events, str):  # the model occasionally sends the list as a JSON string
         try:
@@ -359,6 +374,8 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
             kept.append(ev)
         else:
             reasons[why] = reasons.get(why, 0) + 1
+            if len(examples) < 3:
+                examples.append({k: raw.get(k) for k in ("title", "start_time", "date_evidence", "time_evidence")} | {"why": why})
     return kept, {"page_kind": answer.get("page_kind"), "proposed": len(answer.get("events") or []),
-                  "rejected": reasons, "input_tokens": usage.get("input_tokens", 0),
+                  "rejected": reasons, "examples": examples, "input_tokens": usage.get("input_tokens", 0),
                   "output_tokens": usage.get("output_tokens", 0)}
