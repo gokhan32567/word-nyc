@@ -259,7 +259,9 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
         return None, "title not on page"
     shown = (raw.get("venue_shown") or "").strip()
     state = re.search(r",\s*([A-Z]{2})\b", shown)
-    if raw.get("at_this_venue") is False or (state and state.group(1) != "NY"):
+    # "Not at this venue" only counts when the page actually names another venue for the event;
+    # a venue's own calendar usually doesn't repeat its name on every listing.
+    if (raw.get("at_this_venue") is False and shown) or (state and state.group(1) != "NY"):
         return None, "listed at another venue"
     anchor = _squash(title) if _squash(title) in page else max(present or [""], key=len)
     if anchor and not near(page, anchor, _squash(te), 2500):
