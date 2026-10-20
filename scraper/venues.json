@@ -1015,12 +1015,6 @@
    "genre": "Folk & Americana"
   },
   {
-   "name": "Night Club 101",
-   "address": "101 Avenue A, New York, NY 10009",
-   "url": "https://www.nightclub101.com/",
-   "genre": "Electronic & DJ"
-  },
-  {
    "name": "Dizzy's Club",
    "address": "10 Columbus Circle, New York, NY 10019",
    "url": "https://jazz.org/dizzys/",
@@ -1033,28 +1027,10 @@
    "genre": "Jazz"
   },
   {
-   "name": "Mona's",
-   "address": "224 Avenue B, New York, NY 10009",
-   "url": "https://www.monasnyc.com/",
-   "genre": "Jazz"
-  },
-  {
-   "name": "Paris Blues",
-   "address": "2021 Adam Clayton Powell Jr Blvd, New York, NY 10027",
-   "url": "https://www.parisbluesharlem.com/",
-   "genre": "Blues"
-  },
-  {
    "name": "11th Street Bar",
    "address": "510 E 11th St, New York, NY 10009",
    "url": "https://www.11thstbar.com/",
    "genre": "Folk & Americana"
-  },
-  {
-   "name": "Knitting Factory",
-   "address": "361 Metropolitan Ave, Brooklyn, NY 11211",
-   "url": "https://bk.knittingfactory.com/",
-   "genre": "Indie & Alternative"
   },
   {
    "name": "Rough Trade NYC",
@@ -1075,12 +1051,6 @@
    "genre": "Avant-garde"
   },
   {
-   "name": "Muchmore's",
-   "address": "2 Havemeyer St, Brooklyn, NY 11211",
-   "url": "https://www.muchmoresnyc.com/",
-   "genre": "Indie & Alternative"
-  },
-  {
    "name": "Pete's Candy Store",
    "address": "709 Lorimer St, Brooklyn, NY 11211",
    "url": "https://www.petescandystore.com/",
@@ -1091,18 +1061,6 @@
    "address": "1272 Broadway, Brooklyn, NY 11221",
    "url": "https://www.thebroadway.nyc/",
    "genre": "Rock"
-  },
-  {
-   "name": "Brooklyn Made",
-   "address": "4 Carroll St, Brooklyn, NY 11231",
-   "url": "https://www.brooklynmade.com/",
-   "genre": "Indie & Alternative"
-  },
-  {
-   "name": "Footlight Bar",
-   "address": "465 Seneca Ave, Queens, NY 11385",
-   "url": "https://www.thefootlightbar.com/",
-   "genre": "Indie & Alternative"
   },
   {
    "name": "Bar Freda",
@@ -1147,12 +1105,6 @@
    "genre": "Classical"
   },
   {
-   "name": "The Frick Collection",
-   "address": "1 E 70th St, New York, NY 10021",
-   "url": "https://www.frick.org/programs/concerts",
-   "genre": "Classical"
-  },
-  {
    "name": "Brooklyn Conservatory of Music",
    "address": "58 7th Ave, Brooklyn, NY 11217",
    "url": "https://bkcm.org/events/",
@@ -1177,33 +1129,9 @@
    "genre": "Opera"
   },
   {
-   "name": "Brooklyn Mirage",
-   "address": "140 Stewart Ave, Brooklyn, NY 11237",
-   "url": "https://www.avant-gardner.com/",
-   "genre": "Electronic & DJ"
-  },
-  {
-   "name": "Bossa Nova Civic Club",
-   "address": "1271 Myrtle Ave, Brooklyn, NY 11221",
-   "url": "https://www.bossanovacivicclub.com/",
-   "genre": "Electronic & DJ"
-  },
-  {
-   "name": "Superior Ingredients",
-   "address": "74 Wythe Ave, Brooklyn, NY 11249",
-   "url": "https://superioringredients.nyc/",
-   "genre": "Electronic & DJ"
-  },
-  {
    "name": "H0L0",
    "address": "1090 Wyckoff Ave, Queens, NY 11385",
    "url": "https://www.h0l0.nyc/",
-   "genre": "Electronic & DJ"
-  },
-  {
-   "name": "Silo",
-   "address": "90 Ingraham St, Brooklyn, NY 11237",
-   "url": "https://www.silo-brooklyn.com/",
    "genre": "Electronic & DJ"
   },
   {
@@ -1211,12 +1139,6 @@
    "address": "505 E 6th St, New York, NY 10009",
    "url": "https://www.clubcummingnyc.com/",
    "genre": "Cabaret & Musicals"
-  },
-  {
-   "name": "Bar Chord",
-   "address": "1008 Cortelyou Rd, Brooklyn, NY 11218",
-   "url": "https://www.barchordnyc.com/",
-   "genre": "Folk & Americana"
   },
   {
    "name": "Sunny's Red Hook",
@@ -1241,12 +1163,6 @@
    "address": "5-25 46th Ave, Queens, NY 11101",
    "url": "https://www.culturelablic.org/",
    "genre": "Other"
-  },
-  {
-   "name": "Bronx Music Heritage Center",
-   "address": "1303 Louis Nine Blvd, Bronx, NY 10459",
-   "url": "https://www.bronxmusicheritagecenter.org/",
-   "genre": "Latin"
   }
  ]
 }
