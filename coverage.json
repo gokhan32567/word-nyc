@@ -1,12 +1,12 @@
 {
  "date": "2026-10-20",
- "generated": "2026-10-20T09:31:39-04:00",
+ "generated": "2026-10-20T09:48:49-04:00",
  "totals": {
-  "venues": 153,
-  "shows": 73,
-  "ok": 33,
-  "none-tonight": 98,
-  "blocked": 16,
+  "venues": 154,
+  "shows": 81,
+  "ok": 37,
+  "none-tonight": 97,
+  "blocked": 14,
   "error": 4,
   "robots": 0,
   "no-location": 0,
@@ -14,16 +14,38 @@
  },
  "shows_by_source": {
   "venue-data": 10,
-  "venue-ai": 49,
+  "venue-ai": 57,
   "ticketmaster": 21
  },
  "ai": {
-  "calls": 124,
-  "input_tokens": 998101,
-  "output_tokens": 23802,
-  "cost_usd": 0.1117
+  "calls": 127,
+  "input_tokens": 1033367,
+  "output_tokens": 24921,
+  "cost_usd": 0.1158
  },
  "venues": [
+  {
+   "name": "92NY",
+   "url": "https://www.92ny.org/",
+   "read_url": "https://www.92ny.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× date quote is not tonight",
+   "tokens": [
+    70267,
+    581
+   ],
+   "examples": [
+    {
+     "title": "Jonathan Mahler and Kathy Wylde in Conversation with Thomas Dyja: The Gods of New York and a City Transformed",
+     "start_time": "7:30 PM",
+     "date_evidence": "TUESDAY",
+     "time_evidence": "7:30 PM ET / IN PERSON 7:30 PM ET / STREAMING",
+     "why": "date quote is not tonight"
+    }
+   ]
+  },
   {
    "name": "Americas Society",
    "url": "https://www.as-coa.org/",
@@ -31,20 +53,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "detail": "calendar",
    "tokens": [
-    7729,
-    315
+    7737,
+    326
    ],
-   "examples": [
-    {
-     "title": "YPA and FILNYC: Paloma Salas and Daffne Valdés on the Legacy of Gabriela Mistral",
-     "start_time": "6:00 PM",
-     "date_evidence": "Tuesday, October 20, 6:00 pm",
-     "time_evidence": "Tuesday, October 20, 6:00 pm",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Apollo Theater",
@@ -53,10 +67,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     10831,
-    63
+    59
    ],
    "examples": []
   },
@@ -131,37 +145,6 @@
    "examples": []
   },
   {
-   "name": "BAM",
-   "url": "https://www.bam.org/",
-   "read_url": "https://www.bam.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    8145,
-    228
-   ],
-   "examples": [
-    {
-     "title": "Naza",
-     "start_time": "4:20 PM",
-     "date_evidence": "20\nToday's Performances",
-     "time_evidence": "Naza\n4:20pm\n6:40pm",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
-   "name": "Bar Bayeux",
-   "url": "https://www.barbayeux.com/",
-   "read_url": "https://www.barbayeux.com/jazz",
-   "method": null,
-   "status": "blocked",
-   "shows": 0,
-   "detail": "HTTP 503"
-  },
-  {
    "name": "Bargemusic",
    "url": "https://www.bargemusic.org/",
    "read_url": "https://www.bargemusic.org/",
@@ -196,7 +179,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2521,
     63
@@ -236,14 +219,14 @@
    "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     8297,
-    274
+    187
    ],
    "examples": [
     {
-     "title": "Robert Glasper X Kem presents Alkemy",
+     "title": "Robert Glasper X Halloween with Derrick Hodge & Chris Dave",
      "start_time": "8:00 PM",
-     "date_evidence": "25",
-     "time_evidence": "Robert Glasper X Kem presents Alkemy 8:00 PM & 10:30 PM",
+     "date_evidence": "31",
+     "time_evidence": "8:00 PM & 10:30 PM",
      "why": "date quote is not tonight"
     }
    ]
@@ -297,10 +280,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance, 1× listed at another venue",
+   "detail": "calendar; dropped 5× not a public performance",
    "tokens": [
     8595,
-    887
+    889
    ],
    "examples": [
     {
@@ -350,7 +333,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     12320,
-    276
+    281
    ],
    "examples": [
     {
@@ -428,7 +411,7 @@
    "detail": "calendar; dropped 3× not a public performance",
    "tokens": [
     13428,
-    572
+    667
    ],
    "examples": [
     {
@@ -475,10 +458,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     9008,
-    59
+    63
    ],
    "examples": []
   },
@@ -598,12 +581,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     5931,
-    59
+    254
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "FAYA Faith Night",
+     "start_time": "6:30 PM",
+     "date_evidence": "Wednesday, 6:30 PM ET",
+     "time_evidence": "Wednesday, 6:30 PM ET · The Living Room",
+     "why": "not a public performance"
+    }
+   ]
   },
   {
    "name": "Flushing Town Hall",
@@ -698,7 +689,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    2913,
+    2933,
     63
    ],
    "examples": []
@@ -754,32 +745,10 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    12089,
+    12182,
     63
    ],
    "examples": []
-  },
-  {
-   "name": "Jazz at Lincoln Center",
-   "url": "https://jazz.org/",
-   "read_url": "https://jazz.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    6954,
-    262
-   ],
-   "examples": [
-    {
-     "title": "FRANCE'S NO(W) BEAUTY: AN EVENING OF CINEMATIC JAZZ",
-     "start_time": "7:00 PM",
-     "date_evidence": "OCT 20",
-     "time_evidence": "LIVE EVERY NIGHT 7PM & 9PM",
-     "why": "listed at another venue"
-    }
-   ]
   },
   {
    "name": "Joe's Pub",
@@ -856,7 +825,7 @@
    "examples": [
     {
      "title": "Macbeth",
-     "start_time": "11:00 AM",
+     "start_time": "11:00 am",
      "date_evidence": "Tuesday, October 20, 2026",
      "time_evidence": "11:00 am",
      "why": "not a public performance"
@@ -916,7 +885,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5745,
     63
@@ -1047,35 +1016,6 @@
    "examples": []
   },
   {
-   "name": "Nublu Classic",
-   "url": "https://nublu.net/",
-   "read_url": "https://nublu.net/program",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    5157,
-    440
-   ],
-   "examples": [
-    {
-     "title": "DJ TASMIN",
-     "start_time": "7:00 PM",
-     "date_evidence": "Tuesday October 20",
-     "time_evidence": "7pm-10pm DJ TASMIN",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "I LOVE ROCKSTARS",
-     "start_time": "10:00 PM",
-     "date_evidence": "Tuesday October 20",
-     "time_evidence": "10pm-2am I LOVE ROCKSTARS",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
    "name": "OPERA America National Opera Center",
    "url": "https://www.operaamerica.org/",
    "read_url": "https://www.operaamerica.org/calendar#eyJxIjoiIiwiY29xIjoiIiwidHlwZXMiOltdLCJ6aXAiOiIiLCJzdGF0ZXMiOltdLCJmcm9tIjoiMjAyNi0xMC0yMCIsInRvIjoiMjAyNi0xMC0yMCIsImNvbXBhbnlJZCI6MCwicGFnZSI6MSwicGFnZVNpemUiOjEyLCJjb21wYW5pZXMiOltdfQ%3D%3D",
@@ -1085,7 +1025,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     11012,
-    265
+    259
    ],
    "examples": [
     {
@@ -1141,10 +1081,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     6265,
-    215
+    230
    ],
    "examples": [
     {
@@ -1152,7 +1092,7 @@
      "start_time": "<UNKNOWN>",
      "date_evidence": "TUESDAY, OCTOBER 20",
      "time_evidence": "",
-     "why": "time quote not found on page"
+     "why": "not a public performance"
     }
    ]
   },
@@ -1245,7 +1185,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     4744,
-    351
+    366
    ],
    "examples": [
     {
@@ -1295,7 +1235,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     9581,
-    248
+    242
    ],
    "examples": [
     {
@@ -1342,18 +1282,18 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     6458,
-    237
+    234
    ],
    "examples": [
     {
      "title": "The World Upside Down",
      "start_time": "<UNKNOWN>",
      "date_evidence": "Tuesday, Oct 20, 2026",
-     "time_evidence": "<UNKNOWN>",
-     "why": "not a public performance"
+     "time_evidence": "No start time shown for this event on the page.",
+     "why": "time quote not found on page"
     }
    ]
   },
@@ -1375,10 +1315,15 @@
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": null,
-   "status": "blocked",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 403"
+   "detail": "not_a_calendar",
+   "tokens": [
+    6584,
+    63
+   ],
+   "examples": []
   },
   {
    "name": "Sunnyvale",
@@ -1403,7 +1348,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5139,
+    5080,
     63
    ],
    "examples": []
@@ -1445,32 +1390,10 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    16896,
+    16870,
     59
    ],
    "examples": []
-  },
-  {
-   "name": "Terraza 7",
-   "url": "https://www.terraza7.com/",
-   "read_url": "https://www.terraza7.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× start time not in time quote",
-   "tokens": [
-    6436,
-    493
-   ],
-   "examples": [
-    {
-     "title": "Julian Miltenberger Trio— Jazz | First Set",
-     "start_time": "<UNKNOWN>",
-     "date_evidence": "Tue, Oct 20",
-     "time_evidence": "Performances almost every night, starting at 7:00 pm",
-     "why": "start time not in time quote"
-    }
-   ]
   },
   {
    "name": "The Bowery Electric",
@@ -1650,7 +1573,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2497,
     63
@@ -1664,10 +1587,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     8187,
-    63
+    59
    ],
    "examples": []
   },
@@ -1694,7 +1617,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12897,
+    12893,
     59
    ],
    "examples": []
@@ -1709,21 +1632,43 @@
    "detail": "HTTP 403"
   },
   {
+   "name": "Union Hall",
+   "url": "https://www.unionhallny.com/",
+   "read_url": "https://unionhallny.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× not a public performance",
+   "tokens": [
+    16701,
+    149
+   ],
+   "examples": [
+    {
+     "title": "Invisible Architecture: An Evening of Comedy with Charlie Flynn",
+     "start_time": "",
+     "date_evidence": "",
+     "time_evidence": "",
+     "why": "not a public performance"
+    }
+   ]
+  },
+  {
    "name": "Village Vanguard",
    "url": "https://villagevanguard.com/",
    "read_url": "https://villagevanguard.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "None; dropped 1× not a public performance",
    "tokens": [
     4015,
-    199
+    203
    ],
    "examples": [
     {
      "title": "FRED HERSCH TRIO + 2",
-     "start_time": "",
+     "start_time": "8:00 PM",
      "date_evidence": "FRED HERSCH TRIO + 2 October 20 ‑ October 25",
      "time_evidence": "",
      "why": "not a public performance"
@@ -1749,7 +1694,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     3966,
-    252
+    243
    ],
    "examples": [
     {
@@ -1770,22 +1715,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11846,
-    493
-   ],
-   "examples": []
-  },
-  {
-   "name": "92NY",
-   "url": "https://www.92ny.org/",
-   "read_url": "https://www.92ny.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    69984,
-    608
+    11904,
+    485
    ],
    "examples": []
   },
@@ -1799,6 +1730,34 @@
    "detail": null
   },
   {
+   "name": "BAM",
+   "url": "https://www.bam.org/",
+   "read_url": "https://www.bam.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    8145,
+    385
+   ],
+   "examples": []
+  },
+  {
+   "name": "Bar Bayeux",
+   "url": "https://www.barbayeux.com/",
+   "read_url": "https://www.barbayeux.com/jazz",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    14685,
+    335
+   ],
+   "examples": []
+  },
+  {
    "name": "Bar LunÀtico",
    "url": "https://www.barlunatico.com/",
    "read_url": "https://www.barlunatico.com/music",
@@ -1808,7 +1767,7 @@
    "detail": "calendar",
    "tokens": [
     15038,
-    332
+    331
    ],
    "examples": []
   },
@@ -1822,7 +1781,7 @@
    "detail": "calendar",
    "tokens": [
     12641,
-    573
+    576
    ],
    "examples": []
   },
@@ -1836,7 +1795,7 @@
    "detail": "calendar",
    "tokens": [
     6626,
-    961
+    1033
    ],
    "examples": []
   },
@@ -1846,28 +1805,13 @@
    "read_url": "https://mercuryeastpresents.com/boweryballroom/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "shows": 3,
+   "detail": "calendar",
    "tokens": [
     8982,
-    636
+    682
    ],
-   "examples": [
-    {
-     "title": "Will Varley",
-     "start_time": "6:00 PM",
-     "date_evidence": "TODAY’S SHOWS",
-     "time_evidence": "6:00 pm",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "Knew Them When Fest: Performances by NYU Rising Stars",
-     "start_time": "9:00 PM",
-     "date_evidence": "TODAY’S SHOWS",
-     "time_evidence": "9:00 pm",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Brooklyn Bowl",
@@ -1879,7 +1823,7 @@
    "detail": "calendar",
    "tokens": [
     12979,
-    295
+    303
    ],
    "examples": []
   },
@@ -1902,7 +1846,7 @@
    "detail": "calendar",
    "tokens": [
     10510,
-    307
+    309
    ],
    "examples": []
   },
@@ -1913,12 +1857,19 @@
    "method": "AI",
    "status": "ok",
    "shows": 3,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "detail": "calendar; dropped 1× not a public performance, 2× listed at another venue",
    "tokens": [
-    7868,
-    990
+    7869,
+    1140
    ],
    "examples": [
+    {
+     "title": "Guided Tours",
+     "start_time": "1:30 PM",
+     "date_evidence": "Tuesday Oct 20 2026",
+     "time_evidence": "Available 1:30 PM",
+     "why": "not a public performance"
+    },
     {
      "title": "An Early Childhood Concert",
      "start_time": "10:00 AM",
@@ -1959,6 +1910,20 @@
    "detail": "left out 1 non-performance listing"
   },
   {
+   "name": "Jazz at Lincoln Center",
+   "url": "https://jazz.org/",
+   "read_url": "https://jazz.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    6954,
+    229
+   ],
+   "examples": []
+  },
+  {
    "name": "Le Poisson Rouge",
    "url": "https://lpr.com/",
    "read_url": "https://lpr.com/",
@@ -1968,7 +1933,21 @@
    "detail": "calendar",
    "tokens": [
     4138,
-    218
+    222
+   ],
+   "examples": []
+  },
+  {
+   "name": "Lowlands Bar",
+   "url": "https://www.lowlandsbar.com/events",
+   "read_url": "https://www.lowlandsbar.com/events",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    13422,
+    283
    ],
    "examples": []
   },
@@ -1982,7 +1961,7 @@
    "detail": "calendar",
    "tokens": [
     8737,
-    466
+    491
    ],
    "examples": []
   },
@@ -1996,7 +1975,21 @@
    "detail": "calendar",
    "tokens": [
     18545,
-    1280
+    1238
+   ],
+   "examples": []
+  },
+  {
+   "name": "Nublu Classic",
+   "url": "https://nublu.net/",
+   "read_url": "https://nublu.net/program",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    5157,
+    438
    ],
    "examples": []
   },
@@ -2010,7 +2003,7 @@
    "detail": "calendar",
    "tokens": [
     5789,
-    495
+    531
    ],
    "examples": []
   },
@@ -2033,7 +2026,7 @@
    "detail": "calendar",
    "tokens": [
     15873,
-    225
+    221
    ],
    "examples": []
   },
@@ -2047,7 +2040,7 @@
    "detail": "calendar",
    "tokens": [
     3939,
-    449
+    438
    ],
    "examples": []
   },
@@ -2061,7 +2054,7 @@
    "detail": "calendar",
    "tokens": [
     8757,
-    224
+    226
    ],
    "examples": []
   },
@@ -2075,7 +2068,7 @@
    "detail": "calendar",
    "tokens": [
     7114,
-    336
+    315
    ],
    "examples": []
   },
@@ -2103,7 +2096,7 @@
    "detail": "calendar",
    "tokens": [
     11521,
-    251
+    272
    ],
    "examples": []
   },
@@ -2126,7 +2119,7 @@
    "detail": "calendar",
    "tokens": [
     10061,
-    596
+    593
    ],
    "examples": []
   },
@@ -2140,7 +2133,7 @@
    "detail": "calendar",
    "tokens": [
     18547,
-    1170
+    1167
    ],
    "examples": []
   },
@@ -2153,8 +2146,22 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    17100,
-    493
+    17301,
+    491
+   ],
+   "examples": []
+  },
+  {
+   "name": "Terraza 7",
+   "url": "https://www.terraza7.com/",
+   "read_url": "https://www.terraza7.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    6436,
+    469
    ],
    "examples": []
   },
@@ -2177,21 +2184,7 @@
    "detail": "calendar",
    "tokens": [
     14796,
-    598
-   ],
-   "examples": []
-  },
-  {
-   "name": "Union Hall",
-   "url": "https://www.unionhallny.com/",
-   "read_url": "https://unionhallny.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    16701,
-    281
+    596
    ],
    "examples": []
   },
