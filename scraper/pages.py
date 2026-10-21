@@ -87,6 +87,8 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <link rel="stylesheet" href="{FONTS}">
   <link rel="stylesheet" href="/page.css">
   <link rel="stylesheet" href="/listing.css">
+  <meta name="google-adsense-account" content="ca-pub-7078560452492267">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "2f6bdfef6f95427d91087474b7d81e88"}}'></script>
   {data}
 </head>

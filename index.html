@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-7078560452492267">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
   <meta name='impact-site-verification' value='43fac560-bc84-4358-ba93-4f8174aa5c7d'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Word NYC | Live shows in New York tonight</title>
@@ -360,7 +362,7 @@
       ticketmaster: '',  // your Impact tracking link for Ticketmaster (from Impact > Create link); ticket URLs are added as ?u=
       seatgeekAid: '',   // your SeatGeek partner ID, added to SeatGeek links as ?aid=
     },
-    adsense: { client: '', slot: '' }, // e.g. client 'ca-pub-1234567890123456', slot '1234567890'
+    adsense: { client: 'ca-pub-7078560452492267', slot: '' }, // e.g. client 'ca-pub-1234567890123456', slot '1234567890'
     analyticsToken: '2f6bdfef6f95427d91087474b7d81e88',                 // Cloudflare Web Analytics token: cookie-free visitor counts
   };
 
@@ -1176,11 +1178,13 @@
   function initAds() {
     const { client, slot } = CONFIG.adsense || {};
     if (!client || !slot) return;
-    const s = document.createElement('script');
-    s.async = true;
-    s.crossOrigin = 'anonymous';
-    s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(client)}`;
-    document.head.appendChild(s);
+    if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+      const s = document.createElement('script');
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(client)}`;
+      document.head.appendChild(s);
+    }
     const box = $('ad-slot');
     const ins = document.createElement('ins');
     ins.className = 'adsbygoogle';
