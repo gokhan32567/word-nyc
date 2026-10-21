@@ -375,7 +375,16 @@ def main() -> int:
     # 4. sponsored placements, then merge everything
     placements = active_placements(Path(args.sponsored), night)
     extra = sponsored_events(placements, night)
-    events = merge(collected + extra)
+    # A re-run later the same night only adds: venue pages drop shows once they've started, so keep
+    # what an earlier run of this night already found.
+    earlier = []
+    try:
+        prev = json.loads(Path(args.out).read_text())
+        if prev.get("date") == night.isoformat() and not args.only.strip():
+            earlier = [{k: v for k, v in e.items() if k not in ("id", "artist", "sponsored")} for e in prev["events"]]
+    except (OSError, ValueError, KeyError):
+        pass
+    events = merge(collected + extra + earlier)
     flagged = mark_sponsored(events, placements)
     if placements:
         log(f"  sponsored: {len(placements)} active placement(s), {len(extra)} added, {flagged} matched")
