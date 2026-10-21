@@ -33,7 +33,7 @@ jobs:
         run: |
           h=$(TZ=America/New_York date +%-H)
           echo "New York hour: $h"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$h" -ge 11 ] && [ "$h" -le 13 ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$h" -ge 11 ] && [ "$h" -le 13 ]; }; then
             echo "go=true" >> "$GITHUB_OUTPUT"
           else
             echo "go=false" >> "$GITHUB_OUTPUT"
