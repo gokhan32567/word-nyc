@@ -85,6 +85,9 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <meta property="og:url" content="{SITE}{path}">
   <meta property="og:image" content="https://word-nyc.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#0d1230">
   <link rel="stylesheet" href="{FONTS}">
   <link rel="stylesheet" href="/page.css">

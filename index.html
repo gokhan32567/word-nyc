@@ -12,6 +12,13 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Word NYC">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#0d1230">
   <link rel="canonical" href="https://word-nyc.com/">
   <meta property="og:type" content="website">
@@ -223,6 +230,15 @@
     .d-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
     .d-actions .btn { flex: 1 1 140px; padding: 12px 16px; font-size: 15px; }
 
+
+    /* ---------- "Get the app" tip ---------- */
+    .install-tip { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 12px 14px; border: 1px solid rgba(255, 194, 75, .35); border-radius: 14px; background: rgba(255, 194, 75, .07); font-size: 14px; color: var(--paper); }
+    .install-tip[hidden] { display: none; }
+    .install-tip img { width: 40px; height: 40px; border-radius: 10px; flex: none; }
+    .install-tip p { margin: 0; flex: 1; line-height: 1.35; }
+    .install-tip b { color: var(--gold); }
+    .install-tip .tip-btn { flex: none; padding: 7px 12px; border-radius: 999px; border: 0; background: var(--gold); color: #0d1230; font: 600 13px inherit; cursor: pointer; }
+    .install-tip .tip-x { flex: none; border: 0; background: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; padding: 4px; }
     /* ---------- Share modal ---------- */
     .modal {
       position: fixed; inset: 0; z-index: 2500; display: none; align-items: center; justify-content: center;
@@ -305,6 +321,12 @@
       <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
     </button>
     <div class="drawer-body">
+      <div class="install-tip" id="install-tip" hidden>
+        <img src="/icons/icon-192.png" alt="">
+        <p id="install-text"><b>Get the Word NYC app.</b> Tap <svg width="14" height="16" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-label="Share" style="vertical-align:-2px"><path d="M12 15V2M7 7l5-5 5 5"/><path d="M5 11H3v13h18V11h-2"/></svg> then <b>Add to Home Screen</b>.</p>
+        <button class="tip-btn" id="install-btn" type="button" hidden>Install</button>
+        <button class="tip-x" id="install-x" type="button" aria-label="Hide this tip">&times;</button>
+      </div>
       <p class="note" id="list-note" hidden></p>
       <div class="chips" id="genre-chips" role="group" aria-label="Filter by genre"></div>
       <div class="list" id="event-list"></div>
@@ -1197,6 +1219,43 @@
     if (modal.classList.contains('open')) closeModal();
     else closeDetails();
   });
+
+
+  /* =========================================================
+     Home-screen app: offline support and the "Get the app" tip
+     ========================================================= */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  }
+  (function installTip() {
+    const tip = $('install-tip');
+    const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+    let dismissed = false;
+    try { dismissed = localStorage.getItem('wordnyc.installTip') === 'hidden'; } catch (_) {}
+    if (standalone || dismissed) return;
+    const ua = navigator.userAgent;
+    const iosSafari = /iPhone|iPad|iPod/.test(ua) && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|GSA/.test(ua);
+    if (iosSafari) tip.hidden = false;
+    let deferred = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferred = e;
+      $('install-text').innerHTML = '<b>Get the Word NYC app</b> on your home screen.';
+      $('install-btn').hidden = false;
+      tip.hidden = false;
+    });
+    $('install-btn').addEventListener('click', async () => {
+      if (!deferred) return;
+      deferred.prompt();
+      try { await deferred.userChoice; } catch (_) {}
+      deferred = null;
+      tip.hidden = true;
+    });
+    $('install-x').addEventListener('click', () => {
+      tip.hidden = true;
+      try { localStorage.setItem('wordnyc.installTip', 'hidden'); } catch (_) {}
+    });
+  })();
 
   /* =========================================================
      Start
