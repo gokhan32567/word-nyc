@@ -19,6 +19,19 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Word NYC">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "d9f2eefb-d834-4054-92cc-422321667627",
+        safari_web_id: "web.onesignal.auto.02091d44-51df-4a38-967b-45e7d1e7feaf",
+        serviceWorkerPath: "sw.js",
+        serviceWorkerParam: { scope: "/" },
+        notifyButton: { enable: false },
+      });
+    });
+  </script>
   <meta name="theme-color" content="#0d1230">
   <link rel="canonical" href="https://word-nyc.com/">
   <meta property="og:type" content="website">
@@ -231,6 +244,13 @@
     .d-actions .btn { flex: 1 1 140px; padding: 12px 16px; font-size: 15px; }
 
 
+
+    /* ---------- Noon picks (push notifications) ---------- */
+    .noon { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, .03); font-size: 14px; color: var(--paper); }
+    .noon[hidden] { display: none; }
+    .noon p { margin: 0; flex: 1; line-height: 1.35; }
+    .noon p span { color: var(--muted); }
+    .noon button { flex: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--gold); background: none; color: var(--gold); font: 600 13px inherit; cursor: pointer; }
     /* ---------- "Get the app" tip ---------- */
     .install-tip { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 12px 14px; border: 1px solid rgba(255, 194, 75, .35); border-radius: 14px; background: rgba(255, 194, 75, .07); font-size: 14px; color: var(--paper); }
     .install-tip[hidden] { display: none; }
@@ -326,6 +346,10 @@
         <p id="install-text"><b>Get the Word NYC app.</b> Tap <svg width="14" height="16" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-label="Share" style="vertical-align:-2px"><path d="M12 15V2M7 7l5-5 5 5"/><path d="M5 11H3v13h18V11h-2"/></svg> then <b>Add to Home Screen</b>.</p>
         <button class="tip-btn" id="install-btn" type="button" hidden>Install</button>
         <button class="tip-x" id="install-x" type="button" aria-label="Hide this tip">&times;</button>
+      </div>
+      <div class="noon" id="noon" hidden>
+        <p id="noon-text">🔔 <b>Tonight's picks at noon.</b> <span>One notification a day with the best shows.</span></p>
+        <button type="button" id="noon-btn">Turn on</button>
       </div>
       <p class="note" id="list-note" hidden></p>
       <div class="chips" id="genre-chips" role="group" aria-label="Filter by genre"></div>
@@ -1254,6 +1278,51 @@
     $('install-x').addEventListener('click', () => {
       tip.hidden = true;
       try { localStorage.setItem('wordnyc.installTip', 'hidden'); } catch (_) {}
+    });
+  })();
+
+
+  /* =========================================================
+     Noon picks: daily push notification (OneSignal)
+     ========================================================= */
+  (function noonPicks() {
+    const box = $('noon'), btn = $('noon-btn'), text = $('noon-text');
+    const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+    const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    let hidden = false;
+    try { hidden = localStorage.getItem('wordnyc.noon') === 'on'; } catch (_) {}
+    if (hidden) return;
+    if (ios && !standalone) {
+      // iPhone only allows notifications for sites added to the Home Screen
+      if (!('Notification' in window) || !('PushManager' in window)) {
+        text.innerHTML = "🔔 <b>Tonight's picks at noon.</b> <span>Add Word NYC to your Home Screen first, then turn them on in the app.</span>";
+        btn.hidden = true;
+      }
+    } else if (!('Notification' in window)) return;
+    if ('Notification' in window && Notification.permission === 'granted') {
+      window.OneSignalDeferred.push(async (OneSignal) => {
+        if (OneSignal.User.PushSubscription.optedIn) return;
+        box.hidden = false;
+      });
+      return;
+    }
+    if ('Notification' in window && Notification.permission === 'denied') return;
+    box.hidden = false;
+    btn.addEventListener('click', () => {
+      window.OneSignalDeferred.push(async (OneSignal) => {
+        try {
+          await OneSignal.Notifications.requestPermission();
+          if (OneSignal.Notifications.permission) {
+            await OneSignal.User.PushSubscription.optIn();
+            box.hidden = true;
+            try { localStorage.setItem('wordnyc.noon', 'on'); } catch (_) {}
+            toast("You're in. Tonight's picks arrive at noon.");
+          }
+        } catch (err) {
+          console.warn(err);
+          toast("Couldn't turn on notifications here.");
+        }
+      });
     });
   })();
 
