@@ -83,6 +83,8 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:url" content="{SITE}{path}">
+  <meta property="og:image" content="https://word-nyc.com/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0d1230">
   <link rel="stylesheet" href="{FONTS}">
   <link rel="stylesheet" href="/page.css">
