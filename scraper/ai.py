@@ -88,6 +88,9 @@ SYSTEM = """You read a New York venue's web page and report the live performance
 
 Rules:
 - Report only performances the page explicitly shows on the requested date. If unsure, leave it out. Never guess or fill in.
+- Multi-night runs ("October 20 - October 25") and weekly nights ("every Monday") that include the requested
+  night count: report them, quoting the run as date_evidence. If the page shows no start time for them, leave
+  start_time and time_evidence empty.
 - Late sets after midnight that belong to the requested night count (the night runs until 5 AM).
 - Each separate set or performance time is its own event (e.g. 7:30 PM and 9:30 PM sets are two events).
 - Copy titles, names, times and prices exactly as written. date_evidence and time_evidence must be exact text copied from the page.
@@ -158,12 +161,37 @@ def _date_regex(d: date) -> re.Pattern:
     ]), re.I)
 
 
+_MON = r"(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?"
+_RUN = re.compile(_MON + r"\s+(\d{1,2})(?:st|nd|rd|th)?\s*[-\u2010-\u2015\u2212]+\s*(?:" + _MON + r"\s+)?(\d{1,2})(?:st|nd|rd|th)?\b",
+                  re.I)
+
+
+def run_covers(evidence: str, night: date) -> bool:
+    """A multi-night run ('October 20 - October 25', 'Nov 3-8') or weekly night ('every Monday') that includes the night."""
+    ev = evidence.replace("\u2011", "-")
+    for m in _RUN.finditer(ev):
+        m1 = MONTHS.index(next(x for x in MONTHS if x.startswith(m.group(1).lower()[:3]))) + 1
+        m2 = MONTHS.index(next(x for x in MONTHS if x.startswith(m.group(3).lower()[:3]))) + 1 if m.group(3) else m1
+        y1 = night.year if m1 >= night.month - 6 else night.year + 1
+        try:
+            a = date(y1, m1, int(m.group(2)))
+            b = date(y1 + (1 if m2 < m1 else 0), m2, int(m.group(4)))
+        except ValueError:
+            continue
+        if a <= night <= b and (b - a).days <= 31:
+            return True
+    wd = DAYS[night.weekday()]
+    return bool(re.search(rf"\bevery\s+{wd}|\b{wd}s\b|\bevery\s+{wd[:3]}\b", ev, re.I))
+
+
 def which_night(evidence: str, night: date) -> str | None:
     """'tonight' if the quote names tonight's date, 'next' if tomorrow's, else None."""
     from datetime import datetime
     from common import NY
     relative_ok = datetime.now(NY).date() == night
     if (relative_ok and re.search(r"\b(today|tonight)\b", evidence, re.I)) or _date_regex(night).search(evidence):
+        return "tonight"
+    if run_covers(evidence, night):
         return "tonight"
     if _date_regex(night + timedelta(days=1)).search(evidence):
         return "next"
@@ -237,6 +265,9 @@ def near(page: str, a: str, b: str, span: int) -> bool:
     return any(abs(x - y) <= span for x in pa for y in pb)
 
 
+VENUE_SETS = "<venue's regular set times>"
+
+
 def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict, page: str, page_norm: str) -> tuple[dict | None, str]:
     title = (raw.get("title") or "").strip()
     if not raw.get("public_performance", True) or not title or GENERIC.match(title):
@@ -244,10 +275,11 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     de, te = raw.get("date_evidence") or "", raw.get("time_evidence") or ""
     if not (2 <= len(de) <= 200 and on_page(de, page)):
         return None, "date quote not found on page"
-    if not (2 <= len(te) <= 200 and on_page(te, page)):
+    from_venue_sets = te == VENUE_SETS
+    if not from_venue_sets and not (2 <= len(te) <= 200 and on_page(te, page)):
         return None, "time quote not found on page"
     start = parse_clock(raw.get("start_time"))
-    if start is None or start not in times_in(te):
+    if start is None or (not from_venue_sets and start not in times_in(te)):
         return None, "start time not in time quote"
     which = which_night(de, night)
     late = start < ROLLOVER_HOUR * 60
@@ -264,7 +296,7 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     if (raw.get("at_this_venue") is False and shown) or (state and state.group(1) != "NY"):
         return None, "listed at another venue"
     anchor = _squash(title) if _squash(title) in page else max(present or [""], key=len)
-    if anchor and not near(page, anchor, _squash(te), 2500):
+    if anchor and not from_venue_sets and not near(page, anchor, _squash(te), 2500):
         return None, "time quote is far from the title"
     page_words = " ".join(WORD.findall(page))
 
@@ -370,7 +402,13 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
     if isinstance(events, dict):
         events = [events]
     answer["events"] = events = [e for e in events if isinstance(e, dict)] if isinstance(events, list) else []
-    for raw in events:
+    expanded = []
+    for raw in events:  # a run with no time on the page: use the venue's regular set times (venues.json "sets")
+        if venue.get("sets") and parse_clock(raw.get("start_time")) is None:
+            expanded += [dict(raw, start_time=t, time_evidence=VENUE_SETS) for t in venue["sets"]]
+        else:
+            expanded.append(raw)
+    for raw in expanded:
         ev, why = check(raw, snap, links, night, venue, page, page_norm)
         if ev:
             kept.append(ev)

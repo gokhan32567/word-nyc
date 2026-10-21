@@ -24,7 +24,12 @@
    "name": "Village Vanguard",
    "address": "178 7th Ave S, New York, NY 10014",
    "url": "https://villagevanguard.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "sets": [
+    "8:00 PM",
+    "10:00 PM"
+   ],
+   "note": "Engagements run several nights (e.g. 'October 20 - October 25'); the Vanguard Jazz Orchestra plays every Monday. Sets are nightly at 8 PM and 10 PM."
   },
   {
    "name": "Smalls Jazz Club",
