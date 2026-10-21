@@ -355,10 +355,16 @@ def main() -> int:
         except Exception as e:  # noqa: BLE001
             log(f"  submissions FAILED: {e}")
 
+    # venues that have music every night: an empty result there is almost certainly a reading problem
+    nightly = [v["name"] for v in venues if v.get("nightly")]
+    have = {e["venue"] for e in collected}
+    nightly_missing = [n for n in nightly if n not in have]
+    if nightly_missing:
+        log(f"  CHECK: no shows found at nightly venues: {', '.join(nightly_missing)}")
     geocoder.save()
     calls = [r["tokens"] for r in rows if r.get("tokens")]
     tin, tout = sum(c[0] for c in calls), sum(c[1] for c in calls)
-    ai_usage = {"calls": len(calls), "input_tokens": tin, "output_tokens": tout,
+    ai_usage = {"nightly_missing": nightly_missing, "calls": len(calls), "input_tokens": tin, "output_tokens": tout,
                 "cost_usd": round(tin / 1e6 * AI_PRICE_IN + tout / 1e6 * AI_PRICE_OUT, 4)}
 
     if not collected:

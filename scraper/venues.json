@@ -29,34 +29,39 @@
     "8:00 PM",
     "10:00 PM"
    ],
-   "note": "Engagements run several nights (e.g. 'October 20 - October 25'); the Vanguard Jazz Orchestra plays every Monday. Sets are nightly at 8 PM and 10 PM."
+   "note": "Engagements run several nights (e.g. 'October 20 - October 25'); the Vanguard Jazz Orchestra plays every Monday. Sets are nightly at 8 PM and 10 PM.",
+   "nightly": true
   },
   {
    "name": "Smalls Jazz Club",
    "address": "183 W 10th St, New York, NY 10014",
    "url": "https://www.smallslive.com/",
    "genre": "Jazz",
-   "note": "This page lists both Smalls and Mezzrow. Report only shows at Smalls."
+   "note": "This page lists both Smalls and Mezzrow. Report only shows at Smalls.",
+   "nightly": true
   },
   {
    "name": "Mezzrow",
    "address": "163 W 10th St, New York, NY 10014",
    "url": "https://www.smallslive.com/",
    "genre": "Jazz",
-   "note": "This page lists both Smalls and Mezzrow. Report only shows at Mezzrow."
+   "note": "This page lists both Smalls and Mezzrow. Report only shows at Mezzrow.",
+   "nightly": true
   },
   {
    "name": "Blue Note Jazz Club",
    "address": "131 W 3rd St, New York, NY 10012",
    "url": "https://www.bluenotejazz.com/nyc/shows/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Birdland",
    "address": "315 W 44th St, New York, NY 10036",
    "url": "https://www.birdlandjazz.com/",
    "genre": "Jazz",
-   "note": "Birdland has two rooms, the Jazz Club and the Theater; report shows in both."
+   "note": "Birdland has two rooms, the Jazz Club and the Theater; report shows in both.",
+   "nightly": true
   },
   {
    "name": "Jazz at Lincoln Center",
@@ -75,19 +80,22 @@
    "name": "Smoke Jazz Club",
    "address": "2751 Broadway, New York, NY 10025",
    "url": "https://www.smokejazz.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "The Iridium",
    "address": "1650 Broadway, New York, NY 10019",
    "url": "https://www.theiridium.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Zinc Bar",
    "address": "82 W 3rd St, New York, NY 10012",
    "url": "https://www.zincbar.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Minton's Playhouse",
@@ -99,13 +107,15 @@
    "name": "Cellar Dog",
    "address": "75 Christopher St, New York, NY 10014",
    "url": "https://www.cellardog.net/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Arthur's Tavern",
    "address": "57 Grove St, New York, NY 10014",
    "url": "https://www.arthurstavernnyc.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Bill's Place",
@@ -183,7 +193,8 @@
    "name": "Bar LunÀtico",
    "address": "486 Halsey St, Brooklyn, NY 11233",
    "url": "https://www.barlunatico.com/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Soapbox Gallery",
@@ -705,7 +716,8 @@
    "name": "Barbès",
    "address": "376 9th St, Brooklyn, NY 11215",
    "url": "https://www.barbesbrooklyn.com/",
-   "genre": "World"
+   "genre": "World",
+   "nightly": true
   },
   {
    "name": "Drom",
@@ -717,7 +729,8 @@
    "name": "Mehanata Bulgarian Bar",
    "address": "113 Ludlow St, New York, NY 10002",
    "url": "https://www.mehanata.com/",
-   "genre": "World"
+   "genre": "World",
+   "nightly": true
   },
   {
    "name": "S.O.B.'s",
@@ -747,7 +760,8 @@
    "name": "Terra Blues",
    "address": "149 Bleecker St, New York, NY 10012",
    "url": "https://www.terrablues.com/",
-   "genre": "Blues"
+   "genre": "Blues",
+   "nightly": true
   },
   {
    "name": "Caffe Vivaldi",
@@ -1023,7 +1037,8 @@
    "name": "Dizzy's Club",
    "address": "10 Columbus Circle, New York, NY 10019",
    "url": "https://jazz.org/dizzys/",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "nightly": true
   },
   {
    "name": "Django",
