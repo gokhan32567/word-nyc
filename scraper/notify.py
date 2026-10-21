@@ -64,6 +64,19 @@ def message(data: dict, venues: list[dict]) -> tuple[str, str]:
 
 
 def send(title: str, body: str, api_key: str) -> dict:
+    """New OneSignal keys use 'Key', older REST API keys use 'Basic'; try both."""
+    import urllib.error
+    for scheme in ("Key", "Basic"):
+        try:
+            return _send(title, body, api_key, scheme)
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode(errors="replace")[:300]
+            print(f"OneSignal said {e.code} with '{scheme}' auth: {detail}")
+            if e.code != 401 or scheme == "Basic":
+                raise
+
+
+def _send(title: str, body: str, api_key: str, scheme: str) -> dict:
     req = urllib.request.Request(
         "https://api.onesignal.com/notifications",
         data=json.dumps({
@@ -72,7 +85,7 @@ def send(title: str, body: str, api_key: str) -> dict:
             "url": "https://word-nyc.com/?source=noon", "chrome_web_icon": "https://word-nyc.com/icons/icon-192.png",
             "ttl": 6 * 3600,
         }).encode(),
-        headers={"Content-Type": "application/json", "Authorization": f"Key {api_key}"}, method="POST")
+        headers={"Content-Type": "application/json", "Authorization": f"{scheme} {api_key}"}, method="POST")
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode())
 
