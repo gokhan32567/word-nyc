@@ -191,7 +191,7 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                 return bool(pat.search(t) and CLOCK.search(t))
 
             first_links = data["links"]
-            if not usable(data):
+            if not usable(data) and not venue.get("no_follow"):
                 for cand in _calendar_candidates(data["links"], data["final_url"] or url):
                     if not await asyncio.to_thread(allowed, cand):
                         continue

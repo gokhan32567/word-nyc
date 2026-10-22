@@ -392,7 +392,7 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
     answer, usage = call_claude(api_key, prompt)
     page = _squash(snap.text)
     page_norm = norm(snap.text)
-    kept, reasons, examples = [], {}, []
+    kept, reasons, examples, need_time = [], {}, [], []
     events = answer.get("events") or []
     if isinstance(events, str):  # the model occasionally sends the list as a JSON string
         try:
@@ -414,8 +414,15 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
             kept.append(ev)
         else:
             reasons[why] = reasons.get(why, 0) + 1
+            idx = raw.get("link_number")
+            de = raw.get("date_evidence") or ""
+            if (why in ("time quote not found on page", "start time not in time quote") and isinstance(idx, int)
+                    and 0 <= idx < len(links) and on_page(de, page) and which_night(de, night) == "tonight"
+                    and links[idx]["href"].split("#")[0] != (snap.final_url or snap.url).split("#")[0]):
+                # Tonight's show is listed without a time: its own event page usually has one.
+                need_time.append({"title": raw.get("title") or "", "url": links[idx]["href"]})
             if len(examples) < 3:
                 examples.append({k: raw.get(k) for k in ("title", "start_time", "date_evidence", "time_evidence")} | {"why": why})
     return kept, {"page_kind": answer.get("page_kind"), "proposed": len(answer.get("events") or []),
-                  "rejected": reasons, "examples": examples, "input_tokens": usage.get("input_tokens", 0),
+                  "rejected": reasons, "examples": examples, "need_time": need_time, "input_tokens": usage.get("input_tokens", 0),
                   "output_tokens": usage.get("output_tokens", 0)}

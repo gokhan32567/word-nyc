@@ -112,7 +112,44 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
                detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
                        if info["rejected"] else info["page_kind"]),
                tokens=[info["input_tokens"], info["output_tokens"]], examples=info.get("examples"))
+    row["_need_time"] = info.get("need_time", [])
     return found, row
+
+
+def event_pages(placed: list[dict], rows: list[dict], collected: list[dict], night: date, ai_key: str,
+                eb_token: str) -> list[dict]:
+    """Shows a calendar lists for tonight without a time: read each one's own event page for the time."""
+    import browse
+    by_name = {v["name"]: v for v in placed}
+    todo = []
+    for r in rows:
+        v = by_name.get(r["name"])
+        for i, n in enumerate((r.pop("_need_time", None) or [])[:4]):
+            if v and len(todo) < 40:
+                todo.append((r, v, dict(v, name=f"{v['name']}#{i}", url=n["url"], no_follow=True, sets=None,
+                                        note=(f"This is the event page for '{n['title'][:100]}'. Report only that "
+                                              "event, with its start time as shown here."))))
+    if not todo:
+        return []
+    log(f"  reading {len(todo)} event pages for shows listed without a time…")
+    snaps = browse.snapshot_all([pv for _, _, pv in todo], night)
+    have = {(e["venue"], e["date"], e["time"], norm(e["title"])) for e in collected}
+    out = []
+    for r, v, pv in todo:
+        found, sub = safe_read(pv, snaps.get(pv["name"]), night, ai_key, eb_token)
+        sub.pop("_need_time", None)
+        for e in found[:1]:
+            e["venue"] = v["name"]
+            key = (e["venue"], e["date"], e["time"], norm(e["title"]))
+            if key not in have:
+                have.add(key)
+                out.append(e)
+                r["shows"] += 1
+                r["status"] = "ok"
+                r["detail"] = (r.get("detail") or "") + f"; +1 from event page {pv['url'][:80]}"
+        if not found:
+            r["detail"] = (r.get("detail") or "") + f"; event page gave no time ({sub['status']})"
+    return out
 
 
 def safe_read(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[list[dict], dict]:
@@ -320,6 +357,7 @@ def main() -> int:
             collected += found
             rows.append(row)
         ok_sources += sum(1 for _, r in results if r["status"] in ("ok", "none-tonight"))
+        collected += event_pages(placed, rows, collected, night, ai_key, eb_token)
         if args.only.strip():  # test runs: keep what the browser saw (published to the "debug" branch)
             with open(ROOT / "debug.txt", "w") as f:
                 for r in rows:

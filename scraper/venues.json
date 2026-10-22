@@ -98,12 +98,6 @@
    "nightly": true
   },
   {
-   "name": "Minton's Playhouse",
-   "address": "206 W 118th St, New York, NY 10026",
-   "url": "https://mintonsnyc.com/",
-   "genre": "Jazz"
-  },
-  {
    "name": "Cellar Dog",
    "address": "75 Christopher St, New York, NY 10014",
    "url": "https://www.cellardog.net/music",
@@ -227,7 +221,8 @@
    "name": "The Green Room 42",
    "address": "570 10th Ave, New York, NY 10036",
    "url": "https://thegreenroom42.venuetix.com/",
-   "genre": "Cabaret & Musicals"
+   "genre": "Cabaret & Musicals",
+   "note": "The Green Room 42 is inside the YOTEL hotel, so shows 'at YOTEL' are at this venue. Shows at Hudson Local or other places are not."
   },
   {
    "name": "Don't Tell Mama",
@@ -951,7 +946,7 @@
   {
    "name": "Knockdown Center",
    "address": "52-19 Flushing Ave, Maspeth, NY 11378",
-   "url": "https://knockdown.center/",
+   "url": "https://dice.fm/venue/knockdown-center-e776",
    "genre": "Electronic & DJ"
   },
   {
