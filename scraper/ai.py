@@ -282,6 +282,14 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     if start is None or (not from_venue_sets and start not in times_in(te)):
         return None, "start time not in time quote"
     which = which_night(de, night)
+    if which is None:  # calendar grids: the quote is just the day number in a cell ("22", "Thu 22")
+        m = re.fullmatch(r"(?:[a-z]{3,9}\.?,?\s+)?(\d{1,2})(?:st|nd|rd|th)?", de.strip(), re.I)
+        month = MONTHS[night.month - 1]
+        if m and re.search(rf"\b{month[:3]}[a-z]*\b", page) and str(night.year) in page:
+            if int(m.group(1)) == night.day:
+                which = "tonight"
+            elif int(m.group(1)) == (night + timedelta(days=1)).day:
+                which = "next"
     late = start < ROLLOVER_HOUR * 60
     if which is None or (which == "next" and not late):
         return None, "date quote is not tonight"
