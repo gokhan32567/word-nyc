@@ -1,36 +1,34 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22T05:35:25-04:00",
+ "generated": "2026-10-22T07:21:58-04:00",
  "totals": {
   "venues": 188,
-  "shows": 126,
-  "ok": 61,
-  "none-tonight": 105,
+  "shows": 142,
+  "ok": 63,
+  "none-tonight": 101,
   "blocked": 16,
-  "error": 4,
+  "error": 6,
   "robots": 0,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
   "venue-data": 19,
-  "venue-ai": 95,
+  "venue-ai": 111,
   "ticketmaster": 26
  },
  "ai": {
   "nightly_missing": [
-   "Smalls Jazz Club",
    "The Iridium",
    "Zinc Bar",
    "Cellar Dog",
    "Arthur's Tavern",
-   "Bar LunÀtico",
    "Mehanata Bulgarian Bar"
   ],
-  "calls": 150,
-  "input_tokens": 1299065,
-  "output_tokens": 40066,
-  "cost_usd": 0.1499
+  "calls": 149,
+  "input_tokens": 1282862,
+  "output_tokens": 39316,
+  "cost_usd": 0.1479
  },
  "venues": [
   {
@@ -43,7 +41,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     6255,
-    303
+    294
    ],
    "examples": [
     {
@@ -62,20 +60,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    67848,
-    715
+    68018,
+    706
    ],
-   "examples": [
-    {
-     "title": "Jewish or Antisemitic - Live",
-     "start_time": "8:00 PM",
-     "date_evidence": "22 OCT THURSDAY 8 PM ET / IN PERSON",
-     "time_evidence": "22 OCT THURSDAY 8 PM ET / IN PERSON 8 PM ET",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Americas Society",
@@ -100,7 +90,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    10743,
+    10821,
     59
    ],
    "examples": []
@@ -176,64 +166,6 @@
    "examples": []
   },
   {
-   "name": "Bar Freda",
-   "url": "https://www.barfreda.com/",
-   "read_url": "https://www.barfreda.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    3560,
-    498
-   ],
-   "examples": [
-    {
-     "title": "HERYN & FRIENDS PRESENT BUNNYSONGS OFFICIAL RELEASE PARTY",
-     "start_time": "7:00 PM",
-     "date_evidence": "THURSDAY OCT 22",
-     "time_evidence": "7:00 PM",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "NICHE NIGHT NYC: PARTY MONSTER",
-     "start_time": "7:30 PM",
-     "date_evidence": "THURSDAY OCT 22",
-     "time_evidence": "7:30 PM",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
-   "name": "Bar LunÀtico",
-   "url": "https://www.barlunatico.com/",
-   "read_url": "https://www.barlunatico.com/music",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× date quote not found on page",
-   "tokens": [
-    15062,
-    557
-   ],
-   "examples": [
-    {
-     "title": "MARTINA LIVIERO ENSEMBLE",
-     "start_time": "9:00 PM",
-     "date_evidence": "NEXT OCT 22 ... October 22, 2026 9:00 PM – 11:30 PM",
-     "time_evidence": "TWO SETS: 9PM & 10:15PM",
-     "why": "date quote not found on page"
-    },
-    {
-     "title": "MARTINA LIVIERO ENSEMBLE",
-     "start_time": "10:15 PM",
-     "date_evidence": "NEXT OCT 22 ... October 22, 2026 9:00 PM – 11:30 PM",
-     "time_evidence": "TWO SETS: 9PM & 10:15PM",
-     "why": "date quote not found on page"
-    }
-   ]
-  },
-  {
    "name": "Bargemusic",
    "url": "https://www.bargemusic.org/",
    "read_url": "https://www.bargemusic.org/",
@@ -244,6 +176,20 @@
    "tokens": [
     5833,
     63
+   ],
+   "examples": []
+  },
+  {
+   "name": "Baryshnikov Arts",
+   "url": "https://bacnyc.org/",
+   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:135.232.185.18:1792667777.561",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "unreadable",
+   "tokens": [
+    2135,
+    60
    ],
    "examples": []
   },
@@ -277,12 +223,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     3467,
-    59
+    323
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Bill Saxton & The Harlem All-Stars",
+     "start_time": "7:00 PM",
+     "date_evidence": "EVERY FRIDAY & SATURDAY @ 7PM & 9:30PM",
+     "time_evidence": "EVERY FRIDAY & SATURDAY @ 7PM & 9:30PM",
+     "why": "date quote is not tonight"
+    }
+   ]
   },
   {
    "name": "Blue Note Jazz Club",
@@ -294,7 +248,7 @@
    "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
     8374,
-    472
+    463
    ],
    "examples": [
     {
@@ -322,7 +276,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    5623,
+    5678,
     63
    ],
    "examples": []
@@ -351,7 +305,7 @@
    "detail": "calendar",
    "tokens": [
     6984,
-    236
+    254
    ],
    "examples": []
   },
@@ -393,7 +347,7 @@
    "detail": "calendar",
    "tokens": [
     8701,
-    236
+    248
    ],
    "examples": []
   },
@@ -474,10 +428,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance",
+   "detail": "calendar; dropped 3× not a public performance",
    "tokens": [
-    13050,
-    776
+    13049,
+    867
    ],
    "examples": [
     {
@@ -488,17 +442,17 @@
      "why": "not a public performance"
     },
     {
-     "title": "Weekday In-Person Holy Eucharist",
-     "start_time": "12:00 PM",
-     "date_evidence": "THURSDAY October 22, 2026",
-     "time_evidence": "Time • Thursday, 12:00pm - 12:45pm",
-     "why": "not a public performance"
-    },
-    {
      "title": "Friends of Shelly",
      "start_time": "7:00 PM",
      "date_evidence": "THURSDAY October 22, 2026",
      "time_evidence": "Time • Thursday, 7:00pm - 8:30pm",
+     "why": "not a public performance"
+    },
+    {
+     "title": "Centering Prayer",
+     "start_time": "7:00 PM",
+     "date_evidence": "THURSDAY October 22, 2026",
+     "time_evidence": "Time • Thursday, 7:00pm - 8:00pm",
      "why": "not a public performance"
     }
    ]
@@ -526,8 +480,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8439,
-    286
+    8381,
+    306
    ],
    "examples": []
   },
@@ -561,7 +515,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     4062,
     63
@@ -661,10 +615,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     12737,
-    253
+    247
    ],
    "examples": [
     {
@@ -672,7 +626,7 @@
      "start_time": "",
      "date_evidence": "Oct 22, 2026 - Oct 22, 2026",
      "time_evidence": "",
-     "why": "time quote not found on page"
+     "why": "not a public performance"
     }
    ]
   },
@@ -739,14 +693,21 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar; dropped 2× time quote not found on page",
    "tokens": [
     5735,
-    285
+    443
    ],
    "examples": [
     {
-     "title": "GOOD ROOM: REDIRECT: S'AINT PANIC, ARVIN T, OKOCZ, BYLD",
+     "title": "S'AINT PANIC, ARVIN T, OKOCZ, BYLD",
+     "start_time": "",
+     "date_evidence": "THURSDAY: 10/22",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    },
+    {
+     "title": "ELLE DEE, KORBEAT, SKOGLUND",
      "start_time": "",
      "date_evidence": "THURSDAY: 10/22",
      "time_evidence": "",
@@ -803,10 +764,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     23442,
-    63
+    59
    ],
    "examples": []
   },
@@ -831,34 +792,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     12173,
-    63
+    59
    ],
    "examples": []
-  },
-  {
-   "name": "Jazz at Lincoln Center",
-   "url": "https://jazz.org/",
-   "read_url": "https://jazz.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
-   "tokens": [
-    7068,
-    282
-   ],
-   "examples": [
-    {
-     "title": "CARL ALLEN'S MESSENGERS OF JAZZ – A TRIBUTE TO ART BLAKEY'S JAZZ MESSENGERS",
-     "start_time": "",
-     "date_evidence": "OCT 22-25",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
   },
   {
    "name": "Joe's Pub",
@@ -876,10 +815,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    11315,
-    63
+    11377,
+    59
    ],
    "examples": []
   },
@@ -941,20 +880,34 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× start time not in time quote",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     10870,
-    216
+    196
    ],
    "examples": [
     {
      "title": "Once Upon a Time in Harlem",
      "start_time": "",
      "date_evidence": "Thursday, October 22, 2026",
-     "time_evidence": "Multiple Times",
-     "why": "start time not in time quote"
+     "time_evidence": "",
+     "why": "time quote not found on page"
     }
    ]
+  },
+  {
+   "name": "Littlefield",
+   "url": "https://littlefieldnyc.com/",
+   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:135.232.185.18:1792667857.168",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "unreadable",
+   "tokens": [
+    2134,
+    60
+   ],
+   "examples": []
   },
   {
    "name": "Lowlands Bar",
@@ -965,7 +918,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13147,
+    12806,
     59
    ],
    "examples": []
@@ -1081,10 +1034,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     6227,
-    59
+    63
    ],
    "examples": []
   },
@@ -1126,6 +1079,15 @@
    "examples": []
   },
   {
+   "name": "NYPL Bruno Walter Auditorium",
+   "url": "https://www.nypl.org/locations/lpa",
+   "read_url": "https://www.nypl.org/locations/lpa",
+   "method": "AI",
+   "status": "error",
+   "shows": 0,
+   "detail": "API error 429: {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"This request would exceed your rate limit of 500,000 input tokens per minute (org: f033b565-35aa-4182-8595-fa3eb274a616, mo"
+  },
+  {
    "name": "OPERA America National Opera Center",
    "url": "https://www.operaamerica.org/",
    "read_url": "https://www.operaamerica.org/calendar#eyJxIjoiIiwiY29xIjoiIiwidHlwZXMiOltdLCJ6aXAiOiIiLCJzdGF0ZXMiOltdLCJmcm9tIjoiMjAyNi0xMC0yMiIsInRvIjoiMjAyNi0xMC0yMiIsImNvbXBhbnlJZCI6MCwicGFnZSI6MSwicGFnZVNpemUiOjEyLCJjb21wYW5pZXMiOltdfQ%3D%3D",
@@ -1135,7 +1097,7 @@
    "detail": "calendar; dropped 3× listed at another venue",
    "tokens": [
     11177,
-    648
+    631
    ],
    "examples": [
     {
@@ -1160,20 +1122,6 @@
      "why": "listed at another venue"
     }
    ]
-  },
-  {
-   "name": "Ornithology Jazz Club",
-   "url": "https://www.ornithologyjazzclub.com/",
-   "read_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    5632,
-    497
-   ],
-   "examples": []
   },
   {
    "name": "Our Wicked Lady",
@@ -1210,7 +1158,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     2913,
     63
@@ -1235,8 +1183,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    6279,
-    210
+    6349,
+    203
    ],
    "examples": [
     {
@@ -1257,8 +1205,22 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5375,
+    5282,
     63
+   ],
+   "examples": []
+  },
+  {
+   "name": "Public Records",
+   "url": "https://publicrecords.nyc/",
+   "read_url": "https://publicrecords.nyc/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    15570,
+    737
    ],
    "examples": []
   },
@@ -1275,28 +1237,6 @@
     59
    ],
    "examples": []
-  },
-  {
-   "name": "Radio City Music Hall",
-   "url": "https://www.msg.com/radio-city-music-hall/calendar",
-   "read_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    20439,
-    248
-   ],
-   "examples": [
-    {
-     "title": "Yohay Sponder",
-     "start_time": "7:30 PM",
-     "date_evidence": "THU 22 OCT '26 TONIGHT",
-     "time_evidence": "7:30PM ET",
-     "why": "listed at another venue"
-    }
-   ]
   },
   {
    "name": "Regina Opera",
@@ -1324,7 +1264,7 @@
   {
    "name": "Saint Peter's Church",
    "url": "https://www.saintpeters.org/",
-   "read_url": "https://www.saintpeters.org/events",
+   "read_url": "https://www.saintpeters.org/",
    "method": "event data",
    "status": "none-tonight",
    "shows": 0,
@@ -1361,11 +1301,11 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://sidgolds.com/detroit/events/",
-   "method": "WordPress calendar",
-   "status": "none-tonight",
+   "read_url": "https://www.sidgolds.com/",
+   "method": null,
+   "status": "error",
    "shows": 0,
-   "detail": "left out 2 non-performance listings"
+   "detail": "Error: Page.evaluate: Execution context was destroyed, most likely because of a navigation"
   },
   {
    "name": "Sistas' Place",
@@ -1396,20 +1336,6 @@
    "examples": []
   },
   {
-   "name": "Smalls Jazz Club",
-   "url": "https://www.smallslive.com/",
-   "read_url": "https://www.smallslive.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    18809,
-    1112
-   ],
-   "examples": []
-  },
-  {
    "name": "Snug Harbor Cultural Center",
    "url": "https://snug-harbor.org/",
    "read_url": "https://snug-harbor.org/",
@@ -1419,7 +1345,7 @@
    "detail": "calendar",
    "tokens": [
     8616,
-    411
+    420
    ],
    "examples": []
   },
@@ -1447,7 +1373,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     7501,
-    252
+    260
    ],
    "examples": [
     {
@@ -1462,14 +1388,14 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/",
+   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:135.232.185.18:1792667768.155",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "unreadable",
    "tokens": [
-    5739,
-    63
+    2142,
+    60
    ],
    "examples": []
   },
@@ -1482,8 +1408,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    6484,
-    222
+    6530,
+    209
    ],
    "examples": [
     {
@@ -1615,7 +1541,7 @@
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     3806,
-    264
+    299
    ],
    "examples": [
     {
@@ -1694,22 +1620,15 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× date quote is not tonight",
+   "detail": "None; dropped 1× date quote is not tonight",
    "tokens": [
     14718,
-    747
+    359
    ],
    "examples": [
     {
      "title": "Jason Lindner Broadband",
      "start_time": "7:00 PM",
-     "date_evidence": "Wed, Oct 21, 7:00 PM – Sat, Oct 24, 10:00 PM",
-     "time_evidence": "Sets at 7pm + 9pm ET",
-     "why": "date quote is not tonight"
-    },
-    {
-     "title": "Jason Lindner Broadband",
-     "start_time": "9:00 PM",
      "date_evidence": "Wed, Oct 21, 7:00 PM – Sat, Oct 24, 10:00 PM",
      "time_evidence": "Sets at 7pm + 9pm ET",
      "why": "date quote is not tonight"
@@ -1725,7 +1644,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    4558,
+    4546,
     59
    ],
    "examples": []
@@ -1792,7 +1711,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5687,
     63
@@ -1809,7 +1728,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     12728,
-    270
+    269
    ],
    "examples": [
     {
@@ -1830,7 +1749,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12980,
+    12977,
     59
    ],
    "examples": []
@@ -1853,7 +1772,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    7355,
+    7332,
     63
    ],
    "examples": []
@@ -1882,7 +1801,7 @@
    "detail": "calendar; dropped 4× date quote is not tonight",
    "tokens": [
     5406,
-    720
+    734
    ],
    "examples": [
     {
@@ -1920,14 +1839,14 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/",
-   "read_url": "https://www.zincbar.com/",
+   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2F&y=ipr:135.232.185.18:1792667608.061",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "unreadable",
    "tokens": [
-    4074,
-    59
+    2127,
+    60
    ],
    "examples": []
   },
@@ -1937,11 +1856,11 @@
    "read_url": "https://54below.org/calendar/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11799,
-    224
+    11741,
+    383
    ],
    "examples": []
   },
@@ -1963,8 +1882,8 @@
    "shows": 15,
    "detail": "calendar",
    "tokens": [
-    67373,
-    2573
+    69921,
+    2206
    ],
    "examples": []
   },
@@ -1978,24 +1897,60 @@
    "detail": "calendar; dropped 1× time quote not found on page, 1× start time not in time quote",
    "tokens": [
     14602,
-    834
+    858
    ],
    "examples": [
     {
      "title": "Thurs Happy Hour w/Max Light",
      "start_time": "",
-     "date_evidence": "OCT 22 Thurs Happy Hour w/Max Light",
+     "date_evidence": "OCT\n22\nThurs Happy Hour w/Max Light",
      "time_evidence": "",
      "why": "time quote not found on page"
     },
     {
      "title": "THURS 8 & 9:30 Marc Copland w/Adam Kolker, Jeremy Stratton, Tony Martucci",
      "start_time": "8:00 PM",
-     "date_evidence": "OCT 22 THURS 8 & 9:30 Marc Copland",
+     "date_evidence": "OCT\n22\nTHURS 8 & 9:30 Marc Copland w/Adam Kolker, Jeremy Stratton, Tony Martucci",
      "time_evidence": "THURS 8 & 9:30 Marc Copland w/Adam Kolker, Jeremy Stratton, Tony Martucci",
      "why": "start time not in time quote"
     }
    ]
+  },
+  {
+   "name": "Bar Freda",
+   "url": "https://www.barfreda.com/",
+   "read_url": "https://www.barfreda.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar; dropped 1× listed at another venue",
+   "tokens": [
+    3560,
+    482
+   ],
+   "examples": [
+    {
+     "title": "HERYN & FRIENDS PRESENT BUNNYSONGS OFFICIAL RELEASE PARTY",
+     "start_time": "7:00 PM",
+     "date_evidence": "THURSDAY OCT 22",
+     "time_evidence": "7:00 PM",
+     "why": "listed at another venue"
+    }
+   ]
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    15062,
+    586
+   ],
+   "examples": []
   },
   {
    "name": "Barbès",
@@ -2007,21 +1962,7 @@
    "detail": "calendar",
    "tokens": [
     12574,
-    565
-   ],
-   "examples": []
-  },
-  {
-   "name": "Baryshnikov Arts",
-   "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    5577,
-    247
+    515
    ],
    "examples": []
   },
@@ -2034,8 +1975,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    20336,
-    256
+    20322,
+    247
    ],
    "examples": []
   },
@@ -2048,8 +1989,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    6274,
-    1160
+    5980,
+    1130
    ],
    "examples": []
   },
@@ -2059,11 +2000,11 @@
    "read_url": "https://mercuryeastpresents.com/boweryballroom/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
     8965,
-    232
+    596
    ],
    "examples": []
   },
@@ -2077,7 +2018,7 @@
    "detail": "calendar",
    "tokens": [
     12547,
-    311
+    293
    ],
    "examples": []
   },
@@ -2118,7 +2059,7 @@
    "detail": "calendar",
    "tokens": [
     4362,
-    504
+    522
    ],
    "examples": []
   },
@@ -2129,34 +2070,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× not a public performance, 2× listed at another venue",
+   "detail": "calendar",
    "tokens": [
-    7661,
-    953
+    7887,
+    465
    ],
-   "examples": [
-    {
-     "title": "Guided Tours",
-     "start_time": "11:30 AM",
-     "date_evidence": "Thursday\nOct 22\n2026",
-     "time_evidence": "Available 11:30 AM and 12:30 PM",
-     "why": "not a public performance"
-    },
-    {
-     "title": "An Early Childhood Concert",
-     "start_time": "10 AM",
-     "date_evidence": "Thursday\nOct 22\n2026",
-     "time_evidence": "10 AM",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "An Early Childhood Concert",
-     "start_time": "11:30 AM",
-     "date_evidence": "Thursday\nOct 22\n2026",
-     "time_evidence": "11:30 AM",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Chamber Music Society of Lincoln Center",
@@ -2168,7 +2087,7 @@
    "detail": "calendar",
    "tokens": [
     12404,
-    567
+    584
    ],
    "examples": []
   },
@@ -2182,7 +2101,7 @@
    "detail": "calendar",
    "tokens": [
     12580,
-    555
+    558
    ],
    "examples": []
   },
@@ -2196,7 +2115,7 @@
    "detail": "calendar",
    "tokens": [
     20860,
-    240
+    225
    ],
    "examples": []
   },
@@ -2210,7 +2129,7 @@
    "detail": "calendar",
    "tokens": [
     8452,
-    670
+    686
    ],
    "examples": []
   },
@@ -2223,8 +2142,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    9128,
-    623
+    8939,
+    630
    ],
    "examples": []
   },
@@ -2237,8 +2156,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    5647,
-    292
+    5667,
+    288
    ],
    "examples": []
   },
@@ -2248,21 +2167,13 @@
    "read_url": "https://www.freddysbar.com/events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× start time not in time quote",
+   "shows": 2,
+   "detail": "calendar",
    "tokens": [
-    20564,
-    506
+    20487,
+    472
    ],
-   "examples": [
-    {
-     "title": "LATE NIGHT LAUGHS! A Midnight Comedy Show After Burlesque",
-     "start_time": "11:30 PM",
-     "date_evidence": "Thu, Oct 22, 202611:30 PM  Fri, Oct 23, 202612:30 AM",
-     "time_evidence": "Thu, Oct 22, 202611:30 PM  Fri, Oct 23, 202612:30 AM",
-     "why": "start time not in time quote"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Grace Church",
@@ -2292,7 +2203,7 @@
    "detail": "calendar",
    "tokens": [
     8444,
-    420
+    483
    ],
    "examples": []
   },
@@ -2306,7 +2217,21 @@
    "detail": "calendar",
    "tokens": [
     3276,
-    240
+    248
+   ],
+   "examples": []
+  },
+  {
+   "name": "Jazz at Lincoln Center",
+   "url": "https://jazz.org/",
+   "read_url": "https://jazz.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    7068,
+    570
    ],
    "examples": []
   },
@@ -2317,24 +2242,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": null,
-   "tokens": [
-    4213,
-    215
-   ],
-   "examples": []
-  },
-  {
-   "name": "Littlefield",
-   "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    5608,
-    500
+    4213,
+    247
    ],
    "examples": []
   },
@@ -2348,7 +2259,7 @@
    "detail": "calendar",
    "tokens": [
     7739,
-    273
+    274
    ],
    "examples": []
   },
@@ -2362,7 +2273,7 @@
    "detail": "calendar",
    "tokens": [
     4428,
-    240
+    236
    ],
    "examples": []
   },
@@ -2376,7 +2287,7 @@
    "detail": "calendar",
    "tokens": [
     8631,
-    421
+    428
    ],
    "examples": []
   },
@@ -2389,8 +2300,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    18807,
-    1078
+    19039,
+    1034
    ],
    "examples": []
   },
@@ -2413,7 +2324,7 @@
    "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
     5667,
-    945
+    920
    ],
    "examples": [
     {
@@ -2426,16 +2337,16 @@
    ]
   },
   {
-   "name": "NYPL Bruno Walter Auditorium",
-   "url": "https://www.nypl.org/locations/lpa",
-   "read_url": "https://www.nypl.org/locations/lpa",
+   "name": "Ornithology Jazz Club",
+   "url": "https://www.ornithologyjazzclub.com/",
+   "read_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": null,
+   "shows": 2,
+   "detail": "calendar",
    "tokens": [
-    6613,
-    239
+    5632,
+    498
    ],
    "examples": []
   },
@@ -2449,7 +2360,7 @@
    "detail": "calendar",
    "tokens": [
     2835,
-    810
+    816
    ],
    "examples": []
   },
@@ -2463,20 +2374,6 @@
    "detail": null
   },
   {
-   "name": "Public Records",
-   "url": "https://publicrecords.nyc/",
-   "read_url": "https://publicrecords.nyc/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 3,
-   "detail": "calendar",
-   "tokens": [
-    15570,
-    744
-   ],
-   "examples": []
-  },
-  {
    "name": "Purgatory",
    "url": "https://www.purgatorybk.com/",
    "read_url": "https://www.purgatorybk.com/events",
@@ -2486,7 +2383,7 @@
    "detail": "calendar",
    "tokens": [
     4013,
-    247
+    241
    ],
    "examples": []
   },
@@ -2500,7 +2397,21 @@
    "detail": "calendar",
    "tokens": [
     8861,
-    243
+    245
+   ],
+   "examples": []
+  },
+  {
+   "name": "Radio City Music Hall",
+   "url": "https://www.msg.com/radio-city-music-hall/calendar",
+   "read_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    20439,
+    240
    ],
    "examples": []
   },
@@ -2513,8 +2424,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    11915,
-    282
+    11896,
+    259
    ],
    "examples": []
   },
@@ -2528,7 +2439,7 @@
    "detail": "calendar",
    "tokens": [
     7106,
-    298
+    293
    ],
    "examples": []
   },
@@ -2539,10 +2450,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": null,
+   "detail": "calendar",
    "tokens": [
     7600,
-    407
+    396
    ],
    "examples": []
   },
@@ -2553,20 +2464,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    12010,
-    422
+    11985,
+    247
    ],
-   "examples": [
-    {
-     "title": "Noble Singers Rehearsal",
-     "start_time": "4:15 PM",
-     "date_evidence": "Thursday, October 22, 2026 @ 4:15 p.m.",
-     "time_evidence": "Thursday, October 22, 2026 @ 4:15 p.m.",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Saint Vitus",
@@ -2592,11 +2495,25 @@
    "read_url": "https://www.silvana-nyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    9899,
-    442
+    10237,
+    719
+   ],
+   "examples": []
+  },
+  {
+   "name": "Smalls Jazz Club",
+   "url": "https://www.smallslive.com/",
+   "read_url": "https://www.smallslive.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 5,
+   "detail": "calendar",
+   "tokens": [
+    19041,
+    1203
    ],
    "examples": []
   },
@@ -2610,7 +2527,7 @@
    "detail": "calendar",
    "tokens": [
     5040,
-    573
+    558
    ],
    "examples": []
   },
@@ -2624,7 +2541,7 @@
    "detail": "calendar",
    "tokens": [
     4510,
-    306
+    291
    ],
    "examples": []
   },
@@ -2638,7 +2555,7 @@
    "detail": "calendar",
    "tokens": [
     8327,
-    458
+    455
    ],
    "examples": []
   },
@@ -2661,7 +2578,7 @@
    "detail": "calendar",
    "tokens": [
     17787,
-    468
+    474
    ],
    "examples": []
   },
@@ -2684,7 +2601,7 @@
    "detail": "calendar",
    "tokens": [
     14648,
-    678
+    650
    ],
    "examples": []
   },
@@ -2698,7 +2615,7 @@
    "detail": "calendar",
    "tokens": [
     8183,
-    267
+    279
    ],
    "examples": []
   },
@@ -2721,7 +2638,7 @@
    "detail": "calendar",
    "tokens": [
     4878,
-    315
+    309
    ],
    "examples": []
   },
@@ -2735,7 +2652,7 @@
    "detail": "calendar",
    "tokens": [
     16814,
-    418
+    416
    ],
    "examples": []
   },
@@ -2758,7 +2675,7 @@
    "detail": null,
    "tokens": [
     4173,
-    258
+    234
    ],
    "examples": []
   },
@@ -2772,7 +2689,7 @@
    "detail": "calendar",
    "tokens": [
     5087,
-    423
+    400
    ],
    "examples": []
   }
