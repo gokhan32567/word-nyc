@@ -39,7 +39,7 @@ from genres import GENRES, bucket  # noqa: E402
 import feeds  # noqa: E402
 import geo  # noqa: E402
 import report  # noqa: E402
-from shows import is_show, is_strict  # noqa: E402
+from shows import is_show, is_strict, place_key, same_place  # noqa: E402
 import tm  # noqa: E402
 
 # Claude Haiku 5.5 list price per million tokens (prompts up to 100K tokens)
@@ -377,6 +377,12 @@ def main() -> int:
     if key:
         try:
             found = [e for e in tm.from_ticketmaster(night, key) if is_show(e["title"])]
+            for e in found:  # "Iridium" on Ticketmaster is our "The Iridium": use one name so shows merge
+                for v in venues:
+                    if place_key(v["name"]) == place_key(e["venue"]) or (
+                            same_place(v, None, e.get("address")) and place_key(v["name"]) in place_key(e["venue"])):
+                        e["venue"] = v["name"]
+                        break
             log(f"  ticketmaster: {len(found)} events")
             collected += found
             ok_sources += 1
