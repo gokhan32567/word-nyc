@@ -15,7 +15,7 @@ import re
 import shutil
 import sys
 import unicodedata
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -48,11 +48,51 @@ def iso(e: dict) -> str | None:
     return datetime(d.year, d.month, d.day, m // 60, m % 60, tzinfo=NY).isoformat()
 
 
+def end_iso(e: dict) -> str | None:
+    """The show's end time, rolled to the next day when it runs past midnight."""
+    start, end = parse_clock(e.get("time")), parse_clock(e.get("end"))
+    if end is None or not e.get("date"):
+        return None
+    d = date.fromisoformat(e["date"])
+    dt = datetime(d.year, d.month, d.day, end // 60, end % 60, tzinfo=NY)
+    if start is not None and end < start:
+        dt += timedelta(days=1)
+    return dt.isoformat()
+
+
+def prices(s: str | None) -> list[float]:
+    """Every dollar figure in a free-text price, e.g. '$25 / $40' or 'From$13.60' -> [25.0, 40.0] / [13.6]."""
+    if not s:
+        return []
+    out = []
+    for m in re.finditer(r"\$\s*(\d{1,4}(?:,\d{3})*(?:\.\d{1,2})?)", s):
+        try:
+            out.append(float(m.group(1).replace(",", "")))
+        except ValueError:
+            pass
+    return sorted(set(out))
+
+
+def offer_ld(e: dict) -> dict | None:
+    """An Offer for the ticket link, priced when the listing quoted one. A range becomes an AggregateOffer."""
+    if not e.get("url"):
+        return None
+    base = {"url": e["url"], "availability": "https://schema.org/InStock", "priceCurrency": "USD"}
+    p = prices(e.get("price"))
+    if len(p) > 1:
+        return {"@type": "AggregateOffer", "lowPrice": p[0], "highPrice": p[-1], **base}
+    if len(p) == 1:
+        return {"@type": "Offer", "price": p[0], **base}
+    if e.get("price") and re.search(r"\bfree\b|\bno cover\b", e["price"], re.I):
+        return {"@type": "Offer", "price": 0, **base}
+    return {"@type": "Offer", **base}
+
+
 def event_ld(e: dict) -> dict:
     ld = {
         "@type": "MusicEvent" if e.get("genre") not in ("Comedy", "Ballet & Dance") else
                  ("ComedyEvent" if e.get("genre") == "Comedy" else "DanceEvent"),
-        "name": e["title"], "startDate": iso(e),
+        "name": e["title"], "startDate": iso(e), "endDate": end_iso(e),
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {"@type": "Place", "name": e["venue"],
@@ -64,8 +104,9 @@ def event_ld(e: dict) -> dict:
     if e.get("description"):
         ld["description"] = e["description"]
     ld["image"] = [e["image"]] if e.get("image") else list(FALLBACK_IMAGES)
-    if e.get("url"):
-        ld["offers"] = {"@type": "Offer", "url": e["url"], "availability": "https://schema.org/InStock"}
+    offer = offer_ld(e)
+    if offer:
+        ld["offers"] = offer
     return {k: v for k, v in ld.items() if v}
 
 
