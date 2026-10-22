@@ -14,7 +14,7 @@ HARD = re.compile(
     r"class(es)?|courses?|lessons?\b(?!\s+(and|&)\s+carols)|workshops?|seminars?|lectures?|webinars?|"
     r"info(rmation)? sessions?|open house|orientation|registration|meetings?|volunteers?|service project|"
     r"care packages?|support group|yoga|meditation|tai chi|fitness|pottery|ceramics|carving|crafts?|trivia|"
-    r"bingo|karaoke|brunch|screenings?|rehearsals?|auditions?|office hours|formation|parking|"
+    r"bingo|karaoke|brunch|screenings?|on screen|movie night|rehearsals?|auditions?|office hours|formation|parking|"
     r"guided tours?|walking tours?|house tours?|building tours?|garden tours?|historical tours?|history tours?|"
     r"heritage tours?|museum tours?|campus tours?|tours? of|private event|"
     r"closed to the public|members only)\b", re.I)
