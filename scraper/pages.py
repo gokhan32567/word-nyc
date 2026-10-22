@@ -26,6 +26,10 @@ SITE = "https://word-nyc.com"
 FONTS = ("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800"
          "&family=Schibsted+Grotesk:wght@400;600&display=swap")
 
+# Google's Event rich result wants an image on every event, in 16x9, 4x3 and 1x1.
+# Most listings arrive without a flyer, so these branded cards stand in for them.
+FALLBACK_IMAGES = (f"{SITE}/icons/show-16x9.png", f"{SITE}/icons/show-4x3.png", f"{SITE}/icons/show-1x1.png")
+
 
 def slug(s: str) -> str:
     s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower().replace("&", " and ")
@@ -59,8 +63,7 @@ def event_ld(e: dict) -> dict:
         ld["performer"] = [{"@type": "PerformingGroup", "name": p} for p in e["performers"][:6]]
     if e.get("description"):
         ld["description"] = e["description"]
-    if e.get("image"):
-        ld["image"] = [e["image"]]
+    ld["image"] = [e["image"]] if e.get("image") else list(FALLBACK_IMAGES)
     if e.get("url"):
         ld["offers"] = {"@type": "Offer", "url": e["url"], "availability": "https://schema.org/InStock"}
     return {k: v for k, v in ld.items() if v}
