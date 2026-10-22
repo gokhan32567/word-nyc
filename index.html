@@ -606,11 +606,11 @@
 
   async function loadEvents() {
     try {
-      const r = await fetch(CONFIG.dataUrl, { cache: 'no-store' });
+      const r = await fetch(CONFIG.dataUrl + '?v=' + Date.now(), { cache: 'no-store' });
       if (r.ok) {
         const j = await r.json();
         const arr = Array.isArray(j) ? j : j && j.events;
-        if (Array.isArray(arr)) return { events: arr, date: (j && j.date) || null, source: 'file' };
+        if (Array.isArray(arr)) return { events: arr, date: (j && j.date) || null, generated: (j && j.generated) || null, source: 'file' };
       }
     } catch (_) { /* no events.json (or opened from disk) -> use the sample lineup */ }
     return { events: FALLBACK_EVENTS, date: null, source: 'sample' };
@@ -1365,12 +1365,14 @@
     document.head.appendChild(s);
   }
 
+  let DATA_GENERATED = null; // when the loaded lineup was built (to spot a newer one)
   let loadedFor = null;     // which night the current data was loaded for
   let lastFetch = 0;
 
   async function loadData() {
     const data = await loadEvents();
     DATA_DATE = data.date;
+    DATA_GENERATED = data.generated || null;
     DATA_SOURCE = data.source;
     loadedFor = tonightISO();
     lastFetch = Date.now();
@@ -1395,7 +1397,15 @@
   function tick() {
     const night = tonightISO();
     const waiting = DATA_DATE && DATA_DATE !== night && Date.now() - lastFetch > 10 * 60e3;
-    if (night !== loadedFor || waiting) loadData(); else render();
+    if (night !== loadedFor || waiting) { loadData(); return; }
+    render();
+    // The lineup can be updated during the day: pick up a newer one (every 15 min, or when the app is reopened)
+    if (Date.now() - lastFetch > 15 * 60e3 && !selectedId) {
+      lastFetch = Date.now();
+      fetch(CONFIG.dataUrl + '?v=' + Date.now(), { cache: 'no-store' }).then((r) => r.ok ? r.json() : null).then((j) => {
+        if (j && j.generated && j.generated !== DATA_GENERATED && j.date === DATA_DATE) loadData();
+      }).catch(() => {});
+    }
   }
 
   (async function init() {
