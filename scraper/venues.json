@@ -86,34 +86,37 @@
   {
    "name": "The Iridium",
    "address": "1650 Broadway, New York, NY 10019",
-   "url": "https://www.theiridium.com/",
+   "url": "https://www.theiridium.com/events",
    "genre": "Jazz",
    "nightly": true
   },
   {
    "name": "Zinc Bar",
    "address": "82 W 3rd St, New York, NY 10012",
-   "url": "https://www.zincbar.com/",
+   "url": "https://www.zincbar.com/calendar/",
    "genre": "Jazz",
    "nightly": true
   },
   {
    "name": "Minton's Playhouse",
    "address": "206 W 118th St, New York, NY 10026",
-   "url": "https://www.mintonsharlem.com/",
+   "url": "https://mintonsnyc.com/",
    "genre": "Jazz"
   },
   {
    "name": "Cellar Dog",
    "address": "75 Christopher St, New York, NY 10014",
-   "url": "https://www.cellardog.net/",
+   "url": "https://www.cellardog.net/music",
    "genre": "Jazz",
-   "nightly": true
+   "nightly": true,
+   "sets": [
+    "7:00 PM"
+   ]
   },
   {
    "name": "Arthur's Tavern",
    "address": "57 Grove St, New York, NY 10014",
-   "url": "https://www.arthurstavernnyc.com/",
+   "url": "https://arthurstavern.nyc/events/",
    "genre": "Jazz",
    "nightly": true
   },
@@ -139,12 +142,6 @@
    "name": "National Jazz Museum in Harlem",
    "address": "58 W 129th St, New York, NY 10027",
    "url": "https://jmih.org/",
-   "genre": "Jazz"
-  },
-  {
-   "name": "Swing 46",
-   "address": "349 W 46th St, New York, NY 10036",
-   "url": "https://www.swing46.nyc/",
    "genre": "Jazz"
   },
   {
@@ -199,19 +196,13 @@
   {
    "name": "Soapbox Gallery",
    "address": "636 Dean St, Brooklyn, NY 11238",
-   "url": "https://www.soapboxgallery.org/",
+   "url": "https://www.soapboxgallery.org/calendar",
    "genre": "Jazz"
   },
   {
    "name": "Sistas' Place",
    "address": "456 Nostrand Ave, Brooklyn, NY 11216",
    "url": "https://www.sistasplace.org/",
-   "genre": "Jazz"
-  },
-  {
-   "name": "The Owl Music Parlor",
-   "address": "497 Rogers Ave, Brooklyn, NY 11225",
-   "url": "https://www.theowl.nyc/",
    "genre": "Jazz"
   },
   {
@@ -235,25 +226,19 @@
   {
    "name": "The Green Room 42",
    "address": "570 10th Ave, New York, NY 10036",
-   "url": "https://www.thegreenroom42.com/",
+   "url": "https://thegreenroom42.venuetix.com/",
    "genre": "Cabaret & Musicals"
   },
   {
    "name": "Don't Tell Mama",
    "address": "343 W 46th St, New York, NY 10036",
-   "url": "https://www.donttellmamanyc.com/",
+   "url": "https://shows.donttellmamanyc.com/",
    "genre": "Cabaret & Musicals"
   },
   {
    "name": "Pangea",
    "address": "178 2nd Ave, New York, NY 10003",
-   "url": "https://www.pangeanyc.com/",
-   "genre": "Cabaret & Musicals"
-  },
-  {
-   "name": "The Duplex",
-   "address": "61 Christopher St, New York, NY 10014",
-   "url": "https://www.theduplex.com/",
+   "url": "http://www.pangeanyc.com/music/",
    "genre": "Cabaret & Musicals"
   },
   {
@@ -348,7 +333,7 @@
   {
    "name": "92NY",
    "address": "1395 Lexington Ave, New York, NY 10128",
-   "url": "https://www.92ny.org/",
+   "url": "https://www.92ny.org/whats-on/events?hierarchicalMenu%5BEventMenu.lvl0%5D%5B0%5D=Concerts",
    "genre": "Classical"
   },
   {
@@ -408,7 +393,7 @@
   {
    "name": "Austrian Cultural Forum",
    "address": "11 E 52nd St, New York, NY 10022",
-   "url": "https://www.acfny.org/",
+   "url": "https://acfny.org/events/",
    "genre": "Classical"
   },
   {
@@ -426,7 +411,7 @@
   {
    "name": "DiMenna Center for Classical Music",
    "address": "450 W 37th St, New York, NY 10018",
-   "url": "https://www.dimennacenter.org/",
+   "url": "https://dimennacenter.org/calendar",
    "genre": "Classical"
   },
   {
@@ -456,7 +441,7 @@
   {
    "name": "Apollo Theater",
    "address": "253 W 125th St, New York, NY 10027",
-   "url": "https://www.apollotheater.org/",
+   "url": "https://www.apollotheater.org/ticket-and-events",
    "genre": "R&B & Soul"
   },
   {
@@ -579,7 +564,7 @@
   {
    "name": "Christ & St. Stephen's Church",
    "address": "120 W 69th St, New York, NY 10023",
-   "url": "https://www.csschurch.org/",
+   "url": "https://www.csschurch.org/concerts",
    "genre": "Classical"
   },
   {
@@ -749,7 +734,7 @@
   {
    "name": "Bembe",
    "address": "81 S 6th St, Brooklyn, NY 11249",
-   "url": "https://www.bembe.us/",
+   "url": "https://www.eventbrite.com/o/bembe-18937575538",
    "genre": "Latin"
   },
   {
@@ -766,12 +751,6 @@
    "nightly": true
   },
   {
-   "name": "Caffe Vivaldi",
-   "address": "32 Jones St, New York, NY 10014",
-   "url": "https://www.caffevivaldi.com/",
-   "genre": "Folk & Americana"
-  },
-  {
    "name": "Paddy Reilly's Music Bar",
    "address": "519 2nd Ave, New York, NY 10016",
    "url": "https://www.paddyreillysmusicbar.com/",
@@ -780,7 +759,7 @@
   {
    "name": "Skinny Dennis",
    "address": "152 Metropolitan Ave, Brooklyn, NY 11249",
-   "url": "https://www.skinnydennisbar.com/",
+   "url": "https://ma.to/venue/skinnydennis",
    "genre": "Country"
   },
   {
@@ -816,7 +795,7 @@
   {
    "name": "Arlene's Grocery",
    "address": "95 Stanton St, New York, NY 10002",
-   "url": "https://www.arlenesgrocery.net/",
+   "url": "https://ma.to/venue/arlenesgrocery",
    "genre": "Rock"
   },
   {
@@ -852,7 +831,7 @@
   {
    "name": "Baby's All Right",
    "address": "146 Broadway, Brooklyn, NY 11211",
-   "url": "https://babysallright.com/",
+   "url": "https://wl.seetickets.us/BabysAllRightBrooklyn",
    "genre": "Indie & Alternative"
   },
   {
@@ -918,7 +897,7 @@
   {
    "name": "Gold Sounds",
    "address": "44 Wyckoff Ave, Brooklyn, NY 11237",
-   "url": "https://goldsoundsbar.com/",
+   "url": "https://dice.fm/venue/gold-sounds-y3qr",
    "genre": "Punk & Hardcore"
   },
   {
@@ -948,7 +927,7 @@
   {
    "name": "Elsewhere",
    "address": "599 Johnson Ave, Brooklyn, NY 11237",
-   "url": "https://www.elsewherebrooklyn.com/",
+   "url": "https://www.elsewhere.club/events",
    "genre": "Electronic & DJ"
   },
   {
@@ -966,7 +945,7 @@
   {
    "name": "Nowadays",
    "address": "56-06 Cooper Ave, Ridgewood, NY 11385",
-   "url": "https://nowadays.nyc/",
+   "url": "https://ra.co/clubs/105873",
    "genre": "Electronic & DJ"
   },
   {
