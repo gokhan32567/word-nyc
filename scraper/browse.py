@@ -191,10 +191,7 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                 return bool(pat.search(t) and CLOCK.search(t))
 
             first_links = data["links"]
-            # A venue's home page often shows only featured shows: also read its calendar page.
-            home = urllib.parse.urlsplit(data["final_url"] or url).path.strip("/") == ""
-            home_usable = usable(data)
-            if not home_usable or home:
+            if not usable(data):
                 for cand in _calendar_candidates(data["links"], data["final_url"] or url):
                     if not await asyncio.to_thread(allowed, cand):
                         continue
@@ -205,8 +202,6 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
                         continue
                     snap.tried.append((cand, f"usable={usable(data2)} chars={len(data2['text'] or '')}"))
                     if usable(data2):
-                        if home_usable:  # keep the home page's listings too
-                            data2["text"] = (data2["text"] or "") + "\n\n----- home page -----\n" + (data["text"] or "")
                         data2["links"] += data["links"][:100]
                         data2["jsonld"] += data["jsonld"]
                         data2["tribe"] = data2["tribe"] or data["tribe"]
