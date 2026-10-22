@@ -270,7 +270,7 @@ VENUE_SETS = "<venue's regular set times>"
 
 def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict, page: str, page_norm: str) -> tuple[dict | None, str]:
     title = (raw.get("title") or "").strip()
-    if not raw.get("public_performance", True) or not title or GENERIC.match(title):
+    if not title or (not venue.get("all_events") and (not raw.get("public_performance", True) or GENERIC.match(title))):
         return None, "not a public performance"
     de, te = raw.get("date_evidence") or "", raw.get("time_evidence") or ""
     if not (2 <= len(de) <= 200 and on_page(de, page)):

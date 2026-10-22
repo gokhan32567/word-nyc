@@ -79,7 +79,9 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
             continue
         if not listed:
             continue
-        found = [e for e in listed if is_show(e["title"], e.pop("_hint", ""), strict)]
+        found = [e for e in listed if v.get("all_events") or is_show(e["title"], e.pop("_hint", ""), strict)]
+        for e in found:
+            e.pop("_hint", None)
         dropped = len(listed) - len(found)
         note = f"left out {dropped} non-performance listing{'s' * (dropped != 1)}" if dropped else None
         # The venue's own calendar data covers the whole night, so no need to read the page with AI too.
@@ -101,7 +103,7 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
     except ai.AIError as e:
         row.update(status="error", method="AI", detail=str(e)[:200])
         return [], row
-    found = [e for e in found if is_show(e["title"], "", strict)]
+    found = [e for e in found if v.get("all_events") or is_show(e["title"], "", strict)]
     if v.get("_targets"):  # a campus calendar: put each show at its presenter's hall, skip other presenters
         found = [e for e in (assign_presenter(e, v["_targets"]) for e in found) if e]
     for e in found:

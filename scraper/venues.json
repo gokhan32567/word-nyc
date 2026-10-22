@@ -362,7 +362,9 @@
    "name": "Symphony Space",
    "address": "2537 Broadway, New York, NY 10025",
    "url": "https://www.symphonyspace.org/",
-   "genre": "Other"
+   "genre": "Other",
+   "all_events": true,
+   "note": "List every public event tonight: concerts, films, talks, readings, comedy and family shows."
   },
   {
    "name": "Miller Theatre",

@@ -83,6 +83,10 @@
     </footer>
   </main>
   <script>
+    if (new URLSearchParams(location.search).has('missing')) {
+      document.querySelector('h1').textContent = 'Report a missing show';
+      document.querySelector('.lede').textContent = "Saw a show we didn't list? Tell us what, where and when, and we'll add it to the map.";
+    }
     // Submissions go to a Google Form when it's configured (see README), otherwise to an email draft.
     const GOOGLE_FORM = {
       action: 'https://docs.google.com/forms/d/e/1FAIpQLSdNrGbBs3TFfhMU6o83P2R1dk7cAnDu_f4lrHo7NT26mJ58ug/formResponse',

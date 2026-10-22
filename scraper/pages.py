@@ -145,6 +145,7 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <main class="wrap">
     <a class="home" href="/">Word NYC</a>
 {body}
+    <p class="small">Missing a show? <a href="/submit.html?missing=1">Tell us</a> and we'll add it.</p>
     <footer>
       <a href="/">Tonight's map</a><a href="/tonight/">All shows tonight</a><a href="/submit.html">Submit a show</a><a href="/advertise.html">Advertise</a><a href="/privacy.html">Privacy</a>
     </footer>
