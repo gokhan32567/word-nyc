@@ -1,0 +1,50 @@
+name: Venue outreach
+
+# Manual only. "test" sends one sample to the Word NYC inbox; "send" emails every venue in the list
+# that hasn't been emailed yet (one a minute), and records them in outreach/sent.json.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "test or send"
+        required: true
+        default: "test"
+      list:
+        description: "CSV of venues (venue,email)"
+        required: true
+        default: "outreach/founding-venues.csv"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: outreach
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send
+        env:
+          LISTINGS_EMAIL: mywordnyc@gmail.com
+          LISTINGS_APP_PASSWORD: ${{ secrets.LISTINGS_APP_PASSWORD }}
+        run: python scraper/outreach.py "${{ github.event.inputs.list }}" --${{ github.event.inputs.mode == 'send' && 'send' || 'test' }}
+      - name: Record who was emailed
+        if: always() && github.event.inputs.mode == 'send'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- outreach)" ]; then
+            cp outreach/sent.json /tmp/sent.json
+            git fetch --quiet origin main && git reset --quiet --hard origin/main
+            cp /tmp/sent.json outreach/sent.json
+            git add outreach/sent.json
+            git commit -qm "Outreach: venues emailed [skip ci]"
+            git push origin HEAD:main
+          fi
