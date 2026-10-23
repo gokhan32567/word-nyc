@@ -174,6 +174,14 @@ def newsletter_events(venues: list[dict], night: date, ai_key: str, user: str, p
 
     mails = fetch(user, password)
     log(f"  newsletters: {len(mails)} emails in the last {DAYS_BACK} days")
+    recent = [m for m in mails if m["sent"] and (datetime.now(NY) - m["sent"]).days <= 3]
+    for who, link in confirm_links(recent, venues):  # finish double opt-in signups from our venues
+        try:
+            import urllib.request
+            urllib.request.urlopen(urllib.request.Request(link, headers={"User-Agent": "Mozilla/5.0"}), timeout=20).read(2000)
+            log(f"  newsletters: confirmed subscription from {who}")
+        except Exception as e:  # noqa: BLE001
+            log(f"  newsletters: couldn't confirm {who}: {type(e).__name__}")
     pat = tonight_pattern(night)
     events, rows, calls = [], [], 0
     for m in mails:
