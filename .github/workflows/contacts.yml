@@ -9,7 +9,7 @@ on:
         required: true
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   contacts:
@@ -29,8 +29,14 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Find contact emails
         run: python scraper/contacts.py "${{ github.event.inputs.venues }}"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: contacts
-          path: contacts.json
-          retention-days: 3
+      - name: Save to the contacts branch
+        run: |
+          cp contacts.json /tmp/contacts.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --quiet --orphan contacts
+          git rm -rq --cached . && git clean -fdq -e contacts.json
+          cp /tmp/contacts.json contacts.json
+          git add contacts.json
+          git commit -qm "Venue contacts [skip ci]"
+          git push -f origin contacts
