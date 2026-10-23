@@ -405,7 +405,7 @@ def main() -> int:
 
     # 3b. venue newsletters in the listings inbox (venues whose sites can't be read)
     nl_user, nl_pass = os.environ.get("LISTINGS_EMAIL", "").strip(), os.environ.get("LISTINGS_APP_PASSWORD", "").strip()
-    if nl_user and nl_pass and ai_key and not args.only.strip():
+    if nl_user and nl_pass and ai_key:
         try:
             import newsletters
             found, nl_rows = newsletters.newsletter_events(all_placed, night, ai_key, nl_user, nl_pass)
