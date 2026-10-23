@@ -75,6 +75,8 @@ jobs:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_TOKEN }}
+          LISTINGS_EMAIL: ${{ secrets.LISTINGS_EMAIL }}
+          LISTINGS_APP_PASSWORD: ${{ secrets.LISTINGS_APP_PASSWORD }}
           SUBMISSIONS_CSV_URL: ${{ vars.SUBMISSIONS_CSV_URL || 'https://docs.google.com/spreadsheets/d/174lJiYMrAUm_LBETSMj9RTCXXQl1S5xS19QNXXlxonc/gviz/tq?tqx=out:csv&sheet=Approved' }}
           VENUE_FILTER: ${{ github.event.inputs.venues }}
         run: python scraper/scrape.py

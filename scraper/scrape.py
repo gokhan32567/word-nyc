@@ -12,7 +12,8 @@ Sources, merged into one lineup:
        d. Eventbrite organizer feed (needs EVENTBRITE_TOKEN and the venue's organizer id)
        e. AI reading of the page text (needs ANTHROPIC_API_KEY), with every show checked against the page
   2. Ticketmaster Discovery API (needs TICKETMASTER_API_KEY); also covers TicketWeb and Universe venues
-  3. Approved rows from the "Submit your show" form (published sheet in SUBMISSIONS_CSV_URL)
+  3. Approved rows from the "Submit your show" form (published sheet in SUBMISSIONS_CSV_URL), and
+     venue newsletters in the listings inbox (LISTINGS_EMAIL + LISTINGS_APP_PASSWORD, see newsletters.py)
   4. Paid placements in sponsored.json
 
 Outputs: events.json (the lineup), coverage.json (what each venue produced), scraper/geocache.json.
@@ -342,6 +343,7 @@ def main() -> int:
     ok_sources = 0
     rows += [{"name": p["name"], "url": p["url"], "status": "skipped", "shows": 0,
               "detail": f"site can't be read; shows come from the {p['via']} calendar"} for p in placed if p.get("via")]
+    all_placed = placed
     placed = [p for p in placed if not p.get("via")]
 
     # 1. venue calendars
@@ -400,6 +402,18 @@ def main() -> int:
             collected += found
         except Exception as e:  # noqa: BLE001
             log(f"  submissions FAILED: {e}")
+
+    # 3b. venue newsletters in the listings inbox (venues whose sites can't be read)
+    nl_user, nl_pass = os.environ.get("LISTINGS_EMAIL", "").strip(), os.environ.get("LISTINGS_APP_PASSWORD", "").strip()
+    if nl_user and nl_pass and ai_key and not args.only.strip():
+        try:
+            import newsletters
+            found, nl_rows = newsletters.newsletter_events(all_placed, night, ai_key, nl_user, nl_pass)
+            log(f"  newsletters: {len(found)} shows tonight")
+            collected += found
+            rows += nl_rows
+        except Exception as e:  # noqa: BLE001
+            log(f"  newsletters FAILED: {type(e).__name__}: {str(e)[:160]}")
 
     # venues that have music every night: an empty result there is almost certainly a reading problem
     nightly = [v["name"] for v in venues if v.get("nightly")]

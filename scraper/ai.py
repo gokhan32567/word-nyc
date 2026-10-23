@@ -374,7 +374,7 @@ def loaded_note(night: date) -> str:
     return "The page was not loaded on that day, so ignore 'Today' and 'Tonight' on the page."
  
 
-def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[list[dict], dict]:
+def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str | None = None) -> tuple[list[dict], dict]:
     page_excerpt = excerpt(snap.text, night)
     links = link_list(snap, page_excerpt)
     weekday = DAYS[night.weekday()].capitalize()
@@ -384,7 +384,7 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str) -> tuple[lis
         f"Venue: {venue['name']} ({venue.get('address', 'New York')})\n"
         f"Page: {snap.final_url or snap.url}\n"
         f"Night to report: {nice} (from 5 AM that day until 5 AM the next morning){note}\n"
-        f"{loaded_note(night)}\n\n"
+        f"{loaded or loaded_note(night)}\n\n"
         f"PAGE TEXT:\n<<<\n{page_excerpt}\n>>>\n\n"
         "LINKS (number: text -> url):\n" +
         "\n".join(f"{i}: {ln['text'][:70]} -> {ln['href'][:160]}" for i, ln in enumerate(links))
