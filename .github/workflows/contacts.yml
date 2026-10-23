@@ -1,0 +1,36 @@
+name: Venue contacts
+
+# Manual only: collects the public contact emails shown on venue websites, for venue outreach.
+on:
+  workflow_dispatch:
+    inputs:
+      venues:
+        description: "Comma-separated venue names (or parts of names)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  contacts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.56.0-${{ runner.os }}
+      - run: |
+          pip install --quiet playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Find contact emails
+        run: python scraper/contacts.py "${{ github.event.inputs.venues }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: contacts
+          path: contacts.json
+          retention-days: 3
