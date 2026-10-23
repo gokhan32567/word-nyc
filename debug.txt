@@ -1,0 +1,693 @@
+{"name": "Cellar Dog", "url": "https://www.cellardog.net/music", "read_url": "https://www.cellardog.net/events", "method": "AI", "status": "none-tonight", "shows": 0, "detail": "not_a_calendar", "tokens": [3981, 63], "examples": []}
+{"name": "The Cutting Room", "url": "https://www.thecuttingroomnyc.com/", "read_url": "https://www.thecuttingroomnyc.com/?ki-cf-botcl=1", "method": null, "status": "blocked", "shows": 0, "detail": "HTTP 403"}
+{"name": "Mehanata Bulgarian Bar", "url": "https://www.mehanata.com/", "read_url": "https://mehanata.com/", "method": "AI", "status": "none-tonight", "shows": 0, "detail": "no_events_tonight", "tokens": [5813, 63], "examples": []}
+{"name": "Paddy Reilly's Music Bar", "url": "https://www.paddyreillysmusicbar.com/", "read_url": "https://www.paddyreillysmusicbar.com/", "method": "AI", "status": "none-tonight", "shows": 0, "detail": "not_a_calendar", "tokens": [2953, 63], "examples": []}
+{"name": "TV Eye", "url": "https://www.tveyenyc.com/", "read_url": "https://www.tveyenyc.com/?ki-cf-botcl=1", "method": null, "status": "blocked", "shows": 0, "detail": "HTTP 403"}
+{"name": "Good Room", "url": "https://goodroombk.com/", "read_url": "https://goodroombk.com/", "method": "AI", "status": "none-tonight", "shows": 0, "detail": "calendar; dropped 2× time quote not found on page; event page gave no time (blocked)", "tokens": [5719, 477], "examples": [{"title": "REDIRECT: S'AINT PANIC, ARVIN T, OKOCZ, BYLD", "start_time": "", "date_evidence": "THURSDAY: 10/22", "time_evidence": "", "why": "time quote not found on page"}, {"title": "ELLE DEE, KORBEAT, SKOGLUND", "start_time": "", "date_evidence": "THURSDAY: 10/22", "time_evidence": "", "why": "time quote not found on page"}]}
+{"name": "Nowadays", "url": "https://ra.co/clubs/105873", "read_url": "https://ra.co/clubs/105873", "method": null, "status": "blocked", "shows": 0, "detail": "HTTP 403"}
+
+### Cellar Dog
+https://www.cellardog.net/events (HTTP 200, 3034 chars)
+followed: https://www.cellardog.net/events
+tried: [('https://www.cellardog.net/events', 'usable=True chars=3034')]
+links: [('0', 'https://www.cellardog.net/cart'), ('', 'https://www.cellardog.net/events'), ('Skip to Content', 'https://www.cellardog.net/music#page'), ('Open this option', 'https://www.cellardog.net/'), ('home', 'https://www.cellardog.net/'), ('events', 'https://www.cellardog.net/events'), ('music', 'https://www.cellardog.net/new-music'), ('merch', 'https://www.cellardog.net/merch-1'), ('gallery', 'https://www.cellardog.net/gallery'), ('in the news', 'https://www.cellardog.net/in-the-news'), ('our team', 'https://www.cellardog.net/our-team'), ('careers', 'https://www.cellardog.net/careers'), ('visit', 'https://www.cellardog.net/visit'), ('PHL', 'https://www.cellardogphiladelphia.com/'), ('Instagram - opens in a new tab', 'https://www.instagram.com/cellardognyc/'), ('Facebook - opens in a new tab', 'https://www.facebook.com/Cellardognyc'), ('', 'https://www.cellardog.net/'), ('', 'https://www.instagram.com/cellardognyc/'), ('', 'https://www.facebook.com/Cellardognyc'), ('Folder: about', 'https://www.cellardog.net/about'), ('PHL - opens in a new tab', 'https://www.cellardogphiladelphia.com/'), ('Back', 'https://www.cellardog.net/'), ('clicking here', 'https://www.cellardog.net/'), ('clicking here', 'https://www.cellardog.net/search'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DNTNSFpOp0T/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DNOFHa_OD8-/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DNBDWbvMCvo/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DM8B9r8s7MF/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DM0MxPAsr2g/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DMp98jDsi4P/'), ('instagram - opens in a new tab', 'https://www.instagram.com/p/DMah6DwsFUi/'), ('Cellar Dog Philly', 'https://cellardogphiladelphia.com/home'), ('', 'https://www.backalgroup.com/'), ('Accessibility', 'https://www.cellardog.net/accessibility-statement')]
+
+```
+Skip to main content
+Enable accessibility for low vision
+Open the accessibility menu
+
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+
+Accept
+
+BOOK A PRIVATE EVENT BEFORE OCTOBER 31ST AND GET 15% OFF YOUR EVENT!
+
+Skip to Content
+home
+events
+music
+merch
+gallery
+about
+visit
+PHL
+Private Events at Cellar Dog NYC
+
+Looking for private events in NYC that go beyond the usual dinner reservation? Cellar Dog brings live jazz, billiards, ping pong, shuffleboard, arcade games, food, and drinks together in one energetic West Village destination. Whether you're planning a corporate outing, birthday party, or anniversary, guests can connect, compete, and make lasting memories.
+
+We host events for parties of 20- 275, with food and drink options available upon request.
+
+Reach out below to begin planning today!
+
+Download Brochure
+Plan Your Event
+A Unique Venue for Corporate Events and Team Building
+
+Give your team a reason to step away from the office and connect outside the usual workday routine. Cellar Dog offers an interactive setting for corporate outings, team-building events, company celebrations, and client gatherings, with games and entertainment that encourage friendly competition and conversation. It's a refreshing alternative to traditional corporate event spaces in NYC, combining a lively atmosphere with plenty of ways to keep your group engaged.
+
+Birthday Parties and Milestone Celebrations
+
+Some celebrations call for more than dinner and drinks. From birthday parties and graduation celebrations to anniversaries and nights out with friends, Cellar Dog offers a distinctive setting with built-in entertainment. Challenge your crew to play pool, ping-pong, or shuffleboard, enjoy a curated selection of draft and bottled beverages, and make a night of it in the heart of the West Village.
+
+Live Jazz, Games, and Great Company
+
+With billiards, ping pong, shuffleboard, arcade games, and live jazz starting at 7 PM every day, Cellar Dog brings multiple experiences together under one roof. Guests can move between games, catch the music, and enjoy time together without the night feeling predictable. Whether you're organizing a company gathering or a personal celebration, Cellar Dog offers a memorable alternative to conventional private event venues in Manhattan. Contact us to explore private event options and plan your next gathering.
+
+Download Brochure
+Plan Your Event
+stay in the know
+
+Subscribe to receive news and updates. 
+
+We respect your privacy.
+
+Name
+First Name
+(required)
+Last Name
+(required)
+Email
+(required)
+Sign up for news and updates
+SUBSCRIBE
+
+FOLLOW US:
+
+Cellar Dog Philly
+
+NOW OPEN
+
+258 S 15th Street Philadelphia, PA 19102
+
+Location
+
+NYC
+
+75 Christopher Street
+New York, NY 10014
+
+Monday 4pm-1am
+
+Tuesday 4pm-1am
+
+Wednesday 4pm-1am
+
+Thursday 4pm-1am
+
+Friday 4pm-4am
+
+Saturday 2pm-4am
+
+Sunday 2pm-1am
+
+Jazz at 7pm Every Night
+
+Hours
+
+Contact
+
+info@cellar.dog
+
+
+(212) 675-6056
+
+ Accessibility 
+```
+
+### The Cutting Room
+https://www.thecuttingroomnyc.com/?ki-cf-botcl=1 (HTTP 403, 273 chars)
+followed: None
+tried: []
+links: [('Cloudflare', 'https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m'), ('Privacy', 'https://www.cloudflare.com/privacypolicy/')]
+
+```
+www.thecuttingroomnyc.com
+Performing security verification
+
+This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+
+Ray ID: a4eebdd0fdef862c
+Performance and Security by Cloudflare
+Privacy
+```
+
+### Mehanata Bulgarian Bar
+https://mehanata.com/ (HTTP 200, 6147 chars)
+followed: None
+tried: []
+links: [('BOOK YOUR EVENT', 'https://mehanata.com/new-york-lower-east-side-mehanata-event-inquiry'), ('Book your party', 'https://mehanata.com/new-york-lower-east-side-mehanata-book-your-event'), ('Skip to main content', 'https://mehanata.com/#content'), ('MENU', 'https://mehanata.com/new-york-lower-east-side-mehanata-food-menu'), ('DRINKS', 'https://mehanata.com/new-york-lower-east-side-mehanata-drink-menu'), ('MAIN FLOOR LOBBY', 'https://mehanata.com/new-york-lower-east-side-mehanata-main-floor-lobby'), ('ICE CAGE FLOOR', 'https://mehanata.com/new-york-lower-east-side-mehanata-ice-floor'), ('RESERVATIONS', 'https://mehanata.com/new-york-lower-east-side-mehanata-reservations#'), ('VIP BOTTLE SERVICE', 'https://mehanata.com/new-york-lower-east-side-mehanata-vip-bottle-service'), ('3D WALKTHROUGH', 'https://my.matterport.com/show/?m=yJ2RNfuyP2N'), ('Facebook page', 'https://www.facebook.com/MehanataNYC'), ('Instagram page', 'https://www.instagram.com/mehanata'), ('Google page', 'https://www.google.com/search?q=113+Ludlow+St.+New+York%2C+NY+10002.&oq=113+Ludlow+St.+New+York%2C+NY+10002.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIKCAQQABiABBiiBDIKCAUQABiABBiiBDIKCAYQABiABBiiBNIBCDEzNjlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x89c259812d5e636d:0x3c9ad7211da7c252,1,,,,'), ('', 'https://mehanata.com/#'), ('', 'https://mehanata.com/'), ('Menu', 'https://mehanata.com/new-york-lower-east-side-mehanata-food-menu'), ('Drinks', 'https://mehanata.com/new-york-lower-east-side-mehanata-drink-menu'), ('Book Your Event', 'https://mehanata.com/new-york-lower-east-side-mehanata-event-inquiry'), ('Main Floor Lobby', 'https://mehanata.com/new-york-lower-east-side-mehanata-main-floor-lobby'), ('Ice Cage Floor', 'https://mehanata.com/new-york-lower-east-side-mehanata-ice-floor'), ('reservations', 'https://mehanata.com/new-york-lower-east-side-mehanata-reservations#'), ('VIP Bottle Service', 'https://mehanata.com/new-york-lower-east-side-mehanata-vip-bottle-service'), ('3D Walkthrough', 'https://my.matterport.com/show/?m=yJ2RNfuyP2N'), ('RESERVATIONS', 'https://mehanata.com/new-york-lower-east-side-mehanata-reservations'), ('VIP BOTTLE SERVICE INQUIRIES', 'https://mehanata.com/new-york-lower-east-side-mehanata-vip-bottle-service'), ('Slide 1 content', 'https://mehanata.com/'), ('Slide 2 content', 'https://mehanata.com/'), ('Slide 3 content', 'https://mehanata.com/'), ('Slide 4 content', 'https://mehanata.com/'), ('previous slide', 'https://mehanata.com/'), ('next slide', 'https://mehanata.com/'), ('READ MORE ABOUT US', 'https://mehanata.com/new-york-lower-east-side-mehanata-about'), ('', 'https://static.spotapps.co/spots/85/3343a5abee4d0d874122d84c85a628/full'), ('', 'https://static.spotapps.co/spots/e5/d85e38615541a692a04ac0070e6079/full'), ('', 'https://static.spotapps.co/spots/97/a57561d0624fd6904ad5fee380f919/full'), ('', 'https://static.spotapps.co/spots/d9/bf72a5dce84bd99dca55ceaab936a9/full'), ('', 'https://static.spotapps.co/spots/46/6e944f85e04419903ea5643e37c234/full'), ('', 'https://static.spotapps.co/spots/16/52d2b0954c48328f7a6bc01b8e2c6e/full'), ('', 'https://static.spotapps.co/spots/bf/47168535704427959cb67e6d1cad4a/full'), ('', 'https://static.spotapps.co/spots/d4/44970ba6d64a4695ef3edc41325c1e/full'), ('', 'https://static.spotapps.co/spots/bf/7b7e8faaa64de5aea554152080a23e/full'), ('', 'https://static.spotapps.co/spots/0a/1fdc71784c4e849079dd20a975b238/full'), ('', 'https://static.spotapps.co/spots/e7/71366fb9e04141984dd2a47a8fdb33/full'), ('', 'https://static.spotapps.co/spots/06/ca84daf52e485fbedc98173ba8ce03/full'), ('', 'https://static.spotapps.co/spots/65/889122b0bd4f9093b7e39f9370f7ab/full'), ('', 'https://static.spotapps.co/spots/90/924d43c10f48e081ca780939805d99/full'), ('+', 'https://mehanata.com/#'), ('−', 'https://mehanata.com/#'), ('Leaflet', 'http://leafletjs.com/'), ('OpenStreetMap', 'http://www.openstreetmap.org/copyright'), ('Get Directions', 'https://www.google.com/maps/dir/?api=1&destination=Mehanata&destination_place_id=ChIJbWNeLYFZwokRUsKnHSHXmjw'), ('SpotHopper homepage', 'https://www.spothopperapp.com/'), ('Website design, Social Media m', 'https://www.spothopperapp.com/contact-us?contact_reason=demo'), ('Book your event', 'https://mehanata.com/-party'), ('Privacy Policy', 'https://www.spothopperapp.com/spots/12261/privacy_policy'), ('Terms and Conditions', 'https://www.spothopperapp.com/spots/12261/terms_and_conditions'), ('Learn More.', 'https://mehanata.com/accessibility-page-01')]
+
+```
+×
+come party in the les
+
+We don't care what you're celebrating, Mehanata is the place for it to be legendary. Check out our event packages & we'll see you soon ;)
+
+BOOK YOUR EVENT
+
+Holiday Parties - The perfect venue for your Holiday Party! Book your party today!
+
+Book your party
+Skip to main content
+MENU
+DRINKS
+BOOK YOUR EVENT
+MAIN FLOOR LOBBY
+ICE CAGE FLOOR
+RESERVATIONS
+VIP BOTTLE SERVICE
+3D WALKTHROUGH
+Facebook page
+Instagram page
+Google page
+The decorative video is currently playing
+The decorative video sound is off
+groups & parties
+PARTY IN THE LOWER EAST SIDE
+
+Looking to host an unforgettable party? Mehanata is the perfect venue for groups of all sizes. Whether it's a birthday bash, a lively corporate event, or just a wild night out with friends, we've got you covered!
+
+BOOK YOUR EVENT
+want a table?
+JOIN US TODAY
+
+Ready to dive into the vibrant energy of Mehanata? Make a reservation to guarantee your place in one of NYC's hottest nightlife destinations!
+
+RESERVATIONSVIP BOTTLE SERVICE
+INQUIRIES
+The slideshow is currently playing
+Slide 1 content
+Slide 2 content
+Slide 3 content
+Slide 4 content
+previous slide
+next slide
+late night food
+MENU
+book your event
+BOOK YOUR EVENT
+can you handle the ice cage floor?
+OUR SUB-ZERO VODKA DRINKING ROOM
+ICE CAGE FLOOR
+check out our drink menu
+DRINKS
+about us
+JOIN THE PARTY
+
+Allow me to present you Mehanata – a Bulgarian bar located in the Lower East Side, which during the last 23 years earned its reputation as one of the loudest, the most outrageous, and plain crazy night clubs in New York.
+
+READ MORE
+ABOUT US
+
+Skip Photo Gallery
+reviews
+Start stop reviews carousel
+Review 1
+Review 2
+Review 3
+Review 4
+Review 5
+‹
+›
+REVIEW BY - GOOGLE
+Five Star Review By
+Laura A: 
+
+Went to Mehanata this past Saturday and had a great time ! The atmosphere was a vibe and it was very family orientated which made me feel at home. The owner/manager were both friendly and personable. :) I loved the diversity in the music and environment, it was a little bit of everything which made me feel happy and comfortable. The food was *chef's kiss* HIGHLY RECOMMEND. if you're looking for the best drinks, fun, and friendly faces, this is the place !
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Madelyn P: 
+
+I came here with a group of friends, wanting to dance. Though it was pretty empty until about 1130/12, I thoroughly enjoyed the music. The first two DJs played really fun experimental dance music, the following DJ played amazing Balkan music with some Latin and Bhangra as well. We loved it. My friend who is a fan of the place from years ago noted there are a lot of changes but for me it was perfect.
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Carina C: 
+
+This place is always fun, if you are leaving this place without having fun you're doing it wrong! Vodka cage is free on your bday! Chug as much vodka as you can in 2 minutes! Good luck!
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Matt G: 
+
+Frigging awesome bar, even with the cover. Totally worth it! Especially for the the ice locker. Had an absolute blast dancing we even joined a random line dance on the lower level. So much fun!
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Harshit D: 
+
+Great music and great vibe. The DJ was incredible playing several numbers from languages across the world, including some trippy Punjabi songs. One of the best nights you'll have in an informal setup in NY city.
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Laura A: 
+
+Went to Mehanata this past Saturday and had a great time ! The atmosphere was a vibe and it was very family orientated which made me feel at home. The owner/manager were both friendly and personable. :) I loved the diversity in the music and environment, it was a little bit of everything which made me feel happy and comfortable. The food was *chef's kiss* HIGHLY RECOMMEND. if you're looking for the best drinks, fun, and friendly faces, this is the place !
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Madelyn P: 
+
+I came here with a group of friends, wanting to dance. Though it was pretty empty until about 1130/12, I thoroughly enjoyed the music. The first two DJs played really fun experimental dance music, the following DJ played amazing Balkan music with some Latin and Bhangra as well. We loved it. My friend who is a fan of the place from years ago noted there are a lot of changes but for me it was perfect.
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Carina C: 
+
+This place is always fun, if you are leaving this place without having fun you're doing it wrong! Vodka cage is free on your bday! Chug as much vodka as you can in 2 minutes! Good luck!
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Matt G: 
+
+Frigging awesome bar, even with the cover. Totally worth it! Especially for the the ice locker. Had an absolute blast dancing we even joined a random line dance on the lower level. So much fun!
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Harshit D: 
+
+Great music and great vibe. The DJ was incredible playing several numbers from languages across the world, including some trippy Punjabi songs. One of the best nights you'll have in an informal setup in NY city.
+
+REVIEW BY - GOOGLE
+Five Star Review By
+Laura A: 
+
+Went to Mehanata this past Saturday and had a great time ! The atmosphere was a vibe and it was very family orientated which made me feel at home. The owner/manager were both friendly and personable. :) I loved the diversity in the music and environment, it was a little bit of everything which made me feel happy and comfortable. The food was *chef's kiss* HIGHLY RECOMMEND. if you're looking for the best drinks, fun, and friendly faces, this is the place !
+
+newsletter
+Sign up for our newsletter & get exclusive offers and invites!
+Email (required)
+ SUBMIT
++
+−
+Leaflet | © OpenStreetMap
+LOCATION
+Mehanata
+113 Ludlow St
+New York, NY
+10002
+ Get Directions
+HOURS
+Open Thursday - Saturday, 8pm - 4am
+FIND US ON...
+Facebook page
+Instagram page
+Google page
+CONTACT US
+
+Call us at
+(917)-584-3344
+
+Write us at
+mehanata@gmail.com
+
+Powered by: 
+
+Website design, Social Media marketing and Email marketing provided by SpotHopper.
+
+We strive to make our website accessible to everybody. Learn More.
+```
+
+### Paddy Reilly's Music Bar
+https://www.paddyreillysmusicbar.com/ (HTTP 200, 847 chars)
+followed: None
+tried: []
+links: [('TIME TO PADDY! ENJOY THE BEST ', 'https://www.instagram.com/paddyreillys/'), ('', 'https://www.paddyreillysmusicbar.com/'), ('Slide 1', 'https://www.paddyreillysmusicbar.com/#comp-m7pa9ei8'), ('Slide 4', 'https://www.paddyreillysmusicbar.com/#comp-lq00yhxx'), ('Slide 2', 'https://www.paddyreillysmusicbar.com/#comp-lh47i68b'), ('Slide 3', 'https://www.paddyreillysmusicbar.com/#comp-lq00tkr6'), ('+1 (917) 261-2113', 'https://www.google.com/search?q=paddy+reilly%27s+music+bar&oq=paddy+reil&aqs=chrome.0.69i59l3j46i175i199i512j46i512j69i65l2j69i60.1811j0j7&sourceid=chrome&ie=UTF-8#'), ('Instagram', 'https://www.instagram.com/paddyreillys/'), ('Facebook', 'https://www.facebook.com/PaddyReillys/'), ('TikTok', 'https://www.tiktok.com/@paddyreillys?is_from_webapp=1&sender_device=pc'), ('HOME', 'https://www.paddyreillysmusicbar.com/'), ('BACKSTAGE', 'https://www.paddyreillysmusicbar.com/backstage'), ('SPORTS', 'https://www.paddyreillysmusicbar.com/sports'), ('BOOK YOUR PARTY', 'https://www.paddyreillysmusicbar.com/contact-4')]
+
+```
+Skip to Main Content
+
+TIME TO PADDY! ENJOY THE BEST GUINNESS IN TOWN & LIVE MUSIC ALL NIGHT!
+
+THE WORLD FAMOUS IRISH PUB
+
+HAPPY HOUR 7 DAYS A WEEK
+LIVE MUSIC 7 NIGHTS A WEEK
+
+The ultimate Irish Pub experience in the heart of Manhattan. Pulling pints since 1986.
+
+GUINNESS
+
+Your perfect pint awaits
+
+HAPPY HOUR
+
+Mon - Sat: 11am - 7pm
+
+Sun: Noon - Midnight
+
+LIVE MUSIC
+
+7 nights a week
+
+Contact
+
+519 2nd Ave
+
+New York, NY 10016
+
++1 (917) 261-2113
+
+events@PaddyReillysMusicBar.com
+
+First Name
+Last Name
+Email
+Message
+Send
+OPENING HOURS
+
+Visit Us
+
+Mon - Tue: 11AM - 2AM
+
+Wed - Sat: 11AM - 4AM
+
+Sunday: 12PM - 2AM
+
+Happy Hours: 11AM - 7AM Daily
+
+LIVE MUSIC EVERY NIGHT​
+
+Subscribe Form
+Join
+HOME
+BACKSTAGE
+SPORTS
+BOOK YOUR PARTY
+
+Paddy Reilly's Music Bar
+
+events@paddyreillysmusicbar.com
+
+©2023 by Paddy Reilly's Music Bar. Proudly created with Wix.com
+```
+
+### TV Eye
+https://www.tveyenyc.com/?ki-cf-botcl=1 (HTTP 403, 264 chars)
+followed: None
+tried: []
+links: [('Cloudflare', 'https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m'), ('Privacy', 'https://www.cloudflare.com/privacypolicy/')]
+
+```
+www.tveyenyc.com
+Performing security verification
+
+This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+
+Ray ID: a4eebdd14b3c3511
+Performance and Security by Cloudflare
+Privacy
+```
+
+### Good Room
+https://goodroombk.com/ (HTTP 200, 2226 chars)
+followed: None
+tried: []
+links: [('', 'https://goodroombk.com/'), ('CALENDAR', 'https://goodroombk.com/'), ('ABOUT', 'https://goodroombk.com/about/'), ('FACEBOOK', 'https://www.facebook.com/GoodRoomBK'), ('TWITTER', 'https://twitter.com/goodroombk'), ('INSTAGRAM', 'https://instagram.com/goodroombk/'), ('BANDCAMP', 'https://goodroombk.bandcamp.com/'), ('PAYPAL', 'https://www.paypal.me/goodroombk'), ('VENMO', 'https://venmo.com/goodroombk'), ('TICKETS', 'https://ra.co/events/2549316'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/25b201ebfae5489778c63353a6dbff692c7c0749-1600x2000.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2553609'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/0cb1709e8582501e4bac62b1a93ede34f258f745-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2519302'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/38f5e4c61cf28d7156daea1f561f744c49745804-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2562732'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/7714275def44fa0a301db708fa420fe864e8e559-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2519294'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/9100e241152491b3c4506f0bd291c0ab5b2fa837-1080x1350.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2553958'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/644482b8836d7c05c7f702826f80776a16928b69-1256x1576.png?w=1400'), ('TICKETS', 'https://ra.co/events/2537429'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/c67d0eae63314372ba4b921aeaf73cdde7b8bce0-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2548803'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/4f920d22d9e5629968688bfae505b5f0fab0b675-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2559200'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/3c6ac3caee50c221a25b2df03087e21a651d3c7b-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2557802'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/d8438da55c61a96e64b134da1bae52c92467ed68-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2532704'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/907eeefcd9466e0a17cd3e56cad7685306139bbb-2160x2160.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2545030'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/6f6cd5d76a706c48a0a5cdc553f6f06ea9206ebf-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2563187'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/c86b7f3e782c1a7d6c2a77dcd9a5f6413f1bebb2-1200x1855.jpg?w=1400'), ('TICKETS', 'https://dice.fm/partner/tickets/event/avxxvv-lucy-cooper-b-handy-fgs-3rd-dec-good-room-new-york-tickets?dice_id=10214088&dice_channel=web&dice_tags=organic&dice_campaign=SV+Cathedral+LLC&dice_feature=mio_marketing&_branch_match_id=1618650110927487868&utm_source=web&utm_campaign=SV+Cathedral+LLC&utm_medium=mio_marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1a8wN05KSjRKMjUyNLWvK0pNSy0qysxLj08qyi8vTi2ydcsEiuVXAAAxNMCOPAAAAA%3D%3D'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/ef1dd354dab1e45bbdcd4a933616acbcf66d113a-1080x1350.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2565956'), ('TICKETS', 'https://ra.co/events/2562863'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/22c671c3652cad36f3c0e3a8b2d2c756aef5896d-1200x1855.jpg?w=1400'), ('TICKETS', 'https://ra.co/events/2563732'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/3b572718846cc3674ccbe1751ec95119e8892903-941x706.jpg?w=1400'), ('TICKETS', 'https://tickets.venuepilot.com/e/collective-resonance-featuring-bda-w-toribio-bring-dat-jazz-orchestra-irreversible-entanglements-blac-13fe29'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/69c298c93e7569bb44e4b75ea5f46d5ebcc5be90-1080x1350.jpg?w=1400'), ('TICKETS', 'https://girl-ultra-feb-9.eventbrite.com/'), ('View flyer', 'https://cdn.sanity.io/images/ph0gs6ms/production/7cfd4c3c7e146943a9c3a2d59b77ff25b18536b1-1081x1081.jpg?w=1400')]
+
+```
+CALENDAR 
+ABOUT
+JOIN
+FACEBOOK
+TWITTER
+INSTAGRAM
+BANDCAMP
+PAYPAL
+VENMO
+
+THURSDAY:
+
+10/22
+
+TICKETS
+
+GOOD ROOM:
+
+REDIRECT: S'AINT PANIC, ARVIN T, OKOCZ, BYLD
+
+BAD ROOM:
+
+ELLE DEE, KORBEAT, SKOGLUND
+
+FRIDAY:
+
+10/23
+
+TICKETS
+
+GOOD ROOM:
+
+XOXA FT DJ SHANNON, KIM ANH, YASMEENAH
+
+BAD ROOM:
+
+TOSSD FT DJ DEADNAME, SEVYN LOVE, GIOVANNII, WILL JACK
+
+SATURDAY:
+
+10/24
+
+TICKETS
+
+GOOD ROOM:
+
+FIXED WITH MOZHGAN, JDH & DAVE P
+
+BAD ROOM:
+
+UNIVERSAL CAVE (ALL NIGHT)
+
+THURSDAY:
+
+10/29
+
+TICKETS
+
+GOOD ROOM:
+
+2MANYDJS, RORY PHILLIPS
+
+FRIDAY:
+
+10/30
+
+TICKETS
+
+GOOD ROOM:
+
+SYNTHICIDE HALLOWEEN FT TERENCE FIXMER, ANDI
+
+BAD ROOM:
+
+JUSTIN AULIS LONG, STIFFDANCE
+
+SATURDAY:
+
+10/31
+
+TICKETS
+
+GOOD ROOM:
+
+TIKI DISCO
+
+FRIDAY:
+
+11/6
+
+TICKETS
+
+GOOD ROOM:
+
+22 YEARS OF FIXED FT KELLY LEE OWENS (DJ SET), JDH & DAVE P
+
+BAD ROOM:
+
+IVAN BERKO (ALL NIGHT)
+
+SATURDAY:
+
+11/7
+
+TICKETS
+
+GOOD ROOM:
+
+MEMBERS PARTY: TAM TAM, MIKE GUIMOND & HARIM
+
+BAD ROOM:
+
+FEVER DREAM & ELLEN.J
+
+FRIDAY:
+
+11/13
+
+TICKETS
+
+GOOD ROOM:
+
+ANASTAZJA, HONEY BUN
+
+BAD ROOM:
+
+ROYAL MALE (RED LASER RECORDS), LOLO
+
+SATURDAY:
+
+11/14
+
+TICKETS
+
+GOOD ROOM:
+
+240 MONTHS OF RIOTVAN FT PANTHERA KRAUSE, PETER INVASION, TIMO LEE
+
+BAD ROOM:
+
+MIKE SIMONETTI (ALL NIGHT)
+
+SUNDAY:
+
+11/15
+
+GOOD ROOM:
+
+718 SESSIONS- 24TH YEAR ANNIVERSARY PARTY WITH DANNY KRIVIT
+
+BAD ROOM:
+
+GO KIRYU, HIRAME
+
+THURSDAY:
+
+11/19
+
+TICKETS
+
+GOOD ROOM:
+
+HOMIES GIVIN' 2026 FT EXTRA MEESH B2B GEE DEE, GABBY COCCO, PAPA B2B S'AINT PANIC, PARISH GOD, TYLERFROMWHERE
+
+SATURDAY:
+
+11/21
+
+TICKETS
+
+GOOD ROOM:
+
+JUAN MACLEAN (ALL NIGHT)
+
+BAD ROOM:
+
+TAVISH, GEE DEE
+
+FRIDAY:
+
+11/27
+
+TICKETS
+
+GOOD ROOM:
+
+LOVE GAMES WITH DEE DIGGS, LAUREN MURADA & FINN JONES
+
+BAD ROOM:
+
+BENNY SOTO, FRANTZ
+
+THURSDAY:
+
+12/3
+
+TICKETS
+
+GOOD ROOM:
+
+ST VITUS PRESENTS: LUCY (COOPER B. HANDY), F.G.S.
+
+SATURDAY:
+
+12/5
+
+TICKETS
+
+GOOD ROOM:
+
+FIXED WITH HAAI, JDH & DAVE P
+
+BAD ROOM:
+
+JEWELSSEA AND QRTR (ALL NIGHT)
+
+SUNDAY:
+
+12/13
+
+TICKETS
+
+GOOD ROOM:
+
+FIXED X SYNTHICIDE PRESENT: CURSES (LIVE), JDH B2B ANDI
+
+FRIDAY:
+
+12/18
+
+TICKETS
+
+GOOD ROOM:
+
+STUNTSZ
+
+SUNDAY:
+
+1/17
+
+TICKETS
+
+GOOD ROOM:
+
+WINTER JAZZ FEST PRESENTS: COLLECTIVE RESONANCE FT BDA W/ TORIBIO & BRING DAT JAZZ ORCHESTRA + GUESTS
+
+TUESDAY:
+
+2/9
+
+TICKETS
+
+GOOD ROOM:
+
+ELSEWHERE PRESENTS: GIRL ULTRA
+```
+
+### Nowadays
+https://ra.co/clubs/105873 (HTTP 403, 477 chars)
+followed: None
+tried: []
+links: []
+
+```
+
+
+[embedded: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAW5QFU4rpNYAAFKhkYQ%3D%3D&hash=107A2F9ACF118F5EFF46550CD]
+Access is temporarily restricted
+
+We detected unusual activity from your device or network.
+
+Reasons may include:
+
+ Rapid taps or clicks
+ JavaScript disabled or not working
+ Automated (bot) activity on your network (IP 20.168.100.97)
+ Use of developer or inspection tools
+
+Need help? Submit feedback.
+
+ID: d7b2decc-6c53-fcf5-53dd-df2b6e25d93a
+```
