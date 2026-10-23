@@ -174,6 +174,9 @@ def newsletter_events(venues: list[dict], night: date, ai_key: str, user: str, p
 
     mails = fetch(user, password)
     log(f"  newsletters: {len(mails)} emails in the last {DAYS_BACK} days")
+    for m in mails:
+        v = which_venue(m["from_name"], m["from"], venues)
+        log(f"    {m['sent']:%m-%d} {m['from_name'][:30]} <{m['from'][:40]}> -> {v['name'] if v else '?'} | {m['subject'][:60]}")
     recent = [m for m in mails if m["sent"] and (datetime.now(NY) - m["sent"]).days <= 3]
     for who, link in confirm_links(recent, venues):  # finish double opt-in signups from our venues
         try:
