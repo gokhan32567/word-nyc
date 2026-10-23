@@ -1,0 +1,597 @@
+{
+ "Smalls Jazz Club": {
+  "emails": [
+   "info@smallslive.com",
+   "musician@smallslive.com",
+   "foundation@smallslive.com",
+   "reservations@smallslive.com",
+   "jazzculturalnyc@gmail.com"
+  ],
+  "pages": [
+   "https://www.smallslive.com/",
+   "https://www.smallslive.com/tickets/",
+   "https://www.smallslive.com/contact/",
+   "https://www.smallslive.com/about/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Zinc Bar": {
+  "emails": [
+   "info@zincbar.com",
+   "ouroffice@revolver.com"
+  ],
+  "pages": [
+   "https://www.zincbar.com/",
+   "https://www.zincbar.com/about/",
+   "https://www.zincbar.com/contact-us/"
+  ],
+  "instagram": "https://www.instagram.com/",
+  "error": null
+ },
+ "Arthur's Tavern": {
+  "emails": [
+   "info@arthurstavern.nyc"
+  ],
+  "pages": [
+   "https://arthurstavern.nyc/",
+   "https://arthurstavern.nyc/about-us/",
+   "https://arthurstavern.nyc/private-events/",
+   "https://arthurstavern.nyc/press/"
+  ],
+  "instagram": "https://www.instagram.com/arthurstavern_nyc/",
+  "error": null
+ },
+ "Close Up": {
+  "emails": [
+   "events@closeupnyc.com",
+   "hello@closeupnyc.com"
+  ],
+  "pages": [
+   "https://www.closeupnyc.com/",
+   "https://www.closeupnyc.com/copy-of-food-drink"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Nublu Classic": {
+  "emails": [],
+  "pages": [],
+  "instagram": null,
+  "error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://nublu.net/\nCall log:\n  - navigating to \"https://nublu.net/\", waiting un"
+ },
+ "Silvana": {
+  "emails": [
+   "info@silvana-nyc.com",
+   "catering@silvana-nyc.com",
+   "sivan@silvana-nyc.com",
+   "example@mysite.com",
+   "silvanabooking@gmail.com",
+   "shrinebooking2@gmail.com"
+  ],
+  "pages": [
+   "https://www.silvana-nyc.com/",
+   "https://www.silvana-nyc.com/music",
+   "https://www.silvana-nyc.com/contact",
+   "https://www.silvana-nyc.com/event/private-event",
+   "https://www.silvana-nyc.com/event/made-for-me-books-reading-resistance"
+  ],
+  "instagram": "https://www.instagram.com/ouagasportsbarharlem/?hl=en",
+  "error": null
+ },
+ "Ornithology Jazz Club": {
+  "emails": [
+   "ornithologycocktail@gmail.com"
+  ],
+  "pages": [
+   "https://www.ornithologyjazzclub.com/"
+  ],
+  "instagram": "https://www.instagram.com/ornithologyjazzclub",
+  "error": null
+ },
+ "Bar Bayeux": {
+  "emails": [
+   "barbayeux@gmail.com",
+   "barbayeuxbooking@gmail.com"
+  ],
+  "pages": [
+   "https://www.barbayeux.com/",
+   "https://www.barbayeux.com/contact"
+  ],
+  "instagram": "https://www.instagram.com/barbayeux/",
+  "error": null
+ },
+ "Bar Lun\u00c0tico": {
+  "emails": [],
+  "pages": [
+   "https://www.barlunatico.com/",
+   "https://www.barlunatico.com/faq",
+   "https://www.barlunatico.com/about-us",
+   "https://www.barlunatico.com/press",
+   "https://www.barlunatico.com/about"
+  ],
+  "instagram": "https://www.instagram.com/barlunatico/",
+  "error": null
+ },
+ "54 Below": {
+  "emails": [
+   "marketing@54below.org",
+   "press@54below.org",
+   "booking@54below.org",
+   "info@54below.com",
+   "giving@54below.org",
+   "presstickets@54below.org"
+  ],
+  "pages": [
+   "https://54below.org/",
+   "https://54below.org/visit/",
+   "https://54below.org/private-events/",
+   "https://54below.org/about/",
+   "https://54below.org/contact-us/"
+  ],
+  "instagram": "http://instagram.com/54Below",
+  "error": null
+ },
+ "The Green Room 42": {
+  "emails": [
+   "programming@thegreenroom42.com",
+   "tickets@thegreenroom42.com"
+  ],
+  "pages": [
+   "https://thegreenroom42.venuetix.com/",
+   "https://thegreenroom42.venuetix.com/faq",
+   "https://thegreenroom42.venuetix.com/about",
+   "https://thegreenroom42.venuetix.com/contact"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Don't Tell Mama": {
+  "emails": [],
+  "pages": [
+   "https://shows.donttellmamanyc.com/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Pangea": {
+  "emails": [
+   "info@pangeanyc.com"
+  ],
+  "pages": [
+   "http://www.pangeanyc.com/",
+   "http://www.pangeanyc.com/about-2/",
+   "http://www.pangeanyc.com/jazz-festival/"
+  ],
+  "instagram": "https://www.instagram.com/pangeanyc/",
+  "error": null
+ },
+ "Sid Gold's Request Room": {
+  "emails": [],
+  "pages": [
+   "https://www.sidgolds.com/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Ibeam Brooklyn": {
+  "emails": [
+   "booking@ibeambrooklyn.com",
+   "info@ibeambrooklyn.com"
+  ],
+  "pages": [
+   "https://www.ibeambrooklyn.com/",
+   "https://www.ibeambrooklyn.com/about-1",
+   "https://www.ibeambrooklyn.com/booking",
+   "https://www.ibeambrooklyn.com/press",
+   "https://www.ibeambrooklyn.com/contact"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Barb\u00e8s": {
+  "emails": [
+   "info@barbesbrookllyn.com",
+   "barbesparkslope@gmail.com",
+   "barbesbookings@gmail.com",
+   "olivierconan@gmail.com"
+  ],
+  "pages": [
+   "https://www.barbesbrooklyn.com/",
+   "https://www.barbesbrooklyn.com/about-4",
+   "https://www.barbesbrooklyn.com/about",
+   "https://www.barbesbrooklyn.com/contact"
+  ],
+  "instagram": "https://www.instagram.com/barbesbrooklyn/",
+  "error": null
+ },
+ "Drom": {
+  "emails": [
+   "info@dromnyc.com"
+  ],
+  "pages": [
+   "https://www.dromnyc.com/",
+   "https://dromnyc.com/",
+   "https://dromnyc.com/about/",
+   "https://dromnyc.com/faq/",
+   "https://dromnyc.com/about/drom-music/"
+  ],
+  "instagram": "https://www.instagram.com/dromnyc/",
+  "error": null
+ },
+ "Terraza 7": {
+  "emails": [
+   "info@terraza7.com",
+   "freddycastiblanco@terraza7.com",
+   "info@misitio.com"
+  ],
+  "pages": [
+   "https://www.terraza7.com/",
+   "https://www.terraza7.com/about-us",
+   "https://www.terraza7.com/press",
+   "https://www.terraza7.com/contact",
+   "https://www.terraza7.com/detalles-y-registro/rooted-and-something-followed-us-home-book-presentation-q-a-with-leopoldo-gout"
+  ],
+  "instagram": "https://www.instagram.com/terraza_7/",
+  "error": null
+ },
+ "The Bitter End": {
+  "emails": [
+   "info@bitterend.com"
+  ],
+  "pages": [
+   "https://www.bitterend.com/",
+   "https://bitterend.com/about/",
+   "https://bitterend.com/contact/",
+   "https://bitterend.com/"
+  ],
+  "instagram": "https://www.instagram.com/thebitterendnyc",
+  "error": null
+ },
+ "Terra Blues": {
+  "emails": [
+   "reservations@terrablues.com"
+  ],
+  "pages": [
+   "https://www.terrablues.com/"
+  ],
+  "instagram": "https://www.instagram.com/terrabluesnewyork/?hl=en",
+  "error": null
+ },
+ "Groove": {
+  "emails": [
+   "info@clubgroovenyc.com"
+  ],
+  "pages": [
+   "https://www.clubgroovenyc.com/",
+   "https://www.clubgroovenyc.com/contact-8"
+  ],
+  "instagram": "https://www.instagram.com/clubgroovenyc/?hl=en",
+  "error": null
+ },
+ "Cafe Wha?": {
+  "emails": [
+   "contact@cafewha.com"
+  ],
+  "pages": [
+   "https://cafewha.com/",
+   "https://www.cafewha.com/about",
+   "https://www.cafewha.com/contact"
+  ],
+  "instagram": "https://www.instagram.com/cafewha/",
+  "error": null
+ },
+ "Pianos": {
+  "emails": [
+   "booking@pianosnyc.com",
+   "info@pianosnyc.com",
+   "dj@pianosnyc.com",
+   "party@pianosnyc.com",
+   "contact@sozoo.fr"
+  ],
+  "pages": [
+   "https://www.pianosnyc.com/",
+   "https://pianosnyc.com/Contact",
+   "https://pianosnyc.com/Private-Events-1",
+   "https://pianosnyc.com/FAQ"
+  ],
+  "instagram": "http://instagram.com/pianosnyc",
+  "error": null
+ },
+ "Racket": {
+  "emails": [
+   "info@racketnyc.com",
+   "info@bowerypresents.com",
+   "jane@rr.com",
+   "lschamis@bowerypresents.com"
+  ],
+  "pages": [
+   "https://www.racketnyc.com/",
+   "https://www.racketnyc.com/faq",
+   "https://www.racketnyc.com/venue-info",
+   "https://www.racketnyc.com/-rentals"
+  ],
+  "instagram": "https://www.instagram.com/racketnewyork/",
+  "error": null
+ },
+ "Union Pool": {
+  "emails": [
+   "info@union-pool.com",
+   "booking@union-pool.com"
+  ],
+  "pages": [
+   "https://www.union-pool.com/",
+   "https://www.union-pool.com/faqs"
+  ],
+  "instagram": "https://www.instagram.com/union_pool/?hl=en",
+  "error": null
+ },
+ "The Bell House": {
+  "emails": [
+   "thebellhouse@livenation.com",
+   "thebellhousebookings@livenation.com"
+  ],
+  "pages": [
+   "https://www.thebellhouseny.com/",
+   "https://www.thebellhouseny.com/visit"
+  ],
+  "instagram": "https://www.instagram.com/BellHouseNY/",
+  "error": null
+ },
+ "Union Hall": {
+  "emails": [
+   "info@unionhallny.com",
+   "booking@unionhallny.com"
+  ],
+  "pages": [
+   "https://www.unionhallny.com/",
+   "https://unionhallny.com/info"
+  ],
+  "instagram": "https://www.instagram.com/unionhallny/",
+  "error": null
+ },
+ "Littlefield": {
+  "emails": [],
+  "pages": [
+   "https://littlefieldnyc.com/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Sunnyvale": {
+  "emails": [
+   "info@sunnyvalebk.com",
+   "booking@sunnyvalebk.com",
+   "tech@sunnyvalebk.com"
+  ],
+  "pages": [
+   "https://www.sunnyvalebk.com/",
+   "https://www.sunnyvalebk.com/about/",
+   "https://www.sunnyvalebk.com/e/night-club-mevius-kempt-63996670765/",
+   "https://www.sunnyvalebk.com/e/slalomville-ep-release-show-74717551207/",
+   "https://www.sunnyvalebk.com/e/the-shacks-plus-holy-hive-and-guests-72097925837/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "The Sultan Room": {
+  "emails": [
+   "booking@thesultanroom.com",
+   "info@thesultanroom.com"
+  ],
+  "pages": [
+   "https://www.thesultanroom.com/",
+   "https://thesultanroom.com/about-us/",
+   "https://thesultanroom.com/contact/",
+   "https://thesultanroom.com/faqs/"
+  ],
+  "instagram": "https://www.instagram.com/thesultanroom/",
+  "error": null
+ },
+ "Wonderville": {
+  "emails": [
+   "hello@wonderville.nyc"
+  ],
+  "pages": [
+   "https://www.wonderville.nyc/",
+   "https://www.wonderville.nyc/press",
+   "https://www.wonderville.nyc/about"
+  ],
+  "instagram": "https://www.instagram.com/wondervillenyc/",
+  "error": null
+ },
+ "Alphaville": {
+  "emails": [
+   "info@alphavillebk.com",
+   "booking@alphavillebk.com"
+  ],
+  "pages": [
+   "https://www.alphavillebk.com/"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Purgatory": {
+  "emails": [
+   "info@purgatorybk.com",
+   "booking@purgatorybk.com"
+  ],
+  "pages": [
+   "https://www.purgatorybk.com/",
+   "https://www.purgatorybk.com/booking-rentals",
+   "https://www.purgatorybk.com/info"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Saint Vitus": {
+  "emails": [
+   "info@saintvitusbar.com",
+   "bookingsaintvitusbar@gmail.com"
+  ],
+  "pages": [
+   "https://www.saintvitusbar.com/",
+   "https://www.saintvitusbar.com/about",
+   "https://www.saintvitusbar.com/contact"
+  ],
+  "instagram": "https://www.instagram.com/saintvitusbar",
+  "error": null
+ },
+ "Lowlands Bar": {
+  "emails": [
+   "lowlandsevents@gmail.com"
+  ],
+  "pages": [
+   "https://www.lowlandsbar.com/",
+   "https://www.lowlandsbar.com/about",
+   "https://www.lowlandsbar.com/contact"
+  ],
+  "instagram": "https://www.instagram.com/lowlandsbar/",
+  "error": null
+ },
+ "Lucinda's": {
+  "emails": [
+   "booking@lucindasnyc.com",
+   "howdy@lucindasnyc.com",
+   "reservations@lucindasnyc.com",
+   "info@ticketweb.com",
+   "eastvillagemerch@gmail.com"
+  ],
+  "pages": [
+   "https://www.lucindasnyc.com/",
+   "https://www.lucindasnyc.com/contact/"
+  ],
+  "instagram": "https://www.instagram.com/lucindasnyc/",
+  "error": null
+ },
+ "Wild Horses": {
+  "emails": [
+   "booking@wildhorsesnyc.com",
+   "parties@wildhorsesnyc.com",
+   "howdy@wildhorsesnyc.com"
+  ],
+  "pages": [
+   "https://www.wildhorsesnyc.com/",
+   "https://wildhorsesnyc.com/about-us/",
+   "https://wildhorsesnyc.com/contact/",
+   "https://wildhorsesnyc.com/contact"
+  ],
+  "instagram": "https://instagram.com/wildhorsesnyc",
+  "error": null
+ },
+ "Django": {
+  "emails": [
+   "info@thedjangonyc.com",
+   "bookings@thedjangonyc.com",
+   "press@roxyhotelnyc.com"
+  ],
+  "pages": [
+   "https://www.thedjangonyc.com/",
+   "https://www.thedjangonyc.com/faq-page/",
+   "https://www.thedjangonyc.com/stories/sam-dillon-saxophone-player/",
+   "https://www.thedjangonyc.com/stories/jazz-guitarist-allan-bezama/",
+   "https://www.thedjangonyc.com/press/"
+  ],
+  "instagram": "https://www.instagram.com/thedjangonyc/",
+  "error": null
+ },
+ "11th Street Bar": {
+  "emails": [
+   "11thstbar@gmail.com"
+  ],
+  "pages": [
+   "https://www.11thstbar.com/",
+   "https://11thstbar.com/new-york-east-village-11th-st-bar-about",
+   "https://tmt.spotapps.co/private-parties?spot_id=2780&callback_url=http://11thstbar.com/"
+  ],
+  "instagram": "https://www.instagram.com/11thstbar/",
+  "error": null
+ },
+ "Trans-Pecos": {
+  "emails": [
+   "booking@thetranspecos.com",
+   "community@thetranspecos.com",
+   "general@thetranspecos.com",
+   "atthetranspecos@gmail.com",
+   "nightlife@thetranspecos.com"
+  ],
+  "pages": [
+   "https://www.thetranspecos.com/",
+   "https://www.thetranspecos.com/contact"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Pete's Candy Store": {
+  "emails": [
+   "info@petescandystore.com",
+   "booking@petescandystore.com",
+   "booking@hideawayaudio.nyc"
+  ],
+  "pages": [
+   "https://www.petescandystore.com/",
+   "https://www.petescandystore.com/booking",
+   "https://www.petescandystore.com/contact"
+  ],
+  "instagram": null,
+  "error": null
+ },
+ "Bar Freda": {
+  "emails": [
+   "example@mysite.com"
+  ],
+  "pages": [
+   "https://www.barfreda.com/",
+   "https://www.barfreda.com/info",
+   "https://www.barfreda.com/booking"
+  ],
+  "instagram": "https://instagram.com/barfreda801",
+  "error": null
+ },
+ "H0L0": {
+  "emails": [],
+  "pages": [
+   "https://www.h0l0.nyc/",
+   "https://h0l0.nyc/contact"
+  ],
+  "instagram": "https://www.instagram.com/h0l0.nyc/",
+  "error": null
+ },
+ "Club Cumming": {
+  "emails": [
+   "clubcummingnyc@gmail.com"
+  ],
+  "pages": [
+   "https://www.clubcummingnyc.com/",
+   "https://clubcummingnyc.com/private-hire",
+   "https://clubcummingnyc.com/contact",
+   "https://clubcummingnyc.com/schedule/2026/10/24/closed-for-private-event"
+  ],
+  "instagram": "https://www.instagram.com/clubcumming/",
+  "error": null
+ },
+ "Sunny's Red Hook": {
+  "emails": [
+   "sunnysbarnews@gmail.com"
+  ],
+  "pages": [
+   "https://www.sunnysredhook.com/",
+   "https://www.sunnysredhook.com/about/",
+   "https://www.sunnysredhook.com/private-events/",
+   "https://www.sunnysredhook.com/press/",
+   "https://www.sunnysredhook.com/contact/"
+  ],
+  "instagram": "https://www.instagram.com/sunnysbarofficial/",
+  "error": null
+ },
+ "Freddy's Bar": {
+  "emails": [],
+  "pages": [
+   "https://www.freddysbar.com/",
+   "https://www.freddysbar.com/events/private-event-in-the-backroom",
+   "https://www.freddysbar.com/events/j66thm9436tn2mfp2skey7k8azas87"
+  ],
+  "instagram": "https://www.instagram.com/freddysbrklyn",
+  "error": null
+ }
+}
