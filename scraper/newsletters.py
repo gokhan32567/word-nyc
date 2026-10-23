@@ -125,7 +125,7 @@ def fetch(user: str, password: str, days: int = DAYS_BACK) -> list[dict]:
     since = (datetime.now(NY) - timedelta(days=days)).strftime("%d-%b-%Y")
     box = imaplib.IMAP4_SSL("imap.gmail.com", timeout=60)
     try:
-        box.login(user, password)
+        box.login(user.strip(), re.sub(r"\s+", "", password))  # app passwords are shown with spaces
         mails = []
         for folder in ('"[Gmail]/All Mail"', "INBOX"):
             typ, _ = box.select(folder, readonly=True)
