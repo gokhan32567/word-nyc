@@ -1,0 +1,65 @@
+{
+  "_comment": "Hand-written intros shown at the top of venue pages (and in the jazz-club guide). Keep them factual and short. 'verify': true means Gokhan hasn't checked it yet; set it to false once you have. Venues without an entry get an automatic intro built from their address, neighborhood and genre.",
+  "venues": {
+    "Village Vanguard": {
+      "about": "A wedge-shaped basement room on Seventh Avenue South, open since 1935 and one of the most famous jazz clubs in the world. Many classic live albums were recorded here. Engagements usually run a week, with two sets a night, and the Vanguard Jazz Orchestra plays Mondays.",
+      "verify": true
+    },
+    "Smalls Jazz Club": {
+      "about": "A narrow basement club on West 10th Street in the West Village, known for straight-ahead jazz, late sets and jam sessions that run past midnight. Its sister room Mezzrow is a few doors down.",
+      "verify": true
+    },
+    "Mezzrow": {
+      "about": "A small, quiet listening room on West 10th Street, a few doors from Smalls, built around piano, duos and trios.",
+      "verify": true
+    },
+    "Smoke Jazz Club": {
+      "about": "An intimate Upper West Side supper club on Broadway, with dinner seating and nightly sets from established players.",
+      "verify": true
+    },
+    "Zinc Bar": {
+      "about": "A Greenwich Village basement bar on West 3rd Street with jazz, Latin and Brazilian music most nights.",
+      "verify": true
+    },
+    "Arthur's Tavern": {
+      "about": "A long-running West Village bar on Grove Street with live music every night, from jazz to blues and Dixieland.",
+      "verify": true
+    },
+    "Cellar Dog": {
+      "about": "A West Village basement bar on Christopher Street with pool tables, games and live jazz most evenings.",
+      "verify": true
+    },
+    "Bill's Place": {
+      "about": "A small Harlem room on West 133rd Street, the block once known as Swing Street, where saxophonist Bill Saxton leads weekend sets.",
+      "verify": true
+    },
+    "Bar LunÀtico": {
+      "about": "A small Bed-Stuy bar on Halsey Street with music most nights: jazz, folk, Brazilian and more, in a room where people actually listen.",
+      "verify": true
+    },
+    "Ornithology Jazz Club": {
+      "about": "A Bushwick jazz bar on Suydam Street with nightly sets and sessions from younger players.",
+      "verify": true
+    },
+    "Close Up": {
+      "about": "A small Lower East Side listening room on Orchard Street with jazz most nights.",
+      "verify": true
+    },
+    "Bar Bayeux": {
+      "about": "A cozy jazz bar on Nostrand Avenue in Prospect Lefferts Gardens with live sets most nights.",
+      "verify": true
+    },
+    "The Jazz Gallery": {
+      "about": "A nonprofit performance space on Broadway known for championing new music and emerging jazz artists.",
+      "verify": true
+    },
+    "Soapbox Gallery": {
+      "about": "A Prospect Heights listening room on Dean Street presenting jazz and improvised music in a gallery setting.",
+      "verify": true
+    },
+    "Dizzy's Club": {
+      "about": "Jazz at Lincoln Center's club at Columbus Circle, with a wall of windows looking over Central Park and two sets most nights.",
+      "verify": true
+    }
+  }
+}

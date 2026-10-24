@@ -7,6 +7,9 @@ A live map of tonight's music shows in New York. The lineup refreshes automatica
 - `coverage.html`: the daily venue coverage report (not linked from the site, not indexed)
 - `tonight/`, `venues/`, `sitemap.xml`: search pages rebuilt every morning by `scraper/pages.py` (all shows, one page per
   genre, one per venue, with schema.org Event data for Google's event listings); `listing.css` styles them
+- `neighborhood/`, `late-night-jazz/`, `free-shows/`, `guides/`, `badge/`, `venues/index.html`: more search pages from
+  `scraper/pages.py`. Neighborhoods come from ZIP codes (`scraper/areas.py`); hand-written venue intros live in
+  `scraper/venue_notes.json`. See `SEO_CHANGES.md`.
 - `advertise.html`, `privacy.html`, `page.css`: the Advertise and Privacy pages
 - `events.json`: tonight's lineup, rewritten each morning by the workflow
 - `coverage.json`: what each venue produced this morning
