@@ -1,34 +1,34 @@
 {
  "date": "2026-10-24",
- "generated": "2026-10-24T12:16:44-04:00",
+ "generated": "2026-10-24T12:50:01-04:00",
  "totals": {
   "venues": 184,
-  "shows": 195,
-  "ok": 78,
-  "none-tonight": 86,
-  "blocked": 15,
-  "error": 3,
+  "shows": 198,
+  "ok": 79,
+  "none-tonight": 82,
+  "blocked": 16,
+  "error": 5,
   "robots": 0,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
   "venue-data": 31,
-  "ticketmaster": 46,
-  "venue-ai": 139,
+  "ticketmaster": 48,
+  "venue-ai": 142,
   "newsletter": 1
  },
  "ai": {
   "nightly_missing": [
-   "Zinc Bar",
    "Cellar Dog",
+   "Bar LunÀtico",
    "Barbès",
    "Mehanata Bulgarian Bar"
   ],
-  "calls": 146,
-  "input_tokens": 1202744,
-  "output_tokens": 48319,
-  "cost_usd": 0.1444
+  "calls": 142,
+  "input_tokens": 1182046,
+  "output_tokens": 48149,
+  "cost_usd": 0.1423
  },
  "venues": [
   {
@@ -66,10 +66,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     9003,
-    63
+    59
    ],
    "examples": []
   },
@@ -108,10 +108,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    9812,
-    63
+    9752,
+    59
    ],
    "examples": []
   },
@@ -130,32 +130,69 @@
    "examples": []
   },
   {
+   "name": "Bar Freda",
+   "url": "https://www.barfreda.com/",
+   "read_url": "https://www.barfreda.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× listed at another venue",
+   "tokens": [
+    3435,
+    437
+   ],
+   "examples": [
+    {
+     "title": "FERVENCE + ENTHRONEMENT",
+     "start_time": "3:30 PM",
+     "date_evidence": "SATURDAY OCT 24",
+     "time_evidence": "3:30 PM",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "HLLWN SHW",
+     "start_time": "5:00 PM",
+     "date_evidence": "SATURDAY OCT 24",
+     "time_evidence": "5:00 PM",
+     "why": "listed at another venue"
+    }
+   ]
+  },
+  {
+   "name": "Bar LunÀtico",
+   "url": "https://www.barlunatico.com/",
+   "read_url": "https://www.barlunatico.com/music",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": null,
+   "tokens": [
+    14883,
+    483
+   ],
+   "examples": []
+  },
+  {
    "name": "Barbès",
    "url": "https://www.barbesbrooklyn.com/",
    "read_url": "https://www.barbesbrooklyn.com/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     12602,
-    63
+    248
    ],
-   "examples": []
-  },
-  {
-   "name": "Baryshnikov Arts",
-   "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/.well-known/sgcaptcha/?r=%2F&y=ipr:20.118.39.249:1792858273.674",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "unreadable",
-   "tokens": [
-    2135,
-    60
-   ],
-   "examples": []
+   "examples": [
+    {
+     "title": "CLUBE DO CHORO with REGIONAL SAMAUMA",
+     "start_time": "",
+     "date_evidence": "Sat, Oct 24 2026\n5:00PM - 11:55PM",
+     "time_evidence": "5:00PM - 11:55PM",
+     "why": "not a public performance"
+    }
+   ]
   },
   {
    "name": "Bembe",
@@ -190,7 +227,7 @@
    "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
     3467,
-    594
+    605
    ],
    "examples": [
     {
@@ -239,27 +276,13 @@
    ]
   },
   {
-   "name": "BRIC House",
-   "url": "https://bricartsmedia.org/",
-   "read_url": "https://bricartsmedia.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "no_events_tonight",
-   "tokens": [
-    5648,
-    63
-   ],
-   "examples": []
-  },
-  {
    "name": "Bronx Opera",
    "url": "https://www.bronxopera.org/",
    "read_url": "https://bronxopera.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     3798,
     63
@@ -271,14 +294,9 @@
    "url": "https://www.bowerypresents.com/venues/brooklyn-steel",
    "read_url": "https://www.bowerypresents.com/venues/brooklyn-steel",
    "method": "AI",
-   "status": "none-tonight",
+   "status": "error",
    "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    17576,
-    59
-   ],
-   "examples": []
+   "detail": "API error 429: {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"This request would exceed your rate limit of 500,000 input tokens per minute (org: f033b565-35aa-4182-8595-fa3eb274a616, mo"
   },
   {
    "name": "Café Carlyle",
@@ -295,20 +313,6 @@
    "examples": []
   },
   {
-   "name": "Carnegie Hall",
-   "url": "https://www.carnegiehall.org/Calendar",
-   "read_url": "https://inline.carnegiehall.org/?c=carnegiehall&e=pnsafetynet2023&ver=aspnet-4.4.1&cver=434&man=Safety%20Net&t=https%3A%2F%2Fwww.carnegiehall.org%2Fevents",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "not_a_calendar",
-   "tokens": [
-    2482,
-    63
-   ],
-   "examples": []
-  },
-  {
    "name": "Cathedral of St. John the Divine",
    "url": "https://www.stjohndivine.org/",
    "read_url": "https://www.stjohndivine.org/",
@@ -318,7 +322,7 @@
    "detail": "calendar",
    "tokens": [
     8678,
-    696
+    617
    ],
    "examples": []
   },
@@ -435,20 +439,6 @@
    "examples": []
   },
   {
-   "name": "City Winery",
-   "url": "https://citywinery.com/new-york-city",
-   "read_url": "https://citywinery.com/pages/locations/new-york-city",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    8379,
-    1515
-   ],
-   "examples": []
-  },
-  {
    "name": "Club Bonafide",
    "url": "https://www.clubbonafide.com/",
    "read_url": "https://www.clubbonafide.com/",
@@ -456,6 +446,20 @@
    "status": "blocked",
    "shows": 0,
    "detail": "HTTP 403"
+  },
+  {
+   "name": "Club Cumming",
+   "url": "https://www.clubcummingnyc.com/",
+   "read_url": "https://clubcummingnyc.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    20821,
+    669
+   ],
+   "examples": []
   },
   {
    "name": "David Geffen Hall",
@@ -581,7 +585,7 @@
    "detail": "calendar; dropped 2× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
     5339,
-    444
+    440
    ],
    "examples": [
     {
@@ -635,10 +639,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    13758,
-    59
+    9291,
+    63
    ],
    "examples": []
   },
@@ -651,8 +655,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12266,
-    294
+    12173,
+    304
    ],
    "examples": []
   },
@@ -738,16 +742,11 @@
   {
    "name": "Lucinda's",
    "url": "https://www.lucindasnyc.com/",
-   "read_url": "https://www.lucindasnyc.com/calendar/",
+   "read_url": "https://www.lucindasnyc.com/",
    "method": "AI",
-   "status": "none-tonight",
+   "status": "error",
    "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    9312,
-    59
-   ],
-   "examples": []
+   "detail": "API error 429: {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"This request would exceed your rate limit of 500,000 input tokens per minute (org: f033b565-35aa-4182-8595-fa3eb274a616, mo"
   },
   {
    "name": "Manhattan School of Music",
@@ -788,7 +787,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     4091,
     63
@@ -827,12 +826,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     9306,
-    63
+    259
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Toi, moi, Tituba…",
+     "start_time": "",
+     "date_evidence": "OCTOBER 23 & 24",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "Nowadays",
@@ -850,12 +857,27 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
     5345,
-    59
+    463
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "ILHAN SELECTS",
+     "start_time": "7:00 PM",
+     "date_evidence": "Saturday October 24",
+     "time_evidence": "7pm-11pm ILHAN SELECTS",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "DJ SKEME RICHARDS",
+     "start_time": "11:00 PM",
+     "date_evidence": "Saturday October 24",
+     "time_evidence": "11pm-4am DJ SKEME RICHARDS",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "NYPL Bruno Walter Auditorium",
@@ -864,10 +886,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    6623,
-    63
+    6552,
+    59
    ],
    "examples": []
   },
@@ -881,7 +903,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     11606,
-    273
+    276
    ],
    "examples": [
     {
@@ -900,12 +922,34 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 3× listed at another venue",
    "tokens": [
     10713,
-    59
+    867
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "OWL PRESENTS! Darling, Porcelain Vivisection, Kobi",
+     "start_time": "6:00 PM",
+     "date_evidence": "Oct 24, 2026 at 6:00 PM EDT",
+     "time_evidence": "Oct 24, 2026 at 6:00 PM EDT",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "OWL PRESENTS! Ryan Moon, The Coux, Kate Short and the Long Haul",
+     "start_time": "9:00 PM",
+     "date_evidence": "Oct 24, 2026 at 9:00 PM EDT",
+     "time_evidence": "Oct 24, 2026 at 9:00 PM EDT",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "I Have A Dream! Pop Shoegaze and DreamPop music and arts fest CLOSING NIGHT AFTER PARTY w/ special guests",
+     "start_time": "11:30 PM",
+     "date_evidence": "Oct 24, 2026 at 11:30 PM EDT",
+     "time_evidence": "Oct 24, 2026 at 11:30 PM EDT",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Paddy Reilly's Music Bar",
@@ -914,7 +958,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     3347,
     63
@@ -937,7 +981,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     3928,
     63
@@ -965,12 +1009,48 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     6798,
-    63
+    59
    ],
    "examples": []
+  },
+  {
+   "name": "Radio City Music Hall",
+   "url": "https://www.msg.com/radio-city-music-hall/calendar",
+   "read_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 3× listed at another venue, 1× not a public performance",
+   "tokens": [
+    20789,
+    813
+   ],
+   "examples": [
+    {
+     "title": "Justin Willman",
+     "start_time": "7:00 PM",
+     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
+     "time_evidence": "7:00PM ET",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "Harry Styles: Together, Together",
+     "start_time": "8:00 PM",
+     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
+     "time_evidence": "8:00PM ET",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "An Evening with Tedeschi Trucks Band",
+     "start_time": "7:30 PM",
+     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
+     "time_evidence": "7:30PM CT",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Regina Opera",
@@ -979,9 +1059,9 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    4703,
+    4622,
     63
    ],
    "examples": []
@@ -1032,7 +1112,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    11954,
+    11979,
     59
    ],
    "examples": []
@@ -1068,16 +1148,11 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:20.118.39.249:1792858159.896",
-   "method": "AI",
+   "read_url": "https://sidgolds.com/detroit/events/",
+   "method": "WordPress calendar",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
-   "tokens": [
-    2132,
-    60
-   ],
-   "examples": []
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "Skinny Dennis",
@@ -1088,7 +1163,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9802,
+    9735,
     59
    ],
    "examples": []
@@ -1103,7 +1178,7 @@
    "detail": "calendar",
    "tokens": [
     9098,
-    960
+    909
    ],
    "examples": []
   },
@@ -1114,18 +1189,18 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote not found on page",
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     5859,
-    380
+    333
    ],
    "examples": [
     {
      "title": "THE MARGARET SLOVAK QUARTET: \"FOR THE MOMENT\" VINYL ALBUM RELEASE!",
      "start_time": "4:00 PM",
-     "date_evidence": "OCTOBER 2026 calendar entry for 11 (the 4:00 PM – 5:30 PM event listed under the 11 cell)",
+     "date_evidence": "11",
      "time_evidence": "4:00 PM – 5:30 PM",
-     "why": "date quote not found on page"
+     "why": "date quote is not tonight"
     }
    ]
   },
@@ -1146,14 +1221,14 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:20.118.39.249:1792858259.488",
+   "read_url": "https://www.stannholytrinity.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "not_a_calendar",
    "tokens": [
-    2142,
-    60
+    5743,
+    63
    ],
    "examples": []
   },
@@ -1164,7 +1239,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
     7713,
     63
@@ -1181,13 +1256,13 @@
    "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
    "tokens": [
     11677,
-    292
+    283
    ],
    "examples": [
     {
      "title": "The Rocky Horror Picture Show Movie Screening with The Flesh Junkies Live!",
      "start_time": "",
-     "date_evidence": "SAT\n24\nOCT",
+     "date_evidence": "SAT 24 OCT",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -1197,23 +1272,10 @@
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": "AI",
-   "status": "none-tonight",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
-   "tokens": [
-    6730,
-    231
-   ],
-   "examples": [
-    {
-     "title": "Mass",
-     "start_time": "5:30 PM",
-     "date_evidence": "Saturday Mass - October 24th 2026",
-     "time_evidence": "5:30pm - Mass",
-     "why": "not a public performance"
-    }
-   ]
+   "detail": "HTTP 403"
   },
   {
    "name": "Sunnyvale",
@@ -1222,20 +1284,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "calendar",
    "tokens": [
     6146,
-    252
+    59
    ],
-   "examples": [
-    {
-     "title": "The Vacant Lots plus Special Guests",
-     "start_time": "7:30 PM",
-     "date_evidence": "FRI 10/25",
-     "time_evidence": "7:30 PM",
-     "why": "date quote is not tonight"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Tenri Cultural Institute",
@@ -1258,18 +1312,18 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    17579,
-    258
+    17567,
+    204
    ],
    "examples": [
     {
      "title": "ALLEYCVT",
-     "start_time": "8:00 PM",
+     "start_time": "",
      "date_evidence": "Sat, February 20, 2027",
-     "time_evidence": "Doors 8:00 PM",
-     "why": "date quote is not tonight"
+     "time_evidence": "",
+     "why": "time quote not found on page"
     }
    ]
   },
@@ -1283,7 +1337,7 @@
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     3840,
-    273
+    263
    ],
    "examples": [
     {
@@ -1323,7 +1377,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     4370,
-    211
+    196
    ],
    "examples": [
     {
@@ -1441,7 +1495,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13257,
+    13260,
     59
    ],
    "examples": []
@@ -1486,24 +1540,16 @@
   {
    "name": "Wild Horses",
    "url": "https://www.wildhorsesnyc.com/",
-   "read_url": "https://wildhorsesnyc.com/calendar/",
+   "read_url": "https://wildhorsesnyc.com/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "calendar",
    "tokens": [
-    5402,
-    234
+    4248,
+    59
    ],
-   "examples": [
-    {
-     "title": "Hair of the Dog Hootenanny",
-     "start_time": "4:00 PM",
-     "date_evidence": "24",
-     "time_evidence": "4:00PM",
-     "why": "date quote is not tonight"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Works & Process at the Guggenheim",
@@ -1515,20 +1561,6 @@
    "detail": "HTTP 200"
   },
   {
-   "name": "Zinc Bar",
-   "url": "https://www.zincbar.com/calendar/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2Fcalendar%2F&y=ipc:20.118.39.249:1792858118.136",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "unreadable",
-   "tokens": [
-    2135,
-    60
-   ],
-   "examples": []
-  },
-  {
    "name": "54 Below",
    "url": "https://54below.org/",
    "read_url": "https://54below.org/calendar/",
@@ -1537,8 +1569,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    11629,
-    475
+    11687,
+    438
    ],
    "examples": []
   },
@@ -1560,8 +1592,8 @@
    "shows": 4,
    "detail": "calendar",
    "tokens": [
-    11763,
-    747
+    11439,
+    799
    ],
    "examples": []
   },
@@ -1575,7 +1607,7 @@
    "detail": "single_event",
    "tokens": [
     5449,
-    277
+    266
    ],
    "examples": []
   },
@@ -1586,20 +1618,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "detail": null,
    "tokens": [
     8096,
-    410
+    222
    ],
-   "examples": [
-    {
-     "title": "Toi, moi, Tituba…",
-     "start_time": "7:30 PM",
-     "date_evidence": "Today's Performances",
-     "time_evidence": "Dance\nToi, moi, Tituba…\n7:30pm",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Bar Bayeux",
@@ -1611,7 +1635,7 @@
    "detail": "calendar; dropped 1× start time not in time quote; event page gave no time (robots)",
    "tokens": [
     13718,
-    709
+    753
    ],
    "examples": [
     {
@@ -1624,42 +1648,6 @@
    ]
   },
   {
-   "name": "Bar Freda",
-   "url": "https://www.barfreda.com/",
-   "read_url": "https://www.barfreda.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× listed at another venue",
-   "tokens": [
-    3435,
-    427
-   ],
-   "examples": [
-    {
-     "title": "FERVENCE + ENTHRONEMENT",
-     "start_time": "3:30 PM",
-     "date_evidence": "SATURDAY OCT 24",
-     "time_evidence": "3:30 PM",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
-   "name": "Bar LunÀtico",
-   "url": "https://www.barlunatico.com/",
-   "read_url": "https://www.barlunatico.com/music",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
-   "tokens": [
-    14883,
-    546
-   ],
-   "examples": []
-  },
-  {
    "name": "Bargemusic",
    "url": "https://www.bargemusic.org/",
    "read_url": "https://www.bargemusic.org/",
@@ -1669,16 +1657,30 @@
    "detail": null
   },
   {
-   "name": "Beacon Theatre",
-   "url": "https://www.msg.com/beacon-theatre/calendar",
-   "read_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre",
+   "name": "Baryshnikov Arts",
+   "url": "https://bacnyc.org/",
+   "read_url": "https://baryshnikovarts.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 4,
+   "shows": 1,
    "detail": "calendar",
    "tokens": [
-    20322,
-    752
+    5577,
+    241
+   ],
+   "examples": []
+  },
+  {
+   "name": "Beacon Theatre",
+   "url": "https://www.msg.com/beacon-theatre/calendar",
+   "read_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre&venues=KovZpZAEAd6A",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    20304,
+    243
    ],
    "examples": []
   },
@@ -1691,8 +1693,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    7111,
-    1113
+    7109,
+    1078
    ],
    "examples": []
   },
@@ -1702,13 +1704,28 @@
    "read_url": "https://mercuryeastpresents.com/boweryballroom/",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
-   "detail": "calendar",
+   "shows": 1,
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
     9075,
-    650
+    680
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "*SOLD OUT* MARIS",
+     "start_time": "6:00 PM",
+     "date_evidence": "TODAY’S SHOWS",
+     "time_evidence": "6:00 pm",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "BLONDE OTTER W/ ALREADY LATE",
+     "start_time": "9:00 PM",
+     "date_evidence": "TODAY’S SHOWS",
+     "time_evidence": "9:00 pm",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Bowery Palace",
@@ -1720,7 +1737,21 @@
    "detail": "calendar",
    "tokens": [
     6132,
-    440
+    487
+   ],
+   "examples": []
+  },
+  {
+   "name": "BRIC House",
+   "url": "https://bricartsmedia.org/",
+   "read_url": "https://bricartsmedia.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    5648,
+    274
    ],
    "examples": []
   },
@@ -1734,7 +1765,7 @@
    "detail": "calendar",
    "tokens": [
     12240,
-    932
+    901
    ],
    "examples": []
   },
@@ -1757,7 +1788,7 @@
    "detail": "calendar",
    "tokens": [
     6905,
-    262
+    283
    ],
    "examples": []
   },
@@ -1780,7 +1811,35 @@
    "detail": "calendar",
    "tokens": [
     4294,
-    276
+    277
+   ],
+   "examples": []
+  },
+  {
+   "name": "Carnegie Hall",
+   "url": "https://www.carnegiehall.org/Calendar",
+   "read_url": "https://www.carnegiehall.org/events",
+   "method": "AI",
+   "status": "ok",
+   "shows": 3,
+   "detail": "calendar",
+   "tokens": [
+    8082,
+    656
+   ],
+   "examples": []
+  },
+  {
+   "name": "City Winery",
+   "url": "https://citywinery.com/new-york-city",
+   "read_url": "https://citywinery.com/pages/locations/new-york-city",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    8322,
+    920
    ],
    "examples": []
   },
@@ -1794,38 +1853,9 @@
    "detail": "calendar",
    "tokens": [
     12307,
-    806
+    801
    ],
    "examples": []
-  },
-  {
-   "name": "Club Cumming",
-   "url": "https://www.clubcummingnyc.com/",
-   "read_url": "https://clubcummingnyc.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 1× not a public performance, 1× date quote not found on page",
-   "tokens": [
-    20821,
-    891
-   ],
-   "examples": [
-    {
-     "title": "Closed for Private Event",
-     "start_time": "8:00 PM",
-     "date_evidence": "October 24, 2026",
-     "time_evidence": "8:00 PM  Closed for Private Event",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Creatures of The Night (Lina's Birthday Bash)",
-     "start_time": "10:00 PM",
-     "date_evidence": "Creatures of The Night (Lina's Birthday Bash) 10:00 PM – 3:00 AM (listed under Saturday, October 24 calendar cell 24)",
-     "time_evidence": "10:00 PM – 3:00 AM",
-     "why": "date quote not found on page"
-    }
-   ]
   },
   {
    "name": "Culture Lab LIC",
@@ -1833,21 +1863,13 @@
    "read_url": "https://www.culturelablic.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× not a public performance",
+   "shows": 2,
+   "detail": "calendar",
    "tokens": [
     6646,
-    482
+    507
    ],
-   "examples": [
-    {
-     "title": "SpeakEasier Language Exchange",
-     "start_time": "3:00 PM",
-     "date_evidence": "Saturday, 24 October",
-     "time_evidence": "Saturday, 24 October\n\n3:00 pm - 5:00 pm",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Danspace Project",
@@ -1859,7 +1881,7 @@
    "detail": "calendar",
    "tokens": [
     5868,
-    310
+    297
    ],
    "examples": []
   },
@@ -1873,7 +1895,7 @@
    "detail": "calendar",
    "tokens": [
     8426,
-    694
+    724
    ],
    "examples": []
   },
@@ -1887,7 +1909,7 @@
    "detail": "calendar",
    "tokens": [
     9161,
-    830
+    802
    ],
    "examples": []
   },
@@ -1910,7 +1932,7 @@
    "detail": "calendar",
    "tokens": [
     5801,
-    451
+    487
    ],
    "examples": []
   },
@@ -1924,7 +1946,7 @@
    "detail": "calendar",
    "tokens": [
     9808,
-    797
+    749
    ],
    "examples": []
   },
@@ -1938,7 +1960,7 @@
    "detail": "calendar",
    "tokens": [
     20392,
-    429
+    450
    ],
    "examples": []
   },
@@ -1988,7 +2010,7 @@
    "detail": "calendar",
    "tokens": [
     8407,
-    420
+    414
    ],
    "examples": []
   },
@@ -1999,10 +2021,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": null,
    "tokens": [
     3675,
-    354
+    334
    ],
    "examples": []
   },
@@ -2012,11 +2034,11 @@
    "read_url": "https://www.ibeambrooklyn.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 4,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
     23442,
-    1078
+    781
    ],
    "examples": []
   },
@@ -2030,7 +2052,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://jazz.org/concert/from-cuba-to-the-crescent-city-the-jazz-at-lincoln-cent",
    "tokens": [
     7067,
-    291
+    315
    ],
    "examples": [
     {
@@ -2070,20 +2092,20 @@
    "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
     4201,
-    558
+    548
    ],
    "examples": [
     {
      "title": "LITTLE BARRIE",
      "start_time": "6:30 PM",
-     "date_evidence": "OCT 24",
+     "date_evidence": "OCT\n24",
      "time_evidence": "6:30PM",
      "why": "listed at another venue"
     },
     {
      "title": "LABIAHEAD (ALL WOMEN RADIOHEAD)",
      "start_time": "7:00 PM",
-     "date_evidence": "OCT 24",
+     "date_evidence": "OCT\n24",
      "time_evidence": "7:00PM",
      "why": "listed at another venue"
     }
@@ -2099,7 +2121,7 @@
    "detail": "calendar",
    "tokens": [
     5599,
-    483
+    485
    ],
    "examples": []
   },
@@ -2113,7 +2135,7 @@
    "detail": "calendar",
    "tokens": [
     4228,
-    222
+    223
    ],
    "examples": []
   },
@@ -2127,7 +2149,7 @@
    "detail": "calendar",
    "tokens": [
     8859,
-    469
+    468
    ],
    "examples": []
   },
@@ -2141,7 +2163,7 @@
    "detail": "calendar",
    "tokens": [
     19086,
-    1199
+    1066
    ],
    "examples": []
   },
@@ -2155,7 +2177,7 @@
    "detail": "calendar",
    "tokens": [
     4456,
-    260
+    273
    ],
    "examples": []
   },
@@ -2169,7 +2191,7 @@
    "detail": "calendar",
    "tokens": [
     4403,
-    340
+    274
    ],
    "examples": []
   },
@@ -2192,7 +2214,7 @@
    "detail": "calendar",
    "tokens": [
     6190,
-    285
+    282
    ],
    "examples": []
   },
@@ -2206,14 +2228,14 @@
    "detail": "calendar",
    "tokens": [
     5966,
-    540
+    530
    ],
    "examples": []
   },
   {
    "name": "Pangea",
    "url": "http://www.pangeanyc.com/music/",
-   "read_url": "http://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
+   "read_url": "https://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
    "method": "WordPress calendar",
    "status": "ok",
    "shows": 2,
@@ -2229,7 +2251,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     2867,
-    1254
+    1280
    ],
    "examples": [
     {
@@ -2260,7 +2282,7 @@
    "detail": "calendar",
    "tokens": [
     15554,
-    710
+    705
    ],
    "examples": []
   },
@@ -2274,7 +2296,7 @@
    "detail": "calendar",
    "tokens": [
     4047,
-    249
+    241
    ],
    "examples": []
   },
@@ -2288,45 +2310,9 @@
    "detail": "calendar",
    "tokens": [
     8875,
-    259
+    253
    ],
    "examples": []
-  },
-  {
-   "name": "Radio City Music Hall",
-   "url": "https://www.msg.com/radio-city-music-hall/calendar",
-   "read_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 2× listed at another venue, 1× not a public performance",
-   "tokens": [
-    20492,
-    846
-   ],
-   "examples": [
-    {
-     "title": "Justin Willman",
-     "start_time": "7:00 PM",
-     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
-     "time_evidence": "7:00PM ET",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "An Evening with Tedeschi Trucks Band",
-     "start_time": "7:30 PM",
-     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
-     "time_evidence": "7:30PM CT",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "CANCELLED: Eros Ramazzotti",
-     "start_time": "9:00 PM",
-     "date_evidence": "SAT 24 OCT ‘26 TONIGHT",
-     "time_evidence": "9:00PM ET",
-     "why": "not a public performance"
-    }
-   ]
   },
   {
    "name": "Rough Trade NYC",
@@ -2337,8 +2323,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    11827,
-    287
+    11846,
+    279
    ],
    "examples": []
   },
@@ -2352,7 +2338,7 @@
    "detail": "calendar",
    "tokens": [
     7592,
-    458
+    444
    ],
    "examples": []
   },
@@ -2384,7 +2370,7 @@
    "detail": "calendar",
    "tokens": [
     10157,
-    804
+    747
    ],
    "examples": []
   },
@@ -2398,7 +2384,7 @@
    "detail": "calendar",
    "tokens": [
     4673,
-    508
+    496
    ],
    "examples": []
   },
@@ -2412,7 +2398,7 @@
    "detail": "calendar",
    "tokens": [
     19088,
-    1403
+    1437
    ],
    "examples": []
   },
@@ -2426,7 +2412,7 @@
    "detail": "calendar",
    "tokens": [
     5642,
-    784
+    771
    ],
    "examples": []
   },
@@ -2440,7 +2426,7 @@
    "detail": "calendar",
    "tokens": [
     4490,
-    276
+    281
    ],
    "examples": []
   },
@@ -2454,7 +2440,7 @@
    "detail": "calendar",
    "tokens": [
     8115,
-    507
+    568
    ],
    "examples": []
   },
@@ -2468,7 +2454,7 @@
    "detail": "calendar",
    "tokens": [
     17390,
-    480
+    474
    ],
    "examples": []
   },
@@ -2479,19 +2465,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× not a public performance, 2× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/cristina-candela-ana-villa-antonio-; +1 from event page https://www.terraza7.com/detalles-y-registro/cristina-candela-ana-villa-antonio-",
+   "detail": "calendar; dropped 2× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/cristina-candela-ana-villa-antonio-; +1 from event page https://www.terraza7.com/detalles-y-registro/cristina-candela-ana-villa-antonio-",
    "tokens": [
     6957,
-    658
+    458
    ],
    "examples": [
-    {
-     "title": "Papier-Mâché Calaveras Workshop | Oaxacan Tradition | Part of Our Día de Muertos Celebration",
-     "start_time": "",
-     "date_evidence": "Sat, Oct 24",
-     "time_evidence": "",
-     "why": "not a public performance"
-    },
     {
      "title": "Cristina Candela, Ana Villa & Antonio Tran | Flamenco | First Set",
      "start_time": "",
@@ -2527,7 +2506,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     13996,
-    599
+    586
    ],
    "examples": [
     {
@@ -2549,7 +2528,7 @@
    "detail": "sent Friday, October 23, 2026",
    "tokens": [
     10079,
-    273
+    266
    ],
    "examples": []
   },
@@ -2563,7 +2542,7 @@
    "detail": "calendar",
    "tokens": [
     4918,
-    670
+    669
    ],
    "examples": []
   },
@@ -2573,11 +2552,11 @@
    "read_url": "https://jazzgallery.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
     14718,
-    436
+    774
    ],
    "examples": []
   },
@@ -2591,7 +2570,7 @@
    "detail": "calendar",
    "tokens": [
     8183,
-    259
+    254
    ],
    "examples": []
   },
@@ -2605,7 +2584,7 @@
    "detail": "calendar",
    "tokens": [
     12444,
-    290
+    283
    ],
    "examples": []
   },
@@ -2619,7 +2598,7 @@
    "detail": "calendar",
    "tokens": [
     16786,
-    841
+    827
    ],
    "examples": []
   },
@@ -2642,7 +2621,7 @@
    "detail": "calendar",
    "tokens": [
     5382,
-    256
+    291
    ],
    "examples": []
   },
@@ -2656,9 +2635,31 @@
    "detail": "calendar",
    "tokens": [
     5482,
-    416
+    412
    ],
    "examples": []
+  },
+  {
+   "name": "Zinc Bar",
+   "url": "https://www.zincbar.com/calendar/",
+   "read_url": "https://www.zincbar.com/calendar/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.zincbar.com/event/valtinho-anastacio-77/",
+   "tokens": [
+    10548,
+    231
+   ],
+   "examples": [
+    {
+     "title": "VALTINHO ANASTÁCIO",
+     "start_time": "",
+     "date_evidence": "October 24, 2026",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   }
  ]
 }
