@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="44" viewBox="0 0 180 44" role="img" aria-label="See us on Word NYC">
+  <rect x="0.5" y="0.5" width="179" height="43" rx="22" fill="#0d1230" stroke="#ffc24b"/>
+  <circle cx="24" cy="22" r="7" fill="#ffc24b"/>
+  <circle cx="24" cy="22" r="12" fill="none" stroke="#ffc24b" stroke-opacity=".35"/>
+  <text x="44" y="18" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#c9cde6">See us on</text>
+  <text x="44" y="33" font-family="Impact, 'Arial Narrow', Arial, sans-serif" font-size="17" font-weight="800" fill="#ffc24b" letter-spacing=".5">WORD NYC</text>
+</svg>
