@@ -29,8 +29,8 @@
 - **Expired-show redirects**: shared shows are `/?show=…` links on the homepage, not separate pages, so nothing expires into a 404.
 - **UTM on the Instagram story graphic**: it's an image with no clickable link.
 
-## Check these (written from general knowledge, marked `"verify": true`)
-Village Vanguard, Smalls, Mezzrow, Smoke, Zinc Bar, Arthur's Tavern, Cellar Dog, Bill's Place, Bar LunÀtico, Ornithology, Close Up, Bar Bayeux, The Jazz Gallery, Soapbox Gallery, Dizzy's Club. Edit `scraper/venue_notes.json`, and set `verify` to false once checked.
+## Venue intros
+All 15 hand-written intros in `scraper/venue_notes.json` were checked on Oct 24, 2026 against each venue's own site, Wikipedia (Village Vanguard), Time Out (Cellar Dog), Atlas Obscura (Bill's Place) and JazzTimes (Mezzrow). Ten were corrected; all are now marked `"verify": false`.
 
 ## Submit in Google Search Console after merge
 1. Sitemap: `https://word-nyc.com/sitemap.xml` (resubmit)
