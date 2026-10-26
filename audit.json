@@ -1,120 +1,84 @@
 {
  "days": [
-  "2026-10-18",
-  "2026-10-19",
   "2026-10-20",
   "2026-10-21",
-  "2026-10-22"
+  "2026-10-22",
+  "2026-10-23",
+  "2026-10-24",
+  "2026-10-25",
+  "2026-10-26"
  ],
  "silent": [
-  "92NY",
   "Americas Society",
-  "Apollo Theater",
   "Areté Venue & Gallery",
-  "Arlene's Grocery",
-  "Arthur's Tavern",
-  "Austrian Cultural Forum",
-  "BRIC House",
-  "Baby's All Right",
   "Bembe",
-  "Bill's Place",
   "Bronx Opera",
-  "Brooklyn Conservatory of Music",
-  "Caffe Vivaldi",
   "Cellar Dog",
   "Chelsea Table + Stage",
-  "Christ & St. Stephen's Church",
   "Church of Saint Mary the Virgin",
   "Church of St. Ignatius Loyola",
   "Church of St. Luke in the Fields",
   "Church of the Ascension",
   "Club Bonafide",
-  "Culture Lab LIC",
-  "Danspace Project",
-  "DiMenna Center for Classical Music",
-  "Don't Tell Mama",
+  "David H. Koch Theater",
   "Downtown Music Gallery",
-  "Elsewhere",
   "Fifth Avenue Presbyterian Church",
   "Flushing Town Hall",
   "Forest Hills Stadium",
   "Gibney",
   "Ginny's Supper Club",
-  "Gold Sounds",
   "Good Room",
-  "Greenwich House Music School",
   "Harlem Stage",
   "Holy Trinity Lutheran Church",
   "ISSUE Project Room",
   "Joe's Pub",
-  "Kings Theatre",
-  "Knockdown Center",
-  "Kupferberg Center for the Arts",
   "La MaMa",
+  "Lehman Center for the Performing Arts",
   "Manhattan School of Music",
   "Mannes School of Music",
   "Mehanata Bulgarian Bar",
   "Merkin Hall",
-  "Miller Theatre",
-  "Minton's Playhouse",
-  "Mise-en Place",
   "National Jazz Museum in Harlem",
   "New York City Center",
-  "New York Live Arts",
   "Nowadays",
   "OPERA America National Opera Center",
   "Our Wicked Lady",
   "Paddy Reilly's Music Bar",
-  "Pangea",
   "Park Avenue Armory",
   "Pioneer Works",
   "Prospect Park Bandshell",
-  "Queens Theatre",
   "Regina Opera",
   "Rockwood Music Hall",
+  "Saint Peter's Church",
   "Sheen Center",
-  "Sistas' Place",
   "Skinny Dennis",
   "Snug Harbor Cultural Center",
   "Soapbox Gallery",
   "St. Ann & the Holy Trinity",
   "St. Bartholomew's Church",
-  "St. George Theatre",
   "St. Patrick's Cathedral",
-  "Swing 46",
   "TV Eye",
   "Tenri Cultural Institute",
-  "The Bowery Electric",
-  "The Broadway",
-  "The Cutting Room",
-  "The Duplex",
   "The Flatiron Room",
-  "The Green Room 42",
-  "The Iridium",
   "The Metropolitan Museum of Art",
   "The Morgan Library & Museum",
-  "The Owl Music Parlor",
   "The Shed",
-  "The Town Hall",
-  "Trinity Church Wall Street",
-  "Works & Process at the Guggenheim",
-  "Zinc Bar"
+  "Trinity Church Wall Street"
  ],
  "broken": [
   "Berlin",
   "Club Bonafide",
   "Downtown Music Gallery",
   "Joe's Pub",
-  "Knockdown Center",
   "Manhattan School of Music",
   "Mannes School of Music",
   "National Jazz Museum in Harlem",
   "New York City Center",
+  "Nowadays",
   "Park Avenue Armory",
   "Rockwood Music Hall",
   "St. Patrick's Cathedral",
   "TV Eye",
-  "The Bowery Electric",
   "The Cutting Room",
   "The Flatiron Room",
   "The Juilliard School",
@@ -124,88 +88,116 @@
  ],
  "outside": [
   [
-   "Bowery Palace",
-   7
-  ],
-  [
    "Night Club 101",
-   7
+   16
   ],
   [
    "Palace Theatre-NY",
-   4
-  ],
-  [
-   "Iridium",
-   3
+   8
   ],
   [
    "Booth Theatre",
-   2
-  ],
-  [
-   "Town Hall",
-   1
-  ],
-  [
-   "Irving Plaza Powered By Verizon 5G",
-   1
-  ],
-  [
-   "Market Hotel ",
-   1
-  ],
-  [
-   "Barclays Center",
-   1
+   8
   ],
   [
    "BrownstoneJAZZ",
-   1
+   5
   ],
   [
    "Madison Square Garden",
+   3
+  ],
+  [
+   "Barclays Center",
+   2
+  ],
+  [
+   "Iridium",
+   2
+  ],
+  [
+   "Vinyl + Thread",
+   1
+  ],
+  [
+   "Hard Rock Cafe",
+   1
+  ],
+  [
+   "The Rooftop at Pier 17",
+   1
+  ],
+  [
+   "Palladium Times Square ",
+   1
+  ],
+  [
+   "Broolyn Storehouse",
+   1
+  ],
+  [
+   "Stern Auditorium / Perelman Stage at Carnegie Hall",
+   1
+  ],
+  [
+   "The Greene Space",
    1
   ]
  ],
  "nightly_gaps": {
   "Smoke Jazz Club": [
-   "2026-10-20"
+   "2026-10-20",
+   "2026-10-26"
   ],
   "The Iridium": [
    "2026-10-20",
    "2026-10-21",
-   "2026-10-22"
+   "2026-10-23",
+   "2026-10-26"
   ],
   "Zinc Bar": [
    "2026-10-20",
    "2026-10-21",
-   "2026-10-22"
+   "2026-10-23"
   ],
   "Cellar Dog": [
    "2026-10-20",
    "2026-10-21",
-   "2026-10-22"
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
+   "2026-10-26"
   ],
   "Arthur's Tavern": [
    "2026-10-20",
-   "2026-10-21",
-   "2026-10-22"
+   "2026-10-21"
   ],
   "Mehanata Bulgarian Bar": [
    "2026-10-20",
    "2026-10-21",
-   "2026-10-22"
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
+   "2026-10-26"
   ],
   "Dizzy's Club": [
    "2026-10-20",
    "2026-10-21"
   ],
   "Smalls Jazz Club": [
-   "2026-10-21"
+   "2026-10-21",
+   "2026-10-22"
   ],
   "Mezzrow": [
    "2026-10-21"
+  ],
+  "Bar LunÀtico": [
+   "2026-10-24"
+  ],
+  "Barbès": [
+   "2026-10-24"
   ]
  }
 }

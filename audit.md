@@ -1,127 +1,91 @@
-# Coverage audit, 2026-10-18 to 2026-10-22
+# Coverage audit, 2026-10-20 to 2026-10-26
 
-Total shows: 479 over 5 days, at 107 venues.
+Total shows: 987 over 7 days, at 142 venues.
 
 ## Nightly venues with empty days
-- Smoke Jazz Club: 2026-10-20
-- The Iridium: 2026-10-20, 2026-10-21, 2026-10-22
-- Zinc Bar: 2026-10-20, 2026-10-21, 2026-10-22
-- Cellar Dog: 2026-10-20, 2026-10-21, 2026-10-22
-- Arthur's Tavern: 2026-10-20, 2026-10-21, 2026-10-22
-- Mehanata Bulgarian Bar: 2026-10-20, 2026-10-21, 2026-10-22
+- Smoke Jazz Club: 2026-10-20, 2026-10-26
+- The Iridium: 2026-10-20, 2026-10-21, 2026-10-23, 2026-10-26
+- Zinc Bar: 2026-10-20, 2026-10-21, 2026-10-23
+- Cellar Dog: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26
+- Arthur's Tavern: 2026-10-20, 2026-10-21
+- Mehanata Bulgarian Bar: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26
 - Dizzy's Club: 2026-10-20, 2026-10-21
-- Smalls Jazz Club: 2026-10-21
+- Smalls Jazz Club: 2026-10-21, 2026-10-22
 - Mezzrow: 2026-10-21
+- Bar LunÀtico: 2026-10-24
+- Barbès: 2026-10-24
 
 ## Our venues with no shows all week
-- 92NY
 - Americas Society
-- Apollo Theater
 - Areté Venue & Gallery
-- Arlene's Grocery
-- Arthur's Tavern
-- Austrian Cultural Forum
-- BRIC House
-- Baby's All Right
 - Bembe
-- Bill's Place
 - Bronx Opera
-- Brooklyn Conservatory of Music
-- Caffe Vivaldi
 - Cellar Dog
 - Chelsea Table + Stage
-- Christ & St. Stephen's Church
 - Church of Saint Mary the Virgin
 - Church of St. Ignatius Loyola
 - Church of St. Luke in the Fields
 - Church of the Ascension
 - Club Bonafide
-- Culture Lab LIC
-- Danspace Project
-- DiMenna Center for Classical Music
-- Don't Tell Mama
+- David H. Koch Theater
 - Downtown Music Gallery
-- Elsewhere
 - Fifth Avenue Presbyterian Church
 - Flushing Town Hall
 - Forest Hills Stadium
 - Gibney
 - Ginny's Supper Club
-- Gold Sounds
 - Good Room
-- Greenwich House Music School
 - Harlem Stage
 - Holy Trinity Lutheran Church
 - ISSUE Project Room
 - Joe's Pub
-- Kings Theatre
-- Knockdown Center
-- Kupferberg Center for the Arts
 - La MaMa
+- Lehman Center for the Performing Arts
 - Manhattan School of Music
 - Mannes School of Music
 - Mehanata Bulgarian Bar
 - Merkin Hall
-- Miller Theatre
-- Minton's Playhouse
-- Mise-en Place
 - National Jazz Museum in Harlem
 - New York City Center
-- New York Live Arts
 - Nowadays
 - OPERA America National Opera Center
 - Our Wicked Lady
 - Paddy Reilly's Music Bar
-- Pangea
 - Park Avenue Armory
 - Pioneer Works
 - Prospect Park Bandshell
-- Queens Theatre
 - Regina Opera
 - Rockwood Music Hall
+- Saint Peter's Church
 - Sheen Center
-- Sistas' Place
 - Skinny Dennis
 - Snug Harbor Cultural Center
 - Soapbox Gallery
 - St. Ann & the Holy Trinity
 - St. Bartholomew's Church
-- St. George Theatre
 - St. Patrick's Cathedral
-- Swing 46
 - TV Eye
 - Tenri Cultural Institute
-- The Bowery Electric
-- The Broadway
-- The Cutting Room
-- The Duplex
 - The Flatiron Room
-- The Green Room 42
-- The Iridium
 - The Metropolitan Museum of Art
 - The Morgan Library & Museum
-- The Owl Music Parlor
 - The Shed
-- The Town Hall
 - Trinity Church Wall Street
-- Works & Process at the Guggenheim
-- Zinc Bar
 
 ## Venues that block us or failed most days
 - Berlin
 - Club Bonafide
 - Downtown Music Gallery
 - Joe's Pub
-- Knockdown Center
 - Manhattan School of Music
 - Mannes School of Music
 - National Jazz Museum in Harlem
 - New York City Center
+- Nowadays
 - Park Avenue Armory
 - Rockwood Music Hall
 - St. Patrick's Cathedral
 - TV Eye
-- The Bowery Electric
 - The Cutting Room
 - The Flatiron Room
 - The Juilliard School
@@ -130,14 +94,17 @@ Total shows: 479 over 5 days, at 107 venues.
 - Works & Process at the Guggenheim
 
 ## Venues with shows (Ticketmaster/submissions) not on our list
-- Bowery Palace (7 shows)
-- Night Club 101 (7 shows)
-- Palace Theatre-NY (4 shows)
-- Iridium (3 shows)
-- Booth Theatre (2 shows)
-- Town Hall (1 shows)
-- Irving Plaza Powered By Verizon 5G (1 shows)
-- Market Hotel  (1 shows)
-- Barclays Center (1 shows)
-- BrownstoneJAZZ (1 shows)
-- Madison Square Garden (1 shows)
+- Night Club 101 (16 shows)
+- Palace Theatre-NY (8 shows)
+- Booth Theatre (8 shows)
+- BrownstoneJAZZ (5 shows)
+- Madison Square Garden (3 shows)
+- Barclays Center (2 shows)
+- Iridium (2 shows)
+- Vinyl + Thread (1 shows)
+- Hard Rock Cafe (1 shows)
+- The Rooftop at Pier 17 (1 shows)
+- Palladium Times Square  (1 shows)
+- Broolyn Storehouse (1 shows)
+- Stern Auditorium / Perelman Stage at Carnegie Hall (1 shows)
+- The Greene Space (1 shows)
