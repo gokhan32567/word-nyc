@@ -68,6 +68,8 @@
     }
     @supports (height: 100dvh) { :root { --drawer-h: 40dvh; } }
     body.drawer-collapsed { --drawer-h: 76px; }
+    body.drawer-full { --drawer-h: calc(100vh - var(--top-h, 64px)); }
+    @supports (height: 100dvh) { body.drawer-full { --drawer-h: calc(100dvh - var(--top-h, 64px)); } }
 
     * { box-sizing: border-box; }
     [hidden] { display: none !important; }
@@ -145,7 +147,8 @@
     .list-title { margin: 0; font-size: 18px; font-weight: 600; }
     .summary { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
     .chev { flex: none; margin-bottom: 4px; color: var(--muted); transition: transform .25s; }
-    body.drawer-collapsed .chev { transform: rotate(180deg); }
+    .chev { transform: rotate(180deg); }  /* points up: tap to open further */
+    body.drawer-full .chev { transform: none; }  /* points down: tap to collapse */
     .drawer-body { flex: 1; min-height: 0; overflow-y: auto; padding: 0 max(18px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
     .note { margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
 
@@ -288,7 +291,7 @@
 
     /* ---------- Wide screens: listings column on the left, map on the right ---------- */
     @media (min-width: 900px) {
-      body, body.drawer-collapsed { --drawer-h: 0px; }
+      body, body.drawer-collapsed, body.drawer-full { --drawer-h: 0px; }
       #map { left: var(--panel-w); }
       .topbar {
         right: auto; width: var(--panel-w); height: 104px; padding: 26px 24px 0;
@@ -932,10 +935,19 @@
     if (row) openDetails(row.dataset.id);
   });
 
+  // Phones: tapping the handle steps half -> full screen -> collapsed -> half.
+  function setTopHeight() {
+    document.documentElement.style.setProperty('--top-h', $('topbar').offsetHeight + 'px');
+  }
+  setTopHeight();
+  window.addEventListener('resize', setTopHeight);
   $('drawer-toggle').addEventListener('click', () => {
     if (isWide()) return;
-    const collapsed = document.body.classList.toggle('drawer-collapsed');
-    $('drawer-toggle').setAttribute('aria-expanded', String(!collapsed));
+    const b = document.body.classList;
+    if (b.contains('drawer-full')) { b.remove('drawer-full'); b.add('drawer-collapsed'); }
+    else if (b.contains('drawer-collapsed')) { b.remove('drawer-collapsed'); }
+    else { setTopHeight(); b.add('drawer-full'); }
+    $('drawer-toggle').setAttribute('aria-expanded', String(!b.contains('drawer-collapsed')));
   });
 
   /* =========================================================
