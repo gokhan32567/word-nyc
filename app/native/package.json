@@ -1,0 +1,9 @@
+{
+  "name": "wordnyc-native",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Word NYC's own native code for the iPhone app: OneSignal push, in-app browser, share sheet, no-ads filter, offline lineup.",
+  "capacitor": {
+    "ios": { "src": "ios" }
+  }
+}

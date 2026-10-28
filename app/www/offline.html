@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Word NYC</title>
+  <!-- Shown by the app when word-nyc.com can't be reached (capacitor.config.json server.errorPath).
+       Lists the last lineup the app saved, so it still works on the subway. -->
+  <style>
+    :root { --ink: #0d1230; --ink-2: #131940; --line: rgba(214, 220, 255, .11); --paper: #f3eee4; --soft: #c9cde6; --muted: #8c93be; --gold: #ffc24b; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--ink); color: var(--paper); font: 15px/1.45 -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    main { padding: max(18px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
+    h1 { margin: 6px 0 2px; font: 800 34px/1 "Arial Narrow", -apple-system, sans-serif; letter-spacing: .01em; color: var(--gold); text-shadow: 0 0 22px rgba(255, 194, 75, .35); }
+    .note { margin: 10px 0 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--ink-2); color: var(--soft); }
+    button { margin-top: 10px; padding: 9px 16px; border-radius: 999px; border: 0; background: var(--gold); color: var(--ink); font: 600 14px -apple-system, sans-serif; }
+    .row { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 12px; padding: 12px 2px; border-bottom: 1px solid var(--line); }
+    .t { font: 800 22px/1 "Arial Narrow", -apple-system, sans-serif; }
+    .title { font-weight: 600; }
+    .where { color: var(--muted); font-size: 13.5px; }
+    .tag { margin-left: 6px; padding: 1px 6px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--gold); background: rgba(255, 194, 75, .13); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Word NYC</h1>
+    <div class="note"><b>No connection.</b> <span id="sub">Here's the last lineup saved on your phone. Check the venue before you go.</span><br>
+      <button type="button" id="retry">Try again</button></div>
+    <div id="list"></div>
+  </main>
+  <script>
+    const retry = () => location.replace('https://word-nyc.com/');
+    document.getElementById('retry').addEventListener('click', retry);
+    window.addEventListener('online', retry);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const mins = (t) => {
+      const m = String(t || '').trim().toUpperCase().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/);
+      if (!m) return 99999;
+      const v = ((+m[1] % 12) + (m[3] === 'PM' ? 12 : 0)) * 60 + (+m[2] || 0);
+      return v < 300 ? v + 1440 : v;
+    };
+    (async () => {
+      let data = null;
+      try {
+        const r = await window.Capacitor.nativePromise('WordNYC', 'getLineup', {});
+        data = r && r.json ? JSON.parse(r.json) : null;
+      } catch (_) {}
+      const box = document.getElementById('list');
+      if (!data || !Array.isArray(data.events) || !data.events.length) {
+        document.getElementById('sub').textContent = 'Connect to the internet to load tonight’s shows.';
+        return;
+      }
+      const day = new Date(data.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+      document.getElementById('sub').textContent = `Here's the ${day} lineup saved on your phone. Check the venue before you go.`;
+      box.innerHTML = data.events.slice().sort((a, b) => (!a.sponsored - !b.sponsored) || mins(a.time) - mins(b.time)).map((e) =>
+        `<div class="row"><div class="t">${esc((e.time || 'TBA').replace(':00', ''))}</div><div>` +
+        `<div class="title">${esc(e.title)}${e.sponsored ? '<span class="tag">Sponsored</span>' : ''}</div>` +
+        `<div class="where">${esc(e.venue)}${e.genre ? ' · ' + esc(e.genre) : ''}</div></div></div>`).join('');
+    })();
+  </script>
+</body>
+</html>

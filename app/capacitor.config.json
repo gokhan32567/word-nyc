@@ -1,0 +1,18 @@
+{
+  "appId": "com.wordnyc.app",
+  "appName": "Word NYC",
+  "webDir": "www",
+  "backgroundColor": "#0d1230",
+  "server": {
+    "url": "https://word-nyc.com",
+    "errorPath": "offline.html",
+    "allowNavigation": ["word-nyc.com", "www.word-nyc.com"]
+  },
+  "ios": {
+    "appendUserAgent": "WordNYCApp/1.0",
+    "backgroundColor": "#0d1230",
+    "contentInset": "never",
+    "preferredContentMode": "mobile",
+    "webContentsDebuggingEnabled": false
+  }
+}

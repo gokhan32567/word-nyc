@@ -1,0 +1,193 @@
+name: iOS app
+
+# Word NYC for iPhone (app/): a Capacitor shell around word-nyc.com, built in the cloud on a macOS runner.
+#
+# - Every push that changes app/** builds the app for the iOS Simulator (a compile check, no Apple account
+#   needed). The first time, and whenever "screenshots" is ticked, it also takes App Store screenshots in the
+#   simulator and commits them to app/store/screenshots.
+# - "Run workflow" with "upload" ticked builds a signed release and uploads it to TestFlight. Needs the repo
+#   secrets ASC_KEY_ID, ASC_ISSUER_ID and ASC_KEY_P8 (an App Store Connect API key, App Manager role).
+#   Signing is done with the API: the workflow registers the bundle ID (with Push Notifications), creates or
+#   reuses a distribution certificate and an App Store profile. No Mac or Xcode on your side.
+#
+# Apple only accepts uploads built with Xcode 26 or later, so this runs on macos-26.
+on:
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "Build a release and upload it to TestFlight"
+        type: boolean
+        default: true
+      screenshots:
+        description: "Take App Store screenshots in the simulator (committed to app/store/screenshots)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["app/**", ".github/workflows/ios.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  simulator:
+    name: Simulator build (and screenshots)
+    if: github.event_name == 'push' || inputs.screenshots
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Xcode
+        run: xcodebuild -version
+
+      - name: Capacitor sync
+        working-directory: app
+        run: |
+          npm install --no-audit --no-fund
+          npx cap sync ios
+          cat ios/App/CapApp-SPM/Package.swift
+
+      - name: Build for the simulator
+        run: |
+          mkdir -p build
+          set -o pipefail
+          if ! xcodebuild -project app/ios/App/App.xcodeproj -scheme App -configuration Debug \
+               -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/sim \
+               CODE_SIGNING_ALLOWED=NO build > build/sim.log 2>&1; then
+            grep -E "error:|fatal error" build/sim.log | sort -u | head -25 | while IFS= read -r line; do echo "::error::$line"; done
+            tail -60 build/sim.log
+            exit 1
+          fi
+          grep -E "warning:.*(WordNYC|wordnyc|AppDelegate)" build/sim.log | sort -u | head -10 || true
+          tail -3 build/sim.log
+
+      - name: Screenshots
+        id: shots
+        if: inputs.screenshots || hashFiles('app/store/screenshots/*.png') == ''
+        run: |
+          python3 app/ci/screenshots.py build/sim/Build/Products/Debug-iphonesimulator/App.app app/store/screenshots
+          echo "taken=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit screenshots
+        if: steps.shots.outputs.taken == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/store/screenshots
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "App Store screenshots from the simulator [skip ci]"
+          git pull --rebase --quiet origin main
+          git push origin HEAD:main
+
+  testflight:
+    name: Release build to TestFlight
+    if: github.event_name == 'workflow_dispatch' && inputs.upload
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+      # the same key, under the names Codemagic's CLI tools read
+      APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.ASC_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tools
+        run: |
+          xcodebuild -version
+          pip install --quiet codemagic-cli-tools pyjwt cryptography requests
+
+      - name: Bundle ID and app record
+        run: python3 app/ci/asc.py setup
+
+      - name: Signing certificate and profile
+        id: signing
+        run: |
+          key=$(python3 app/ci/asc.py cert-key)
+          app-store-connect fetch-signing-files com.wordnyc.app --platform IOS --type IOS_APP_STORE \
+            --strict-match-identifier --create --certificate-key "@file:$key"
+          keychain initialize
+          keychain add-certificates
+          curl -fsSL -o "$RUNNER_TEMP/AppleWWDRCAG3.cer" https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer \
+            && security import "$RUNNER_TEMP/AppleWWDRCAG3.cer" -k "$(security default-keychain -d user | tr -d ' "')" || true
+          profile=$(ls -t "$HOME/Library/MobileDevice/Provisioning Profiles/"*.mobileprovision | head -1)
+          echo "profile=$profile" >> "$GITHUB_OUTPUT"
+          rm -f "$key"
+          # keep the (encrypted) certificate key so the next build reuses this certificate
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/ci/dist-cert-key.enc
+          if ! git diff --cached --quiet; then
+            git commit -m "iOS signing: encrypted distribution certificate key [skip ci]"
+            git pull --rebase --quiet origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Capacitor sync
+        working-directory: app
+        run: |
+          npm install --no-audit --no-fund
+          npx cap sync ios
+
+      - name: Version and signing settings
+        run: |
+          version=$(python3 -c "import json;print(json.load(open('app/package.json'))['version'])")
+          build=$(( ${{ github.run_number }} + 100 ))
+          sed -i '' -e "s/MARKETING_VERSION = [^;]*;/MARKETING_VERSION = $version;/" \
+                    -e "s/CURRENT_PROJECT_VERSION = [^;]*;/CURRENT_PROJECT_VERSION = $build;/" app/ios/App/App.xcodeproj/project.pbxproj
+          echo "Version $version ($build)" | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 app/ci/asc.py sign "${{ steps.signing.outputs.profile }}"
+
+      - name: Archive
+        run: |
+          mkdir -p build
+          set -o pipefail
+          if ! xcodebuild -project app/ios/App/App.xcodeproj -scheme App -configuration Release \
+               -destination 'generic/platform=iOS' -archivePath build/WordNYC.xcarchive archive > build/archive.log 2>&1; then
+            grep -E "error:" build/archive.log | sort -u | head -25 | while IFS= read -r line; do echo "::error::$line"; done
+            tail -80 build/archive.log
+            exit 1
+          fi
+          tail -3 build/archive.log
+
+      - name: Upload to TestFlight
+        run: |
+          mkdir -p "$HOME/.appstoreconnect/private_keys"
+          python3 -c "import sys,os;sys.path.insert(0,'app/ci');import asc;open(os.path.expanduser('~/.appstoreconnect/private_keys/AuthKey_'+os.environ['ASC_KEY_ID']+'.p8'),'w').write(asc.p8())"
+          keyfile="$HOME/.appstoreconnect/private_keys/AuthKey_$ASC_KEY_ID.p8"
+          if xcodebuild -exportArchive -archivePath build/WordNYC.xcarchive -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+               -exportPath build/upload -allowProvisioningUpdates \
+               -authenticationKeyPath "$keyfile" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID"; then
+            echo "Uploaded with xcodebuild."
+          else
+            echo "::warning::xcodebuild upload failed; exporting an .ipa and uploading with altool instead."
+            EXPORT_DESTINATION=export python3 app/ci/asc.py sign "${{ steps.signing.outputs.profile }}" > /dev/null
+            xcodebuild -exportArchive -archivePath build/WordNYC.xcarchive -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" -exportPath build/ipa
+            xcrun altool --upload-app -f build/ipa/*.ipa -t ios --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+          fi
+          rm -f "$keyfile"
+          echo "Uploaded. The build shows up in App Store Connect > TestFlight after Apple processes it (5-30 minutes)." | tee -a "$GITHUB_STEP_SUMMARY"

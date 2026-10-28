@@ -1,0 +1,17 @@
+{
+  "name": "word-nyc-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Word NYC for iPhone: the word-nyc.com map in a native shell (Capacitor). Built and uploaded by .github/workflows/ios.yml.",
+  "scripts": {
+    "sync": "cap sync ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3",
+    "wordnyc-native": "file:native"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3"
+  }
+}
