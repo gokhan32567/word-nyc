@@ -8,7 +8,7 @@ are Apple's; every field below fits.
 | Field | Value |
 |---|---|
 | Name (30) | `Word NYC: Live Music Tonight` |
-| Subtitle (30) | `Jazz, opera and gigs on a map` |
+| Subtitle (30) | `Tonight's music on a map` |
 | Bundle ID | `com.wordnyc.app` |
 | SKU | `word-nyc-ios` |
 | Primary category | Music |
