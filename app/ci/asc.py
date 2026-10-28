@@ -138,7 +138,10 @@ def cert_key() -> None:
 # ---------------------------------------------------------------- project signing
 
 def sign(profile_path: str) -> None:
-    raw = subprocess.run(["security", "cms", "-D", "-i", profile_path], check=True, capture_output=True).stdout
+    r = subprocess.run(["security", "cms", "-D", "-i", profile_path], capture_output=True)
+    if r.returncode != 0:
+        sys.exit(f"::error::Couldn't read the provisioning profile '{profile_path}': {r.stderr.decode(errors='replace')[:300]}")
+    raw = r.stdout
     prof = plistlib.loads(raw)
     team, name, uuid = prof["TeamIdentifier"][0], prof["Name"], prof["UUID"]
     print(f"Profile '{name}' ({uuid}), team {team}")

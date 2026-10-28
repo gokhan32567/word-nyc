@@ -135,7 +135,11 @@ jobs:
           keychain add-certificates
           curl -fsSL -o "$RUNNER_TEMP/AppleWWDRCAG3.cer" https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer \
             && security import "$RUNNER_TEMP/AppleWWDRCAG3.cer" -k "$(security default-keychain -d user | tr -d ' "')" || true
-          profile=$(ls -t "$HOME/Library/MobileDevice/Provisioning Profiles/"*.mobileprovision | head -1)
+          # Xcode 16+ keeps profiles in UserData; older Xcode in MobileDevice
+          profile=$(ls -t "$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles/"*.mobileprovision \
+                          "$HOME/Library/MobileDevice/Provisioning Profiles/"*.mobileprovision 2>/dev/null | head -1)
+          [ -n "$profile" ] || { echo "::error::No provisioning profile was saved"; exit 1; }
+          echo "Profile: $profile"
           echo "profile=$profile" >> "$GITHUB_OUTPUT"
           rm -f "$key"
           # keep the (encrypted) certificate key so the next build reuses this certificate
