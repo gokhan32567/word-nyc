@@ -171,6 +171,9 @@
     .chev { flex: none; margin-bottom: 4px; color: var(--muted); transition: transform .25s; }
     .chev { transform: rotate(180deg); }  /* points up: tap to open further */
     body.drawer-full .chev { transform: none; }  /* points down: tap to collapse */
+    body.drawer-dragging .drawer, body.drawer-dragging .maplibregl-ctrl-bottom-right, body.drawer-dragging .maplibregl-ctrl-bottom-left { transition: none; }
+    .drawer-head { touch-action: none; }  /* the header drags the sheet */
+    .drawer-body { overscroll-behavior: contain; }
     .drawer-body { flex: 1; min-height: 0; overflow-y: auto; padding: 0 max(18px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
     .note { margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
 
@@ -1014,19 +1017,98 @@
     if (row) openDetails(row.dataset.id);
   });
 
-  // Phones: tapping the handle steps half -> full screen -> collapsed -> half.
+  // Phones: the list is a bottom sheet with three stops: collapsed, half, full screen.
+  // Tap the header: half -> full -> collapsed -> half. Drag the header: the sheet follows the finger and
+  // settles on the nearest stop (a quick flick moves one stop). Apple Maps-style handoff on the list itself:
+  // swiping up expands the sheet to full before the list scrolls, and pulling down when the list is at its
+  // top lowers the sheet.
   function setTopHeight() {
     document.documentElement.style.setProperty('--top-h', $('topbar').offsetHeight + 'px');
   }
   setTopHeight();
   window.addEventListener('resize', setTopHeight);
+
+  const STOPS = ['collapsed', 'half', 'full'];
+  const sheetState = () => {
+    const b = document.body.classList;
+    return b.contains('drawer-full') ? 'full' : b.contains('drawer-collapsed') ? 'collapsed' : 'half';
+  };
+  function setSheet(state) {
+    const b = document.body.classList;
+    if (state === 'full') setTopHeight();
+    b.toggle('drawer-full', state === 'full');
+    b.toggle('drawer-collapsed', state === 'collapsed');
+    $('drawer-toggle').setAttribute('aria-expanded', String(state !== 'collapsed'));
+  }
+  const stopHeight = (state) => {
+    const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    if (state === 'collapsed') return 76;
+    if (state === 'full') return vh - $('topbar').offsetHeight;
+    return vh * 0.4;
+  };
+
+  let suppressClick = false;
   $('drawer-toggle').addEventListener('click', () => {
     if (isWide()) return;
-    const b = document.body.classList;
-    if (b.contains('drawer-full')) { b.remove('drawer-full'); b.add('drawer-collapsed'); }
-    else if (b.contains('drawer-collapsed')) { b.remove('drawer-collapsed'); }
-    else { setTopHeight(); b.add('drawer-full'); }
-    $('drawer-toggle').setAttribute('aria-expanded', String(!b.contains('drawer-collapsed')));
+    if (suppressClick) { suppressClick = false; return; } // the tap was the end of a drag
+    const s = sheetState();
+    setSheet(s === 'full' ? 'collapsed' : s === 'collapsed' ? 'half' : 'full');
+  });
+
+  // One drag at a time: from the header (always) or from the list (only when it hands off).
+  const drag = { active: false, mode: null, y0: 0, x0: 0, h0: 0, lastY: 0, lastT: 0, v: 0, fromBody: false };
+  const drawerEl = $('drawer'), bodyEl = drawerEl.querySelector('.drawer-body');
+  function dragStart(e, fromBody) {
+    if (isWide() || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    Object.assign(drag, { active: true, mode: null, y0: t.clientY, x0: t.clientX, h0: drawerEl.offsetHeight,
+      lastY: t.clientY, lastT: e.timeStamp, v: 0, fromBody });
+  }
+  function dragMove(e) {
+    if (!drag.active) return;
+    const t = e.touches[0], dy = t.clientY - drag.y0, dx = t.clientX - drag.x0;
+    if (!drag.mode) {
+      if (Math.abs(dy) < 6 && Math.abs(dx) < 6) return;
+      if (Math.abs(dx) > Math.abs(dy)) { drag.active = false; return; } // sideways: genre chips scroll
+      if (drag.fromBody) {
+        const up = dy < 0, atTop = bodyEl.scrollTop <= 0;
+        const handoff = (up && sheetState() !== 'full') || (!up && atTop);
+        if (!handoff) { drag.active = false; return; } // ordinary list scrolling
+      }
+      drag.mode = 'sheet';
+      document.body.classList.add('drawer-dragging');
+    }
+    e.preventDefault();
+    const h = Math.max(76, Math.min(stopHeight('full'), drag.h0 - dy));
+    document.body.style.setProperty('--drawer-h', h + 'px');
+    const dt = Math.max(1, e.timeStamp - drag.lastT);
+    drag.v = (t.clientY - drag.lastY) / dt; // px per ms, + is downward
+    drag.lastY = t.clientY; drag.lastT = e.timeStamp;
+  }
+  function dragEnd() {
+    if (!drag.active) return;
+    drag.active = false;
+    if (drag.mode !== 'sheet') return;
+    const h = drawerEl.offsetHeight;
+    document.body.classList.remove('drawer-dragging');
+    document.body.style.removeProperty('--drawer-h');
+    let i = STOPS.indexOf(sheetState());
+    if (Math.abs(drag.v) > 0.4) {
+      // flick: one stop in that direction from where the drag began
+      i = Math.max(0, Math.min(2, i + (drag.v < 0 ? 1 : -1)));
+    } else {
+      i = STOPS.map((s) => Math.abs(stopHeight(s) - h)).reduce((best, d, j, all) => (d < all[best] ? j : best), 0);
+    }
+    setSheet(STOPS[i]);
+    if (!drag.fromBody) { suppressClick = true; setTimeout(() => { suppressClick = false; }, 400); }
+  }
+  const head = $('drawer-toggle');
+  head.addEventListener('touchstart', (e) => dragStart(e, false), { passive: true });
+  bodyEl.addEventListener('touchstart', (e) => dragStart(e, true), { passive: true });
+  [head, bodyEl].forEach((el) => {
+    el.addEventListener('touchmove', dragMove, { passive: false });
+    el.addEventListener('touchend', dragEnd);
+    el.addEventListener('touchcancel', dragEnd);
   });
 
   /* =========================================================
