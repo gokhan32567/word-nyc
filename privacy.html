@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-7078560452492267">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
+  <!-- No ads inside the iPhone app (its web view adds "WordNYCApp" to the user agent). -->
+  <script>if(!/WordNYCApp\//.test(navigator.userAgent)){var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267";document.head.appendChild(s);}</script>
+  <script defer src="/wn.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Word NYC Privacy</title>
   <meta property="og:image" content="https://word-nyc.com/og.png">
@@ -24,18 +26,22 @@
     <a class="home" href="./">Word NYC</a>
 
     <h1>Privacy</h1>
-    <p class="small">Last updated October 18, 2026</p>
+    <p class="small">Last updated October 27, 2026</p>
 
-    <p class="lede">Word NYC has no accounts. Browsing the map never asks for your name, email or location.</p>
+    <p class="lede">Word NYC has no accounts. The website and the iPhone app never ask for your name, email or location, and we don't track you across other apps or websites.</p>
 
     <h2>What stays on your device</h2>
     <p>If you pick genre filters, your browser remembers them so the map opens the same way next time. That choice is stored only in your browser and you can clear it by clearing this site's data.</p>
+    <p>Venues you follow (the heart) are kept on your device too. If you've turned on notifications, up to five of them are also stored with your notification subscription at OneSignal, as labels like <code>fav_smalls-jazz-club</code>, so the noon notification can mention their shows. Unfollow a venue, or delete the app, to remove it.</p>
 
     <h2>Submitting a show</h2>
     <p>If you send us a show through the <a href="submit.html">Submit a show</a> form, we keep what you entered so we can review it and list it. The show details (title, performers, venue, time, price, link, description) may be published on the site. Your email is used only to contact you about that submission and is never published or sold. Ask us to delete a submission at any time.</p>
 
     <h2>Notifications</h2>
-    <p>If you turn on "Tonight's picks at noon", your browser or phone gives OneSignal, our notification service, a subscription ID so it can deliver one notification a day. We don't receive your name, email or location. You can turn notifications off at any time in your browser or phone settings, or by removing the app from your Home Screen.</p>
+    <p>If you turn on "Tonight's picks at noon", your browser or phone gives OneSignal, our notification service, a subscription ID so it can deliver one notification a day. OneSignal also records basic device details (model, system version, language, time zone, country), app sessions and whether you opened a notification, which tells us how many people open it. We don't receive your name, email or precise location. You can turn notifications off at any time in your browser or phone settings, or by deleting the app.</p>
+    <p>Some notifications lead with a show a venue paid to feature. They are always labeled Sponsored.</p>
+    <h2>The iPhone app</h2>
+    <p>The app shows the same map as this website, without ads. Ticket links open in an in-app browser (Safari's), and "Open in Maps" opens Apple Maps. The app keeps a copy of tonight's lineup on your phone so it still works without a signal.</p>
 
     <h2>Services that load with the page</h2>
     <p>Like any website, these receive your IP address and basic browser details when your browser fetches files from them:</p>
@@ -54,7 +60,8 @@
     <p>Sponsored listings are shows a venue or promoter paid to feature. They are always labeled Sponsored.</p>
 
     <h2>Visitor counts</h2>
-    <p>We may count visits with Cloudflare Web Analytics, which doesn't use cookies or track you across sites.</p>
+    <p>We count visits with Cloudflare Web Analytics, which doesn't use cookies or track you across sites.</p>
+    <p>We also keep simple daily totals that show venues and sponsors how Word NYC is used: how many times the app or map was opened, how many people opened it that day, ticket-link taps per venue, how often sponsored shows were seen and tapped, and how many people follow each venue. Your device sends only the kind of action (for example "ticket tap, Smalls Jazz Club") and whether it's the app or the website. No cookie, ID or advertising identifier is sent, your IP address isn't stored, and the totals can't be traced back to you.</p>
 
     <h2>Children</h2>
     <p>Word NYC is meant for a general audience and isn't directed at children under 13.</p>

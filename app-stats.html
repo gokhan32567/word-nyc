@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Word NYC Monthly Numbers</title>
+  <meta name="theme-color" content="#0d1230">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
+  <link rel="stylesheet" href="page.css">
+  <script src="/wn.js"></script>
+  <!-- Private report for sponsors and affiliate programs. Not linked from the site; open it as
+       https://word-nyc.com/app-stats.html#key=<STATS_KEY>. The key stays in the address bar's #part, which
+       browsers never send to GitHub Pages; it goes only to the stats worker. -->
+  <style>
+    .wrap { max-width: 1040px; }
+    .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 8px 0 22px; }
+    .bar input, .bar select { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--ink-2); color: var(--paper); font: 500 14px var(--text); }
+    .bar input[type=password] { width: 220px; }
+    .bar button { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: none; color: var(--soft); font: 600 13px var(--text); cursor: pointer; }
+    .bar button.primary { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin: 0 0 8px; }
+    .tile { padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--ink-2); }
+    .tile .v { font: 800 34px/1 var(--display); color: var(--paper); font-variant-numeric: tabular-nums; }
+    .tile .l { margin-top: 6px; font-size: 13px; color: var(--muted); }
+    .tile .s { font-size: 12.5px; color: var(--soft); }
+    .table { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+    th { color: var(--muted); font-weight: 600; font-size: 12.5px; }
+    td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+    td .copy { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: none; color: var(--soft); font: 600 12px var(--text); cursor: pointer; }
+    .msg { color: var(--muted); }
+    .err { color: #ffb38a; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="home" href="./">Word NYC</a>
+    <h1>Monthly numbers</h1>
+    <p class="small">App and website, counted without cookies or IDs. Ticket taps include sponsored shows. Followers are current, not monthly.</p>
+
+    <form class="bar" id="bar">
+      <input type="month" id="month" aria-label="Month">
+      <input type="password" id="key" placeholder="Stats key" aria-label="Stats key" autocomplete="off">
+      <button class="primary" type="submit">Show</button>
+      <button type="button" id="dl" hidden>Download JSON</button>
+    </form>
+    <p class="msg" id="msg">Enter the stats key (the STATS_KEY secret) to see the numbers.</p>
+
+    <div id="out" hidden>
+      <div class="tiles" id="tiles"></div>
+      <h2>By venue</h2>
+      <p class="small">"Copy" puts a one-line summary on the clipboard for that venue's sponsor report.</p>
+      <div class="table"><table id="venues"></table></div>
+      <h2>By day</h2>
+      <div class="table"><table id="days"></table></div>
+    </div>
+    <footer><a href="./">Tonight's map</a><a href="coverage.html">Coverage</a></footer>
+  </main>
+  <script>
+  (function () {
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const fmt = (n) => (n == null ? '–' : Number(n).toLocaleString('en-US'));
+    const pct = (n) => (n == null ? '–' : `${n}%`);
+    const params = new URLSearchParams(location.hash.slice(1));
+    const now = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit' }).format(new Date());
+    $('month').value = params.get('month') || now;
+    $('key').value = params.get('key') || '';
+    let last = null;
+
+    async function load() {
+      const key = $('key').value.trim(), month = $('month').value;
+      if (!WN.statsUrl) { $('msg').innerHTML = '<span class="err">The stats worker isn\'t deployed yet (run Actions → Deploy stats worker).</span>'; return; }
+      if (!key) return;
+      history.replaceState(null, '', `#key=${encodeURIComponent(key)}&month=${month}`);
+      $('msg').textContent = 'Loading…';
+      try {
+        const r = await fetch(`${WN.statsUrl}/report.json?month=${month}&key=${encodeURIComponent(key)}`, { cache: 'no-store' });
+        if (r.status === 401) throw new Error('Wrong key.');
+        if (!r.ok) throw new Error(`The stats worker answered ${r.status}.`);
+        last = await r.json();
+        render(last);
+        $('msg').textContent = `Updated ${new Date(last.generated).toLocaleString('en-US', { timeZone: 'America/New_York' })} (New York time).`;
+      } catch (err) {
+        $('out').hidden = true; $('dl').hidden = true;
+        $('msg').innerHTML = `<span class="err">${esc(err.message)}</span>`;
+      }
+    }
+
+    function render(d) {
+      const t = d.totals;
+      const tile = (v, l, s) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div>${s ? `<div class="s">${s}</div>` : ''}</div>`;
+      $('tiles').innerHTML = [
+        tile(fmt(t.daily_users_avg.app + t.daily_users_avg.web), 'Daily users (average)', `App ${fmt(t.daily_users_avg.app)} · Web ${fmt(t.daily_users_avg.web)} · Peak ${fmt(t.daily_users_peak.app + t.daily_users_peak.web)}`),
+        tile(fmt(t.opens.app + t.opens.web), 'Opens', `App ${fmt(t.opens.app)} · Web ${fmt(t.opens.web)}`),
+        tile(pct(t.push.open_rate_pct), 'Noon push open rate', `${fmt(t.push.opened)} opened of ${fmt(t.push.sent)} delivered`),
+        tile(fmt(t.ticket_taps), 'Ticket-link taps', 'All venues'),
+        tile(fmt(t.followers_total), 'Venue follows', 'Current, all venues'),
+        tile(fmt(t.shares.show + t.shares.map + t.shares.story), 'Shares', `Shows ${fmt(t.shares.show)} · Map ${fmt(t.shares.map)} · Story ${fmt(t.shares.story)}`),
+      ].join('');
+
+      $('venues').innerHTML = '<tr><th>Venue</th><th class="n">Ticket taps</th><th class="n">Sponsored views</th><th class="n">Sponsored taps</th>' +
+        '<th class="n">Followers</th><th class="n">Push delivered</th><th class="n">Push opened</th><th></th></tr>' +
+        (d.venues.length ? d.venues.map((v, i) => `<tr><td>${esc(v.venue)}</td><td class="n">${fmt(v.ticket_taps)}</td>` +
+          `<td class="n">${fmt(v.sponsored_views)}</td><td class="n">${fmt(v.sponsored_taps)}</td><td class="n">${fmt(v.followers)}</td>` +
+          `<td class="n">${fmt(v.push_sent)}</td><td class="n">${fmt(v.push_opened)}</td>` +
+          `<td><button class="copy" type="button" data-i="${i}">Copy</button></td></tr>`).join('')
+          : '<tr><td colspan="8" class="msg">Nothing counted this month yet.</td></tr>');
+
+      $('days').innerHTML = '<tr><th>Day</th><th class="n">Daily users (app)</th><th class="n">Daily users (web)</th><th class="n">Opens</th>' +
+        '<th class="n">Push delivered</th><th class="n">Push opened</th><th class="n">Open rate</th><th>Push sponsor</th></tr>' +
+        d.days.map((x) => `<tr><td>${esc(x.day)}</td><td class="n">${fmt(x.users_app)}</td><td class="n">${fmt(x.users_web)}</td>` +
+          `<td class="n">${fmt(x.opens_app + x.opens_web)}</td><td class="n">${fmt(x.push_sent)}</td><td class="n">${fmt(x.push_opened)}</td>` +
+          `<td class="n">${pct(x.push_open_rate_pct)}</td><td>${esc(x.sponsor)}</td></tr>`).join('');
+      $('out').hidden = false; $('dl').hidden = false;
+    }
+
+    $('venues').addEventListener('click', async (e) => {
+      const b = e.target.closest('.copy');
+      if (!b || !last) return;
+      const v = last.venues[+b.dataset.i];
+      const text = `Word NYC, ${last.month}, ${v.venue}: ${fmt(v.sponsored_views)} sponsored listing views, ${fmt(v.sponsored_taps)} taps on the listing, ` +
+        `${fmt(v.ticket_taps)} ticket-link taps, ${fmt(v.followers)} followers in the app` +
+        (v.push_sent ? `, noon push delivered to ${fmt(v.push_sent)} and opened by ${fmt(v.push_opened)}` : '') + '.';
+      try { await navigator.clipboard.writeText(text); b.textContent = 'Copied'; } catch (_) { window.prompt('Copy:', text); }
+    });
+    $('dl').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(last, null, 1)], { type: 'application/json' }));
+      a.download = `word-nyc-${last.month}.json`;
+      a.click();
+    });
+    $('bar').addEventListener('submit', (e) => { e.preventDefault(); load(); });
+    $('month').addEventListener('change', load);
+    load();
+  })();
+  </script>
+</body>
+</html>

@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-7078560452492267">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
+  <!-- Shared helpers (app bridge, favorites, counts). Sets WN.inApp: the iPhone app shows no ads. -->
+  <script src="/wn.js"></script>
+  <script>
+    // If wn.js ever fails to load, the map still works (no favorites or counts).
+    window.WN = window.WN || (function () {
+      var no = function () { return Promise.reject(new Error('unavailable')); }, nop = function () {};
+      return { inApp: /WordNYCApp\//.test(navigator.userAgent), hasNative: function () { return false; }, native: no, onNative: nop,
+        track: nop, countOpen: nop, shareUrl: function (u) { return u; }, tap: nop, mountHearts: nop, heartLabel: nop,
+        favs: { list: function () { return []; }, has: function () { return false; }, toggle: function () { return false; },
+                sync: nop, restore: function () { return Promise.resolve(); }, limit: 5 } };
+    })();
+    if (!WN.inApp) {
+      var ads = document.createElement('script');
+      ads.async = true; ads.crossOrigin = 'anonymous';
+      ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267';
+      document.head.appendChild(ads);
+    }
+  </script>
   <meta name='impact-site-verification' value='43fac560-bc84-4358-ba93-4f8174aa5c7d'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Word NYC | Live shows in New York tonight</title>
@@ -19,10 +36,15 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Word NYC">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
+    // Web push for the site. The iPhone app uses OneSignal's native SDK instead (same app ID).
+    if (!WN.inApp) {
+      var os = document.createElement('script');
+      os.defer = true; os.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+      document.head.appendChild(os);
+    }
     window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function (OneSignal) {
+    if (!WN.inApp) OneSignalDeferred.push(async function (OneSignal) {
       await OneSignal.init({
         appId: "d9f2eefb-d834-4054-92cc-422321667627",
         safari_web_id: "web.onesignal.auto.02091d44-51df-4a38-967b-45e7d1e7feaf",
@@ -197,6 +219,20 @@
     .tag { display: inline-block; padding: 2px 7px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--gold); background: var(--gold-dim); white-space: nowrap; }
     .row.is-sponsored:not(.is-ended) { background: linear-gradient(90deg, rgba(255, 194, 75, .07), rgba(255, 194, 75, 0) 70%); }
     .tn-pin.sponsored .pin { outline: 2px solid rgba(255, 194, 75, .55); outline-offset: 3px; }
+    .row .faved { font-size: 12px; line-height: 1; color: var(--gold); }
+
+    /* Follow (favorite venue) */
+    .fav-btn { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px 0 10px; border-radius: 999px;
+               border: 1px solid var(--line); background: none; color: var(--soft); font: 600 13px var(--text); cursor: pointer; }
+    .fav-btn span { line-height: 1; }
+    .fav-btn[aria-pressed="true"] { border-color: rgba(255, 194, 75, .5); color: var(--gold); background: var(--gold-dim); }
+    .d-where { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .d-where > div { min-width: 0; }
+    .d-where .fav-btn { flex: none; margin-top: -3px; }
+    .d-facts dd .fav-btn span { display: inline; font-size: inherit; color: inherit; }
+
+    /* Inside the iPhone app: no install tip, no download link (the share sheet saves images) */
+    .in-app #install-tip, .in-app #act-download, .in-app #act-copy { display: none !important; }
 
     .ad-slot { margin: 20px 0 0; padding-top: 12px; border-top: 1px solid var(--line); min-height: 90px; }
     .ad-slot .ad-label { display: block; margin-bottom: 6px; font-size: 11px; color: var(--muted); }
@@ -238,7 +274,7 @@
     .d-title { margin: -6px 0 0; font: 800 38px/0.98 var(--display); letter-spacing: .005em; color: var(--paper); text-wrap: balance; }
     .d-with { margin: -4px 0 0; font-size: 16px; color: var(--soft); }
     .d-facts { display: grid; gap: 12px; margin: 4px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); }
-    .d-facts div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
+    .d-facts > div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
     .d-facts dt { font-size: 13px; color: var(--muted); }
     .d-facts dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
     .d-facts dd span { display: block; font-size: 13.5px; color: var(--muted); }
@@ -351,7 +387,7 @@
         <button class="tip-x" id="install-x" type="button" aria-label="Hide this tip">&times;</button>
       </div>
       <div class="noon" id="noon" hidden>
-        <p id="noon-text">🔔 <b>Tonight's picks at noon.</b> <span>One notification a day with the best shows.</span></p>
+        <p id="noon-text">🔔 <b>Tonight's picks at noon.</b> <span>One notification a day with the best shows, sometimes led by a sponsored one.</span></p>
         <button type="button" id="noon-btn">Turn on</button>
       </div>
       <p class="note" id="list-note" hidden></p>
@@ -362,6 +398,7 @@
         <p>Some ticket links earn Word NYC a small commission, at no extra cost to you.</p>
         <p><a href="tonight/">All shows (list)</a><a href="tonight/jazz/">Jazz</a><a href="tonight/classical/">Classical</a><a href="tonight/opera/">Opera</a><a href="tonight/ballet-and-dance/">Dance</a><a href="tonight/indie-and-alternative/">Indie</a><a href="late-night-jazz/">Late-night jazz</a><a href="free-shows/">Free</a><a href="venues/">Venues</a><a href="guides/best-small-jazz-clubs-nyc/">Jazz club guide</a></p>
         <p class="missing">Missing a show? <a href="submit.html?missing=1">Tell us</a> and we'll add it.</p>
+        <p id="noon-pref" hidden>Noon notifications are on. <a href="#" id="noon-off">Turn off</a></p>
         <p><a href="submit.html">Submit a show</a><a href="advertise.html">Advertise</a><a href="privacy.html">Privacy</a><a href="#" id="story-link">Instagram story image</a></p>
       </footer>
     </div>
@@ -604,8 +641,12 @@
     }
     return { href: url, paid: false };
   }
-  const mapsUrl = (ev) => 'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent([ev.venue, ev.address].filter(Boolean).join(', ') || `${ev.lat},${ev.lng}`);
+  // The app opens Apple Maps; the site opens Google Maps (works on every device).
+  const mapsUrl = (ev) => WN.inApp
+    ? `https://maps.apple.com/?q=${encodeURIComponent(ev.venue || 'Venue')}&ll=${ev.lat},${ev.lng}` +
+      (ev.address ? `&address=${encodeURIComponent(ev.address)}` : '')
+    : 'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent([ev.venue, ev.address].filter(Boolean).join(', ') || `${ev.lat},${ev.lng}`);
 
   async function loadEvents() {
     try {
@@ -635,6 +676,7 @@
   let DATA_DATE = null, DATA_SOURCE = null;
   let selectedId = null;
   const markers = new Map(); // id -> { marker, pin, el, shown }
+  const sponsoredSeen = new Set(); // sponsored shows already counted as viewed this visit
 
   const GENRE_KEY = 'wordnyc.genres';
   let selectedGenres = new Set();
@@ -768,7 +810,7 @@
           ${ev.performers.length ? `<span class="who">${esc(ev.performers.join(', '))}</span>` : ''}
           <span class="where">${esc(ev.venue)}</span>
         </span>
-        <span class="side">${ev.sponsored ? '<span class="tag">Sponsored</span>' : ''}<span class="genre">${esc(ev.genre)}</span></span>
+        <span class="side">${ev.sponsored ? '<span class="tag">Sponsored</span>' : ''}<span class="genre">${esc(ev.genre)}</span>${WN.favs.has(venueSlug(ev.venue)) ? '<span class="faved" aria-label="A venue you follow">&#9829;</span>' : ''}</span>
       </button>`;
   }
 
@@ -812,6 +854,11 @@
       ? rows.map(({ ev, st }) => rowHtml(ev, st)).join('')
       : `<p class="empty">${selectedGenres.size ? 'No shows in the selected genres tonight. Tap All to see everything.' : 'No shows listed for tonight yet.'}</p>`;
 
+    // sponsor reports: one view per sponsored show per visit, counted when it's listed
+    if (DATA_SOURCE === 'file') rows.forEach(({ ev, st }) => {
+      if (ev.sponsored && st.key !== 'ended' && !sponsoredSeen.has(ev.id)) { sponsoredSeen.add(ev.id); WN.track('spv', venueSlug(ev.venue)); }
+    });
+
     // keep the open details panel in step (status changes, or the show was filtered out)
     if (selectedId) {
       if (!visible.has(selectedId)) closeDetails();
@@ -831,9 +878,11 @@
      ========================================================= */
   function renderDetails(ev) {
     const st = statusOf(ev, nycNow());
+    const vslug = venueSlug(ev.venue);
     const facts = [
       ['When', esc(whenLabel(ev))],
-      ['Where', `${esc(ev.venue)}${ev.address ? `<span>${esc(ev.address)}</span>` : ''}`],
+      ['Where', `<div class="d-where"><div>${esc(ev.venue)}${ev.address ? `<span>${esc(ev.address)}</span>` : ''}</div>` +
+        `<button class="fav-btn" type="button" id="d-fav" data-fav-name="${esc(ev.venue)}"></button></div>`],
       ev.program.length ? ['Program', ev.program.map(esc).join('<br>')] : null,
       ev.price ? ['Tickets', esc(ev.price)] : null,
       ['Genre', `${esc(ev.genre)}${ev.subgenre && squash(ev.subgenre) !== squash(ev.genre) ? `<span>${esc(ev.subgenre)}</span>` : ''}`],
@@ -849,7 +898,7 @@
         <dl class="d-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
         ${ev.description ? `<p class="d-desc">${esc(ev.description)}</p>` : ''}
         <div class="d-actions">
-          ${tix ? `<a class="btn primary" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">Get tickets</a>` : ''}
+          ${tix ? `<a class="btn primary" id="d-tix" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">Get tickets</a>` : ''}
           <a class="btn${tix ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
           <button class="btn" type="button" id="d-share">Share</button>
         </div>
@@ -859,11 +908,40 @@
       </div>`;
     const img = box.querySelector('.d-img');
     if (img) img.addEventListener('error', () => img.remove());
-    $('d-share').addEventListener('click', () => shareLink({
-      title: ev.title,
-      text: `${ev.title} at ${ev.venue}, ${ev.start == null ? 'tonight' : ev.timeLabel + ' tonight'}`,
-      url: `${location.origin}/?show=${encodeURIComponent(showKey(ev))}&utm_source=share&utm_medium=social`,
-    }));
+    $('d-share').addEventListener('click', () => {
+      WN.track('share', 'show');
+      shareLink({
+        title: ev.title,
+        text: `${ev.title} at ${ev.venue}, ${ev.start == null ? 'tonight' : ev.timeLabel + ' tonight'}`,
+        url: WN.shareUrl(`${location.origin}/?show=${encodeURIComponent(showKey(ev))}`),
+      });
+    });
+    // ticket taps by venue (sponsored shows counted separately for their report)
+    const tixLink = $('d-tix');
+    if (tixLink) tixLink.addEventListener('click', () => WN.track(ev.sponsored ? 'stix' : 'tix', vslug));
+    // follow the venue: stored on this phone; feeds "Also tonight at your favorites" in the noon push
+    const fav = $('d-fav');
+    WN.heartLabel(fav, WN.favs.has(vslug));
+    fav.addEventListener('click', () => {
+      const on = WN.favs.toggle(vslug, ev.venue);
+      WN.heartLabel(fav, on);
+      WN.tap();
+      render();
+      if (on) followedToast(ev.venue);
+    });
+  }
+
+  // After following a venue: explain what it does, and offer the noon push if it's off.
+  function followedToast(venue) {
+    const many = WN.favs.list().length > WN.favs.limit;
+    const box = $('noon');
+    if (box && !box.hidden) {
+      toast(`Following ${venue}. Turn on Tonight's picks to hear when it has a show.`);
+      box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    } else {
+      toast(many ? `Following ${venue}. Noon picks mention your ${WN.favs.limit} newest follows.`
+                 : `Following ${venue}. Your noon picks will mention its shows.`);
+    }
   }
 
   function openDetails(id) {
@@ -871,6 +949,7 @@
     if (!ev) return;
     selectedId = id;
     renderDetails(ev);
+    if (ev.sponsored && DATA_SOURCE === 'file') WN.track('spt', venueSlug(ev.venue));
     const panel = $('details');
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
@@ -1172,6 +1251,7 @@
   const modal = $('share-modal');
 
   function canShareFile() {
+    if (WN.hasNative()) return true; // the app's share sheet takes the image directly
     try { return !!(navigator.canShare && navigator.canShare({ files: [storyFile] })); } catch (_) { return false; }
   }
   const canCopyImage = () => !!(window.isSecureContext && window.ClipboardItem && navigator.clipboard && navigator.clipboard.write);
@@ -1194,6 +1274,9 @@
 
   // Share a link: the phone's share sheet where available, otherwise copy it.
   async function shareLink({ title, text, url }) {
+    if (WN.hasNative()) {
+      try { await WN.native('share', { title, text, url }); return; } catch (_) { /* fall through */ }
+    }
     if (navigator.share) {
       try { await navigator.share({ title, text, url }); return; }
       catch (err) { if (err.name === 'AbortError') return; }
@@ -1207,9 +1290,9 @@
     const shown = EVENTS.filter(passesGenre).length;
     const g = selectedGenres.size ? [...selectedGenres].join(', ') + ' ' : '';
     const u = new URL(location.origin + '/');
-    u.searchParams.set('utm_source', 'share'); u.searchParams.set('utm_medium', 'social');
     if (selectedGenres.size) u.searchParams.set('genre', [...selectedGenres].join(','));
-    shareLink({ title: 'Word NYC', text: `${shown} ${g}shows in NYC tonight, on one map`, url: u.toString() });
+    WN.track('share', 'map');
+    shareLink({ title: 'Word NYC', text: `${shown} ${g}shows in NYC tonight, on one map`, url: WN.shareUrl(u.toString()) });
   });
 
   $('story-link').addEventListener('click', async (e) => {
@@ -1230,8 +1313,21 @@
     }
   });
 
+  const blobToBase64 = (blob) => new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result).split(',')[1] || '');
+    r.onerror = reject;
+    r.readAsDataURL(blob);
+  });
+
   $('act-share').addEventListener('click', async () => {
+    WN.track('share', 'story');
     try {
+      if (WN.hasNative()) {
+        await WN.native('share', { title: "Tonight's shows in NYC", image: await blobToBase64(storyFile) });
+        closeModal();
+        return;
+      }
       await navigator.share({ files: [storyFile], title: "Tonight's shows in NYC" });
       closeModal();
     } catch (err) {
@@ -1266,6 +1362,7 @@
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   }
   (function installTip() {
+    if (WN.inApp) return;
     const tip = $('install-tip');
     const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
     let dismissed = false;
@@ -1301,6 +1398,7 @@
      ========================================================= */
   (function noonPicks() {
     const box = $('noon'), btn = $('noon-btn'), text = $('noon-text');
+    if (WN.inApp) { appNoonPicks(box, btn, text); return; }
     const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
     const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
     let hidden = false;
@@ -1340,6 +1438,80 @@
     });
   })();
 
+  // In the iPhone app: native notifications through OneSignal's iOS SDK.
+  function appNoonPicks(box, btn, text) {
+    const pref = $('noon-pref');
+    const show = (state) => {
+      const on = state.permission === 'granted' && state.optedIn;
+      pref.hidden = !on;
+      if (on) { box.hidden = true; return; }
+      box.hidden = false;
+      text.innerHTML = "🔔 <b>Tonight's picks at noon.</b> <span>One notification a day with the best shows, sometimes led by a sponsored one.</span>";
+      btn.textContent = 'Turn on';
+      if (state.permission === 'denied') {
+        text.innerHTML = "🔔 <b>Tonight's picks at noon.</b> <span>Notifications are off for Word NYC in Settings.</span>";
+        btn.textContent = 'Settings';
+      }
+    };
+    const refresh = () => WN.native('pushState').then(show).catch(() => {});
+    refresh();
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+    $('noon-off').addEventListener('click', async (e) => {
+      e.preventDefault();
+      try { show(await WN.native('disablePush')); toast('Noon notifications are off.'); } catch (_) {}
+    });
+    btn.addEventListener('click', async () => {
+      try {
+        const state = await WN.native('enablePush'); // asks iOS, or opens Settings if it was declined
+        show(state);
+        if (state.permission === 'granted') { WN.tap(); toast("You're in. Tonight's picks arrive at noon."); }
+      } catch (err) {
+        console.warn(err);
+        toast("Couldn't turn on notifications.");
+      }
+    });
+  }
+
+  /* =========================================================
+     iPhone app: opens, notification taps, offline copy
+     ========================================================= */
+  // A tapped noon notification opens a show (or just the map). Handles cold starts and taps while open.
+  async function takePushOpen() {
+    let r;
+    try { r = await WN.native('takePendingOpen'); } catch (_) { return null; }
+    if (!r || !r.path) return null;
+    let u;
+    try { u = new URL(r.path, location.origin); } catch (_) { return null; }
+    if (u.origin !== location.origin) return null;
+    if (u.pathname !== '/' && u.pathname !== '/index.html') { location.href = u.toString(); return r; }
+    const wanted = u.searchParams.get('show');
+    if (wanted) {
+      const ev = EVENTS.find((e) => showKey(e) === wanted);
+      if (ev) setTimeout(() => openDetails(ev.id), 300);
+    }
+    return r;
+  }
+  let hiddenAt = 0;
+  async function countAppOpen(first) {
+    const fromPush = WN.inApp ? await takePushOpen() : null;
+    const src = new URLSearchParams(location.search).get('source');
+    WN.countOpen(fromPush ? 'push' : (src === 'noon' ? 'push' : (first ? (src || '') : 'resume')));
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { hiddenAt = Date.now(); return; }
+    if (hiddenAt && Date.now() - hiddenAt > 30 * 60e3) countAppOpen(false);
+    else if (WN.inApp) takePushOpen();
+  });
+  WN.onNative('pushOpen', () => { takePushOpen(); });
+
+  // Keep the latest lineup on the phone so the app can still list tonight's shows with no signal.
+  let savedLineup = null;
+  function saveLineupForOffline(data) {
+    if (!WN.hasNative() || data.source !== 'file' || !data.generated || savedLineup === data.generated) return;
+    savedLineup = data.generated;
+    WN.native('saveLineup', { json: JSON.stringify({ date: data.date, generated: data.generated, events: data.events }) }).catch(() => {});
+  }
+
   /* =========================================================
      Start
      ========================================================= */
@@ -1347,7 +1519,7 @@
   // and is never refreshed automatically (AdSense doesn't allow auto-refresh).
   function initAds() {
     const { client, slot } = CONFIG.adsense || {};
-    if (!client || !slot) return;
+    if (!client || !slot || WN.inApp) return; // never any ads in the iPhone app
     if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
       const s = document.createElement('script');
       s.async = true;
@@ -1396,6 +1568,7 @@
     renderChips();
     render();
     fitAll();
+    saveLineupForOffline(data);
     const wanted = new URLSearchParams(location.search).get('show');
     if (wanted) {
       const ev = EVENTS.find((e) => showKey(e) === wanted);
@@ -1424,7 +1597,13 @@
   (async function init() {
     selectedGenres = loadGenreSelection();
     initAnalytics();
+    // ?drawer=full or ?drawer=collapsed opens the list in that state (used for App Store screenshots)
+    const drawer = new URLSearchParams(location.search).get('drawer');
+    if (!isWide() && (drawer === 'full' || drawer === 'collapsed')) { setTopHeight(); document.body.classList.add('drawer-' + drawer); }
+    await WN.favs.restore();
     await loadData();
+    countAppOpen(true);
+    WN.favs.sync();
     initAds();
     setInterval(tick, CONFIG.refreshMs);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });

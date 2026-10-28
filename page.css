@@ -26,3 +26,8 @@ li { margin: 6px 0; }
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted); }
 footer a { margin-right: 16px; color: var(--soft); text-decoration: none; }
 @media (max-width: 480px) { h1 { font-size: 42px; } }
+
+/* Follow a venue (favorites live on this device; see wn.js) */
+.fav-btn { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 14px 0 12px; border-radius: 999px; border: 1px solid var(--line); background: none; color: var(--soft); font: 600 14px var(--text); cursor: pointer; }
+.fav-btn[aria-pressed="true"] { border-color: rgba(255, 194, 75, .5); color: var(--gold); background: rgba(255, 194, 75, .13); }
+h1 + p > .fav-btn { margin-top: -4px; }

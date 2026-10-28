@@ -14,6 +14,10 @@ A live map of tonight's music shows in New York. The lineup refreshes automatica
 - `events.json`: tonight's lineup, rewritten each morning by the workflow
 - `coverage.json`: what each venue produced this morning
 - `sponsored.json`: paid placements you sell to venues (edit by hand)
+- `app/`: the iPhone app (Capacitor shell around the site, built and sent to TestFlight by `.github/workflows/ios.yml`). See `app/README.md`
+- `wn.js`: shared by every page: app detection (no ads in the app), favorite venues, cookie-free counts
+- `stats/`, `app-stats.html`: Cloudflare worker for sponsor numbers and the private monthly report
+- `support.html`: help page (the App Store's support URL)
 - `scraper/`: builds `events.json` (Python; Playwright for the browser, everything else standard library)
 - `scraper/venues.json`: the venues read every morning (add your own)
 - `.github/workflows/update-events.yml`: the daily 5 AM job
@@ -73,6 +77,10 @@ Edit `sponsored.json` on GitHub (pencil icon); saving it republishes tonight's l
 - `venue` matches the venue name; `title_contains` narrows it to one show.
 - `event` adds a show the daily sources don't list (it needs at least `title`, `venue`, `lat`, `lng`, `time`).
 - The Advertise page (`advertise.html`) is where venues find you.
+- `"push": true` sells the **noon push** too ("Featured in the noon push" on `advertise.html`): that day's
+  "Tonight's picks" notification starts with the show, labeled Sponsored, and tapping it opens the show. One
+  per day (the first matching placement wins); without it the notification is unchanged. Example:
+  `{ "venue": "Birdland", "title_contains": "Nighthawks", "from": "2026-11-12", "until": "2026-11-12", "push": true }`
 
 ### 3. Display ads (`adsense`) and visitor counts (`analyticsToken`)
 

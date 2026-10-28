@@ -1,0 +1,91 @@
+name: Deploy stats worker
+
+# Deploys stats/worker.js (cookie-free counts for sponsor reports) to Cloudflare Workers + D1, free plan.
+# Needs three repo secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and STATS_KEY (any long random string;
+# it protects the report and the follower list). On the first run it creates the database and writes the
+# worker's address into wn.js, which switches counting on for the site and the app.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["stats/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      STATS_KEY: ${{ secrets.STATS_KEY }}
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        run: |
+          missing=""
+          for s in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID STATS_KEY; do
+            [ -n "${!s}" ] || missing="$missing $s"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Add these repository secrets first:$missing (Settings > Secrets and variables > Actions)"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Database
+        working-directory: stats
+        run: |
+          W="npx --yes wrangler@4"
+          find_id() { $W d1 list --json 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(next((x.get('uuid') or x.get('id') for x in d if x.get('name')=='wordnyc-stats'), ''))"; }
+          id=$(find_id || true)
+          if [ -z "$id" ]; then
+            $W d1 create wordnyc-stats
+            id=$(find_id)
+          fi
+          [ -n "$id" ] || { echo "::error::Couldn't find or create the D1 database"; exit 1; }
+          sed -i "s/^database_id = .*/database_id = \"$id\"/" wrangler.toml
+          $W d1 execute wordnyc-stats --remote --file schema.sql --yes
+
+      - name: Deploy
+        id: deploy
+        working-directory: stats
+        run: |
+          W="npx --yes wrangler@4"
+          out=$($W deploy 2>&1) || { echo "$out"; echo "::error::Deploy failed. If it mentions a workers.dev subdomain, open Cloudflare > Workers & Pages once to choose one, then run this again."; exit 1; }
+          echo "$out"
+          printf '%s' "$STATS_KEY" | $W secret put STATS_KEY
+          url=$(echo "$out" | grep -oE 'https://[A-Za-z0-9.-]+\.workers\.dev' | head -1)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Worker: $url"
+
+      - name: Switch counting on (wn.js) and save the database id
+        if: steps.deploy.outputs.url != ''
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          sed -i "s|^  var STATS_URL = '[^']*';|  var STATS_URL = '$URL';|" wn.js
+          grep -n "var STATS_URL" wn.js
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add wn.js stats/wrangler.toml
+          if git diff --cached --quiet; then
+            echo "Already up to date."
+          else
+            git commit -m "Stats worker at $URL [skip ci]"
+            git pull --rebase --quiet origin main
+            git push origin HEAD:main
+          fi
+          echo "### Stats worker deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "Report: https://word-nyc.com/app-stats.html#key=(your STATS_KEY)" >> "$GITHUB_STEP_SUMMARY"

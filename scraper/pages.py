@@ -217,7 +217,8 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <link rel="stylesheet" href="/page.css">
   <link rel="stylesheet" href="/listing.css">
   <meta name="google-adsense-account" content="ca-pub-7078560452492267">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
+  <script>if(!/WordNYCApp\\//.test(navigator.userAgent)){{var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267";document.head.appendChild(s);}}</script>
+  <script defer src="/wn.js"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "2f6bdfef6f95427d91087474b7d81e88"}}'></script>
   {data}
 </head>
@@ -410,7 +411,9 @@ def build(out_root: Path = ROOT) -> list[str]:
             f"/venues/{v['slug']}/", f"{name} tonight: schedule & tickets ({when}) | Word NYC",
             f"What's playing at {name} in {where} tonight: set times, performers and tickets. "
             f"{len(evs) or 'No'} {'show' if len(evs) == 1 else 'shows'} listed for {when}.",
-            f'    <h1>{esc(name)}</h1>\n    <p class="facts">{" · ".join(facts)}</p>\n'
+            f'    <h1>{esc(name)}</h1>\n'
+            f'    <p><button class="fav-btn" type="button" data-fav-venue="{v["slug"]}" data-fav-name="{esc(name)}" hidden>Follow</button></p>\n'
+            f'    <p class="facts">{" · ".join(facts)}</p>\n'
             f'    <p class="about">{esc(venue_intro(v))}</p>\n'
             f'    <p class="lede">{lede}</p>\n    {show_list(evs, with_venue=False) if evs else ""}\n{near_html}'
             f'    <p class="small">Run {esc(name)}? <a href="/badge/#{v["slug"]}">Add a "See us on Word NYC" badge</a> '

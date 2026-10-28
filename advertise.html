@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-7078560452492267">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267" crossorigin="anonymous"></script>
+  <!-- No ads inside the iPhone app (its web view adds "WordNYCApp" to the user agent). -->
+  <script>if(!/WordNYCApp\//.test(navigator.userAgent)){var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7078560452492267";document.head.appendChild(s);}</script>
+  <script defer src="/wn.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Advertise on Word NYC</title>
   <meta name="description" content="Put your show at the top of Word NYC's map of live music in New York tonight.">
@@ -17,12 +19,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Schibsted+Grotesk:wght@400;600&display=swap">
   <link rel="stylesheet" href="page.css">
   <style>
-    .rates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 10px; }
+    .rates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 14px 0 10px; }
+    .rate.push { grid-column: 1 / -1; border-color: rgba(255, 194, 75, .45); background: linear-gradient(135deg, rgba(255, 194, 75, .09), var(--ink-2) 60%); }
+    .rate .eg { margin: 10px 0 2px; padding: 10px 12px; border-radius: 12px; background: rgba(13, 18, 48, .7); border: 1px solid var(--line); font-size: 13.5px; }
+    .rate .eg b { color: var(--paper); }
     .rate { padding: 16px 16px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--ink-2); }
     .rate p { margin: 0 0 6px; font-size: 14.5px; }
     .rname { color: var(--paper) !important; font-weight: 600; }
     .price { font: 800 36px/1 var(--display); color: var(--gold) !important; margin: 4px 0 10px !important; }
     @media (max-width: 600px) { .rates { grid-template-columns: 1fr; } }
+    .rate p.price { font: 800 36px/1 var(--display); }  /* beats .rate p */
   </style>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2f6bdfef6f95427d91087474b7d81e88"}'></script>
 </head>
@@ -39,6 +45,7 @@
       <li>A highlighted pin on the map, drawn above the others.</li>
       <li>A place in the story graphic people share to Instagram and other apps.</li>
       <li>Your own ticket link, show photo, program and description in the show's details.</li>
+      <li>A monthly report: how many people saw your listing, tapped it and tapped your ticket link, and how many follow your venue in the Word NYC app.</li>
     </ul>
 
     <h2>Rates</h2>
@@ -46,6 +53,15 @@
       <div class="rate"><p class="rname">One night</p><p class="price">$10</p><p>Top of the map and list for one night, highlighted pin, first in the share graphic.</p></div>
       <div class="rate"><p class="rname">One week</p><p class="price">$39</p><p>Seven nights in a row, plus the top of your genre's page (for example Jazz tonight).</p></div>
       <div class="rate"><p class="rname">One month</p><p class="price">$99</p><p>Every show you have that month featured, on the map, the list and your genre's page.</p></div>
+      <!-- PRICE: set the per-night price for the noon push below (replace "Ask us"), e.g. <p class="price">$25</p>.
+           In sponsored.json, a placement with "push": true leads that day's noon notification. -->
+      <div class="rate push">
+        <p class="rname">Featured in the noon push</p>
+        <p class="price">Ask us</p>
+        <p>Your show leads "Tonight's picks", the one notification Word NYC subscribers get each day at noon, in the app and on the web. Includes a one-night sponsored listing. One sponsor per day, so the date is yours alone.</p>
+        <p class="eg"><b>Tonight in NYC: 103 shows</b><br>Sponsored: Your show at your venue, 8 PM. Also tonight: …</p>
+        <p class="small">Tapping it opens your show's details and ticket link. You get a report with deliveries, opens, views and ticket taps.</p>
+      </div>
     </div>
     <p class="small">Founding venue rates, locked in for six months. Your first week is free. Festivals, series and multi-venue promoters: ask about a package.</p>
 

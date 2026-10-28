@@ -3,8 +3,8 @@ importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 
 // Word NYC service worker: always try the network first (the lineup changes daily),
 // fall back to the last copy so the app still opens with no signal (e.g. on the subway).
-const CACHE = 'wordnyc-v3';
-const SHELL = ['/', '/index.html', '/events.json', '/page.css', '/listing.css', '/manifest.webmanifest',
+const CACHE = 'wordnyc-v4';
+const SHELL = ['/', '/index.html', '/events.json', '/wn.js', '/page.css', '/listing.css', '/manifest.webmanifest',
                '/icons/icon-192.png', '/apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {

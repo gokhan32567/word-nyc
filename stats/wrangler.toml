@@ -1,0 +1,11 @@
+# Cloudflare Worker for Word NYC's cookie-free stats. Deployed by .github/workflows/stats-worker.yml,
+# which creates the D1 database on the first run and fills in database_id below.
+name = "wordnyc-stats"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wordnyc-stats"
+database_id = "REPLACED_BY_WORKFLOW"

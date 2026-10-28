@@ -1,6 +1,7 @@
 name: Noon picks notification
 
-# Sends "Tonight's picks" to everyone who turned on notifications, once a day at noon New York time.
+# Sends "Tonight's picks" to everyone who turned on notifications (web push and the iPhone app), once a day at
+# noon New York time. See scraper/notify.py for the sponsored lead and "your favorites" variants.
 # 16:00 UTC is noon in daylight time, 17:00 UTC in standard time; a backup scheduled task also starts
 # this workflow, and push-log.json makes sure only the first run each day sends.
 on:
@@ -48,6 +49,7 @@ jobs:
         if: steps.when.outputs.go == 'true'
         env:
           ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+          STATS_KEY: ${{ secrets.STATS_KEY }}   # optional: follower counts for "your favorites" + push stats for sponsor reports
         run: python scraper/notify.py ${{ github.event.inputs.force == 'true' && '--force' || '' }}
 
       - name: Record it
