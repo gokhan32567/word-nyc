@@ -10,8 +10,8 @@ You never need Xcode. (You can still open `app/ios/App/App.xcodeproj` on your Ma
 
 ## Setup, in order
 
-**1. Nothing yet.** Each push that changes `app/` builds the app for the iOS Simulator. The first build also
-takes the App Store screenshots and commits them to `app/store/screenshots/`.
+**1. Nothing yet.** Each push that changes `app/` builds the app for the iOS Simulator as a compile check.
+The App Store screenshots are already in `app/store/screenshots/`.
 
 **2. App Store Connect API key.** App Store Connect → Users and Access → Integrations → App Store Connect API →
 Team Keys → +. Name it `GitHub`, access **App Manager**, Generate. Download the `.p8` file (only possible once)
@@ -57,7 +57,7 @@ pick the build, and press Submit for Review.
 
 - **New build:** bump `version` in `app/package.json` for a new App Store version (build numbers count up by
   themselves), then Actions → iOS app → Run workflow. Site-only changes don't need a new build.
-- **Fresh screenshots:** Run workflow with "screenshots" ticked and "upload" unticked.
+- **Fresh screenshots:** Actions → **App Store screenshots (Linux)** → Run workflow (about 3 minutes).
 - **Sell the noon push:** in `sponsored.json`, add `"push": true` to the placement (see the main README.md and the
   "Featured in the noon push" tier on `advertise.html`; set its price there). Only one per day leads the push.
 - **Sponsor numbers:** the stats page above. "Copy" on a venue's row gives a one-line summary to email.
@@ -71,7 +71,7 @@ pick the build, and press Submit for Review.
 | Xcode project (Capacitor's SPM template + push entitlement, icon, portrait iPhone) | `ios/` |
 | Page shown with no connection (lists the saved lineup) | `www/offline.html` |
 | Signing with the API key: bundle ID, certificate, profile | `ci/asc.py` (+ Codemagic's open-source CLI tools) |
-| Screenshots in the simulator | `ci/screenshots.py` |
+| Screenshots (Linux Chromium; simulator version in `ci/screenshots.py`) | `ci/web-screenshots.js` |
 | Site side: app detection, favorites, counts | `../wn.js`, `../index.html` |
 | Noon push: sponsored lead, favorites variants | `../scraper/notify.py` |
 | Stats worker and report | `../stats/`, `../app-stats.html` |

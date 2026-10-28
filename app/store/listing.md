@@ -68,9 +68,10 @@ jazz,concerts,gigs,shows,nyc,new york,classical,opera,indie,clubs,events,brookly
 
 ## Screenshots
 
-`app/store/screenshots/` (6.9-inch iPhone, 1320 × 2868), taken from the real app in the iOS Simulator by the
-"iOS app" workflow. Upload them in this order under "iPhone 6.9" Display"; App Store Connect scales them for
-smaller iPhones. The app is iPhone-only, so no iPad screenshots are needed.
+`app/store/screenshots/` (6.9-inch iPhone, 1320 × 2868): the app's own screens with the app's user agent (no
+ads), its safe areas and an iPhone status bar, rendered by **Actions → App Store screenshots (Linux)**. Upload
+them in this order under "iPhone 6.9" Display"; App Store Connect scales them for smaller iPhones. The app is
+iPhone-only, so no iPad screenshots are needed.
 
 1. `1-map.png`: the map with tonight's shows (caption idea: "Tonight's live music, on one map")
 2. `2-list.png`: the full list, live shows lit gold ("See what's playing right now")
@@ -78,7 +79,9 @@ smaller iPhones. The app is iPhone-only, so no iPad screenshots are needed.
 4. `4-jazz.png`: filtered to jazz ("Jazz, classical, indie and more")
 5. `5-venue.png`: a venue page with the Follow heart ("Follow your favorite venues")
 
-To take fresh ones (the lineup changes daily): Actions → iOS app → Run workflow → tick "screenshots", untick "upload".
+To take fresh ones (the lineup changes daily): Actions → App Store screenshots (Linux) → Run workflow. (The
+"screenshots" option of the iOS app workflow uses the real simulator, but CI simulators have no GPU, so the
+map takes 20+ minutes there.)
 
 ## App icon
 
