@@ -41,6 +41,16 @@ public class WordNYCPlugin: CAPPlugin, CAPBridgedPlugin {
     override public func load() {
         NotificationCenter.default.addObserver(self, selector: #selector(pushOpened), name: WordNYCPush.opened, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(openedURL(_:)), name: .capacitorOpenURL, object: nil)
+        // Launch argument "-WNPath /path" opens that page (used by app/ci/screenshots.py in the simulator).
+        let args = ProcessInfo.processInfo.arguments
+        if let i = args.firstIndex(of: "-WNPath"), i + 1 < args.count, args[i + 1].hasPrefix("/"),
+           let target = URL(string: WordNYCPlugin.site + args[i + 1]) {
+            var token: NSObjectProtocol?
+            token = NotificationCenter.default.addObserver(forName: .capacitorViewDidAppear, object: nil, queue: .main) { [weak self] _ in
+                if let token = token { NotificationCenter.default.removeObserver(token) }
+                _ = self?.bridge?.webView?.load(URLRequest(url: target))
+            }
+        }
         DispatchQueue.main.async { [weak self] in
             guard let webView = self?.bridge?.webView else { return }
             webView.allowsBackForwardNavigationGestures = true  // swipe back from a venue page to the map
