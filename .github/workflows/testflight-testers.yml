@@ -1,0 +1,21 @@
+name: TestFlight testers
+
+# Creates the internal TestFlight group (every build, all App Store Connect users) - app/ci/beta.py
+on:
+  workflow_dispatch:
+
+jobs:
+  testers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyjwt cryptography requests
+      - run: python3 app/ci/beta.py
