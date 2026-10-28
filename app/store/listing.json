@@ -18,5 +18,6 @@
   "3-show.png",
   "4-jazz.png",
   "5-venue.png"
- ]
+ ],
+ "reviewNotes": "Word NYC is a guide to tonight's live music in New York City. A new lineup of 100+ shows from 150+ venues is built every morning; the app shows it on a map and a list that update through the night (live / starting soon / later).\n\nNative features in this build:\n• Push notifications: an opt-in \"Tonight's picks\" notification once a day at noon (tap \"Turn on\" under the list). Tapping the notification opens that show's details. It can be turned off inside the app (link at the bottom of the list) or in Settings.\n• Follow venues: tap the heart on a show's details or on a venue page. Followed venues are saved on the device, marked in the list, and mentioned in the noon notification when they have a show.\n• Offline: the app keeps the latest lineup on the device and lists it when there's no connection.\n• iOS share sheet for shows and for a story image of tonight's map; Apple Maps for directions; haptics.\n\nTickets: Word NYC doesn't sell anything. \"Get tickets\" opens the venue's or ticket seller's own page in Safari's in-app view, to buy tickets for real-world concerts (guideline 3.1.3(e) / 3.1.5). Some of these links are affiliate links, disclosed under the button (\"may earn a commission\").\n\nSponsored listings: venues pay Word NYC directly (outside the app) to feature a show. Featured shows and notifications are always labeled \"Sponsored\". The notification opt-in text says it may be led by a sponsored show.\n\nNo ads, no tracking, no in-app purchases."
 }

@@ -132,6 +132,59 @@ def pick_build(app_id, version):
     print(f"Build {b['attributes']['version']} selected")
 
 
+@step("Price: free")
+def price_free(app_id):
+    points = call("GET", f"/apps/{app_id}/appPricePoints?filter[territory]=USA&limit=200")["data"]
+    free = next(pp for pp in points if float(pp["attributes"]["customerPrice"]) == 0)
+    call("POST", "/appPriceSchedules", {
+        "data": {"type": "appPriceSchedules", "relationships": {
+            "app": {"data": {"type": "apps", "id": app_id}},
+            "baseTerritory": {"data": {"type": "territories", "id": "USA"}},
+            "manualPrices": {"data": [{"type": "appPrices", "id": "${free}"}]}}},
+        "included": [{"type": "appPrices", "id": "${free}", "attributes": {"startDate": None},
+                      "relationships": {"appPricePoint": {"data": {"type": "appPricePoints", "id": free["id"]}}}}]})
+
+
+@step("Availability: all countries and regions")
+def availability_all(app_id):
+    territories, url = [], "/territories?limit=200"
+    while url:
+        page = call("GET", url)
+        territories += [t["id"] for t in page["data"]]
+        nxt = page.get("links", {}).get("next")
+        url = nxt.split("/v1", 1)[1] if nxt else None
+    included = [{"type": "territoryAvailabilities", "id": f"${{{tid}}}", "attributes": {"available": True},
+                 "relationships": {"territory": {"data": {"type": "territories", "id": tid}}}} for tid in territories]
+    body = {"data": {"type": "appAvailabilities", "attributes": {"availableInNewTerritories": True}, "relationships": {
+        "app": {"data": {"type": "apps", "id": app_id}},
+        "territoryAvailabilities": {"data": [{"type": "territoryAvailabilities", "id": i["id"]} for i in included]}}},
+        "included": included}
+    import requests as _r
+    from asc import token, API
+    r = _r.post(API.replace("/v1", "/v2") + "/appAvailabilities", json=body, timeout=120,
+                headers={"Authorization": f"Bearer {token()}", "Content-Type": "application/json"})
+    if r.status_code == 409 and "already" in r.text.lower():
+        print("Availability was already set")
+        return
+    if r.status_code not in (200, 201):
+        raise RuntimeError(f"{r.status_code} {r.text[:600]}")
+    print(f"Available in {len(territories)} countries and regions")
+
+
+@step("App Review notes")
+def review_notes(version):
+    attrs = {"notes": L["reviewNotes"], "demoAccountRequired": False}
+    try:
+        d = call("GET", f"/appStoreVersions/{version['id']}/appStoreReviewDetail")["data"]
+    except RuntimeError:
+        d = None
+    if d:
+        call("PATCH", f"/appStoreReviewDetails/{d['id']}", {"data": {"type": "appStoreReviewDetails", "id": d["id"], "attributes": attrs}})
+    else:
+        call("POST", "/appStoreReviewDetails", {"data": {"type": "appStoreReviewDetails", "attributes": attrs,
+             "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": version["id"]}}}}})
+
+
 def main() -> int:
     apps = call("GET", f"/apps?filter[bundleId]={BUNDLE_ID}")["data"]
     if not apps:
@@ -146,8 +199,11 @@ def main() -> int:
     version_text(loc)
     screenshots(loc)
     pick_build(app_id, version)
+    price_free(app_id)
+    availability_all(app_id)
+    review_notes(version)
     summary("### App Store listing\n" + ("All filled in." if not problems else "Needs attention:\n- " + "\n- ".join(problems)) +
-            "\n\nStill by hand: App Privacy, Age Rating, App Review contact details.\n")
+            "\n\nStill by hand: App Privacy, Age Rating, your App Review contact (name, phone, email).\n")
     return 1 if problems else 0
 
 
