@@ -1,0 +1,23 @@
+name: App Store listing
+
+# Fills the App Store version page from app/store/listing.json and app/store/screenshots via the
+# App Store Connect API (app/ci/listing.py). Run again any time to update the text or screenshots.
+on:
+  workflow_dispatch:
+
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyjwt cryptography requests
+      - name: Fill in the listing
+        run: python3 app/ci/listing.py
