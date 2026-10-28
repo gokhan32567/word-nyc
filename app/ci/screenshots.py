@@ -88,8 +88,8 @@ def main() -> int:
        check=False)
     sh("xcrun", "simctl", "install", udid, str(app), timeout=300)
     note("installed")
-    sh("xcrun", "simctl", "launch", udid, BUNDLE, check=False, timeout=120)
-    time.sleep(20)  # first launch: web view warm-up, map tiles
+    sh("xcrun", "simctl", "launch", udid, BUNDLE, check=False, timeout=420)
+    time.sleep(45)  # first launch: web view warm-up, map tiles
 
     show, venue = shows()
     shots = [
@@ -102,10 +102,10 @@ def main() -> int:
     for name, path in shots:
         if not path:
             continue
-        sh("xcrun", "simctl", "launch", "--terminate-running-process", udid, BUNDLE, "-WNPath", path, check=False, timeout=120)
-        time.sleep(16)
+        sh("xcrun", "simctl", "launch", "--terminate-running-process", udid, BUNDLE, "-WNPath", path, check=False, timeout=420)
+        time.sleep(30)
         target = out / f"{name}.png"
-        sh("xcrun", "simctl", "io", udid, "screenshot", "--type=png", str(target), check=False, timeout=60)
+        sh("xcrun", "simctl", "io", udid, "screenshot", "--type=png", str(target), check=False, timeout=420)
         note(f"{name}: {'saved' if target.exists() else 'missing'}")
     sh("xcrun", "simctl", "shutdown", udid, check=False, timeout=120)
     return 0
