@@ -58,12 +58,27 @@ jobs:
           sed -i "s/^database_id = .*/database_id = \"$id\"/" wrangler.toml
           $W d1 execute wordnyc-stats --remote --file schema.sql --yes
 
+      - name: workers.dev subdomain
+        run: |
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain"
+          auth="Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+          sub=$(curl -s -H "$auth" "$api" | python3 -c "import json,sys; print((json.load(sys.stdin).get('result') or {}).get('subdomain') or '')")
+          if [ -z "$sub" ]; then
+            for name in wordnyc word-nyc wordnyc-$(date +%s | tail -c 5); do
+              r=$(curl -s -X PUT -H "$auth" -H "Content-Type: application/json" -d "{\"subdomain\":\"$name\"}" "$api")
+              echo "$r" | grep -q '"success":true' && { sub=$name; break; }
+              echo "Couldn't claim $name: $(echo "$r" | head -c 300)"
+            done
+          fi
+          [ -n "$sub" ] || { echo "::error::No workers.dev subdomain. Open Cloudflare > Workers & Pages once to choose one."; exit 1; }
+          echo "workers.dev subdomain: $sub"
+
       - name: Deploy
         id: deploy
         working-directory: stats
         run: |
           W="npx --yes wrangler@4"
-          out=$($W deploy 2>&1) || { echo "$out"; echo "::error::Deploy failed. If it mentions a workers.dev subdomain, open Cloudflare > Workers & Pages once to choose one, then run this again."; exit 1; }
+          out=$($W deploy 2>&1) || { echo "$out"; echo "$out" | grep -iE "error|✘" | head -5 | while IFS= read -r l; do echo "::error::$l"; done; exit 1; }
           echo "$out"
           printf '%s' "$STATS_KEY" | $W secret put STATS_KEY
           url=$(echo "$out" | grep -oE 'https://[A-Za-z0-9.-]+\.workers\.dev' | head -1)
