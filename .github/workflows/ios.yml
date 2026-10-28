@@ -89,7 +89,7 @@ jobs:
           git add app/store/screenshots
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "App Store screenshots from the simulator [skip ci]"
-          git pull --rebase --quiet origin main
+          git pull --rebase --autostash --quiet origin main
           git push origin HEAD:main
 
   testflight:
@@ -143,7 +143,7 @@ jobs:
           git add app/ci/dist-cert-key.enc
           if ! git diff --cached --quiet; then
             git commit -m "iOS signing: encrypted distribution certificate key [skip ci]"
-            git pull --rebase --quiet origin main
+            git pull --rebase --autostash --quiet origin main
             git push origin HEAD:main
           fi
 
