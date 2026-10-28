@@ -1,0 +1,35 @@
+name: App Store screenshots (Linux)
+
+# App Store screenshots of the iPhone app's screens, rendered in headless Chromium with the app's user agent,
+# safe areas and status bar (app/ci/web-screenshots.js). Quicker and steadier than the macOS simulator,
+# whose WebGL map is very slow on CI machines. Commits to app/store/screenshots.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Browser
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.56.0
+          npx playwright install --with-deps chromium
+      - name: Screenshots
+        run: node app/ci/web-screenshots.js app/store/screenshots
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/store/screenshots
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "App Store screenshots [skip ci]"
+          git pull --rebase --autostash --quiet origin main
+          git push origin HEAD:main
