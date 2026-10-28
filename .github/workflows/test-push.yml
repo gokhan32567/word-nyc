@@ -1,0 +1,43 @@
+name: Test push (iPhone app only)
+
+# Sends one test notification to the iPhone app's subscribers only (filtered by app version, which
+# website subscribers don't have), so web push subscribers aren't bothered. Tapping it opens the map.
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Text"
+        default: "Test from Word NYC: notifications work."
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Send
+        env:
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+          MESSAGE: ${{ github.event.inputs.message }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          body = {"app_id": "d9f2eefb-d834-4054-92cc-422321667627", "target_channel": "push",
+                  "filters": [{"field": "app_version", "relation": "exists"}],
+                  "headings": {"en": "Word NYC"}, "contents": {"en": os.environ["MESSAGE"]},
+                  "data": {"path": "/?source=test"}}
+          for scheme in ("Key", "Basic"):
+              req = urllib.request.Request("https://api.onesignal.com/notifications", data=json.dumps(body).encode(),
+                    headers={"Content-Type": "application/json", "Authorization": f"{scheme} {os.environ['ONESIGNAL_API_KEY']}"})
+              try:
+                  r = json.loads(urllib.request.urlopen(req, timeout=30).read())
+                  print(r)
+                  if r.get("id"):
+                      print(f"::notice::Sent (notification {r['id']})")
+                  else:
+                      print(f"::error::Not sent: {r.get('errors')}")
+                  break
+              except urllib.error.HTTPError as e:
+                  detail = e.read().decode()[:300]
+                  if e.code != 401 or scheme == "Basic":
+                      print(f"::error::OneSignal {e.code}: {detail}"); raise SystemExit(1)
+          PY
