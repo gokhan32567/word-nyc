@@ -8,4 +8,4 @@ workers_dev = true
 [[d1_databases]]
 binding = "DB"
 database_name = "wordnyc-stats"
-database_id = "REPLACED_BY_WORKFLOW"
+database_id = "352d9053-7211-46e7-964b-9c391f3f895b"

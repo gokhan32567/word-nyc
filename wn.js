@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   // Filled in by .github/workflows/stats-worker.yml once the Cloudflare worker is deployed. Empty = counts off.
-  var STATS_URL = '';
+  var STATS_URL = 'https://wordnyc-stats.wordnyc.workers.dev';
   var TAG_LIMIT = 5; // OneSignal's free plan allows 6 tags per user; favorites use at most 5
 
   var inApp = /WordNYCApp\//.test(navigator.userAgent);
