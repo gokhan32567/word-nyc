@@ -72,14 +72,16 @@ const SAFE_AREA_CSS = `
     colorScheme: 'dark', timezoneId: 'America/New_York', locale: 'en-US',
   });
   await ctx.addInitScript((css) => {
-    const style = document.createElement('style');
-    style.textContent = css;
-    document.documentElement.appendChild(style); // before the page lays out, like the real safe areas
     // stand-in for the app's native bridge (notifications off, nothing saved yet)
     window.Capacitor = {
       nativePromise: (p, m) => Promise.resolve(m === 'pushState' ? { permission: 'default', optedIn: false } : {}),
       addListener() {},
     };
+    // the iPhone's safe areas, in place before the page lays out
+    const style = document.createElement('style');
+    style.textContent = css;
+    const add = () => { if (!document.documentElement) return false; document.documentElement.appendChild(style); return true; };
+    if (!add()) new MutationObserver((_, o) => { if (add()) o.disconnect(); }).observe(document, { childList: true });
   }, SAFE_AREA_CSS);
   const page = await ctx.newPage();
   for (const [name, p] of shots) {
