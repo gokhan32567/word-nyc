@@ -181,6 +181,28 @@ GENRE_WORDS = {"Jazz": "jazz", "Classical": "classical music", "Opera": "opera",
                "Gospel": "gospel", "Reggae & Caribbean": "reggae and Caribbean music", "African": "African music"}
 
 
+def fill_home(out_root: Path, events: list[dict], when: str) -> None:
+    """Write tonight's shows into index.html as plain HTML, so the homepage has readable content before the
+    map's script runs (search engines and ad reviewers see it; the script replaces it on load)."""
+    f = out_root / "index.html"
+    if not f.exists():
+        return
+    h = f.read_text()
+    start, end = "<!-- static-list -->", "<!-- /static-list -->"
+    if start not in h or end not in h:
+        print("index.html has no static-list markers; homepage list not filled")
+        return
+    rows = [f'<p class="static-show-head">{esc(when)}: {len(events)} live shows in New York tonight.</p>']
+    for e in events:
+        who = ", ".join((e.get("performers") or [])[:3])
+        sub = " · ".join(x for x in (e["venue"], e.get("genre") if e.get("genre") != "Other" else "", e.get("price") or "") if x)
+        rows.append(f'<a class="static-show" href="/venues/{slug(e["venue"])}/"><b>{esc(e.get("time") or "Tonight")}</b>'
+                    f'{esc(e["title"])}{" — " + esc(who) if who and who.lower() != e["title"].lower() else ""}'
+                    f'<span>{esc(sub)}</span></a>')
+    h = h[:h.index(start) + len(start)] + "".join(rows) + h[h.index(end):]
+    f.write_text(h)
+
+
 def page(path: str, title: str, description: str, body: str, ld: list[dict] | None = None,
          crumbs: list[tuple[str, str]] | None = None) -> str:
     """crumbs: [(name, path), ...] after Home, ending with this page; adds a BreadcrumbList and a visible trail."""
@@ -228,7 +250,7 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
 {trail}{body}
     <p class="small">Missing a show? <a href="/submit.html?missing=1">Tell us</a> and we'll add it.</p>
     <footer>
-      <a href="/">Tonight's map</a><a href="/tonight/">All shows tonight</a><a href="/venues/">Venues</a><a href="/guides/best-small-jazz-clubs-nyc/">Jazz club guide</a><a href="/submit.html">Submit a show</a><a href="/advertise.html">Advertise</a><a href="/privacy.html">Privacy</a>
+      <a href="/">Tonight's map</a><a href="/tonight/">All shows tonight</a><a href="/venues/">Venues</a><a href="/guides/best-small-jazz-clubs-nyc/">Jazz club guide</a><a href="/submit.html">Submit a show</a><a href="/advertise.html">Advertise</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a>
     </footer>
   </main>
 </body>
@@ -553,13 +575,14 @@ def build(out_root: Path = ROOT) -> list[str]:
         None, [("Badge", "/badge/")]))
 
     # sitemap
-    static = ["/submit.html", "/advertise.html", "/privacy.html"]
+    static = ["/about.html", "/contact.html", "/submit.html", "/advertise.html", "/privacy.html"]
     today = night.isoformat()
     urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq></url>\n"
                    for p in paths if p != "/badge/") + "".join(f"  <url><loc>{SITE}{p}</loc></url>\n" for p in static + ["/badge/"])
     (out_root / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                           f"{urls}</urlset>\n")
+    fill_home(out_root, events, when)
     report_ld()
     return paths
 
