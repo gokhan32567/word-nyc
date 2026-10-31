@@ -1,32 +1,30 @@
 {
  "date": "2026-10-31",
- "generated": "2026-10-31T18:32:58-04:00",
+ "generated": "2026-10-31T18:45:19-04:00",
  "totals": {
   "venues": 184,
-  "shows": 183,
-  "ok": 77,
-  "none-tonight": 79,
-  "blocked": 20,
-  "error": 5,
+  "shows": 179,
+  "ok": 78,
+  "none-tonight": 83,
+  "blocked": 17,
+  "error": 3,
   "robots": 1,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
   "venue-data": 39,
-  "venue-ai": 161,
+  "venue-ai": 157,
   "ticketmaster": 72,
   "venue-regular": 1,
   "newsletter": 2
  },
  "ai": {
-  "nightly_missing": [
-   "Zinc Bar"
-  ],
-  "calls": 137,
-  "input_tokens": 1622140,
-  "output_tokens": 66453,
-  "cost_usd": 0.1954
+  "nightly_missing": [],
+  "calls": 141,
+  "input_tokens": 1658582,
+  "output_tokens": 67260,
+  "cost_usd": 0.1995
  },
  "venues": [
   {
@@ -89,7 +87,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13646,
+    13853,
     128
    ],
    "examples": []
@@ -115,10 +113,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "unreadable",
+   "detail": "no_events_tonight",
    "tokens": [
-    2901,
-    65
+    7236,
+    68
    ],
    "examples": []
   },
@@ -155,7 +153,7 @@
    "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
     4689,
-    586
+    583
    ],
    "examples": [
     {
@@ -173,6 +171,20 @@
      "why": "date quote is not tonight"
     }
    ]
+  },
+  {
+   "name": "BRIC House",
+   "url": "https://bricartsmedia.org/",
+   "read_url": "https://bricartsmedia.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; +1 on second look",
+   "tokens": [
+    8706,
+    770
+   ],
+   "examples": []
   },
   {
    "name": "Bronx Opera",
@@ -197,7 +209,7 @@
    "shows": 0,
    "detail": "closed tonight; dropped 1× venue closed tonight",
    "tokens": [
-    18276,
+    18275,
     223
    ],
    "examples": []
@@ -237,27 +249,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× not a public performance",
+   "detail": "unreadable",
    "tokens": [
-    11150,
-    929
+    11153,
+    517
    ],
-   "examples": [
-    {
-     "title": "Cancelled: Tuudr Piano Competition Gala",
-     "start_time": "7:30 PM",
-     "date_evidence": "Saturday\nOct 31\n2026",
-     "time_evidence": "7:30 PM",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Postponed: Nathan Carter",
-     "start_time": "7:30 PM",
-     "date_evidence": "Saturday\nOct 31\n2026",
-     "time_evidence": "7:30 PM",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Cathedral of St. John the Divine",
@@ -266,34 +263,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance; +1 on second look",
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    13224,
-    1875
+    13368,
+    1376
    ],
-   "examples": [
-    {
-     "title": "Online Morning Prayer",
-     "start_time": "8:30 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "8:30am - 9am",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Self-Guided Tours",
-     "start_time": "9:30 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "9:30am - 5pm",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Highlights Tour",
-     "start_time": "11:00 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "11am - 12pm",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Chamber Music Society of Lincoln Center",
@@ -302,10 +277,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    16086,
-    68
+    15967,
+    64
    ],
    "examples": []
   },
@@ -372,10 +347,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     12121,
-    68
+    64
    ],
    "examples": []
   },
@@ -403,7 +378,7 @@
    "detail": "calendar",
    "tokens": [
     16491,
-    132
+    128
    ],
    "examples": []
   },
@@ -423,7 +398,7 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     5941,
     132
@@ -554,7 +529,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
     7811,
-    462
+    437
    ],
    "examples": [
     {
@@ -631,8 +606,22 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15841,
+    15996,
     64
+   ],
+   "examples": []
+  },
+  {
+   "name": "Jazz at Lincoln Center",
+   "url": "https://jazz.org/",
+   "read_url": "https://jazz.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    10160,
+    128
    ],
    "examples": []
   },
@@ -654,7 +643,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    14615,
+    14667,
     64
    ],
    "examples": []
@@ -696,7 +685,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    3827,
+    3815,
     64
    ],
    "examples": []
@@ -711,18 +700,9 @@
    "detail": "calendar",
    "tokens": [
     14986,
-    3246
+    3235
    ],
    "examples": []
-  },
-  {
-   "name": "Littlefield",
-   "url": "https://littlefieldnyc.com/",
-   "read_url": "https://littlefieldnyc.com/.well-known/sgcaptcha/?r=%2F&y=ipc:4.236.173.19:1793485431.337",
-   "method": null,
-   "status": "blocked",
-   "shows": 0,
-   "detail": "HTTP 202"
   },
   {
    "name": "Manhattan School of Music",
@@ -823,7 +803,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8807,
+    8754,
     128
    ],
    "examples": []
@@ -861,45 +841,16 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Nublu Classic",
-   "url": "https://nublu.net/",
-   "read_url": "https://nublu.net/program",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    7660,
-    674
-   ],
-   "examples": [
-    {
-     "title": "ILHAN SELECTS",
-     "start_time": "7:00 PM",
-     "date_evidence": "Saturday October 31",
-     "time_evidence": "7pm-11pm ILHAN SELECTS",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "Halloween Party",
-     "start_time": "11:30 PM",
-     "date_evidence": "Saturday October 31",
-     "time_evidence": "11:30pm-4am Halloween Party",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
    "name": "NYPL Bruno Walter Auditorium",
    "url": "https://www.nypl.org/locations/lpa",
    "read_url": "https://www.nypl.org/locations/lpa",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "not_a_calendar",
    "tokens": [
     9333,
-    132
+    136
    ],
    "examples": []
   },
@@ -910,10 +861,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 8× listed at another venue",
+   "detail": "calendar; dropped 4× listed at another venue, 4× listed in another city",
    "tokens": [
     15982,
-    1427
+    1622
    ],
    "examples": [
     {
@@ -928,7 +879,7 @@
      "start_time": "7:30 PM",
      "date_evidence": "Today, October 31st, 2026",
      "time_evidence": "10/31/2026 7:30 PM PT – Pacific Time",
-     "why": "listed at another venue"
+     "why": "listed in another city"
     },
     {
      "title": "Susannah",
@@ -994,19 +945,10 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7369,
+    7476,
     128
    ],
    "examples": []
-  },
-  {
-   "name": "Queens Theatre",
-   "url": "https://queenstheatre.org/",
-   "read_url": "https://queenstheatre.org/",
-   "method": null,
-   "status": "error",
-   "shows": 0,
-   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
   },
   {
    "name": "Regina Opera",
@@ -1066,10 +1008,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
-    5044,
-    68
+    5771,
+    64
    ],
    "examples": []
   },
@@ -1080,10 +1022,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    18327,
-    822
+    18360,
+    698
    ],
    "examples": []
   },
@@ -1105,7 +1047,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    14463,
+    13776,
     128
    ],
    "examples": []
@@ -1127,11 +1069,11 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:4.236.173.19:1793485234.756",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://sidgolds.com/detroit/events/",
+   "method": "WordPress calendar",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 202"
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "Sistas' Place",
@@ -1143,7 +1085,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     6899,
-    499
+    510
    ],
    "examples": [
     {
@@ -1162,18 +1104,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; +3 on second look; -1 on final check",
+   "detail": "calendar; +3 on second look",
    "tokens": [
-    13630,
-    1887
+    13784,
+    1102
    ],
-   "examples": [
-    {
-     "title": "PROXIMITY EXHIBITION",
-     "start_time": "12:00 PM",
-     "why": "removed on final check: other_night: \"NOV 07\nSAT\nEvent\nPROXIMITY EXHIBITION\nTime\n12:00 PM\""
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Soapbox Gallery",
@@ -1193,10 +1129,15 @@
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
    "read_url": "https://www.stannholytrinity.org/",
-   "method": null,
-   "status": "error",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "Error: Page.evaluate: Execution context was destroyed, most likely because of a navigation"
+   "detail": "not_a_calendar",
+   "tokens": [
+    8211,
+    136
+   ],
+   "examples": []
   },
   {
    "name": "St. Bartholomew's Church",
@@ -1245,11 +1186,11 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     8700,
-    248
+    279
    ],
    "examples": [
     {
-     "title": "Trick or treat",
+     "title": "Entry for Thursday 10/31 (no event listed)",
      "start_time": "",
      "date_evidence": "THU 10/31",
      "time_evidence": "",
@@ -1294,8 +1235,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    5645,
-    660
+    5661,
+    629
    ],
    "examples": [
     {
@@ -1335,13 +1276,13 @@
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     5712,
-    291
+    253
    ],
    "examples": [
     {
      "title": "Oz Noy Trio featuring Dave Weckl & Brian Charette",
      "start_time": "",
-     "date_evidence": "October 2026 Jazz Fusion 30-31 Oz Noy Trio featuring Dave Weckl & Brian Charette",
+     "date_evidence": "October 2026 30-31",
      "time_evidence": "",
      "why": "date quote not found on page"
     }
@@ -1356,7 +1297,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6129,
+    6114,
     64
    ],
    "examples": []
@@ -1439,7 +1380,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    20091,
+    20090,
     132
    ],
    "examples": []
@@ -1477,7 +1418,7 @@
    "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
     17163,
-    1111
+    994
    ],
    "examples": [
     {
@@ -1522,11 +1463,16 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/calendar/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2Fcalendar%2F&y=ipr:4.236.173.19:1793485182.538",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://www.zincbar.com/calendar/",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 202"
+   "detail": "closed tonight; dropped 1× venue closed tonight",
+   "tokens": [
+    12814,
+    219
+   ],
+   "examples": []
   },
   {
    "name": "54 Below",
@@ -1537,8 +1483,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    16935,
-    791
+    16850,
+    770
    ],
    "examples": []
   },
@@ -1557,11 +1503,11 @@
    "read_url": "https://www.apollotheater.org/ticket-and-events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
+   "shows": 2,
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    11280,
-    422
+    11311,
+    581
    ],
    "examples": []
   },
@@ -1575,7 +1521,7 @@
    "detail": "calendar",
    "tokens": [
     15129,
-    803
+    805
    ],
    "examples": []
   },
@@ -1615,10 +1561,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    15921,
-    495
+    15912,
+    3329
    ],
    "examples": []
   },
@@ -1632,7 +1578,7 @@
    "detail": "calendar",
    "tokens": [
     10722,
-    1029
+    1032
    ],
    "examples": []
   },
@@ -1646,7 +1592,7 @@
    "detail": "calendar",
    "tokens": [
     5833,
-    558
+    573
    ],
    "examples": []
   },
@@ -1660,11 +1606,11 @@
    "detail": "calendar; dropped 1× date quote is not tonight; +1 on second look",
    "tokens": [
     23572,
-    1242
+    1274
    ],
    "examples": [
     {
-     "title": "MICHAEL BLAKE’S HALLOWEEN TALES FT. ROB JOST | MARIUS VAN DEN BRINK | MICHAEL SARIN",
+     "title": "MICHAEL BLAKE'S HALLOWEEN TALES FT. ROB JOST | MARIUS VAN DEN BRINK | MICHAEL SARIN",
      "start_time": "10:15 PM",
      "date_evidence": "***TWO SETS: 9PM & 10:15PM***",
      "time_evidence": "***TWO SETS: 9PM & 10:15PM***",
@@ -1682,7 +1628,7 @@
    "detail": "calendar",
    "tokens": [
     20100,
-    1265
+    1268
    ],
    "examples": []
   },
@@ -1701,13 +1647,21 @@
    "read_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre&venues=KovZpZAEAd6A",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar; +2 on second look",
+   "shows": 1,
+   "detail": "calendar; dropped 1× listed in another city",
    "tokens": [
-    29839,
-    1247
+    29958,
+    645
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "The Rocky Horror Picture Show",
+     "start_time": "7:30 PM",
+     "date_evidence": "SAT 31 OCT ‘26 TONIGHT",
+     "time_evidence": "7:30PM CT",
+     "why": "listed in another city"
+    }
+   ]
   },
   {
    "name": "Birdland",
@@ -1719,7 +1673,7 @@
    "detail": "calendar",
    "tokens": [
     11339,
-    1340
+    1320
    ],
    "examples": []
   },
@@ -1732,8 +1686,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    30009,
-    755
+    21202,
+    746
    ],
    "examples": []
   },
@@ -1746,8 +1700,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    14747,
-    1243
+    14661,
+    1160
    ],
    "examples": []
   },
@@ -1761,34 +1715,9 @@
    "detail": "calendar",
    "tokens": [
     9918,
-    492
+    496
    ],
    "examples": []
-  },
-  {
-   "name": "BRIC House",
-   "url": "https://bricartsmedia.org/",
-   "read_url": "https://bricartsmedia.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; +1 on second look; -2 on final check",
-   "tokens": [
-    8706,
-    878
-   ],
-   "examples": [
-    {
-     "title": "Fall Exhibitions Tour",
-     "start_time": "2:30 PM",
-     "why": "removed on final check: not_a_performance: \"10.31 SAT | 2:30 PM Fall Exhibitions Tour COST FREE\""
-    },
-    {
-     "title": "Fall Exhibitions Tour",
-     "start_time": "1:30 PM",
-     "why": "removed on final check: not_a_performance: \"10.31 SAT | 1:30 PM Fall Exhibitions Tour COST FREE\""
-    }
-   ]
   },
   {
    "name": "Brooklyn Conservatory of Music",
@@ -1832,7 +1761,7 @@
    "detail": "calendar",
    "tokens": [
     6771,
-    402
+    405
    ],
    "examples": []
   },
@@ -1859,8 +1788,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    12583,
-    396
+    12499,
+    571
    ],
    "examples": []
   },
@@ -1871,10 +1800,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 3,
-   "detail": "calendar",
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    30616,
-    1087
+    30588,
+    986
    ],
    "examples": []
   },
@@ -1885,18 +1814,18 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× start time not in time quote; +1 from event page https://www.culturelablic.org/thelot2026",
+   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.culturelablic.org/thelot2026",
    "tokens": [
     11142,
-    791
+    784
    ],
    "examples": [
     {
      "title": "Live in The Lot",
      "start_time": "",
      "date_evidence": "Saturday, 31 October",
-     "time_evidence": "Saturday, 31 October",
-     "why": "start time not in time quote"
+     "time_evidence": "",
+     "why": "time quote not found on page"
     }
    ]
   },
@@ -1919,7 +1848,7 @@
    "detail": "calendar",
    "tokens": [
     12775,
-    700
+    714
    ],
    "examples": []
   },
@@ -1932,8 +1861,8 @@
    "shows": 4,
    "detail": "calendar",
    "tokens": [
-    13982,
-    1064
+    14256,
+    1022
    ],
    "examples": []
   },
@@ -1956,7 +1885,7 @@
    "detail": "calendar",
    "tokens": [
     8794,
-    654
+    656
    ],
    "examples": []
   },
@@ -1970,7 +1899,7 @@
    "detail": "calendar",
    "tokens": [
     14507,
-    705
+    706
    ],
    "examples": []
   },
@@ -1983,8 +1912,8 @@
    "shows": 1,
    "detail": "calendar; dropped 1× start time not in time quote; +1 from event page https://www.freddysbar.com/events/freddys-halloween-dance-party",
    "tokens": [
-    25641,
-    708
+    25534,
+    709
    ],
    "examples": [
     {
@@ -2024,7 +1953,7 @@
    "detail": "calendar",
    "tokens": [
     13334,
-    367
+    376
    ],
    "examples": []
   },
@@ -2038,7 +1967,7 @@
    "detail": "calendar",
    "tokens": [
     5738,
-    395
+    402
    ],
    "examples": []
   },
@@ -2050,28 +1979,6 @@
    "status": "ok",
    "shows": 1,
    "detail": null
-  },
-  {
-   "name": "Jazz at Lincoln Center",
-   "url": "https://jazz.org/",
-   "read_url": "https://jazz.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 1× time quote not found on page; +2 on second look; event page gave no time (blocked)",
-   "tokens": [
-    11136,
-    1012
-   ],
-   "examples": [
-    {
-     "title": "GREG HUTCHINSON'S KIND OF NOW: THE PULSE OF MILES DAVIS",
-     "start_time": "",
-     "date_evidence": "OCT 30-31",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
   },
   {
    "name": "Knockdown Center",
@@ -2092,7 +1999,21 @@
    "detail": "calendar; +1 on second look",
    "tokens": [
     6675,
-    555
+    575
+   ],
+   "examples": []
+  },
+  {
+   "name": "Littlefield",
+   "url": "https://littlefieldnyc.com/",
+   "read_url": "https://littlefieldnyc.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    8925,
+    640
    ],
    "examples": []
   },
@@ -2106,7 +2027,7 @@
    "detail": "calendar",
    "tokens": [
     11044,
-    381
+    380
    ],
    "examples": []
   },
@@ -2134,7 +2055,7 @@
    "detail": "calendar",
    "tokens": [
     6997,
-    594
+    577
    ],
    "examples": []
   },
@@ -2148,7 +2069,7 @@
    "detail": "calendar",
    "tokens": [
     14361,
-    1040
+    1118
    ],
    "examples": []
   },
@@ -2162,7 +2083,7 @@
    "detail": "calendar",
    "tokens": [
     28686,
-    1244
+    1345
    ],
    "examples": []
   },
@@ -2174,6 +2095,35 @@
    "status": "ok",
    "shows": 1,
    "detail": null
+  },
+  {
+   "name": "Nublu Classic",
+   "url": "https://nublu.net/",
+   "read_url": "https://nublu.net/program",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar; dropped 2× listed at another venue; +2 on second look",
+   "tokens": [
+    8434,
+    982
+   ],
+   "examples": [
+    {
+     "title": "ILHAN SELECTS",
+     "start_time": "7:00 PM",
+     "date_evidence": "Saturday October 31",
+     "time_evidence": "7pm-11pm ILHAN SELECTS",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "Halloween Party",
+     "start_time": "11:30 PM",
+     "date_evidence": "Saturday October 31",
+     "time_evidence": "11:30pm-4am Halloween Party",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Ornithology Jazz Club",
@@ -2208,7 +2158,7 @@
    "detail": "calendar",
    "tokens": [
     5170,
-    1298
+    1315
    ],
    "examples": []
   },
@@ -2231,7 +2181,7 @@
    "detail": "calendar",
    "tokens": [
     21595,
-    429
+    447
    ],
    "examples": []
   },
@@ -2245,7 +2195,21 @@
    "detail": "calendar",
    "tokens": [
     6693,
-    603
+    609
+   ],
+   "examples": []
+  },
+  {
+   "name": "Queens Theatre",
+   "url": "https://queenstheatre.org/",
+   "read_url": "https://www.queenstheatre.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    10506,
+    516
    ],
    "examples": []
   },
@@ -2259,7 +2223,7 @@
    "detail": "calendar; +1 on second look",
    "tokens": [
     13670,
-    614
+    640
    ],
    "examples": []
   },
@@ -2270,10 +2234,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "detail": "calendar; dropped 1× listed in another city",
    "tokens": [
-    30078,
-    827
+    30327,
+    619
    ],
    "examples": [
     {
@@ -2281,7 +2245,7 @@
      "start_time": "7:30 PM",
      "date_evidence": "SAT 31 OCT ‘26 TONIGHT",
      "time_evidence": "7:30PM CT",
-     "why": "listed at another venue"
+     "why": "listed in another city"
     }
    ]
   },
@@ -2295,7 +2259,7 @@
    "detail": "calendar",
    "tokens": [
     11847,
-    775
+    786
    ],
    "examples": []
   },
@@ -2309,7 +2273,7 @@
    "detail": "calendar",
    "tokens": [
     6586,
-    640
+    599
    ],
    "examples": []
   },
@@ -2323,7 +2287,7 @@
    "detail": "calendar",
    "tokens": [
     15378,
-    595
+    589
    ],
    "examples": []
   },
@@ -2343,34 +2307,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 5,
-   "detail": "calendar; dropped 5× date quote not found on page; +5 on second look",
+   "detail": "calendar; +5 on second look",
    "tokens": [
     28571,
-    2846
+    2550
    ],
-   "examples": [
-    {
-     "title": "Obasi Akoto Steve Kirby Quartet",
-     "start_time": "6:00 PM",
-     "date_evidence": "TODAY + TOMORROW \\ OCT 31 SAT - NOV 01 SUN ... SAT OCT 31 ... LIVE AT SMALLS ... SETS AT 6:00 PM & 7:30 PM",
-     "time_evidence": "SETS AT 6:00 PM & 7:30 PM",
-     "why": "date quote not found on page"
-    },
-    {
-     "title": "Obasi Akoto Steve Kirby Quartet",
-     "start_time": "7:30 PM",
-     "date_evidence": "TODAY + TOMORROW \\ OCT 31 SAT - NOV 01 SUN ... SAT OCT 31 ... LIVE AT SMALLS ... SETS AT 6:00 PM & 7:30 PM",
-     "time_evidence": "SETS AT 6:00 PM & 7:30 PM",
-     "why": "date quote not found on page"
-    },
-    {
-     "title": "Joe Block Quintet",
-     "start_time": "9:00 PM",
-     "date_evidence": "SAT OCT 31 ... LIVE AT SMALLS ... SETS AT 9:00 PM & 10:30 PM",
-     "time_evidence": "SETS AT 9:00 PM & 10:30 PM",
-     "why": "date quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Smoke Jazz Club",
@@ -2378,11 +2320,11 @@
    "read_url": "https://tickets.smokejazz.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8641,
-    1045
+    8572,
+    711
    ],
    "examples": []
   },
@@ -2410,7 +2352,7 @@
    "detail": "calendar",
    "tokens": [
     7349,
-    398
+    399
    ],
    "examples": []
   },
@@ -2433,7 +2375,7 @@
    "detail": "calendar",
    "tokens": [
     26175,
-    645
+    661
    ],
    "examples": []
   },
@@ -2447,7 +2389,7 @@
    "detail": "calendar; dropped 3× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/cruzando-ensuenos-across-borders-mu; +1 from event page https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son; +1 from event page https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son",
    "tokens": [
     9484,
-    1066
+    1205
    ],
    "examples": [
     {
@@ -2492,7 +2434,7 @@
    "detail": "calendar",
    "tokens": [
     19959,
-    780
+    747
    ],
    "examples": []
   },
@@ -2506,7 +2448,7 @@
    "detail": "sent Friday, October 23, 2026",
    "tokens": [
     15390,
-    659
+    635
    ],
    "examples": []
   },
@@ -2519,8 +2461,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    14063,
-    636
+    13814,
+    652
    ],
    "examples": []
   },
@@ -2531,12 +2473,20 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "None; +1 on second look",
+   "detail": "None; dropped 1× time quote not found on page; +2 on second look",
    "tokens": [
-    22128,
-    721
+    22103,
+    1001
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Dabin Ryu \"Discomfort\" Album Release Concert",
+     "start_time": "7:00 PM",
+     "date_evidence": "31",
+     "time_evidence": "7:00 PM 10:00 PM The Jazz Gallery Sets at 7pm + 9pm ET",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "The Stone",
@@ -2548,7 +2498,7 @@
    "detail": "None",
    "tokens": [
     12604,
-    428
+    398
    ],
    "examples": []
   },
@@ -2571,7 +2521,7 @@
    "detail": "calendar",
    "tokens": [
     7847,
-    377
+    399
    ],
    "examples": []
   },
@@ -2582,25 +2532,18 @@
    "method": "AI",
    "status": "ok",
    "shows": 5,
-   "detail": "calendar; dropped 1× time quote is far from the title, 1× time quote not found on page; +2 on second look",
+   "detail": "calendar; dropped 1× start time not in time quote; +1 on second look",
    "tokens": [
-    25537,
-    1897
+    25556,
+    1610
    ],
    "examples": [
     {
      "title": "Devil Baby - Halloween Edition: Non-stop dance party with Jenny Lion",
      "start_time": "11:59pm",
      "date_evidence": "OCT 31",
-     "time_evidence": "Oct 31 ... Devil Baby - Halloween Edition: Non-stop dance party with Jenny Lion ... 11:59pm",
-     "why": "time quote is far from the title"
-    },
-    {
-     "title": "Halloween Spooktackular",
-     "start_time": "10:00pm",
-     "date_evidence": "Oct\n31\nHalloween Spooktackular",
-     "time_evidence": "Oct\n31\nHalloween Spooktackular\n...\n10:00pm",
-     "why": "time quote not found on page"
+     "time_evidence": "Oct\n31\nDevil Baby - Halloween Edition: Non-stop dance party with Jenny Lion\nREGISTER\nOct 31\nMaggie's Scary Story Contest",
+     "why": "start time not in time quote"
     }
    ]
   },
@@ -2623,7 +2566,7 @@
    "detail": "calendar",
    "tokens": [
     7443,
-    386
+    370
    ],
    "examples": []
   },
@@ -2637,7 +2580,7 @@
    "detail": "calendar",
    "tokens": [
     8803,
-    430
+    390
    ],
    "examples": []
   }
