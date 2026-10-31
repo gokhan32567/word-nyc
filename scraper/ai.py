@@ -285,6 +285,17 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     if start is None or (not from_venue_sets and start not in times_in(te)):
         return None, "start time not in time quote"
     which = which_night(de, night)
+    if which is None and de.strip().rstrip(".") == str(night.day):
+        # "OCT / 31 / Show title": a bare day number counts only with tonight's month right beside it and the
+        # title close after it (bare numbers in month grids caused wrong dates before)
+        mon = MONTHS[night.month - 1]
+        near_month = re.compile(rf"\b(?:{mon}|{mon[:3]})\.?\s*{night.day}\b|\b{night.day}\s*(?:{mon}|{mon[:3]})\b")
+        t = _squash(title)
+        anchor0 = t if t in page else max((w for w in significant(title) if w in page), key=len, default="")
+        for m in near_month.finditer(page):
+            if anchor0 and anchor0 in page[m.end():m.end() + 600]:
+                which = "tonight"
+                break
     late = start < ROLLOVER_HOUR * 60
     if which is None or (which == "next" and not late):
         return None, "date quote is not tonight"
