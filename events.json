@@ -1,7 +1,7 @@
 {
   "date": "2026-10-31",
-  "generated": "2026-10-31T11:54:05-04:00",
-  "count": 178,
+  "generated": "2026-10-31T12:11:38-04:00",
+  "count": 183,
   "events": [
     {
       "title": "9AM Banger: Halloween at 9AM",
@@ -42,7 +42,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Listening party for the Queens of the Stone Age album Perfecth at the store's upper floor.",
+      "description": "Listening party for the Queens of the Stone Age album Perfecth at the Rough Trade Above space.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.roughtrade.com/en-us/events",
@@ -86,7 +86,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Winners concert of a music competition, held in Weill Recital Hall.",
+      "description": "Winners concert of the 7th New York Global Music Competition in Weill Recital Hall.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
@@ -108,7 +108,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Film screening in the New Classics series, showing the 1984 comedy Ghostbusters.",
+      "description": "Film screening in the New Classics Film Series, showing the 1984 comedy Ghostbusters.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.nypl.org/locations/lpa",
@@ -132,7 +132,7 @@
       "subgenre": null,
       "price": "$35.00 - $35.00",
       "program": [],
-      "description": "Live set followed by a signing with Evil Island, held at Rough Trade Above.",
+      "description": "Live performance and signing by Evil Island at Rough Trade Above.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.roughtrade.com/en-us/events",
@@ -152,9 +152,9 @@
       "url": "https://thegreenroom42.venuetix.com/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
-      "price": "$21.75",
+      "price": "$21.75 +$4.82 Fees",
       "program": [],
-      "description": "Broadway-themed performance at The Green Room 42.",
+      "description": "Broadway-themed show at The Green Room 42.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://thegreenroom42.venuetix.com/",
@@ -176,7 +176,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed event at the Apollo's Laura and Frank Baker Gallery, listed on the Apollo's event calendar.",
+      "description": "Apollo Halloween event held in the Laura and Frank Baker Gallery, 2 to 4 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.apollotheater.org/ticket-and-events",
@@ -198,7 +198,7 @@
       "subgenre": null,
       "price": "FREE",
       "program": [],
-      "description": "Free family Halloween celebration with carnival games, arts and crafts, candy giveaways, indoors and outdoors.",
+      "description": "Free family Halloween celebration with carnival games, arts and crafts, and candy giveaways, indoors and outdoors.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
@@ -261,9 +261,16 @@
       "url": "https://www.eventbrite.com/e/trunk-o-treat-tickets-1999417704176",
       "genre": "Other",
       "subgenre": null,
-      "price": "General admission is $25 per family",
-      "program": [],
-      "description": "Family Halloween festival with magic show, face painting, pumpkin decorating, trunk-or-treating and vendors, benefiting Make-A-Wish.",
+      "price": "General admission is $25 per family. FREE for families who d",
+      "program": [
+        "Magic Show",
+        "Face Painting",
+        "Pumpkin Decorating",
+        "Trunk-or-Treating",
+        "Halloween Treat Bags",
+        "Local Vendors"
+      ],
+      "description": "Family Halloween festival with trunk-or-treating, magic show, face painting, and pumpkin decorating, with proceeds going to Make-A-Wish.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.culturelablic.org/",
@@ -397,7 +404,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Interactive murder mystery event with a masquerade ball theme; venue not stated on the listing.",
+      "description": "Interactive murder mystery event listed for Halloween afternoon; venue not named on the page.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
@@ -465,7 +472,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Open mic event for comedy performers at the bar.",
+      "description": "Open mic event with sign-ups for comedy and performance acts.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
@@ -487,7 +494,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed event held upstairs at Freda, listed at 4:00 PM.",
+      "description": "Hallowtide event held in the upstairs bar room at Freda.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barfreda.com/",
@@ -509,7 +516,7 @@
       "subgenre": null,
       "price": "$15 suggested donate in advance or pay in person",
       "program": [],
-      "description": "Bilingual Latin-American children's music show for ages 2 to 8, with a special Halloween edition.",
+      "description": "Bilingual Latin-American children's music show for ages 2 to 8, with a Halloween edition.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
@@ -549,11 +556,11 @@
       "time": "4:00 PM",
       "end": null,
       "url": "https://clubcummingnyc.com/schedule/jrreag789czd5wg-8my6p-x9k8a-hbw6j-2t8eh-ndbt6-xw4p8-8xffs-jyst5-npcbt-rnx6a-63t94-mnm68-s6tp9-xrj4x-5a8gc-ns9b5-4f2em-24fkn-937bk-t2xkx-lphbf-d32lx",
-      "genre": "Pop",
+      "genre": "Ballet & Dance",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Afternoon tea dance at Club Cumming.",
+      "description": "Afternoon tea dance at Club Cumming, running 4:00 PM to 8:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://clubcummingnyc.com/",
@@ -597,7 +604,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Early screening-style show of The Rocky Horror Picture Show, 16+ audience.",
+      "description": "Early screening-style showing of the Rocky Horror Picture Show, for ages 16 and up.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
@@ -686,9 +693,9 @@
       "subgenre": null,
       "price": "$15.92",
       "program": [],
-      "description": "A scary story contest hosted at Union Hall on Halloween evening.",
+      "description": "Scary story contest with a lineup of performers at Union Hall.",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194767708%2F282041210522%2F1%2Foriginal.20260930-213420?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fdc2eea9dfbb93e78aba7039416f2394",
-      "source": "venue-ai+venue-data",
+      "source": "venue-ai+venue-ai+venue-data",
       "listing_url": "https://unionhallny.com/",
       "artist": "Tristan Bannerman, George Civeris, Jorden DeFilippo",
       "id": 30
@@ -708,7 +715,7 @@
       "subgenre": "Jazz",
       "price": "$35.46 - $45.76",
       "program": [],
-      "description": "Jazz trio performance in the Birdland Jazz Club room.",
+      "description": "Jazz trio performing at the Birdland Jazz Club on Saturday, October 31.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
@@ -732,7 +739,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Tour show listed in today's sidebar; venue not named on the page for this entry.",
+      "description": "Tour show listed in the Today's Shows sidebar; venue not named in the page text.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
@@ -758,7 +765,7 @@
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Touring show with openers Cheem and Muttlee; doors at 5:30 PM at Mercury Lounge.",
+      "description": "Touring rock show with support acts Cheem and Muttlee at Mercury Lounge.",
       "image": "https://s1.ticketm.net/dam/a/e28/1166783f-3d28-4c45-ad50-84cdfeea7e28_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
@@ -783,7 +790,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz duet set with Frank Carlberg and Adam Kolker. One drink minimum; tips for musicians encouraged.",
+      "description": "Afternoon duet set with Frank Carlberg and Adam Kolker, one drink minimum.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
@@ -809,7 +816,7 @@
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "Brooklyn punk duo releases its riot grrrl album with guitar, piano and vibraphone.",
+      "description": "Brooklyn punk duo's album release party for a riot grrrl record mixing punk guitars with vibraphone and piano.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
@@ -831,7 +838,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live Blonde on Blonde 60th anniversary tribute show with doors at 5PM and show at 6PM.",
+      "description": "Live tribute celebrating the 60th anniversary of Blonde on Blonde, with 5PM doors and 6PM show.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.cafewha.com/",
@@ -899,7 +906,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween event listed on the Market Hotel calendar with a ticket link.",
+      "description": "Halloween event listed at Market Hotel at 6:00 PM on October 31.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.markethotel.org/calendar#/events",
@@ -951,7 +958,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet set at Smalls; first of two evening sets.",
+      "description": "Jazz quartet set at Smalls, first of two evening sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
@@ -959,7 +966,7 @@
       "id": 41
     },
     {
-      "title": "WHO'S DANCING? HALLOWEEN No Phones Live Funk and Disco Halloween Party",
+      "title": "WHO'S DANCING? HALLOWEEN No Phones Live Funk and Disco Party",
       "performers": [
         "X&ND",
         "The Liberation"
@@ -971,7 +978,7 @@
       "date": "2026-10-31",
       "time": "6:30 PM",
       "end": null,
-      "url": "https://wl.eventim.us/event/whos-dancing-halloween-no-phones-live-funk-and-disco-party/705144?afflky=BabysAllRightBrooklyn#talent",
+      "url": "https://wl.eventim.us/event/whos-dancing-halloween-no-phones-live-funk-and-disco-party/705144?afflky=BabysAllRightBrooklyn#inline_content1",
       "genre": "Pop",
       "subgenre": null,
       "price": null,
@@ -998,7 +1005,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed event in the basement at Freda, listed at 6:30 PM.",
+      "description": "Hallowtide event held in the basement space at Freda.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barfreda.com/",
@@ -1103,7 +1110,7 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Cabaret show with Christine Ebersole and Billy Stritch at 54 Below.",
+      "description": "Cabaret performance by Christine Ebersole with pianist Billy Stritch at 54 Below.",
       "image": "https://s1.ticketm.net/dam/c/4f2/0109888a-61b5-4525-8432-b026ef04f4f2_105631_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://54below.org/calendar/",
@@ -1147,7 +1154,7 @@
       "subgenre": "Jazz",
       "price": "$45.76",
       "program": [],
-      "description": "Jazz trio performance in the Birdland Theater room.",
+      "description": "Jazz trio performing in the Birdland Theater on Saturday, October 31.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
@@ -1193,12 +1200,34 @@
       "subgenre": "Funk",
       "price": "$36.06",
       "program": [],
-      "description": "Live music show with doors at 6:00 PM, tickets via Ticketweb.",
+      "description": "Live music show at Bowery Palace with doors at 6:00 PM. Tickets are listed through Ticketweb.",
       "image": "https://s1.ticketm.net/dam/a/84a/8ddcd1ae-dcb5-433b-a599-025f241f384a_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.bowerypalace.com/",
       "artist": "The Nth Power",
       "id": 51
+    },
+    {
+      "title": "Live jazz",
+      "performers": [],
+      "venue": "Cellar Dog",
+      "address": "75 Christopher St, New York, NY 10014",
+      "lat": 40.73363,
+      "lng": -74.00328,
+      "date": "2026-10-31",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.cellardog.net/",
+      "genre": "Jazz",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Cellar Dog's house jazz, every night from 7 PM in the West Village bar and pool room.",
+      "image": null,
+      "source": "venue-regular",
+      "listing_url": "https://www.cellardog.net/",
+      "artist": "Live jazz",
+      "id": 52
     },
     {
       "title": "Rossini - Barber of Seville",
@@ -1220,7 +1249,7 @@
       "source": "venue-data",
       "listing_url": "https://dimennacenter.org/calendar",
       "artist": "Rossini - Barber of Seville",
-      "id": 52
+      "id": 53
     },
     {
       "title": "Hechter Ubarry: Call Me Papo",
@@ -1242,7 +1271,7 @@
       "source": "venue-data",
       "listing_url": "https://shows.donttellmamanyc.com/",
       "artist": "Hechter Ubarry: Call Me Papo",
-      "id": 53
+      "id": 54
     },
     {
       "title": "The Petty Toms",
@@ -1264,7 +1293,7 @@
       "source": "venue-ai",
       "listing_url": "https://dromnyc.com/",
       "artist": "The Petty Toms",
-      "id": 54
+      "id": 55
     },
     {
       "title": "ELSEWHERE HALLOWEEN: CANNELLE, EQ, TOMMY FLEECE, CORRIDOS KETAMINA + MORE",
@@ -1286,12 +1315,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween night event in The Hall with multiple DJs and performers, listed with more acts.",
+      "description": "Halloween night event at Elsewhere's The Hall featuring DJ and electronic acts plus more.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.elsewhere.club/events",
       "artist": "Cannelle, EQ, Tommy Fleece",
-      "id": 55
+      "id": 56
     },
     {
       "title": "Nasser Al-Rayess",
@@ -1313,7 +1342,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thegramercytheatre.com/shows",
       "artist": "Nasser Al-Rayess",
-      "id": 56
+      "id": 57
     },
     {
       "title": "Greg Hutchinson's Kind of Now: The Pulse of Miles Davis",
@@ -1333,12 +1362,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Drummer Greg Hutchinson leads a tribute to the music of Miles Davis at Jazz at Lincoln Center.",
+      "description": "Jazz performance honoring Miles Davis, led by drummer Greg Hutchinson, at Jazz at Lincoln Center.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Greg Hutchinson, Gregory Hutchinson",
-      "id": 57
+      "id": 58
     },
     {
       "title": "CARSIE BLANTON",
@@ -1355,12 +1384,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Performance at Littlefield on October 31, 2026, starting at 7 PM.",
+      "description": "Early evening show at Littlefield listed for October 31.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://lpr.com/",
       "artist": "CARSIE BLANTON",
-      "id": 58
+      "id": 59
     },
     {
       "title": "ILHAN SELECTS",
@@ -1377,12 +1406,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "DJ set listed for Saturday evening, 7pm to 11pm.",
+      "description": "DJ set listed for the early evening on Saturday, October 31.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://nublu.net/program",
       "artist": "ILHAN SELECTS",
-      "id": 59
+      "id": 60
     },
     {
       "title": "Cabaret Room: A Very DINGBATS Halloween, 7:00pm",
@@ -1394,7 +1423,7 @@
       "date": "2026-10-31",
       "time": "7:00 PM",
       "end": "8:30 PM",
-      "url": "http://www.pangeanyc.com/show/cabaret-room-a-very-dingbats-halloween-700pm/",
+      "url": "https://www.pangeanyc.com/show/cabaret-room-a-very-dingbats-halloween-700pm/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": "$40",
@@ -1402,9 +1431,9 @@
       "description": null,
       "image": null,
       "source": "venue-data",
-      "listing_url": "http://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
+      "listing_url": "https://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
       "artist": "Cabaret Room: A Very DINGBATS Halloween, 7:00pm",
-      "id": 60
+      "id": 61
     },
     {
       "title": "PETE'S HALLOWEEN PARTY!",
@@ -1421,12 +1450,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween party event at the venue.",
+      "description": "Halloween party at the venue.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "PETE'S HALLOWEEN PARTY!",
-      "id": 61
+      "id": 62
     },
     {
       "title": "COSTUME CONTEST/COMEDY SHOW & PREGAME",
@@ -1443,12 +1472,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Costume contest combined with a comedy show and pregame.",
+      "description": "Costume contest and comedy show with a pregame portion.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "COSTUME CONTEST/COMEDY SHOW & PREGAME",
-      "id": 62
+      "id": 63
     },
     {
       "title": "Night of the Living 90s & 00s Alt Icons: Jesse Torres • Claire Ozmun Band • Selena Tibert",
@@ -1470,7 +1499,7 @@
       "source": "venue-data",
       "listing_url": "https://pianosnyc.com/shows",
       "artist": "Night of the Living 90s & 00s Alt Icons: Jesse Torres • Claire Ozmun Band • Selena Tibert",
-      "id": 63
+      "id": 64
     },
     {
       "title": "Paul Oakenfold & The Crystal Method",
@@ -1492,12 +1521,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Electronic music show with Paul Oakenfold, The Crystal Method and Liquid Todd; doors at 7 PM.",
+      "description": "Electronic performance by Paul Oakenfold & The Crystal Method, with Liquid Todd; doors at 7 PM.",
       "image": "https://s1.ticketm.net/dam/a/667/3d7ee04b-4921-4e98-ad7e-c19bd3218667_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.racketnyc.com/",
       "artist": "Paul Oakenfold, The Crystal Method, Liquid Todd",
-      "id": 64
+      "id": 65
     },
     {
       "title": "The Rocky Horror Picture Show (21+)",
@@ -1514,12 +1543,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Evening screening-style show of The Rocky Horror Picture Show, 21+ audience.",
+      "description": "Evening showing of the Rocky Horror Picture Show, for ages 21 and up.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
       "artist": "The Rocky Horror Picture Show (21+)",
-      "id": 65
+      "id": 66
     },
     {
       "title": "Adjua Ajamu Trio",
@@ -1538,12 +1567,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Guitarist Adjua Ajamu performs with his trio at Terra Blues in an early evening set.",
+      "description": "Guitarist Adjua Ajamu performs a trio set at Terra Blues.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Adjua Ajamu",
-      "id": 66
+      "id": 67
     },
     {
       "title": "Cruzando Ensueños | Across Borders |  Musical Monologue",
@@ -1565,7 +1594,7 @@
       "source": "venue-data",
       "listing_url": "https://www.terraza7.com/detalles-y-registro/cruzando-ensuenos-across-borders-musical-monologue-2",
       "artist": "Cruzando Ensueños | Across Borders |  Musical Monologue",
-      "id": 67
+      "id": 68
     },
     {
       "title": "A Drinking Game NYC: The Nightmare Before Christmas",
@@ -1587,7 +1616,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thebellhouseny.com/",
       "artist": "A Drinking Game NYC: The Nightmare Before Christmas",
-      "id": 68
+      "id": 69
     },
     {
       "title": "Halloween Cover Show ft~ Deftones, Joyce Manor, Modest Mouse + Siouxsie and the Banshees — The Broadway",
@@ -1609,7 +1638,7 @@
       "source": "venue-data",
       "listing_url": "https://www.thebroadway.nyc/showcalendar/halloween-cover-show-ft-deftones-joyce-manor-modest-mouse-siouxsie-and-the-banshees",
       "artist": "Halloween Cover Show ft~ Deftones, Joyce Manor, Modest Mouse + Siouxsie and the Banshees — The Broadway",
-      "id": 69
+      "id": 70
     },
     {
       "title": "Broadway Sings® Madonna",
@@ -1626,12 +1655,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Broadway performers sing Madonna songs in a tribute show.",
+      "description": "Broadway performers sing Madonna songs in a show-style tribute at the venue.",
       "image": null,
       "source": "newsletter",
       "listing_url": "https://www.thecuttingroomnyc.com/",
       "artist": "Broadway Sings® Madonna",
-      "id": 70
+      "id": 71
     },
     {
       "title": "Show No Fear",
@@ -1651,14 +1680,14 @@
       "url": "https://thegreenroom42.venuetix.com/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
-      "price": "$21.75",
+      "price": "$21.75 +$4.82 Fees",
       "program": [],
-      "description": null,
+      "description": "A new real-world horror play, by the creator of a Amazon horror series.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://thegreenroom42.venuetix.com/",
       "artist": "Nathan Lee Graham, Tom Hewitt, Peter Vack",
-      "id": 71
+      "id": 72
     },
     {
       "title": "Juilliard415 and Yale Schola Cantorum Conducted by Grete Pedersen | Bach’s \"St. Matthew Passion\"",
@@ -1686,7 +1715,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Juilliard415, Yale Schola Cantorum, Grete Pedersen",
-      "id": 72
+      "id": 73
     },
     {
       "title": "Neurosis",
@@ -1709,7 +1738,7 @@
       "image": "https://s1.ticketm.net/dam/a/5be/17d2b26c-8427-4dc5-8d1f-55c7d7a595be_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Primitive Man",
-      "id": 73
+      "id": 74
     },
     {
       "title": "Love Will Tear Us Apart On Halloween",
@@ -1731,7 +1760,29 @@
       "source": "venue-ai",
       "listing_url": "https://www.wonderville.nyc/",
       "artist": "Love Will Tear Us Apart On Halloween",
-      "id": 74
+      "id": 75
+    },
+    {
+      "title": "The Rocky Horror Picture Show",
+      "performers": [],
+      "venue": "Beacon Theatre",
+      "address": "2124 Broadway, New York, NY 10023",
+      "lat": 40.78049,
+      "lng": -73.98113,
+      "date": "2026-10-31",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.msg.com/events-tickets/the-rocky-horror-picture-show-the-chicago-theatre-october-2026/0700649C944F310B",
+      "genre": "Cabaret & Musicals",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Rocky Horror Picture Show Spooktacular Tour, listed at a Chicago venue, not the Beacon Theatre.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre&venues=KovZpZAEAd6A",
+      "artist": "The Rocky Horror Picture Show",
+      "id": 76
     },
     {
       "title": "A HAPPY HALLOWEEN BrownstoneJAZZ FEST CONCERT",
@@ -1752,29 +1803,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "A HAPPY HALLOWEEN BrownstoneJAZZ FEST CONCERT",
-      "id": 75
-    },
-    {
-      "title": "Get Out in Concert",
-      "performers": [],
-      "venue": "David Geffen Hall",
-      "address": "10 Lincoln Center Plaza, New York, NY 10023",
-      "lat": 40.7724,
-      "lng": -73.9834,
-      "date": "2026-10-31",
-      "time": "7:30 PM",
-      "end": null,
-      "url": "https://www.nyphil.org/concerts-tickets/2627/get-out-in-concert",
-      "genre": "Classical",
-      "subgenre": null,
-      "price": null,
-      "program": [],
-      "description": "New York Philharmonic concert titled Get Out in Concert.",
-      "image": null,
-      "source": "venue-ai",
-      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
-      "artist": "Get Out in Concert",
-      "id": 76
+      "id": 77
     },
     {
       "title": "New York Philharmonic: Get Out in Concert",
@@ -1797,7 +1826,29 @@
       "image": "https://s1.ticketm.net/dam/a/0c7/c28ccd67-14a5-40f6-9c2b-7da57f8ac0c7_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "New York Philharmonic",
-      "id": 77
+      "id": 78
+    },
+    {
+      "title": "Get Out in Concert",
+      "performers": [],
+      "venue": "David Geffen Hall",
+      "address": "10 Lincoln Center Plaza, New York, NY 10023",
+      "lat": 40.7724,
+      "lng": -73.9834,
+      "date": "2026-10-31",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.nyphil.org/concerts-tickets/2627/get-out-in-concert",
+      "genre": "Classical",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "New York Philharmonic concert titled Get Out in Concert.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
+      "artist": "Get Out in Concert",
+      "id": 79
     },
     {
       "title": "JOHN DI MARTINO'S MONSTER MASH QUINTET",
@@ -1816,12 +1867,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quintet performance at The Django with a first set starting at 7:30 PM.",
+      "description": "Jazz quintet performance led by John Di Martino, first set at 7:30 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "John Di Martino",
-      "id": 78
+      "id": 80
     },
     {
       "title": "Friday the 13th Part VIII: Jason Takes Manhattan",
@@ -1843,7 +1894,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Friday the 13th Part VIII: Jason Takes Manhattan",
-      "id": 79
+      "id": 81
     },
     {
       "title": "SCARY GOOD COMEDY WITH BRITTANY CARNEY",
@@ -1867,7 +1918,7 @@
       "source": "venue-ai",
       "listing_url": "https://littlefieldnyc.com/",
       "artist": "Brittany Carney",
-      "id": 80
+      "id": 82
     },
     {
       "title": "Simon Moullier & Davis Whitfield",
@@ -1892,7 +1943,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Simon Moullier, Davis Whitfield",
-      "id": 81
+      "id": 83
     },
     {
       "title": "Nabihah Iqbal",
@@ -1913,7 +1964,7 @@
       "image": "https://s1.ticketm.net/dam/a/85f/3b8c76a0-2d10-4011-af19-3ef6a57a085f_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Nabihah Iqbal",
-      "id": 82
+      "id": 84
     },
     {
       "title": "The Rocky Horror Picture Show",
@@ -1935,7 +1986,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "The Rocky Horror Picture Show",
-      "id": 83
+      "id": 85
     },
     {
       "title": "Obasi Akoto Steve Kirby Quartet",
@@ -1957,12 +2008,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet set at Smalls; second of two evening sets.",
+      "description": "Jazz quartet set at Smalls, second of two evening sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Steve Kirby, TK Blue, Alon Benjamini",
-      "id": 84
+      "id": 86
     },
     {
       "title": "East Nash Grass",
@@ -1979,12 +2030,12 @@
       "subgenre": "Bluegrass",
       "price": "$27.27–$44.22",
       "program": [],
-      "description": "Bluegrass-style country act presented by CEG and HearFirst at The Bitter End.",
+      "description": "Bluegrass and newgrass band presented by CEG and HearFirst at The Bitter End.",
       "image": "https://s1.ticketm.net/dam/c/677/c58dd0af-cda8-49b2-bdaf-068540c3a677_106541_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "East Nash Grass",
-      "id": 85
+      "id": 87
     },
     {
       "title": "Hot Gossip with Jonathan van Halem",
@@ -2007,12 +2058,12 @@
       "subgenre": null,
       "price": "$15.92",
       "program": [],
-      "description": "A comedy show featuring Jonathan van Halem and guests at Union Hall.",
+      "description": "A comedy show hosted by Jonathan van Halem at Union Hall.",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195652477%2F282041210522%2F1%2Foriginal.20261013-001441?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=3ab1c1b225c018eb7a0be2aec9a270b4",
-      "source": "venue-ai+venue-data",
+      "source": "venue-ai+venue-ai+venue-data",
       "listing_url": "https://unionhallny.com/",
       "artist": "Jon Rudnitsky, Ash Diggs, Meredith Dietz",
-      "id": 86
+      "id": 88
     },
     {
       "title": "Jacuzzi Boys, Abby Jeanne, DJ Jonathan Toubin",
@@ -2034,7 +2085,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Jacuzzi Boys, Abby Jeanne, DJ Jonathan Toubin",
-      "id": 87
+      "id": 89
     },
     {
       "title": "Theo Bleckmann, Ben Monder and Tom Rainey",
@@ -2055,12 +2106,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio set with Theo Bleckmann, Ben Monder and Tom Rainey. No cover; one drink minimum.",
+      "description": "Jazz trio set with Theo Bleckmann, Ben Monder and Tom Rainey, no cover, one drink minimum.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
       "artist": "Theo Bleckmann, Ben Monder, Tom Rainey",
-      "id": 88
+      "id": 90
     },
     {
       "title": "DIONNE WEREWOLF - The Halloween edition",
@@ -2086,12 +2137,12 @@
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "Werewolf orchestra performs Burt Bacharach and Dionne Warwick songs in a Halloween edition.",
+      "description": "Werewolf orchestra performs Burt Bacharach and Dionne Warwick songs in a Halloween edition show.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Katie Eastburn, Clara Kennedy, Erin Flannery",
-      "id": 89
+      "id": 91
     },
     {
       "title": "RAWAYANA - ¿Dónde es el after? World Tour",
@@ -2114,7 +2165,7 @@
       "image": "https://s1.ticketm.net/dam/a/316/525f0ed8-7730-4797-90a5-01b1c4c21316_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Rawayana",
-      "id": 90
+      "id": 92
     },
     {
       "title": "Harry Styles: Together, Together. Harryween.",
@@ -2133,12 +2184,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Harry Styles concert listed for tonight; the page does not name this venue for the event.",
+      "description": "Harry Styles concert listed for tonight; the listing does not name the Beacon Theatre as the venue.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre&venues=KovZpZAEAd6A",
       "artist": "Harry Styles",
-      "id": 91
+      "id": 93
     },
     {
       "title": "Robert Glasper X Halloween with Meshell Ndegeocello & Chris Dave",
@@ -2162,7 +2213,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Meshell Ndegeocello",
-      "id": 92
+      "id": 94
     },
     {
       "title": "Downstate",
@@ -2183,7 +2234,7 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Downstate",
-      "id": 93
+      "id": 95
     },
     {
       "title": "Death By Disco: New York's Biggest Halloween Pop-Up",
@@ -2200,12 +2251,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed disco pop-up party at City Winery NYC on Saturday night.",
+      "description": "Halloween pop-up party event with disco-era music at City Winery New York City.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://citywinery.com/pages/locations/new-york-city",
       "artist": "Death By Disco: New York's Biggest Halloween Pop-Up",
-      "id": 94
+      "id": 96
     },
     {
       "title": "Freddy's Halloween Dance Party with DJ Evil Dee & Ben the Beyonder — Freddy's Bar",
@@ -2227,7 +2278,7 @@
       "source": "venue-data",
       "listing_url": "https://www.freddysbar.com/events/freddys-halloween-dance-party",
       "artist": "Freddy's Halloween Dance Party with DJ Evil Dee & Ben the Beyonder — Freddy's Bar",
-      "id": 95
+      "id": 97
     },
     {
       "title": "Stella Blue's Band \"Stellaween\" - Grateful Dead Tribute",
@@ -2248,7 +2299,7 @@
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Stella Blue's Band \"Stellaween\" - Grateful Dead Tribute",
-      "id": 96
+      "id": 98
     },
     {
       "title": "Lowlands Halloween",
@@ -2270,7 +2321,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.lowlandsbar.com/events",
       "artist": "Lowlands Halloween",
-      "id": 97
+      "id": 99
     },
     {
       "title": "Harry Styles: Together, Together. Harryween.",
@@ -2294,7 +2345,7 @@
       "image": "https://s1.ticketm.net/dam/a/2c8/8b6d9420-66c7-4bcb-877b-0ff0238da2c8_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Harry Styles, Jamie xx",
-      "id": 98
+      "id": 100
     },
     {
       "title": "Metropolitan Opera presents Lincoln in the Bardo",
@@ -2317,7 +2368,7 @@
       "image": "https://s1.ticketm.net/dam/c/038/cddd6a14-c959-4d67-8db3-93170b1a9038_105551_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Metropolitan Opera",
-      "id": 99
+      "id": 101
     },
     {
       "title": "MICO",
@@ -2339,7 +2390,7 @@
       "source": "venue-data+ticketmaster",
       "listing_url": "https://www.bowerypresents.com/music-hall-of-williamsburg/",
       "artist": "MICO",
-      "id": 100
+      "id": 102
     },
     {
       "title": "Lost Boys Musical w/ Unknown Mortal Orchestra",
@@ -2363,7 +2414,7 @@
       "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Lost Boys Musical, Unknown Mortal Orchestra",
-      "id": 101
+      "id": 103
     },
     {
       "title": "ANNUAL HALLOWEEN COSTUME PARTY, 8:00pm, no cover",
@@ -2375,7 +2426,7 @@
       "date": "2026-10-31",
       "time": "8:00 PM",
       "end": "11:00 PM",
-      "url": "http://www.pangeanyc.com/show/annual-halloween-costume-party-800pm-no-cover/",
+      "url": "https://www.pangeanyc.com/show/annual-halloween-costume-party-800pm-no-cover/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
@@ -2383,9 +2434,9 @@
       "description": null,
       "image": null,
       "source": "venue-data",
-      "listing_url": "http://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
+      "listing_url": "https://www.pangeanyc.com/show/cabaret-room-pangea-jazz-night-series-jane-scheckter-700pm/",
       "artist": "ANNUAL HALLOWEEN COSTUME PARTY, 8:00pm, no cover",
-      "id": 102
+      "id": 104
     },
     {
       "title": "Charo",
@@ -2398,16 +2449,16 @@
       "time": "8:00 PM",
       "end": null,
       "url": "https://www.queenstheatre.org/events/charo-5cdn",
-      "genre": "Pop",
+      "genre": "Latin",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Charo performs a concert at Queens Theatre on Halloween night.",
+      "description": "Latin music performance by Charo at Queens Theatre on Saturday night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.queenstheatre.org/",
       "artist": "Charo",
-      "id": 103
+      "id": 105
     },
     {
       "title": "Harry Styles: Together, Together. Harryween.",
@@ -2426,12 +2477,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Concert listed on the calendar for tonight, with a link to event details.",
+      "description": "Concert listed tonight; the page does not name a venue for this entry.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "Harry Styles",
-      "id": 104
+      "id": 106
     },
     {
       "title": "Tone's Bluegrass Jam",
@@ -2442,18 +2493,18 @@
       "lng": -74.0168,
       "date": "2026-10-31",
       "time": "8:00 PM",
-      "end": "11:59 PM",
+      "end": "1:00 AM",
       "url": "https://www.sunnysredhook.com/calendar2/",
       "genre": "Folk & Americana",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Bluegrass jam returning to Saturday nights, 8 PM to 1 AM, open to all, 21 and older.",
+      "description": "Saturday bluegrass jam running 8 PM to 1 AM; open to all, 21 and older.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.sunnysredhook.com/calendar2/",
       "artist": "Tone's Bluegrass Jam",
-      "id": 105
+      "id": 107
     },
     {
       "title": "FREE SHOW: UNION GHOULS (spooky all star spooky cover band) • SMOOTA TETE A TETE • FATHERSBAUGH (as Devo)",
@@ -2475,7 +2526,7 @@
       "source": "venue-data",
       "listing_url": "https://www.union-pool.com/calendar",
       "artist": "FREE SHOW: UNION GHOULS (spooky all star spooky cover band) • SMOOTA TETE A TETE • FATHERSBAUGH (as Devo)",
-      "id": 106
+      "id": 108
     },
     {
       "title": "AARON PARKS TRIO",
@@ -2496,12 +2547,36 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio led by pianist Aaron Parks with bassist Ben Street and drummer Billy Hart, running a week-long engagement.",
+      "description": "Jazz piano trio engagement running October 27 through November 1 at the Village Vanguard.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://villagevanguard.com/",
       "artist": "Aaron Parks, Ben Street, Billy Hart",
-      "id": 107
+      "id": 109
+    },
+    {
+      "title": "HALLOWEEN ROCK SHOW & DJ MASQUERADE - KAMIJO",
+      "performers": [
+        "KAMIJO"
+      ],
+      "venue": "Webster Hall",
+      "address": "125 E 11th St, New York, NY 10003",
+      "lat": 40.73176,
+      "lng": -73.98909,
+      "date": "2026-10-31",
+      "time": "8:00 PM",
+      "end": null,
+      "url": "https://www.websterhall.com/events/detail?event_id=1464775",
+      "genre": "Rock",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Halloween rock show and DJ masquerade featuring Kamijo at the Vampyre Masquerade room.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.websterhall.com/shows/",
+      "artist": "KAMIJO",
+      "id": 110
     },
     {
       "title": "RON CARTER'S FOURSIGHT QUARTET",
@@ -2520,12 +2595,12 @@
       "subgenre": "Jazz",
       "price": "$45.76",
       "program": [],
-      "description": "Jazz quartet performance in the Birdland Jazz Club room; listed as sold out.",
+      "description": "Jazz quartet performing at the Birdland Jazz Club on Saturday, October 31; sold out.",
       "image": "https://s1.ticketm.net/dam/a/dcf/c828ce8e-c1f0-450d-82a3-8874cf64adcf_1755271_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Ron Carter",
-      "id": 108
+      "id": 111
     },
     {
       "title": "Billy Childs Trio plus special guest Steve Wilson",
@@ -2552,7 +2627,7 @@
       "source": "venue-ai",
       "listing_url": "https://tickets.smokejazz.com/",
       "artist": "Steve Wilson, Billy Childs, Matt Penman",
-      "id": 109
+      "id": 112
     },
     {
       "title": "Oz Noy and Dave Weckl",
@@ -2573,7 +2648,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Oz Noy and Dave Weckl",
-      "id": 110
+      "id": 113
     },
     {
       "title": "Sexmob Kurt Weill Halloween",
@@ -2599,19 +2674,19 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed Kurt Weill program by Sexmob, a quartet led by trumpeter Steven Bernstein.",
+      "description": "Sexmob performs Kurt Weill material for Halloween with Steven Bernstein, Briggan Krauss, Tony Scherr and Kenny Wollesen.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "http://thestonenyc.com/calendar.php",
       "artist": "Steven Bernstein, Briggan Krauss, Tony Scherr",
-      "id": 111
+      "id": 114
     },
     {
-      "title": "MICHAEL BLAKE’S HALLOWEEN TALES FT. ROB JOST | MARIUS VAN DEN BRINK | MICHAEL SARIN",
+      "title": "MICHAEL BLAKE'S HALLOWEEN TALES FT. ROB JOST | MARIUS VAN DEN BRINK | MICHAEL SARIN",
       "performers": [
         "Michael Blake",
         "Rob Jost",
-        "Marius Van Den Brink",
+        "Marius van den Brink",
         "Michael Sarin",
         "Gary Versace",
         "Ben Allison"
@@ -2628,12 +2703,12 @@
       "subgenre": null,
       "price": "$10 (CASH) SUGGESTED DONATION",
       "program": [],
-      "description": "Saxophonist Michael Blake leads a quartet playing Halloween-themed jazz standards and originals. First of two sets.",
+      "description": "Saxophonist Michael Blake leads a quartet playing Halloween-themed jazz; first of two sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barlunatico.com/music",
-      "artist": "Michael Blake, Rob Jost, Marius Van Den Brink",
-      "id": 112
+      "artist": "Michael Blake, Rob Jost, Marius van den Brink",
+      "id": 115
     },
     {
       "title": "THE ROCKY HORROR HALLOWEEN SHOW",
@@ -2648,14 +2723,14 @@
       "url": "https://mercuryeastpresents.com/tm-event/the-rocky-horror-halloween-show/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
-      "price": null,
+      "price": "0.00",
       "program": [],
-      "description": "Halloween screening-style stage show listed in the today's shows sidebar at 9 PM.",
+      "description": "Halloween staged cult musical screening with audience participation, listed in today's shows.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
       "artist": "THE ROCKY HORROR HALLOWEEN SHOW",
-      "id": 113
+      "id": 116
     },
     {
       "title": "South House vs Naija House - Halloween Edition",
@@ -2677,7 +2752,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/venues/brooklyn-steel",
       "artist": "South House vs Naija House - Halloween Edition",
-      "id": 114
+      "id": 117
     },
     {
       "title": "Greg Hutchinson's Kind of Now: The Pulse of Miles Davis",
@@ -2692,17 +2767,17 @@
       "date": "2026-10-31",
       "time": "9:00 PM",
       "end": null,
-      "url": "https://ticketing.jazz.org/21567/21568",
+      "url": "https://ticketing.jazz.org/21567/21575",
       "genre": "Jazz",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Drummer Greg Hutchinson leads a tribute to the music of Miles Davis at Jazz at Lincoln Center.",
+      "description": "Jazz performance honoring Miles Davis, led by drummer Greg Hutchinson, at Jazz at Lincoln Center.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Greg Hutchinson, Gregory Hutchinson",
-      "id": 115
+      "id": 118
     },
     {
       "title": "The Rocky Horror Halloween Show",
@@ -2719,12 +2794,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween screening-and-performance show of The Rocky Horror Picture Show at Mercury Lounge.",
+      "description": "Halloween screening-and-live-performance style show of The Rocky Horror Picture Show at Mercury Lounge.",
       "image": "https://s1.ticketm.net/dam/e/e41/cb8fe77c-dd7a-414e-b8be-3c05c9dd5e41_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "artist": "The Rocky Horror Halloween Show",
-      "id": 116
+      "id": 119
     },
     {
       "title": "Andrea Domenici Trio",
@@ -2750,7 +2825,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Andrea Domenici, Caleb Tobocman, Adam Arruda",
-      "id": 117
+      "id": 120
     },
     {
       "title": "FRANCISCO MELA TRIO",
@@ -2771,12 +2846,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Trio led by drummer Francisco Mela with piano and bass, late evening set.",
+      "description": "Jazz trio with drummer Francisco Mela, pianist Matthew Shipp and bassist William Parker, late night set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
       "artist": "Francisco Mela, Matthew Shipp, William Parker",
-      "id": 118
+      "id": 121
     },
     {
       "title": "BOY DRAMA THEATRE TROUPE PRESENTS: A HALLOWEEN PLAY",
@@ -2791,16 +2866,16 @@
       "time": "9:00 PM",
       "end": null,
       "url": "https://www.petescandystore.com/",
-      "genre": "Avant-garde",
+      "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Theatre troupe performing a Halloween play at the venue.",
+      "description": "Theatre troupe performing a Halloween play.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "Boy Drama Theatre Troupe",
-      "id": 119
+      "id": 122
     },
     {
       "title": "DOWNSTAIRS: spuwuky",
@@ -2817,12 +2892,12 @@
       "subgenre": null,
       "price": "Free",
       "program": [],
-      "description": "Downstairs room event at Purgatory featuring spuwuky; free admission, waiting list only.",
+      "description": "Downstairs room event at Purgatory featuring spuwuky; waiting list sign-up only.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.purgatorybk.com/events",
       "artist": "DOWNSTAIRS: spuwuky",
-      "id": 120
+      "id": 123
     },
     {
       "title": "Dead Day Halloween",
@@ -2844,7 +2919,7 @@
       "source": "venue-data",
       "listing_url": "https://ma.to/venue/skinnydennis",
       "artist": "Dead Day Halloween",
-      "id": 121
+      "id": 124
     },
     {
       "title": "Joe Block Quintet",
@@ -2867,12 +2942,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quintet set at Smalls; first of two late-evening sets.",
+      "description": "Jazz quintet set at Smalls, first of two late-evening sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Joe Block, Noah Halpern, Morgan Guerin",
-      "id": 122
+      "id": 125
     },
     {
       "title": "CLUB 1BD Halloween",
@@ -2894,7 +2969,7 @@
       "source": "venue-data",
       "listing_url": "https://www.bowerypresents.com/shows/terminal-5/",
       "artist": "CLUB 1BD Halloween",
-      "id": 123
+      "id": 126
     },
     {
       "title": "Guachinangos – New York Sounds of Son Jarocho | First Set",
@@ -2916,7 +2991,7 @@
       "source": "venue-data",
       "listing_url": "https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son-jarocho-first-set-13",
       "artist": "Guachinangos – New York Sounds of Son Jarocho | First Set",
-      "id": 124
+      "id": 127
     },
     {
       "title": "Fruit Juice: Witches Brew",
@@ -2938,7 +3013,7 @@
       "source": "venue-data",
       "listing_url": "https://thesultanroom.com/",
       "artist": "Fruit Juice: Witches Brew",
-      "id": 125
+      "id": 128
     },
     {
       "title": "HALLOWEEN COSTUME CONTEST! Hosted by Honey, Drop It",
@@ -2960,7 +3035,7 @@
       "source": "venue-ai",
       "listing_url": "https://unionhallny.com/",
       "artist": "HALLOWEEN COSTUME CONTEST! Hosted by Honey, Drop It",
-      "id": 126
+      "id": 129
     },
     {
       "title": "JOHN DI MARTINO'S MONSTER MASH QUINTET",
@@ -2979,12 +3054,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Second set of the quintet's Saturday show at The Django.",
+      "description": "Second set of the jazz quintet performance led by John Di Martino.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "John Di Martino",
-      "id": 127
+      "id": 130
     },
     {
       "title": "Broadway Sings® Madonna",
@@ -3001,12 +3076,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Broadway performers sing Madonna songs in a tribute show.",
+      "description": "Second set of a Broadway tribute show featuring Madonna songs at the venue.",
       "image": null,
       "source": "newsletter",
       "listing_url": "https://www.thecuttingroomnyc.com/",
       "artist": "Broadway Sings® Madonna",
-      "id": 128
+      "id": 131
     },
     {
       "title": "The 3rd Annual Spooky Spectacular",
@@ -3023,12 +3098,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Annual Halloween-themed cabaret show at 54 Below.",
+      "description": "Third annual Halloween-themed show at 54 Below, in-person late set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://54below.org/calendar/",
       "artist": "The 3rd Annual Spooky Spectacular",
-      "id": 129
+      "id": 132
     },
     {
       "title": "Theo Bleckmann, Ben Monder and Tom Rainey",
@@ -3049,12 +3124,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio set with Theo Bleckmann, Ben Monder and Tom Rainey. No cover; one drink minimum.",
+      "description": "Second set with Theo Bleckmann, Ben Monder and Tom Rainey, no cover, one drink minimum.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
       "artist": "Theo Bleckmann, Ben Monder, Tom Rainey",
-      "id": 130
+      "id": 133
     },
     {
       "title": "SENRI OE TRIO",
@@ -3071,12 +3146,12 @@
       "subgenre": "Jazz",
       "price": "$35.46 - $45.76",
       "program": [],
-      "description": "Jazz trio performance in the Birdland Theater room.",
+      "description": "Jazz trio performing in the Birdland Theater on Saturday, October 31, late set.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "SENRI OE TRIO",
-      "id": 131
+      "id": 134
     },
     {
       "title": "BrownstoneJAZZ FEST CONCERT SERIES ",
@@ -3097,7 +3172,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "BrownstoneJAZZ FEST CONCERT SERIES ",
-      "id": 132
+      "id": 135
     },
     {
       "title": "Honey Marmalade",
@@ -3114,12 +3189,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live performance by Honey Marmalade at The Bitter End.",
+      "description": "Live music performance at The Bitter End on Saturday night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Honey Marmalade",
-      "id": 133
+      "id": 136
     },
     {
       "title": "Once Upon A Nightmare",
@@ -3134,14 +3209,14 @@
       "url": "https://thegreenroom42.venuetix.com/",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
-      "price": "$21.95",
+      "price": "$21.95 +$4.82 Fees",
       "program": [],
-      "description": "A Halloween-themed show presented by Paper Crowns Productions at The Green Room 42.",
+      "description": "A Halloween-themed show presented by Paper Crowns Productions.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://thegreenroom42.venuetix.com/",
       "artist": "Once Upon A Nightmare",
-      "id": 134
+      "id": 137
     },
     {
       "title": "Late Night: NY Night Train Halloween!",
@@ -3163,7 +3238,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Late Night: NY Night Train Halloween!",
-      "id": 135
+      "id": 138
     },
     {
       "title": "Cheo Y Los Consentidos De La Casa",
@@ -3185,7 +3260,7 @@
       "source": "venue-ai",
       "listing_url": "https://arthurstavern.nyc/events/",
       "artist": "Cheo Y Los Consentidos De La Casa",
-      "id": 136
+      "id": 139
     },
     {
       "title": "PANGARI AND THE SOCIALITES - SKALLOWEEN.....",
@@ -3207,16 +3282,16 @@
       "time": "10:00 PM",
       "end": "11:55 PM",
       "url": "https://www.barbesbrooklyn.com/events",
-      "genre": "Reggae & Caribbean",
+      "genre": "World",
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "Large ska, soul and rocksteady band playing Skatalites-inspired music in a Halloween-themed set.",
+      "description": "Large ska, soul and rocksteady band playing Skatalites-inspired music for a Halloween ska night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Pangari and the Socialites, Ari Folman-Cohen, Alec Spiegelman",
-      "id": 137
+      "id": 140
     },
     {
       "title": "RESOLUTE PRESENTS: WHY SO SERIOUS!?",
@@ -3233,12 +3308,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Multi-day music festival across four stages, running from Saturday night through all day Sunday.",
+      "description": "Multi-day, multi-stage music event running from Saturday night through all day Sunday, with 30+ hours of music.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://h0l0.nyc/",
       "artist": "RESOLUTE PRESENTS: WHY SO SERIOUS!?",
-      "id": 138
+      "id": 141
     },
     {
       "title": "Lower East Record Club Halloween",
@@ -3259,7 +3334,7 @@
       "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Lower East Record Club Halloween",
-      "id": 139
+      "id": 142
     },
     {
       "title": "Purple Disco Machine - Ages 21+",
@@ -3282,7 +3357,7 @@
       "image": "https://s1.ticketm.net/dam/a/35a/ddb58ce5-b242-466c-80ac-9ae31880535a_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Purple Disco Machine",
-      "id": 140
+      "id": 143
     },
     {
       "title": "ALEGRIA HALLOWEEN WEEKEND / ALEGRIA + VIVA, DJ Rob Phillips, DJ Jerac",
@@ -3303,7 +3378,7 @@
       "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "ALEGRIA HALLOWEEN WEEKEND / ALEGRIA + VIVA, DJ Rob Phillips, DJ Jerac",
-      "id": 141
+      "id": 144
     },
     {
       "title": "HALLOWEEN: TICKETS AVAILABLE AT DOOR ALL NIGHT",
@@ -3325,7 +3400,7 @@
       "source": "venue-data",
       "listing_url": "https://pianosnyc.com/shows",
       "artist": "HALLOWEEN: TICKETS AVAILABLE AT DOOR ALL NIGHT",
-      "id": 142
+      "id": 145
     },
     {
       "title": "DJ Awesome",
@@ -3342,12 +3417,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "DJ set listed under R&B, hip hop and world genres, running until 3:45 AM.",
+      "description": "DJ set with R&B, hip hop and world music listed for Halloween night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "DJ Awesome",
-      "id": 143
+      "id": 146
     },
     {
       "title": "Billy Childs Trio plus special guest Steve Wilson",
@@ -3374,7 +3449,7 @@
       "source": "venue-ai",
       "listing_url": "https://tickets.smokejazz.com/",
       "artist": "Steve Wilson, Billy Childs, Matt Penman",
-      "id": 144
+      "id": 147
     },
     {
       "title": "Sony Hell-oween",
@@ -3391,12 +3466,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween-themed party event at Sony Hall on Saturday, October 31.",
+      "description": "Halloween party event at Sony Hall on Saturday night, October 31.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sonyhall.com/shows/",
       "artist": "Sony Hell-oween",
-      "id": 145
+      "id": 148
     },
     {
       "title": "T Blues Band | Mack / Ajamu",
@@ -3418,12 +3493,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late band set at Terra Blues featuring Jr Mack, Adjua Ajamu, Andy Galore and Barry Harrison; band plays until 3 AM.",
+      "description": "House band set with Jr Mack and Adjua Ajamu, playing until 3 AM at Terra Blues.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Jr Mack, Adjua Ajamu, Andy Galore",
-      "id": 146
+      "id": 149
     },
     {
       "title": "Guachinangos – New York Sounds of Son Jarocho | Second Set",
@@ -3445,7 +3520,7 @@
       "source": "venue-data",
       "listing_url": "https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son-jarocho-second-set-11",
       "artist": "Guachinangos – New York Sounds of Son Jarocho | Second Set",
-      "id": 147
+      "id": 150
     },
     {
       "title": "Halloween Spooktackular",
@@ -3469,12 +3544,12 @@
       "subgenre": null,
       "price": "$15.92",
       "program": [],
-      "description": "A Halloween show at Union Hall with multiple performers starting at 10 PM.",
+      "description": "A Halloween comedy show with multiple performers at Union Hall.",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195712079%2F282041210522%2F1%2Foriginal.20261013-180247?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=4fb7546c42be67976fe0fe3245109f40",
-      "source": "venue-ai+venue-data",
+      "source": "venue-ai+venue-ai+venue-data",
       "listing_url": "https://unionhallny.com/",
       "artist": "Jenny Gorelick, Josh Nasser, Yoni Lotan",
-      "id": 148
+      "id": 151
     },
     {
       "title": "AARON PARKS TRIO",
@@ -3495,12 +3570,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio led by pianist Aaron Parks with bassist Ben Street and drummer Billy Hart, running a week-long engagement.",
+      "description": "Jazz piano trio engagement running October 27 through November 1 at the Village Vanguard.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://villagevanguard.com/",
       "artist": "Aaron Parks, Ben Street, Billy Hart",
-      "id": 149
+      "id": 152
     },
     {
       "title": "RON CARTER'S FOURSIGHT QUARTET",
@@ -3519,12 +3594,12 @@
       "subgenre": "Jazz",
       "price": "$45.76 - $61.21",
       "program": [],
-      "description": "Jazz quartet performance in the Birdland Jazz Club room late set.",
+      "description": "Jazz quartet performing at the Birdland Jazz Club on Saturday, October 31, late set.",
       "image": "https://s1.ticketm.net/dam/a/dcf/c828ce8e-c1f0-450d-82a3-8874cf64adcf_1755271_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "artist": "Ron Carter",
-      "id": 150
+      "id": 153
     },
     {
       "title": "Robert Glasper X Halloween with Meshell Ndegeocello & Chris Dave",
@@ -3548,7 +3623,7 @@
       "image": "https://s1.ticketm.net/dam/a/a32/f53c453d-a40b-419f-b6c3-ca16d6454a32_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Robert Glasper, Meshell Ndegeocello",
-      "id": 151
+      "id": 154
     },
     {
       "title": "ELSEWHERE HALLOWEEN - MAJOR LEAGUE DJZ, SAIDAH, D STONE + MORE",
@@ -3569,12 +3644,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween club night in the Full Venue with DJs, listed with more acts.",
+      "description": "Late Halloween club night at Elsewhere's Full Venue with DJ lineup and more acts.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.elsewhere.club/events",
       "artist": "Major League DJz, Saidah, D Stone",
-      "id": 152
+      "id": 155
     },
     {
       "title": "Andrea Domenici Trio",
@@ -3600,7 +3675,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Andrea Domenici, Caleb Tobocman, Adam Arruda",
-      "id": 153
+      "id": 156
     },
     {
       "title": "DEMON TIME III",
@@ -3621,7 +3696,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "DEMON TIME III",
-      "id": 154
+      "id": 157
     },
     {
       "title": "STINKY VASELINE",
@@ -3638,12 +3713,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Band performance listed for late night at the venue.",
+      "description": "Performance listed for late night at the venue.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "STINKY VASELINE",
-      "id": 155
+      "id": 158
     },
     {
       "title": "Joe Block Quintet",
@@ -3666,22 +3741,23 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quintet set at Smalls; second of two late-evening sets.",
+      "description": "Jazz quintet set at Smalls, second of two late-evening sets.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Joe Block, Noah Halpern, Morgan Guerin",
-      "id": 156
+      "id": 159
     },
     {
-      "title": "Beach Fossils",
+      "title": "Beach Fossils (21 and Over)",
       "performers": [
+        "Beach Fossils",
         "Winter"
       ],
       "venue": "Baby's All Right",
       "address": "146 Broadway, Brooklyn, NY",
-      "lat": 40.70997,
-      "lng": -73.96342,
+      "lat": 40.7111,
+      "lng": -73.9565,
       "date": "2026-10-31",
       "time": "11:00 PM",
       "end": null,
@@ -3691,11 +3767,11 @@
       "price": "$49.48",
       "program": [],
       "description": null,
-      "image": "https://prod-images.seetickets.us/eyJidWNrZXQiOiJwcm9kLXNpaC5zZWV0aWNrZXRzdXNhLnVzIiwia2V5IjoiMGI2YjM0NzUtYmNjNy00MjQxLWI5MTYtZTU2YjlkZGNiMTA0IiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozNjUsImhlaWdodCI6MzY1fX19",
-      "source": "venue-data+ticketmaster",
+      "image": "https://s1.ticketm.net/dam/a/bcb/ecddba31-9350-46ed-9ac6-68a3be4edbcb_RETINA_PORTRAIT_16_9.jpg",
+      "source": "ticketmaster+venue-data+ticketmaster",
       "listing_url": "https://wl.eventim.us/event/beach-fossils/705758?afflky=BabysAllRightBrooklyn",
-      "artist": "Winter",
-      "id": 157
+      "artist": "Beach Fossils, Winter",
+      "id": 160
     },
     {
       "title": "Haunted Haus of Cumming SPOOK-tacular",
@@ -3712,12 +3788,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween haunted-themed party running past midnight at Club Cumming.",
+      "description": "Halloween party at Club Cumming starting 11 PM and running until 4 AM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://clubcummingnyc.com/",
       "artist": "Haunted Haus of Cumming SPOOK-tacular",
-      "id": 158
+      "id": 161
     },
     {
       "title": "DAVE STRYKER QUARTET",
@@ -3736,12 +3812,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Quartet performance at The Django, first set starting at 11:00 PM.",
+      "description": "Jazz quartet performance led by Dave Stryker, first set at 11:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "Dave Stryker",
-      "id": 159
+      "id": 162
     },
     {
       "title": "DAFT DISKO [A FRENCH HOUSE & DISCO PARTY] HALLOWEEN",
@@ -3765,7 +3841,7 @@
       "source": "venue-ai",
       "listing_url": "https://dromnyc.com/",
       "artist": "Daft Disko",
-      "id": 160
+      "id": 163
     },
     {
       "title": "Horse Meat Disco New York Halloween",
@@ -3787,7 +3863,7 @@
       "source": "venue-data",
       "listing_url": "https://dice.fm/venue/knockdown-center-e776",
       "artist": "Horse Meat Disco New York Halloween",
-      "id": 161
+      "id": 164
     },
     {
       "title": "LOST KINGS",
@@ -3804,12 +3880,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Performance at the Main Space on October 31, 2026, starting at 11 PM.",
+      "description": "Late-night show in the Main Space listed for October 31.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://lpr.com/",
       "artist": "LOST KINGS",
-      "id": 162
+      "id": 165
     },
     {
       "title": "SLOW JAMS NYC – HALLOWEEN SLOW JAMS & RNB PARTY IN BROOKLYN",
@@ -3831,7 +3907,7 @@
       "source": "venue-ai",
       "listing_url": "https://littlefieldnyc.com/",
       "artist": "SLOW JAMS NYC – HALLOWEEN SLOW JAMS & RNB PARTY IN BROOKLYN",
-      "id": 163
+      "id": 166
     },
     {
       "title": "Two Friends (21 and Over)",
@@ -3854,7 +3930,7 @@
       "image": "https://s1.ticketm.net/dam/a/3c0/087f8a32-5ed1-4939-b220-c98b1617f3c0_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Two Friends",
-      "id": 164
+      "id": 167
     },
     {
       "title": "Dope Jams Halloween Ball / Turtle Bugg, 4AM NYC / GE-OLOGY",
@@ -3880,7 +3956,7 @@
       "source": "venue-ai",
       "listing_url": "https://publicrecords.nyc/",
       "artist": "Turtle Bugg, 4AM NYC, GE-OLOGY",
-      "id": 165
+      "id": 168
     },
     {
       "title": "Dungeons and Drag: Vampires, a Masquerade",
@@ -3897,12 +3973,12 @@
       "subgenre": null,
       "price": "$30.39",
       "program": [],
-      "description": "Drag-themed vampire masquerade party at Purgatory; tickets $30.39, waiting list only.",
+      "description": "Drag-themed vampire masquerade show at Purgatory, late Halloween night; waiting list only.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.purgatorybk.com/events",
       "artist": "Dungeons and Drag: Vampires, a Masquerade",
-      "id": 166
+      "id": 169
     },
     {
       "title": "Neon Nightmare: Halloween Costume Party",
@@ -3919,12 +3995,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween costume party at S.O.B.'s with doors at 11 PM.",
+      "description": "Halloween costume party at the club with doors opening at 11 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
       "artist": "Neon Nightmare: Halloween Costume Party",
-      "id": 167
+      "id": 170
     },
     {
       "title": "Rae The Band",
@@ -3941,12 +4017,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night live performance by Rae The Band at The Bitter End.",
+      "description": "Late-night live music set at The Bitter End on Saturday.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Rae The Band",
-      "id": 168
+      "id": 171
     },
     {
       "title": "HELLTEKK HALLOWEEN",
@@ -3968,7 +4044,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.thetranspecos.com/#/events",
       "artist": "HELLTEKK HALLOWEEN",
-      "id": 169
+      "id": 172
     },
     {
       "title": "THRILLER: 80S DISCO HALLOWEEN NIGHT",
@@ -3983,14 +4059,14 @@
       "url": "https://mercuryeastpresents.com/tm-event/thriller-80s-disco-halloween-night/",
       "genre": "Electronic & DJ",
       "subgenre": null,
-      "price": null,
+      "price": "0.00",
       "program": [],
-      "description": "Late 80s disco Halloween night listed in the today's shows sidebar at 11:30 PM.",
+      "description": "Late-night 80s disco Halloween party following the earlier Rocky Horror shows.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://mercuryeastpresents.com/boweryballroom/",
       "artist": "THRILLER: 80S DISCO HALLOWEEN NIGHT",
-      "id": 170
+      "id": 173
     },
     {
       "title": "Reggae Fest Halloween at Brooklyn Paramount $5000 Costume Contest",
@@ -4014,7 +4090,7 @@
       "source": "venue-data+ticketmaster",
       "listing_url": "https://www.brooklynparamount.com/shows",
       "artist": "Reggae Fest",
-      "id": 171
+      "id": 174
     },
     {
       "title": "Thriller: 80s Disco Halloween Night",
@@ -4031,12 +4107,12 @@
       "subgenre": "Amapiano",
       "price": null,
       "program": [],
-      "description": "Late 80s disco Halloween night party at Mercury Lounge, doors at 11:30 PM.",
+      "description": "Late-night 80s disco Halloween party at Mercury Lounge.",
       "image": "https://s1.ticketm.net/dam/e/c69/fb5c2655-310e-4ec0-861e-9c324d37cc69_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "artist": "Thriller: 80s Disco Halloween Night",
-      "id": 172
+      "id": 175
     },
     {
       "title": "Halloween Party",
@@ -4055,12 +4131,36 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Halloween party running late Saturday night into early Sunday morning.",
+      "description": "Late-night Halloween party with the Phenomenal Handclap Band, listed on the program page.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://nublu.net/program",
       "artist": "PHENOMENAL HANDCLAP BAND",
-      "id": 173
+      "id": 176
+    },
+    {
+      "title": "HALLOWEEN ROCK SHOW & DJ MASQUERADE: AFTER PARTY - KAMIJO",
+      "performers": [
+        "KAMIJO"
+      ],
+      "venue": "Webster Hall",
+      "address": "125 E 11th St, New York, NY 10003",
+      "lat": 40.73176,
+      "lng": -73.98909,
+      "date": "2026-10-31",
+      "time": "11:30 PM",
+      "end": null,
+      "url": "https://www.websterhall.com/events/detail?event_id=1466244",
+      "genre": "Rock",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "After party for the Halloween rock show and DJ masquerade featuring Kamijo.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.websterhall.com/shows/",
+      "artist": "KAMIJO",
+      "id": 177
     },
     {
       "title": "ROMAN ANGELOS SPINS HORROR SOUNDTRACKS",
@@ -4079,12 +4179,12 @@
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "DJ Roman Angelos plays horror movie soundtracks for a Halloween special, with midnight full set.",
+      "description": "DJ Roman Angelos plays horror movie soundtracks in a Halloween special, with a midnight full set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Roman Angelos",
-      "id": 174
+      "id": 178
     },
     {
       "title": "Round Midnight Solo Piano with John DiMartino",
@@ -4103,12 +4203,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Solo piano set at Mezzrow running late, ending around 1:00 AM.",
+      "description": "Solo piano performance at Mezzrow running late into the night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "John Di Martino",
-      "id": 175
+      "id": 179
     },
     {
       "title": "Eric Wyatt Quartet",
@@ -4130,12 +4230,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night jazz quartet set at Smalls running past midnight into early morning.",
+      "description": "Late-night jazz quartet set at Smalls running past midnight into the early morning.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.smallslive.com/",
       "artist": "Eric Wyatt, Marius van den Brink, Evan Wohlrabe",
-      "id": 176
+      "id": 180
     },
     {
       "title": "Devil Baby - Halloween Edition: Non-stop dance party with Jenny Lion",
@@ -4154,12 +4254,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "A Halloween-themed non-stop dance party with Jenny Lion at Union Hall.",
+      "description": "A Halloween-themed non-stop dance party hosted by Jenny Lion at Union Hall.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://unionhallny.com/",
       "artist": "Jenny Lion",
-      "id": 177
+      "id": 181
+    },
+    {
+      "title": "On display | From the BRIClab + Johan Orellana: Remnants of a Forking Path",
+      "performers": [],
+      "venue": "BRIC House",
+      "address": "647 Fulton St, Brooklyn, NY 11217",
+      "lat": 40.6868,
+      "lng": -73.97586,
+      "date": "2026-11-01",
+      "time": "12:00 AM",
+      "end": null,
+      "url": "https://bricartsmedia.org/",
+      "genre": "Avant-garde",
+      "subgenre": null,
+      "price": "FREE",
+      "program": [],
+      "description": "Gallery display of works from the BRIClab and Johan Orellana, free and open to the public.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://bricartsmedia.org/",
+      "artist": "On display | From the BRIClab + Johan Orellana: Remnants of a Forking Path",
+      "id": 182
     },
     {
       "title": "DAVE STRYKER QUARTET",
@@ -4178,12 +4300,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Second set of the quartet's Saturday show at The Django, starting after midnight.",
+      "description": "Second set of the jazz quartet performance led by Dave Stryker.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "Dave Stryker",
-      "id": 178
+      "id": 183
     }
   ]
 }
