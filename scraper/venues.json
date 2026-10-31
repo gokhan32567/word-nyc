@@ -100,12 +100,14 @@
   {
    "name": "Cellar Dog",
    "address": "75 Christopher St, New York, NY 10014",
-   "url": "https://www.cellardog.net/music",
+   "url": "https://www.cellardog.net/",
    "genre": "Jazz",
    "nightly": true,
-   "sets": [
-    "7:00 PM"
-   ]
+   "regular": {
+    "title": "Live jazz",
+    "time": "7:00 PM",
+    "description": "Cellar Dog's house jazz, every night from 7 PM in the West Village bar and pool room."
+   }
   },
   {
    "name": "Arthur's Tavern",
@@ -711,8 +713,7 @@
    "name": "Mehanata Bulgarian Bar",
    "address": "113 Ludlow St, New York, NY 10002",
    "url": "https://www.mehanata.com/",
-   "genre": "World",
-   "nightly": true
+   "genre": "World"
   },
   {
    "name": "S.O.B.'s",

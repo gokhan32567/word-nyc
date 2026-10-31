@@ -425,6 +425,33 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
                 need_time.append({"title": raw.get("title") or "", "url": links[idx]["href"]})
             if len(examples) < 3:
                 examples.append({k: raw.get(k) for k in ("title", "start_time", "date_evidence", "time_evidence")} | {"why": why})
-    return kept, {"page_kind": answer.get("page_kind"), "proposed": len(answer.get("events") or []),
+    # Second look: show the model what was kept and ask only for what's missing (a missed 8 PM set, a late
+    # show further down the page). Everything it adds goes through the same checks.
+    added = 0
+    if tonight_pattern(night).search(page_excerpt) and not venue.get("no_follow"):
+        have = "\n".join(f"- {e['time']} {e['title']}" for e in kept) or "(nothing)"
+        try:
+            again, usage2 = call_claude(api_key, prompt + (
+                f"\n\nALREADY FOUND for this night:\n{have}\n\nRe-read the page. Report ONLY performances or "
+                "separate sets for this night that are missing from that list (for example a second set time, or a "
+                "show listed further down). Do not repeat anything already found. If nothing is missing, return an "
+                "empty events list."))
+        except AIError:
+            again, usage2 = {}, {}
+        usage = {k: usage.get(k, 0) + usage2.get(k, 0) for k in ("input_tokens", "output_tokens")}
+        more = again.get("events") or []
+        if isinstance(more, str):
+            try:
+                more = json.loads(more)
+            except ValueError:
+                more = []
+        seen = {(e["time"], _squash(e["title"])) for e in kept}
+        for raw in [e for e in (more if isinstance(more, list) else []) if isinstance(e, dict)]:
+            ev, why = check(raw, snap, links, night, venue, page, page_norm)
+            if ev and (ev["time"], _squash(ev["title"])) not in seen:
+                seen.add((ev["time"], _squash(ev["title"])))
+                kept.append(ev)
+                added += 1
+    return kept, {"page_kind": answer.get("page_kind"), "second_look_added": added, "proposed": len(answer.get("events") or []),
                   "rejected": reasons, "examples": examples, "need_time": need_time, "input_tokens": usage.get("input_tokens", 0),
                   "output_tokens": usage.get("output_tokens", 0)}

@@ -109,9 +109,11 @@ def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[
         found = [e for e in (assign_presenter(e, v["_targets"]) for e in found) if e]
     for e in found:
         e.pop("_presenter", None)
-    row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found),
-               detail=(f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
-                       if info["rejected"] else info["page_kind"]),
+    detail = (f"{info['page_kind']}; dropped " + ", ".join(f"{n}× {why}" for why, n in info["rejected"].items())
+              if info["rejected"] else str(info["page_kind"]))
+    if info.get("second_look_added"):
+        detail += f"; +{info['second_look_added']} on second look"
+    row.update(method="AI", status="ok" if found else "none-tonight", shows=len(found), detail=detail,
                tokens=[info["input_tokens"], info["output_tokens"]], examples=info.get("examples"))
     row["_need_time"] = info.get("need_time", [])
     return found, row
@@ -355,6 +357,14 @@ def main() -> int:
         with ThreadPoolExecutor(max_workers=4) as pool:
             results = list(pool.map(lambda v: safe_read(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
         for (found, row), v in zip(results, placed):
+            reg = v.get("regular")  # e.g. Cellar Dog: "Jazz at 7pm every night", with no names posted
+            if reg and not found and night.weekday() in reg.get("days", range(7)):
+                found = [{"title": reg["title"], "performers": [], "venue": v["name"], "address": v.get("address"),
+                          "lat": v["lat"], "lng": v["lng"], "date": night.isoformat(), "time": reg["time"], "end": None,
+                          "url": v["url"], "genre": v.get("genre", "Other"), "subgenre": None, "price": None,
+                          "program": [], "description": reg.get("description"), "image": None,
+                          "source": "venue-regular", "listing_url": v["url"]}]
+                row.update(status="ok", shows=1, detail=(row.get("detail") or "") + "; regular night from venues.json")
             log(f"  {v['name']}: {row['status']} {row['shows']} {row.get('method') or ''} {row.get('detail') or ''}".rstrip())
             collected += found
             rows.append(row)

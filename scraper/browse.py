@@ -213,7 +213,8 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
             snap.links, snap.jsonld, snap.tribe = data["links"], data["jsonld"], data["tribe"]
             snap.ical = [ln["href"] for ln in data["links"]
                          if re.search(r"\.ics\b|webcal:|[?&]ical=1|outlook-ical|/ical/?$", ln["href"], re.I)][:3]
-            if (snap.status or 200) in (401, 403, 406, 409, 429, 503) or (len(snap.text) < 1500 and BLOCK_SIGNS.search(snap.text)):
+            if ((snap.status or 200) in (401, 403, 406, 409, 429, 503) or "captcha" in (snap.final_url or "").lower()
+                    or (len(snap.text) < 1500 and BLOCK_SIGNS.search(snap.text))):
                 snap.blocked = True
             elif (snap.status or 200) >= 400:
                 snap.error = f"page returned HTTP {snap.status}"
