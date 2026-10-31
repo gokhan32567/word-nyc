@@ -109,6 +109,11 @@ def _squash(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+def _squash_lines(s: str) -> str:
+    """Like _squash, but keeps line breaks (for calendar grids)."""
+    return "\n".join(_squash(ln) for ln in (s or "").splitlines())
+
+
 def excerpt(text: str, night: date) -> str:
     """The parts of the page around tonight's date (whole page if short)."""
     if len(text) <= MAX_PAGE_CHARS:
@@ -296,6 +301,15 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
             if anchor0 and anchor0 in page[m.end():m.end() + 600]:
                 which = "tonight"
                 break
+        if which is None and anchor0 and re.search(rf"\b{mon}\s+{night.year}\b", page):
+            # month grid ("OCTOBER 2026 ... 31 / Robert Glasper / 8:00 PM"): the title must sit in tonight's own
+            # cell, right after the day number, with no other day number in between
+            raw = _squash_lines(snap.text)
+            for m in re.finditer(rf"(?m)^\s*{night.day}\s*$", raw):
+                cell = re.split(r"(?m)^\s*\d{1,2}\s*$", raw[m.end():m.end() + 400])[0]
+                if anchor0 in _squash(cell):
+                    which = "tonight"
+                    break
     late = start < ROLLOVER_HOUR * 60
     if which is None or (which == "next" and not late):
         return None, "date quote is not tonight"
