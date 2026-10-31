@@ -375,7 +375,9 @@ VERIFY_TOOL = {
             "evidence": {"type": "string", "description": "For remove: exact text copied from the page that shows the problem."}},
         "required": ["number", "verdict", "problem"]}}}, "required": ["checks"]},
 }
-REMOVABLE = {"other_night", "other_venue", "cancelled_or_postponed", "venue_closed", "not_a_performance"}
+# "other_venue" is not removable: listings rarely repeat their venue's name, so a quote can't prove it
+# (the first read already drops shows the page places at another venue)
+REMOVABLE = {"other_night", "cancelled_or_postponed", "venue_closed", "not_a_performance"}
 PROOF = {  # the quoted page text must actually say it
     "cancelled_or_postponed": re.compile(r"cancel|postpon|reschedul|called off", re.I),
     "venue_closed": re.compile(r"\bclosed\b|no shows? tonight|dark tonight", re.I),
@@ -396,31 +398,47 @@ def proves(problem: str, evidence: str, night: date, venue: dict) -> bool:
     return False
 
 
-def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | None = None) -> tuple[dict, dict]:
+def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | None = None,
+                ask: str = "") -> tuple[dict, dict]:
+    """prompt (the page) is cached, so the second look and the final check reuse it cheaply; ask is the
+    part that differs between those calls. Both tools are always offered so the cached prefix stays the same."""
+    want = (tool or TOOL)["name"]
+    content = [{"type": "text", "text": prompt, "cache_control": {"type": "ephemeral"}}]
+    if ask:
+        content.append({"type": "text", "text": ask})
     body = json.dumps({
-        "model": MODEL, "max_tokens": max_tokens, "system": SYSTEM,
-        "messages": [{"role": "user", "content": prompt}],
-        "tools": [tool or TOOL], "tool_choice": {"type": "tool", "name": (tool or TOOL)["name"]},
+        "model": MODEL, "max_tokens": max_tokens,
+        "system": SYSTEM + "\n\nAnswer with the tool the request asks for: report_events when asked for performances, "
+                           "report_checks when asked for verdicts on proposed listings.",
+        "messages": [{"role": "user", "content": content}],
+        "tools": [TOOL, VERIFY_TOOL], "tool_choice": {"type": "any"},
     }).encode()
-    for attempt in range(5):
+    for attempt in range(8):
         req = urllib.request.Request(API_URL, data=body, method="POST", headers={
             "x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
                 data = json.loads(r.read())
+            u = data.get("usage") or {}
+            # cost-equivalent input tokens: cache writes cost 1.25x, cache reads 0.1x
+            usage = {"input_tokens": int(u.get("input_tokens", 0) + 1.25 * u.get("cache_creation_input_tokens", 0)
+                                         + 0.1 * u.get("cache_read_input_tokens", 0)),
+                     "output_tokens": u.get("output_tokens", 0)}
             for block in data.get("content", []):
-                if block.get("type") == "tool_use":
-                    return block.get("input") or {}, data.get("usage") or {}
+                if block.get("type") == "tool_use" and block.get("name") == want:
+                    return block.get("input") or {}, usage
+            if want != TOOL["name"]:
+                return {}, usage  # a check that answered with the wrong tool changes nothing
             raise AIError("no structured answer in the reply")
         except urllib.error.HTTPError as e:
             detail = e.read().decode("utf-8", "replace")[:300]
-            if e.code in (429, 500, 502, 503, 529) and attempt < 4:
+            if e.code in (429, 500, 502, 503, 529) and attempt < 7:
                 wait = float(e.headers.get("retry-after") or 0) or 5 * (attempt + 1)
-                time.sleep(min(wait, 60))
+                time.sleep(min(max(wait, 5), 60))
                 continue
             raise AIError(f"API error {e.code}: {detail}") from e
         except urllib.error.URLError as e:
-            if attempt < 4:
+            if attempt < 7:
                 time.sleep(5 * (attempt + 1))
                 continue
             raise AIError(f"API unreachable: {e}") from e
@@ -499,8 +517,8 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
     if tonight_pattern(night).search(page_excerpt) and not venue.get("no_follow"):
         have = "\n".join(f"- {e['time']} {e['title']}" for e in kept) or "(nothing)"
         try:
-            again, usage2 = call_claude(api_key, prompt + (
-                f"\n\nALREADY FOUND for this night:\n{have}\n\nRe-read the page. Report ONLY performances or "
+            again, usage2 = call_claude(api_key, prompt, ask=(
+                f"ALREADY FOUND for this night:\n{have}\n\nRe-read the page. Report ONLY performances or "
                 "separate sets for this night that are missing from that list (for example a second set time, or a "
                 "show listed further down). Do not repeat anything already found. If nothing is missing, return an "
                 "empty events list."))
@@ -526,8 +544,8 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
     if kept:
         listed = "\n".join(f"{i}. {e['time']} — {e['title']}" for i, e in enumerate(kept))
         try:
-            verdict, usage3 = call_claude(api_key, prompt + (
-                f"\n\nPROPOSED LISTINGS for this night at this venue:\n{listed}\n\nGive one verdict per listing. "
+            verdict, usage3 = call_claude(api_key, prompt, ask=(
+                f"PROPOSED LISTINGS for this night at this venue:\n{listed}\n\nGive one verdict per listing. "
                 "Use 'remove' ONLY when the page clearly shows one of these problems: the listing is for another night, "
                 "at another venue, cancelled or postponed, the venue is closed that night, or it is not a public "
                 "performance (a tour, class, service, meeting). Copy the page text that shows the problem into evidence. "

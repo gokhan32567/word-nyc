@@ -359,7 +359,7 @@ def main() -> int:
         log(f"  reading {len(placed)} venue pages in the browser…")
         snaps = browse.snapshot_all(placed, night)
         results: list[tuple[list[dict], dict]] = []
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=3) as pool:
             results = list(pool.map(lambda v: safe_read(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
         for (found, row), v in zip(results, placed):
             if "venue closed tonight" in (row.get("detail") or ""):
