@@ -212,7 +212,7 @@ def times_in(evidence: str) -> set[int]:
             out.add((h % 12 + (12 if mer.startswith("p") else 0)) * 60 + mi)
         elif has_colon and 13 <= h <= 23:
             out.add(h * 60 + mi)
-        elif not mer and 1 <= h <= 11 and (has_colon or re.search(r"\b(shows?|doors|sets?|starts?|begins?|at)\b", evidence, re.I)):
+        elif not mer and 1 <= h <= 11 and (has_colon or any(f[3] for f in found) or re.search(r"\b(shows?|doors|sets?|starts?|begins?|at)\b", evidence, re.I)):
             out.add((h + 12) * 60 + mi)  # evening listing without am/pm
     return out
 
@@ -266,10 +266,12 @@ def near(page: str, a: str, b: str, span: int) -> bool:
 
 
 VENUE_SETS = "<venue's regular set times>"
+DAY_TIMES_PREFIX = re.compile(r"^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?\s+[\d:&,.\s\-–]+(?:[ap]\.?m\.?)?\s*[-–:]\s+", re.I)
 
 
 def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict, page: str, page_norm: str) -> tuple[dict | None, str]:
-    title = (raw.get("title") or "").strip()
+    # "SAT 8 & 9:30 - Theo Bleckmann Trio": the day and set times belong to the listing, not the title
+    title = DAY_TIMES_PREFIX.sub("", (raw.get("title") or "").strip()) or (raw.get("title") or "").strip()
     if not title or (not venue.get("all_events") and (not raw.get("public_performance", True) or GENERIC.match(title))):
         return None, "not a public performance"
     de, te = raw.get("date_evidence") or "", raw.get("time_evidence") or ""
