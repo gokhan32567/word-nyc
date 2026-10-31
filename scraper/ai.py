@@ -338,11 +338,20 @@ class AIError(Exception):
     pass
 
 
-def call_claude(api_key: str, prompt: str, max_tokens: int = 3000) -> tuple[dict, dict]:
+VERIFY_TOOL = {
+    "name": "report_unsupported",
+    "description": "List the numbered listings that the page does NOT support.",
+    "input_schema": {"type": "object", "properties": {"unsupported": {"type": "array", "items": {
+        "type": "object", "properties": {"number": {"type": "integer"}, "reason": {"type": "string"}},
+        "required": ["number", "reason"]}}}, "required": ["unsupported"]},
+}
+
+
+def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | None = None) -> tuple[dict, dict]:
     body = json.dumps({
         "model": MODEL, "max_tokens": max_tokens, "system": SYSTEM,
         "messages": [{"role": "user", "content": prompt}],
-        "tools": [TOOL], "tool_choice": {"type": "tool", "name": "report_events"},
+        "tools": [tool or TOOL], "tool_choice": {"type": "tool", "name": (tool or TOOL)["name"]},
     }).encode()
     for attempt in range(5):
         req = urllib.request.Request(API_URL, data=body, method="POST", headers={
@@ -462,6 +471,28 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
                 seen.add((ev["time"], _squash(ev["title"])))
                 kept.append(ev)
                 added += 1
-    return kept, {"page_kind": answer.get("page_kind"), "second_look_added": added, "proposed": len(answer.get("events") or []),
+    # Last check: a fresh look at the final list, asking which entries the page does not support
+    # (another night, another venue, a cancelled or closed night, a wrong time, not a performance).
+    removed = 0
+    if kept:
+        listed = "\n".join(f"{i}. {e['time']} — {e['title']}" for i, e in enumerate(kept))
+        try:
+            verdict, usage3 = call_claude(api_key, prompt + (
+                f"\n\nPROPOSED LISTINGS for this night at this venue:\n{listed}\n\nCheck each against the page. "
+                "Report the numbers of listings the page does NOT support: on a different night, at a different venue, "
+                "cancelled, postponed, sold-out private events, the venue closed that night, a wrong start time, or "
+                "not a public performance. Do not report a listing just because details are brief. If all are "
+                "supported, return an empty list."), max_tokens=800, tool=VERIFY_TOOL)
+        except AIError:
+            verdict, usage3 = {}, {}
+        usage = {k: usage.get(k, 0) + usage3.get(k, 0) for k in ("input_tokens", "output_tokens")}
+        bad = {u.get("number") for u in (verdict.get("unsupported") or []) if isinstance(u, dict)}
+        for u in (verdict.get("unsupported") or []):
+            if isinstance(u, dict) and isinstance(u.get("number"), int) and 0 <= u["number"] < len(kept) and len(examples) < 5:
+                examples.append({"title": kept[u["number"]]["title"], "start_time": kept[u["number"]]["time"],
+                                 "why": "removed on final check: " + str(u.get("reason"))[:120]})
+        removed = sum(1 for i in range(len(kept)) if i in bad)
+        kept = [e for i, e in enumerate(kept) if i not in bad]
+    return kept, {"page_kind": answer.get("page_kind"), "second_look_added": added, "final_check_removed": removed, "proposed": len(answer.get("events") or []),
                   "rejected": reasons, "examples": examples, "need_time": need_time, "input_tokens": usage.get("input_tokens", 0),
                   "output_tokens": usage.get("output_tokens", 0)}
