@@ -1,30 +1,30 @@
 {
  "date": "2026-10-31",
- "generated": "2026-10-31T13:25:30-04:00",
+ "generated": "2026-10-31T13:37:35-04:00",
  "totals": {
   "venues": 184,
-  "shows": 187,
+  "shows": 182,
   "ok": 83,
-  "none-tonight": 78,
+  "none-tonight": 79,
   "blocked": 17,
-  "error": 3,
+  "error": 2,
   "robots": 1,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
-  "venue-data": 37,
-  "venue-ai": 148,
-  "ticketmaster": 56,
+  "venue-data": 38,
+  "venue-ai": 151,
+  "ticketmaster": 64,
   "venue-regular": 1,
   "newsletter": 2
  },
  "ai": {
   "nightly_missing": [],
-  "calls": 141,
-  "input_tokens": 1691034,
-  "output_tokens": 68164,
-  "cost_usd": 0.2032
+  "calls": 142,
+  "input_tokens": 1693757,
+  "output_tokens": 67538,
+  "cost_usd": 0.2031
  },
  "venues": [
   {
@@ -87,7 +87,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13754,
+    13786,
     128
    ],
    "examples": []
@@ -153,7 +153,7 @@
    "detail": "calendar; dropped 2× date quote is not tonight",
    "tokens": [
     4689,
-    585
+    578
    ],
    "examples": [
     {
@@ -196,7 +196,7 @@
    "detail": "closed tonight; dropped 1× venue closed tonight",
    "tokens": [
     18276,
-    221
+    229
    ],
    "examples": []
   },
@@ -237,8 +237,8 @@
    "shows": 0,
    "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
-    11201,
-    902
+    10898,
+    858
    ],
    "examples": [
     {
@@ -264,44 +264,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance; +4 on second look; -3 on final check",
+   "detail": "calendar",
    "tokens": [
-    13280,
-    2050
+    13389,
+    1314
    ],
-   "examples": [
-    {
-     "title": "Online Morning Prayer",
-     "start_time": "8:30 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "8:30am - 9am",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Self-Guided Tours",
-     "start_time": "9:30 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "9:30am - 5pm",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Highlights Tour",
-     "start_time": "11:00 AM",
-     "date_evidence": "Today, Saturday, October 31",
-     "time_evidence": "11am - 12pm",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Highlights Tour",
-     "start_time": "11:00 AM",
-     "why": "removed on final check: not_a_performance: \"11am - 12pm Highlights Tour\""
-    },
-    {
-     "title": "Vertical Tour",
-     "start_time": "12:00 PM",
-     "why": "removed on final check: not_a_performance: \"12pm - 1pm Vertical Tour\""
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Chamber Music Society of Lincoln Center",
@@ -312,7 +280,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15677,
+    16085,
     64
    ],
    "examples": []
@@ -463,10 +431,15 @@
    "name": "Downtown Music Gallery",
    "url": "https://www.downtownmusicgallery.com/",
    "read_url": "https://www.downtownmusicgallery.com/",
-   "method": null,
-   "status": "error",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
+   "detail": "not_a_calendar",
+   "tokens": [
+    10019,
+    132
+   ],
+   "examples": []
   },
   {
    "name": "Fifth Avenue Presbyterian Church",
@@ -562,7 +535,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
     7811,
-    434
+    441
    ],
    "examples": [
     {
@@ -639,7 +612,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15957,
+    15996,
     64
    ],
    "examples": []
@@ -662,7 +635,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    14667,
+    14615,
     64
    ],
    "examples": []
@@ -719,7 +692,7 @@
    "detail": "calendar; dropped 1× start time not in time quote; event page gave no time (none-tonight)",
    "tokens": [
     14986,
-    709
+    689
    ],
    "examples": [
     {
@@ -805,10 +778,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
     5682,
-    68
+    64
    ],
    "examples": []
   },
@@ -831,7 +804,7 @@
    "detail": "calendar",
    "tokens": [
     8765,
-    128
+    132
    ],
    "examples": []
   },
@@ -868,35 +841,6 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Nublu Classic",
-   "url": "https://nublu.net/",
-   "read_url": "https://nublu.net/program",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
-   "tokens": [
-    7653,
-    927
-   ],
-   "examples": [
-    {
-     "title": "ILHAN SELECTS",
-     "start_time": "7:00 PM",
-     "date_evidence": "Saturday October 31",
-     "time_evidence": "7pm-11pm ILHAN SELECTS",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "Halloween Party",
-     "start_time": "11:30 PM",
-     "date_evidence": "Saturday October 31",
-     "time_evidence": "11:30pm-4am Halloween Party",
-     "why": "listed at another venue"
-    }
-   ]
-  },
-  {
    "name": "OPERA America National Opera Center",
    "url": "https://www.operaamerica.org/",
    "read_url": "https://www.operaamerica.org/calendar#eyJxIjoiIiwiY29xIjoiIiwidHlwZXMiOltdLCJ6aXAiOiIiLCJzdGF0ZXMiOltdLCJmcm9tIjoiMjAyNi0xMC0zMSIsInRvIjoiMjAyNi0xMC0zMSIsImNvbXBhbnlJZCI6MCwicGFnZSI6MSwicGFnZVNpemUiOjEyLCJjb21wYW5pZXMiOltdfQ%3D%3D",
@@ -906,7 +850,7 @@
    "detail": "calendar; dropped 8× listed at another venue",
    "tokens": [
     15982,
-    1693
+    1726
    ],
    "examples": [
     {
@@ -985,10 +929,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "not_a_calendar",
    "tokens": [
-    7293,
-    128
+    7401,
+    132
    ],
    "examples": []
   },
@@ -999,10 +943,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     6206,
-    64
+    68
    ],
    "examples": []
   },
@@ -1022,10 +966,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
     6845,
-    68
+    64
    ],
    "examples": []
   },
@@ -1113,7 +1057,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     6899,
-    507
+    510
    ],
    "examples": [
     {
@@ -1134,8 +1078,8 @@
    "shows": 0,
    "detail": "calendar; +3 on second look",
    "tokens": [
-    13784,
-    1762
+    13630,
+    1063
    ],
    "examples": []
   },
@@ -1177,7 +1121,7 @@
    "detail": "not_a_calendar",
    "tokens": [
     10939,
-    132
+    136
    ],
    "examples": []
   },
@@ -1211,32 +1155,32 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote not found on page",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     8784,
-    249
+    382
    ],
    "examples": [
     {
      "title": "Slalomville EP release show",
      "start_time": "",
-     "date_evidence": "Slalomville EP release show",
+     "date_evidence": "THU 10/31",
      "time_evidence": "",
-     "why": "date quote not found on page"
+     "why": "not a public performance"
     }
    ]
   },
   {
    "name": "Symphony Space",
    "url": "https://www.symphonyspace.org/",
-   "read_url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "not_a_calendar",
    "tokens": [
-    10094,
-    68
+    10774,
+    132
    ],
    "examples": []
   },
@@ -1253,6 +1197,28 @@
     128
    ],
    "examples": []
+  },
+  {
+   "name": "The Broadway",
+   "url": "https://www.thebroadway.nyc/",
+   "read_url": "https://www.thebroadway.nyc/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× date quote not found on page",
+   "tokens": [
+    5645,
+    628
+   ],
+   "examples": [
+    {
+     "title": "Halloween Cover Show ft~ Deftones, Joyce Manor, Modest Mouse + Siouxsie and the Banshees",
+     "start_time": "",
+     "date_evidence": "OCT 31 / October 31, 2026",
+     "time_evidence": "",
+     "why": "date quote not found on page"
+    }
+   ]
   },
   {
    "name": "The Cutting Room",
@@ -1281,8 +1247,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    5831,
-    283
+    5712,
+    292
    ],
    "examples": [
     {
@@ -1303,7 +1269,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6114,
+    6129,
     64
    ],
    "examples": []
@@ -1386,7 +1352,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    20088,
+    20089,
     128
    ],
    "examples": []
@@ -1447,7 +1413,7 @@
    "detail": "closed tonight; dropped 1× venue closed tonight",
    "tokens": [
     12814,
-    219
+    290
    ],
    "examples": []
   },
@@ -1460,8 +1426,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    16850,
-    811
+    16935,
+    796
    ],
    "examples": []
   },
@@ -1480,11 +1446,11 @@
    "read_url": "https://www.apollotheater.org/ticket-and-events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
+   "shows": 2,
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    11280,
-    425
+    11311,
+    649
    ],
    "examples": []
   },
@@ -1498,7 +1464,7 @@
    "detail": "calendar",
    "tokens": [
     15129,
-    802
+    860
    ],
    "examples": []
   },
@@ -1512,7 +1478,7 @@
    "detail": "calendar; dropped 2× time quote not found on page; +1 from event page https://wl.eventim.us/event/whos-dancing-halloween-no-phones-live-funk-and-disco; +1 from event page https://wl.eventim.us/event/beach-fossils/705758?afflky=BabysAllRightBrooklyn",
    "tokens": [
     6905,
-    857
+    836
    ],
    "examples": [
     {
@@ -1538,12 +1504,25 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× date quote not found on page; -1 on final check",
    "tokens": [
-    15921,
-    3329
+    15953,
+    3709
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "You Can See Everything",
+     "start_time": "8:30 PM",
+     "date_evidence": "Today's Performances / Today's Films",
+     "time_evidence": "8:30pm",
+     "why": "date quote not found on page"
+    },
+    {
+     "title": "The Exorcist",
+     "start_time": "8:30 PM",
+     "why": "removed on final check: other_night: \"The Exorcist\n8:30pm\""
+    }
+   ]
   },
   {
    "name": "Bar Bayeux",
@@ -1555,7 +1534,7 @@
    "detail": "calendar",
    "tokens": [
     18568,
-    1052
+    1033
    ],
    "examples": []
   },
@@ -1569,7 +1548,7 @@
    "detail": "calendar",
    "tokens": [
     5833,
-    579
+    559
    ],
    "examples": []
   },
@@ -1579,13 +1558,21 @@
    "read_url": "https://www.barlunatico.com/music",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
+   "shows": 1,
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
-    23641,
-    833
+    23501,
+    1120
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "MICHAEL BLAKE’S HALLOWEEN TALES FT. ROB JOST | MARIUS VAN DEN BRINK | MICHAEL SARIN",
+     "start_time": "10:15 PM",
+     "date_evidence": "***TWO SETS: 9PM & 10:15PM***",
+     "time_evidence": "***TWO SETS: 9PM & 10:15PM***",
+     "why": "date quote is not tonight"
+    }
+   ]
   },
   {
    "name": "Barbès",
@@ -1597,7 +1584,7 @@
    "detail": "calendar",
    "tokens": [
     20473,
-    1560
+    1566
    ],
    "examples": []
   },
@@ -1620,13 +1607,13 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     29836,
-    792
+    700
    ],
    "examples": [
     {
-     "title": "The Rocky Horror Picture Show",
+     "title": "The Rocky Horror Picture Show Spooktacular Tour",
      "start_time": "7:30 PM",
-     "date_evidence": "SAT 31 OCT ‘26 TONIGHT",
+     "date_evidence": "SAT 31 OCT '26 TONIGHT",
      "time_evidence": "7:30PM CT",
      "why": "listed at another venue"
     }
@@ -1642,7 +1629,7 @@
    "detail": "calendar",
    "tokens": [
     11223,
-    1371
+    1370
    ],
    "examples": []
   },
@@ -1655,8 +1642,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    30009,
-    760
+    21202,
+    757
    ],
    "examples": []
   },
@@ -1670,7 +1657,7 @@
    "detail": "calendar; +4 on second look",
    "tokens": [
     14546,
-    1468
+    2316
    ],
    "examples": []
   },
@@ -1684,7 +1671,7 @@
    "detail": "calendar",
    "tokens": [
     9918,
-    492
+    537
    ],
    "examples": []
   },
@@ -1697,19 +1684,19 @@
    "shows": 1,
    "detail": "calendar; +1 on second look; -2 on final check",
    "tokens": [
-    8817,
-    862
+    8692,
+    885
    ],
    "examples": [
     {
      "title": "Fall Exhibitions Tour",
-     "start_time": "1:30 PM",
-     "why": "removed on final check: not_a_performance: \"10.31 SAT | 1:30 PM Fall Exhibitions Tour COST FREE\""
+     "start_time": "2:30 PM",
+     "why": "removed on final check: not_a_performance: \"10.31 SAT | 2:30 PM Fall Exhibitions Tour COST FREE\""
     },
     {
      "title": "Fall Exhibitions Tour",
-     "start_time": "2:30 PM",
-     "why": "removed on final check: not_a_performance: \"10.31 SAT | 2:30 PM Fall Exhibitions Tour COST FREE\""
+     "start_time": "1:30 PM",
+     "why": "removed on final check: not_a_performance: \"10.31 SAT | 1:30 PM Fall Exhibitions Tour COST FREE\""
     }
    ]
   },
@@ -1755,7 +1742,7 @@
    "detail": "calendar",
    "tokens": [
     6771,
-    403
+    405
    ],
    "examples": []
   },
@@ -1766,10 +1753,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "no_events_tonight; regular night from venues.json",
+   "detail": "not_a_calendar; regular night from venues.json",
    "tokens": [
-    5122,
-    132
+    5098,
+    136
    ],
    "examples": []
   },
@@ -1782,8 +1769,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    12499,
-    395
+    12583,
+    504
    ],
    "examples": []
   },
@@ -1794,10 +1781,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 3,
-   "detail": "calendar",
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    30616,
-    990
+    30588,
+    1041
    ],
    "examples": []
   },
@@ -1808,20 +1795,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    11289,
-    789
+    11241,
+    665
    ],
-   "examples": [
-    {
-     "title": "Live in The Lot",
-     "start_time": "",
-     "date_evidence": "Saturday, 31 October All Day",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "DiMenna Center for Classical Music",
@@ -1841,8 +1820,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    12775,
-    716
+    12812,
+    714
    ],
    "examples": []
   },
@@ -1855,8 +1834,8 @@
    "shows": 4,
    "detail": "calendar; +2 on second look",
    "tokens": [
-    14198,
-    1035
+    14168,
+    1114
    ],
    "examples": []
   },
@@ -1879,7 +1858,7 @@
    "detail": "calendar",
    "tokens": [
     8794,
-    648
+    656
    ],
    "examples": []
   },
@@ -1893,7 +1872,7 @@
    "detail": "calendar",
    "tokens": [
     14507,
-    724
+    704
    ],
    "examples": []
   },
@@ -1906,8 +1885,8 @@
    "shows": 1,
    "detail": "calendar; dropped 1× start time not in time quote; +1 from event page https://www.freddysbar.com/events/freddys-halloween-dance-party",
    "tokens": [
-    26931,
-    690
+    26810,
+    719
    ],
    "examples": [
     {
@@ -1947,7 +1926,7 @@
    "detail": "calendar",
    "tokens": [
     13334,
-    376
+    367
    ],
    "examples": []
   },
@@ -1958,10 +1937,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "None",
+   "detail": "calendar",
    "tokens": [
     5738,
-    389
+    439
    ],
    "examples": []
   },
@@ -1980,19 +1959,19 @@
    "read_url": "https://jazz.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 1× time quote not found on page; +2 on second look; event page gave no time (blocked)",
+   "shows": 1,
+   "detail": "calendar; dropped 1× start time not in time quote; +1 on second look; event page gave no time (blocked)",
    "tokens": [
-    11136,
-    893
+    11087,
+    638
    ],
    "examples": [
     {
      "title": "GREG HUTCHINSON'S KIND OF NOW: THE PULSE OF MILES DAVIS",
      "start_time": "",
      "date_evidence": "OCT 30-31",
-     "time_evidence": "",
-     "why": "time quote not found on page"
+     "time_evidence": "LIVE EVERY NIGHT 7PM & 9PM",
+     "why": "start time not in time quote"
     }
    ]
   },
@@ -2012,10 +1991,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; +1 on second look",
+   "detail": "calendar",
    "tokens": [
-    6675,
-    557
+    6694,
+    632
    ],
    "examples": []
   },
@@ -2029,7 +2008,7 @@
    "detail": "calendar",
    "tokens": [
     8925,
-    652
+    650
    ],
    "examples": []
   },
@@ -2043,7 +2022,7 @@
    "detail": "calendar",
    "tokens": [
     18009,
-    385
+    386
    ],
    "examples": []
   },
@@ -2071,7 +2050,7 @@
    "detail": "calendar",
    "tokens": [
     6997,
-    579
+    582
    ],
    "examples": []
   },
@@ -2085,7 +2064,7 @@
    "detail": "calendar",
    "tokens": [
     14361,
-    1232
+    1080
    ],
    "examples": []
   },
@@ -2099,7 +2078,7 @@
    "detail": "calendar",
    "tokens": [
     28750,
-    1351
+    1219
    ],
    "examples": []
   },
@@ -2113,6 +2092,28 @@
    "detail": null
   },
   {
+   "name": "Nublu Classic",
+   "url": "https://nublu.net/",
+   "read_url": "https://nublu.net/program",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar; dropped 1× listed at another venue; +2 on second look",
+   "tokens": [
+    8434,
+    884
+   ],
+   "examples": [
+    {
+     "title": "ILHAN SELECTS",
+     "start_time": "7:00 PM",
+     "date_evidence": "Saturday October 31",
+     "time_evidence": "7pm-11pm",
+     "why": "listed at another venue"
+    }
+   ]
+  },
+  {
    "name": "NYPL Bruno Walter Auditorium",
    "url": "https://www.nypl.org/locations/lpa",
    "read_url": "https://www.nypl.org/locations/lpa",
@@ -2122,7 +2123,7 @@
    "detail": "calendar",
    "tokens": [
     10213,
-    373
+    371
    ],
    "examples": []
   },
@@ -2136,7 +2137,7 @@
    "detail": "calendar",
    "tokens": [
     8096,
-    670
+    676
    ],
    "examples": []
   },
@@ -2159,7 +2160,7 @@
    "detail": "calendar",
    "tokens": [
     5170,
-    1344
+    1324
    ],
    "examples": []
   },
@@ -2182,7 +2183,7 @@
    "detail": "calendar",
    "tokens": [
     21595,
-    435
+    429
    ],
    "examples": []
   },
@@ -2196,7 +2197,7 @@
    "detail": "calendar",
    "tokens": [
     6693,
-    611
+    615
    ],
    "examples": []
   },
@@ -2224,7 +2225,7 @@
    "detail": "calendar; +1 on second look",
    "tokens": [
     13670,
-    607
+    620
    ],
    "examples": []
   },
@@ -2238,7 +2239,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     30078,
-    770
+    765
    ],
    "examples": [
     {
@@ -2260,7 +2261,7 @@
    "detail": "calendar",
    "tokens": [
     17451,
-    643
+    653
    ],
    "examples": []
   },
@@ -2274,7 +2275,7 @@
    "detail": "calendar",
    "tokens": [
     11847,
-    747
+    735
    ],
    "examples": []
   },
@@ -2288,7 +2289,7 @@
    "detail": "calendar",
    "tokens": [
     6586,
-    638
+    633
    ],
    "examples": []
   },
@@ -2302,7 +2303,7 @@
    "detail": "calendar",
    "tokens": [
     15530,
-    819
+    793
    ],
    "examples": []
   },
@@ -2325,7 +2326,7 @@
    "detail": "calendar",
    "tokens": [
     28745,
-    1365
+    1427
    ],
    "examples": []
   },
@@ -2339,7 +2340,7 @@
    "detail": "calendar",
    "tokens": [
     8641,
-    987
+    1048
    ],
    "examples": []
   },
@@ -2353,7 +2354,7 @@
    "detail": "calendar",
    "tokens": [
     11706,
-    373
+    377
    ],
    "examples": []
   },
@@ -2364,10 +2365,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "None",
+   "detail": "calendar",
    "tokens": [
     7349,
-    388
+    412
    ],
    "examples": []
   },
@@ -2390,7 +2391,7 @@
    "detail": "calendar",
    "tokens": [
     26175,
-    668
+    639
    ],
    "examples": []
   },
@@ -2403,8 +2404,8 @@
    "shows": 4,
    "detail": "calendar; dropped 4× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/musiquita-bilingual-music-for-child; +1 from event page https://www.terraza7.com/detalles-y-registro/cruzando-ensuenos-across-borders-mu; +1 from event page https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son; +1 from event page https://www.terraza7.com/detalles-y-registro/guachinangos-new-york-sounds-of-son",
    "tokens": [
-    9387,
-    1464
+    9523,
+    1473
    ],
    "examples": [
     {
@@ -2449,31 +2450,9 @@
    "detail": "calendar",
    "tokens": [
     19788,
-    736
+    770
    ],
    "examples": []
-  },
-  {
-   "name": "The Broadway",
-   "url": "https://www.thebroadway.nyc/",
-   "read_url": "https://www.thebroadway.nyc/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.thebroadway.nyc/showcalendar/halloween-cover-show-ft-deftones-joyce-",
-   "tokens": [
-    5645,
-    634
-   ],
-   "examples": [
-    {
-     "title": "Halloween Cover Show ft~ Deftones, Joyce Manor, Modest Mouse + Siouxsie and the Banshees",
-     "start_time": "",
-     "date_evidence": "OCT 31\nHalloween Cover Show ft~ Deftones, Joyce Manor, Modest Mouse + Siouxsie and the Banshees\nOctober 31, 2026",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
   },
   {
    "name": "The Cutting Room",
@@ -2485,7 +2464,7 @@
    "detail": "sent Friday, October 23, 2026",
    "tokens": [
     15390,
-    636
+    642
    ],
    "examples": []
   },
@@ -2513,7 +2492,7 @@
    "detail": "None; +1 on second look",
    "tokens": [
     22128,
-    714
+    718
    ],
    "examples": []
   },
@@ -2550,7 +2529,7 @@
    "detail": "None",
    "tokens": [
     7847,
-    349
+    348
    ],
    "examples": []
   },
@@ -2561,34 +2540,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 5,
-   "detail": "calendar; dropped 1× time quote is far from the title, 3× time quote not found on page; +4 on second look",
+   "detail": "calendar",
    "tokens": [
-    25470,
-    2367
+    25577,
+    1302
    ],
-   "examples": [
-    {
-     "title": "Devil Baby - Halloween Edition: Non-stop dance party with Jenny Lion",
-     "start_time": "11:59 PM",
-     "date_evidence": "OCT 31",
-     "time_evidence": "Oct 31 ... Devil Baby - Halloween Edition: Non-stop dance party with Jenny Lion 11:59pm",
-     "why": "time quote is far from the title"
-    },
-    {
-     "title": "Maggie's Scary Story Contest",
-     "start_time": "5:00 PM",
-     "date_evidence": "Oct 31",
-     "time_evidence": "Oct 31 Maggie's Scary Story Contest ... 5:00pm",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "Hot Gossip with Jonathan van Halem",
-     "start_time": "7:30 PM",
-     "date_evidence": "OCT 31",
-     "time_evidence": "Oct 31 Hot Gossip with Jonathan van Halem ... 7:30pm",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Union Pool",
@@ -2609,7 +2566,7 @@
    "detail": "calendar",
    "tokens": [
     7443,
-    381
+    373
    ],
    "examples": []
   },
@@ -2623,7 +2580,7 @@
    "detail": "calendar; dropped 2× listed at another venue; +2 on second look",
    "tokens": [
     18702,
-    1153
+    1149
    ],
    "examples": [
     {
@@ -2652,7 +2609,7 @@
    "detail": "calendar",
    "tokens": [
     8826,
-    671
+    663
    ],
    "examples": []
   }
