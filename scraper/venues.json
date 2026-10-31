@@ -68,7 +68,7 @@
    "address": "10 Columbus Circle, New York, NY 10019",
    "url": "https://jazz.org/",
    "genre": "Jazz",
-   "note": "Includes Dizzy's Club, Rose Theater and The Appel Room."
+   "note": "Includes Rose Theater and The Appel Room. Dizzy's Club shows are listed separately: treat them as another venue (venue_shown: Dizzy's Club)."
   },
   {
    "name": "The Jazz Gallery",
@@ -1069,13 +1069,15 @@
    "name": "Beacon Theatre",
    "address": "2124 Broadway, New York, NY 10023",
    "url": "https://www.msg.com/beacon-theatre/calendar",
-   "genre": "Rock"
+   "genre": "Rock",
+   "note": "This MSG calendar also lists events at other MSG venues (Madison Square Garden, Radio City, the Beacon, The Chicago Theatre). Report only events at Beacon Theatre; copy any other venue into venue_shown."
   },
   {
    "name": "Radio City Music Hall",
    "address": "1260 6th Ave, New York, NY 10020",
    "url": "https://www.msg.com/radio-city-music-hall/calendar",
-   "genre": "Pop"
+   "genre": "Pop",
+   "note": "This MSG calendar also lists events at other MSG venues (Madison Square Garden, Radio City, the Beacon, The Chicago Theatre). Report only events at Radio City Music Hall; copy any other venue into venue_shown."
   },
   {
    "name": "Kings Theatre",

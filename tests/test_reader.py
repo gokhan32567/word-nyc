@@ -78,6 +78,21 @@ def test_calendar_add_links_never_used():  # Bar Bayeux's "ticket" link was a Go
     assert good_link("https://www.barbayeux.com/jazz")
 
 
+def test_other_city_rejected():  # Rocky Horror at The Chicago Theatre showed up under the Beacon
+    page = "The Rocky Horror Picture Show Sat Oct 31 2026 7:30 PM"
+    snap = Snapshot(venue="V", url="https://msg.com/", final_url="https://msg.com/", text=page)
+    links = [{"text": "Tickets", "href": "https://www.msg.com/events-tickets/the-rocky-horror-picture-show-the-chicago-theatre-october-2026/1"}]
+    raw = {"title": "The Rocky Horror Picture Show", "start_time": "7:30 PM", "date_evidence": "Sat Oct 31 2026",
+           "time_evidence": "7:30 PM", "link_number": 0, "public_performance": True, "at_this_venue": True}
+    ev, why = ai.check(raw, snap, links, NIGHT, {"name": "Beacon Theatre", "lat": 1, "lng": 1}, ai._squash(page), ai.norm(page))
+    assert ev is None and why == "listed in another city", why
+
+
+def test_exhibition_not_a_show():
+    from shows import is_show
+    assert not is_show("On display | From the BRIClab + Johan Orellana: Remnants")
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

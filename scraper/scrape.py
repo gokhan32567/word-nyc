@@ -487,6 +487,24 @@ def main() -> int:
         prev = json.loads(Path(args.out).read_text())
         if prev.get("date") == night.isoformat() and not args.only.strip():
             earlier = [{k: v for k, v in e.items() if k not in ("id", "artist", "sponsored")} for e in prev["events"]]
+            # Keep an earlier show only if it has already started (pages drop those) or its venue's page
+            # couldn't be read this time. A show still ahead that its venue no longer lists was wrong or cancelled.
+            import ai
+            read_ok = {r["name"] for r in rows if r.get("status") == "ok"}  # read fine and found shows
+            from common import ROLLOVER_HOUR
+            now = datetime.now(NY)
+            now_min = now.hour * 60 + now.minute + (1440 if now.hour < ROLLOVER_HOUR else 0)
+            def still_valid(e):
+                if not is_show(e.get("title")) or ai.OTHER_CITY.search(e.get("url") or ""):
+                    return False
+                src = e.get("source") or ""
+                if e["venue"] in read_ok and src.startswith("venue") and "+" not in src:
+                    return minutes(e.get("time")) <= now_min + 15  # already started: pages drop those
+                return True
+            dropped_earlier = [e for e in earlier if not still_valid(e)]
+            earlier = [e for e in earlier if still_valid(e)]
+            if dropped_earlier:
+                log(f"  dropped {len(dropped_earlier)} earlier listing(s) their venue no longer shows")
     except (OSError, ValueError, KeyError):
         pass
     events = merge(collected + extra + earlier)

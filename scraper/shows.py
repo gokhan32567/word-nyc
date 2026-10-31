@@ -16,7 +16,7 @@ HARD = re.compile(
     r"care packages?|support group|yoga|meditation|tai chi|fitness|pottery|ceramics|carving|crafts?|trivia|"
     r"bingo|karaoke|brunch|screenings?|on screen|movie night|rehearsals?|auditions?|office hours|formation|parking|"
     r"guided tours?|walking tours?|house tours?|building tours?|garden tours?|historical tours?|history tours?|"
-    r"heritage tours?|museum tours?|campus tours?|tours? of|private event|"
+    r"heritage tours?|museum tours?|campus tours?|tours? of|private event|on display|on view|installation|"
     r"closed to the public|members only)\b", re.I)
 
 # Usually not a show unless the title also names a performance.

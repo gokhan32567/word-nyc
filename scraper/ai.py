@@ -272,6 +272,11 @@ def near(page: str, a: str, b: str, span: int) -> bool:
 
 
 VENUE_SETS = "<venue's regular set times>"
+# chains' calendars (MSG, Live Nation, City Winery...) list their venues in other cities
+OTHER_CITY = re.compile(r"chicago|boston|philadelphia|los[-_ ]angeles|san[-_ ]francisco|nashville|atlanta|washington[-_ ]dc|"
+                        r"miami|seattle|denver|austin|new[-_ ]orleans|las[-_ ]vegas|london|toronto|montreal|"
+                        r"hudson[-_ ]valley|asbury[-_ ]park|atlantic[-_ ]city|uncasville|newark|jersey[-_ ]city|hoboken|"
+                        r"morristown|red[-_ ]bank|port[-_ ]chester|westbury", re.I)
 CLOSED = re.compile(r"\b(closed|no (show|music|performance)s? tonight|dark tonight)\b", re.I)
 DAY_TIMES_PREFIX = re.compile(r"^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?\s+[\d:&,.\s\-–]+(?:[ap]\.?m\.?)?\s*[-–:]\s+", re.I)
 
@@ -321,6 +326,10 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     present = [w for w in words if w in page]
     if words and (not present or (len(words) >= 3 and len(present) < len(words) / 2)):
         return None, "title not on page"
+    link_url = (links[raw["link_number"]]["href"] if isinstance(raw.get("link_number"), int)
+                and 0 <= raw["link_number"] < len(links) else "")
+    if OTHER_CITY.search(link_url + " " + (raw.get("venue_shown") or "")):
+        return None, "listed in another city"
     shown = (raw.get("venue_shown") or "").strip()
     state = re.search(r",\s*([A-Z]{2})\b", shown)
     # "Not at this venue" only counts when the page actually names another venue for the event;
