@@ -339,12 +339,18 @@ class AIError(Exception):
 
 
 VERIFY_TOOL = {
-    "name": "report_unsupported",
-    "description": "List the numbered listings that the page does NOT support.",
-    "input_schema": {"type": "object", "properties": {"unsupported": {"type": "array", "items": {
-        "type": "object", "properties": {"number": {"type": "integer"}, "reason": {"type": "string"}},
-        "required": ["number", "reason"]}}}, "required": ["unsupported"]},
+    "name": "report_checks",
+    "description": "One verdict per numbered listing.",
+    "input_schema": {"type": "object", "properties": {"checks": {"type": "array", "items": {
+        "type": "object", "properties": {
+            "number": {"type": "integer"},
+            "verdict": {"type": "string", "enum": ["keep", "remove"]},
+            "problem": {"type": "string", "enum": ["none", "other_night", "other_venue", "cancelled_or_postponed",
+                                                    "venue_closed", "not_a_performance"]},
+            "evidence": {"type": "string", "description": "For remove: exact text copied from the page that shows the problem."}},
+        "required": ["number", "verdict", "problem"]}}}, "required": ["checks"]},
 }
+REMOVABLE = {"other_night", "other_venue", "cancelled_or_postponed", "venue_closed", "not_a_performance"}
 
 
 def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | None = None) -> tuple[dict, dict]:
@@ -471,27 +477,33 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
                 seen.add((ev["time"], _squash(ev["title"])))
                 kept.append(ev)
                 added += 1
-    # Last check: a fresh look at the final list, asking which entries the page does not support
-    # (another night, another venue, a cancelled or closed night, a wrong time, not a performance).
+    # Last check: a fresh look at the final list. A listing is removed only when the model names a concrete
+    # problem (another night, another venue, cancelled, venue closed, not a performance) AND quotes the page.
     removed = 0
     if kept:
         listed = "\n".join(f"{i}. {e['time']} — {e['title']}" for i, e in enumerate(kept))
         try:
             verdict, usage3 = call_claude(api_key, prompt + (
-                f"\n\nPROPOSED LISTINGS for this night at this venue:\n{listed}\n\nCheck each against the page. "
-                "Report the numbers of listings the page does NOT support: on a different night, at a different venue, "
-                "cancelled, postponed, sold-out private events, the venue closed that night, a wrong start time, or "
-                "not a public performance. Do not report a listing just because details are brief. If all are "
-                "supported, return an empty list."), max_tokens=800, tool=VERIFY_TOOL)
+                f"\n\nPROPOSED LISTINGS for this night at this venue:\n{listed}\n\nGive one verdict per listing. "
+                "Use 'remove' ONLY when the page clearly shows one of these problems: the listing is for another night, "
+                "at another venue, cancelled or postponed, the venue is closed that night, or it is not a public "
+                "performance (a tour, class, service, meeting). Copy the page text that shows the problem into evidence. "
+                "Brief details, missing times, set times and multi-night runs that include this night are NOT problems: "
+                "verdict keep, problem none."), max_tokens=1500, tool=VERIFY_TOOL)
         except AIError:
             verdict, usage3 = {}, {}
         usage = {k: usage.get(k, 0) + usage3.get(k, 0) for k in ("input_tokens", "output_tokens")}
-        bad = {u.get("number") for u in (verdict.get("unsupported") or []) if isinstance(u, dict)}
-        for u in (verdict.get("unsupported") or []):
-            if isinstance(u, dict) and isinstance(u.get("number"), int) and 0 <= u["number"] < len(kept) and len(examples) < 5:
-                examples.append({"title": kept[u["number"]]["title"], "start_time": kept[u["number"]]["time"],
-                                 "why": "removed on final check: " + str(u.get("reason"))[:120]})
-        removed = sum(1 for i in range(len(kept)) if i in bad)
+        bad = set()
+        for c in verdict.get("checks") or []:
+            if not isinstance(c, dict) or c.get("verdict") != "remove" or c.get("problem") not in REMOVABLE:
+                continue
+            i, ev_text = c.get("number"), (c.get("evidence") or "").strip()
+            if isinstance(i, int) and 0 <= i < len(kept) and 4 <= len(ev_text) <= 300 and on_page(ev_text, page):
+                bad.add(i)
+                if len(examples) < 5:
+                    examples.append({"title": kept[i]["title"], "start_time": kept[i]["time"],
+                                     "why": f"removed on final check: {c['problem']}: \"{ev_text[:100]}\""})
+        removed = len(bad)
         kept = [e for i, e in enumerate(kept) if i not in bad]
     return kept, {"page_kind": answer.get("page_kind"), "second_look_added": added, "final_check_removed": removed, "proposed": len(answer.get("events") or []),
                   "rejected": reasons, "examples": examples, "need_time": need_time, "input_tokens": usage.get("input_tokens", 0),
