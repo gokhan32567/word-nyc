@@ -351,6 +351,24 @@ VERIFY_TOOL = {
         "required": ["number", "verdict", "problem"]}}}, "required": ["checks"]},
 }
 REMOVABLE = {"other_night", "other_venue", "cancelled_or_postponed", "venue_closed", "not_a_performance"}
+PROOF = {  # the quoted page text must actually say it
+    "cancelled_or_postponed": re.compile(r"cancel|postpon|reschedul|called off", re.I),
+    "venue_closed": re.compile(r"\bclosed\b|no shows? tonight|dark tonight", re.I),
+    "not_a_performance": re.compile(r"\btours?\b|\bclass(es)?\b|workshop|lecture|talk\b|service|worship|mass\b|meeting|"
+                                    r"screening|private event|rehearsal|exhibit", re.I),
+}
+
+
+def proves(problem: str, evidence: str, night: date, venue: dict) -> bool:
+    if problem in PROOF:
+        return bool(PROOF[problem].search(evidence))
+    if problem == "other_night":  # the quote names a night, and it isn't this one
+        return which_night(evidence, night) is None and bool(re.search(r"\d", evidence))
+    if problem == "other_venue":  # the quote names a place, and it isn't this venue
+        from shows import place_key
+        k = place_key(venue["name"])
+        return bool(k) and k not in place_key(evidence)
+    return False
 
 
 def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | None = None) -> tuple[dict, dict]:
@@ -498,7 +516,8 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
             if not isinstance(c, dict) or c.get("verdict") != "remove" or c.get("problem") not in REMOVABLE:
                 continue
             i, ev_text = c.get("number"), (c.get("evidence") or "").strip()
-            if isinstance(i, int) and 0 <= i < len(kept) and 4 <= len(ev_text) <= 300 and on_page(ev_text, page):
+            if (isinstance(i, int) and 0 <= i < len(kept) and 4 <= len(ev_text) <= 300 and on_page(ev_text, page)
+                    and proves(c["problem"], ev_text, night, venue)):
                 bad.add(i)
                 if len(examples) < 5:
                     examples.append({"title": kept[i]["title"], "start_time": kept[i]["time"],
