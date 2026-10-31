@@ -301,7 +301,7 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
             if anchor0 and anchor0 in page[m.end():m.end() + 600]:
                 which = "tonight"
                 break
-        if which is None and anchor0 and re.search(rf"\b{mon}\s+{night.year}\b", page):
+        if which is None and anchor0 and re.search(rf"{mon}\s+{night.year}\b", page):
             # month grid ("OCTOBER 2026 ... 31 / Robert Glasper / 8:00 PM"): the title must sit in tonight's own
             # cell, right after the day number, with no other day number in between
             lines_text = _squash_lines(snap.text)
