@@ -266,6 +266,7 @@ def near(page: str, a: str, b: str, span: int) -> bool:
 
 
 VENUE_SETS = "<venue's regular set times>"
+CLOSED = re.compile(r"\b(closed|no (show|music|performance)s? tonight|dark tonight)\b", re.I)
 DAY_TIMES_PREFIX = re.compile(r"^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?\s+[\d:&,.\s\-–]+(?:[ap]\.?m\.?)?\s*[-–:]\s+", re.I)
 
 
@@ -287,6 +288,9 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     late = start < ROLLOVER_HOUR * 60
     if which is None or (which == "next" and not late):
         return None, "date quote is not tonight"
+    if venue.get("no_follow") and which != "tonight":
+        # an event page dated tomorrow at "12:00 AM" is usually tomorrow's show with no time, not a late set
+        return None, "event page is for another night"
     words = significant(title)
     present = [w for w in words if w in page]
     if words and (not present or (len(words) >= 3 and len(present) < len(words) / 2)):
@@ -404,6 +408,12 @@ def extract(snap: Snapshot, venue: dict, night: date, api_key: str, loaded: str 
     if isinstance(events, dict):
         events = [events]
     answer["events"] = events = [e for e in events if isinstance(e, dict)] if isinstance(events, list) else []
+    for raw in events:  # "Halloween - closed for the holiday": the venue has nothing tonight, whatever else is listed
+        de = raw.get("date_evidence") or ""
+        if CLOSED.search(raw.get("title") or "") and on_page(de, page) and which_night(de, night) == "tonight":
+            return [], {"page_kind": "closed tonight", "second_look_added": 0, "proposed": len(events),
+                        "rejected": {"venue closed tonight": len(events)}, "examples": [], "need_time": [],
+                        "input_tokens": usage.get("input_tokens", 0), "output_tokens": usage.get("output_tokens", 0)}
     expanded = []
     for raw in events:  # a run with no time on the page: use the venue's regular set times (venues.json "sets")
         if venue.get("sets") and parse_clock(raw.get("start_time")) is None:

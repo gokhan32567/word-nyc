@@ -357,8 +357,10 @@ def main() -> int:
         with ThreadPoolExecutor(max_workers=4) as pool:
             results = list(pool.map(lambda v: safe_read(v, snaps.get(v["name"]), night, ai_key, eb_token), placed))
         for (found, row), v in zip(results, placed):
+            if "venue closed tonight" in (row.get("detail") or ""):
+                found = []
             reg = v.get("regular")  # e.g. Cellar Dog: "Jazz at 7pm every night", with no names posted
-            if reg and not found and night.weekday() in reg.get("days", range(7)):
+            if reg and not found and "closed tonight" not in (row.get("detail") or "") and night.weekday() in reg.get("days", range(7)):
                 found = [{"title": reg["title"], "performers": [], "venue": v["name"], "address": v.get("address"),
                           "lat": v["lat"], "lng": v["lng"], "date": night.isoformat(), "time": reg["time"], "end": None,
                           "url": v["url"], "genre": v.get("genre", "Other"), "subgenre": None, "price": None,
