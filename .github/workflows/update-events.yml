@@ -69,6 +69,11 @@ jobs:
           pip install --quiet playwright==1.56.0
           python -m playwright install --with-deps chromium
 
+      - name: Reader regression tests (warning only)
+        if: steps.due.outputs.run == 'true'
+        continue-on-error: true
+        run: python tests/test_reader.py
+
       - name: Build events.json
         if: steps.due.outputs.run == 'true'
         env:
