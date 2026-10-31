@@ -429,7 +429,7 @@ def main() -> int:
 
     # venues that have music every night: an empty result there is almost certainly a reading problem
     nightly = [v["name"] for v in venues if v.get("nightly")]
-    have = {e["venue"] for e in collected}
+    have = {e["venue"] for e in collected} | {r["name"] for r in rows if "closed tonight" in (r.get("detail") or "")}
     nightly_missing = [n for n in nightly if n not in have]
     if nightly_missing:
         log(f"  CHECK: no shows found at nightly venues: {', '.join(nightly_missing)}")
