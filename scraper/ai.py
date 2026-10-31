@@ -140,6 +140,7 @@ def excerpt(text: str, night: date) -> str:
 
 def link_list(snap: Snapshot, page_excerpt: str, limit: int = 150) -> list[dict]:
     skip = re.compile(r"facebook|instagram|twitter|x\.com|tiktok|youtube|spotify|apple\.com|mailto:|tel:|google\.com/maps|"
+                      r"calendar\.google|google\.com/calendar|eventedit|format=ical|\.ics\b|webcal:|outlook\.live|"
                       r"linkedin|pinterest|privacy|cookie|terms|newsletter|login|cart|donate|careers|press", re.I)
     ex = page_excerpt.lower()
     ranked = []

@@ -71,6 +71,13 @@ def test_cross_venue_copy_dropped():  # Bowery Ballroom's page listing Mercury L
     assert [e["venue"] for e in scrape.drop_cross_venue_copies([a, b])] == ["Mercury Lounge"]
 
 
+def test_calendar_add_links_never_used():  # Bar Bayeux's "ticket" link was a Google Calendar button
+    from common import good_link
+    assert not good_link("https://calendar.google.com/calendar/u/0/r/eventedit?text=SAT+8")
+    assert not good_link("https://www.lowlandsbar.com/events/x?format=ical")
+    assert good_link("https://www.barbayeux.com/jazz")
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

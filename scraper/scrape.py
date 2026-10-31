@@ -277,6 +277,10 @@ def merge(events: list[dict]) -> list[dict]:
         else:
             out.append({**e, "performers": list(e.get("performers") or []), "program": list(e.get("program") or [])})
     out = drop_cross_venue_copies(out)
+    from common import good_link
+    for e in out:  # never send people to an "add to calendar" link
+        if not good_link(e.get("url")):
+            e["url"] = e.get("listing_url") if good_link(e.get("listing_url")) else None
     for e in out:
         e["performers"] = [p for p in e["performers"] if norm(p) != norm(e["title"])]
         e["artist"] = ", ".join(e["performers"][:3]) or e["title"]

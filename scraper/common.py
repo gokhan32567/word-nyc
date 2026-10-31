@@ -193,3 +193,15 @@ def get(url: str, params: dict | None = None, timeout: int = 25, headers: dict |
             last = e
             time.sleep(2 * (attempt + 1))
     raise last  # type: ignore[misc]
+
+
+# "Add to calendar" buttons (Google Calendar, iCal, Outlook) sit next to every listing on many venue sites;
+# they are never a show's ticket or info page.
+import re as _re
+CALENDAR_ADD = _re.compile(r"calendar\.google\.com|google\.com/calendar|/calendar/(render|event)|eventedit|"
+                           r"[?&]format=ical|\.ics(\?|$)|webcal:|outlook\.(live|office)\.com/calendar|"
+                           r"addtocalendar|add-to-calendar|calendar\.yahoo\.com", _re.I)
+
+
+def good_link(url: str | None) -> bool:
+    return bool(url) and not CALENDAR_ADD.search(url)
