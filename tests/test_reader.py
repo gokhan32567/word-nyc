@@ -64,6 +64,13 @@ def test_event_page_for_tomorrow_rejected():  # Zinc Bar: tomorrow's show at "12
     assert ev is None, why
 
 
+def test_cross_venue_copy_dropped():  # Bowery Ballroom's page listing Mercury Lounge's show as its own
+    import scrape
+    a = {"title": "Silly Goose", "venue": "Mercury Lounge", "date": "2026-10-31", "time": "5:30 PM", "source": "venue-ai+ticketmaster"}
+    b = {"title": "Silly Goose", "venue": "Bowery Ballroom", "date": "2026-10-31", "time": "5:30 PM", "source": "venue-ai"}
+    assert [e["venue"] for e in scrape.drop_cross_venue_copies([a, b])] == ["Mercury Lounge"]
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

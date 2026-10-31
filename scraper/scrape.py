@@ -244,6 +244,29 @@ def absorb(into: dict, other: dict) -> None:
         into["source"] = f"{into.get('source', '')}+{other['source']}".strip("+")
 
 
+def drop_cross_venue_copies(events: list[dict]) -> list[dict]:
+    """Promoter calendars (Bowery Ballroom / Mercury Lounge, ...) list each other's shows. When the same title
+    at the same time appears at two venues and only one copy is confirmed by Ticketmaster, a submission or a
+    second source, drop the unconfirmed copy."""
+    def confirmed(e):
+        src = e.get("source") or ""
+        return "ticketmaster" in src or "submission" in src or "sponsored" in src or "+" in src
+    by_show: dict[tuple, list[dict]] = {}
+    for e in events:
+        by_show.setdefault((e.get("date"), e.get("time"), norm(e["title"])), []).append(e)
+    drop = set()
+    for group in by_show.values():
+        venues = {e["venue"] for e in group}
+        if len(venues) < 2:
+            continue
+        good = [e for e in group if confirmed(e)]
+        if good and len({e["venue"] for e in good}) == 1:
+            drop.update(id(e) for e in group if e["venue"] != good[0]["venue"] and not confirmed(e))
+    if drop:
+        log(f"  dropped {len(drop)} show(s) another venue's calendar listed as its own")
+    return [e for e in events if id(e) not in drop]
+
+
 def merge(events: list[dict]) -> list[dict]:
     out: list[dict] = []
     for e in events:
@@ -253,6 +276,7 @@ def merge(events: list[dict]) -> list[dict]:
                 break
         else:
             out.append({**e, "performers": list(e.get("performers") or []), "program": list(e.get("program") or [])})
+    out = drop_cross_venue_copies(out)
     for e in out:
         e["performers"] = [p for p in e["performers"] if norm(p) != norm(e["title"])]
         e["artist"] = ", ".join(e["performers"][:3]) or e["title"]
