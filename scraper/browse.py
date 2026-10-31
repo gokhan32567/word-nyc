@@ -247,6 +247,23 @@ async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeo
         finally:
             await browser.close()
 
+        # Second chance for pages that failed, hit a bot check or came back nearly empty (often a one-off).
+        flaky = [v for v in venues if not snaps[v["name"]].error or "robots.txt" not in (snaps[v["name"]].error or "")]
+        flaky = [v for v in flaky if snaps[v["name"]].blocked or (snaps[v["name"]].error and "NAME_NOT_RESOLVED" not in snaps[v["name"]].error)
+                 or len(snaps[v["name"]].text) < 400]
+        if flaky:
+            log(f"  retrying {len(flaky)} page(s) that failed or came back empty")
+            await asyncio.sleep(15)
+            browser = await pw.chromium.launch(args=args)
+            try:
+                for s2 in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in flaky]):
+                    old = snaps[s2.venue]
+                    if (old.blocked or old.error or len(old.text) < 400) and s2.ok and len(s2.text) > len(old.text):
+                        snaps[s2.venue] = s2
+                        log(f"    {s2.venue}: loaded on retry")
+            finally:
+                await browser.close()
+
         # Second chance for sites whose names didn't resolve: look them up elsewhere and pin the address.
         retry = [v for v in venues if "ERR_NAME_NOT_RESOLVED" in (snaps[v["name"]].error or "")]
         rules = []
