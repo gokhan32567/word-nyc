@@ -162,6 +162,9 @@ def safe_read(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[l
     try:
         return read_venue(v, snap, night, ai_key, eb_token)
     except Exception as e:  # noqa: BLE001
+        import traceback
+        where = traceback.extract_tb(e.__traceback__)[-1]
+        e = type(e)(f"{e} (at {Path(where.filename).name}:{where.lineno})")
         log(f"  {v['name']}: FAILED {type(e).__name__}: {str(e)[:160]}")
         return [], {"name": v["name"], "url": v["url"], "read_url": None, "method": None, "status": "error",
                     "shows": 0, "detail": f"{type(e).__name__}: {str(e)[:160]}"}
