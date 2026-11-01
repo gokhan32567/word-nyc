@@ -1,0 +1,847 @@
+{"name": "Smalls Jazz Club", "url": "https://www.smallslive.com/", "read_url": "https://www.smallslive.com/", "method": "AI", "status": "ok", "shows": 6, "detail": "calendar; +6 on second look", "tokens": [28377, 2926], "examples": []}
+{"name": "Birdland", "url": "https://www.birdlandjazz.com/", "read_url": "https://www.birdlandjazz.com/", "method": "AI", "status": "ok", "shows": 5, "detail": "calendar", "tokens": [11991, 1437], "examples": []}
+{"name": "Bar Bayeux", "url": "https://www.barbayeux.com/", "read_url": "https://www.barbayeux.com/", "method": "AI", "status": "none-tonight", "shows": 0, "detail": "not_a_calendar", "tokens": [3169, 68], "examples": []}
+{"name": "Barbès", "url": "https://www.barbesbrooklyn.com/", "read_url": "https://www.barbesbrooklyn.com/events", "method": "AI", "status": "ok", "shows": 4, "detail": "calendar", "tokens": [20023, 1215], "examples": []}
+
+### Smalls Jazz Club
+https://www.smallslive.com/ (HTTP 200, 9412 chars)
+followed: None
+tried: []
+links: [('', 'https://www.smallslive.com/#'), ('Forgot Your Password?', 'https://www.smallslive.com/accounts/password/reset/'), ('Sign In', 'https://www.smallslive.com/#'), ('', 'https://jazzcultural.com/'), ('TICKETS', 'https://www.smallslive.com/'), ('INFO', 'https://www.smallslive.com/tickets/'), ('ARCHIVE', 'https://www.smallslive.com/search/archive/'), ('LIVESTREAM', 'https://www.smallslive.com/livestream/'), ('CONTACT', 'https://www.smallslive.com/contact/'), ('ABOUT', 'https://www.smallslive.com/about/'), ('JAZZCULTURAL', 'https://jazzcultural.com/'), ('NEWSLETTER', 'https://www.smallslive.com/newsletter/'), ('Tickets', 'https://www.smallslive.com/'), ('Info', 'https://www.smallslive.com/tickets/'), ('Archive', 'https://www.smallslive.com/search/archive/'), ('Livestream', 'https://www.smallslive.com/livestream/'), ('Contact', 'https://www.smallslive.com/contact/'), ('About', 'https://www.smallslive.com/about/'), ('Jazzcultural', 'https://jazzcultural.com/'), ('Newsletter', 'https://www.smallslive.com/newsletter/'), ('Smalllive', 'https://www.smallslive.com/'), ('More Info', 'https://www.smallslive.com/about/'), ('Smalls Afternoon Jam Session H', 'https://www.smallslive.com/events/34349-smalls-afternoon-jam-session-hosted-by-ryo-sasaki-quartet/'), ('Vocal Open Mic Hosted By Lucy ', 'https://www.smallslive.com/events/34716-vocal-open-mic-hosted-by-lucy-wijnands/'), ('Craig Wuepper Quartet, Live at', 'https://www.smallslive.com/events/34199-craig-wuepper-quartet/'), ('Kieran Brown Quartet, Live at ', 'https://www.smallslive.com/events/34236-kieran-brown-quartet/'), ('Warren Wolf Quartet, Live at J', 'https://www.smallslive.com/events/34003-warren-wolf-quartet/'), ('Nate Jones Septet, Live at Sma', 'https://www.smallslive.com/events/34224-nate-jones-septet/'), ('Lucy Wijnands Trio, Live at Me', 'https://www.smallslive.com/events/34348-lucy-wijnands-trio/'), ('Jam in the Cafe with Marc Devi', 'https://www.smallslive.com/events/34686-jam-in-the-cafe-with-marc-devine/'), ('Aaron Johnson Sextet, Live at ', 'https://www.smallslive.com/events/34350-aaron-johnson-sextet/'), ('Happy Hour Jam with John Merri', 'https://www.smallslive.com/events/34691-happy-hour-jam-with-john-merrill-trio/'), ('Mike Clark Quartet, Live at Sm', 'https://www.smallslive.com/events/34204-mike-clark-quartet/'), ('Spike Wilner Trio, Live at Mez', 'https://www.smallslive.com/events/34214-spike-wilner-trio/'), ('Ari Hoenig Trio ft. Gabe Terra', 'https://www.smallslive.com/events/34205-ari-hoenig-trio-ft-gabe-terracciano/'), ('Eric Lewis Trio, Live at Small', 'https://www.smallslive.com/events/34225-eric-lewis-trio/'), ('Michael Kanan Trio, Live at Me', 'https://www.smallslive.com/events/34215-michael-kanan-trio/'), ('VINYL AFTER HOURS, Live at Mez', 'https://www.smallslive.com/events/34446-vinyl-after-hours/'), ('Jam Session Hosted By Adam Ray', 'https://www.smallslive.com/events/34352-jam-session-hosted-by-adam-ray/'), ('2:00 PM - 6:00 PM VOCAL OPEN M', 'https://www.smallslive.com/events/34716-vocal-open-mic-hosted-by-lucy-wijnands/'), ('7:00 PM & 9:00 PM WARREN WOLF ', 'https://www.smallslive.com/events/34003-warren-wolf-quartet/'), ('10:00 PM - 12:00 AM JAM IN THE', 'https://www.smallslive.com/events/34686-jam-in-the-cafe-with-marc-devine/'), ('6:00 PM & 7:30 PM KIERAN BROWN', 'https://www.smallslive.com/events/34236-kieran-brown-quartet/'), ('9:00 PM & 10:30 PM LUCY WIJNAN', 'https://www.smallslive.com/events/34348-lucy-wijnands-trio/'), ('2:00 PM - 5:15 PM SMALLS AFTER', 'https://www.smallslive.com/events/34349-smalls-afternoon-jam-session-hosted-by-ryo-sasaki-quartet/'), ('6:00 PM & 7:30 PM CRAIG WUEPPE', 'https://www.smallslive.com/events/34199-craig-wuepper-quartet/'), ('9:00 PM & 10:30 PM NATE JONES ', 'https://www.smallslive.com/events/34224-nate-jones-septet/'), ('11:55 PM - 4:00 AM AARON JOHNS', 'https://www.smallslive.com/events/34350-aaron-johnson-sextet/'), ('4:00 PM - 6:30 PM HAPPY HOUR J', 'https://www.smallslive.com/events/34691-happy-hour-jam-with-john-merrill-trio/'), ('8:00 PM & 10:00 PM ARI HOENIG ', 'https://www.smallslive.com/events/34205-ari-hoenig-trio-ft-gabe-terracciano/'), ('6:00 PM & 7:30 PM SPIKE WILNER', 'https://www.smallslive.com/events/34214-spike-wilner-trio/'), ('9:00 PM & 10:30 PM MICHAEL KAN', 'https://www.smallslive.com/events/34215-michael-kanan-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34446-vinyl-after-hours/'), ('6:00 PM & 7:30 PM MIKE CLARK Q', 'https://www.smallslive.com/events/34204-mike-clark-quartet/'), ('9:00 PM & 10:30 PM ERIC LEWIS ', 'https://www.smallslive.com/events/34225-eric-lewis-trio/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34352-jam-session-hosted-by-adam-ray/'), ('4:00 PM - 6:30 PM FREE PIANO L', 'https://www.smallslive.com/events/34692-free-piano-lessons-with-richard-clements-happy-hour-jam/'), ('8:00 PM & 10:00 PM FRANCISCO M', 'https://www.smallslive.com/events/34206-francisco-mela-w-matthew-shipp/'), ('6:00 PM & 7:30 PM DMITRI KOLES', 'https://www.smallslive.com/events/34237-dmitri-kolesnik-quartet/'), ('9:00 PM & 10:30 PM LOLIVONE DE', 'https://www.smallslive.com/events/34216-lolivone-de-la-rosa-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34447-vinyl-after-hours/'), ('6:00 PM & 7:30 PM MIKEY MIGLIO', 'https://www.smallslive.com/events/34226-mikey-migliore-quartet/'), ('9:00 PM & 10:30 PM DANIEL BERE', 'https://www.smallslive.com/events/34227-daniel-bereket-quintet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34353-jam-session-hosted-by-kyle-colina/'), ('4:00 PM - 6:30 PM HAPPY HOUR J', 'https://www.smallslive.com/events/34693-happy-hour-jam-with-john-webber-trio/'), ('8:00 PM & 10:00 PM MIKE LEDONN', 'https://www.smallslive.com/events/34207-mike-ledonne-quartet/'), ('6:00 PM & 7:30 PM SIMONA PREMA', 'https://www.smallslive.com/events/34354-simona-premazzi-trio/'), ('9:00 PM & 10:30 PM RONI BEN-HU', 'https://www.smallslive.com/events/34217-roni-ben-hur-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34448-vinyl-after-hours/'), ('6:00 PM & 7:30 PM DAVID AMBROS', 'https://www.smallslive.com/events/34228-david-ambrosio-quartet/'), ('9:00 PM & 10:30 PM MATTHEW ROT', 'https://www.smallslive.com/events/34229-matthew-rotker-lynn-quartet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34357-jam-session-hosted-by-carlos-abadie-the-quintet/'), ('2:00 PM - 6:00 PM JAM IN THE C', 'https://www.smallslive.com/events/34704-jam-in-the-cafe/'), ('7:00 PM & 9:00 PM WILLIE JONES', 'https://www.smallslive.com/events/34208-willie-jones-iii-quintet/'), ('10:30 PM - 12:00 AM LATE SET W', 'https://www.smallslive.com/events/34510-late-set-with-jon-beshay-quartet/'), ('6:00 PM & 7:30 PM JUSTIN WERT ', 'https://www.smallslive.com/events/34499-justin-wert-trio/'), ('9:00 PM & 10:30 PM STEFAN VASN', 'https://www.smallslive.com/events/34219-stefan-vasnier-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34449-vinyl-after-hours/'), ('6:00 PM & 7:30 PM RON VINCENT ', 'https://www.smallslive.com/events/34230-ron-vincent-sextet/'), ('9:00 PM & 10:30 PM WILLERM DEL', 'https://www.smallslive.com/events/34231-willerm-delisfort-quartet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34358-jam-session-hosted-by-matt-snow/'), ('2:00 PM - 6:00 PM JAM IN THE C', 'https://www.smallslive.com/events/34705-jam-in-the-cafe-with-panas-athanatos-trio/'), ('7:00 PM & 9:00 PM LAGE LUND QU', 'https://www.smallslive.com/events/34209-lage-lund-quartet/'), ('10:30 PM - 12:00 AM LATE SET W', 'https://www.smallslive.com/events/34210-late-set-with-bruce-williams-quartet/'), ('6:00 PM & 7:30 PM RICK GERMANS', 'https://www.smallslive.com/events/34220-rick-germanson-trio/'), ('9:00 PM & 10:30 PM ADAM BIRNBA', 'https://www.smallslive.com/events/34221-adam-birnbaum-trio/'), ('11:55 PM - 1:00 AM ROUND MIDNI', 'https://www.smallslive.com/events/34500-round-midnight-solo-piano-with-william-hill-iii/'), ('6:00 PM & 7:30 PM ROXY COSS QU', 'https://www.smallslive.com/events/34232-roxy-coss-quintet/'), ('9:00 PM & 10:30 PM MARK SHERMA', 'https://www.smallslive.com/events/34234-mark-sherman-quartet/'), ('11:55 PM - 4:00 AM ERIC WYATT ', 'https://www.smallslive.com/events/34359-eric-wyatt-quartet/'), ('2:00 PM - 6:00 PM JAM IN THE C', 'https://www.smallslive.com/events/34706-jam-in-the-cafe-with-sam-lerner/'), ('7:00 PM & 9:00 PM LAGE LUND TR', 'https://www.smallslive.com/events/34211-lage-lund-trio/'), ('10:30 PM - 12:00 AM LATE SET W', 'https://www.smallslive.com/events/34212-late-set-with-bruce-williams-quartet/'), ('6:00 PM & 7:30 PM RICK GERMANS', 'https://www.smallslive.com/events/34222-rick-germanson-trio/'), ('9:00 PM & 10:30 PM ADAM BIRNBA', 'https://www.smallslive.com/events/34223-adam-birnbaum-trio/'), ('11:55 PM - 1:00 AM ROUND MIDNI', 'https://www.smallslive.com/events/34501-round-midnight-solo-piano-with-william-hill-iii/'), ('2:00 PM - 5:15 PM SMALLS AFTER', 'https://www.smallslive.com/events/34495-smalls-afternoon-jam-session-hosted-by-david-sandman/'), ('6:00 PM & 7:30 PM ROXY COSS QU', 'https://www.smallslive.com/events/34233-roxy-coss-quintet/'), ('9:00 PM & 10:30 PM MARK SHERMA', 'https://www.smallslive.com/events/34235-mark-sherman-quartet/'), ('11:55 PM - 4:00 AM JUSTIN ROBI', 'https://www.smallslive.com/events/34360-justin-robinson-quartet/'), ('2:00 PM - 6:00 PM VOCAL OPEN M', 'https://www.smallslive.com/events/34717-vocal-open-mic-hosted-by-noa-chait/'), ('7:00 PM & 9:00 PM LAGE LUND QU', 'https://www.smallslive.com/events/34303-lage-lund-quartet/'), ('10:00 PM - 12:00 AM JAM IN THE', 'https://www.smallslive.com/events/34687-jam-in-the-cafe-with-marc-devine/'), ('6:00 PM & 7:30 PM JANE IRVING ', 'https://www.smallslive.com/events/34345-jane-irving-trio/'), ('9:00 PM & 10:30 PM NAAMA TRIO', 'https://www.smallslive.com/events/34502-naama-trio/'), ('2:00 PM - 5:15 PM SMALLS AFTER', 'https://www.smallslive.com/events/34369-smalls-afternoon-jam-session-hosted-by-ryo-sasaki-quartet/'), ('6:00 PM & 7:30 PM MATT PAVOLKA', 'https://www.smallslive.com/events/34365-matt-pavolkas-new-quintet/'), ('9:00 PM & 10:30 PM STEFANO DOG', 'https://www.smallslive.com/events/34370-stefano-doglioni-quartet/'), ('11:55 PM - 4:00 AM PANAS ATHAN', 'https://www.smallslive.com/events/34364-panas-athanatos-quartet/'), ('4:00 PM - 6:30 PM HAPPY HOUR J', 'https://www.smallslive.com/events/34694-happy-hour-jam-with-john-merrill-trio/'), ('8:00 PM & 10:00 PM WAYNE TUCKE', 'https://www.smallslive.com/events/34240-wayne-tucker-quintet/'), ('6:00 PM & 7:30 PM JEREMY MANAS', 'https://www.smallslive.com/events/34305-jeremy-manasia-trio/'), ('9:00 PM & 10:30 PM SOLO GUITAR', 'https://www.smallslive.com/events/34304-solo-guitar-with-diego-figueiredo/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34450-vinyl-after-hours/'), ('6:00 PM & 7:30 PM TIM HAGANS S', 'https://www.smallslive.com/events/34380-tim-hagans-synesthesia-quintet/'), ('9:00 PM & 10:30 PM JEROME JENN', 'https://www.smallslive.com/events/34381-jerome-jennings-quintet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34378-jam-session-hosted-by-mike-boone/'), ('4:00 PM - 6:30 PM FREE PIANO L', 'https://www.smallslive.com/events/34695-free-piano-lessons-with-richard-clements-happy-hour-jam/'), ('8:00 PM & 10:00 PM DAN TEPFER ', 'https://www.smallslive.com/events/34241-dan-tepfer-trio/'), ('6:00 PM & 7:30 PM CAROLYN LEON', 'https://www.smallslive.com/events/34308-carolyn-leonhart-trio/'), ('9:00 PM & 10:30 PM JORDAN PIPE', 'https://www.smallslive.com/events/34309-jordan-piper-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34451-vinyl-after-hours/'), ('6:00 PM & 7:30 PM ALLEN LOWE Q', 'https://www.smallslive.com/events/34383-allen-lowe-quartet/'), ('9:00 PM & 10:30 PM ROBERT EDWA', 'https://www.smallslive.com/events/34384-robert-edwards-quintet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34382-jam-session-hosted-by-jason-clotter-trio/'), ('4:00 PM - 6:30 PM HAPPY HOUR J', 'https://www.smallslive.com/events/34696-happy-hour-jam-with-john-webber-trio/'), ('8:00 PM & 10:00 PM JARED GOLD ', 'https://www.smallslive.com/events/34242-jared-gold-quartet/'), ('6:00 PM & 7:30 PM DAN CRAY TRI', 'https://www.smallslive.com/events/34310-dan-cray-trio/'), ('9:00 PM & 10:30 PM YANIV TAUBE', 'https://www.smallslive.com/events/34311-yaniv-taubenhouse-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34452-vinyl-after-hours/'), ('6:00 PM & 7:30 PM RYAN KEBERLE', 'https://www.smallslive.com/events/34388-ryan-keberle-and-pantanal-jam/'), ('9:00 PM & 10:30 PM MATT PANAYI', 'https://www.smallslive.com/events/34389-matt-panayides-quartet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34385-jam-session-hosted-by-carlos-abadie/'), ('2:00 PM - 6:00 PM JAM IN THE C', 'https://www.smallslive.com/events/34707-jam-in-the-cafe/'), ('7:00 PM & 9:00 PM ROBERT SCHEP', 'https://www.smallslive.com/events/34243-robert-scheps-quintet/'), ('10:30 PM - 11:55 PM LATE SET W', 'https://www.smallslive.com/events/34244-late-set-with-sarah-hanahan-quartet/'), ('6:00 PM & 7:30 PM EVAN SCHWAM ', 'https://www.smallslive.com/events/34312-evan-schwam-quartet/'), ('9:00 PM & 10:30 PM BENNETT PAS', 'https://www.smallslive.com/events/34313-bennett-paster-trio/'), ('11:30 PM - 12:45 AM VINYL AFTE', 'https://www.smallslive.com/events/34453-vinyl-after-hours/'), ('6:00 PM & 7:30 PM STEVE FIDYK ', 'https://www.smallslive.com/events/34391-steve-fidyk-quintet/'), ('9:00 PM & 10:30 PM DAVID JANEW', 'https://www.smallslive.com/events/34392-david-janeway-quintet/'), ('11:55 PM - 4:00 AM JAM SESSION', 'https://www.smallslive.com/events/34390-jam-session-hosted-by-greg-glassman-quartet/'), ('2:00 PM - 6:00 PM JAM IN THE C', 'https://www.smallslive.com/events/34708-jam-in-the-cafe-with-panas-athanatos-trio/'), ('7:00 PM & 9:00 PM MIKE MORENO ', 'https://www.smallslive.com/events/34245-mike-moreno-quintet/'), ('10:30 PM - 12:00 AM GEORGE CAB', 'https://www.smallslive.com/events/34248-george-cables-birthday-celebration/'), ('6:00 PM & 7:30 PM BRANDI DISTE', 'https://www.smallslive.com/events/34314-brandi-disterheft-trio/'), ('9:00 PM & 10:30 PM JONNY KING ', 'https://www.smallslive.com/events/34316-jonny-king-trio/'), ('11:55 PM - 1:00 AM ROUND MIDNI', 'https://www.smallslive.com/events/34318-round-midnight-solo-piano-with-chris-mccarthy/'), ('6:00 PM & 7:30 PM TOMMY CAMPBE', 'https://www.smallslive.com/events/34394-tommy-campbell-sextet/'), ('9:00 PM & 10:30 PM CHARLES OWE', 'https://www.smallslive.com/events/34396-charles-owens-quartet/')]
+
+```
+TICKETS
+
+INFO
+
+ARCHIVE
+
+LIVESTREAM
+
+CONTACT
+
+ABOUT
+
+JAZZCULTURAL
+
+NEWSLETTER
+
+MUSICIAN LOGIN
+TODAY + TOMORROW \
+NOV 01 SUN - NOV 02 MON CLICK ON AN EVENT TO PURCHASE TICKETS
+
+SMALLS AFTERNOON JAM SESSION HOSTED BY RYO SASAKI QUARTET
+
+LIVE AT SMALLS
+SUN NOV 01
+FROM 2:00 PM - 5:15 PM
+RYO SASAKI / TRUMPET
+STEVE ASH / PIANO
+TONY DEPAOLIS / BASS
+ADAM RAY / DRUMS
+
+VOCAL OPEN MIC HOSTED BY LUCY WIJNANDS
+
+LIVE AT JAZZCULTURAL
+SUN NOV 01
+FROM 2:00 PM - 6:00 PM
+LUCY WIJNANDS / VOCALIST
+
+CRAIG WUEPPER QUARTET
+
+LIVE AT SMALLS
+SUN NOV 01
+SETS AT 6:00 PM & 7:30 PM
+CRAIG WUEPPER / DRUMS
+MIKE DIRUBBO / ALTO SAX
+VICTOR GOULD / PIANO
+JOHN WEBBER / BASS
+
+KIERAN BROWN QUARTET
+
+LIVE AT MEZZROW
+SUN NOV 01
+SETS AT 6:00 PM & 7:30 PM
+KIERAN BROWN / VOCALIST
+TYLER HENDERSON / PIANO
+CALEB TOBOCMAN / BASS
+AARON SEEBER / DRUMS
+
+WARREN WOLF QUARTET
+
+LIVE AT JAZZCULTURAL
+SUN NOV 01
+SETS AT 7:00 PM & 9:00 PM
+WARREN WOLF / VIBRAPHONE
+ALEX BROWN / PIANO
+RICHIE GOODS / BASS
+ANWAR MARSHALL / DRUMS
+
+NATE JONES SEPTET
+
+LIVE AT SMALLS
+SUN NOV 01
+SETS AT 9:00 PM & 10:30 PM
+NATE JONES / TROMBONE
+JOSH EVANS / TRUMPET
+BRUCE WILLIAMS / ALTO SAX
+GUSTAVO CRUZ / TENOR SAX
+DAVIS WHITFIELD / PIANO
+
+LUCY WIJNANDS TRIO
+
+LIVE AT MEZZROW
+SUN NOV 01
+SETS AT 9:00 PM & 10:30 PM
+LUCY WIJNANDS / VOCALIST
+ADAM BIRNBAUM / PIANO
+MIKE KARN / BASS
+
+JAM IN THE CAFE WITH MARC DEVINE
+
+LIVE AT JAZZCULTURAL
+SUN NOV 01
+FROM 10:00 PM - 12:00 AM
+MARC DEVINE / PIANO
+
+AARON JOHNSON SEXTET
+
+LIVE AT SMALLS
+SUN NOV 01
+FROM 11:55 PM - 4:00 AM
+AARON JOHNSON / ALTO SAX
+ANDREW STEPHENS / TRUMPET
+NATHAN TOKUNAGA / CLARINET
+GREGORY CHEN / PIANO
+PHILIP AMBUEL / BASS
+
+HAPPY HOUR JAM WITH JOHN MERRILL TRIO
+
+LIVE AT JAZZCULTURAL
+MON NOV 02
+FROM 4:00 PM - 6:30 PM
+JOHN MERRILL / GUITAR
+
+MIKE CLARK QUARTET
+
+LIVE AT SMALLS
+MON NOV 02
+SETS AT 6:00 PM & 7:30 PM
+MIKE CLARK / DRUMS
+CRAIG HANDY / TENOR SAX
+MIKE LEDONNE / PIANO
+JEFF CARNEY / BASS
+
+SPIKE WILNER TRIO
+
+LIVE AT MEZZROW
+MON NOV 02
+SETS AT 6:00 PM & 7:30 PM
+SPIKE WILNER / PIANO
+PAUL GILL / BASS
+TONY LEONE / DRUMS
+
+ARI HOENIG TRIO FT. GABE TERRACCIANO
+
+LIVE AT JAZZCULTURAL
+MON NOV 02
+SETS AT 8:00 PM & 10:00 PM
+ARI HOENIG / DRUMS
+GABE TERRACCIANO / VIOLIN
+GADI LEHAVI / PIANO
+BEN TIBERIO / BASS
+
+ERIC LEWIS TRIO
+
+LIVE AT SMALLS
+MON NOV 02
+SETS AT 9:00 PM & 10:30 PM
+ERIC LEWIS / PIANO
+BAR FILIPOWICZ / BASS
+DAVID HAWKINS / DRUMS
+
+MICHAEL KANAN TRIO
+
+LIVE AT MEZZROW
+MON NOV 02
+SETS AT 9:00 PM & 10:30 PM
+MICHAEL KANAN / PIANO
+GREG RUGGIERO / GUITAR
+NEAL MINER / BASS
+
+VINYL AFTER HOURS
+
+LIVE AT MEZZROW
+MON NOV 02
+FROM 11:30 PM - 12:45 AM
+
+JAM SESSION HOSTED BY ADAM RAY
+
+LIVE AT SMALLS
+MON NOV 02
+FROM 11:55 PM - 4:00 AM
+ADAM RAY / DRUMS
+JAMES ZOLLAR / TRUMPET
+ERIKO KITAGAWA / PIANO
+SEAN SMITH / BASS
+UPCOMING SHOWS \ NOV 1- DEC 30
+DATE
+SUN NOV 01
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+VOCAL OPEN MIC HOSTED BY LUCY WIJNANDS
+7:00 PM & 9:00 PM
+WARREN WOLF QUARTET
+10:00 PM - 12:00 AM
+JAM IN THE CAFE WITH MARC DEVINE
+MEZZROW
+6:00 PM & 7:30 PM
+KIERAN BROWN QUARTET
+9:00 PM & 10:30 PM
+LUCY WIJNANDS TRIO
+SMALLS
+2:00 PM - 5:15 PM
+SMALLS AFTERNOON JAM SESSION HOSTED BY RYO SASAKI QUARTET
+6:00 PM & 7:30 PM
+CRAIG WUEPPER QUARTET
+9:00 PM & 10:30 PM
+NATE JONES SEPTET
+11:55 PM - 4:00 AM
+AARON JOHNSON SEXTET
+MON NOV 02
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+HAPPY HOUR JAM WITH JOHN MERRILL TRIO
+8:00 PM & 10:00 PM
+ARI HOENIG TRIO FT. GABE TERRACCIANO
+MEZZROW
+6:00 PM & 7:30 PM
+SPIKE WILNER TRIO
+9:00 PM & 10:30 PM
+MICHAEL KANAN TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+MIKE CLARK QUARTET
+9:00 PM & 10:30 PM
+ERIC LEWIS TRIO
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY ADAM RAY
+TUE NOV 03
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+FREE PIANO LESSONS WITH RICHARD CLEMENTS & HAPPY HOUR JAM
+8:00 PM & 10:00 PM
+FRANCISCO MELA W. MATTHEW SHIPP
+MEZZROW
+6:00 PM & 7:30 PM
+DMITRI KOLESNIK QUARTET
+9:00 PM & 10:30 PM
+LOLIVONE DE LA ROSA TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+MIKEY MIGLIORE QUARTET
+9:00 PM & 10:30 PM
+DANIEL BEREKET QUINTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY KYLE COLINA
+WED NOV 04
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+HAPPY HOUR JAM WITH JOHN WEBBER TRIO
+8:00 PM & 10:00 PM
+MIKE LEDONNE QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+SIMONA PREMAZZI TRIO
+9:00 PM & 10:30 PM
+RONI BEN-HUR TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+DAVID AMBROSIO QUARTET
+9:00 PM & 10:30 PM
+MATTHEW ROTKER-LYNN QUARTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY CARLOS ABADIE-THE QUINTET
+THU NOV 05
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE
+7:00 PM & 9:00 PM
+WILLIE JONES III QUINTET
+10:30 PM - 12:00 AM
+LATE SET WITH JON BESHAY QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+JUSTIN WERT TRIO
+9:00 PM & 10:30 PM
+STEFAN VASNIER TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+RON VINCENT SEXTET
+9:00 PM & 10:30 PM
+WILLERM DELISFORT QUARTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY MATT SNOW
+FRI NOV 06
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE WITH PANAS ATHANATOS TRIO
+7:00 PM & 9:00 PM
+LAGE LUND QUARTET
+10:30 PM - 12:00 AM
+LATE SET WITH BRUCE WILLIAMS QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+RICK GERMANSON TRIO
+9:00 PM & 10:30 PM
+ADAM BIRNBAUM TRIO
+11:55 PM - 1:00 AM
+ROUND MIDNIGHT SOLO PIANO WITH WILLIAM HILL III
+SMALLS
+6:00 PM & 7:30 PM
+ROXY COSS QUINTET
+9:00 PM & 10:30 PM
+MARK SHERMAN QUARTET
+11:55 PM - 4:00 AM
+ERIC WYATT QUARTET
+SAT NOV 07
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE WITH SAM LERNER
+7:00 PM & 9:00 PM
+LAGE LUND TRIO
+10:30 PM - 12:00 AM
+LATE SET WITH BRUCE WILLIAMS QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+RICK GERMANSON TRIO
+9:00 PM & 10:30 PM
+ADAM BIRNBAUM TRIO
+11:55 PM - 1:00 AM
+ROUND MIDNIGHT SOLO PIANO WITH WILLIAM HILL III
+SMALLS
+2:00 PM - 5:15 PM
+SMALLS AFTERNOON JAM SESSION HOSTED BY DAVID SANDMAN
+6:00 PM & 7:30 PM
+ROXY COSS QUINTET
+9:00 PM & 10:30 PM
+MARK SHERMAN QUARTET
+11:55 PM - 4:00 AM
+JUSTIN ROBINSON QUARTET
+SUN NOV 08
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+VOCAL OPEN MIC HOSTED BY NOA CHAIT
+7:00 PM & 9:00 PM
+LAGE LUND QUARTET
+10:00 PM - 12:00 AM
+JAM IN THE CAFE WITH MARC DEVINE
+MEZZROW
+6:00 PM & 7:30 PM
+JANE IRVING TRIO
+9:00 PM & 10:30 PM
+NAAMA TRIO
+SMALLS
+2:00 PM - 5:15 PM
+SMALLS AFTERNOON JAM SESSION HOSTED BY RYO SASAKI QUARTET
+6:00 PM & 7:30 PM
+MATT PAVOLKAS NEW QUINTET
+9:00 PM & 10:30 PM
+STEFANO DOGLIONI QUARTET
+11:55 PM - 4:00 AM
+PANAS ATHANATOS QUARTET
+MON NOV 09
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+HAPPY HOUR JAM WITH JOHN MERRILL TRIO
+8:00 PM & 10:00 PM
+WAYNE TUCKER QUINTET
+MEZZROW
+6:00 PM & 7:30 PM
+JEREMY MANASIA TRIO
+9:00 PM & 10:30 PM
+SOLO GUITAR WITH DIEGO FIGUEIREDO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+TIM HAGANS SYNESTHESIA QUINTET
+9:00 PM & 10:30 PM
+JEROME JENNINGS QUINTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY MIKE BOONE
+TUE NOV 10
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+FREE PIANO LESSONS WITH RICHARD CLEMENTS & HAPPY HOUR JAM
+8:00 PM & 10:00 PM
+DAN TEPFER TRIO
+MEZZROW
+6:00 PM & 7:30 PM
+CAROLYN LEONHART TRIO
+9:00 PM & 10:30 PM
+JORDAN PIPER TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+ALLEN LOWE QUARTET
+9:00 PM & 10:30 PM
+ROBERT EDWARDS QUINTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY JASON CLOTTER TRIO
+WED NOV 11
+JAZZCULTURAL
+4:00 PM - 6:30 PM
+HAPPY HOUR JAM WITH JOHN WEBBER TRIO
+8:00 PM & 10:00 PM
+JARED GOLD QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+DAN CRAY TRIO
+9:00 PM & 10:30 PM
+YANIV TAUBENHOUSE TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+RYAN KEBERLE AND PANTANAL JAM
+9:00 PM & 10:30 PM
+MATT PANAYIDES QUARTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY CARLOS ABADIE
+THU NOV 12
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE
+7:00 PM & 9:00 PM
+ROBERT SCHEPS QUINTET
+10:30 PM - 11:55 PM
+LATE SET WITH SARAH HANAHAN QUARTET
+MEZZROW
+6:00 PM & 7:30 PM
+EVAN SCHWAM QUARTET
+9:00 PM & 10:30 PM
+BENNETT PASTER TRIO
+11:30 PM - 12:45 AM
+VINYL AFTER HOURS
+SMALLS
+6:00 PM & 7:30 PM
+STEVE FIDYK QUINTET
+9:00 PM & 10:30 PM
+DAVID JANEWAY QUINTET
+11:55 PM - 4:00 AM
+JAM SESSION HOSTED BY GREG GLASSMAN QUARTET
+FRI NOV 13
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE WITH PANAS ATHANATOS TRIO
+7:00 PM & 9:00 PM
+MIKE MORENO QUINTET
+10:30 PM - 12:00 AM
+GEORGE CABLES BIRTHDAY CELEBRATION!
+MEZZROW
+6:00 PM & 7:30 PM
+BRANDI DISTERHEFT TRIO
+9:00 PM & 10:30 PM
+JONNY KING TRIO
+11:55 PM - 1:00 AM
+ROUND MIDNIGHT SOLO PIANO WITH CHRIS MCCARTHY
+SMALLS
+6:00 PM & 7:30 PM
+TOMMY CAMPBELL SEXTET
+9:00 PM & 10:30 PM
+CHARLES OWENS QUARTET
+11:55 PM - 4:00 AM
+MATT MARTINEZ QUARTET
+SAT NOV 14
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+JAM IN THE CAFE WITH SAM LERNER
+7:00 PM & 9:00 PM
+MIKE MORENO QUINTET
+10:30 PM - 12:00 AM
+GEORGE CABLES BIRTHDAY CELEBRATION!
+MEZZROW
+6:00 PM & 7:30 PM
+BRANDI DISTERHEFT TRIO
+9:00 PM & 10:30 PM
+JONNY KING TRIO
+11:55 PM - 1:00 AM
+ROUND MIDNIGHT SOLO PIANO WITH CHRIS MCCARTHY
+SMALLS
+2:00 PM - 5:15 PM
+SMALLS AFTERNOON JAM SESSION HOSTED BY TYLER MITCHELL QUARTET
+6:00 PM & 7:30 PM
+TOMMY CAMPBELL SEXTET
+9:00 PM & 10:30 PM
+CHARLES OWENS QUARTET
+11:55 PM - 4:00 AM
+ANTHONY WONSEY QUINTET
+SUN NOV 15
+JAZZCULTURAL
+2:00 PM - 6:00 PM
+VOCAL OPEN MIC HOSTED BY NOA CHAIT
+7:00 PM & 9:00 PM
+MIKE MORENO QUINTET
+10:00 PM - 12:00 AM
+JAM IN THE CAFE WITH MARC DEVINE
+MEZZROW
+6:00 PM & 7:30 PM
+MONIKA RYAN QUARTET
+9:00 PM & 10:30 PM
+NOA LEE CHAIT TRIO
+SMALLS
+2:00 PM - 5:15 PM
+SMALLS AFTERNOON JAM SESSION HOSTED BY RYO SASAKI QUARTET
+6:00 PM & 7:30 PM
+CHARLES RUGGIERO & FRANK BASILE OCTET
+9:00 PM & 10:30 PM
+SAUL DAUTCH QUINTET
+11:55 PM - 4:00 AM
+JEFF MCGREGOR QUINTET
+Click for more
+Copyright ®2026 SmallsLIVE All rights reserved.
+Subscribe to our newsletter 
+```
+
+### Birdland
+https://www.birdlandjazz.com/ (HTTP 200, 3066 chars)
+followed: None
+tried: []
+links: [('', 'https://www.birdlandjazz.com/'), ('ABOUT', 'https://www.birdlandjazz.com/about/'), ('CALENDARS', 'https://www.birdlandjazz.com/calendar/'), ('Header Navigation - Club Menu', 'https://www.birdlandjazz.com/club-menu/'), ('Header Navigation - Theater Me', 'https://www.birdlandjazz.com/theater-menu/'), ('FAQ', 'https://www.birdlandjazz.com/faq/'), ('GIFT SHOP', 'https://birdlandjazzgiftshop.myshopify.com/'), ('About', 'https://www.birdlandjazz.com/about/'), ('Calendars', 'https://www.birdlandjazz.com/calendar/'), ('Club Menu', 'https://www.birdlandjazz.com/club-menu/'), ('Theater Menu', 'https://www.birdlandjazz.com/theater-menu/'), ('Gift Shop', 'https://birdlandjazzgiftshop.myshopify.com/'), ('Follow on Facebook', 'https://www.facebook.com/birdlandjazzclub'), ('Follow on X', 'https://twitter.com/birdlandjazz'), ('Follow on Instagram', 'https://www.instagram.com/birdlandjazz/'), ('Follow on Youtube', 'https://youtube.com/radiofreebirdland'), ('Contact us', 'https://www.birdlandjazz.com/#contact'), ('Event Image Link- Sam Dillon Q', 'https://www.birdlandjazz.com/tm-event/sam-dillon-quartet/'), ('SAM DILLON QUINTET', 'https://www.birdlandjazz.com/tm-event/sam-dillon-quartet/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/sam-dillon-quartet/'), ('Event Image Link- Michael Blak', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales/'), ('MICHAEL BLAKE QUARTET: HALLOWE', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales/'), ('Event Image Link- The Birdland', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-3/'), ('THE BIRDLAND LATIN JAZZ ORCHES', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-3/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-3/'), ('Event Image Link- Michael Blak', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales-2/'), ('MICHAEL BLAKE QUARTET: HALLOWE', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales-2/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/michael-blake-quartet-halloween-tales-2/'), ('Event Image Link- The Birdland', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-4/'), ('THE BIRDLAND LATIN JAZZ ORCHES', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-4/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/the-birdland-latin-jazz-orchestra-4/'), ('Event Image Link- Vince Giorda', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-9/'), ('VINCE GIORDANO AND THE NIGHTHA', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-9/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-9/'), ('Event Image Link- Salisha Thom', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-the-possibility-project/'), ('SALISHA THOMAS: THE POSSIBILIT', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-the-possibility-project/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-the-possibility-project/'), ('Event Image Link- Salisha Thom', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-livestream/'), ('SALISHA THOMAS LIVESTREAM', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-livestream/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/salisha-thomas-livestream/'), ('Event Image Link- Vince Giorda', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-10/'), ('VINCE GIORDANO AND THE NIGHTHA', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-10/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-10/'), ("Event Image Link- Jim Caruso's", 'https://www.birdlandjazz.com/tm-event/jim-carusos-cast-party-with-billy-stritch/'), ("JIM CARUSO'S CAST PARTY WITH B", 'https://www.birdlandjazz.com/tm-event/jim-carusos-cast-party-with-billy-stritch/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/jim-carusos-cast-party-with-billy-stritch/'), ('Event Image Link- Vince Giorda', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-11/'), ('VINCE GIORDANO AND THE NIGHTHA', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-11/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-11/'), ('Event Image Link- Cyrille Aimé', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee/'), ('CYRILLE AIMÉE', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee/'), ('Event Image Link- Vince Giorda', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-12/'), ('VINCE GIORDANO AND THE NIGHTHA', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-12/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/vince-giordano-and-the-nighthawks-12/'), ('Event Image Link- Cyrille Aimé', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee-2/'), ('CYRILLE AIMÉE', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee-2/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/cyrille-aimee-2/'), ('Event Image Link- David Ostwal', 'https://www.birdlandjazz.com/tm-event/david-ostwalds-louis-armstrong-eternity-band-3/'), ("DAVID OSTWALD'S LOUIS ARMSTRON", 'https://www.birdlandjazz.com/tm-event/david-ostwalds-louis-armstrong-eternity-band-3/'), ('BUY TICKETS', 'https://www.birdlandjazz.com/tm-event/david-ostwalds-louis-armstrong-eternity-band-3/'), ('2', 'https://www.birdlandjazz.com/page/2/'), ('3', 'https://www.birdlandjazz.com/page/3/'), ('40', 'https://www.birdlandjazz.com/page/40/'), ('Next »', 'https://www.birdlandjazz.com/page/2/'), ('CALENDAR', 'https://www.birdlandjazz.com/calendar/'), ('315 WEST 44TH ST – NEW YORK, N', 'https://goo.gl/maps/97ZmiXRjDWK2'), ('Footer Navigation - Club Menu', 'https://www.birdlandjazz.com/club-menu/'), ('Footer Navigation - Theater Me', 'https://www.birdlandjazz.com/theater-menu/'), ('TICKETWEB', 'https://ticketweb.com/'), ('PRIVACY POLICY', 'https://www.birdlandjazz.com/privacy-policy'), ('TERMS OF USE', 'https://www.birdlandjazz.com/terms-of-use'), ('ACCESSIBILITY', 'https://www.birdlandjazz.com/accessibility')]
+
+```
+We value your privacy
+
+We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+
+Customize
+Reject All
+Accept All
+ABOUT
+CALENDARS
+MENUS
+FAQ
+GIFT SHOP
+WELCOME TO
+BIRDLAND
+HISTORY
+
+When Chicago’s top musicians moved to New York in the mid-to-late 1920s, New York City became the Jazz Mecca. Nearly every major jazz style over the last 70 years has been initiated in the Big Apple!
+
+Charlie Parker, familiarly known to his fans and fellow musicians as “Bird,” or “Yardbird” was the dynamic creative personality and genius of the alto saxophone who served as the inspiration for Birdland.
+
+Contact us
+BIRDLAND IS FOR AGES 10+
+$20 FOOD OR BEVERAGE MINIMUM PER PERSON, PER SET
+TICKETWEB IS OUR ONLY AUTHORIZED TICKET SELLER.
+ALL SALES ARE FINAL.
+UPCOMING EVENTS
+SAM DILLON QUINTET
+BIRDLAND JAZZ CLUB
+SUN NOV 1
+Doors @ 4:30PM / Show @ 5:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+MICHAEL BLAKE QUARTET: HALLOWEEN TALES
+BIRDLAND THEATER
+SUN NOV 1
+Doors @ 5:30PM / Show @ 7:00PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+THE BIRDLAND LATIN JAZZ ORCHESTRA
+BIRDLAND JAZZ CLUB
+SUN NOV 1
+Doors @ 7:30PM / Show @ 8:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+MICHAEL BLAKE QUARTET: HALLOWEEN TALES
+BIRDLAND THEATER
+SUN NOV 1
+Doors @ 9:00PM / Show @ 9:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+THE BIRDLAND LATIN JAZZ ORCHESTRA
+BIRDLAND JAZZ CLUB
+SUN NOV 1
+Doors @ 10:00PM / Show @ 10:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+VINCE GIORDANO AND THE NIGHTHAWKS
+BIRDLAND THEATER
+MON NOV 2
+Doors @ 4:30PM / Show @ 5:30PM
+Ages 10+
+$24.91 - $45.76
+BUY TICKETS
+SALISHA THOMAS: THE POSSIBILITY PROJECT
+BIRDLAND JAZZ CLUB
+MON NOV 2
+Doors @ 5:30PM / Show @ 7:00PM
+Ages 10+
+$30.06 - $71.51
+BUY TICKETS
+SALISHA THOMAS LIVESTREAM
+BIRDLAND JAZZ CLUB
+MON NOV 2
+Show @ 7:00PM
+All Ages
+BUY TICKETS
+VINCE GIORDANO AND THE NIGHTHAWKS
+BIRDLAND THEATER
+MON NOV 2
+Doors @ 7:30PM / Show @ 8:30PM
+Ages 10+
+$24.91 - $45.76
+BUY TICKETS
+JIM CARUSO'S CAST PARTY WITH BILLY STRITCH
+BIRDLAND JAZZ CLUB
+MON NOV 2
+Doors @ 9:00PM / Show @ 9:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+VINCE GIORDANO AND THE NIGHTHAWKS
+BIRDLAND THEATER
+TUE NOV 3
+Doors @ 4:30PM / Show @ 5:30PM
+Ages 10+
+$24.91 - $45.76
+BUY TICKETS
+CYRILLE AIMÉE
+BIRDLAND JAZZ CLUB
+TUE NOV 3
+Doors @ 5:30PM / Show @ 7:00PM
+Ages 10+
+$45.76 - $56.06
+BUY TICKETS
+VINCE GIORDANO AND THE NIGHTHAWKS
+BIRDLAND THEATER
+TUE NOV 3
+Doors @ 7:30PM / Show @ 8:30PM
+Ages 10+
+$24.91 - $45.76
+BUY TICKETS
+CYRILLE AIMÉE
+BIRDLAND JAZZ CLUB
+TUE NOV 3
+Doors @ 9:00PM / Show @ 9:30PM
+Ages 10+
+$45.76 - $56.06
+BUY TICKETS
+DAVID OSTWALD'S LOUIS ARMSTRONG ETERNITY BAND
+BIRDLAND THEATER
+WED NOV 4
+Doors @ 4:30PM / Show @ 5:30PM
+Ages 10+
+$35.46 - $45.76
+BUY TICKETS
+CALENDAR
+Join the Mailing List:
+Enter Email Address*
+
+
+
+
+
+
+
+315 WEST 44TH ST – NEW YORK, NY 10036
+(212) 581 3080  –  EMAIL US
+
+ABOUT
+CALENDARS
+MENUS
+FAQ
+GIFT SHOP
+COPYRIGHT 2026 BIRDLAND JAZZ - POWERED BY TICKETWEB
+
+PRIVACY POLICY    TERMS OF USE    ACCESSIBILITY 
+
+DO NOT SHARE OR SELL MY INFORMATION
+```
+
+### Bar Bayeux
+https://www.barbayeux.com/ (HTTP 200, 479 chars)
+followed: None
+tried: [('https://www.barbayeux.com/jazz', 'usable=False chars=8830')]
+links: [('0', 'https://www.barbayeux.com/cart'), ('Skip to Content', 'https://www.barbayeux.com/#page'), ('BAR BAYEUX', 'https://www.barbayeux.com/'), ('home', 'https://www.barbayeux.com/'), ('cocktails', 'https://www.barbayeux.com/cocktails'), ('wine', 'https://www.barbayeux.com/wine'), ('snacks', 'https://www.barbayeux.com/food'), ('jazz', 'https://www.barbayeux.com/jazz'), ('comedy', 'https://www.barbayeux.com/comedy'), ('contact', 'https://www.barbayeux.com/contact'), ('Yelp', 'https://www.yelp.com/biz/bar-bayeux-brooklyn-3'), ('Instagram', 'https://www.instagram.com/barbayeux/'), ('Facebook', 'https://www.facebook.com/barbayeux/'), ('YouTube', 'https://www.youtube.com/channel/UCb7CbIGSm_cyR8Yg4tGR8fw/videos'), ('', 'https://www.yelp.com/biz/bar-bayeux-brooklyn-3'), ('', 'https://www.instagram.com/barbayeux/'), ('', 'https://www.facebook.com/barbayeux/'), ('', 'https://www.youtube.com/channel/UCb7CbIGSm_cyR8Yg4tGR8fw/videos'), ('', 'https://www.barbayeux.com/'), ('', 'https://www.barbayeux.com/cocktails'), ('', 'https://www.barbayeux.com/wine'), ('', 'https://www.barbayeux.com/food'), ('', 'https://www.barbayeux.com/jazz'), ('', 'https://www.barbayeux.com/comedy'), ('', 'https://www.barbayeux.com/contact')]
+
+```
+Skip to Content
+BAR BAYEUX
+home
+cocktails
+wine
+snacks
+jazz
+comedy
+contact
+
+Cocktails, Natural Wine, Craft Beer & Live Jazz
+
+                                                                                                                                            
+
+tues-wed 
+6pm-1am
+
+thurs- sat             sun
+5pm – 1am         7pm-1am
+
+
+happy hour tuesday to friday until 7pm
+
+               (347) 533-7845
+
+                1066 Nostrand Ave
+                Brooklyn, NY 11225
+```
+
+### Barbès
+https://www.barbesbrooklyn.com/events (HTTP 200, 146898 chars)
+followed: https://www.barbesbrooklyn.com/events
+tried: [('https://www.barbesbrooklyn.com/events', 'usable=True chars=146898')]
+links: [('HOME', 'https://www.barbesbrooklyn.com/'), ('EVENTS', 'https://www.barbesbrooklyn.com/events'), ('PAST EVENTS', 'https://www.barbesbrooklyn.com/copy-of-events'), ('Past Calendars', 'https://www.barbesbrooklyn.com/about-4'), ('ABOUT', 'https://www.barbesbrooklyn.com/about'), ('THEY WERE HERE', 'https://www.barbesbrooklyn.com/who-was-here'), ('BARBES RECORDS', 'https://www.barbesrecords.com/'), ('MENU', 'https://www.barbesbrooklyn.com/menu'), ('N/A MENU', 'https://www.barbesbrooklyn.com/copy-of-menu'), ('CONTACT', 'https://www.barbesbrooklyn.com/contact'), ('Facebook', 'https://www.facebook.com/Barb%C3%A8s-246005181112'), ('YouTube', 'https://www.youtube.com/c/Barb%C3%A8sBrooklyn/'), ('Instagram', 'https://www.instagram.com/barbesbrooklyn/'), ('Bandcamp', 'https://barbes.bandcamp.com/'), ('Go to our events page for our ', 'https://www.barbesbrooklyn.com/events'), ('', 'https://www.barbesbrooklyn.com/_files/ugd/716bfb_83c21daa0fb24ef8adc113700fbdc20f.pdf'), ('', 'https://wl.eventim.us/event/chicha-libre/684090?afflky=BabysAllRightBrooklyn'), ('', 'https://dromnyc.com/event/barbes-electric-cowbell-present-secret-planet/'), ('', 'https://www.passline.com/eventos/son-rompe-pera-chicha-libre-los-mirlos-a-bailar-con-los-muertossss'), ('', 'https://barbesinthewoods.com/'), ('', 'https://www.seetickets.us/event/chicha-libre/644988'), ('', 'https://dice.fm/partner/le-poisson-rouge-group-nyc-llc/event/7a6xv-barbs-20th-anniversary-celebration-w-red-baraat-son-rompe-pera-more-15th-may-le-poisson-rouge-new-york-tickets?dice_source=web&dice_medium=organic&dice_campaign=Le+Poisson+Rouge+Group+NYC%2C+LLC&_branch_match_id=1030618990142992804&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1XdKSU6xMDBMtEhMSgUAoRb6zyEAAAA%3D'), ('', 'https://www.ticketweb.com/event/slavic-soul-party-rocks-off-concert-cruise-series-tickets/13040115?pl=scenic'), ('', 'http://tinyurl.com/MeridianMarketHotel'), ('', 'https://www.ticketweb.com/event/chicha-libre-friends-night-club-101-tickets/14721593?'), ('', 'https://casadelpopolo.com/en/events/2025-11-22-barbes-brooklyn-presents-secret-planet-montreal'), ('', 'https://link.dice.fm/ComboDaguerre'), ('', 'https://dice.fm/event/mg289-cumbia-vortex-la-perla-from-bogot-la-banda-chuska-11th-jan-the-sultan-room-new-york-tickets'), ('', 'https://dice.fm/event/kom28-cumbia-vortex-w-son-rompe-pera-meridian-brothers-milagro-verde-13th-jan-elsewhere-the-hall-new-york-tickets?lng=en-US')]
+
+```
+Skip to Main Content
+HOME
+EVENTS
+ABOUT
+THEY WERE HERE
+BARBES RECORDS
+MENU
+CONTACT
+b a r b è s
+Monday-Friday: 5pm-2am
+Saturday & Sunday 2pm-3am
+Some of our shows are donation based.
+ Some have a strict admission price collected at the door.
+None of the shows are actually free...  
+You can pay online in advance, or in person that day.
+Check individual shows for details. 
+ 
+
+[embedded: https://viewcyembed.com/barbes/000000/FFFCFC/850505]
+CLUBE DO CHORO with REGIONAL SAMAUMA
+
+Fernanda Silveira leads a weekly Choro jam in our front room with Regional Samauma and special guests. A casual affair with virtuosos. Fernanda Silveira is a cavaquinho player specializing in the Brazilian practices of choro and traditional samba. She is a disciple of Luciana Rabello and has accompanied many artists including guitarists Maurício Carrilho, Yamandu Costa and Zé Barbeiro, clarinetist Nailor Proveta, mandolinists Pedro Amorim and Miltinho Mori, as well as Ronaldo do Bandolim and Jorginho do Pandeiro.&nbsp; $20 suggested donate in advance or pay in person.&nbsp;
+
+Sun, Nov 01 2026
+3:30PM - 5:30PM
+
+Tickets
+GIANCARLO VULCANO's RADIO HOUR
+
+Giancarlo Vulcano reimagines the narrative radio hour Reimagining some old pieces, and creating some new ones to accompany live readings of found texts, news stories, essays and literary works. Giancarlo Vulcano is a composer in Brooklyn, NY. His most recent score was for Paul Schrader's The Card Counter , starring Oscar Isaac, Tiffany Haddish and Willem Dafoe. In 2019, he scored the series Briarpatch , starring Rosario Dawson. which was named "one of the top 10 shows of 2020" by the L.A. times. A long association with Jeff Richmond and Tina Fey began during the SNL years, through 7 seasons of 30 Rock , culminating in his work as co-composer on Great News (NBC) and Unbreakable Kimmy Schmidt (Netflix) . $15 suggested
+
+Sun, Nov 01 2026
+6:00PM - 7:30PM
+
+Tickets
+STEPHANE WREMBEL
+
+Stéphane Wrembel is probably the foremost interpreter of Django Reinhardt’s music in North America. Whether sticking to the French master’s arrangements, or taking the music into new territory, Wrembel has always treated Django like a serious composer rather the cliché paragon of swing and speed he has often been portrayed as. As a composer, Stéphane has scored the theme song to Woody Allen's "Midnight in Paris" and scored his last film. He performed live for the 2012 Academy Awards, has headlined at Carnegie Hall and the the Lyon Opera House and&nbsp; has been called “a revelation” by Rolling Stone magazine. While his playing falls into the general umbrella of Gypsy Swing his weekly sets also howcase his own compositions which owe as much to Django Reinhardt as they do Pink Floyd, Ravel or Middle Eastern music. Stephane is at barbes (almost) every Sunday. $20 suggested. Donate online now or in person that night.&nbsp;
+
+Sun, Nov 01 2026
+8:00PM - 9:30PM
+
+Tickets
+DAISY CASTRO
+
+DAISY CASTRO Violinist Daisy Castro has been an active member of the Gypsy Jazz community both in the United States and in Europe since she was quite young. She has played on stages on both continents with many revered players, earning the respect of these luminaries and their discerning audiences. With a repertoire encompassing everything from the Django songbook to Salsa to traditional Turkish music to original compositions, along with an occasional addition of effects pedals, a whole new world of musical exploration awaits all who attend a performance. Featuring Daisy Castro - violin Emeline O’Rourke - guitar Brad Brose&nbsp; - guitar James Robbins - bass And additional guest tba $20 suggested. Pay now online or that night in person.&nbsp;
+
+Sun, Nov 01 2026
+10:00PM - 11:55PM
+
+Tickets
+MUSICS
+
+Musics are Ilusha Tsinadze, Gocha Tsinadze, Chris Tordini, and Jason Nazary. Ilusha and Gocha were born in the Republic of Georgia and started improvising together soon after their family moved to the US in 91. They both play electric guitars and effects.&nbsp; They are joined by longtime collaborators Chris Tordini on electric bass and Jason Nazary on drums.&nbsp; $20 suggested Pay online now or later in person
+
+Mon, Nov 02 2026
+7:00PM - 8:30PM
+
+Tickets
+TROPICAL VORTEX presents ELVIRA Y LA TRIETNIA
+
+TROPICAL VORTEX is Barbès long-running series showcasing all manners of tropical styles from Latinolandia with live band and DJs playing cumbia, chicha, guaguanco, mambo, plena, Sanjuanitos and other styles of vintage or not so vintage styles. Past artists include Combo Chimbita, Chicha Libre, Los Cumpleaños, Bulla en el Barrio with appearances by Chico Trujillo, Son Rompe Pera, Paito y los Gaiteros de Punta Brava, Ceferina Banquez and many many more.. ELVIRA y la TriEtnia" Colombian Caribbean Folk &amp; POP-Roc Elvira y la TriEtnia" infuses Latin poprand Rock with diverse elements from Colombian folklore. Drawing primarily from indigenous rhythms of the Caribbean coast, such as sones de negros, cumbia, bullerengue, chandé, gaita, fandango, porro, and merecumbé among other popular Caribbean sounds. In doing so, it represents the tri-ethnicity that defines her as a global woman. Alberto Fontes - Guitarra eléctrica; Juan Sebastián Monsalve - bajo; Víctor Babilonia - batería; Néstor Gómez - Tambor alegre and: Elvira Bustamante - Voz y maracas With resident DJ's SONIDO CHICHADELICO and ADRIAN IS HUNGRY and Special Guests &nbsp; $20 suggested&nbsp; Pay now online or in person that night.&nbsp; PRODUCED WITH OUR FRIENDS AT ILEGAL MEZCAL
+
+Mon, Nov 02 2026
+9:00PM - 11:55PM
+
+Tickets
+TAMAR KORN & A KORNUCOPIA
+
+Tamar Korn , she of Brain Cloud and Cangelosi Cards fame, has been dazzling us for over a decade, surprising us at every turn with her choice of repertoire, hopscotching, in one set, from early jazz, Western swing and American roots music to Yiddish songs, vocal solos and unexpected recitatives involving new and old poetry and philosophical essays. Tamar doesn't use a template, she creates it as she goes along.&nbsp; Friends, not always timely named, always come and join. &nbsp; $20 suggested Pay now online or that day in person,
+
+Tue, Nov 03 2026
+7:00PM - 8:30PM
+
+Tickets
+SLAVIC SOUL PARTY
+
+SLAVIC SOUL PARTY - Every Tuesday. (for ever..) Fiery Balkan brass, throbbing funk grooves, Roma accordion wizardry, and virtuoso jazz chops: Slavic Soul Party! is just what it says. Brash and strong as slivovitz, these nine musicians have forged a virtuosic new brass band music in the heart of New York City; they have held their Tuesday bacchanal for now 18 years and - and it has become a destination for locals and brass band fans from around the globe. John Carlson &amp; Kenny Warren (trumpet), Peter Hess (sax/clarinet), Peter Stan (accordion), Tim Vaughn &amp; Adam Dotson (trombone), Ken Bentley (tuba), Matt Moran and Chris Stromquist (go/snare/perc). 9pm to midnight.
+
+Tue, Nov 03 2026
+9:00PM - 11:55PM
+
+Tickets
+THE ANDY STATMAN TRIO
+
+A truly extraordinary artist, Andy Statman began his career in the 70’s as a virtuoso Mandolinist who studied and performed with David Grisman, went on to study clarinet with the legendary Dave Tarras and became one of the main architect of a Klezmer revival that started out 30 years ago and has since informed and influenced folk, Jazz and improvised music forms. Andy draws equally from Hassidic melodies, folk tunes from new and old worlds alike and Albert Ayler-influenced free-improv. The result reads like a very personal search for the sacred based both on traditions and introspection. Featuring Larry Eagle - drums ; Jim Whitney - bass and Andy Statman - clarinet and mandolin. $20 tickets. Reserve now or pay in person that night. Tickets do not guarantee a seat - just admission. Half of the room will be standing. We suggest getting there at least 30 minutes ahead to get a seat.&nbsp;
+
+Wed, Nov 04 2026
+8:00PM - 9:30PM
+
+Tickets
+Mamady Kouyate's MANDINGO AMBASSADORS
+
+Mamady Kouyate and his Mandingo Ambassadors. Every Wednesday. Mamady Kouyate is one of Guinea's better known guitarist. The heir to a long line of griots, he was first taught by his father who was one of the first guinean griots to introduce the guitar. Kouyate senior specialized in transcribing traditional kora and balafon lines for the guitar and his son Mamady first made his mark as an electric guitarist in the 1970's in some of the national bands that were part of president Sékou Touré’s campaign of Authenticité - a movement that sought to create an afrocentric popluar sound. Kouyate eventually joined Guinea’s most famous export, The Bembeya Jazz, with whom he toured for years. After some political trouble, Kouyate relocated to the US in the early 2000’s where he founded the Mandingo Ambassadors, a vehicle for his own music that uses the classic 70’s sound of of Guinea's legendary Sylliphone recordings. Every Wednesday, 10pm to midnight. “ Dazzling vocal and guitar patterns over a rhythm section that is like a perfect system ” Ben Ratliff, NY Times. $20 suggested. Donate now online or that night in person.
+
+Wed, Nov 04 2026
+10:00PM - 11:55PM
+
+Tickets
+ETHAN LIPTON AND HIS ORCHESTRA
+
+Ethan Lipton and his orchestra have been playing their brand of jazz/folk/alternative nosh with a chewy singer-songwriter center for almost two decades. The quartet delivers original songs steeped in sincerity and soul. Dubbed the city’s "Best Lounge Act" by New York Magazine, The band has been a fixture at Barbes and appeared at Celebrate Brooklyn and Pitchfork Paris and won an Obie for its show “No Place to Go” produced by The Public Theater. www.ethanlipton.com $20 . Pay now online or that day in person.&nbsp;
+
+Thu, Nov 05 2026
+8:00PM - 9:30PM
+
+Tickets
+IMAL GNAWA
+
+Imal Gnawa’s music is rooted in traditional Morrocan Gnawa music but adds a strong futuristic element. They use traditional instruments - sintir and krakrebs - augmented by electronic elements. They just released their debut E.P, Twilight Prophecy.&nbsp; $20 suggested. Donate now online or that night in person.&nbsp;
+
+Thu, Nov 05 2026
+10:00PM - 11:55PM
+
+Tickets
+Oscar Noriega's CROOKED QUARTET
+
+For years, composer and multi-instrumentalist OSCAR NORIEGA brought his Crooked Trio to Barbès every Friday from 5 to 7 - which he had conceived as a vehicle for his drumming. Oscar is back with his crooked ways, but concentrating on his main instruments, alto saxophone and clarinets. The sets will retain the casual vibe of the trio, with a mixture of standards and Oscar's compositions.&nbsp; Among other things, Oscar Noriega is a member of Tim Berne’s Snakeoil,Endangered Blood (Chris Speed, Jim Black, Trevor Dunn), Boss Tenor and he co-leads the brass band Banda De Los Muertos with Jacob Garchik.&nbsp; With: Oscar Noriega - Compositions. saxophone and clarinets, and a rotating casts of musicians often including&nbsp; &nbsp; Marta Sanchez - Piano; Christopher Tordini - Bass and Jason Nazary - Drums; Justin Mullens - trumpet as well as many others.&nbsp; $20 suggested Donate here in advance or in person during the performance
+
+Fri, Nov 06 2026
+5:30PM - 7:30PM
+
+Tickets
+ASTRID KULJANIC TRANSATLANTIC EXPLORATION COMPANY (FEAT. BEN ROSENBLUM)
+
+ASTRID KULJANIC TRANSATLANTIC EXPLORATION COMPANY (FEAT. BEN ROSENBLUM ) Croatian vocalist Astrid Kuljanic has immersed herself in an eclectic variety of musical traditions from around the world. Her journey from the Balkans to New York has allowed her to absorb Jazz, Brazilian, and acquire an advanced knowledge of performing with electronics. Astrid is equally skilled in faithful interpretations of these styles as she is inventive in her own arrangements – employing mixed meters and folk harmonies personally and authentically. With her quartet Astrid Kuljanic Transatlantic Exploration Company, she celebrated the debut album Riva released for OneTrickDog* Records with a sold-out concert at the Weill Recital Hall at Carnegie Hall. With her Croatian-Slovenian band Mildreds, she recorded two albums for Aquarius Records. The band is the subject of a 2021 documentary film produced by Hommage
+```
