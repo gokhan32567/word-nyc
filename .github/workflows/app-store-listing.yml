@@ -7,7 +7,7 @@ on:
 
 jobs:
   listing:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
       ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
