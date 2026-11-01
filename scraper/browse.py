@@ -225,6 +225,13 @@ async def _snapshot(browser, venue: dict, night: date, sem: asyncio.Semaphore, t
     return snap
 
 
+def _channel() -> dict:
+    """BROWSER_CHANNEL=chrome: use the installed Google Chrome when Playwright's own browser isn't available."""
+    import os
+    ch = os.environ.get("BROWSER_CHANNEL", "").strip()
+    return {"channel": ch} if ch else {}
+
+
 def _resolve(host: str) -> str | None:
     """Look a host up over DNS-over-HTTPS, for names the runner's own DNS fails on."""
     try:
@@ -240,7 +247,7 @@ async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeo
     sem = asyncio.Semaphore(concurrency)
     args = ["--disable-dev-shm-usage"]
     async with async_playwright() as pw:
-        browser = await pw.chromium.launch(args=args)
+        browser = await pw.chromium.launch(args=args, **_channel())
         try:
             snaps = {s.venue: s for s in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms)
                                                                 for v in venues])}
@@ -254,7 +261,7 @@ async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeo
         if flaky:
             log(f"  retrying {len(flaky)} page(s) that failed or came back empty")
             await asyncio.sleep(15)
-            browser = await pw.chromium.launch(args=args)
+            browser = await pw.chromium.launch(args=args, **_channel())
             try:
                 for s2 in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in flaky]):
                     old = snaps[s2.venue]
@@ -275,7 +282,7 @@ async def _snapshot_all(venues: list[dict], night: date, concurrency: int, timeo
                     rules.append(f"MAP {h} {ip}")
         if rules:
             log(f"  retrying {len(retry)} site(s) with DNS-over-HTTPS addresses: {'; '.join(rules)}")
-            browser = await pw.chromium.launch(args=args + ["--host-resolver-rules=" + ", ".join(rules)])
+            browser = await pw.chromium.launch(**_channel(), args=args + ["--host-resolver-rules=" + ", ".join(rules)])
             try:
                 for s in await asyncio.gather(*[_snapshot(browser, v, night, sem, timeout_ms) for v in retry]):
                     log(f"    {s.venue}: {s.error or 'loaded'}")

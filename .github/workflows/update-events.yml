@@ -20,6 +20,10 @@ on:
         description: "Only read venues whose name contains this text (blank = all)"
         required: false
         default: ""
+      simulate_browser_failure:
+        description: "Test only: pretend the browser install failed"
+        required: false
+        default: "false"
   push:                   # editing sponsored placements or the scraper republishes tonight's lineup
     branches: [main]
     paths: ["sponsored.json", "scraper/**", ".github/workflows/update-events.yml"]
@@ -64,10 +68,28 @@ jobs:
           key: playwright-1.56.0-${{ runner.os }}
 
       - name: Install the browser
+        id: browser
         if: steps.due.outputs.run == 'true'
+        continue-on-error: true
         run: |
           pip install --quiet playwright==1.56.0
+          if [ "${{ github.event.inputs.simulate_browser_failure }}" = "true" ]; then echo "simulated failure"; exit 1; fi
           python -m playwright install --with-deps chromium
+
+      # If the browser can't be installed (e.g. GitHub changed the machine image), don't stop: use the Google
+      # Chrome that GitHub's machines ship with, and failing that build the lineup without venue pages.
+      - name: Browser fallback
+        if: steps.due.outputs.run == 'true' && steps.browser.outcome == 'failure'
+        run: |
+          echo "::warning::Playwright's browser didn't install; falling back"
+          pip install --quiet playwright==1.56.0 || true
+          if command -v google-chrome >/dev/null 2>&1; then
+            echo "BROWSER_CHANNEL=chrome" >> "$GITHUB_ENV"
+            echo "Using the machine's Google Chrome: $(google-chrome --version)"
+          else
+            echo "NO_BROWSER=1" >> "$GITHUB_ENV"
+            echo "::warning::No browser available: building from Ticketmaster, newsletters and submissions only"
+          fi
 
       - name: Reader regression tests (warning only)
         if: steps.due.outputs.run == 'true'
@@ -84,7 +106,7 @@ jobs:
           LISTINGS_APP_PASSWORD: ${{ secrets.LISTINGS_APP_PASSWORD }}
           SUBMISSIONS_CSV_URL: ${{ vars.SUBMISSIONS_CSV_URL || 'https://docs.google.com/spreadsheets/d/174lJiYMrAUm_LBETSMj9RTCXXQl1S5xS19QNXXlxonc/gviz/tq?tqx=out:csv&sheet=Approved' }}
           VENUE_FILTER: ${{ github.event.inputs.venues }}
-        run: python scraper/scrape.py
+        run: python scraper/scrape.py ${NO_BROWSER:+--no-browser}
 
       - name: Save test-run details to the debug branch
         if: steps.due.outputs.run == 'true' && github.event.inputs.venues
