@@ -1,0 +1,60 @@
+name: Spotlight notifications
+
+# One-show notifications on top of the noon picks (scraper/spotlight.py):
+#   afternoon - 3 PM New York time, every day
+#   evening   - 5 PM New York time, Fridays and Saturdays
+# Two UTC times per slot cover daylight and standard time; the script only sends inside its window, and
+# spotlight-log.json makes sure each slot goes out once a day. Backup scheduled tasks also start this.
+on:
+  schedule:
+    - cron: "3 19,20 * * *"     # 3 PM ET
+    - cron: "3 21,22 * * 5,6"   # 5 PM ET, Fri and Sat
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "afternoon or evening (blank = whichever is due now)"
+        required: false
+        default: ""
+      force:
+        description: "Send even outside the window or if already sent"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spotlight
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send
+        env:
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+        run: |
+          slot="${{ github.event.inputs.slot }}"
+          if [ -z "$slot" ]; then
+            h=$(TZ=America/New_York date +%-H)
+            if [ "$h" -ge 17 ]; then slot=evening; else slot=afternoon; fi
+          fi
+          python scraper/spotlight.py "$slot" ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+      - name: Record it
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- spotlight-log.json)" ]; then
+            cp spotlight-log.json /tmp/spotlight-log.json
+            git fetch --quiet origin main && git reset --quiet --hard origin/main
+            cp /tmp/spotlight-log.json spotlight-log.json
+            git add spotlight-log.json
+            git commit -qm "Spotlight sent $(TZ=America/New_York date '+%F %H:%M') [skip ci]"
+            git push origin HEAD:main
+          fi
