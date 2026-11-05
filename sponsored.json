@@ -1,4 +1,51 @@
 {
   "_comment": "Paid placements. Each one marks shows as Sponsored (top of the list, highlighted pin) on nights between 'from' and 'until' (YYYY-MM-DD, both included). Match by 'venue' and, optionally, words from the show title in 'title_contains'. To list a show the daily sources miss, use 'event' with at least title, venue, lat, lng and time. See README for examples.",
-  "placements": []
+  "placements": [
+    {
+      "note": "Free promotion (founding offer), Sound Espressivo, productions@soundespressivo.com",
+      "from": "2026-11-23",
+      "until": "2026-11-23",
+      "push": true,
+      "event": {
+        "title": "Sound Espressivo Gala Concert — Candlelight Edition",
+        "venue": "Carnegie Hall",
+        "address": "Weill Recital Hall, 154 W 57th St, New York, NY 10019",
+        "lat": 40.7651,
+        "lng": -73.9799,
+        "date": "2026-11-23",
+        "time": "7:00 PM",
+        "genre": "Classical",
+        "performers": [
+          "New York Chamber Players",
+          "Giacomo Franci, conductor",
+          "Anna Ouspenskaya, piano"
+        ],
+        "description": "Classical and contemporary orchestral music with international soloists, ending with a tribute to Ennio Morricone's film music. In Weill Recital Hall.",
+        "url": "https://www.carnegiehall.org/calendar/2026/11/23/sound-espressivo-gala-0700pm"
+      }
+    },
+    {
+      "note": "Free promotion (founding offer), Sound Espressivo, productions@soundespressivo.com",
+      "from": "2026-11-24",
+      "until": "2026-11-24",
+      "push": true,
+      "event": {
+        "title": "Sound Espressivo Gala Concert — Candlelight Edition",
+        "venue": "Carnegie Hall",
+        "address": "Weill Recital Hall, 154 W 57th St, New York, NY 10019",
+        "lat": 40.7651,
+        "lng": -73.9799,
+        "date": "2026-11-24",
+        "time": "7:00 PM",
+        "genre": "Classical",
+        "performers": [
+          "Orchestra Manhattan",
+          "David Wroe, conductor",
+          "Anna Ouspenskaya, piano"
+        ],
+        "description": "Classical and contemporary orchestral music with international soloists, ending with a tribute to Ennio Morricone's film music. In Weill Recital Hall.",
+        "url": "https://www.carnegiehall.org/calendar/2026/11/24/sound-espressivo-gala-0700pm"
+      }
+    }
+  ]
 }
