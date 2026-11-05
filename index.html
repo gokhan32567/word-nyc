@@ -632,7 +632,7 @@
           price: String(e.price || '').trim(),
           program: toList(e.program),
           description: String(e.description || '').trim(),
-          url: safeUrl(e.url), image: safeUrl(e.image), listingUrl: safeUrl(e.listing_url),
+          url: safeUrl(e.url), image: safeUrl(e.image), listingUrl: safeUrl(e.listing_url), venueUrl: safeUrl(e.venue_url),
           fromVenue: /venue/.test(String(e.source || '')),
           sponsored: e.sponsored === true,
         };
@@ -960,7 +960,8 @@
         ${ev.description ? `<p class="d-desc">${esc(ev.description)}</p>` : ''}
         <div class="d-actions">
           ${tix ? `<a class="btn primary" id="d-tix" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">Get tickets</a>` : ''}
-          <a class="btn${tix ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
+          ${ev.venueUrl ? `<a class="btn${tix ? '' : ' primary'}" id="d-venue" href="${esc(ev.venueUrl)}" target="_blank" rel="noopener">Venue page</a>` : ''}
+          <a class="btn${tix || ev.venueUrl ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
           <button class="btn" type="button" id="d-share">Share</button>
         </div>
         ${tix && tix.paid ? '<p class="d-note">Word NYC may earn a commission if you buy tickets through this link.</p>' : ''}
@@ -980,6 +981,8 @@
     // ticket taps by venue (sponsored shows counted separately for their report)
     const tixLink = $('d-tix');
     if (tixLink) tixLink.addEventListener('click', () => WN.track(ev.sponsored ? 'stix' : 'tix', vslug));
+    const venueLink = $('d-venue');  // visits we send to the venue's own site (for venue reports)
+    if (venueLink) venueLink.addEventListener('click', () => WN.track('vpage', vslug));
     // follow the venue: stored on this phone; feeds "Also tonight at your favorites" in the noon push
     const fav = $('d-fav');
     WN.heartLabel(fav, WN.favs.has(vslug));

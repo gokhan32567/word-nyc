@@ -40,6 +40,7 @@ from genres import GENRES, bucket  # noqa: E402
 import feeds  # noqa: E402
 import geo  # noqa: E402
 import report  # noqa: E402
+from common import good_link  # noqa: E402
 from shows import is_show, is_strict, place_key, same_place  # noqa: E402
 import tm  # noqa: E402
 
@@ -222,13 +223,46 @@ def same_show(a: dict, b: dict) -> bool:
     return ta == tb or bool(tokens(a) & tokens(b))
 
 
+TICKET_SELLERS = ("ticketmaster.", "ticketweb.", "livenation.", "axs.com", "seetickets.", "dice.fm", "eventbrite.",
+                  "tixr.", "etix.", "showclix.", "prekindle.", "opendate.", "venuepilot.", "stubhub.", "seatgeek.",
+                  "vividseats.", "universe.com", "ticketleap.", "tickettailor.", "simpletix.", "bandsintown.", "songkick.")
+
+
+def _host(url: str | None) -> str:
+    import urllib.parse as _up
+    try:
+        return _up.urlsplit(url or "").netloc.lower().removeprefix("www.")
+    except ValueError:
+        return ""
+
+
+def add_venue_links(events: list[dict], venues: list[dict]) -> None:
+    """venue_url: the venue's own page for the show if we have one, else its calendar or website.
+    Shown next to "Get tickets" so people (and the venue) see the venue's site, not only a ticket seller."""
+    site = {v["name"]: v.get("url") for v in venues}
+    for e in events:
+        own = site.get(e["venue"])
+        home = _host(own)
+        cands = [e.get("venue_url"), e.get("url"), e.get("listing_url")]
+        pick = next((u for u in cands if u and good_link(u) and not any(t in _host(u) for t in TICKET_SELLERS)
+                     and (not home or home.split(".")[-2:] == _host(u).split(".")[-2:])), None)
+        pick = pick or (own if own and not any(t in home for t in TICKET_SELLERS) else None)
+        if pick and pick != e.get("url"):
+            e["venue_url"] = pick
+        else:
+            e.pop("venue_url", None)
+
+
 def absorb(into: dict, other: dict) -> None:
     """Fill gaps in one record with another source's details."""
     for f in FILL:
         if not into.get(f) and other.get(f):
             into[f] = other[f]
-    # a Ticketmaster link is where the tickets are actually sold (and can earn a commission)
+    # a Ticketmaster link is where the tickets are actually sold (and can earn a commission);
+    # keep the venue's own page for that show as venue_url
     if other.get("source") == "ticketmaster" and other.get("url"):
+        if into.get("url") and into.get("url") != other["url"] and not into.get("venue_url"):
+            into["venue_url"] = into["url"]
         into["url"] = other["url"]
     elif not into.get("url"):
         into["url"] = other.get("url")
@@ -511,6 +545,7 @@ def main() -> int:
         pass
     events = merge(collected + extra + earlier)
     flagged = mark_sponsored(events, placements)
+    add_venue_links(events, venues)
     if placements:
         log(f"  sponsored: {len(placements)} active placement(s), {len(extra)} added, {flagged} matched")
     for e in events:

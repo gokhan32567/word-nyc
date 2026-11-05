@@ -10,7 +10,7 @@
 //   GET  /report.json?key=&month=YYYY-MM   the monthly summary shown by /app-stats.html
 
 const SITE_ORIGINS = ['https://word-nyc.com', 'https://www.word-nyc.com'];
-const VENUE_METRICS = new Set(['tix', 'stix', 'spv', 'spt', 'fav', 'unfav']);
+const VENUE_METRICS = new Set(['tix', 'stix', 'spv', 'spt', 'fav', 'unfav', 'vpage']);
 const METRICS = new Set([...VENUE_METRICS, 'open', 'share']);
 const SLUG = /^[a-z0-9][a-z0-9-]{0,79}$/;
 const SHORT = /^[a-z0-9_-]{0,24}$/;
@@ -102,7 +102,7 @@ async function report(request, env, url) {
   const days = {}, venues = {}, shares = { show: 0, map: 0, story: 0 };
   const dayRow = (d) => (days[d] ||= { day: d, opens_app: 0, opens_web: 0, users_app: 0, users_web: 0, push_opens: 0,
                                         push_sent: 0, push_opened: 0, sponsor: '' });
-  const venue = (v) => (venues[v] ||= { venue: v, ticket_taps: 0, sponsored_views: 0, sponsored_taps: 0,
+  const venue = (v) => (venues[v] ||= { venue: v, ticket_taps: 0, venue_page_taps: 0, sponsored_views: 0, sponsored_taps: 0,
                                         sponsored_ticket_taps: 0, followers: 0, push_sent: 0, push_opened: 0 });
   for (const r of counts.results) {
     if (r.metric === 'open') {
@@ -112,6 +112,7 @@ async function report(request, env, url) {
       if (r.k === 'push') d.push_opens += r.n;
     } else if (r.metric === 'tix') venue(r.k).ticket_taps += r.n;
     else if (r.metric === 'stix') { venue(r.k).sponsored_ticket_taps += r.n; venue(r.k).ticket_taps += r.n; }
+    else if (r.metric === 'vpage') venue(r.k).venue_page_taps += r.n;
     else if (r.metric === 'spv') venue(r.k).sponsored_views += r.n;
     else if (r.metric === 'spt') venue(r.k).sponsored_taps += r.n;
     else if (r.metric === 'share') shares[r.k] = (shares[r.k] || 0) + r.n;
