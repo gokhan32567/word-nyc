@@ -84,9 +84,6 @@ def main() -> int:
     data = json.loads((ROOT / "events.json").read_text())
     if args.dry_run:
         today = data.get("date") or today
-    elif data.get("date") != today:
-        print(f"Lineup is for {data.get('date')}, not today ({today}); not sending.")
-        return 1
     if not args.force and not args.dry_run:
         if now.weekday() not in cfg["days"]:
             print(f"No {args.slot} spotlight on {now:%A}.")
@@ -94,6 +91,9 @@ def main() -> int:
         if not cfg["window"][0] <= now_min <= cfg["window"][1]:
             print(f"Outside the {args.slot} window ({now:%H:%M}); not sending.")
             return 0
+    if not args.dry_run and data.get("date") != today:
+        print(f"::warning::Lineup is for {data.get('date')}, not today ({today}); not sending.")
+        return 0
     log = json.loads(LOG.read_text()) if LOG.exists() else {}
     day_log = log.get(today, {})
     if args.slot in day_log and not args.force and not args.dry_run:
