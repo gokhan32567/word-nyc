@@ -46,6 +46,30 @@
         "description": "Classical and contemporary orchestral music with international soloists, ending with a tribute to Ennio Morricone's film music. In Weill Recital Hall.",
         "url": "https://www.carnegiehall.org/calendar/2026/11/24/sound-espressivo-gala-0700pm"
       }
+    },
+    {
+      "note": "Free promotion (founding offer), Tercio Flamenco, Ricardo Sánchez",
+      "from": "2026-11-14",
+      "until": "2026-11-14",
+      "push": true,
+      "event": {
+        "title": "Tercio Flamenco — A Live Recording",
+        "venue": "El Barrio's Artspace PS109",
+        "address": "215 E 99th St, New York, NY 10029",
+        "lat": 40.7869,
+        "lng": -73.9463,
+        "date": "2026-11-14",
+        "time": "7:30 PM",
+        "end": "9:00 PM",
+        "genre": "World",
+        "performers": [
+          "José Díaz \"Cachito\"",
+          "Diego Álvarez \"El Negro\"",
+          "Ricardo Sánchez"
+        ],
+        "description": "An intimate flamenco concert recorded live for an album, by three musicians honoring the roots of flamenco. Doors 7 PM.",
+        "url": "https://www.eventbrite.com/e/tercio-flamenco-live-show-album-recording-tickets-1994871161344"
+      }
     }
   ]
 }
