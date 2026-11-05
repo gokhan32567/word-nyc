@@ -10,7 +10,7 @@ from asc import BUNDLE_ID, call, summary  # noqa: E402
 
 app = call("GET", f"/apps?filter[bundleId]={BUNDLE_ID}")["data"][0]
 app_id = app["id"]
-lines = [f"App: {app['attributes'].get('name')} ({BUNDLE_ID})"]
+lines = [f"App: {app['attributes'].get('name')} ({BUNDLE_ID}), Apple ID {app_id}"]
 for v in call("GET", f"/apps/{app_id}/appStoreVersions?filter[platform]=IOS&limit=10")["data"]:
     a = v["attributes"]
     lines.append(f"Version {a['versionString']}: {a['appStoreState']} (created {a.get('createdDate')})")
