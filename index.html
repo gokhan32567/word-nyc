@@ -30,6 +30,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="apple-itunes-app" content="app-id=6827827380">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1501,16 +1502,27 @@
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   }
+  const APP_STORE_URL = 'https://apps.apple.com/app/id6827827380';
   (function installTip() {
     if (WN.inApp) return;
     const tip = $('install-tip');
     const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
     let dismissed = false;
     try { dismissed = localStorage.getItem('wordnyc.installTip') === 'hidden'; } catch (_) {}
-    if (standalone || dismissed) return;
+    if ((standalone && !/iPhone|iPad|iPod/.test(navigator.userAgent)) || dismissed) return;
     const ua = navigator.userAgent;
-    const iosSafari = /iPhone|iPad|iPod/.test(ua) && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|GSA/.test(ua);
-    if (iosSafari) tip.hidden = false;
+    if (/iPhone|iPad|iPod/.test(ua)) {  // iPhone and iPad: the App Store app
+      $('install-text').innerHTML = '<b>Get the Word NYC app</b> for iPhone: free on the App Store.';
+      $('install-btn').textContent = 'Get';
+      $('install-btn').hidden = false;
+      $('install-btn').addEventListener('click', () => { location.href = APP_STORE_URL; });
+      tip.hidden = false;
+      $('install-x').addEventListener('click', () => {
+        tip.hidden = true;
+        try { localStorage.setItem('wordnyc.installTip', 'hidden'); } catch (_) {}
+      });
+      return;
+    }
     let deferred = null;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -1547,7 +1559,7 @@
     if (ios && !standalone) {
       // iPhone only allows notifications for sites added to the Home Screen
       if (!('Notification' in window) || !('PushManager' in window)) {
-        text.innerHTML = "🔔 <b>Tonight's picks at noon.</b> <span>Add Word NYC to your Home Screen first, then turn them on in the app.</span>";
+        text.innerHTML = "🔔 <b>Tonight's picks at noon.</b> <span>Get them in the <a href='https://apps.apple.com/app/id6827827380' style='color:var(--gold)'>Word NYC iPhone app</a>.</span>";
         btn.hidden = true;
       }
     } else if (!('Notification' in window)) return;

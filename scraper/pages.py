@@ -231,6 +231,7 @@ def page(path: str, title: str, description: str, body: str, ld: list[dict] | No
   <meta property="og:url" content="{SITE}{path}">
   <meta property="og:image" content="https://word-nyc.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6827827380">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
   <link rel="manifest" href="/manifest.webmanifest">
