@@ -5,7 +5,7 @@ import json
 import time
 from datetime import date, datetime, timezone
 
-from common import NY, clean_text, clock, get, money, night_window, parse_iso, price_label
+from common import plain_ticket_url, NY, clean_text, clock, get, money, night_window, parse_iso, price_label
 from genres import VAGUE, bucket
 
 CENTER = (40.7300, -73.9950)   # lower Manhattan
@@ -122,7 +122,7 @@ def tm_event(e: dict) -> dict | None:
         "date": st.get("localDate") or (when.astimezone(NY).date().isoformat() if when else None),
         "time": t,
         "end": None,
-        "url": e.get("url"),
+        "url": plain_ticket_url(e.get("url")),
         "genre": bucket(sub, gen, title),
         "subgenre": next((x for x in (sub, gen) if x.strip().lower() not in VAGUE), None),
         "price": tm_price(pr),

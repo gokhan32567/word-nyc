@@ -205,3 +205,14 @@ CALENDAR_ADD = _re.compile(r"calendar\.google\.com|google\.com/calendar|/calenda
 
 def good_link(url: str | None) -> bool:
     return bool(url) and not CALENDAR_ADD.search(url)
+
+
+def plain_ticket_url(url: str | None) -> str | None:
+    """Ticketmaster's feed wraps links in an affiliate redirect (ticketmaster.evyy.net/c/...?u=<real link>).
+    Without an approved affiliate account that redirect fails ("link is malformed"), so use the real link."""
+    if not url or "evyy.net" not in url and "/c/" not in url:
+        return url
+    import urllib.parse as _up
+    q = _up.parse_qs(_up.urlsplit(url).query)
+    real = (q.get("u") or [None])[0]
+    return real if real and real.startswith("http") else url

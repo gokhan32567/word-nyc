@@ -278,7 +278,9 @@ def merge(events: list[dict]) -> list[dict]:
             out.append({**e, "performers": list(e.get("performers") or []), "program": list(e.get("program") or [])})
     out = drop_cross_venue_copies(out)
     from common import good_link
-    for e in out:  # never send people to an "add to calendar" link
+    from common import plain_ticket_url
+    for e in out:  # never send people to an "add to calendar" link, or through a dead affiliate redirect
+        e["url"] = plain_ticket_url(e.get("url"))
         if not good_link(e.get("url")):
             e["url"] = e.get("listing_url") if good_link(e.get("listing_url")) else None
     for e in out:

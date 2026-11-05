@@ -93,6 +93,13 @@ def test_exhibition_not_a_show():
     assert not is_show("On display | From the BRIClab + Johan Orellana: Remnants")
 
 
+def test_affiliate_redirect_unwrapped():  # Impact declined: evyy.net links show "link is malformed"
+    from common import plain_ticket_url
+    u = "https://ticketmaster.evyy.net/c/Gokhan/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fx%2F14369924&utm_medium=affiliate"
+    assert plain_ticket_url(u) == "https://www.ticketweb.com/event/x/14369924"
+    assert plain_ticket_url("https://dice.fm/event/x") == "https://dice.fm/event/x"
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):
