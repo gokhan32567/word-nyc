@@ -658,6 +658,11 @@
     if (ev.start == null) return `${day}, time to be announced`;
     return `${day}, ${prettyClock(ev.start)}${ev.endKnown ? ` – ${prettyClock(ev.end)}` : ''}`;
   }
+  // A ticket seller's page ("Get tickets") vs. the venue's own page ("Tickets & info")
+  const TICKET_SELLERS = /(^|\.)(ticketmaster|ticketweb|livenation|axs|seetickets|dice|eventbrite|tixr|etix|showclix|prekindle|opendate|venuepilot|stubhub|seatgeek|vividseats|universe|ticketleap|tickettailor|simpletix|evyy)\./;
+  function sellsTickets(url) {
+    try { return TICKET_SELLERS.test(new URL(url).hostname.replace(/^www\./, '')); } catch (_) { return true; }
+  }
   // Turn a ticket URL into an affiliate link when the matching program is set up in CONFIG.affiliate.
   function ticketLink(url) {
     if (!url) return null;
@@ -959,7 +964,7 @@
         <dl class="d-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
         ${ev.description ? `<p class="d-desc">${esc(ev.description)}</p>` : ''}
         <div class="d-actions">
-          ${tix ? `<a class="btn primary" id="d-tix" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">Get tickets</a>` : ''}
+          ${tix ? `<a class="btn primary" id="d-tix" href="${esc(tix.href)}" target="_blank" rel="${tix.paid ? 'sponsored noopener' : 'noopener'}">${sellsTickets(tix.href) ? 'Get tickets' : 'Tickets &amp; info'}</a>` : ''}
           ${ev.venueUrl ? `<a class="btn${tix ? '' : ' primary'}" id="d-venue" href="${esc(ev.venueUrl)}" target="_blank" rel="noopener">Venue page</a>` : ''}
           <a class="btn${tix || ev.venueUrl ? '' : ' primary'}" href="${esc(mapsUrl(ev))}" target="_blank" rel="noopener">Open in Maps</a>
           <button class="btn" type="button" id="d-share">Share</button>
