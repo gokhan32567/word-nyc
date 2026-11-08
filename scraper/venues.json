@@ -1162,6 +1162,17 @@
    "address": "5-25 46th Ave, Queens, NY 11101",
    "url": "https://www.culturelablic.org/",
    "genre": "Other"
+  },
+  {
+   "name": "The Red Lion",
+   "address": "151 Bleecker St, New York, NY 10012",
+   "url": "https://www.redlionnyc.com/live-music/",
+   "genre": "Rock",
+   "regular": {
+    "title": "Live bands",
+    "time": "7:00 PM",
+    "description": "Live bands every night from 7 PM in the Greenwich Village bar. No cover Sunday to Thursday; cover on Fridays, Saturdays and holidays."
+   }
   }
  ]
 }
