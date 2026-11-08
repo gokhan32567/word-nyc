@@ -116,18 +116,23 @@
     .pin.live  { width: 14px; height: 14px; background: var(--gold);
                  box-shadow: 0 0 0 3px rgba(255, 194, 75, .25), 0 0 18px 6px rgba(255, 194, 75, .5);
                  animation: bulb 2.4s ease-in-out infinite; }
-    /* coming up: blue LEDs (brighter when starting within the hour); playing now stays gold */
-    .pin.soon  { width: 13px; height: 13px; background: #8fa6ff;
-                 box-shadow: 0 0 0 3px rgba(90, 120, 255, .3), 0 0 16px 5px rgba(90, 120, 255, .55);
-                 animation: bulb-blue 2.4s ease-in-out infinite; }
-    .pin.later { width: 11px; height: 11px; background: var(--peri);
-                 box-shadow: 0 0 0 2px rgba(90, 120, 255, .22), 0 0 12px 3px rgba(90, 120, 255, .38); }
+    /* coming up: luminous blue LEDs (brighter and pulsing within the hour); playing now stays gold */
+    .pin.soon  { width: 14px; height: 14px; background: radial-gradient(circle, #ffffff 0%, #c9d4ff 35%, #6f8dff 100%);
+                 box-shadow: 0 0 0 3px rgba(90, 130, 255, .45), 0 0 18px 7px rgba(80, 125, 255, .8), 0 0 40px 14px rgba(70, 110, 255, .45);
+                 animation: bulb-blue 2s ease-in-out infinite; }
+    .pin.later { width: 12px; height: 12px; background: radial-gradient(circle, #eef2ff 0%, #9fb3ff 40%, #5f80ff 100%);
+                 box-shadow: 0 0 0 2px rgba(90, 130, 255, .35), 0 0 14px 5px rgba(80, 125, 255, .65), 0 0 30px 10px rgba(70, 110, 255, .3);
+                 animation: glow-blue 3.2s ease-in-out infinite; }
     .pin.ended { width: 8px; height: 8px; background: var(--slate); }
     .tn-pin.selected { z-index: 10 !important; }
     .tn-pin.selected .pin { transform: scale(1.5); outline: 2px solid var(--paper); outline-offset: 2px; }
     @keyframes bulb-blue {
-      0%, 100% { box-shadow: 0 0 0 3px rgba(90, 120, 255, .3), 0 0 16px 5px rgba(90, 120, 255, .55); }
-      50%      { box-shadow: 0 0 0 4px rgba(90, 120, 255, .38), 0 0 22px 8px rgba(90, 120, 255, .7); }
+      0%, 100% { box-shadow: 0 0 0 3px rgba(90, 130, 255, .45), 0 0 18px 7px rgba(80, 125, 255, .8), 0 0 40px 14px rgba(70, 110, 255, .45); }
+      50%      { box-shadow: 0 0 0 4px rgba(90, 130, 255, .55), 0 0 26px 10px rgba(80, 125, 255, .95), 0 0 56px 20px rgba(70, 110, 255, .55); }
+    }
+    @keyframes glow-blue {
+      0%, 100% { box-shadow: 0 0 0 2px rgba(90, 130, 255, .35), 0 0 14px 5px rgba(80, 125, 255, .65), 0 0 30px 10px rgba(70, 110, 255, .3); }
+      50%      { box-shadow: 0 0 0 2px rgba(90, 130, 255, .45), 0 0 18px 7px rgba(80, 125, 255, .8), 0 0 38px 13px rgba(70, 110, 255, .4); }
     }
     @keyframes bulb {
       50% { box-shadow: 0 0 0 6px rgba(255, 194, 75, .1), 0 0 28px 10px rgba(255, 194, 75, .32); }
@@ -1265,10 +1270,10 @@
       glow(x, X, Y, 70, 'rgba(255,194,75,0.55)');
       x.beginPath(); x.arc(X, Y, 15, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.live; x.fill();
     } else if (key === 'soon') {
-      glow(x, X, Y, 56, 'rgba(90,120,255,0.5)');
+      glow(x, X, Y, 80, 'rgba(80,125,255,0.75)');
       x.beginPath(); x.arc(X, Y, 13, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.soon; x.fill();
     } else if (key === 'later') {
-      glow(x, X, Y, 38, 'rgba(90,120,255,0.35)');
+      glow(x, X, Y, 56, 'rgba(80,125,255,0.55)');
       x.beginPath(); x.arc(X, Y, 11, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.later; x.fill();
     } else {
       x.beginPath(); x.arc(X, Y, 8, 0, Math.PI * 2); x.fillStyle = PIN_STYLE.ended; x.fill();
