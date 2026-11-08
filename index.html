@@ -1431,7 +1431,11 @@
   }
 
   // Share a link: the phone's share sheet where available, otherwise copy it.
+  // Every shared message also points people to the iPhone app. No second link in the text: messaging
+  // apps would preview the App Store page instead of the show.
+  const APP_LINE = "Get the iPhone app: search “Word NYC” on the App Store.";
   async function shareLink({ title, text, url }) {
+    text = `${text}\n${APP_LINE}`;
     if (WN.hasNative()) {
       try { await WN.native('share', { title, text, url }); return; } catch (_) { /* fall through */ }
     }
