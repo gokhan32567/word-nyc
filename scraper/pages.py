@@ -110,8 +110,13 @@ def event_ld(e: dict) -> dict:
                      "address": {"@type": "PostalAddress", "streetAddress": e.get("address") or "",
                                  "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US"}},
     }
-    if e.get("performers"):
-        ld["performer"] = [{"@type": "PerformingGroup", "name": p} for p in e["performers"][:6]]
+    from notify import show_key  # same key the map uses for ?show=, so the link opens this show
+    ld["url"] = f"https://word-nyc.com/?show={show_key(e)}"
+    if e.get("lat") and e.get("lng"):
+        ld["location"]["geo"] = {"@type": "GeoCoordinates", "latitude": e["lat"], "longitude": e["lng"]}
+    performers = e.get("performers") or ([e["artist"]] if e.get("artist") else [])
+    if performers:
+        ld["performer"] = [{"@type": "PerformingGroup", "name": p} for p in performers[:6]]
     if e.get("description"):
         ld["description"] = e["description"]
     ld["image"] = [e["image"]] if e.get("image") else list(FALLBACK_IMAGES)

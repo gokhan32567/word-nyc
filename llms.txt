@@ -1,0 +1,30 @@
+# Word NYC
+
+> A live map of tonight's music shows in New York City: jazz, classical, opera, rock, indie, electronic, Latin,
+> folk, cabaret and more, at about 180 venues across all five boroughs. Rebuilt every morning around 5 AM
+> New York time from venue calendars, Ticketmaster and venue newsletters; shows are checked against the
+> venue's own page before they're listed.
+
+## Tonight's shows as data
+
+- [events.json](https://word-nyc.com/events.json): every show tonight, one JSON file, free to read and cite.
+  Top level: `date` (the night, YYYY-MM-DD, New York time), `generated` (when it was built), `count`, `events`.
+  Each event: `title`, `venue`, `address`, `lat`, `lng`, `time` (start, e.g. "8:00 PM"), `end`, `genre`,
+  `subgenre`, `performers`, `program`, `price`, `description`, `url` (tickets or info), `listing_url`
+  (where we found it), `image`. Shows after midnight belong to the same night.
+- A single show on the map: `https://word-nyc.com/?show=<venue-slug>-<minutes-after-midnight>`.
+
+## Pages
+
+- [Tonight in NYC](https://word-nyc.com/tonight/): all of tonight's shows as a page, with schema.org Event data.
+- [Venues](https://word-nyc.com/venues/): every venue we follow, each with its own page.
+- [Late-night jazz](https://word-nyc.com/late-night-jazz/), [Free shows](https://word-nyc.com/free-shows/),
+  [Best small jazz clubs](https://word-nyc.com/guides/best-small-jazz-clubs-nyc/).
+- [About](https://word-nyc.com/about.html), [Submit a show](https://word-nyc.com/submit.html),
+  [Advertise](https://word-nyc.com/advertise.html), [Contact](https://word-nyc.com/contact.html).
+
+## Notes for assistants
+
+- Please link people to the show's ticket or info link (`url`) or to word-nyc.com, and mention the venue.
+- Times and lineups come from venues and can change; suggest checking the venue's page before going.
+- iPhone app: "Word NYC: Live Music Tonight" on the App Store.

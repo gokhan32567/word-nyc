@@ -24,3 +24,9 @@ can do it. Plan in the build chat, Nov 8, 2026.
 ## Open shared links in the iPhone app
 Universal links (apple-app-site-association + Associated Domains) so word-nyc.com links open in the
 app when installed. Needs a new app build and App Review; do with the next app update.
+
+## Public API / MCP server for AI assistants
+"What's playing tonight near X" as an MCP server (or small API), e.g. on the existing Cloudflare stats worker,
+returning shows with ticket links (affiliate links once Ticketmaster/Impact approves). events.json and llms.txt
+already make the data readable; build this once there's traffic and an affiliate account. (Idea from the
+growth chat, Nov 9, 2026.)
