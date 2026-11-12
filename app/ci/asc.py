@@ -84,11 +84,13 @@ def setup() -> None:
             "identifier": BUNDLE_ID, "name": APP_NAME, "platform": "IOS"}}})["data"]["id"]
         print(f"Registered bundle ID {BUNDLE_ID} ({bid}).")
     caps = {c["attributes"]["capabilityType"] for c in call("GET", f"/bundleIds/{bid}/bundleIdCapabilities")["data"]}
-    if "PUSH_NOTIFICATIONS" not in caps:
-        call("POST", "/bundleIdCapabilities", {"data": {"type": "bundleIdCapabilities",
-             "attributes": {"capabilityType": "PUSH_NOTIFICATIONS"},
-             "relationships": {"bundleId": {"data": {"type": "bundleIds", "id": bid}}}}}, ok=(201, 409))
-        print("Turned on Push Notifications for the bundle ID.")
+    for cap, label in (("PUSH_NOTIFICATIONS", "Push Notifications"),
+                       ("ASSOCIATED_DOMAINS", "Associated Domains (word-nyc.com links open in the app)")):
+        if cap not in caps:
+            call("POST", "/bundleIdCapabilities", {"data": {"type": "bundleIdCapabilities",
+                 "attributes": {"capabilityType": cap},
+                 "relationships": {"bundleId": {"data": {"type": "bundleIds", "id": bid}}}}}, ok=(201, 409))
+            print(f"Turned on {label} for the bundle ID.")
     apps = call("GET", f"/apps?filter[bundleId]={BUNDLE_ID}")["data"]
     if not apps:
         msg = (f"The bundle ID is ready, but there's no app record yet. In App Store Connect > Apps > + > New App, "
@@ -147,6 +149,9 @@ def sign(profile_path: str) -> None:
     print(f"Profile '{name}' ({uuid}), team {team}")
     if "aps-environment" not in prof.get("Entitlements", {}):
         print("::warning::The profile has no Push Notifications entitlement; notifications won't work in this build.")
+    if "com.apple.developer.associated-domains" not in prof.get("Entitlements", {}):
+        sys.exit("::error::The profile has no Associated Domains entitlement (it predates the capability). Delete the "
+                 "old 'com.wordnyc.app' App Store profile in developer.apple.com > Profiles, then run the build again.")
 
     text = PBXPROJ.read_text()
     # Only the App target's Release configuration (it has INFOPLIST_FILE); Swift packages keep their own settings.

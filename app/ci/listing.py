@@ -70,7 +70,12 @@ def editable_version(app_id):
     for v in vs:
         if v["attributes"]["appStoreState"] in ("PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED"):
             return v
-    raise RuntimeError("no version in 'Prepare for Submission'")
+    # none open: start the next version (the one in listing.json), like "+ iOS App Version" in App Store Connect
+    v = call("POST", "/appStoreVersions", {"data": {"type": "appStoreVersions",
+             "attributes": {"platform": "IOS", "versionString": L["version"]},
+             "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}}})["data"]
+    print(f"Created version {L['version']} in App Store Connect.")
+    return v
 
 
 @step("Version number and copyright")
@@ -83,7 +88,8 @@ def version_info(version):
 def version_text(loc):
     call("PATCH", f"/appStoreVersionLocalizations/{loc['id']}", {"data": {"type": "appStoreVersionLocalizations", "id": loc["id"],
          "attributes": {"description": L["description"], "keywords": L["keywords"], "promotionalText": L["promotionalText"],
-                        "supportUrl": L["supportUrl"], "marketingUrl": L["marketingUrl"]}}})
+                        "supportUrl": L["supportUrl"], "marketingUrl": L["marketingUrl"],
+                        **({"whatsNew": L["whatsNew"]} if L.get("whatsNew") else {})}}})
 
 
 def upload_screenshot(set_id: str, path: Path):
