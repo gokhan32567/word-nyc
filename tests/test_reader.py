@@ -100,6 +100,14 @@ def test_affiliate_redirect_unwrapped():  # Impact declined: evyy.net links show
     assert plain_ticket_url("https://dice.fm/event/x") == "https://dice.fm/event/x"
 
 
+def test_ticketmaster_fallback_link_replaced():  # Birdland 9:30 PM: ticketmaster.com/event/Z7r9... led nowhere
+    import scrape
+    e = {"venue": "Birdland", "title": "Dee Dee Bridgewater", "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvZ19",
+         "venue_url": "https://www.birdlandjazz.com/tm-event/dee-dee-bridgewater-2/"}
+    scrape.add_venue_links([e], [{"name": "Birdland", "url": "https://www.birdlandjazz.com/"}])
+    assert e["url"] == "https://www.birdlandjazz.com/tm-event/dee-dee-bridgewater-2/" and not e.get("venue_url")
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

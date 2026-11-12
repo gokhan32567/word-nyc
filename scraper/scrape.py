@@ -228,6 +228,9 @@ TICKET_SELLERS = ("ticketmaster.", "ticketweb.", "livenation.", "axs.com", "seet
                   "vividseats.", "universe.com", "ticketleap.", "tickettailor.", "simpletix.", "bandsintown.", "songkick.")
 
 
+TM_FALLBACK = re.compile(r"https?://(www\.)?ticketmaster\.com/event/Z[0-9A-Za-z]+/?$")
+
+
 def _host(url: str | None) -> str:
     import urllib.parse as _up
     try:
@@ -241,6 +244,10 @@ def add_venue_links(events: list[dict], venues: list[dict]) -> None:
     Shown next to "Get tickets" so people (and the venue) see the venue's site, not only a ticket seller."""
     site = {v["name"]: v.get("url") for v in venues}
     for e in events:
+        # ticketmaster.com/event/Z7r9...: Ticketmaster's fallback address for shows it lists but doesn't sell
+        # (often TicketWeb); it can lead nowhere. Prefer the venue's own page for the show when we have one.
+        if TM_FALLBACK.match(e.get("url") or "") and e.get("venue_url") and good_link(e["venue_url"]):
+            e["url"], e["venue_url"] = e["venue_url"], None
         own = site.get(e["venue"])
         home = _host(own)
         cands = [e.get("venue_url"), e.get("url"), e.get("listing_url")]
