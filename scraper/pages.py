@@ -300,6 +300,38 @@ def nice_date(d: date) -> str:
     return d.strftime("%A, %B ") + str(d.day)
 
 
+# Venues that changed name: the old page forwards to the new one instead of disappearing.
+RENAMED = {"the-bowery-electric": "bowery-palace"}
+
+
+def redirect_page(to: str) -> str:
+    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved</title>'
+            f'<link rel="canonical" href="https://word-nyc.com{to}"><meta name="robots" content="noindex">'
+            f'<meta http-equiv="refresh" content="0; url={to}"></head><body><a href="{to}">This venue has moved here.</a>'
+            f'</body></html>\n')
+
+
+def history_venues(root: Path) -> set[str]:
+    """Venue names from past lineups in git (one-time backfill, so pages that existed before keep existing)."""
+    if (HERE / "seen_venues.json").exists():
+        return set()
+    import subprocess
+    names: set[str] = set()
+    try:
+        commits = subprocess.run(["git", "log", "--format=%H", "--since=60 days ago", "--", "events.json"], cwd=root,
+                                 capture_output=True, text=True, timeout=60).stdout.split()
+        for c in commits[:200]:
+            raw = subprocess.run(["git", "show", f"{c}:events.json"], cwd=root, capture_output=True, text=True,
+                                 timeout=30).stdout
+            try:
+                names |= {e["venue"] for e in json.loads(raw).get("events", [])}
+            except ValueError:
+                pass
+    except Exception:  # noqa: BLE001 - backfill is best-effort
+        pass
+    return names
+
+
 def build(out_root: Path = ROOT) -> list[str]:
     data = json.loads((out_root / "events.json").read_text())
     night = date.fromisoformat(data["date"])
@@ -310,6 +342,10 @@ def build(out_root: Path = ROOT) -> list[str]:
 
     for d in GENERATED_DIRS:
         shutil.rmtree(out_root / d, ignore_errors=True)
+    for old_slug, new_slug in RENAMED.items():
+        f = out_root / "venues" / old_slug / "index.html"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(redirect_page(f"/venues/{new_slug}/"))
 
     def write(path: str, content: str):
         f = out_root / path.strip("/") / "index.html"
@@ -353,9 +389,23 @@ def build(out_root: Path = ROOT) -> list[str]:
     # ---- venues: data shared by the venue, neighborhood, index, guide and badge pages
     notes = json.loads((HERE / "venue_notes.json").read_text()).get("venues", {}) if (HERE / "venue_notes.json").exists() else {}
     geo = load_geo()
-    known = {v["name"]: dict(v) for v in venues if not v.get("presenters")}
+    # Every venue that has ever had a show keeps its page (seen_venues.json), so a page Google indexed
+    # doesn't turn into a 404 on a night that venue has nothing listed.
+    seen_path = HERE / "seen_venues.json"
+    seen = json.loads(seen_path.read_text()) if seen_path.exists() else {}
     for e in events:
-        known.setdefault(e["venue"], {"name": e["venue"], "address": e.get("address"), "genre": e.get("genre")})
+        rec = seen.setdefault(e["venue"], {"name": e["venue"]})
+        for k in ("address", "lat", "lng", "genre"):
+            if e.get(k) and not rec.get(k):
+                rec[k] = e[k]
+        rec["last"] = night.isoformat()
+    for name in history_venues(out_root):
+        seen.setdefault(name, {"name": name})
+    seen_path.write_text(json.dumps(dict(sorted(seen.items())), indent=1, ensure_ascii=False) + "\n")
+    known = {v["name"]: dict(v) for v in venues}
+    for name, rec in seen.items():
+        known.setdefault(name, {k: rec.get(k) for k in ("name", "address", "lat", "lng", "genre")})
+    for e in events:
         if e.get("lat") and e.get("lng"):
             known[e["venue"]].setdefault("lat", e["lat"])
             known[e["venue"]].setdefault("lng", e["lng"])

@@ -1,0 +1,981 @@
+{
+ "11th Street Bar": {
+  "name": "11th Street Bar"
+ },
+ "54 Below": {
+  "name": "54 Below",
+  "address": "254 W 54th St, New York, NY 10019",
+  "lat": 40.76435,
+  "lng": -73.98378,
+  "genre": "Cabaret & Musicals",
+  "last": "2026-11-11"
+ },
+ "9 Mile Garden Events": {
+  "name": "9 Mile Garden Events"
+ },
+ "92NY": {
+  "name": "92NY"
+ },
+ "Alphaville": {
+  "name": "Alphaville",
+  "address": "140 Wilson Ave, New York, New York 11237",
+  "lat": 40.70053,
+  "lng": -73.92582,
+  "genre": "Punk & Hardcore",
+  "last": "2026-11-11"
+ },
+ "Apollo Theater": {
+  "name": "Apollo Theater"
+ },
+ "Arlene's Grocery": {
+  "name": "Arlene's Grocery"
+ },
+ "Arthur's Tavern": {
+  "name": "Arthur's Tavern",
+  "address": "57 Grove St, New York, NY 10014",
+  "lat": 40.7332,
+  "lng": -74.00345,
+  "genre": "World",
+  "last": "2026-11-11"
+ },
+ "Austrian Cultural Forum": {
+  "name": "Austrian Cultural Forum"
+ },
+ "BAM": {
+  "name": "BAM",
+  "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+  "lat": 40.68642,
+  "lng": -73.97785,
+  "genre": "Ballet & Dance",
+  "last": "2026-11-11"
+ },
+ "BRIC House": {
+  "name": "BRIC House",
+  "address": "647 Fulton St, Brooklyn, NY 11217",
+  "lat": 40.6868,
+  "lng": -73.97586,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Baby's All Right": {
+  "name": "Baby's All Right",
+  "address": "146 Broadway, Brooklyn, NY",
+  "lat": 40.70997,
+  "lng": -73.96342,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Bar Bayeux": {
+  "name": "Bar Bayeux",
+  "address": "1066 Nostrand Ave, Brooklyn, NY 11225",
+  "lat": 40.66201,
+  "lng": -73.95101,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Bar Freda": {
+  "name": "Bar Freda"
+ },
+ "Bar LunÀtico": {
+  "name": "Bar LunÀtico",
+  "address": "486 Halsey St, Brooklyn, NY 11233",
+  "lat": 40.68338,
+  "lng": -73.93468,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Barbès": {
+  "name": "Barbès",
+  "address": "376 9th St, Brooklyn, NY 11215",
+  "lat": 40.66774,
+  "lng": -73.98388,
+  "genre": "World",
+  "last": "2026-11-11"
+ },
+ "Barclays Center": {
+  "name": "Barclays Center"
+ },
+ "Bargemusic": {
+  "name": "Bargemusic"
+ },
+ "Baryshnikov Arts": {
+  "name": "Baryshnikov Arts"
+ },
+ "Beacon Theatre": {
+  "name": "Beacon Theatre"
+ },
+ "Berlin": {
+  "name": "Berlin",
+  "address": "The Lower-Level of 2A Bar, New York, NY",
+  "lat": 40.72297,
+  "lng": -73.98608,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Bill's Place": {
+  "name": "Bill's Place"
+ },
+ "Birdland": {
+  "name": "Birdland",
+  "address": "315 W 44th St, New York, NY 10036",
+  "lat": 40.75909,
+  "lng": -73.98964,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Birdland Jazz Club": {
+  "name": "Birdland Jazz Club"
+ },
+ "Birdland Theater": {
+  "name": "Birdland Theater"
+ },
+ "Blue Note Jazz Club": {
+  "name": "Blue Note Jazz Club",
+  "address": "131 W 3rd St, New York, NY 10012",
+  "lat": 40.73083,
+  "lng": -74.00073,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Booth Theatre": {
+  "name": "Booth Theatre"
+ },
+ "Bowery Ballroom": {
+  "name": "Bowery Ballroom",
+  "address": "6 Delancey St, New York, NY 10002",
+  "lat": 40.72044,
+  "lng": -73.99333,
+  "genre": "Pop",
+  "last": "2026-11-11"
+ },
+ "Bowery Palace": {
+  "name": "Bowery Palace",
+  "address": "327 Bowery, New York, NY 10003",
+  "lat": 40.7257,
+  "lng": -73.99167,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Brooklyn Bowl": {
+  "name": "Brooklyn Bowl"
+ },
+ "Brooklyn Center for the Performing Arts": {
+  "name": "Brooklyn Center for the Performing Arts",
+  "address": "2900 Campus Rd, Brooklyn, NY 11210",
+  "lat": 40.63219,
+  "lng": -73.94924,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Brooklyn Conservatory of Music": {
+  "name": "Brooklyn Conservatory of Music"
+ },
+ "Brooklyn Improv (The Lab)": {
+  "name": "Brooklyn Improv (The Lab)",
+  "address": "64 N 9th Street, Brooklyn, NY",
+  "lat": 40.72075,
+  "lng": -73.96,
+  "genre": "Comedy",
+  "last": "2026-11-11"
+ },
+ "Brooklyn Paramount": {
+  "name": "Brooklyn Paramount",
+  "address": "385 Flatbush Ave. Extension, Brooklyn, NY",
+  "lat": 40.68949,
+  "lng": -73.98104,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Brooklyn Steel": {
+  "name": "Brooklyn Steel",
+  "address": "319 Frost Street, Brooklyn, NY",
+  "lat": 40.71939,
+  "lng": -73.93875,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Broolyn Storehouse": {
+  "name": "Broolyn Storehouse"
+ },
+ "BrownstoneJAZZ": {
+  "name": "BrownstoneJAZZ"
+ },
+ "Cafe Wha?": {
+  "name": "Cafe Wha?",
+  "address": "115 MacDougal St, New York, NY 10012",
+  "lat": 40.73033,
+  "lng": -74.00034,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "Café Carlyle": {
+  "name": "Café Carlyle"
+ },
+ "Carnegie Hall": {
+  "name": "Carnegie Hall",
+  "address": "881 7th Ave, New York, NY 10019",
+  "lat": 40.76488,
+  "lng": -73.98028,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Cathedral of St. John the Divine": {
+  "name": "Cathedral of St. John the Divine"
+ },
+ "Cellar Dog": {
+  "name": "Cellar Dog",
+  "address": "75 Christopher St, New York, NY 10014",
+  "lat": 40.73363,
+  "lng": -74.00328,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Chamber Music Society of Lincoln Center": {
+  "name": "Chamber Music Society of Lincoln Center",
+  "address": "1941 Broadway, New York, NY 10023",
+  "lat": 40.7735,
+  "lng": -73.98258,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Christ & St. Stephen's Church": {
+  "name": "Christ & St. Stephen's Church"
+ },
+ "Church of St. Luke in the Fields": {
+  "name": "Church of St. Luke in the Fields"
+ },
+ "Church of the Ascension": {
+  "name": "Church of the Ascension"
+ },
+ "City Winery": {
+  "name": "City Winery",
+  "address": "25 11th Ave, New York, NY 10011",
+  "lat": 40.7431,
+  "lng": -74.00929,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "Close Up": {
+  "name": "Close Up",
+  "address": "154 Orchard St, New York, NY 10002",
+  "lat": 40.7208,
+  "lng": -73.98866,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Club Cumming": {
+  "name": "Club Cumming",
+  "address": "505 E 6th St, New York, NY 10009",
+  "lat": 40.7254,
+  "lng": -73.98338,
+  "genre": "Comedy",
+  "last": "2026-11-11"
+ },
+ "Culture Lab LIC": {
+  "name": "Culture Lab LIC"
+ },
+ "Danspace Project": {
+  "name": "Danspace Project"
+ },
+ "David Geffen Hall": {
+  "name": "David Geffen Hall"
+ },
+ "David H. Koch Theater": {
+  "name": "David H. Koch Theater"
+ },
+ "DiMenna Center for Classical Music": {
+  "name": "DiMenna Center for Classical Music"
+ },
+ "Dingbatz": {
+  "name": "Dingbatz"
+ },
+ "Dizzy's Club": {
+  "name": "Dizzy's Club"
+ },
+ "Django": {
+  "name": "Django",
+  "address": "2 6th Ave, New York, NY 10013",
+  "lat": 40.71931,
+  "lng": -74.00484,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Don't Tell Mama": {
+  "name": "Don't Tell Mama",
+  "address": "343 W 46th St, New York, NY 10036",
+  "lat": 40.76062,
+  "lng": -73.98948,
+  "genre": "Cabaret & Musicals",
+  "last": "2026-11-11"
+ },
+ "Dream Live at American Dream": {
+  "name": "Dream Live at American Dream"
+ },
+ "Drom": {
+  "name": "Drom",
+  "address": "85 Avenue A, New York, NY 10009",
+  "lat": 40.72533,
+  "lng": -73.98445,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Elsewhere": {
+  "name": "Elsewhere",
+  "address": "599 Johnson Ave, Brooklyn, NY 11237",
+  "lat": 40.70948,
+  "lng": -73.92324,
+  "genre": "Pop",
+  "last": "2026-11-11"
+ },
+ "Fifth Avenue Presbyterian Church": {
+  "name": "Fifth Avenue Presbyterian Church"
+ },
+ "Flushing Town Hall": {
+  "name": "Flushing Town Hall",
+  "address": "137-35 Northern Blvd, Flushing, NY 11354",
+  "lat": 40.76391,
+  "lng": -73.83007,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Freddy's Bar": {
+  "name": "Freddy's Bar",
+  "address": "627 5th Ave, Brooklyn, NY 11215",
+  "lat": 40.66329,
+  "lng": -73.99114,
+  "genre": "Comedy",
+  "last": "2026-11-11"
+ },
+ "Gibney": {
+  "name": "Gibney"
+ },
+ "Gold Sounds": {
+  "name": "Gold Sounds",
+  "address": "44 Wilson Ave, Brooklyn, NY 11237, USA, New York",
+  "lat": 40.70572,
+  "lng": -73.92189,
+  "genre": "Punk & Hardcore",
+  "last": "2026-11-11"
+ },
+ "Grace Church": {
+  "name": "Grace Church",
+  "address": "802 Broadway, New York, NY 10003",
+  "lat": 40.73197,
+  "lng": -73.9909,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Gramercy Theatre": {
+  "name": "Gramercy Theatre",
+  "address": "127 East 23rd Street, New York, NY",
+  "lat": 40.73987,
+  "lng": -73.98494,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "Greenwich House Music School": {
+  "name": "Greenwich House Music School",
+  "address": "46 Barrow St, New York, NY 10014",
+  "lat": 40.73216,
+  "lng": -74.00452,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Groove": {
+  "name": "Groove",
+  "address": "125 MacDougal St, New York, NY 10012",
+  "lat": 40.73243,
+  "lng": -73.99856,
+  "genre": "Folk & Americana",
+  "last": "2026-11-11"
+ },
+ "H0L0": {
+  "name": "H0L0"
+ },
+ "Hard Rock Cafe": {
+  "name": "Hard Rock Cafe"
+ },
+ "Hill Country Live": {
+  "name": "Hill Country Live"
+ },
+ "ISSUE Project Room": {
+  "name": "ISSUE Project Room"
+ },
+ "Ibeam Brooklyn": {
+  "name": "Ibeam Brooklyn"
+ },
+ "Infosys Theater at Madison Square Garden": {
+  "name": "Infosys Theater at Madison Square Garden"
+ },
+ "Iridium": {
+  "name": "Iridium"
+ },
+ "Irving Plaza": {
+  "name": "Irving Plaza",
+  "address": "17 Irving Place, New York, NY",
+  "lat": 40.73491,
+  "lng": -73.98827,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "Irving Plaza Powered By Verizon 5G": {
+  "name": "Irving Plaza Powered By Verizon 5G"
+ },
+ "Jazz at Lincoln Center": {
+  "name": "Jazz at Lincoln Center",
+  "address": "10 Columbus Circle, New York, NY 10019",
+  "lat": 40.76825,
+  "lng": -73.98285,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Jazzcultural": {
+  "name": "Jazzcultural",
+  "address": "349 W 46th St, New York, NY",
+  "lat": 40.76085,
+  "lng": -73.98966,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Joanne Trattoria": {
+  "name": "Joanne Trattoria"
+ },
+ "Kings Theatre": {
+  "name": "Kings Theatre",
+  "address": "1027 Flatbush Avenue, Brooklyn, NY",
+  "lat": 40.6463,
+  "lng": -73.9564,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Knockdown Center": {
+  "name": "Knockdown Center"
+ },
+ "Kupferberg Center for the Arts": {
+  "name": "Kupferberg Center for the Arts"
+ },
+ "Le Poisson Rouge": {
+  "name": "Le Poisson Rouge",
+  "address": "158 Bleecker St, New York, NY 10012",
+  "lat": 40.72843,
+  "lng": -73.99988,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Lehman Center for the Performing Arts": {
+  "name": "Lehman Center for the Performing Arts"
+ },
+ "Lincoln Center": {
+  "name": "Lincoln Center"
+ },
+ "Littlefield": {
+  "name": "Littlefield",
+  "address": "635 Sackett St, Brooklyn, NY 11217",
+  "lat": 40.67848,
+  "lng": -73.98338,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Lowlands Bar": {
+  "name": "Lowlands Bar"
+ },
+ "Lucinda's": {
+  "name": "Lucinda's",
+  "address": "169 Avenue A, New York, NY 10009",
+  "lat": 40.72833,
+  "lng": -73.98219,
+  "genre": "Folk & Americana",
+  "last": "2026-11-11"
+ },
+ "Madison Square Garden": {
+  "name": "Madison Square Garden"
+ },
+ "Manhattan Center Hammerstein Ballroom": {
+  "name": "Manhattan Center Hammerstein Ballroom"
+ },
+ "Market Hotel": {
+  "name": "Market Hotel"
+ },
+ "Market Hotel ": {
+  "name": "Market Hotel "
+ },
+ "Marquee New York": {
+  "name": "Marquee New York"
+ },
+ "Mercury Lounge": {
+  "name": "Mercury Lounge",
+  "address": "217 E Houston St, New York, NY 10002",
+  "lat": 40.7221,
+  "lng": -73.98679,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "Metropolitan Opera House": {
+  "name": "Metropolitan Opera House",
+  "address": "30 Lincoln Center Plaza, New York, NY 10023",
+  "lat": 40.7725,
+  "lng": -73.9843,
+  "genre": "Opera",
+  "last": "2026-11-11"
+ },
+ "Mezzrow": {
+  "name": "Mezzrow",
+  "address": "163 W 10th St, New York, NY 10014",
+  "lat": 40.73454,
+  "lng": -74.00184,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Miller Theatre": {
+  "name": "Miller Theatre"
+ },
+ "Mise-en Place": {
+  "name": "Mise-en Place"
+ },
+ "Music Hall of Williamsburg": {
+  "name": "Music Hall of Williamsburg",
+  "address": "66 North 6th Street, Brooklyn, NY",
+  "lat": 40.71915,
+  "lng": -73.96178,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "NYPL Bruno Walter Auditorium": {
+  "name": "NYPL Bruno Walter Auditorium"
+ },
+ "National Jazz Museum in Harlem": {
+  "name": "National Jazz Museum in Harlem"
+ },
+ "National Sawdust": {
+  "name": "National Sawdust",
+  "address": "80 N 6th St, Brooklyn, NY 11249",
+  "lat": 40.71897,
+  "lng": -73.96124,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "New York Live Arts": {
+  "name": "New York Live Arts"
+ },
+ "Night Club 101": {
+  "name": "Night Club 101",
+  "address": "101 Avenue A, New York, NY",
+  "lat": 40.72591,
+  "lng": -73.98404,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Nowadays": {
+  "name": "Nowadays"
+ },
+ "Nublu Classic": {
+  "name": "Nublu Classic"
+ },
+ "OPERA America National Opera Center": {
+  "name": "OPERA America National Opera Center"
+ },
+ "Ornithology Jazz Club": {
+  "name": "Ornithology Jazz Club",
+  "address": "6 Suydam St, Brooklyn, NY 11221",
+  "lat": 40.69553,
+  "lng": -73.93202,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Pacha New York": {
+  "name": "Pacha New York"
+ },
+ "Palace Theatre-NY": {
+  "name": "Palace Theatre-NY",
+  "address": "1564 Broadway, New York, NY",
+  "lat": 40.7593,
+  "lng": -73.9902,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Palladium Times Square ": {
+  "name": "Palladium Times Square "
+ },
+ "Pangea": {
+  "name": "Pangea",
+  "address": "178 2nd Ave, New York, NY 10003",
+  "lat": 40.73046,
+  "lng": -73.98586,
+  "genre": "Cabaret & Musicals",
+  "last": "2026-11-11"
+ },
+ "Patio at Radio Hotel": {
+  "name": "Patio at Radio Hotel"
+ },
+ "Pete's Candy Store": {
+  "name": "Pete's Candy Store",
+  "address": "709 Lorimer St, Brooklyn, NY 11211",
+  "lat": 40.71809,
+  "lng": -73.95029,
+  "genre": "Electronic & DJ",
+  "last": "2026-11-11"
+ },
+ "Pianos": {
+  "name": "Pianos",
+  "address": "158 Ludlow St, New York, NY 10002, USA",
+  "lat": 40.721,
+  "lng": -73.98762,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Pioneer Works": {
+  "name": "Pioneer Works"
+ },
+ "Public Records": {
+  "name": "Public Records",
+  "address": "233 Butler St, Brooklyn, NY 11217",
+  "lat": 40.68217,
+  "lng": -73.98639,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Purgatory": {
+  "name": "Purgatory",
+  "address": "675 Central Ave, Brooklyn, NY 11207",
+  "lat": 40.68723,
+  "lng": -73.90574,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Queens Theatre": {
+  "name": "Queens Theatre"
+ },
+ "Racket": {
+  "name": "Racket",
+  "address": "431 W 16th St, New York, NY 10011",
+  "lat": 40.74305,
+  "lng": -74.00574,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Radio City Music Hall": {
+  "name": "Radio City Music Hall",
+  "address": "1260 6th Ave, New York, NY 10020",
+  "lat": 40.75981,
+  "lng": -73.97928,
+  "genre": "Cabaret & Musicals",
+  "last": "2026-11-11"
+ },
+ "Regina Opera": {
+  "name": "Regina Opera"
+ },
+ "Rough Trade NYC": {
+  "name": "Rough Trade NYC"
+ },
+ "Roulette": {
+  "name": "Roulette",
+  "address": "509 Atlantic Ave, Brooklyn, NY 11217",
+  "lat": 40.68556,
+  "lng": -73.98072,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "S.O.B.'s": {
+  "name": "S.O.B.'s",
+  "address": "204 Varick St, New York, NY 10014",
+  "lat": 40.72837,
+  "lng": -74.00546,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Saint Peter's Church": {
+  "name": "Saint Peter's Church"
+ },
+ "Saint Thomas Church Fifth Avenue": {
+  "name": "Saint Thomas Church Fifth Avenue"
+ },
+ "Saint Vitus": {
+  "name": "Saint Vitus",
+  "address": "428 Troutman Street, Brooklyn, New York 11237, United States",
+  "lat": 40.73678,
+  "lng": -73.95517,
+  "genre": "Metal",
+  "last": "2026-11-11"
+ },
+ "Scandinavia House": {
+  "name": "Scandinavia House",
+  "address": "58 Park Ave, New York, NY 10016",
+  "lat": 40.74947,
+  "lng": -73.98005,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "Scholes Street Studio": {
+  "name": "Scholes Street Studio"
+ },
+ "Sheen Center": {
+  "name": "Sheen Center"
+ },
+ "Sid Gold's Request Room": {
+  "name": "Sid Gold's Request Room",
+  "address": "165 W 26th St, New York, NY 10001",
+  "lat": 40.74595,
+  "lng": -73.99358,
+  "genre": "Cabaret & Musicals",
+  "last": "2026-11-11"
+ },
+ "Silvana": {
+  "name": "Silvana",
+  "address": "300 W 116th St, New York, NY 10026",
+  "lat": 40.80436,
+  "lng": -73.95576,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Sistas' Place": {
+  "name": "Sistas' Place"
+ },
+ "Skinny Dennis": {
+  "name": "Skinny Dennis"
+ },
+ "Smalls Jazz Club": {
+  "name": "Smalls Jazz Club",
+  "address": "183 W 10th St, New York, NY 10014",
+  "lat": 40.73439,
+  "lng": -74.0027,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Smoke Jazz Club": {
+  "name": "Smoke Jazz Club",
+  "address": "2751 Broadway, New York, NY 10025",
+  "lat": 40.80112,
+  "lng": -73.96821,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Snug Harbor Cultural Center": {
+  "name": "Snug Harbor Cultural Center"
+ },
+ "Soapbox Gallery": {
+  "name": "Soapbox Gallery"
+ },
+ "Sony Hall": {
+  "name": "Sony Hall"
+ },
+ "St. Ann & the Holy Trinity": {
+  "name": "St. Ann & the Holy Trinity"
+ },
+ "St. George Theatre": {
+  "name": "St. George Theatre"
+ },
+ "Stern Auditorium / Perelman Stage at Carnegie Hall": {
+  "name": "Stern Auditorium / Perelman Stage at Carnegie Hall"
+ },
+ "Sunny's Red Hook": {
+  "name": "Sunny's Red Hook",
+  "address": "253 Conover St, Brooklyn, NY 11231",
+  "lat": 40.67561,
+  "lng": -74.0168,
+  "genre": "Country",
+  "last": "2026-11-11"
+ },
+ "Sunnyvale": {
+  "name": "Sunnyvale"
+ },
+ "Symphony Space": {
+  "name": "Symphony Space"
+ },
+ "Terminal 5": {
+  "name": "Terminal 5"
+ },
+ "Terra Blues": {
+  "name": "Terra Blues",
+  "address": "149 Bleecker St, New York, NY 10012",
+  "lat": 40.72846,
+  "lng": -73.99923,
+  "genre": "Blues",
+  "last": "2026-11-11"
+ },
+ "Terraza 7": {
+  "name": "Terraza 7",
+  "address": "40-19 Gleane Street, Elmhurst NY 11373",
+  "lat": 40.74749,
+  "lng": -73.88197,
+  "genre": "Latin",
+  "last": "2026-11-11"
+ },
+ "The Bell House": {
+  "name": "The Bell House",
+  "address": "149 7th Street, Brooklyn, NY",
+  "lat": 40.67373,
+  "lng": -73.99168,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "The Bitter End": {
+  "name": "The Bitter End",
+  "address": "147 Bleecker St, New York, NY 10012",
+  "lat": 40.72833,
+  "lng": -73.99922,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "The Broadway": {
+  "name": "The Broadway",
+  "address": "1272 Broadway, Brooklyn, NY 11221",
+  "lat": 40.6909,
+  "lng": -73.92494,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "The Cutting Room": {
+  "name": "The Cutting Room"
+ },
+ "The Green Room 42": {
+  "name": "The Green Room 42"
+ },
+ "The Greene Space": {
+  "name": "The Greene Space"
+ },
+ "The Iridium": {
+  "name": "The Iridium"
+ },
+ "The Jazz Gallery": {
+  "name": "The Jazz Gallery",
+  "address": "1158 Broadway, New York, NY 10001",
+  "lat": 40.74477,
+  "lng": -73.98872,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "The Joyce Theater": {
+  "name": "The Joyce Theater",
+  "address": "The Joyce Theater",
+  "lat": 40.74282,
+  "lng": -74.00071,
+  "genre": "Ballet & Dance",
+  "last": "2026-11-11"
+ },
+ "The Juilliard School": {
+  "name": "The Juilliard School",
+  "address": "60 Lincoln Center Plaza, New York, NY 10023",
+  "lat": 40.7737,
+  "lng": -73.9829,
+  "genre": "Classical",
+  "last": "2026-11-11"
+ },
+ "The Red Lion": {
+  "name": "The Red Lion",
+  "address": "151 Bleecker St, New York, NY 10012",
+  "lat": 40.72846,
+  "lng": -73.9995,
+  "genre": "Rock",
+  "last": "2026-11-11"
+ },
+ "The Riverside Church": {
+  "name": "The Riverside Church"
+ },
+ "The Rooftop at Pier 17": {
+  "name": "The Rooftop at Pier 17"
+ },
+ "The Stone": {
+  "name": "The Stone",
+  "address": "55 W 13th St, New York, NY 10011",
+  "lat": 40.73657,
+  "lng": -73.99649,
+  "genre": "Avant-garde",
+  "last": "2026-11-11"
+ },
+ "The Sultan Room": {
+  "name": "The Sultan Room"
+ },
+ "The Town Hall": {
+  "name": "The Town Hall"
+ },
+ "The Venue @ Hard Rock Hotel NY": {
+  "name": "The Venue @ Hard Rock Hotel NY",
+  "address": "159 West 48th Street, New York, NY",
+  "lat": 40.75984,
+  "lng": -73.98346,
+  "genre": "Pop",
+  "last": "2026-11-11"
+ },
+ "Town Hall": {
+  "name": "Town Hall"
+ },
+ "Trans-Pecos": {
+  "name": "Trans-Pecos",
+  "address": "915 Wyckoff Ave, Queens, NY 11385",
+  "lat": 40.69702,
+  "lng": -73.90625,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Union Hall": {
+  "name": "Union Hall",
+  "address": "702 Union St, Brooklyn, NY 11215",
+  "lat": 40.67604,
+  "lng": -73.98009,
+  "genre": "Comedy",
+  "last": "2026-11-11"
+ },
+ "Union Pool": {
+  "name": "Union Pool",
+  "address": "484 Union Ave, Brooklyn, NY 11211, USA",
+  "lat": 40.71565,
+  "lng": -73.95199,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "United Palace": {
+  "name": "United Palace"
+ },
+ "Village Vanguard": {
+  "name": "Village Vanguard",
+  "address": "178 7th Ave S, New York, NY 10014",
+  "lat": 40.73602,
+  "lng": -74.00164,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ },
+ "Vinyl + Thread": {
+  "name": "Vinyl + Thread"
+ },
+ "Warsaw": {
+  "name": "Warsaw",
+  "address": "261 Driggs Ave , Brooklyn, NY",
+  "lat": 40.72239,
+  "lng": -73.94841,
+  "genre": "Pop",
+  "last": "2026-11-11"
+ },
+ "Webster Hall": {
+  "name": "Webster Hall",
+  "address": "125 E 11th St, New York, NY 10003",
+  "lat": 40.73176,
+  "lng": -73.98909,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-11"
+ },
+ "Wild Horses": {
+  "name": "Wild Horses"
+ },
+ "Williams Center - Black Box - Rutherford": {
+  "name": "Williams Center - Black Box - Rutherford"
+ },
+ "Wonderville": {
+  "name": "Wonderville",
+  "address": "1186 Broadway, Brooklyn, NY 11221",
+  "lat": 40.69241,
+  "lng": -73.92752,
+  "genre": "Other",
+  "last": "2026-11-11"
+ },
+ "Works & Process at the Guggenheim": {
+  "name": "Works & Process at the Guggenheim"
+ },
+ "Zinc Bar": {
+  "name": "Zinc Bar",
+  "address": "82 W 3rd St, New York, NY 10012",
+  "lat": 40.72967,
+  "lng": -73.999,
+  "genre": "Jazz",
+  "last": "2026-11-11"
+ }
+}

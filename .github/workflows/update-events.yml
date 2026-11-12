@@ -136,6 +136,7 @@ jobs:
           python scraper/pages.py
           git add events.json coverage.json sitemap.xml index.html tonight venues neighborhood late-night-jazz free-shows guides badge
           [ -f scraper/geocache.json ] && git add scraper/geocache.json
+          [ -f scraper/seen_venues.json ] && git add scraper/seen_venues.json
           if git diff --cached --quiet; then
             echo "No changes."
           else
