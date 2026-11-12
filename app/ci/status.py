@@ -20,5 +20,8 @@ for s in call("GET", f"/reviewSubmissions?filter[app]={app_id}&filter[platform]=
 for b in call("GET", f"/builds?filter[app]={app_id}&sort=-uploadedDate&limit=3")["data"]:
     a = b["attributes"]
     lines.append(f"Build {a.get('version')}: {a.get('processingState')} uploaded {a.get('uploadedDate')}")
+b = call("GET", f"/bundleIds?filter[identifier]={BUNDLE_ID}")["data"]
+if b:
+    lines.append(f"Team (App ID prefix): {b[0]['attributes'].get('seedId')}")
 print("\n".join(lines))
 summary("\n".join(lines) + "\n")
