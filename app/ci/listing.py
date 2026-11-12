@@ -196,9 +196,9 @@ def main() -> int:
     if not apps:
         sys.exit("::error::No app record for " + BUNDLE_ID)
     app_id = apps[0]["id"]
+    version = editable_version(app_id)  # first: a new version also opens a new, editable app information record
     app_info(app_id)
     content_rights(app_id)
-    version = editable_version(app_id)
     version_info(version)
     locs = call("GET", f"/appStoreVersions/{version['id']}/appStoreVersionLocalizations")["data"]
     loc = first(locs, locale="en-US") or locs[0]
