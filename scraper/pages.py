@@ -302,6 +302,8 @@ def nice_date(d: date) -> str:
 
 # Venues that changed name: the old page forwards to the new one instead of disappearing.
 RENAMED = {"the-bowery-electric": "bowery-palace"}
+# Venues that closed or that we dropped: their old pages forward to the venue list instead of a 404.
+CLOSED = ("swing-46", "the-owl-music-parlor", "caffe-vivaldi", "minton-s-playhouse", "the-duplex")
 
 
 def redirect_page(to: str) -> str:
@@ -342,10 +344,10 @@ def build(out_root: Path = ROOT) -> list[str]:
 
     for d in GENERATED_DIRS:
         shutil.rmtree(out_root / d, ignore_errors=True)
-    for old_slug, new_slug in RENAMED.items():
+    for old_slug, to in [(o, f"/venues/{n}/") for o, n in RENAMED.items()] + [(c, "/venues/") for c in CLOSED]:
         f = out_root / "venues" / old_slug / "index.html"
         f.parent.mkdir(parents=True, exist_ok=True)
-        f.write_text(redirect_page(f"/venues/{new_slug}/"))
+        f.write_text(redirect_page(to))
 
     def write(path: str, content: str):
         f = out_root / path.strip("/") / "index.html"
