@@ -1,31 +1,31 @@
 {
- "date": "2026-11-12",
- "generated": "2026-11-12T05:38:41-05:00",
+ "date": "2026-11-13",
+ "generated": "2026-11-13T05:40:35-05:00",
  "totals": {
   "venues": 187,
-  "shows": 152,
-  "ok": 83,
-  "none-tonight": 81,
-  "blocked": 18,
-  "error": 3,
+  "shows": 177,
+  "ok": 87,
+  "none-tonight": 76,
+  "blocked": 20,
+  "error": 2,
   "robots": 0,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
   "venue-data": 25,
-  "venue-ai": 105,
-  "ticketmaster": 39,
+  "venue-ai": 134,
+  "ticketmaster": 50,
   "venue-regular": 2
  },
  "ai": {
   "nightly_missing": [
    "The Iridium"
   ],
-  "calls": 145,
-  "input_tokens": 1751347,
-  "output_tokens": 69861,
-  "cost_usd": 0.2101
+  "calls": 143,
+  "input_tokens": 1742006,
+  "output_tokens": 76019,
+  "cost_usd": 0.2122
  },
  "venues": [
   {
@@ -35,20 +35,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× time quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    17420,
-    408
+    9967,
+    132
    ],
-   "examples": [
-    {
-     "title": "THE WHISKEY BISCUITS",
-     "start_time": "",
-     "date_evidence": "Thursday December 3rd",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "92NY",
@@ -69,20 +61,6 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Apollo Theater",
-   "url": "https://www.apollotheater.org/ticket-and-events",
-   "read_url": "https://www.apollotheater.org/ticket-and-events",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    10077,
-    128
-   ],
-   "examples": []
-  },
-  {
    "name": "Areté Venue & Gallery",
    "url": "https://www.aretevenue.com/",
    "read_url": "https://www.aretevenue.com/calendar",
@@ -91,8 +69,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    22817,
-    128
+    22098,
+    132
    ],
    "examples": []
   },
@@ -114,7 +92,7 @@
    "shows": 0,
    "detail": "single_event",
    "tokens": [
-    6944,
+    7114,
     128
    ],
    "examples": []
@@ -128,7 +106,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8330,
+    8329,
     128
    ],
    "examples": []
@@ -142,7 +120,7 @@
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    7653,
+    7672,
     136
    ],
    "examples": []
@@ -157,45 +135,23 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Bill's Place",
-   "url": "https://www.billsplaceharlem.com/",
-   "read_url": "https://billsplaceharlem.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
-   "tokens": [
-    4689,
-    329
-   ],
-   "examples": [
-    {
-     "title": "Bill Saxton & The Harlem All-Stars",
-     "start_time": "7:00 PM",
-     "date_evidence": "EVERY FRIDAY & SATURDAY @ 7PM & 9:30PM",
-     "time_evidence": "EVERY FRIDAY & SATURDAY @ 7PM & 9:30PM",
-     "why": "not a public performance"
-    }
-   ]
-  },
-  {
    "name": "BRIC House",
    "url": "https://bricartsmedia.org/",
    "read_url": "https://bricartsmedia.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× not a public performance; +1 on second look",
    "tokens": [
-    8099,
-    558
+    8756,
+    634
    ],
    "examples": [
     {
-     "title": "BRIC Winter Member Mingle",
-     "start_time": "6:30 PM",
-     "date_evidence": "11.12\nTHU | 6:30 PM",
-     "time_evidence": "11.12\nTHU | 6:30 PM",
+     "title": "On display | From the BRIClab + Johan Orellana: Remnants of a Forking Path",
+     "start_time": "12:00 AM",
+     "date_evidence": "11.13\nFRI | 12:00 AM",
+     "time_evidence": "11.13\nFRI | 12:00 AM",
      "why": "not a public performance"
     }
    ]
@@ -209,35 +165,21 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5102,
+    5101,
     68
    ],
    "examples": []
   },
   {
-   "name": "Brooklyn Conservatory of Music",
-   "url": "https://bkcm.org/events/",
-   "read_url": "https://bkcm.org/events/",
+   "name": "Brooklyn Center for the Performing Arts",
+   "url": "https://www.brooklyncenter.org/",
+   "read_url": "https://www.brooklyn.edu/events/list/?tribe_eventcategory%5B0%5D=6038",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    8074,
-    64
-   ],
-   "examples": []
-  },
-  {
-   "name": "Brooklyn Steel",
-   "url": "https://www.bowerypresents.com/venues/brooklyn-steel",
-   "read_url": "https://www.bowerypresents.com/venues/brooklyn-steel",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    24614,
+    14275,
     128
    ],
    "examples": []
@@ -251,33 +193,44 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8749,
+    8747,
     68
    ],
    "examples": []
   },
   {
-   "name": "Cathedral of St. John the Divine",
-   "url": "https://www.stjohndivine.org/",
-   "read_url": "https://www.stjohndivine.org/",
+   "name": "Carnegie Hall",
+   "url": "https://www.carnegiehall.org/Calendar",
+   "read_url": "https://www.carnegiehall.org/events",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; -2 on final check",
+   "detail": "unreadable",
    "tokens": [
-    12920,
-    1148
+    2964,
+    65
+   ],
+   "examples": []
+  },
+  {
+   "name": "Chamber Music Society of Lincoln Center",
+   "url": "https://www.chambermusicsociety.org/",
+   "read_url": "https://www.chambermusicsociety.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× listed at another venue",
+   "tokens": [
+    17259,
+    410
    ],
    "examples": [
     {
-     "title": "Self-Guided Tours",
-     "start_time": "9:30 AM",
-     "why": "removed on final check: not_a_performance: \"9:30am - 5pm Self-Guided Tours\""
-    },
-    {
-     "title": "Highlights Tour",
-     "start_time": "1:00 PM",
-     "why": "removed on final check: not_a_performance: \"1pm - 2pm Highlights Tour\""
+     "title": "FREE EVENT: CALIDORE STRING QUARTET",
+     "start_time": "7:00 PM",
+     "date_evidence": "Fri, Nov 13, 2026, 7:00 pm",
+     "time_evidence": "Fri, Nov 13, 2026, 7:00 pm",
+     "why": "listed at another venue"
     }
    ]
   },
@@ -290,7 +243,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    6772,
+    6771,
     68
    ],
    "examples": []
@@ -304,7 +257,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4396,
+    4395,
     68
    ],
    "examples": []
@@ -318,7 +271,7 @@
    "shows": 0,
    "detail": "unreadable",
    "tokens": [
-    2906,
+    2905,
     65
    ],
    "examples": []
@@ -332,7 +285,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5825,
+    5824,
     68
    ],
    "examples": []
@@ -344,12 +297,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    12341,
-    64
+    13431,
+    285
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Technology Classes For Older Adults",
+     "start_time": "11:00 AM",
+     "date_evidence": "13 NOV",
+     "time_evidence": "Friday at 11:00 AM",
+     "why": "not a public performance"
+    }
+   ]
   },
   {
    "name": "Church of the Ascension",
@@ -358,10 +319,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    13330,
-    136
+    13329,
+    132
    ],
    "examples": []
   },
@@ -372,12 +333,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
-    10987,
-    64
+    11969,
+    546
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Garam Masala Comedy Dating Show",
+     "start_time": "7:30 PM",
+     "date_evidence": "This Weekend ... Fri, Nov 13 @ 7:30 pm",
+     "time_evidence": "Fri, Nov 13 @ 7:30 pm",
+     "why": "date quote not found on page"
+    }
+   ]
   },
   {
    "name": "Club Bonafide",
@@ -389,20 +358,6 @@
    "detail": "HTTP 403"
   },
   {
-   "name": "Club Cumming",
-   "url": "https://www.clubcummingnyc.com/",
-   "read_url": "https://clubcummingnyc.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    30664,
-    517
-   ],
-   "examples": []
-  },
-  {
    "name": "Danspace Project",
    "url": "https://danspaceproject.org/",
    "read_url": "https://danspaceproject.org/",
@@ -411,7 +366,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6003,
+    6002,
     128
    ],
    "examples": []
@@ -430,29 +385,26 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    12242,
-    154
+    12241,
+    64
    ],
-   "examples": [
-    {
-     "title": "ALL BALANCHINE II",
-     "start_time": "",
-     "date_evidence": "THU FEB 11",
-     "time_evidence": "",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Downtown Music Gallery",
    "url": "https://www.downtownmusicgallery.com/",
    "read_url": "https://www.downtownmusicgallery.com/",
-   "method": null,
-   "status": "error",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "TimeoutError: Page.goto: Timeout 30000ms exceeded."
+   "detail": "not_a_calendar",
+   "tokens": [
+    9618,
+    136
+   ],
+   "examples": []
   },
   {
    "name": "Fifth Avenue Presbyterian Church",
@@ -463,8 +415,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9692,
-    444
+    7926,
+    64
    ],
    "examples": []
   },
@@ -477,8 +429,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    11487,
-    302
+    10547,
+    64
    ],
    "examples": []
   },
@@ -491,21 +443,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5524,
-    64
-   ],
-   "examples": []
-  },
-  {
-   "name": "Gibney",
-   "url": "https://gibneydance.org/",
-   "read_url": "https://gibneydance.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    5927,
+    5716,
     64
    ],
    "examples": []
@@ -519,7 +457,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3754,
+    3752,
     68
    ],
    "examples": []
@@ -531,49 +469,34 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 4× time quote not found on page; event page gave no time (blocked); event page gave no time (blocked)",
    "tokens": [
-    7737,
-    64
+    8459,
+    1513
    ],
-   "examples": []
-  },
-  {
-   "name": "Grace Church",
-   "url": "https://gracechurchnyc.org/",
-   "read_url": "https://gracechurchnyc.org/",
-   "method": "WordPress calendar",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "left out 1 non-performance listing"
-  },
-  {
-   "name": "Gramercy Theatre",
-   "url": "https://www.thegramercytheatre.com/shows",
-   "read_url": "https://www.thegramercytheatre.com/shows",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    12169,
-    64
-   ],
-   "examples": []
-  },
-  {
-   "name": "H0L0",
-   "url": "https://www.h0l0.nyc/",
-   "read_url": "https://h0l0.nyc/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    4226,
-    64
-   ],
-   "examples": []
+   "examples": [
+    {
+     "title": "ANASTAZJA",
+     "start_time": "",
+     "date_evidence": "FRIDAY: 11/13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    },
+    {
+     "title": "HONEY BUN",
+     "start_time": "",
+     "date_evidence": "FRIDAY: 11/13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    },
+    {
+     "title": "ROYAL MALE (RED LASER RECORDS)",
+     "start_time": "",
+     "date_evidence": "FRIDAY: 11/13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "Harlem Stage",
@@ -582,10 +505,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    8111,
-    64
+    8110,
+    68
    ],
    "examples": []
   },
@@ -598,7 +521,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5126,
+    5125,
     68
    ],
    "examples": []
@@ -612,32 +535,10 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    24321,
+    24320,
     64
    ],
    "examples": []
-  },
-  {
-   "name": "Irving Plaza",
-   "url": "https://www.irvingplaza.com/shows",
-   "read_url": "https://www.irvingplaza.com/shows",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
-   "tokens": [
-    11924,
-    278
-   ],
-   "examples": [
-    {
-     "title": "DANNY BROWN - ATROCITY EXHIBITION 10TH ANNIVERSARY",
-     "start_time": "7:00 PM",
-     "date_evidence": "THU 19 NOV",
-     "time_evidence": "7:00PM",
-     "why": "date quote is not tonight"
-    }
-   ]
   },
   {
    "name": "ISSUE Project Room",
@@ -646,26 +547,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
-    15920,
-    64
+    17272,
+    592
    ],
-   "examples": []
-  },
-  {
-   "name": "Jazz at Lincoln Center",
-   "url": "https://jazz.org/",
-   "read_url": "https://jazz.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    9917,
-    128
-   ],
-   "examples": []
+   "examples": [
+    {
+     "title": "EDEN GIRMA: DREAMCLUB_RADI0",
+     "start_time": "8:00 PM",
+     "date_evidence": "Friday, November 13, 2026 - 8:00 pm",
+     "time_evidence": "Friday, November 13, 2026 - 8:00 pm",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Joe's Pub",
@@ -679,24 +574,30 @@
   {
    "name": "Kings Theatre",
    "url": "https://www.kingstheatre.com/events",
-   "read_url": "https://us.atgtickets.com/venues/kings-theatre-brooklyn/whats-on/",
+   "read_url": "https://us.atgtickets.com/events/black-panther/kings-theatre-brooklyn/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page",
+   "detail": "single_event",
    "tokens": [
-    14456,
-    255
+    12399,
+    132
    ],
-   "examples": [
-    {
-     "title": "Lil' Kim Hard Core Symphony",
-     "start_time": "",
-     "date_evidence": "Wed, Nov 18 - Thu, Nov 19, 2026",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
+  },
+  {
+   "name": "Knockdown Center",
+   "url": "https://dice.fm/venue/knockdown-center-e776",
+   "read_url": "https://dice.fm/venue/knockdown-center-e776?lng=en-US",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "no_events_tonight",
+   "tokens": [
+    6241,
+    68
+   ],
+   "examples": []
   },
   {
    "name": "Kupferberg Center for the Arts",
@@ -707,7 +608,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7511,
+    7509,
     128
    ],
    "examples": []
@@ -721,7 +622,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    10791,
+    10790,
     136
    ],
    "examples": []
@@ -733,10 +634,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "single_event",
    "tokens": [
-    4970,
-    132
+    4969,
+    128
    ],
    "examples": []
   },
@@ -749,8 +650,22 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12799,
+    12702,
     64
+   ],
+   "examples": []
+  },
+  {
+   "name": "Lucinda's",
+   "url": "https://www.lucindasnyc.com/",
+   "read_url": "https://www.lucindasnyc.com/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    12128,
+    565
    ],
    "examples": []
   },
@@ -781,7 +696,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8357,
+    8356,
     136
    ],
    "examples": []
@@ -795,7 +710,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5802,
+    5800,
     136
    ],
    "examples": []
@@ -808,18 +723,41 @@
    "detail": "site can't be read; shows come from the Lincoln Center calendar"
   },
   {
-   "name": "National Jazz Museum in Harlem",
-   "url": "https://jmih.org/",
-   "read_url": "https://jmih.org/event/move-and-groove-live-jazz-and-yoga-2/",
+   "name": "Miller Theatre",
+   "url": "https://www.millertheatre.com/events",
+   "read_url": "https://www.millertheatre.com/events/steven-beck-piano",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "single_event",
    "tokens": [
-    8921,
+    7196,
     128
    ],
    "examples": []
+  },
+  {
+   "name": "Mise-en Place",
+   "url": "https://www.mise-en.org/",
+   "read_url": "https://www.mise-en.org/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    5714,
+    64
+   ],
+   "examples": []
+  },
+  {
+   "name": "National Jazz Museum in Harlem",
+   "url": "https://jmih.org/",
+   "read_url": "https://jmih.org/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 200"
   },
   {
    "name": "New York City Center",
@@ -839,8 +777,8 @@
    "shows": 0,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    12312,
-    242
+    12307,
+    271
    ],
    "examples": [
     {
@@ -870,15 +808,15 @@
    "shows": 0,
    "detail": "sent Wednesday, November 11, 2026",
    "tokens": [
-    17076,
-    655
+    17073,
+    631
    ],
    "examples": [
     {
-     "title": "Mess Is Lore",
-     "start_time": "",
-     "date_evidence": "Thursday, November 12th // Mess Is Lore w/ Carpet (F.L.H.P), Crimeboys, Cry, leelee, MARBLE RYE, Motion Graphics",
-     "time_evidence": "",
+     "title": "Label Night: Tempa",
+     "start_time": "5:00 AM",
+     "date_evidence": "Friday, November 13th // Label Night: Tempa w/ Introspekt, Carré, Eva Loveless & re:ni",
+     "time_evidence": "Club Hours Friday: 10pm until the party is done (usually 6am)",
      "why": "time quote not found on page"
     }
    ]
@@ -892,14 +830,14 @@
    "shows": 0,
    "detail": "sent Friday, November 6, 2026",
    "tokens": [
-    17008,
-    699
+    17007,
+    588
    ],
    "examples": [
     {
-     "title": "Mess Is Lore",
+     "title": "November 13 / Label Night: Tempa: Carré, Eva Loveless, Introspekt, re:ni",
      "start_time": "",
-     "date_evidence": "November 12 / Mess Is Lore: Arushi Jain b2b rrao, Carpet (F.L.H.P) b2b Marble Rye, Crimeboys, Cry (live), Motion Graphics (live)",
+     "date_evidence": "November 13 / Label Night: Tempa: Carré, Eva Loveless, Introspekt, re:ni",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -914,14 +852,14 @@
    "shows": 0,
    "detail": "sent Thursday, November 5, 2026",
    "tokens": [
-    16971,
-    678
+    16970,
+    611
    ],
    "examples": [
     {
-     "title": "Mess Is Lore",
+     "title": "Label Night: Tempa",
      "start_time": "",
-     "date_evidence": "November 12 / Mess Is Lore: Arushi Jain b2b rrao, Carpet (F.L.H.P) b2b Marble Rye, Crimeboys, Cry (live), Motion Graphics (live)",
+     "date_evidence": "November 13 / Label Night: Tempa: Carré, Eva Loveless, Introspekt, re:ni",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -934,25 +872,25 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue, 1× not a public performance",
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
-    7918,
-    848
+    7891,
+    685
    ],
    "examples": [
     {
      "title": "ILHAN SELECTS",
      "start_time": "7:00 PM",
-     "date_evidence": "Thursday November 12",
-     "time_evidence": "7pm-11pm ILHAN SELECTS",
+     "date_evidence": "Friday\nNovember\n13",
+     "time_evidence": "7-11pm\nILHAN SELECTS",
      "why": "listed at another venue"
     },
     {
-     "title": "TBA",
+     "title": "DJ GRACE + FRIENDS",
      "start_time": "11:00 PM",
-     "date_evidence": "Thursday November 12",
-     "time_evidence": "11pm-4am TBA",
-     "why": "not a public performance"
+     "date_evidence": "Friday\nNovember\n13",
+     "time_evidence": "11pm-4am\nDJ GRACE + FRIENDS",
+     "why": "listed at another venue"
     }
    ]
   },
@@ -965,43 +903,29 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9344,
-    132
+    9343,
+    128
    ],
    "examples": []
   },
   {
    "name": "OPERA America National Opera Center",
    "url": "https://www.operaamerica.org/",
-   "read_url": "https://www.operaamerica.org/calendar#eyJxIjoiIiwiY29xIjoiIiwidHlwZXMiOltdLCJ6aXAiOiIiLCJzdGF0ZXMiOltdLCJmcm9tIjoiMjAyNi0xMS0xMiIsInRvIjoiMjAyNi0xMS0xMiIsImNvbXBhbnlJZCI6MCwicGFnZSI6MSwicGFnZVNpemUiOjEyLCJjb21wYW5pZXMiOltdfQ%3D%3D",
+   "read_url": "https://www.operaamerica.org/calendar#eyJxIjoiIiwiY29xIjoiIiwidHlwZXMiOltdLCJ6aXAiOiIiLCJzdGF0ZXMiOltdLCJmcm9tIjoiMjAyNi0xMS0xMyIsInRvIjoiMjAyNi0xMS0xMyIsImNvbXBhbnlJZCI6MCwicGFnZSI6MSwicGFnZVNpemUiOjEyLCJjb21wYW5pZXMiOltdfQ%3D%3D",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× listed in another city, 2× listed at another venue",
+   "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
-    15570,
-    634
+    16212,
+    311
    ],
    "examples": [
     {
-     "title": "Don Pasquale",
-     "start_time": "7:00 PM",
-     "date_evidence": "Today, November 12th, 2026",
-     "time_evidence": "11/12/2026 7:00 PM",
-     "why": "listed in another city"
-    },
-    {
-     "title": "Hansel and Gretel",
-     "start_time": "7:00 PM",
-     "date_evidence": "Today, November 12th, 2026",
-     "time_evidence": "11/12/2026 7:00 PM ET – Eastern Time",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "Macbeth",
+     "title": "Fernanda",
      "start_time": "7:30 PM",
-     "date_evidence": "Today, November 12th, 2026",
-     "time_evidence": "11/12/2026 7:30 PM",
+     "date_evidence": "Today, November 13th, 2026",
+     "time_evidence": "11/13/2026 7:30 PM",
      "why": "listed at another venue"
     }
    ]
@@ -1013,12 +937,27 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
-    10717,
-    128
+    10338,
+    922
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "OWL x FEAR CITY PRESENT! Nico Bones, Mel Machete, The Flytraps, Membrains",
+     "start_time": "7:00 PM",
+     "date_evidence": "Nov 13, 2026 at 7:00 PM EST",
+     "time_evidence": "Nov 13, 2026 at 7:00 PM EST",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "OWL Presents! BK Loves UKG",
+     "start_time": "11:00 PM",
+     "date_evidence": "Nov 13, 2026 at 11:00 PM EST",
+     "time_evidence": "Nov 13, 2026 at 11:00 PM EST",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Paddy Reilly's Music Bar",
@@ -1029,7 +968,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4539,
+    4190,
     68
    ],
    "examples": []
@@ -1044,6 +983,28 @@
    "detail": "HTTP 403"
   },
   {
+   "name": "Pioneer Works",
+   "url": "https://pioneerworks.org/",
+   "read_url": "https://pioneerworks.org/calendar",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
+   "tokens": [
+    10208,
+    416
+   ],
+   "examples": [
+    {
+     "title": "Ocean Season",
+     "start_time": "",
+     "date_evidence": "FRIDAY, NOVEMBER 13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
+  },
+  {
    "name": "Prospect Park Bandshell",
    "url": "https://www.bricartsmedia.org/celebrate-brooklyn",
    "read_url": "https://bricartsmedia.org/events/",
@@ -1052,8 +1013,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7650,
-    128
+    7594,
+    132
    ],
    "examples": []
   },
@@ -1064,20 +1025,12 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "None; dropped 1× date quote is not tonight",
+   "detail": "calendar",
    "tokens": [
-    8566,
-    218
+    8565,
+    64
    ],
-   "examples": [
-    {
-     "title": "Ignorancia Artificial",
-     "start_time": "8:00 PM",
-     "date_evidence": "Thu Nov 19 8:00 PM",
-     "time_evidence": "Thu Nov 19 8:00 PM",
-     "why": "date quote is not tonight"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Regina Opera",
@@ -1086,10 +1039,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
-    6167,
-    64
+    6166,
+    68
    ],
    "examples": []
   },
@@ -1103,41 +1056,27 @@
    "detail": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://rockwoodmusichall.com/"
   },
   {
-   "name": "Roulette",
-   "url": "https://roulette.org/",
-   "read_url": "https://roulette.org/",
+   "name": "Saint Thomas Church Fifth Avenue",
+   "url": "https://www.saintthomaschurch.org/",
+   "read_url": "https://www.saintthomaschurch.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6275,
-    64
+    16695,
+    128
    ],
    "examples": []
   },
   {
-   "name": "Saint Peter's Church",
-   "url": "https://www.saintpeters.org/",
-   "read_url": "https://www.saintpeters.org/events",
-   "method": "event data",
+   "name": "Scandinavia House",
+   "url": "https://www.scandinaviahouse.org/",
+   "read_url": "https://www.scandinaviahouse.org/",
+   "method": "WordPress calendar",
    "status": "none-tonight",
    "shows": 0,
    "detail": "left out 1 non-performance listing"
-  },
-  {
-   "name": "Saint Vitus",
-   "url": "https://www.saintvitusbar.com/",
-   "read_url": "https://www.saintvitusbar.com/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    8122,
-    64
-   ],
-   "examples": []
   },
   {
    "name": "Scholes Street Studio",
@@ -1148,7 +1087,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    3934,
+    3932,
     68
    ],
    "examples": []
@@ -1162,7 +1101,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    7250,
+    7249,
     128
    ],
    "examples": []
@@ -1171,10 +1110,10 @@
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
    "read_url": "https://sidgolds.com/detroit/events/",
-   "method": "WordPress calendar",
+   "method": "event data",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "left out 2 non-performance listings"
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "Sistas' Place",
@@ -1185,7 +1124,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6351,
+    6350,
     64
    ],
    "examples": []
@@ -1208,8 +1147,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    12091,
-    128
+    13293,
+    372
    ],
    "examples": []
   },
@@ -1222,7 +1161,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9697,
+    9696,
     64
    ],
    "examples": []
@@ -1234,47 +1173,26 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "detail": "calendar",
    "tokens": [
-    8238,
-    602
+    8237,
+    132
    ],
-   "examples": [
-    {
-     "title": "Holy Happy Hour",
-     "start_time": "6:30 PM",
-     "date_evidence": "Second Thursdays | 6:30–8:00pm | Bee’s Knees Provisions",
-     "time_evidence": "Second Thursdays | 6:30–8:00pm",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "St. Bartholomew's Church",
    "url": "https://stbarts.org/",
-   "read_url": "https://stbarts.org/",
+   "read_url": "https://stbarts.org/music/concerts/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 on second look; -1 on final check; event page gave no time (none-tonight)",
+   "detail": "not_a_calendar",
    "tokens": [
-    10312,
-    737
+    11039,
+    136
    ],
-   "examples": [
-    {
-     "title": "Imagine Worship",
-     "start_time": "",
-     "date_evidence": "Thursday, Nov 12, 2026",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "11 am Choral Eucharist (In-Person and Livestream)",
-     "start_time": "11:00 AM",
-     "why": "removed on final check: other_night: \"11 am Choral Eucharist (In-Person and Livestream) Sunday, Nov 15, 2026\""
-    }
-   ]
+   "examples": []
   },
   {
    "name": "St. George Theatre",
@@ -1283,26 +1201,29 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
    "tokens": [
-    16010,
-    128
+    16009,
+    506
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Godzilla vs. Destoroyah Movie Screening & Comixcon",
+     "start_time": "",
+     "date_evidence": "FRI 13 NOV",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": "AI",
-   "status": "none-tonight",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "not_a_calendar",
-   "tokens": [
-    9715,
-    136
-   ],
-   "examples": []
+   "detail": "HTTP 403"
   },
   {
    "name": "Sunnyvale",
@@ -1313,8 +1234,22 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    5493,
+    5490,
     136
+   ],
+   "examples": []
+  },
+  {
+   "name": "Symphony Space",
+   "url": "https://www.symphonyspace.org/",
+   "read_url": "https://www.symphonyspace.org/events",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar",
+   "tokens": [
+    10185,
+    128
    ],
    "examples": []
   },
@@ -1327,30 +1262,59 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4646,
+    4532,
     68
    ],
    "examples": []
   },
   {
-   "name": "Terraza 7",
-   "url": "https://www.terraza7.com/",
-   "read_url": "https://www.terraza7.com/events",
+   "name": "Terminal 5",
+   "url": "https://www.terminal5nyc.com/",
+   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "None; dropped 1× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
-    9527,
-    306
+    24781,
+    271
    ],
    "examples": [
     {
-     "title": "MONECO | Chicha Peruana | First Set",
-     "start_time": "8:00 PM",
-     "date_evidence": "Thu",
-     "time_evidence": "8:00 PM MONECO | Chicha Peruana | First Set",
-     "why": "date quote is not tonight"
+     "title": "Fiddlehead, High Vis, Big Boy, Lowertown",
+     "start_time": "",
+     "date_evidence": "Fri, November 13, 2026",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
+  },
+  {
+   "name": "The Broadway",
+   "url": "https://www.thebroadway.nyc/",
+   "read_url": "https://www.thebroadway.nyc/",
+   "method": "AI",
+   "status": "none-tonight",
+   "shows": 0,
+   "detail": "calendar; dropped 2× date quote not found on page",
+   "tokens": [
+    5736,
+    987
+   ],
+   "examples": [
+    {
+     "title": "Jasno w/ Johnny Falloon, Plastic + Welwyn",
+     "start_time": "",
+     "date_evidence": "NOV 13 / November 13, 2026",
+     "time_evidence": "",
+     "why": "date quote not found on page"
+    },
+    {
+     "title": "Di Ivories w/ Shyness & Airhockey",
+     "start_time": "",
+     "date_evidence": "NOV 13 / November 13, 2026 – November 14, 2026",
+     "time_evidence": "",
+     "why": "date quote not found on page"
     }
    ]
   },
@@ -1381,7 +1345,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5604,
+    5602,
     64
    ],
    "examples": []
@@ -1395,8 +1359,8 @@
    "shows": 0,
    "detail": "calendar; dropped 2× time quote not found on page",
    "tokens": [
-    6112,
-    348
+    6111,
+    384
    ],
    "examples": [
     {
@@ -1445,35 +1409,28 @@
   {
    "name": "The Riverside Church",
    "url": "https://www.trcnyc.org/",
-   "read_url": "https://www.trcnyc.org/",
+   "read_url": "https://www.trcnyc.org/music/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 4× not a public performance",
+   "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
-    10502,
-    2122
+    13069,
+    531
    ],
    "examples": [
     {
      "title": "Morning Prayer",
      "start_time": "8:00 AM",
-     "date_evidence": "Thursday, November 12 at 8:00 AM",
-     "time_evidence": "Thursday, November 12 at 8:00 AM",
+     "date_evidence": "8:00AM Morning Prayer Friday, November 13 at 8:00 AM",
+     "time_evidence": "8:00AM Morning Prayer Friday, November 13 at 8:00 AM",
      "why": "not a public performance"
     },
     {
-     "title": "Tower League Bible Study",
-     "start_time": "11:00 AM",
-     "date_evidence": "Thursday, November 12 at 11:00 AM",
-     "time_evidence": "Thursday, November 12 at 11:00 AM",
-     "why": "not a public performance"
-    },
-    {
-     "title": "Tower League Luncheon",
-     "start_time": "12:00 PM",
-     "date_evidence": "Thursday, November 12 at 12:00 PM",
-     "time_evidence": "Thursday, November 12 at 12:00 PM",
+     "title": "Food Pantry",
+     "start_time": "9:00 AM",
+     "date_evidence": "9:00AM Food Pantry Friday, November 13 at 9:00 AM",
+     "time_evidence": "9:00AM Food Pantry Friday, November 13 at 9:00 AM",
      "why": "not a public performance"
     }
    ]
@@ -1487,8 +1444,8 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    8160,
-    132
+    8158,
+    136
    ],
    "examples": []
   },
@@ -1501,7 +1458,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    20829,
+    21148,
     128
    ],
    "examples": []
@@ -1524,32 +1481,10 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    9192,
+    9217,
     64
    ],
    "examples": []
-  },
-  {
-   "name": "Wild Horses",
-   "url": "https://www.wildhorsesnyc.com/",
-   "read_url": "https://wildhorsesnyc.com/calendar/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar; dropped 1× date quote is not tonight",
-   "tokens": [
-    9086,
-    451
-   ],
-   "examples": [
-    {
-     "title": "Cactus Rose NYC",
-     "start_time": "7:00 PM",
-     "date_evidence": "13",
-     "time_evidence": "7:00PM",
-     "why": "date quote is not tonight"
-    }
-   ]
   },
   {
    "name": "Works & Process at the Guggenheim",
@@ -1567,20 +1502,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar",
    "tokens": [
-    16608,
-    1060
+    16579,
+    556
    ],
-   "examples": [
-    {
-     "title": "Patron Appreciation Night",
-     "start_time": "7:00 PM",
-     "date_evidence": "NOV\n12\nAnn Hampton Callaway: Here's To Life\n7:00pm\nPatron Appreciation Night",
-     "time_evidence": "9:30pm",
-     "why": "not a public performance"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Alphaville",
@@ -1588,8 +1515,22 @@
    "read_url": "https://www.alphavillebk.com/",
    "method": "event data",
    "status": "ok",
-   "shows": 3,
+   "shows": 2,
    "detail": null
+  },
+  {
+   "name": "Apollo Theater",
+   "url": "https://www.apollotheater.org/ticket-and-events",
+   "read_url": "https://www.apollotheater.org/ticket-and-events",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    11019,
+    361
+   ],
+   "examples": []
   },
   {
    "name": "Arthur's Tavern",
@@ -1600,8 +1541,8 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    21285,
-    809
+    21300,
+    838
    ],
    "examples": []
   },
@@ -1611,31 +1552,24 @@
    "read_url": "https://wl.eventim.us/BabysAllRightBrooklyn",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
-   "detail": "calendar; dropped 3× time quote not found on page; +1 from event page https://wl.eventim.us/event/genesis-owusu/692428?afflky=BabysAllRightBrooklyn; +1 from event page https://wl.eventim.us/event/memphis-lk/703350?afflky=BabysAllRightBrooklyn; +1 from event page https://wl.eventim.us/event/girls-night/710388?afflky=BabysAllRightBrooklyn",
+   "shows": 2,
+   "detail": "calendar; dropped 2× time quote not found on page; +1 from event page https://wl.eventim.us/event/emma-ogier/706836?afflky=BabysAllRightBrooklyn; +1 from event page https://wl.eventim.us/event/genesis-owusu/694277?afflky=BabysAllRightBrooklyn",
    "tokens": [
-    6808,
-    1143
+    6818,
+    764
    ],
    "examples": [
     {
+     "title": "Emma Ogier",
+     "start_time": "",
+     "date_evidence": "Friday, Nov 13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    },
+    {
      "title": "Genesis Owusu",
      "start_time": "",
-     "date_evidence": "Thursday, Nov 12",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "Memphis LK",
-     "start_time": "",
-     "date_evidence": "Thursday, Nov 12",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "Girls Night",
-     "start_time": "",
-     "date_evidence": "Thursday, Nov 12",
+     "date_evidence": "Friday, Nov 13",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -1647,35 +1581,13 @@
    "read_url": "https://www.bam.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 6,
-   "detail": "calendar; dropped 12× date quote not found on page; +5 on second look",
+   "shows": 1,
+   "detail": "calendar",
    "tokens": [
-    14214,
-    5513
+    13843,
+    3344
    ],
-   "examples": [
-    {
-     "title": "BAM x Alfreda’s Cinema, ARTNOIR co-present Alice Coltrane’s Eternity’s Pillar",
-     "start_time": "7:00 PM",
-     "date_evidence": "Today's Performances\nFilm\n...\n12\nToday's Performances",
-     "time_evidence": "7pm",
-     "why": "date quote not found on page"
-    },
-    {
-     "title": "To Live and Die in L.A.",
-     "start_time": "4:30 PM",
-     "date_evidence": "Today's Performances\nTo Live and Die in L.A.\n4:30pm",
-     "time_evidence": "To Live and Die in L.A.\n4:30pm",
-     "why": "date quote not found on page"
-    },
-    {
-     "title": "Club Kid",
-     "start_time": "4:10 PM",
-     "date_evidence": "Today's Performances\nClub Kid\n4:10pm\n6:40pm\n9:20pm",
-     "time_evidence": "Club Kid\n4:10pm",
-     "why": "date quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Bar Bayeux",
@@ -1686,14 +1598,14 @@
    "shows": 2,
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
-    10959,
-    1212
+    13245,
+    1243
    ],
    "examples": [
     {
-     "title": "Happy Hour w/Steven Crammer",
+     "title": "Fri Happy Hour w/Peter Watrous",
      "start_time": "",
-     "date_evidence": "NOV\n12\nThurs Happy Hour w/Steven Crammer",
+     "date_evidence": "NOV 13",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -1706,12 +1618,20 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× listed at another venue; +1 on second look",
    "tokens": [
-    5786,
-    377
+    5780,
+    585
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "MYHANDSWERETIED X PETALSOFCARRION IN NYC",
+     "start_time": "6:30 PM",
+     "date_evidence": "FRIDAY NOV 13",
+     "time_evidence": "6:30 PM",
+     "why": "listed at another venue"
+    }
+   ]
   },
   {
    "name": "Bar LunÀtico",
@@ -1720,20 +1640,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× date quote not found on page",
+   "detail": "calendar",
    "tokens": [
-    31296,
-    1045
+    31200,
+    722
    ],
-   "examples": [
-    {
-     "title": "jorge roeder new quartet ft. philip dizack | dan blake | richie barshay",
-     "start_time": "9:00 PM",
-     "date_evidence": "1 jorge roeder new quartet ft. philip dizack | dan blake | richie barshay (under the 'november 2026' calendar, day 1 is a Sunday; 'Tonite' text appears under day 12 listing) ",
-     "time_evidence": "9:00 PM – 11:30 PM",
-     "why": "date quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Barbès",
@@ -1741,25 +1653,33 @@
    "read_url": "https://www.barbesbrooklyn.com/events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
+   "shows": 2,
+   "detail": "calendar; dropped 1× time quote is far from the title",
    "tokens": [
-    19325,
-    698
+    19532,
+    1145
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "SONELIUS SMITH & ADAM KAHAN.",
+     "start_time": "8:00 PM",
+     "date_evidence": "Fri, Nov 13 2026",
+     "time_evidence": "Fri, Nov 13 2026\n8:00PM - 9:30PM",
+     "why": "time quote is far from the title"
+    }
+   ]
   },
   {
    "name": "Baryshnikov Arts",
    "url": "https://bacnyc.org/",
-   "read_url": "https://baryshnikovarts.org/",
+   "read_url": "https://baryshnikovarts.org/nyc-shows-events/",
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; +1 on second look",
+   "detail": "calendar",
    "tokens": [
-    8953,
-    344
+    12852,
+    424
    ],
    "examples": []
   },
@@ -1769,28 +1689,35 @@
    "read_url": "https://www.msg.com/beacon-theatre/calendar?venue=beacon-theatre&venues=KovZpZAEAd6A",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "shows": 4,
+   "detail": "calendar; dropped 1× listed in another city",
    "tokens": [
-    30309,
-    940
+    30465,
+    1511
    ],
    "examples": [
     {
-     "title": "Dave Matthews Band",
-     "start_time": "7:30 PM",
-     "date_evidence": "THU 12 NOV '26 TONIGHT",
-     "time_evidence": "7:30PM ET",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "Christmas Spectacular Starring The Radio City Rockettes",
-     "start_time": "3:00 PM",
-     "date_evidence": "THU 12 NOV '26 TODAY",
-     "time_evidence": "3:00PM ET",
-     "why": "listed at another venue"
+     "title": "312 Comedy Festival® Presents Nikki Glaser",
+     "start_time": "7:00 PM",
+     "date_evidence": "FRI 13 NOV ‘26 TONIGHT",
+     "time_evidence": "7:00PM CT",
+     "why": "listed in another city"
     }
    ]
+  },
+  {
+   "name": "Bill's Place",
+   "url": "https://www.billsplaceharlem.com/",
+   "read_url": "https://billsplaceharlem.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    5306,
+    694
+   ],
+   "examples": []
   },
   {
    "name": "Birdland",
@@ -1798,28 +1725,13 @@
    "read_url": "https://www.birdlandjazz.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 2× listed in another city",
+   "shows": 5,
+   "detail": "calendar",
    "tokens": [
-    12246,
-    1567
+    12328,
+    1423
    ],
-   "examples": [
-    {
-     "title": "THE HIGH SOCIETY NEW ORLEANS JAZZ BAND",
-     "start_time": "5:30 PM",
-     "date_evidence": "THU NOV 12",
-     "time_evidence": "Doors @ 4:30PM / Show @ 5:30PM",
-     "why": "listed in another city"
-    },
-    {
-     "title": "THE HIGH SOCIETY NEW ORLEANS JAZZ BAND",
-     "start_time": "8:30 PM",
-     "date_evidence": "THU NOV 12",
-     "time_evidence": "Doors @ 7:30PM / Show @ 8:30PM",
-     "why": "listed in another city"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Blue Note Jazz Club",
@@ -1830,8 +1742,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    29831,
-    633
+    30448,
+    866
    ],
    "examples": []
   },
@@ -1841,11 +1753,11 @@
    "read_url": "https://mercuryeastpresents.com/boweryballroom/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 5,
    "detail": "calendar",
    "tokens": [
-    13471,
-    590
+    14078,
+    1248
    ],
    "examples": []
   },
@@ -1858,8 +1770,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    9793,
-    395
+    9859,
+    452
    ],
    "examples": []
   },
@@ -1872,27 +1784,32 @@
    "shows": 1,
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    18314,
-    877
+    18275,
+    923
    ],
    "examples": [
     {
-     "title": "VIP BOWLING LANE ADD ON - THE PHARCYDE - NOT A CONCERT TICKET",
+     "title": "VIP BOWLING LANE ADD ON - MOUNTAIN GRASS UNIT - NOT A CONCERT TICKET",
      "start_time": "8:00 PM",
-     "date_evidence": "THU NOV 12TH",
+     "date_evidence": "FRI NOV 13TH",
      "time_evidence": "SHOW: 8:00 PM",
      "why": "not a public performance"
     }
    ]
   },
   {
-   "name": "Brooklyn Center for the Performing Arts",
-   "url": "https://www.brooklyncenter.org/",
-   "read_url": "https://www.brooklyn.edu/towcenter/",
-   "method": "WordPress calendar",
+   "name": "Brooklyn Conservatory of Music",
+   "url": "https://bkcm.org/events/",
+   "read_url": "https://bkcm.org/events/",
+   "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "left out 1 non-performance listing"
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    9686,
+    385
+   ],
+   "examples": []
   },
   {
    "name": "Brooklyn Paramount",
@@ -1904,40 +1821,41 @@
    "detail": null
   },
   {
+   "name": "Brooklyn Steel",
+   "url": "https://www.bowerypresents.com/venues/brooklyn-steel",
+   "read_url": "https://www.bowerypresents.com/venues/brooklyn-steel",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
    "name": "Cafe Wha?",
    "url": "https://cafewha.com/",
    "read_url": "https://www.cafewha.com/tickets-reservations",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
+   "shows": 3,
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    6996,
-    648
+    7015,
+    981
    ],
    "examples": []
   },
   {
-   "name": "Carnegie Hall",
-   "url": "https://www.carnegiehall.org/Calendar",
-   "read_url": "https://www.carnegiehall.org/events",
+   "name": "Cathedral of St. John the Divine",
+   "url": "https://www.stjohndivine.org/",
+   "read_url": "https://www.stjohndivine.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "None; dropped 1× listed at another venue",
+   "shows": 1,
+   "detail": "calendar",
    "tokens": [
-    12934,
-    1078
+    12950,
+    400
    ],
-   "examples": [
-    {
-     "title": "Ensemble Connect",
-     "start_time": "7:30 PM",
-     "date_evidence": "Thursday\nNov 12\n2026",
-     "time_evidence": "7:30 PM\nPaul Hall, The Juilliard School",
-     "why": "listed at another venue"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Cellar Dog",
@@ -1948,22 +1866,8 @@
    "shows": 1,
    "detail": "not_a_calendar; regular night from venues.json",
    "tokens": [
-    6307,
-    132
-   ],
-   "examples": []
-  },
-  {
-   "name": "Chamber Music Society of Lincoln Center",
-   "url": "https://www.chambermusicsociety.org/",
-   "read_url": "https://www.chambermusicsociety.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    18421,
-    408
+    6305,
+    136
    ],
    "examples": []
   },
@@ -1976,8 +1880,22 @@
    "shows": 3,
    "detail": "calendar",
    "tokens": [
-    18768,
-    990
+    17141,
+    954
+   ],
+   "examples": []
+  },
+  {
+   "name": "Club Cumming",
+   "url": "https://www.clubcummingnyc.com/",
+   "read_url": "https://clubcummingnyc.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    30740,
+    839
    ],
    "examples": []
   },
@@ -1987,19 +1905,19 @@
    "read_url": "https://www.culturelablic.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× time quote is far from the title; +1 on second look",
+   "shows": 2,
+   "detail": "calendar; dropped 1× date quote is not tonight; +1 on second look",
    "tokens": [
-    17381,
-    641
+    15865,
+    1021
    ],
    "examples": [
     {
-     "title": "Charade (1963) - Movie Night at Culture Lab LIC",
-     "start_time": "7:30 PM",
-     "date_evidence": "Charade\nNovember 12, 7:30pm",
-     "time_evidence": "Film starts promptly at 7:30 PM.",
-     "why": "time quote is far from the title"
+     "title": "Sunset Jazz",
+     "start_time": "8:00 PM",
+     "date_evidence": "Friday",
+     "time_evidence": "Enjoy live jazz performances, cool libations, and great vibes in an intimate art gallery space every Friday at 8 PM.",
+     "why": "date quote is not tonight"
     }
    ]
   },
@@ -2019,20 +1937,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× date quote is not tonight",
+   "detail": "calendar",
    "tokens": [
-    13601,
-    884
+    13593,
+    672
    ],
-   "examples": [
-    {
-     "title": "LATE NIGHT SESSIONS",
-     "start_time": "10:45 PM",
-     "date_evidence": "THU–SAT, 10:45PM",
-     "time_evidence": "THU–SAT, 10:45PM",
-     "why": "date quote is not tonight"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Django",
@@ -2040,11 +1950,11 @@
    "read_url": "https://www.thedjangonyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
-   "detail": "calendar",
+   "shows": 2,
+   "detail": "calendar; +1 on second look",
    "tokens": [
-    14119,
-    1028
+    14090,
+    804
    ],
    "examples": []
   },
@@ -2063,11 +1973,11 @@
    "read_url": "https://dromnyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8395,
-    407
+    8500,
+    655
    ],
    "examples": []
   },
@@ -2077,13 +1987,21 @@
    "read_url": "https://www.elsewhere.club/events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
+   "shows": 3,
+   "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
    "tokens": [
-    14729,
-    502
+    14989,
+    1560
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "ELSEWHERE PRESENTS: LUKE ALEXANDER @ 99 SCOTT - DEDRO, SHANKZ, MATTY CHIUCH",
+     "start_time": "10:00 PM",
+     "date_evidence": "Fri, Nov 13",
+     "time_evidence": "CLUB ↗ ELSEWHERE PRESENTS ... 10:00 PM",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "Freddy's Bar",
@@ -2091,26 +2009,50 @@
    "read_url": "https://www.freddysbar.com/events",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 1× start time not in time quote; +1 from event page https://www.freddysbar.com/events/late-night-laughs-a-midnight-comedy-show-after",
+   "shows": 4,
+   "detail": "calendar",
    "tokens": [
-    25899,
-    903
+    25997,
+    1461
    ],
-   "examples": [
-    {
-     "title": "LATE NIGHT LAUGHS! A Midnight Comedy Show After Burlesque",
-     "start_time": "11:30 PM",
-     "date_evidence": "Thu, Nov 12, 202611:30 PM  Fri, Nov 13, 202612:30 AM",
-     "time_evidence": "Thu, Nov 12, 202611:30 PM  Fri, Nov 13, 202612:30 AM",
-     "why": "start time not in time quote"
-    }
-   ]
+   "examples": []
+  },
+  {
+   "name": "Gibney",
+   "url": "https://gibneydance.org/",
+   "read_url": "https://gibneydance.org/calendar/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    10499,
+    446
+   ],
+   "examples": []
   },
   {
    "name": "Gold Sounds",
    "url": "https://dice.fm/venue/gold-sounds-y3qr",
    "read_url": "https://dice.fm/venue/gold-sounds-y3qr?lng=en-US",
+   "method": "event data",
+   "status": "ok",
+   "shows": 1,
+   "detail": null
+  },
+  {
+   "name": "Grace Church",
+   "url": "https://gracechurchnyc.org/",
+   "read_url": "https://gracechurchnyc.org/",
+   "method": "WordPress calendar",
+   "status": "ok",
+   "shows": 1,
+   "detail": "left out 1 non-performance listing"
+  },
+  {
+   "name": "Gramercy Theatre",
+   "url": "https://www.thegramercytheatre.com/shows",
+   "read_url": "https://www.thegramercytheatre.com/shows",
    "method": "event data",
    "status": "ok",
    "shows": 1,
@@ -2131,37 +2073,58 @@
    "read_url": "https://www.clubgroovenyc.com/events",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
-   "detail": "calendar; dropped 2× time quote not found on page; +2 on second look",
+   "shows": 3,
+   "detail": "calendar",
    "tokens": [
-    13614,
-    975
+    13515,
+    707
    ],
-   "examples": [
-    {
-     "title": "Luisa Wilson with Toni T",
-     "start_time": "7:00 PM",
-     "date_evidence": "Thu 12th November",
-     "time_evidence": "Thu 12th November 7:00 PM ... Luisa Wilson with Toni T Live at Groove | Thursday, November 12th | 6:00PM Doors, 7:00PM Show",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "The Stage Revolution Band",
-     "start_time": "9:00 PM",
-     "date_evidence": "Thu 12th November",
-     "time_evidence": "Thu 12th November 9:00 PM ... The Stage Revolution Band Live at Groove",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
-   "name": "Knockdown Center",
-   "url": "https://dice.fm/venue/knockdown-center-e776",
-   "read_url": "https://dice.fm/venue/knockdown-center-e776?lng=en-US",
+   "name": "H0L0",
+   "url": "https://www.h0l0.nyc/",
+   "read_url": "https://h0l0.nyc/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar; +1 on second look",
+   "tokens": [
+    5303,
+    901
+   ],
+   "examples": []
+  },
+  {
+   "name": "Irving Plaza",
+   "url": "https://www.irvingplaza.com/shows",
+   "read_url": "https://www.irvingplaza.com/shows",
    "method": "event data",
    "status": "ok",
    "shows": 1,
    "detail": null
+  },
+  {
+   "name": "Jazz at Lincoln Center",
+   "url": "https://jazz.org/",
+   "read_url": "https://jazz.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://jazz.org/concert/the-eddie-palmieri-experience-an-all-star-celebration/",
+   "tokens": [
+    9916,
+    627
+   ],
+   "examples": [
+    {
+     "title": "THE EDDIE PALMIERI EXPERIENCE: AN ALL-STAR CELEBRATION",
+     "start_time": "",
+     "date_evidence": "NOV 13–14",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "Le Poisson Rouge",
@@ -2169,18 +2132,25 @@
    "read_url": "https://lpr.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× listed at another venue",
+   "shows": 2,
+   "detail": "calendar; dropped 2× listed at another venue",
    "tokens": [
-    7255,
-    1141
+    7156,
+    1211
    ],
    "examples": [
     {
-     "title": "MANCHESTER ORCHESTRA",
-     "start_time": "6:30PM",
-     "date_evidence": "NOV 12",
+     "title": "WHY?",
+     "start_time": "6:30 PM",
+     "date_evidence": "NOV\n13",
      "time_evidence": "6:30PM",
+     "why": "listed at another venue"
+    },
+    {
+     "title": "HOLLY MIRANDA & MELISSA FERRICK",
+     "start_time": "7:00 PM",
+     "date_evidence": "NOV\n13",
+     "time_evidence": "7:00PM",
      "why": "listed at another venue"
     }
    ]
@@ -2191,19 +2161,43 @@
    "read_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
    "method": "AI",
    "status": "ok",
-   "shows": 6,
-   "detail": "calendar; dropped 1× start time not in time quote; event page gave no time (none-tonight)",
+   "shows": 7,
+   "detail": "calendar; dropped 3× start time not in time quote, 1× listed at another venue; -2 on final check; event page gave no time (none-tonight); event page gave no time (none-tonight); event page gave no time (none-tonight)",
    "tokens": [
-    16507,
-    2302
+    16934,
+    3564
    ],
    "examples": [
     {
-     "title": "Possible Love",
+     "title": "Fatherland",
      "start_time": "",
-     "date_evidence": "Thursday, November 12, 2026",
+     "date_evidence": "Friday, November 13, 2026",
      "time_evidence": "Multiple Times",
      "why": "start time not in time quote"
+    },
+    {
+     "title": "Bitter Christmas",
+     "start_time": "",
+     "date_evidence": "Friday, November 13, 2026",
+     "time_evidence": "Multiple Times",
+     "why": "start time not in time quote"
+    },
+    {
+     "title": "Once Upon a Time in Harlem",
+     "start_time": "",
+     "date_evidence": "Friday, November 13, 2026",
+     "time_evidence": "Multiple Times",
+     "why": "start time not in time quote"
+    },
+    {
+     "title": "Historical Performance Chamber Music at the Metropolitan Museum of Art",
+     "start_time": "11:00 AM",
+     "why": "removed on final check: not_a_performance: \"Lincoln Center Tours\nMultiple Times\nHistorical Performance Chamber Music at the Metropolitan Museum \""
+    },
+    {
+     "title": "Viola Master Class With Garth Knox",
+     "start_time": "4:00 PM",
+     "why": "removed on final check: not_a_performance: \"Viola Master Class With Garth Knox\nThe Juilliard School\n4:00 pm\""
     }
    ]
   },
@@ -2213,25 +2207,11 @@
    "read_url": "https://littlefieldnyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8877,
-    433
-   ],
-   "examples": []
-  },
-  {
-   "name": "Lucinda's",
-   "url": "https://www.lucindasnyc.com/",
-   "read_url": "https://www.lucindasnyc.com/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    11959,
-    669
+    8977,
+    668
    ],
    "examples": []
   },
@@ -2244,8 +2224,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    6902,
-    463
+    6782,
+    385
    ],
    "examples": []
   },
@@ -2255,11 +2235,11 @@
    "read_url": "https://mercuryeastpresents.com/mercurylounge/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
-    12947,
-    400
+    13337,
+    816
    ],
    "examples": []
   },
@@ -2269,47 +2249,11 @@
    "read_url": "https://www.smallslive.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× date quote is not tonight; +1 on second look",
-   "tokens": [
-    28626,
-    684
-   ],
-   "examples": [
-    {
-     "title": "DAN CRAY TRIO",
-     "start_time": "6:00 PM",
-     "date_evidence": "WED NOV 11",
-     "time_evidence": "SETS AT 6:00 PM & 7:30 PM",
-     "why": "date quote is not tonight"
-    }
-   ]
-  },
-  {
-   "name": "Miller Theatre",
-   "url": "https://www.millertheatre.com/events",
-   "read_url": "https://www.millertheatre.com/events?page=1",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
+   "shows": 5,
    "detail": "calendar",
    "tokens": [
-    7146,
-    423
-   ],
-   "examples": []
-  },
-  {
-   "name": "Mise-en Place",
-   "url": "https://www.mise-en.org/",
-   "read_url": "https://www.mise-en.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    6988,
-    431
+    28972,
+    1365
    ],
    "examples": []
   },
@@ -2328,11 +2272,11 @@
    "read_url": "https://www.nationalsawdust.org/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    9163,
-    428
+    9162,
+    727
    ],
    "examples": []
   },
@@ -2345,8 +2289,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    7742,
-    651
+    8020,
+    659
    ],
    "examples": []
   },
@@ -2365,11 +2309,11 @@
    "read_url": "https://www.petescandystore.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 4,
+   "shows": 5,
    "detail": "calendar",
    "tokens": [
-    4962,
-    1031
+    4959,
+    1251
    ],
    "examples": []
   },
@@ -2383,28 +2327,6 @@
    "detail": null
   },
   {
-   "name": "Pioneer Works",
-   "url": "https://pioneerworks.org/",
-   "read_url": "https://pioneerworks.org/calendar",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://pioneerworks.org/programs/eiko-ishibashi",
-   "tokens": [
-    10440,
-    540
-   ],
-   "examples": [
-    {
-     "title": "GIFT: A Live Score by Eiko Ishibashi & Film by Ryusuke Hamaguchi",
-     "start_time": "",
-     "date_evidence": "THURSDAY, NOVEMBER 12",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
-  },
-  {
    "name": "Public Records",
    "url": "https://publicrecords.nyc/",
    "read_url": "https://publicrecords.nyc/",
@@ -2413,8 +2335,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    21525,
-    712
+    21139,
+    1039
    ],
    "examples": []
   },
@@ -2427,8 +2349,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    6679,
-    642
+    6613,
+    627
    ],
    "examples": []
   },
@@ -2441,8 +2363,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    13438,
-    386
+    13411,
+    370
    ],
    "examples": []
   },
@@ -2452,26 +2374,33 @@
    "read_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "shows": 2,
+   "detail": "calendar; dropped 2× listed at another venue, 1× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
-    30076,
-    1216
+    29865,
+    1709
    ],
    "examples": [
     {
-     "title": "Dave Matthews Band",
-     "start_time": "7:30 PM",
-     "date_evidence": "THU 12 NOV ‘26 TONIGHT",
-     "time_evidence": "7:30PM ET",
+     "title": "New York Comedy Festival Presents Ilana Glazer",
+     "start_time": "6:45 PM",
+     "date_evidence": "FRI 13 NOV '26 TONIGHT",
+     "time_evidence": "New York Comedy Festival Presents Ilana Glazer 6:45PM ET",
      "why": "listed at another venue"
     },
     {
-     "title": "New York Comedy Festival Presents Jordan Jensen",
-     "start_time": "8:00 PM",
-     "date_evidence": "THU 12 NOV ‘26 TONIGHT",
-     "time_evidence": "8:00PM ET",
+     "title": "Dave Matthews Band",
+     "start_time": "7:30 PM",
+     "date_evidence": "FRI 13 NOV '26 TONIGHT",
+     "time_evidence": "Dave Matthews Band Fall Tour 2026 7:30PM ET",
      "why": "listed at another venue"
+    },
+    {
+     "title": "312 Comedy Festival® Presents Nikki Glaser",
+     "start_time": "7:00 PM",
+     "date_evidence": "FRI 13 NOV '26 TONIGHT",
+     "time_evidence": "312 Comedy Festival® Presents Nikki Glaser The Stunning Tour 7:00PM CT",
+     "why": "time quote not found on page"
     }
    ]
   },
@@ -2484,8 +2413,22 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    17372,
-    401
+    17385,
+    426
+   ],
+   "examples": []
+  },
+  {
+   "name": "Roulette",
+   "url": "https://roulette.org/",
+   "read_url": "https://roulette.org/calendar/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 1,
+   "detail": "calendar",
+   "tokens": [
+    10546,
+    385
    ],
    "examples": []
   },
@@ -2496,35 +2439,38 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
-    11731,
-    391
+    11720,
+    726
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "Afro-Dance: Afrobeats Dance Class & Happy Hour",
+     "start_time": "6:00 PM",
+     "date_evidence": "Nov 13, 2026",
+     "time_evidence": "6:00 pm Doors",
+     "why": "not a public performance"
+    }
+   ]
   },
   {
-   "name": "Saint Thomas Church Fifth Avenue",
-   "url": "https://www.saintthomaschurch.org/",
-   "read_url": "https://www.saintthomaschurch.org/",
-   "method": "AI",
+   "name": "Saint Peter's Church",
+   "url": "https://www.saintpeters.org/",
+   "read_url": "https://www.saintpeters.org/events",
+   "method": "event data",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar",
-   "tokens": [
-    18268,
-    537
-   ],
-   "examples": []
+   "detail": null
   },
   {
-   "name": "Scandinavia House",
-   "url": "https://www.scandinaviahouse.org/",
-   "read_url": "https://www.scandinaviahouse.org/",
-   "method": "WordPress calendar",
+   "name": "Saint Vitus",
+   "url": "https://www.saintvitusbar.com/",
+   "read_url": "https://www.saintvitusbar.com/",
+   "method": "event data",
    "status": "ok",
    "shows": 1,
-   "detail": "left out 1 non-performance listing"
+   "detail": null
   },
   {
    "name": "Silvana",
@@ -2532,11 +2478,11 @@
    "read_url": "https://www.silvana-nyc.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    14522,
-    788
+    14215,
+    597
    ],
    "examples": []
   },
@@ -2549,8 +2495,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    28827,
-    1562
+    28948,
+    1408
    ],
    "examples": []
   },
@@ -2560,11 +2506,11 @@
    "read_url": "https://tickets.smokejazz.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 3,
    "detail": "calendar",
    "tokens": [
-    13142,
-    846
+    24844,
+    1053
    ],
    "examples": []
   },
@@ -2577,8 +2523,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    11597,
-    410
+    11606,
+    409
    ],
    "examples": []
   },
@@ -2591,33 +2537,10 @@
    "shows": 1,
    "detail": "None",
    "tokens": [
-    7332,
-    387
+    7275,
+    412
    ],
    "examples": []
-  },
-  {
-   "name": "Symphony Space",
-   "url": "https://www.symphonyspace.org/",
-   "read_url": "https://www.symphonyspace.org/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 2,
-   "detail": "calendar",
-   "tokens": [
-    13005,
-    634
-   ],
-   "examples": []
-  },
-  {
-   "name": "Terminal 5",
-   "url": "https://www.terminal5nyc.com/",
-   "read_url": "https://www.bowerypresents.com/shows/terminal-5/",
-   "method": "event data",
-   "status": "ok",
-   "shows": 1,
-   "detail": null
   },
   {
    "name": "Terra Blues",
@@ -2628,10 +2551,39 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    27466,
-    618
+    28239,
+    663
    ],
    "examples": []
+  },
+  {
+   "name": "Terraza 7",
+   "url": "https://www.terraza7.com/",
+   "read_url": "https://www.terraza7.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar; dropped 2× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/moneco-chicha-peruana-first-set-7; +1 from event page https://www.terraza7.com/detalles-y-registro/moneco-chicha-peruana-second-set-8",
+   "tokens": [
+    10364,
+    816
+   ],
+   "examples": [
+    {
+     "title": "MONECO | Chicha Peruana | First Set",
+     "start_time": "",
+     "date_evidence": "Fri, Nov 13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    },
+    {
+     "title": "MONECO | Chicha Peruana | Second Set",
+     "start_time": "",
+     "date_evidence": "Fri, Nov 13",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "The Bell House",
@@ -2648,35 +2600,13 @@
    "read_url": "https://bitterend.com/#/events",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
+   "shows": 4,
    "detail": "calendar",
    "tokens": [
-    19998,
-    768
+    20116,
+    979
    ],
    "examples": []
-  },
-  {
-   "name": "The Broadway",
-   "url": "https://www.thebroadway.nyc/",
-   "read_url": "https://www.thebroadway.nyc/",
-   "method": "AI",
-   "status": "ok",
-   "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.thebroadway.nyc/showcalendar/vv-lightbody-at-the-broadway",
-   "tokens": [
-    5736,
-    526
-   ],
-   "examples": [
-    {
-     "title": "V.V. Lightbody w/ Núria Graham",
-     "start_time": "",
-     "date_evidence": "NOV\n12\nV.V. Lightbody w/ Núria Graham\nNovember 12, 2026",
-     "time_evidence": "",
-     "why": "time quote not found on page"
-    }
-   ]
   },
   {
    "name": "The Green Room 42",
@@ -2684,11 +2614,11 @@
    "read_url": "https://thegreenroom42.venuetix.com/",
    "method": "AI",
    "status": "ok",
-   "shows": 2,
+   "shows": 1,
    "detail": "calendar",
    "tokens": [
-    13991,
-    600
+    13969,
+    386
    ],
    "examples": []
   },
@@ -2701,8 +2631,8 @@
    "shows": 2,
    "detail": "None; +1 on second look",
    "tokens": [
-    19990,
-    684
+    19893,
+    622
    ],
    "examples": []
   },
@@ -2715,7 +2645,7 @@
    "shows": 1,
    "detail": "not_a_calendar; regular night from venues.json",
    "tokens": [
-    8689,
+    8687,
     136
    ],
    "examples": []
@@ -2729,8 +2659,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    11809,
-    418
+    11827,
+    432
    ],
    "examples": []
   },
@@ -2740,7 +2670,7 @@
    "read_url": "https://thesultanroom.com/",
    "method": "event data",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": null
   },
   {
@@ -2750,16 +2680,16 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.thetownhall.org/event/ny-comedy-festival-presents-ben-bankas",
+   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.thetownhall.org/event/ny-comedy-festival-presents-adam-friedland",
    "tokens": [
-    16592,
-    523
+    16387,
+    526
    ],
    "examples": [
     {
-     "title": "NY COMEDY FESTIVAL PRESENTS BEN BANKAS",
+     "title": "NY COMEDY FESTIVAL PRESENTS ADAM FRIEDLAND",
      "start_time": "",
-     "date_evidence": "THU / NOV 12",
+     "date_evidence": "FRI / NOV 13",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -2771,11 +2701,11 @@
    "read_url": "https://www.thetranspecos.com/#/events",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    8116,
-    465
+    8212,
+    645
    ],
    "examples": []
   },
@@ -2788,8 +2718,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    24177,
-    823
+    24093,
+    864
    ],
    "examples": []
   },
@@ -2811,8 +2741,8 @@
    "shows": 2,
    "detail": "calendar",
    "tokens": [
-    6755,
-    359
+    9207,
+    413
    ],
    "examples": []
   },
@@ -2822,11 +2752,25 @@
    "read_url": "https://www.websterhall.com/shows/",
    "method": "AI",
    "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    18729,
+    618
+   ],
+   "examples": []
+  },
+  {
+   "name": "Wild Horses",
+   "url": "https://www.wildhorsesnyc.com/",
+   "read_url": "https://wildhorsesnyc.com/",
+   "method": "AI",
+   "status": "ok",
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    18506,
-    572
+    6636,
+    611
    ],
    "examples": []
   },
@@ -2836,13 +2780,28 @@
    "read_url": "https://www.wonderville.nyc/",
    "method": "AI",
    "status": "ok",
-   "shows": 1,
-   "detail": "calendar",
+   "shows": 2,
+   "detail": "calendar; dropped 2× date quote not found on page; +2 on second look",
    "tokens": [
-    8750,
-    431
+    8726,
+    1112
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "LACKEY / Rearranged Face / Lo-Fives",
+     "start_time": "8:30 PM",
+     "date_evidence": "NOV 13 ... 8:30 PM – 11:00 PM November 13, 2026",
+     "time_evidence": "8:30 PM – 11:00 PM November 13, 2026",
+     "why": "date quote not found on page"
+    },
+    {
+     "title": "FREE PLAY: Jake Korolev + stjarnafaen & Friends",
+     "start_time": "11:00 PM",
+     "date_evidence": "NOV 13 ... 11:00 PM November 13, 2026 – November 14, 2026",
+     "time_evidence": "11:00 PM November 13, 2026 – November 14, 2026",
+     "why": "date quote not found on page"
+    }
+   ]
   },
   {
    "name": "Zinc Bar",
@@ -2851,16 +2810,16 @@
    "method": "AI",
    "status": "ok",
    "shows": 1,
-   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.zincbar.com/event/axel-toscas-cuban-jam-47/",
+   "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.zincbar.com/event/willerm-delisfort-trio-2/",
    "tokens": [
-    12002,
-    469
+    11833,
+    512
    ],
    "examples": [
     {
-     "title": "AXEL TOSCA’S CUBAN JAM",
+     "title": "WILLERM DELISFORT TRIO",
      "start_time": "",
-     "date_evidence": "November 12, 2026",
+     "date_evidence": "WILLERM DELISFORT TRIO\nFind out more\nNovember 13, 2026",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
