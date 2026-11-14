@@ -239,7 +239,23 @@
     .row .genre { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--muted); text-align: right; }
     .tag { display: inline-block; padding: 2px 7px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--gold); background: var(--gold-dim); white-space: nowrap; }
     .row.is-sponsored:not(.is-ended) { background: linear-gradient(90deg, rgba(255, 194, 75, .07), rgba(255, 194, 75, 0) 70%); }
-    .tn-pin.sponsored .pin { outline: 2px solid rgba(255, 194, 75, .55); outline-offset: 3px; }
+    /* sponsored: gold halo that breathes, plus two rings rippling out from the pin */
+    .tn-pin.sponsored .pin { outline: 2px solid rgba(255, 194, 75, .8); outline-offset: 3px;
+                             animation: sponsor-glow 1.8s ease-in-out infinite; }
+    .tn-pin.sponsored::before, .tn-pin.sponsored::after {
+      content: ''; position: absolute; inset: 6px; border-radius: 50%; pointer-events: none;
+      border: 2px solid rgba(255, 194, 75, .9); animation: sponsor-ripple 2.4s ease-out infinite; }
+    .tn-pin.sponsored::after { animation-delay: 1.2s; }
+    @keyframes sponsor-glow {
+      0%, 100% { box-shadow: 0 0 8px 2px rgba(255, 194, 75, .45); }
+      50%      { box-shadow: 0 0 22px 9px rgba(255, 194, 75, .75); }
+    }
+    @keyframes sponsor-ripple {
+      from { transform: scale(.7); opacity: .95; }
+      to   { transform: scale(2.6); opacity: 0; }
+    }
+    .row.is-sponsored:not(.is-ended) .tag { animation: tag-glow 2.4s ease-in-out infinite; }
+    @keyframes tag-glow { 50% { box-shadow: 0 0 10px 1px rgba(255, 194, 75, .55); } }
     .row .faved { font-size: 12px; line-height: 1; color: var(--gold); }
 
     /* Follow (favorite venue) */
