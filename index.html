@@ -179,7 +179,7 @@
     .note { margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
 
     .filters {
-      position: sticky; top: 0; z-index: 2; background: var(--ink-2);
+      position: sticky; top: 0; z-index: 5; background: var(--ink-2);
       margin: 0 calc(-1 * max(18px, env(safe-area-inset-left))); padding: 2px max(18px, env(safe-area-inset-left)) 0;
     }
     .search { position: relative; margin: 0 0 8px; }
@@ -218,6 +218,7 @@
       background: none; text-align: left; cursor: pointer; border-radius: 0;
     }
     .row:hover { background: rgba(255, 255, 255, .03); }
+    .row { transition: transform .2s ease; }
     .row.is-selected { background: var(--gold-dim); border-radius: 10px; }
     .row:focus-visible { outline-offset: -2px; border-radius: 10px; }
     .when { display: flex; flex-direction: column; gap: 3px; }
@@ -238,7 +239,27 @@
     .row .side { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; max-width: 92px; padding-top: 3px; }
     .row .genre { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--muted); text-align: right; }
     .tag { display: inline-block; padding: 2px 7px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--gold); background: var(--gold-dim); white-space: nowrap; }
-    .row.is-sponsored:not(.is-ended) { background: linear-gradient(90deg, rgba(255, 194, 75, .07), rgba(255, 194, 75, 0) 70%); }
+    /* sponsored rows: a raised gold card that floats above the list and breathes */
+    .row.is-sponsored:not(.is-ended) {
+      position: relative; z-index: 2; margin: 6px 0 12px; padding: 14px 12px;
+      border: 1px solid rgba(255, 194, 75, .55); border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255, 220, 140, .16) 0%, rgba(255, 194, 75, .07) 45%, rgba(40, 46, 96, .95) 100%), #1c2257;
+      box-shadow: inset 0 1px 0 rgba(255, 236, 190, .45), inset 0 -2px 0 rgba(0, 0, 0, .35),
+                  0 10px 22px -6px rgba(0, 0, 0, .7), 0 0 18px 1px rgba(255, 194, 75, .3);
+      transform: translateY(-2px) scale(1.015);
+      animation: row-glow 2.4s ease-in-out infinite;
+    }
+    .row.is-sponsored:not(.is-ended):hover { transform: translateY(-4px) scale(1.025); }
+    .row.is-sponsored:not(.is-ended)::after {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+      background: linear-gradient(110deg, transparent 35%, rgba(255, 236, 190, .14) 50%, transparent 65%) -150% 0 / 250% 100% no-repeat;
+      animation: row-shine 4s ease-in-out infinite;
+    }
+    @keyframes row-glow {
+      50% { box-shadow: inset 0 1px 0 rgba(255, 236, 190, .45), inset 0 -2px 0 rgba(0, 0, 0, .35),
+                        0 14px 28px -6px rgba(0, 0, 0, .75), 0 0 30px 5px rgba(255, 194, 75, .5); }
+    }
+    @keyframes row-shine { 0%, 40% { background-position: -150% 0; } 100% { background-position: 250% 0; } }
     /* sponsored: gold halo that breathes, plus two rings rippling out from the pin */
     .tn-pin.sponsored .pin { outline: 2px solid rgba(255, 194, 75, .8); outline-offset: 3px;
                              animation: sponsor-glow 1.8s ease-in-out infinite; }
