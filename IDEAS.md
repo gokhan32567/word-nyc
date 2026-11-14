@@ -7,7 +7,8 @@ Apply the Word NYC approach (tonight's map, daily crawl, same AI reader and chec
 Broadway, Off-Broadway, Off-Off-Broadway, dance, opera houses' non-music nights, comedy, cabaret.
 
 Notes for when it starts:
-- Decide: a new section/filter on word-nyc.com ("Theatre" next to the music genres) vs. a separate site.
+- Domain bought Nov 14, 2026: **playstonight.com** (Porkbun). Plan: a separate site and app showing tonight's plays
+  in a city (NYC first, then other cities), built on the Word NYC code.
 - Theatre runs are long: most shows play 6-8 times a week for months, so a show list + weekly
   schedule (8 PM Tue-Sat, 2 PM Wed/Sat/Sun matinees...) matters more than daily calendars.
   The reader's multi-night-run support (`run_covers`, venue `sets`) already handles this pattern.
