@@ -1,6 +1,11 @@
 {
  "11th Street Bar": {
-  "name": "11th Street Bar"
+  "name": "11th Street Bar",
+  "address": "510 E 11th St, New York, NY 10009",
+  "lat": 40.72804,
+  "lng": -73.98126,
+  "genre": "Folk & Americana",
+  "last": "2026-11-15"
  },
  "54 Below": {
   "name": "54 Below",
@@ -22,7 +27,7 @@
   "lat": 40.70053,
   "lng": -73.92582,
   "genre": "Punk & Hardcore",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Apollo Theater": {
   "name": "Apollo Theater",
@@ -41,7 +46,7 @@
   "lat": 40.7332,
   "lng": -74.00345,
   "genre": "World",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Austrian Cultural Forum": {
   "name": "Austrian Cultural Forum"
@@ -52,7 +57,7 @@
   "lat": 40.68642,
   "lng": -73.97785,
   "genre": "Ballet & Dance",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "BRIC House": {
   "name": "BRIC House",
@@ -68,7 +73,7 @@
   "lat": 40.70997,
   "lng": -73.96342,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Bar Bayeux": {
   "name": "Bar Bayeux",
@@ -84,7 +89,7 @@
   "lat": 40.70073,
   "lng": -73.91114,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Bar LunÀtico": {
   "name": "Bar LunÀtico",
@@ -92,7 +97,7 @@
   "lat": 40.68338,
   "lng": -73.93468,
   "genre": "Jazz",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Barbès": {
   "name": "Barbès",
@@ -100,7 +105,7 @@
   "lat": 40.66774,
   "lng": -73.98388,
   "genre": "World",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Barclays Center": {
   "name": "Barclays Center"
@@ -111,7 +116,7 @@
   "lat": 40.7036,
   "lng": -73.9951,
   "genre": "Classical",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Baryshnikov Arts": {
   "name": "Baryshnikov Arts",
@@ -127,7 +132,7 @@
   "lat": 40.78049,
   "lng": -73.98113,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Berlin": {
   "name": "Berlin",
@@ -135,7 +140,7 @@
   "lat": 40.72297,
   "lng": -73.98608,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Bill's Place": {
   "name": "Bill's Place",
@@ -151,7 +156,7 @@
   "lat": 40.75909,
   "lng": -73.98964,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Birdland Jazz Club": {
   "name": "Birdland Jazz Club"
@@ -165,7 +170,7 @@
   "lat": 40.73083,
   "lng": -74.00073,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Booth Theatre": {
   "name": "Booth Theatre",
@@ -181,7 +186,7 @@
   "lat": 40.72044,
   "lng": -73.99333,
   "genre": "Pop",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Bowery Palace": {
   "name": "Bowery Palace",
@@ -189,7 +194,7 @@
   "lat": 40.7257,
   "lng": -73.99167,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Brooklyn Bowl": {
   "name": "Brooklyn Bowl",
@@ -197,7 +202,7 @@
   "lat": 40.72205,
   "lng": -73.95755,
   "genre": "Hip-Hop & Rap",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Brooklyn Center for the Performing Arts": {
   "name": "Brooklyn Center for the Performing Arts",
@@ -205,7 +210,7 @@
   "lat": 40.63219,
   "lng": -73.94924,
   "genre": "Other",
-  "last": "2026-11-12"
+  "last": "2026-11-15"
  },
  "Brooklyn Conservatory of Music": {
   "name": "Brooklyn Conservatory of Music",
@@ -213,7 +218,7 @@
   "lat": 40.67596,
   "lng": -73.97472,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Brooklyn Improv (The Lab)": {
   "name": "Brooklyn Improv (The Lab)",
@@ -229,7 +234,7 @@
   "lat": 40.68949,
   "lng": -73.98104,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Brooklyn Steel": {
   "name": "Brooklyn Steel",
@@ -256,7 +261,7 @@
   "lat": 40.73033,
   "lng": -74.00034,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Café Carlyle": {
   "name": "Café Carlyle"
@@ -267,7 +272,7 @@
   "lat": 40.76488,
   "lng": -73.98028,
   "genre": "Classical",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Cathedral of St. John the Divine": {
   "name": "Cathedral of St. John the Divine",
@@ -275,7 +280,7 @@
   "lat": 40.80377,
   "lng": -73.96178,
   "genre": "Classical",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Cellar Dog": {
   "name": "Cellar Dog",
@@ -283,7 +288,7 @@
   "lat": 40.73363,
   "lng": -74.00328,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Chamber Music Society of Lincoln Center": {
   "name": "Chamber Music Society of Lincoln Center",
@@ -291,7 +296,7 @@
   "lat": 40.7735,
   "lng": -73.98258,
   "genre": "Classical",
-  "last": "2026-11-12"
+  "last": "2026-11-15"
  },
  "Christ & St. Stephen's Church": {
   "name": "Christ & St. Stephen's Church"
@@ -308,7 +313,7 @@
   "lat": 40.7431,
   "lng": -74.00929,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Close Up": {
   "name": "Close Up",
@@ -316,7 +321,7 @@
   "lat": 40.7208,
   "lng": -73.98866,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Club Cumming": {
   "name": "Club Cumming",
@@ -324,7 +329,15 @@
   "lat": 40.7254,
   "lng": -73.98338,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
+ },
+ "Colden Auditorium at Kupferberg Center for the Arts": {
+  "name": "Colden Auditorium at Kupferberg Center for the Arts",
+  "address": "153-49 Reeves Avenue, Queens, NY",
+  "lat": 40.73846,
+  "lng": -73.81634,
+  "genre": "Pop",
+  "last": "2026-11-15"
  },
  "Culture Lab LIC": {
   "name": "Culture Lab LIC",
@@ -332,13 +345,18 @@
   "lat": 40.74744,
   "lng": -73.95412,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Danspace Project": {
   "name": "Danspace Project"
  },
  "David Geffen Hall": {
-  "name": "David Geffen Hall"
+  "name": "David Geffen Hall",
+  "address": "10 Lincoln Center Plaza, New York, NY 10023",
+  "lat": 40.7724,
+  "lng": -73.9834,
+  "genre": "Opera",
+  "last": "2026-11-15"
  },
  "David H. Koch Theater": {
   "name": "David H. Koch Theater"
@@ -349,7 +367,7 @@
   "lat": 40.75605,
   "lng": -73.99731,
   "genre": "Classical",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Dingbatz": {
   "name": "Dingbatz"
@@ -368,7 +386,7 @@
   "lat": 40.71931,
   "lng": -74.00484,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Don't Tell Mama": {
   "name": "Don't Tell Mama",
@@ -376,7 +394,7 @@
   "lat": 40.76062,
   "lng": -73.98948,
   "genre": "Cabaret & Musicals",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Dream Live at American Dream": {
   "name": "Dream Live at American Dream"
@@ -387,7 +405,7 @@
   "lat": 40.72533,
   "lng": -73.98445,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "El Barrio's Artspace PS109": {
   "name": "El Barrio's Artspace PS109",
@@ -403,7 +421,7 @@
   "lat": 40.70948,
   "lng": -73.92324,
   "genre": "Pop",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Fifth Avenue Presbyterian Church": {
   "name": "Fifth Avenue Presbyterian Church"
@@ -422,7 +440,7 @@
   "lat": 40.66329,
   "lng": -73.99114,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Gibney": {
   "name": "Gibney",
@@ -430,7 +448,7 @@
   "lat": 40.71421,
   "lng": -74.00562,
   "genre": "Ballet & Dance",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Gold Sounds": {
   "name": "Gold Sounds",
@@ -438,7 +456,7 @@
   "lat": 40.70572,
   "lng": -73.92189,
   "genre": "Punk & Hardcore",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Grace Church": {
   "name": "Grace Church",
@@ -454,7 +472,7 @@
   "lat": 40.73987,
   "lng": -73.98494,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Greenwich House Music School": {
   "name": "Greenwich House Music School",
@@ -462,7 +480,7 @@
   "lat": 40.73216,
   "lng": -74.00452,
   "genre": "Classical",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Groove": {
   "name": "Groove",
@@ -470,7 +488,7 @@
   "lat": 40.73243,
   "lng": -73.99856,
   "genre": "Folk & Americana",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "H0L0": {
   "name": "H0L0",
@@ -514,7 +532,7 @@
   "lat": 40.73491,
   "lng": -73.98827,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Irving Plaza Powered By Verizon 5G": {
   "name": "Irving Plaza Powered By Verizon 5G"
@@ -525,7 +543,7 @@
   "lat": 40.76825,
   "lng": -73.98285,
   "genre": "Jazz",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Jazzcultural": {
   "name": "Jazzcultural",
@@ -533,7 +551,7 @@
   "lat": 40.76085,
   "lng": -73.98966,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Joanne Trattoria": {
   "name": "Joanne Trattoria"
@@ -544,7 +562,7 @@
   "lat": 40.6463,
   "lng": -73.9564,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Knockdown Center": {
   "name": "Knockdown Center",
@@ -555,7 +573,12 @@
   "last": "2026-11-14"
  },
  "Kupferberg Center for the Arts": {
-  "name": "Kupferberg Center for the Arts"
+  "name": "Kupferberg Center for the Arts",
+  "address": "65-30 Kissena Blvd, Flushing, NY 11367",
+  "lat": 40.75641,
+  "lng": -73.82585,
+  "genre": "Latin",
+  "last": "2026-11-15"
  },
  "Le Poisson Rouge": {
   "name": "Le Poisson Rouge",
@@ -563,7 +586,7 @@
   "lat": 40.72843,
   "lng": -73.99988,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Lehman Center for the Performing Arts": {
   "name": "Lehman Center for the Performing Arts",
@@ -587,7 +610,7 @@
   "lat": 40.67848,
   "lng": -73.98338,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Lowlands Bar": {
   "name": "Lowlands Bar"
@@ -630,7 +653,7 @@
   "lat": 40.69693,
   "lng": -73.93459,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Market Hotel ": {
   "name": "Market Hotel "
@@ -649,7 +672,7 @@
   "lat": 40.7221,
   "lng": -73.98679,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Metropolitan Opera House": {
   "name": "Metropolitan Opera House",
@@ -665,7 +688,7 @@
   "lat": 40.73454,
   "lng": -74.00184,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Miller Theatre": {
   "name": "Miller Theatre",
@@ -689,7 +712,7 @@
   "lat": 40.71915,
   "lng": -73.96178,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "NYPL Bruno Walter Auditorium": {
   "name": "NYPL Bruno Walter Auditorium"
@@ -719,7 +742,7 @@
   "lat": 40.72591,
   "lng": -73.98404,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Nowadays": {
   "name": "Nowadays",
@@ -727,7 +750,7 @@
   "lat": 40.69245,
   "lng": -73.90151,
   "genre": "Electronic & DJ",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Nublu Classic": {
   "name": "Nublu Classic"
@@ -741,7 +764,7 @@
   "lat": 40.69553,
   "lng": -73.93202,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Pacha New York": {
   "name": "Pacha New York",
@@ -757,7 +780,7 @@
   "lat": 40.7593,
   "lng": -73.9902,
   "genre": "Classical",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Palladium Times Square ": {
   "name": "Palladium Times Square ",
@@ -773,7 +796,7 @@
   "lat": 40.73046,
   "lng": -73.98586,
   "genre": "Cabaret & Musicals",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Patio at Radio Hotel": {
   "name": "Patio at Radio Hotel"
@@ -784,7 +807,7 @@
   "lat": 40.71809,
   "lng": -73.95029,
   "genre": "Electronic & DJ",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Pianos": {
   "name": "Pianos",
@@ -792,7 +815,7 @@
   "lat": 40.721,
   "lng": -73.98762,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Pioneer Works": {
   "name": "Pioneer Works",
@@ -800,7 +823,7 @@
   "lat": 40.67938,
   "lng": -74.01189,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Public Records": {
   "name": "Public Records",
@@ -808,7 +831,7 @@
   "lat": 40.68217,
   "lng": -73.98639,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Purgatory": {
   "name": "Purgatory",
@@ -816,7 +839,7 @@
   "lat": 40.68723,
   "lng": -73.90574,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Queens Theatre": {
   "name": "Queens Theatre",
@@ -824,7 +847,7 @@
   "lat": 40.74425,
   "lng": -73.84443,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Racket": {
   "name": "Racket",
@@ -832,7 +855,7 @@
   "lat": 40.74305,
   "lng": -74.00574,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Radio City Music Hall": {
   "name": "Radio City Music Hall",
@@ -840,7 +863,7 @@
   "lat": 40.75981,
   "lng": -73.97928,
   "genre": "Cabaret & Musicals",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Regina Opera": {
   "name": "Regina Opera"
@@ -851,7 +874,7 @@
   "lat": 40.75912,
   "lng": -73.97956,
   "genre": "Pop",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Roulette": {
   "name": "Roulette",
@@ -859,7 +882,7 @@
   "lat": 40.68556,
   "lng": -73.98072,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "S.O.B.'s": {
   "name": "S.O.B.'s",
@@ -867,7 +890,7 @@
   "lat": 40.72837,
   "lng": -74.00546,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Saint Peter's Church": {
   "name": "Saint Peter's Church",
@@ -883,7 +906,7 @@
   "lat": 40.76086,
   "lng": -73.97628,
   "genre": "Classical",
-  "last": "2026-11-12"
+  "last": "2026-11-15"
  },
  "Saint Vitus": {
   "name": "Saint Vitus",
@@ -891,7 +914,7 @@
   "lat": 40.73678,
   "lng": -73.95517,
   "genre": "Metal",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Scandinavia House": {
   "name": "Scandinavia House",
@@ -902,7 +925,12 @@
   "last": "2026-11-12"
  },
  "Scholes Street Studio": {
-  "name": "Scholes Street Studio"
+  "name": "Scholes Street Studio",
+  "address": "375 Lorimer St, Brooklyn, NY 11206",
+  "lat": 40.7082,
+  "lng": -73.94853,
+  "genre": "Classical",
+  "last": "2026-11-15"
  },
  "Sheen Center": {
   "name": "Sheen Center"
@@ -921,7 +949,7 @@
   "lat": 40.80436,
   "lng": -73.95576,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Sistas' Place": {
   "name": "Sistas' Place",
@@ -940,7 +968,7 @@
   "lat": 40.73439,
   "lng": -74.0027,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Smoke Jazz Club": {
   "name": "Smoke Jazz Club",
@@ -948,13 +976,18 @@
   "lat": 40.80112,
   "lng": -73.96821,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Snug Harbor Cultural Center": {
   "name": "Snug Harbor Cultural Center"
  },
  "Soapbox Gallery": {
-  "name": "Soapbox Gallery"
+  "name": "Soapbox Gallery",
+  "address": "636 Dean St, Brooklyn, NY 11238",
+  "lat": 40.68021,
+  "lng": -73.96928,
+  "genre": "Classical",
+  "last": "2026-11-15"
  },
  "Sony Hall": {
   "name": "Sony Hall",
@@ -962,10 +995,15 @@
   "lat": 40.75965,
   "lng": -73.98701,
   "genre": "Folk & Americana",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "St. Ann & the Holy Trinity": {
-  "name": "St. Ann & the Holy Trinity"
+  "name": "St. Ann & the Holy Trinity",
+  "address": "157 Montague St, Brooklyn, NY 11201",
+  "lat": 40.69459,
+  "lng": -73.99273,
+  "genre": "Classical",
+  "last": "2026-11-15"
  },
  "St. George Theatre": {
   "name": "St. George Theatre"
@@ -984,7 +1022,7 @@
   "lat": 40.67561,
   "lng": -74.0168,
   "genre": "Country",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Sunnyvale": {
   "name": "Sunnyvale"
@@ -995,7 +1033,7 @@
   "lat": 40.79396,
   "lng": -73.97266,
   "genre": "Other",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Terminal 5": {
   "name": "Terminal 5",
@@ -1003,7 +1041,7 @@
   "lat": 40.76975,
   "lng": -73.99274,
   "genre": "Indie & Alternative",
-  "last": "2026-11-12"
+  "last": "2026-11-15"
  },
  "Terra Blues": {
   "name": "Terra Blues",
@@ -1011,7 +1049,7 @@
   "lat": 40.72846,
   "lng": -73.99923,
   "genre": "Blues",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Terraza 7": {
   "name": "Terraza 7",
@@ -1019,7 +1057,7 @@
   "lat": 40.74749,
   "lng": -73.88197,
   "genre": "Latin",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Bell House": {
   "name": "The Bell House",
@@ -1027,7 +1065,7 @@
   "lat": 40.67373,
   "lng": -73.99168,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Bitter End": {
   "name": "The Bitter End",
@@ -1035,7 +1073,7 @@
   "lat": 40.72833,
   "lng": -73.99922,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Broadway": {
   "name": "The Broadway",
@@ -1059,7 +1097,7 @@
   "lat": 40.7589,
   "lng": -73.9947,
   "genre": "Cabaret & Musicals",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Greene Space": {
   "name": "The Greene Space"
@@ -1070,7 +1108,7 @@
   "lat": 40.76182,
   "lng": -73.98339,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Jazz Gallery": {
   "name": "The Jazz Gallery",
@@ -1086,7 +1124,7 @@
   "lat": 40.74282,
   "lng": -74.00071,
   "genre": "Ballet & Dance",
-  "last": "2026-11-11"
+  "last": "2026-11-15"
  },
  "The Juilliard School": {
   "name": "The Juilliard School",
@@ -1102,10 +1140,15 @@
   "lat": 40.72846,
   "lng": -73.9995,
   "genre": "Rock",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Riverside Church": {
-  "name": "The Riverside Church"
+  "name": "The Riverside Church",
+  "address": "490 Riverside Dr, New York, NY 10027",
+  "lat": 40.81207,
+  "lng": -73.96301,
+  "genre": "Gospel",
+  "last": "2026-11-15"
  },
  "The Rooftop at Pier 17": {
   "name": "The Rooftop at Pier 17"
@@ -1124,7 +1167,7 @@
   "lat": 40.70555,
   "lng": -73.92234,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Town Hall": {
   "name": "The Town Hall",
@@ -1132,7 +1175,7 @@
   "lat": 40.75602,
   "lng": -73.98456,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "The Venue @ Hard Rock Hotel NY": {
   "name": "The Venue @ Hard Rock Hotel NY",
@@ -1159,7 +1202,7 @@
   "lat": 40.67604,
   "lng": -73.98009,
   "genre": "Comedy",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Union Pool": {
   "name": "Union Pool",
@@ -1167,7 +1210,7 @@
   "lat": 40.71565,
   "lng": -73.95199,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "United Palace": {
   "name": "United Palace"
@@ -1178,7 +1221,7 @@
   "lat": 40.73602,
   "lng": -74.00164,
   "genre": "Jazz",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Vinyl + Thread": {
   "name": "Vinyl + Thread"
@@ -1197,7 +1240,7 @@
   "lat": 40.73176,
   "lng": -73.98909,
   "genre": "Indie & Alternative",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  },
  "Wild Horses": {
   "name": "Wild Horses",
@@ -1205,7 +1248,7 @@
   "lat": 40.7257,
   "lng": -73.99167,
   "genre": "Country",
-  "last": "2026-11-13"
+  "last": "2026-11-15"
  },
  "Williams Center - Black Box - Rutherford": {
   "name": "Williams Center - Black Box - Rutherford"
@@ -1227,6 +1270,6 @@
   "lat": 40.72967,
   "lng": -73.999,
   "genre": "Jazz",
-  "last": "2026-11-14"
+  "last": "2026-11-15"
  }
 }
