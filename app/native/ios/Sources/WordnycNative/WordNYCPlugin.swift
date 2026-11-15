@@ -39,6 +39,9 @@ public class WordNYCPlugin: CAPPlugin, CAPBridgedPlugin {
     private let pushOffKey = "wn.pushOff"  // the person turned the noon notification off inside the app
 
     override public func load() {
+        // Capacitor routes notifications that arrive while the app is open, and shows nothing unless a handler
+        // says otherwise; show them as a banner like any other app.
+        bridge?.notificationRouter.pushNotificationHandler = ForegroundPushHandler.shared
         NotificationCenter.default.addObserver(self, selector: #selector(pushOpened), name: WordNYCPush.opened, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(openedURL(_:)), name: .capacitorOpenURL, object: nil)
         // Launch argument "-WNPath /path" opens that page (used by app/ci/screenshots.py in the simulator).
@@ -308,4 +311,12 @@ public class WordNYCPlugin: CAPPlugin, CAPBridgedPlugin {
         }
         call.resolve(["json": json])
     }
+}
+
+/// Shows push notifications (the noon picks, spotlights) even while Word NYC is open on screen.
+/// Taps are still handled by OneSignal's click listener in WordNYCPush.
+final class ForegroundPushHandler: NSObject, NotificationHandlerProtocol {
+    static let shared = ForegroundPushHandler()
+    func willPresent(notification: UNNotification) -> UNNotificationPresentationOptions { [.banner, .list, .sound] }
+    func didReceive(response: UNNotificationResponse) {}
 }
