@@ -12,6 +12,9 @@ on:
       recent_minutes:
         description: "Only phones that opened the app in the last N minutes (0 = every iPhone app user)"
         default: "10"
+      tag:
+        description: "Only phones with this OneSignal tag (e.g. fav_<venue-slug> after following that venue)"
+        default: ""
       check_id:
         description: "Instead of sending, show delivery stats for this notification id"
         default: ""
@@ -31,6 +34,7 @@ jobs:
           RECENT: ${{ github.event.inputs.recent_minutes }}
           WAIT: ${{ github.event.inputs.wait_seconds }}
           CHECK_ID: ${{ github.event.inputs.check_id }}
+          TAG: ${{ github.event.inputs.tag }}
         run: |
           python3 - <<'PY'
           import json, os, time, urllib.request, urllib.error
@@ -54,6 +58,8 @@ jobs:
           filters = [{"field": "app_version", "relation": "exists"}]
           if recent > 0:  # just the phones that opened the app moments ago (normally only yours)
               filters += [{"operator": "AND"}, {"field": "last_session", "relation": "<", "hours_ago": f"{recent / 60:.3f}"}]
+          if os.environ.get("TAG"):
+              filters += [{"operator": "AND"}, {"field": "tag", "key": os.environ["TAG"], "relation": "exists"}]
           body = {"app_id": "d9f2eefb-d834-4054-92cc-422321667627", "target_channel": "push",
                   "filters": filters,
                   "headings": {"en": "Word NYC"}, "contents": {"en": os.environ["MESSAGE"]},
