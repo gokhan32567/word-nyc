@@ -1,13 +1,20 @@
 name: Test push (iPhone app only)
 
 # Sends one test notification to the iPhone app's subscribers only (filtered by app version, which
-# website subscribers don't have), so web push subscribers aren't bothered. Tapping it opens the map.
+# website subscribers don't have), so web push subscribers aren't bothered. By default only phones that
+# opened the app in the last 10 minutes get it, so real users aren't bothered either. Tapping it opens the map.
 on:
   workflow_dispatch:
     inputs:
       message:
         description: "Text"
         default: "Test from Word NYC: notifications work."
+      recent_minutes:
+        description: "Only phones that opened the app in the last N minutes (0 = every iPhone app user)"
+        default: "10"
+      wait_seconds:
+        description: "Wait before sending (time to open the app)"
+        default: "0"
 
 jobs:
   push:
@@ -18,11 +25,18 @@ jobs:
         env:
           ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
           MESSAGE: ${{ github.event.inputs.message }}
+          RECENT: ${{ github.event.inputs.recent_minutes }}
+          WAIT: ${{ github.event.inputs.wait_seconds }}
         run: |
           python3 - <<'PY'
-          import json, os, urllib.request, urllib.error
+          import json, os, time, urllib.request, urllib.error
+          time.sleep(int(os.environ.get("WAIT") or 0))
+          recent = float(os.environ.get("RECENT") or 0)
+          filters = [{"field": "app_version", "relation": "exists"}]
+          if recent > 0:  # just the phones that opened the app moments ago (normally only yours)
+              filters += [{"operator": "AND"}, {"field": "last_session", "relation": "<", "hours_ago": f"{recent / 60:.3f}"}]
           body = {"app_id": "d9f2eefb-d834-4054-92cc-422321667627", "target_channel": "push",
-                  "filters": [{"field": "app_version", "relation": "exists"}],
+                  "filters": filters,
                   "headings": {"en": "Word NYC"}, "contents": {"en": os.environ["MESSAGE"]},
                   "data": {"path": "/?source=test"}}
           for scheme in ("Key", "Basic"):
