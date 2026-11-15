@@ -12,6 +12,9 @@ on:
       recent_minutes:
         description: "Only phones that opened the app in the last N minutes (0 = every iPhone app user)"
         default: "10"
+      check_id:
+        description: "Instead of sending, show delivery stats for this notification id"
+        default: ""
       wait_seconds:
         description: "Wait before sending (time to open the app)"
         default: "0"
@@ -27,9 +30,25 @@ jobs:
           MESSAGE: ${{ github.event.inputs.message }}
           RECENT: ${{ github.event.inputs.recent_minutes }}
           WAIT: ${{ github.event.inputs.wait_seconds }}
+          CHECK_ID: ${{ github.event.inputs.check_id }}
         run: |
           python3 - <<'PY'
           import json, os, time, urllib.request, urllib.error
+          APP = "d9f2eefb-d834-4054-92cc-422321667627"
+          def get(path):
+              for scheme in ("Key", "Basic"):
+                  req = urllib.request.Request("https://api.onesignal.com" + path,
+                        headers={"Authorization": f"{scheme} {os.environ['ONESIGNAL_API_KEY']}"})
+                  try:
+                      return json.loads(urllib.request.urlopen(req, timeout=30).read())
+                  except urllib.error.HTTPError as e:
+                      if e.code != 401 or scheme == "Basic": return {"error": e.code, "body": e.read().decode()[:300]}
+          if os.environ.get("CHECK_ID"):
+              n = get(f"/notifications/{os.environ['CHECK_ID']}?app_id={APP}")
+              keep = ("successful", "failed", "errored", "converted", "remaining", "received", "queued_at",
+                      "completed_at", "platform_delivery_stats", "filters", "error", "body")
+              print(json.dumps({k: n.get(k) for k in keep}, indent=1))
+              raise SystemExit(0)
           time.sleep(int(os.environ.get("WAIT") or 0))
           recent = float(os.environ.get("RECENT") or 0)
           filters = [{"field": "app_version", "relation": "exists"}]
