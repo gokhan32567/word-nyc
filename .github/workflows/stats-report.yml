@@ -1,0 +1,48 @@
+name: Stats report
+
+# Prints the stats worker's monthly report (or one venue's and one day's part of it) in the run log, for
+# sponsor result emails. Read-only. Needs the STATS_KEY secret.
+on:
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "YYYY-MM"
+        required: true
+      venue:
+        description: "Venue slug to show (empty = all venues)"
+        default: ""
+      day:
+        description: "YYYY-MM-DD to show (empty = all days)"
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Report
+        env:
+          STATS_KEY: ${{ secrets.STATS_KEY }}
+          MONTH: ${{ github.event.inputs.month }}
+          VENUE: ${{ github.event.inputs.venue }}
+          DAY: ${{ github.event.inputs.day }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.parse, urllib.request
+          url = re.search(r"var STATS_URL = '([^']*)'", open("wn.js").read()).group(1)
+          q = urllib.parse.urlencode({"key": os.environ["STATS_KEY"], "month": os.environ["MONTH"]})
+          r = json.loads(urllib.request.urlopen(f"{url}/report.json?{q}", timeout=30).read())
+          v, d = os.environ.get("VENUE"), os.environ.get("DAY")
+          def pick(x):
+              if isinstance(x, list):
+                  return [pick(i) for i in x if not isinstance(i, dict)
+                          or ((not v or i.get("venue", v) == v) and (not d or i.get("day", d) == d))]
+              if isinstance(x, dict):
+                  return {k: pick(val) for k, val in x.items()}
+              return x
+          print(json.dumps(pick(r), indent=1)[:20000])
+          PY
