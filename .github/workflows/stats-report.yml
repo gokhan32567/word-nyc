@@ -32,10 +32,14 @@ jobs:
           DAY: ${{ github.event.inputs.day }}
         run: |
           python3 - <<'PY'
-          import json, os, re, urllib.parse, urllib.request
+          import json, os, re, urllib.error, urllib.parse, urllib.request
           url = re.search(r"var STATS_URL = '([^']*)'", open("wn.js").read()).group(1)
           q = urllib.parse.urlencode({"key": os.environ["STATS_KEY"], "month": os.environ["MONTH"]})
-          r = json.loads(urllib.request.urlopen(f"{url}/report.json?{q}", timeout=30).read())
+          req = urllib.request.Request(f"{url}/report.json?{q}", headers={"User-Agent": "WordNYC-stats-report/1.0"})
+          try:
+              r = json.loads(urllib.request.urlopen(req, timeout=30).read())
+          except urllib.error.HTTPError as e:
+              raise SystemExit(f"HTTP {e.code}: {e.read().decode()[:300]}")
           v, d = os.environ.get("VENUE"), os.environ.get("DAY")
           def pick(x):
               if isinstance(x, list):
