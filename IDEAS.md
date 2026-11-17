@@ -31,3 +31,9 @@ app when installed. Needs a new app build and App Review; do with the next app u
 returning shows with ticket links (affiliate links once Ticketmaster/Impact approves). events.json and llms.txt
 already make the data readable; build this once there's traffic and an affiliate account. (Idea from the
 growth chat, Nov 9, 2026.)
+
+## Social media accounts (noted Nov 17, 2026)
+- Create brand accounts: Instagram, Facebook page, YouTube, X; maybe TikTok, Threads, Bluesky.
+  Handle to try everywhere: @wordnyc (fallbacks: @word.nyc, @wordnyc_live). Gokhan creates the accounts himself.
+- Then: add the links to the site footer and about page, plus schema.org `sameAs` for SEO, and the app's share text.
+- Later: automated daily "Tonight in NYC" posts from the 5 AM lineup (needs each platform's API access).
