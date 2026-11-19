@@ -542,6 +542,14 @@
  "Hard Rock Cafe": {
   "name": "Hard Rock Cafe"
  },
+ "Harlem Jazz Series": {
+  "name": "Harlem Jazz Series",
+  "address": "15 Mount Morris Park W, New York, NY 10027",
+  "lat": 40.80494,
+  "lng": -73.94562,
+  "genre": "Jazz",
+  "last": "2026-11-19"
+ },
  "Hill Country Live": {
   "name": "Hill Country Live",
   "address": "30 West 26th Street, New York, NY",
@@ -670,6 +678,14 @@
   "lng": -73.99322,
   "genre": "Other",
   "last": "2026-11-17"
+ },
+ "Lucille's Harlem": {
+  "name": "Lucille's Harlem",
+  "address": "26 Macombs Pl, New York, NY 10039",
+  "lat": 40.82592,
+  "lng": -73.93897,
+  "genre": "Jazz",
+  "last": "2026-11-19"
  },
  "Lucinda's": {
   "name": "Lucinda's",
@@ -819,7 +835,7 @@
   "lat": 40.72565,
   "lng": -73.97802,
   "genre": "Electronic & DJ",
-  "last": "2026-11-18"
+  "last": "2026-11-19"
  },
  "OPERA America National Opera Center": {
   "name": "OPERA America National Opera Center"
