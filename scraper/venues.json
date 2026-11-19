@@ -1243,24 +1243,10 @@
    }
   },
   {
-   "name": "Harlem Nights",
-   "address": "2361 Adam Clayton Powell Jr Blvd, New York, NY 10030",
-   "url": "https://www.harlemnights.nyc/",
-   "genre": "R&B & Soul",
-   "note": "Harlem bar with live music, open mics and comedy. Count only live music; skip DJ-only nights, comedy and burlesque."
-  },
-  {
    "name": "United Palace",
    "address": "4140 Broadway, New York, NY 10033",
    "url": "https://www.unitedpalace.org/",
    "genre": "Latin"
-  },
-  {
-   "name": "Armonie Bistro",
-   "address": "1649 Park Ave, New York, NY 10035",
-   "url": "https://armoniebistro.com/",
-   "genre": "Jazz",
-   "note": "East Harlem restaurant with live jazz; list only dated live music."
   },
   {
    "name": "Bronx Music Hall",
@@ -1272,21 +1258,21 @@
   {
    "name": "Hostos Center for the Arts & Culture",
    "address": "450 Grand Concourse, Bronx, NY 10451",
-   "url": "https://www.hostos.cuny.edu/culturearts",
+   "url": "https://www.hostos.cuny.edu/culturearts/events/performing-arts.shtml",
    "genre": "Latin",
    "note": "Performing arts center of Hostos Community College. Count concerts only; skip theater, dance-only shows and film."
   },
   {
    "name": "The Bronx Brewery",
    "address": "856 E 136th St, Bronx, NY 10454",
-   "url": "https://www.thebronxbrewery.com/events",
+   "url": "https://thebronxbrewery.com/bronx-location",
    "genre": "Other",
    "note": "Brewery taproom events. Count only live music; skip trivia, markets and DJ-only parties."
   },
   {
    "name": "Pregones/PRTT",
    "address": "575 Walton Ave, Bronx, NY 10451",
-   "url": "https://pregonesprtt.org/",
+   "url": "https://pregonesprtt.org/category/events/",
    "genre": "Latin",
    "note": "Count only concerts at the Bronx theater (575 Walton Ave). Events at their Manhattan theater (304 W 47th St) belong to another venue: skip them. Skip plays."
   }
