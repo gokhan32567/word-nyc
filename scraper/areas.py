@@ -27,6 +27,9 @@ ZIPS = {
     "10025": ("Upper West Side", "Manhattan"),
     "10026": ("Harlem", "Manhattan"), "10027": ("Harlem", "Manhattan"), "10030": ("Harlem", "Manhattan"),
     "10031": ("Harlem", "Manhattan"), "10037": ("Harlem", "Manhattan"), "10039": ("Harlem", "Manhattan"),
+    "10029": ("East Harlem", "Manhattan"), "10035": ("East Harlem", "Manhattan"),
+    "10032": ("Washington Heights & Inwood", "Manhattan"), "10033": ("Washington Heights & Inwood", "Manhattan"),
+    "10034": ("Washington Heights & Inwood", "Manhattan"), "10040": ("Washington Heights & Inwood", "Manhattan"),
     # Brooklyn
     "11201": ("Downtown Brooklyn & DUMBO", "Brooklyn"),
     "11206": ("Williamsburg", "Brooklyn"), "11211": ("Williamsburg", "Brooklyn"), "11249": ("Williamsburg", "Brooklyn"),
@@ -43,6 +46,8 @@ ZIPS = {
     "11373": ("Elmhurst", "Queens"), "11375": ("Forest Hills", "Queens"), "11378": ("Maspeth", "Queens"),
     # Bronx, Staten Island
     "10467": ("Bronx", "Bronx"), "10468": ("Bronx", "Bronx"),
+    "10451": ("South Bronx", "Bronx"), "10454": ("South Bronx", "Bronx"), "10455": ("South Bronx", "Bronx"),
+    "10456": ("South Bronx", "Bronx"), "10459": ("South Bronx", "Bronx"), "10474": ("South Bronx", "Bronx"),
     "10301": ("St. George", "Staten Island"),
 }
 
