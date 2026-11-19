@@ -1179,7 +1179,12 @@
    "address": "2271 Adam Clayton Powell Jr Blvd, New York, NY 10030",
    "url": "https://www.shrinenyc.com/",
    "genre": "World",
-   "note": "Harlem bar and world-music venue with several bands a night (reggae, funk, jazz, Afrobeat, blues). List each band's set as its own show."
+   "note": "Harlem bar and world-music venue with several bands a night (reggae, funk, jazz, Afrobeat, blues). List each band's set as its own show.",
+   "regular": {
+    "title": "Live bands",
+    "time": "7:00 PM",
+    "description": "Several live bands a night at Harlem's Shrine World Music Venue (reggae, funk, jazz, Afrobeat, blues), usually free, followed by DJs."
+   }
   },
   {
    "name": "Harlem Jazz Series",
