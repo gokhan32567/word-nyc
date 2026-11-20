@@ -538,7 +538,8 @@ def main() -> int:
             now = datetime.now(NY)
             now_min = now.hour * 60 + now.minute + (1440 if now.hour < ROLLOVER_HOUR else 0)
             def still_valid(e):
-                if not is_show(e.get("title")) or ai.OTHER_CITY.search(e.get("url") or ""):
+                if not is_show(e.get("title")) or ai.OTHER_CITY.search(e.get("url") or "") \
+                        or "live-stream" in (e.get("url") or ""):
                     return False
                 src = e.get("source") or ""
                 if e["venue"] in read_ok and src.startswith("venue") and "+" not in src:
