@@ -7,6 +7,14 @@
   "genre": "Folk & Americana",
   "last": "2026-11-17"
  },
+ "503 Social Club": {
+  "name": "503 Social Club",
+  "address": "503 3rd St, Hoboken, NJ 07030",
+  "lat": 40.74119,
+  "lng": -74.03786,
+  "genre": "Folk & Americana",
+  "last": "2026-11-20"
+ },
  "54 Below": {
   "name": "54 Below",
   "address": "254 W 54th St, New York, NY 10019",
@@ -295,6 +303,14 @@
   "lat": 40.76488,
   "lng": -73.98028,
   "genre": "Classical",
+  "last": "2026-11-20"
+ },
+ "Carro Café": {
+  "name": "Carro Café",
+  "address": "518 32nd St, Union City, NJ 07087",
+  "lat": 40.7734,
+  "lng": -74.03012,
+  "genre": "Latin",
   "last": "2026-11-20"
  },
  "Cathedral of St. John the Divine": {
@@ -647,6 +663,14 @@
   "genre": "Latin",
   "last": "2026-11-15"
  },
+ "La Tóxica": {
+  "name": "La Tóxica",
+  "address": "1706 Paterson Plank Rd, North Bergen, NJ 07047",
+  "lat": 40.76714,
+  "lng": -74.04316,
+  "genre": "Latin",
+  "last": "2026-11-20"
+ },
  "Le Poisson Rouge": {
   "name": "Le Poisson Rouge",
   "address": "158 Bleecker St, New York, NY 10012",
@@ -786,6 +810,14 @@
   "genre": "Classical",
   "last": "2026-11-17"
  },
+ "Monty Hall": {
+  "name": "Monty Hall",
+  "address": "43 Montgomery St, Jersey City, NJ 07302",
+  "lat": 40.71654,
+  "lng": -74.03634,
+  "genre": "Other",
+  "last": "2026-11-20"
+ },
  "Music Hall of Williamsburg": {
   "name": "Music Hall of Williamsburg",
   "address": "66 North 6th Street, Brooklyn, NY",
@@ -843,7 +875,7 @@
   "lat": 40.72565,
   "lng": -73.97802,
   "genre": "Electronic & DJ",
-  "last": "2026-11-19"
+  "last": "2026-11-20"
  },
  "OPERA America National Opera Center": {
   "name": "OPERA America National Opera Center"
@@ -1269,7 +1301,7 @@
   "lat": 40.7737,
   "lng": -73.9829,
   "genre": "Classical",
-  "last": "2026-11-19"
+  "last": "2026-11-20"
  },
  "The Red Lion": {
   "name": "The Red Lion",
@@ -1379,6 +1411,14 @@
   "genre": "Indie & Alternative",
   "last": "2026-11-20"
  },
+ "White Eagle Hall": {
+  "name": "White Eagle Hall",
+  "address": "337 Newark Ave, Jersey City, NJ 07302",
+  "lat": 40.72555,
+  "lng": -74.05184,
+  "genre": "Indie & Alternative",
+  "last": "2026-11-20"
+ },
  "Wild Horses": {
   "name": "Wild Horses",
   "address": "327 Bowery, New York, NY 10003",
@@ -1396,7 +1436,7 @@
   "lat": 40.69241,
   "lng": -73.92752,
   "genre": "Other",
-  "last": "2026-11-19"
+  "last": "2026-11-20"
  },
  "Works & Process at the Guggenheim": {
   "name": "Works & Process at the Guggenheim",
@@ -1412,6 +1452,6 @@
   "lat": 40.72967,
   "lng": -73.999,
   "genre": "Jazz",
-  "last": "2026-11-19"
+  "last": "2026-11-20"
  }
 }
