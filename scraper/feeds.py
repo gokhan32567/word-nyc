@@ -111,6 +111,8 @@ def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> 
             status = str(d.get("eventStatus", "")).lower()
             if "cancel" in status or "postpon" in status:
                 continue
+            if "online" in str(d.get("eventAttendanceMode", "")).lower() or "VirtualLocation" in str(d.get("location", "")):
+                continue  # live streams aren't shows you can walk into
             raw_end = str(d.get("endDate", ""))
             end_dt = parse_iso(raw_end)
             raw_genre = d.get("genre") or ""
@@ -119,8 +121,11 @@ def jsonld_events(blobs: list[str], venue: dict, night: date, page_url: str) -> 
             performers = names_of(d.get("performer"))
             title = (names_of(d.get("name")) or performers or ["TBA"])[0]
             loc_name, loc_address, region = location_of(d.get("location"))
-            if same_place(venue, loc_name, loc_address, region) is False:
+            here = same_place(venue, loc_name, loc_address, region)
+            if here is False:
                 continue  # a promoter's page listing shows at its other venues or in other cities
+            if here is None and "songkick.com" in page_url:
+                continue  # Songkick venue pages also carry promoted shows elsewhere; keep only ones that name this venue
             day, t = _date_time(when, raw_start)
             out.append(base_event(
                 venue, title=title, performers=performers,
