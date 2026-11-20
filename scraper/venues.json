@@ -1277,8 +1277,9 @@
   {
    "name": "White Eagle Hall",
    "address": "337 Newark Ave, Jersey City, NJ 07302",
-   "url": "https://www.whiteeaglehall.com/",
-   "genre": "Indie & Alternative"
+   "url": "https://www.songkick.com/venues/3512064-white-eagle-hall",
+   "genre": "Indie & Alternative",
+   "note": "Jersey City's main concert hall (800 standing). This is its Songkick page."
   },
   {
    "name": "Monty Hall",
@@ -1287,20 +1288,6 @@
    "eventbrite": "20054583239",
    "genre": "Avant-garde",
    "note": "WFMU radio's own venue, steps from Exchange Place PATH. Count concerts and live radio sets only; skip record fairs, film screenings and adoption parties."
-  },
-  {
-   "name": "Fox & Crow",
-   "address": "594 Palisade Ave, Jersey City, NJ 07307",
-   "url": "https://www.foxandcrowjc.com/",
-   "genre": "Folk & Americana",
-   "note": "Jersey City Heights bar and listening room with singer-songwriters, jazz and a recurring reggae night."
-  },
-  {
-   "name": "FM",
-   "address": "340 3rd St, Jersey City, NJ 07302",
-   "url": "https://www.fmjerseycity.com/",
-   "genre": "Indie & Alternative",
-   "note": "Downtown Jersey City bar with local bands. Count live music only; skip DJ-only nights, trivia and karaoke."
   },
   {
    "name": "503 Social Club",
@@ -1317,11 +1304,11 @@
    "note": "Union City supper club with ticketed Latin concerts (bachata, salsa, merengue, boleros). This is its Songkick page."
   },
   {
-   "name": "Park Performing Arts Center",
-   "address": "560 32nd St, Union City, NJ 07087",
-   "url": "https://www.parkpac.org/",
+   "name": "La Tóxica",
+   "address": "1706 Paterson Plank Rd, North Bergen, NJ 07047",
+   "url": "https://www.songkick.com/venues/4434042-la-toxica",
    "genre": "Latin",
-   "note": "Union City's performing arts center. Count concerts only; skip plays, children's theater and classes."
+   "note": "North Bergen Latin club with live bachata and regional Mexican concerts. This is its Songkick page."
   }
  ]
 }
