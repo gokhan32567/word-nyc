@@ -27,7 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import HERE, NY, ROOT, minutes, parse_clock  # noqa: E402
 from genres import GENRES  # noqa: E402
-from areas import area_of  # noqa: E402
+from areas import area_of, in_nj  # noqa: E402
 
 SITE = "https://word-nyc.com"
 FONTS = ("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800"
@@ -110,6 +110,9 @@ def event_ld(e: dict) -> dict:
                      "address": {"@type": "PostalAddress", "streetAddress": e.get("address") or "",
                                  "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US"}},
     }
+    if in_nj(e.get("address")):
+        ld["location"]["address"].update(addressLocality=area_of(e["venue"], e.get("address"))[0] or "Jersey City",
+                                         addressRegion="NJ")
     from notify import show_key  # same key the map uses for ?show=, so the link opens this show
     ld["url"] = f"https://word-nyc.com/?show={show_key(e)}"
     if e.get("lat") and e.get("lng"):
@@ -436,7 +439,7 @@ def build(out_root: Path = ROOT) -> list[str]:
         if v.get("hood"):
             hood_venues.setdefault(v["hood"], []).append(v)
     areas = {h: vs for h, vs in hood_venues.items() if len(vs) >= 3}
-    for b in ("Brooklyn", "Queens"):
+    for b in ("Brooklyn", "Queens", "New Jersey"):
         areas[b] = [v for v in known.values() if v.get("borough") == b]
     area_pages = {h: f"/neighborhood/{slug(h)}/" for h in areas}
 
@@ -476,8 +479,9 @@ def build(out_root: Path = ROOT) -> list[str]:
                 f'{" · " + esc(w["hood"]) if w.get("hood") else ""}</span></li>' for w in near) + "</ul>\n")
         place = {"@type": "MusicVenue", "name": name, "@id": f"{SITE}/venues/{v['slug']}/#venue",
                  "address": {"@type": "PostalAddress", "streetAddress": addr.split(",")[0] if addr else "",
-                             "addressLocality": v.get("borough") if v.get("borough") not in (None, "Manhattan") else "New York",
-                             "addressRegion": "NY", "addressCountry": "US"}}
+                             "addressLocality": (v.get("hood") or "Jersey City") if v.get("borough") == "New Jersey" else
+                             v.get("borough") if v.get("borough") not in (None, "Manhattan") else "New York",
+                             "addressRegion": "NJ" if v.get("borough") == "New Jersey" else "NY", "addressCountry": "US"}}
         if v.get("lat"):
             place["geo"] = {"@type": "GeoCoordinates", "latitude": v["lat"], "longitude": v["lng"]}
         if v.get("url"):
@@ -507,7 +511,7 @@ def build(out_root: Path = ROOT) -> list[str]:
                 f'<span>{" · ".join(x for x in (v.get("hood"), str(n) + (" show" if n == 1 else " shows") + " tonight" if n else "") if x)}</span></li>')
 
     groups = []
-    for b in ("Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island", None):
+    for b in ("Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island", "New Jersey", None):
         in_b = sorted((v for v in known.values() if v.get("borough") == b), key=lambda v: (v.get("hood") or "~", v["name"]))
         if not in_b:
             continue
@@ -527,7 +531,7 @@ def build(out_root: Path = ROOT) -> list[str]:
     for h, vs in sorted(areas.items()):
         evs = [e for v in vs for e in v["tonight"]]
         evs.sort(key=lambda e: (not e.get("sponsored"), minutes(e.get("time")), e["title"]))
-        is_borough = h in ("Brooklyn", "Queens")
+        is_borough = h in ("Brooklyn", "Queens", "New Jersey")
         names = ", ".join(v["name"] for v in sorted(vs, key=lambda v: -len(v["tonight"]))[:4])
         intro = (f"Live music in {h} tonight. Word NYC checks {len(vs)} venues here every morning, "
                  f"including {names}, and lists every show with times and tickets.")

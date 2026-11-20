@@ -1273,6 +1273,55 @@
    "url": "https://pregonesprtt.org/category/events/",
    "genre": "Latin",
    "note": "Count only concerts at the Bronx theater (575 Walton Ave). Events at their Manhattan theater (304 W 47th St) belong to another venue: skip them. Skip plays."
+  },
+  {
+   "name": "White Eagle Hall",
+   "address": "337 Newark Ave, Jersey City, NJ 07302",
+   "url": "https://www.whiteeaglehall.com/",
+   "genre": "Indie & Alternative"
+  },
+  {
+   "name": "Monty Hall",
+   "address": "43 Montgomery St, Jersey City, NJ 07302",
+   "url": "https://www.eventbrite.com/o/wfmu-20054583239",
+   "eventbrite": "20054583239",
+   "genre": "Avant-garde",
+   "note": "WFMU radio's own venue, steps from Exchange Place PATH. Count concerts and live radio sets only; skip record fairs, film screenings and adoption parties."
+  },
+  {
+   "name": "Fox & Crow",
+   "address": "594 Palisade Ave, Jersey City, NJ 07307",
+   "url": "https://www.foxandcrowjc.com/",
+   "genre": "Folk & Americana",
+   "note": "Jersey City Heights bar and listening room with singer-songwriters, jazz and a recurring reggae night."
+  },
+  {
+   "name": "FM",
+   "address": "340 3rd St, Jersey City, NJ 07302",
+   "url": "https://www.fmjerseycity.com/",
+   "genre": "Indie & Alternative",
+   "note": "Downtown Jersey City bar with local bands. Count live music only; skip DJ-only nights, trivia and karaoke."
+  },
+  {
+   "name": "503 Social Club",
+   "address": "503 3rd St, Hoboken, NJ 07030",
+   "url": "https://www.songkick.com/venues/4539946-503-social-club",
+   "genre": "Folk & Americana",
+   "note": "45-seat Hoboken gallery and performance space (singer-songwriters, Workshop Clinic series). This is its Songkick page."
+  },
+  {
+   "name": "Carro Café",
+   "address": "518 32nd St, Union City, NJ 07087",
+   "url": "https://www.songkick.com/venues/4653251-carro-cafe-de-union-city",
+   "genre": "Latin",
+   "note": "Union City supper club with ticketed Latin concerts (bachata, salsa, merengue, boleros). This is its Songkick page."
+  },
+  {
+   "name": "Park Performing Arts Center",
+   "address": "560 32nd St, Union City, NJ 07087",
+   "url": "https://www.parkpac.org/",
+   "genre": "Latin",
+   "note": "Union City's performing arts center. Count concerts only; skip plays, children's theater and classes."
   }
  ]
 }

@@ -66,6 +66,7 @@ STREET_WORDS = {"avenue": "ave", "av": "ave", "street": "st", "boulevard": "blvd
                 "seventh": "7th", "eighth": "8th", "ninth": "9th", "tenth": "10th", "eleventh": "11th",
                 "twelfth": "12th"}
 NY_STATES = {"ny", "new york", "n.y."}
+NJ_STATES = {"nj", "new jersey", "n.j."}
 
 
 def place_key(name: str | None) -> str:
@@ -85,8 +86,11 @@ def street_key(address: str | None) -> tuple[str, str] | None:
 
 def same_place(venue: dict, name: str | None, address: str | None, region: str | None = None) -> bool | None:
     """True if a listing's location is this venue, False if it's clearly elsewhere, None if it doesn't say."""
-    if region and region.strip().lower() not in NY_STATES:
-        return False
+    if region:
+        from areas import in_nj
+        ok = NJ_STATES if in_nj(venue.get("address")) else NY_STATES
+        if region.strip().lower() not in ok:
+            return False
     known = False
     a, b = place_key(venue.get("name")), place_key(name)
     if a and b:

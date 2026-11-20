@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import time
 
 from common import HERE, get, log
@@ -47,7 +48,7 @@ class Geocoder:
         result = None
         try:
             rows = json.loads(get("https://nominatim.openstreetmap.org/search",
-                                  {"q": q if "NY" in q or "New York" in q else f"{q}, New York, NY",
+                                  {"q": q if re.search(r"\b(NY|NJ|New York|New Jersey)\b", q) else f"{q}, New York, NY",
                                    "format": "json", "limit": 1, "countrycodes": "us"}))
             if rows:
                 lat, lng = round(float(rows[0]["lat"]), 5), round(float(rows[0]["lon"]), 5)

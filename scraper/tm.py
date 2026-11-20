@@ -5,6 +5,7 @@ import json
 import time
 from datetime import date, datetime, timezone
 
+from areas import NJ_TOWN_NAMES
 from common import plain_ticket_url, NY, clean_text, clock, get, money, night_window, parse_iso, price_label
 from genres import VAGUE, bucket
 
@@ -98,7 +99,9 @@ def tm_event(e: dict) -> dict | None:
         return None
     if e.get("dates", {}).get("status", {}).get("code") in {"cancelled", "canceled", "postponed"}:
         return None
-    if (v.get("state") or {}).get("stateCode", "NY") != "NY":  # the radius reaches into New Jersey
+    state = (v.get("state") or {}).get("stateCode", "NY")
+    # the radius reaches far into New Jersey: keep only the towns across the river (Jersey City, Hoboken...)
+    if state != "NY" and not (state == "NJ" and (v.get("city") or {}).get("name") in NJ_TOWN_NAMES):
         return None
     st = e.get("dates", {}).get("start", {})
     when = parse_iso(st.get("dateTime", "")) if st.get("dateTime") else None

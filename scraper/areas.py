@@ -7,6 +7,17 @@ from __future__ import annotations
 
 import re
 
+# Hudson County and the Palisades towns across the river, ZIP -> town. "New Jersey" plays the borough's role.
+NJ_TOWNS = {
+    "07002": "Bayonne", "07302": "Jersey City", "07304": "Jersey City", "07305": "Jersey City",
+    "07306": "Jersey City", "07307": "Jersey City", "07310": "Jersey City", "07311": "Jersey City",
+    "07030": "Hoboken", "07087": "Union City", "07086": "Weehawken", "07093": "West New York",
+    "07047": "North Bergen", "07022": "Fairview", "07010": "Cliffside Park", "07020": "Edgewater",
+    "07024": "Fort Lee",
+}
+# Town names as Ticketmaster and venue pages spell them (Guttenberg shares West New York's ZIP).
+NJ_TOWN_NAMES = set(NJ_TOWNS.values()) | {"Guttenberg"}
+
 # ZIP -> (neighborhood, borough)
 ZIPS = {
     # Manhattan
@@ -65,13 +76,22 @@ BOROUGH_BY_PREFIX = {"100": "Manhattan", "101": "Manhattan", "102": "Manhattan",
 
 
 def zip_of(address: str | None) -> str | None:
-    m = re.findall(r"\b(1\d{4})\b", address or "")
+    m = re.findall(r"\b(1\d{4}|07\d{3})\b", address or "")
     return m[-1] if m else None
+
+
+def in_nj(address: str | None) -> bool:
+    """True for a venue across the river (address ends in ", NJ" or has a Hudson County ZIP)."""
+    a = address or ""
+    return bool(re.search(r",\s*NJ\b|New Jersey", a)) or zip_of(a) in NJ_TOWNS
 
 
 def area_of(name: str, address: str | None) -> tuple[str | None, str | None]:
     """(neighborhood, borough) for a venue, or (None, borough-or-None) when the ZIP isn't mapped."""
     z = zip_of(address)
+    if in_nj(address):
+        town = NJ_TOWNS.get(z) or next((t for t in NJ_TOWN_NAMES if t.lower() in (address or "").lower()), None)
+        return OVERRIDES.get(name, town), "New Jersey"
     hood, borough = ZIPS.get(z, (None, BOROUGH_BY_PREFIX.get((z or "")[:3])))
     if not borough:
         a = (address or "").lower()

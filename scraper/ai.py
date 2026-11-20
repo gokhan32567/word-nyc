@@ -275,7 +275,7 @@ VENUE_SETS = "<venue's regular set times>"
 # chains' calendars (MSG, Live Nation, City Winery...) list their venues in other cities
 OTHER_CITY = re.compile(r"chicago|boston|philadelphia|los[-_ ]angeles|san[-_ ]francisco|nashville|atlanta|washington[-_ ]dc|"
                         r"miami|seattle|denver|austin|new[-_ ]orleans|las[-_ ]vegas|london|toronto|montreal|"
-                        r"hudson[-_ ]valley|asbury[-_ ]park|atlantic[-_ ]city|uncasville|newark|jersey[-_ ]city|hoboken|"
+                        r"hudson[-_ ]valley|asbury[-_ ]park|atlantic[-_ ]city|uncasville|newark|"
                         r"morristown|red[-_ ]bank|port[-_ ]chester|westbury", re.I)
 CLOSED = re.compile(r"\b(closed|no (show|music|performance)s? tonight|dark tonight)\b", re.I)
 DAY_TIMES_PREFIX = re.compile(r"^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?\s+[\d:&,.\s\-–]+(?:[ap]\.?m\.?)?\s*[-–:]\s+", re.I)
@@ -334,7 +334,9 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     state = re.search(r",\s*([A-Z]{2})\b", shown)
     # "Not at this venue" only counts when the page actually names another venue for the event;
     # a venue's own calendar usually doesn't repeat its name on every listing.
-    if (raw.get("at_this_venue") is False and shown) or (state and state.group(1) != "NY"):
+    from areas import in_nj
+    home_state = "NJ" if in_nj(venue.get("address")) else "NY"
+    if (raw.get("at_this_venue") is False and shown) or (state and state.group(1) != home_state):
         return None, "listed at another venue"
     anchor = _squash(title) if _squash(title) in page else max(present or [""], key=len)
     if anchor and not from_venue_sets and not near(page, anchor, _squash(te), 2500):
