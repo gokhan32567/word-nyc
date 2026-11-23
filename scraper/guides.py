@@ -12,10 +12,10 @@ from datetime import date
 
 from common import ROOT, log, norm
 
-GUIDES = [
-    {"name": "ClubFreeTime", "url": "https://www.clubfreetime.com/new-york-city-nyc/free-events-things-to-do/today/activities",
-     "price": "Free", "note": "A guide to free events in New York City; every event on it is free."},
-]
+# Each guide: name, url, note for the reader, optional price for every event on it.
+# Not usable (Nov 2026): ClubFreeTime hides each event's venue and address behind a paid membership,
+# so its listings can't be placed on the map.
+GUIDES: list[dict] = []
 
 GUIDE_TOOL = {
     "name": "report_guide_events",
