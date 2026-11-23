@@ -503,6 +503,17 @@ def main() -> int:
         except Exception as e:  # noqa: BLE001
             log(f"  newsletters FAILED: {type(e).__name__}: {str(e)[:160]}")
 
+    # 3c. event guides that list many venues' shows (ClubFreeTime...)
+    import guides
+    wanted_guides = not args.only.strip() or any(norm(g["name"]) in norm(args.only) for g in guides.GUIDES)
+    if ai_key and wanted_guides and not args.no_browser:
+        try:
+            found, g_rows = guides.guide_events(list(everyone.values()), rows, night, ai_key, geocoder)
+            collected += [e for e in found if is_show(e["title"])]
+            rows += g_rows
+        except Exception as e:  # noqa: BLE001
+            log(f"  guides FAILED: {type(e).__name__}: {str(e)[:160]}")
+
     # venues that have music every night: an empty result there is almost certainly a reading problem
     nightly = [v["name"] for v in venues if v.get("nightly")]
     have = {e["venue"] for e in collected} | {r["name"] for r in rows if "closed tonight" in (r.get("detail") or "")}

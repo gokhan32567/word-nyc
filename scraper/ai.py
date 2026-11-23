@@ -423,7 +423,7 @@ def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | 
         "system": SYSTEM + "\n\nAnswer with the tool the request asks for: report_events when asked for performances, "
                            "report_checks when asked for verdicts on proposed listings.",
         "messages": [{"role": "user", "content": content}],
-        "tools": [TOOL, VERIFY_TOOL], "tool_choice": {"type": "any"},
+        "tools": [TOOL, VERIFY_TOOL] if tool in (None, TOOL, VERIFY_TOOL) else [tool], "tool_choice": {"type": "any"},
     }).encode()
     for attempt in range(8):
         req = urllib.request.Request(API_URL, data=body, method="POST", headers={
