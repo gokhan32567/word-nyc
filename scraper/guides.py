@@ -6,10 +6,11 @@ venues we don't know are placed on the map from their street address.
 """
 from __future__ import annotations
 
+import os
 import re
 from datetime import date
 
-from common import log, norm
+from common import ROOT, log, norm
 
 GUIDES = [
     {"name": "ClubFreeTime", "url": "https://www.clubfreetime.com/new-york-city-nyc/free-events-things-to-do/today/activities",
@@ -74,6 +75,10 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
             row.update(status="error", detail=(snap.error if snap else "not loaded") or "page unreadable")
             out_rows.append(row)
             continue
+        if os.environ.get("VENUE_FILTER"):  # test runs: keep what the guide page showed (debug branch)
+            with open(ROOT / "debug.txt", "a") as f:
+                f.write(f"\n### {g['name']}\n{snap.final_url} (HTTP {snap.status}, {len(snap.text)} chars)\n"
+                        f"```\n{snap.text[:20000]}\n```\n")
         links = "\n".join(f"{l['text'][:80]} -> {l['href']}" for l in snap.links[:400] if l.get("text"))
         prompt = (f"{g['note']}\nNight to report: {night:%A, %B %-d, %Y}. {ai.loaded_note(night)}\n"
                   f"List only events on that night at a physical place in New York City or the New Jersey towns "
