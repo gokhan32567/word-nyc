@@ -114,6 +114,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout --quiet -B debug
+          touch debug.txt  # a test run that reads no venue pages leaves none
           git add -f debug.txt events.json coverage.json
           git commit --quiet -m "Test run: ${{ github.event.inputs.venues }}"
           git push --quiet -f origin debug
