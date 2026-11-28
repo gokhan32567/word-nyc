@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
-  "generated": "2026-11-27T21:24:50-05:00",
-  "count": 148,
+  "generated": "2026-11-27T21:37:16-05:00",
+  "count": 168,
   "events": [
     {
       "title": "Christmas Spectacular Starring The Radio City Rockettes",
@@ -29,6 +29,50 @@
       "id": 1
     },
     {
+      "title": "Minotaur",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "1:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/minotaur",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a Russian drama about an executive facing suspicions and a war-related quota demand.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Minotaur",
+      "id": 2
+    },
+    {
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "1:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a documentary following tech founder Elizabeth Holmes before her prison sentence.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 3
+    },
+    {
       "title": "Christmas Spectacular Starring The Radio City Rockettes",
       "performers": [
         "The Radio City Rockettes"
@@ -51,7 +95,7 @@
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "venue_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "The Radio City Rockettes",
-      "id": 2
+      "id": 4
     },
     {
       "title": "Club Kid",
@@ -68,12 +112,100 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Film screening of a comedy about a NYC club promoter who learns he has a son.",
+      "description": "Film screening of a comedy about a club promoter who finds out he has a 10-year-old son.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Club Kid",
-      "id": 3
+      "id": 5
+    },
+    {
+      "title": "Paper Tiger",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "1:20 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/paper-tiger",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a James Gray drama about two brothers facing a dangerous scheme.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Paper Tiger",
+      "id": 6
+    },
+    {
+      "title": "Wild Horse Nine",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "1:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/wild-horse-nine",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening about two CIA agents on Easter Island confronting dark pasts.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Wild Horse Nine",
+      "id": 7
+    },
+    {
+      "title": "Elsinore",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "1:40 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/elsinore",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening about actor Ian Charleson preparing for a Hamlet performance in London.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Elsinore",
+      "id": 8
+    },
+    {
+      "title": "Minotaur",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "3:45 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/minotaur",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a Russian executive drama by Andrey Zvyagintsev.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Minotaur",
+      "id": 9
     },
     {
       "title": "Club Kid",
@@ -86,16 +218,16 @@
       "time": "4:00 PM",
       "end": null,
       "url": "https://www.bam.org/film/2026/club-kid",
-      "genre": "Ballet & Dance",
+      "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Film screening of a comedy about a NYC club promoter who learns he has a son.",
+      "description": "Film screening of a NYC club promoter discovering a secret son.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Club Kid",
-      "id": 4
+      "id": 10
     },
     {
       "title": "Romy & Michele's Afternoon Tea Dance",
@@ -117,7 +249,7 @@
       "source": "venue-ai",
       "listing_url": "https://clubcummingnyc.com/",
       "artist": "Romy & Michele's Afternoon Tea Dance",
-      "id": 5
+      "id": 11
     },
     {
       "title": "Christmas Spectacular Starring The Radio City Rockettes",
@@ -142,7 +274,95 @@
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "venue_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "The Radio City Rockettes",
-      "id": 6
+      "id": 12
+    },
+    {
+      "title": "Paper Tiger",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "4:15 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/paper-tiger",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Paper Tiger",
+      "id": 13
+    },
+    {
+      "title": "Wild Horse Nine",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "4:20 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/wild-horse-nine",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about CIA agents on Easter Island.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Wild Horse Nine",
+      "id": 14
+    },
+    {
+      "title": "Elsinore",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "4:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/elsinore",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Ian Charleson preparing for Hamlet at the National Theatre.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Elsinore",
+      "id": 15
+    },
+    {
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "4:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Elizabeth Holmes filmed by Nathan Fielder before prison.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 16
     },
     {
       "title": "NUMBSKULL",
@@ -154,7 +374,7 @@
       "date": "2026-11-27",
       "time": "5:00 PM",
       "end": null,
-      "url": "https://www.petescandystore.com/calendar",
+      "url": "https://www.petescandystore.com/",
       "genre": "Other",
       "subgenre": null,
       "price": null,
@@ -164,7 +384,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "NUMBSKULL",
-      "id": 7
+      "id": 17
     },
     {
       "title": "WINTER LANTERN FESTIVAL",
@@ -181,12 +401,12 @@
       "subgenre": null,
       "price": "$25 & UNDER",
       "program": [],
-      "description": "Outdoor winter lantern festival combining art, tradition and technology in an evening setting.",
+      "description": "Outdoor seasonal lantern festival combining art and technology, with tickets limited.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://snug-harbor.org/",
       "artist": "WINTER LANTERN FESTIVAL",
-      "id": 8
+      "id": 18
     },
     {
       "title": "Oscar Noriega's CROOKED QUARTET",
@@ -214,7 +434,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Oscar Noriega, Marta Sanchez, Christopher Tordini",
-      "id": 9
+      "id": 19
     },
     {
       "title": "BIRDLAND BIG BAND",
@@ -231,13 +451,13 @@
       "subgenre": "Big Band",
       "price": null,
       "program": [],
-      "description": "Big band performance in the Jazz Club, ages 10+. Sales ended; call for assistance.",
+      "description": "Big band jazz performance in the Jazz Club room.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "venue_url": "https://www.birdlandjazz.com/tm-event/birdland-big-band-6/",
       "artist": "BIRDLAND BIG BAND",
-      "id": 10
+      "id": 20
     },
     {
       "title": "REGINALD CHAPMAN'S CHAPHOUSE",
@@ -268,7 +488,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Reginald Chapman, Ryan Easter, Lomar Brown",
-      "id": 11
+      "id": 21
     },
     {
       "title": "Jimi Hendrix Birthday Jam with Marcus Machado",
@@ -282,17 +502,17 @@
       "date": "2026-11-27",
       "time": "6:00 PM",
       "end": null,
-      "url": "https://www.cafewha.com/calendar",
+      "url": "https://www.cafewha.com/tickets-reservations",
       "genre": "Rock",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Tribute jam celebrating Jimi Hendrix's birthday with Marcus Machado, live at Cafe Wha?.",
+      "description": "Birthday jam tribute to Jimi Hendrix with Marcus Machado at Cafe Wha?, 5 PM doors.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.cafewha.com/",
       "artist": "Marcus Machado",
-      "id": 12
+      "id": 22
     },
     {
       "title": "Fred Hammond",
@@ -314,7 +534,7 @@
       "source": "venue-ai",
       "listing_url": "https://citywinery.com/pages/locations/new-york-city",
       "artist": "Fred Hammond",
-      "id": 13
+      "id": 23
     },
     {
       "title": "Emmett & The Dead Ends W/ Dog House",
@@ -330,24 +550,24 @@
       "time": "6:00 PM",
       "end": null,
       "url": "https://www.ticketmaster.com/emmett-the-dead-ends-w-dog-new-york-new-york-11-27-2026/event/00006549F6C0F58A",
-      "genre": "Indie & Alternative",
+      "genre": "Rock",
       "subgenre": "Indie Folk",
       "price": null,
       "program": [],
-      "description": "Rock-leaning show at Mercury Lounge; sales have ended.",
+      "description": "Show with Dog House opening; doors at 6 PM at Mercury Lounge. Sales have ended.",
       "image": "https://s1.ticketm.net/dam/a/4ac/5b534c2d-cb8a-4fdb-935a-99793d6154ac_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
       "venue_url": "https://mercuryeastpresents.com/tm-event/emmett-the-dead-ends-w-dog-house/",
       "artist": "Emmett & The Dead Ends, Dog House",
-      "id": 14
+      "id": 24
     },
     {
       "title": "MICHAEL WEISS TRIO",
       "performers": [
-        "MICHAEL WEISS",
-        "JOHN WEBBER",
-        "ADAM ARRUDA"
+        "Michael Weiss",
+        "John Webber",
+        "Adam Arruda"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -361,13 +581,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Trio of piano, bass and drums; first of two sets listed for the evening.",
+      "description": "Trio led by pianist Michael Weiss, first set of the evening.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34338-michael-weiss-trio/",
-      "artist": "MICHAEL WEISS, JOHN WEBBER, ADAM ARRUDA",
-      "id": 15
+      "artist": "Michael Weiss, John Webber, Adam Arruda",
+      "id": 25
     },
     {
       "title": "midwxst: Solitude in Silence Tour",
@@ -386,12 +606,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Touring show by midwxst, doors at 6 PM.",
+      "description": "Touring show with doors at 6:00 PM; listed on the venue's calendar.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
       "artist": "midwxst",
-      "id": 16
+      "id": 26
     },
     {
       "title": "DAVID ROURKE QUARTET",
@@ -413,13 +633,35 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Jazz quartet with guitar, piano, bass and drums; first of two sets.",
+      "description": "Quartet set at Smalls, first of two sets on Friday night.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34434-david-rourke-quartet/",
       "artist": "David Rourke, Tyler Henderson, Caleb Tobocman",
-      "id": 17
+      "id": 27
+    },
+    {
+      "title": "Minotaur",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "6:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/minotaur",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a Russian executive drama by Andrey Zvyagintsev.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Minotaur",
+      "id": 28
     },
     {
       "title": "DIRTY CIRCUS: Stuffed",
@@ -436,22 +678,22 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Circus and variety show at the Bushwick venue.",
+      "description": "Variety circus show at House of Yes.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://calendar.houseofyes.org/",
       "artist": "DIRTY CIRCUS: Stuffed",
-      "id": 18
+      "id": 29
     },
     {
       "title": "TAL MASHIACH TRIO",
       "performers": [
-        "Tal Mashiach",
-        "Tom Oren",
-        "Alon Benjamini",
         "Tal Mashiach (b&g)",
         "Tom Oren (p)",
-        "Alon Benjamini (d)"
+        "Alon Benjamini (d)",
+        "Tal Mashiach",
+        "Tom Oren",
+        "Alon Benjamini"
       ],
       "venue": "Ornithology Jazz Club",
       "address": "6 Suydam St, Brooklyn, NY 11221",
@@ -465,12 +707,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz trio led by Tal Mashiach on bass and guitar, with piano and drums.",
+      "description": "Jazz trio performance at the club on Friday evening.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
-      "artist": "Tal Mashiach, Tom Oren, Alon Benjamini",
-      "id": 19
+      "artist": "Tal Mashiach (b&g), Tom Oren (p), Alon Benjamini (d)",
+      "id": 30
     },
     {
       "title": "PIERRE BENSUSAN - THE INFINITE GUITAR TOUR 2026",
@@ -489,12 +731,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Guitar tour show by Pierre Bensusan at the Bitter End.",
+      "description": "Guitar tour show by Pierre Bensusan at The Bitter End.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Pierre Bensusan",
-      "id": 20
+      "id": 31
     },
     {
       "title": "Club Kid",
@@ -507,16 +749,60 @@
       "time": "6:40 PM",
       "end": null,
       "url": "https://www.bam.org/film/2026/club-kid",
-      "genre": "Ballet & Dance",
+      "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Film screening of a comedy about a NYC club promoter who learns he has a son.",
+      "description": "Film screening of a NYC club promoter discovering a secret son.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Club Kid",
-      "id": 21
+      "id": 32
+    },
+    {
+      "title": "Paper Tiger",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "6:45 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/paper-tiger",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Paper Tiger",
+      "id": 33
+    },
+    {
+      "title": "Wild Horse Nine",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "6:50 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/wild-horse-nine",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about CIA agents on Easter Island.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Wild Horse Nine",
+      "id": 34
     },
     {
       "title": "Marilyn Maye",
@@ -535,10 +821,10 @@
       "program": [],
       "description": "Cabaret performance by Marilyn Maye at 54 Below.",
       "image": "https://s1.ticketm.net/dam/a/e3b/d0ad7a47-ee8a-43d2-9461-000528e28e3b_RETINA_PORTRAIT_16_9.jpg",
-      "source": "venue-ai+venue-ai+ticketmaster",
+      "source": "venue-ai+venue-ai+venue-ai+ticketmaster",
       "listing_url": "https://54below.org/calendar/",
       "artist": "Marilyn Maye",
-      "id": 22
+      "id": 35
     },
     {
       "title": "Hearts of Palm, Brigid Hart, Cookie",
@@ -560,8 +846,30 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Hearts of Palm, Brigid Hart, Cookie",
-      "id": 23,
+      "id": 36,
       "venue_url": "https://www.alphavillebk.com/"
+    },
+    {
+      "title": "Elsinore",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "7:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/elsinore",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Ian Charleson preparing for Hamlet at the National Theatre.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Elsinore",
+      "id": 37
     },
     {
       "title": "BILL SAXTON & THE HARLEM ALL-STARS",
@@ -586,7 +894,7 @@
       "source": "venue-ai",
       "listing_url": "https://billsplaceharlem.com/",
       "artist": "Bill Saxton, The Harlem All-Stars",
-      "id": 24
+      "id": 38
     },
     {
       "title": "GEOFFREY KEEZER TRIO WITH YASUSHI NAKAMURA AND BILLY KILSON",
@@ -607,13 +915,13 @@
       "subgenre": "Jazz",
       "price": null,
       "program": [],
-      "description": "Trio performance in the Birdland Theater, ages 10+. Sales ended; call for assistance.",
+      "description": "Piano trio performance in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "venue_url": "https://www.birdlandjazz.com/tm-event/geoffrey-keezer-trio/",
       "artist": "Geoffrey Keezer, Yasushi Nakamura, Billy Kilson",
-      "id": 25
+      "id": 39
     },
     {
       "title": "Blindspot | Boyblue | Dig A Revel | Kings & Constables",
@@ -635,12 +943,12 @@
       "subgenre": null,
       "price": "$18.78",
       "program": [],
-      "description": "Multi-act show listed with doors at 12:00 AM; sales have ended.",
+      "description": "Live music show with four acts; sales have ended.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bowerypalace.com/",
       "artist": "Blindspot, Boyblue, Dig A Revel",
-      "id": 26
+      "id": 40
     },
     {
       "title": "Faith Angeline / Ghost Da Lyrical / Cynthia Hau",
@@ -662,7 +970,7 @@
       "source": "venue-data",
       "listing_url": "https://brooklynmusickitchen.com/",
       "artist": "Faith Angeline / Ghost Da Lyrical / Cynthia Hau",
-      "id": 27
+      "id": 41
     },
     {
       "title": "Aitana",
@@ -683,7 +991,7 @@
       "image": "https://s1.ticketm.net/dam/a/331/c9f9bfde-3bdf-430d-bd2f-8fac6be22331_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Aitana",
-      "id": 28,
+      "id": 42,
       "venue_url": "https://www.brooklynparamount.com/shows"
     },
     {
@@ -706,7 +1014,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "American Protégé Winners Recital",
-      "id": 29
+      "id": 43
     },
     {
       "title": "Live jazz",
@@ -728,7 +1036,7 @@
       "source": "venue-regular",
       "listing_url": "https://www.cellardog.net/",
       "artist": "Live jazz",
-      "id": 30
+      "id": 44
     },
     {
       "title": "Buko Boys w/ Good News!",
@@ -748,12 +1056,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Listed show on Friday, November 27 at Groove, with a 7:00pm to 8:30pm time window.",
+      "description": "Live show listed under Coming Up on the Groove homepage, Friday evening.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.clubgroovenyc.com/",
       "artist": "Buko Boys, Good News!",
-      "id": 31
+      "id": 45
     },
     {
       "title": "Harlem Jazz Series - Seventh Sun",
@@ -777,7 +1085,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.harlemjazzboxx.com/event-calendar",
       "artist": "Seventh Sun",
-      "id": 32
+      "id": 46
     },
     {
       "title": "Herlin Riley and Friends",
@@ -796,12 +1104,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz performance led by Herlin Riley and friends at Jazz at Lincoln Center.",
+      "description": "Jazz performance led by Herlin Riley at 7:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Herlin Riley",
-      "id": 33
+      "id": 47
     },
     {
       "title": "Harry Allen Quartet",
@@ -824,7 +1132,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Harry Allen",
-      "id": 34
+      "id": 48
     },
     {
       "title": "Hot Laps with Crush Club, Reflecto, DJ Ladyboy",
@@ -846,7 +1154,7 @@
       "source": "venue-data",
       "listing_url": "https://app.discotech.me/new-york/mood-ring",
       "artist": "Hot Laps with Crush Club, Reflecto, DJ Ladyboy",
-      "id": 35
+      "id": 49
     },
     {
       "title": "young friend",
@@ -867,7 +1175,7 @@
       "image": "https://s1.ticketm.net/dam/a/6bb/4da24b63-8972-4360-ad9f-5054ea6ba6bb_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "young friend",
-      "id": 36
+      "id": 50
     },
     {
       "title": "FABRIZZIO MORENO",
@@ -890,7 +1198,7 @@
       "listing_url": "https://pianosnyc.com/shows",
       "venue_url": "https://pianosnyc.com/shows",
       "artist": "FABRIZZIO MORENO",
-      "id": 37
+      "id": 51
     },
     {
       "title": "Christmas Spectacular Starring The Radio City Rockettes",
@@ -915,7 +1223,7 @@
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "venue_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "The Radio City Rockettes",
-      "id": 38
+      "id": 52
     },
     {
       "title": "Molly & June’s Honky Tonk: 2 Year Anniversary",
@@ -934,12 +1242,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Honky tonk party marking the two-year anniversary, doors at 7 PM.",
+      "description": "Honky tonk party marking the two-year anniversary, doors at 7:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
       "artist": "Molly & June’s Honky Tonk",
-      "id": 39
+      "id": 53
     },
     {
       "title": "Live bands",
@@ -961,7 +1269,7 @@
       "source": "venue-regular",
       "listing_url": "https://www.shrinenyc.com/",
       "artist": "Live bands",
-      "id": 40
+      "id": 54
     },
     {
       "title": "Misty Blues Band",
@@ -980,12 +1288,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Core band led by founder and singer Gina Coleman, blending blues with soul, funk, Creole and Latin styles.",
+      "description": "Blues band led by founder and front woman Gina Coleman, blending blues with soul, funk, Creole and Latin styles.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "Misty Blues",
-      "id": 41
+      "id": 55
     },
     {
       "title": "Helio Alves Trio | Brazilian Jazz | First Set",
@@ -1007,7 +1315,7 @@
       "source": "venue-data",
       "listing_url": "https://www.terraza7.com/detalles-y-registro/helio-alves-trio-brazilian-jazz-first-set-9",
       "artist": "Helio Alves Trio | Brazilian Jazz | First Set",
-      "id": 42
+      "id": 56
     },
     {
       "title": "Joe Martin Quartet",
@@ -1029,12 +1337,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet led by bassist Joe Martin, a multi-night run including this Friday; sets at 7pm and 9pm.",
+      "description": "Jazz quartet with bass, guitar, piano and drums; first of two sets at 7 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://jazzgallery.org/",
       "artist": "Joe Martin, Gilad Hekselman, Glenn Zaleski",
-      "id": 43
+      "id": 57
     },
     {
       "title": "Live bands",
@@ -1056,7 +1364,7 @@
       "source": "venue-regular",
       "listing_url": "https://www.redlionnyc.com/live-music/",
       "artist": "Live bands",
-      "id": 44
+      "id": 58
     },
     {
       "title": "Los Hacheros feat. Papote Jimenez",
@@ -1078,7 +1386,7 @@
       "source": "venue-data",
       "listing_url": "https://thesultanroom.com/",
       "artist": "Los Hacheros feat. Papote Jimenez",
-      "id": 45,
+      "id": 59,
       "venue_url": "https://thesultanroom.com/"
     },
     {
@@ -1104,7 +1412,7 @@
       "listing_url": "https://www.thetownhall.org/events",
       "venue_url": "https://www.thetownhall.org/events",
       "artist": "Alex O'Connor",
-      "id": 46
+      "id": 60
     },
     {
       "title": "BOY2000 / TLIM SHUG",
@@ -1124,12 +1432,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live show listed at Trans-Pecos at 7:00 PM on Friday, November 27.",
+      "description": "Live show at Trans-Pecos on Friday, November 27, starting at 7:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thetranspecos.com/#/events",
       "artist": "BOY2000, TLIM SHUG",
-      "id": 47
+      "id": 61
     },
     {
       "title": "Rhythm & Blades : 2 Year Anniversary Blackout (skate all night)",
@@ -1151,8 +1459,30 @@
       "source": "venue-data",
       "listing_url": "https://www.xanadu.nyc/cal",
       "artist": "Rhythm & Blades : 2 Year Anniversary Blackout (skate all night)",
-      "id": 48,
+      "id": 62,
       "venue_url": "https://www.xanadu.nyc/cal"
+    },
+    {
+      "title": "La Distance",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "7:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/theater/2026/la-distance",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Theater production about a daughter choosing exile on Mars.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "La Distance",
+      "id": 63
     },
     {
       "title": "BrownstoneJAZZ FEST CONCERT SERIES",
@@ -1173,7 +1503,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "BrownstoneJAZZ FEST CONCERT SERIES",
-      "id": 49
+      "id": 64
     },
     {
       "title": "SO SHAMELESS LIVE! — ONE LAST POD WITH DAJAHBELLE",
@@ -1197,10 +1527,10 @@
       "source": "venue-ai",
       "listing_url": "https://citywinery.com/pages/locations/new-york-city",
       "artist": "DaJahBelle",
-      "id": 50
+      "id": 65
     },
     {
-      "title": "Rouvali Conducts Schubert's Great Symphony",
+      "title": "Rouvali Conducts Schubert’s Great Symphony",
       "performers": [
         "New York Philharmonic"
       ],
@@ -1218,12 +1548,12 @@
       "program": [
         "Schubert's Great Symphony"
       ],
-      "description": "Orchestral concert conducted by Rouvali with the New York Philharmonic.",
+      "description": "Orchestral concert conducted by Rouvali at 7:30 PM.",
       "image": "https://s1.ticketm.net/dam/a/0c7/c28ccd67-14a5-40f6-9c2b-7da57f8ac0c7_RETINA_PORTRAIT_16_9.jpg",
-      "source": "venue-ai+venue-ai+ticketmaster",
+      "source": "venue-ai+venue-ai+venue-ai+ticketmaster",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "New York Philharmonic",
-      "id": 51
+      "id": 66
     },
     {
       "title": "SAM DILLON QUARTET",
@@ -1245,10 +1575,10 @@
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "SAM DILLON QUARTET",
-      "id": 52
+      "id": 67
     },
     {
-      "title": "Saint-Saëns's Samson et Dalila",
+      "title": "Saint-Saëns’s Samson et Dalila",
       "performers": [
         "Samson et Dalila"
       ],
@@ -1263,20 +1593,22 @@
       "genre": "Opera",
       "subgenre": "Opera",
       "price": null,
-      "program": [],
-      "description": "Opera performance by the Metropolitan Opera.",
+      "program": [
+        "Saint-Saëns's Samson et Dalila"
+      ],
+      "description": "Opera performance at 7:30 PM.",
       "image": "https://s1.ticketm.net/dam/c/038/cddd6a14-c959-4d67-8db3-93170b1a9038_105551_RETINA_PORTRAIT_16_9.jpg",
-      "source": "venue-ai+venue-ai+ticketmaster",
+      "source": "venue-ai+venue-ai+venue-ai+ticketmaster",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Samson et Dalila",
-      "id": 53
+      "id": 68
     },
     {
       "title": "MICHAEL WEISS TRIO",
       "performers": [
-        "MICHAEL WEISS",
-        "JOHN WEBBER",
-        "ADAM ARRUDA"
+        "Michael Weiss",
+        "John Webber",
+        "Adam Arruda"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -1290,13 +1622,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Trio of piano, bass and drums; second set of the evening.",
+      "description": "Trio led by pianist Michael Weiss, second set of the evening.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34338-michael-weiss-trio/",
-      "artist": "MICHAEL WEISS, JOHN WEBBER, ADAM ARRUDA",
-      "id": 54
+      "artist": "Michael Weiss, John Webber, Adam Arruda",
+      "id": 69
     },
     {
       "title": "DAVID ROURKE QUARTET",
@@ -1318,13 +1650,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Jazz quartet with guitar, piano, bass and drums; second set.",
+      "description": "Quartet set at Smalls, second of two sets on Friday night.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34435-david-rourke-quartet/",
       "artist": "David Rourke, Tyler Henderson, Caleb Tobocman",
-      "id": 55
+      "id": 70
     },
     {
       "title": "Dina Martina",
@@ -1339,14 +1671,14 @@
       "url": "https://www.ticketweb.com/event/dina-martina-christmas-sony-hall-tickets/14925043?pl=sonyhall&REFID=261127site",
       "genre": "Comedy",
       "subgenre": null,
-      "price": "$35 General Admission Seating; $50 VIP Seating; $65 VIP Seat",
+      "price": "$35",
       "program": [],
-      "description": "Holiday Christmas comedy show by drag performer Dina Martina, with song, dance, costumes and video.",
+      "description": "Holiday Christmas comedy drag show by Dina Martina at Sony Hall, with song, dance, and video.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sonyhall.com/shows/?eid=14925043",
       "artist": "Dina Martina",
-      "id": 56,
+      "id": 71,
       "venue_url": "https://sonyhall.com/shows/?eid=14925043"
     },
     {
@@ -1377,10 +1709,32 @@
       "listing_url": "https://unionhallny.com/",
       "venue_url": "https://unionhallny.com/",
       "artist": "Jenny Gorelick, Jessie Lee, Charlie Flynn",
-      "id": 57
+      "id": 72
     },
     {
-      "title": "Caroline Davis w/Grey McMurray, Qasim Naqvi (8:00 PM set)",
+      "title": "You Can See Everything",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "8:00 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/you-can-see-everything",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Elizabeth Holmes filmed by Nathan Fielder before prison.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "You Can See Everything",
+      "id": 73
+    },
+    {
+      "title": "Caroline Davis w/Grey McMurray, Qasim Naqvi",
       "performers": [
         "Caroline Davis",
         "Grey McMurray",
@@ -1398,12 +1752,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Early set of a jazz trio led by Caroline Davis at Bar Bayeux; no cover, one drink minimum.",
+      "description": "Jazz performance with Caroline Davis, Grey McMurray and Qasim Naqvi at 8 PM set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
       "artist": "Caroline Davis, Grey McMurray, Qasim Naqvi",
-      "id": 58
+      "id": 74
     },
     {
       "title": "JBB - James Buckley Band",
@@ -1424,12 +1778,12 @@
       "subgenre": null,
       "price": "$20 suggested",
       "program": [],
-      "description": "Brooklyn trio of piano, bass and drums playing open-ended, groove-driven improvised jazz.",
+      "description": "Brooklyn trio of piano, bass and drums playing open-ended groove and collective improvisation.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "Luke Marantz, James Buckley, Hamir Atwal",
-      "id": 59
+      "id": 75
     },
     {
       "title": "Chief Adjuah",
@@ -1448,13 +1802,13 @@
       "subgenre": "Jazz",
       "price": "$55.13",
       "program": [],
-      "description": "Early evening show by Chief Adjuah at Blue Note Jazz Club, with doors at 6:00 PM.",
+      "description": "Early show by Chief Adjuah at Blue Note Jazz Club, with doors at 6:00 PM.",
       "image": "https://s1.ticketm.net/dam/a/621/fe3df67e-de64-4770-b448-e8a6c35a6621_202551_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.bluenotejazz.com/nyc/shows/?list_view",
       "venue_url": "https://www.bluenotejazz.com/nyc/shows/?list_view",
       "artist": "Chief Xian aTunde Adjuah",
-      "id": 60
+      "id": 76
     },
     {
       "title": "Blindspot | Boyblue | Dig A Revel | Kings & Constables",
@@ -1475,7 +1829,7 @@
       "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Blindspot | Boyblue | Dig A Revel | Kings & Constables",
-      "id": 61,
+      "id": 77,
       "venue_url": "https://www.bowerypalace.com/"
     },
     {
@@ -1497,7 +1851,7 @@
       "image": "https://s1.ticketm.net/dam/e/0b7/821c35e3-5fc7-41d4-a8c6-e8830983d0b7_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Antibalas",
-      "id": 62,
+      "id": 78,
       "venue_url": "https://www.brooklynbowl.com/brooklyn"
     },
     {
@@ -1520,7 +1874,7 @@
       "source": "venue-data",
       "listing_url": "https://www.cmoneverybody.com/events",
       "artist": "Ruafza Doesn't Want To Work Anymore",
-      "id": 63,
+      "id": 79,
       "venue_url": "https://www.cmoneverybody.com/events"
     },
     {
@@ -1546,7 +1900,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.carnegiehall.org/events",
       "artist": "Tamara Radjenović, Soprano, Murat Karahan, Tenor",
-      "id": 64
+      "id": 80
     },
     {
       "title": "Pável @ Carro Café De Union City",
@@ -1570,7 +1924,7 @@
       "source": "venue-data",
       "listing_url": "https://www.songkick.com/venues/4653251-carro-cafe-de-union-city",
       "artist": "Pável",
-      "id": 65
+      "id": 81
     },
     {
       "title": "VINNIE SPERRAZZA - David Berkman - Rick Rosato",
@@ -1596,7 +1950,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.closeupnyc.com/calendar",
       "artist": "VINNIE SPERRAZZA, David Berkman, Rick Rosato",
-      "id": 66
+      "id": 82
     },
     {
       "title": "JMV Presents: QUEERLESQUE",
@@ -1613,12 +1967,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Queer burlesque variety show at Club Cumming, running 8:00 PM to 10:00 PM.",
+      "description": "Burlesque-style cabaret show at Club Cumming, presented by JMV.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://clubcummingnyc.com/",
       "artist": "JMV Presents: QUEERLESQUE",
-      "id": 67
+      "id": 83
     },
     {
       "title": "George Balanchine's The Nutcracker®",
@@ -1634,13 +1988,15 @@
       "genre": "Ballet & Dance",
       "subgenre": null,
       "price": null,
-      "program": [],
-      "description": "Ballet performance by New York City Ballet.",
+      "program": [
+        "George Balanchine's The Nutcracker®"
+      ],
+      "description": "Ballet performance at 8:00 PM.",
       "image": "https://s1.ticketm.net/dam/a/3da/37082eeb-0f73-4c40-a344-e344ac2063da_1569201_RETINA_PORTRAIT_16_9.jpg",
-      "source": "venue-ai+venue-ai+ticketmaster",
+      "source": "venue-ai+venue-ai+venue-ai+ticketmaster",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "George Balanchine's The Nutcracker®",
-      "id": 68
+      "id": 84
     },
     {
       "title": "Brett Horton & Cohorts: A Song Buffet",
@@ -1665,7 +2021,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.freddysbar.com/events",
       "artist": "Brett Horton, Cohorts",
-      "id": 69
+      "id": 85
     },
     {
       "title": "MARLIES DEBACKER & SALIM(A) JAVAID IN NY",
@@ -1685,12 +2041,12 @@
       "subgenre": null,
       "price": "$20",
       "program": [],
-      "description": "Duo and trio sets by pianist Marlies Debacker and saxophonist Salim(a) Javaid with New York artists.",
+      "description": "Duo and trio performances by pianist Marlies Debacker and saxophonist Salim(a) Javaid with New York artists.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.ibeambrooklyn.com/",
       "artist": "Marlies Debacker, Salim(a) Javaid",
-      "id": 70
+      "id": 86
     },
     {
       "title": "Live jazz",
@@ -1712,7 +2068,7 @@
       "source": "venue-regular",
       "listing_url": "https://ma.to/venue/lucillesharlem",
       "artist": "Live jazz",
-      "id": 71
+      "id": 87
     },
     {
       "title": "Night Of Classic RnB & House",
@@ -1739,7 +2095,7 @@
       "image": "https://s1.ticketm.net/dam/e/144/565106d3-e959-4022-9ea0-8bb014e47144_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Byron Stingily, Lillo Thomas, The System",
-      "id": 72
+      "id": 88
     },
     {
       "title": "Wes Brenner",
@@ -1761,7 +2117,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "Wes Brenner",
-      "id": 73
+      "id": 89
     },
     {
       "title": "Debbie Deane Band",
@@ -1780,15 +2136,15 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Brooklyn singer-pianist playing jazz and soul in the style of Carole King and Laura Nyro.",
+      "description": "Brooklyn singer-pianist with a jazz and soul-infused sound inspired by Carole King and Laura Nyro.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.sunnysredhook.com/calendar2/",
       "artist": "Debbie Deane",
-      "id": 74
+      "id": 90
     },
     {
-      "title": "JASON MORAN & THE BANDWAGON",
+      "title": "Jason Moran & The Bandwagon",
       "performers": [
         "Jason Moran",
         "Tarus Mateen",
@@ -1807,13 +2163,13 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jason Moran and his trio with a special guest play a multi-night run at the club.",
+      "description": "Jazz piano trio with a bass and voice special guest, running November 24 through 29 at the club.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://villagevanguard.com/",
-      "venue_url": "https://villagevanguard.com/",
       "artist": "Jason Moran, Tarus Mateen, Nasheet Waits",
-      "id": 75
+      "id": 91,
+      "venue_url": "https://villagevanguard.com/"
     },
     {
       "title": "Thanks - It's Giving!",
@@ -1830,12 +2186,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Event starting Friday evening at Wonderville, running into Saturday; details on its page.",
+      "description": "Event at Wonderville starting 8:00 PM on November 27, running into November 28.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.wonderville.nyc/",
       "artist": "Thanks - It's Giving!",
-      "id": 76
+      "id": 92
     },
     {
       "title": "ANDERSON BROTHERS: THE AMERICAN SONGBOOK",
@@ -1854,13 +2210,13 @@
       "subgenre": "Jazz",
       "price": null,
       "program": [],
-      "description": "Vocal and jazz songbook show in the Jazz Club, ages 10+. Sales ended; call for assistance.",
+      "description": "Vocal and instrumental American songbook show in the Jazz Club room.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "venue_url": "https://www.birdlandjazz.com/tm-event/anderson-brothers-the-american-songbook-7/",
       "artist": "Anderson Brothers",
-      "id": 77
+      "id": 93
     },
     {
       "title": "COMEDY NIGHTS",
@@ -1877,12 +2233,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Weekly Friday comedy night at the venue.",
+      "description": "Weekly comedy night on Fridays at the club.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.somewherenowherenyc.com/",
       "artist": "COMEDY NIGHTS",
-      "id": 78
+      "id": 94
     },
     {
       "title": "SINATRA",
@@ -1895,16 +2251,16 @@
       "time": "8:30 PM",
       "end": null,
       "url": "https://www.somewherenowherenyc.com/sinatra?",
-      "genre": "Other",
+      "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Weekly Friday evening event running late at the venue.",
+      "description": "Weekly Friday evening event running from 8:30 PM until late.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.somewherenowherenyc.com/",
       "artist": "SINATRA",
-      "id": 79
+      "id": 95
     },
     {
       "title": "Rosedale",
@@ -1921,12 +2277,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live performance by Rosedale at the Bitter End.",
+      "description": "Performance by Rosedale at The Bitter End.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Rosedale",
-      "id": 80
+      "id": 96
     },
     {
       "title": "Deante' Hitchcock",
@@ -1948,7 +2304,7 @@
       "source": "ticketmaster",
       "venue_url": "https://www.thebroadway.nyc/",
       "artist": "Deante' Hitchcock",
-      "id": 81
+      "id": 97
     },
     {
       "title": "Isaac Mizrahi at Café Carlyle",
@@ -1962,17 +2318,17 @@
       "date": "2026-11-27",
       "time": "8:45 PM",
       "end": null,
-      "url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/experiences/calendar",
+      "url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/experiences/calendar?eventCategory=cafe-carlyle",
       "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Isaac Mizrahi returns to Café Carlyle for a holiday run; no performance on Thanksgiving.",
+      "description": "Isaac Mizrahi returns to Café Carlyle for a holiday engagement; no performance on Thanksgiving.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/experiences/calendar",
       "artist": "Isaac Mizrahi",
-      "id": 82
+      "id": 98
     },
     {
       "title": "BABY DANCE",
@@ -1994,7 +2350,7 @@
       "source": "venue-data",
       "listing_url": "https://wl.eventim.us/event/BABY-DANCE/712335?afflky=BabysAllRightBrooklyn",
       "artist": "BABY DANCE",
-      "id": 83
+      "id": 99
     },
     {
       "title": "Pavel Núñez & His Band Live In Concert",
@@ -2015,7 +2371,7 @@
       "image": "https://s1.ticketm.net/dam/e/2c2/5f5561cf-7654-4cae-a54d-6615889202c2_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Pavel Núñez & His Band Live In Concert",
-      "id": 84
+      "id": 100
     },
     {
       "title": "Fred Hammond",
@@ -2032,12 +2388,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Live concert on the Main Stage at City Winery New York.",
+      "description": "Low-ticket-alert concert on the Main Stage at City Winery New York.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://citywinery.com/pages/locations/new-york-city",
       "artist": "Fred Hammond",
-      "id": 85
+      "id": 101
     },
     {
       "title": "Night Breakers",
@@ -2054,12 +2410,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Evening event listed on the Freddy's Bar events calendar for this Friday.",
+      "description": "Listed event on the Freddy's Bar events page with a 9:00 PM to 11:45 PM window.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.freddysbar.com/events",
       "artist": "Night Breakers",
-      "id": 86
+      "id": 102
     },
     {
       "title": "MARLIES DEBACKER & SALIM(A) JAVAID IN NY",
@@ -2073,18 +2429,18 @@
       "lng": -73.99103,
       "date": "2026-11-27",
       "time": "9:00 PM",
-      "end": null,
+      "end": "10:00 PM",
       "url": "https://www.ibeambrooklyn.com/home/2026/11/27/marlies-debacker-amp-salima-javaid-in-ny",
       "genre": "Jazz",
       "subgenre": null,
       "price": "$20",
       "program": [],
-      "description": "Duos and trios with NY artists, second set of the evening.",
+      "description": "Second set of duos and trios with New York artists, featuring Marlies Debacker and Salim(a) Javaid.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.ibeambrooklyn.com/",
       "artist": "Marlies Debacker, Salim(a) Javaid",
-      "id": 87
+      "id": 103
     },
     {
       "title": "Herlin Riley and Friends",
@@ -2098,17 +2454,17 @@
       "date": "2026-11-27",
       "time": "9:00 PM",
       "end": null,
-      "url": "https://ticketing.jazz.org/21742/21744",
+      "url": "https://ticketing.jazz.org/21746/21748",
       "genre": "Jazz",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz performance led by Herlin Riley and friends at Jazz at Lincoln Center.",
+      "description": "Jazz performance led by Herlin Riley at 9:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.lincolncenter.org/lincoln-center-at-home/calendar",
       "artist": "Herlin Riley",
-      "id": 88
+      "id": 104
     },
     {
       "title": "Harry Allen Quartet",
@@ -2131,7 +2487,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Harry Allen",
-      "id": 89
+      "id": 105
     },
     {
       "title": "Chemical X",
@@ -2152,20 +2508,20 @@
       "subgenre": "Pop",
       "price": null,
       "program": [],
-      "description": "Show at Mercury Lounge with support from Eviction Notice, Deadly Skies, and Error 403.",
+      "description": "Show with Eviction Notice, Deadly Skies, and Error 403; doors at 9 PM at Mercury Lounge.",
       "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://mercuryeastpresents.com/mercurylounge/",
+      "venue_url": "https://mercuryeastpresents.com/tm-event/chemical-x/",
       "artist": "Eviction Notice, Deadly Skies, Error 403",
-      "id": 90,
-      "venue_url": "https://mercuryeastpresents.com/mercurylounge/"
+      "id": 106
     },
     {
       "title": "BILLY DRUMMOND TRIO",
       "performers": [
-        "BILLY DRUMMOND",
-        "TYLER BULLOCK",
-        "MARK LEWANDOWSKI"
+        "Billy Drummond",
+        "Tyler Bullock",
+        "Mark Lewandowski"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -2179,25 +2535,25 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Trio led by drummer Billy Drummond; first of two sets listed.",
+      "description": "Trio led by drummer Billy Drummond, first set of the evening.",
       "image": "https://s1.ticketm.net/dam/a/3ca/d4e4956b-a199-4fec-8a75-0b30b333d3ca_776521_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34340-billy-drummond-trio/",
-      "artist": "BILLY DRUMMOND, TYLER BULLOCK, MARK LEWANDOWSKI",
-      "id": 91
+      "artist": "Billy Drummond, Tyler Bullock, Mark Lewandowski",
+      "id": 107
     },
     {
       "title": "TODD HERBERT QUARTET",
       "performers": [
-        "Todd Herbert",
-        "Marcus Persiani",
-        "Marty Kenney",
-        "Larry Banks",
         "Todd Herbert (saxophone)",
         "Marcus Persiani (p)",
         "Marty Kenney (b)",
-        "Larry Banks (d)"
+        "Larry Banks (d)",
+        "Todd Herbert",
+        "Marcus Persiani",
+        "Marty Kenney",
+        "Larry Banks"
       ],
       "venue": "Ornithology Jazz Club",
       "address": "6 Suydam St, Brooklyn, NY 11221",
@@ -2211,12 +2567,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet led by saxophonist Todd Herbert with piano, bass and drums.",
+      "description": "Saxophone-led quartet performance at the club on Friday night.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://ornithologyjazzclub.com/brooklyn-bushwick-williamsburg-ornithology-jazz-club-events",
-      "artist": "Todd Herbert, Marcus Persiani, Marty Kenney",
-      "id": 92
+      "artist": "Todd Herbert (saxophone), Marcus Persiani (p), Marty Kenney (b)",
+      "id": 108
     },
     {
       "title": "QUBED",
@@ -2228,7 +2584,7 @@
       "date": "2026-11-27",
       "time": "9:00 PM",
       "end": null,
-      "url": "https://www.petescandystore.com/calendar",
+      "url": "https://www.petescandystore.com/",
       "genre": "Other",
       "subgenre": null,
       "price": null,
@@ -2238,7 +2594,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "QUBED",
-      "id": 93
+      "id": 109
     },
     {
       "title": "Emo Nite",
@@ -2255,12 +2611,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Emo-themed night with doors at 9 PM.",
+      "description": "Emo-themed night event with doors at 9 PM.",
       "image": "https://s1.ticketm.net/dam/a/bd6/32e3c503-5c23-4d1b-96fe-887a218c0bd6_1035051_RETINA_PORTRAIT_16_9.jpg",
-      "source": "venue-ai+venue-ai+ticketmaster",
+      "source": "venue-ai+venue-ai+venue-ai+ticketmaster",
       "listing_url": "https://www.racketnyc.com/",
       "artist": "Emo Nite",
-      "id": 94
+      "id": 110
     },
     {
       "title": "BRANDON LEE QUINTET",
@@ -2283,13 +2639,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Jazz quintet with trumpet, trombone, piano, bass and drums; first of two sets.",
+      "description": "Quintet set at Smalls, first of two sets on Friday night.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34436-brandon-lee-quintet/",
       "artist": "Brandon Lee, Willie Applewhite, Martha Kato",
-      "id": 95
+      "id": 111
     },
     {
       "title": "Fridays @ The Delancey",
@@ -2311,7 +2667,7 @@
       "source": "venue-data",
       "listing_url": "https://thedelancey.com/",
       "artist": "Fridays @ The Delancey",
-      "id": 96
+      "id": 112
     },
     {
       "title": "Joe Martin Quartet",
@@ -2333,12 +2689,34 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Second set of the Joe Martin Quartet run at The Jazz Gallery, running Nov 27-28.",
+      "description": "Jazz quartet with bass, guitar, piano and drums; second set at 9 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://jazzgallery.org/",
       "artist": "Joe Martin, Gilad Hekselman, Glenn Zaleski",
-      "id": 97
+      "id": 113
+    },
+    {
+      "title": "Minotaur",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "9:15 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/minotaur",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film screening of a Russian executive drama by Andrey Zvyagintsev.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Minotaur",
+      "id": 114
     },
     {
       "title": "SAM DILLON QUARTET",
@@ -2360,7 +2738,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "SAM DILLON QUARTET",
-      "id": 98
+      "id": 115
     },
     {
       "title": "Club Kid",
@@ -2373,16 +2751,16 @@
       "time": "9:20 PM",
       "end": null,
       "url": "https://www.bam.org/film/2026/club-kid",
-      "genre": "Ballet & Dance",
+      "genre": "Cabaret & Musicals",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Film screening of a comedy about a NYC club promoter who learns he has a son.",
+      "description": "Film screening of a NYC club promoter discovering a secret son.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.bam.org/",
       "artist": "Club Kid",
-      "id": 99
+      "id": 116
     },
     {
       "title": "Right Person, Wrong Time: Musical Theatre Songs About Missed Connections",
@@ -2399,15 +2777,59 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Musical theatre songs about missed connections, presented as a late-evening cabaret set.",
+      "description": "Musical theatre songs themed around missed romantic connections, presented at 54 Below.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://54below.org/calendar/",
       "artist": "Right Person, Wrong Time: Musical Theatre Songs About Missed Connections",
-      "id": 100
+      "id": 117
     },
     {
-      "title": "Caroline Davis w/Grey McMurray, Qasim Naqvi (9:30 PM set)",
+      "title": "Paper Tiger",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "9:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/paper-tiger",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": null,
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Paper Tiger",
+      "id": 118
+    },
+    {
+      "title": "Wild Horse Nine",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "9:30 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/wild-horse-nine",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about CIA agents on Easter Island.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Wild Horse Nine",
+      "id": 119
+    },
+    {
+      "title": "Caroline Davis w/Grey McMurray, Qasim Naqvi",
       "performers": [
         "Caroline Davis",
         "Grey McMurray",
@@ -2425,12 +2847,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late set of a jazz trio led by Caroline Davis at Bar Bayeux; no cover, one drink minimum.",
+      "description": "Jazz performance with Caroline Davis, Grey McMurray and Qasim Naqvi at 9:30 PM set.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.barbayeux.com/jazz",
       "artist": "Caroline Davis, Grey McMurray, Qasim Naqvi",
-      "id": 101
+      "id": 120
     },
     {
       "title": "BILL SAXTON & THE HARLEM ALL-STARS",
@@ -2455,7 +2877,7 @@
       "source": "venue-ai",
       "listing_url": "https://billsplaceharlem.com/",
       "artist": "Bill Saxton, The Harlem All-Stars",
-      "id": 102
+      "id": 121
     },
     {
       "title": "GEOFFREY KEEZER TRIO WITH YASUSHI NAKAMURA AND BILLY KILSON",
@@ -2476,13 +2898,13 @@
       "subgenre": "Jazz",
       "price": "$35.46",
       "program": [],
-      "description": "Trio performance in the Birdland Theater, ages 10+. Sales ended; call for assistance.",
+      "description": "Piano trio performance in the Theater room.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "venue_url": "https://www.birdlandjazz.com/tm-event/geoffrey-keezer-trio-2/",
       "artist": "Geoffrey Keezer, Yasushi Nakamura, Billy Kilson",
-      "id": 103
+      "id": 122
     },
     {
       "title": "BrownstoneJAZZ FEST CONCERT SERIES",
@@ -2503,7 +2925,7 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "BrownstoneJAZZ FEST CONCERT SERIES",
-      "id": 104
+      "id": 123
     },
     {
       "title": "DIVAS & DONS: BLACK FRIDAY with FUNK FLEX",
@@ -2525,7 +2947,7 @@
       "source": "venue-data",
       "listing_url": "https://dice.fm/venue/paragon-n958?lng=en-US",
       "artist": "DIVAS & DONS: BLACK FRIDAY with FUNK FLEX",
-      "id": 105
+      "id": 124
     },
     {
       "title": "Helio Alves Trio | Brazilian Jazz | Second Set",
@@ -2547,7 +2969,29 @@
       "source": "venue-data",
       "listing_url": "https://www.terraza7.com/detalles-y-registro/helio-alves-trio-brazilian-jazz-second-set-7",
       "artist": "Helio Alves Trio | Brazilian Jazz | Second Set",
-      "id": 106
+      "id": 125
+    },
+    {
+      "title": "Elsinore",
+      "performers": [],
+      "venue": "BAM",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "lat": 40.68642,
+      "lng": -73.97785,
+      "date": "2026-11-27",
+      "time": "9:40 PM",
+      "end": null,
+      "url": "https://www.bam.org/film/2026/elsinore",
+      "genre": "Other",
+      "subgenre": null,
+      "price": null,
+      "program": [],
+      "description": "Film about Ian Charleson preparing for Hamlet at the National Theatre.",
+      "image": null,
+      "source": "venue-ai",
+      "listing_url": "https://www.bam.org/",
+      "artist": "Elsinore",
+      "id": 126
     },
     {
       "title": "RED BARAAT",
@@ -2569,7 +3013,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.barbesbrooklyn.com/events",
       "artist": "RED BARAAT",
-      "id": 107
+      "id": 127
     },
     {
       "title": "Latin Rave Culture with DJ Guari, Angie Rey, Refilled, Nas Leber",
@@ -2583,7 +3027,7 @@
       "end": "4:00 AM",
       "url": "https://app.discotech.me/events/38320448-latin-rave-culture-with-dj-guari-angie-rey-refilled-nas-leber-at-bossa-nova",
       "genre": "Electronic & DJ",
-      "subgenre": "Techno",
+      "subgenre": "House & Techno",
       "price": null,
       "program": [],
       "description": null,
@@ -2591,7 +3035,7 @@
       "source": "venue-data",
       "listing_url": "https://app.discotech.me/new-york/bossa-nova",
       "artist": "Latin Rave Culture with DJ Guari, Angie Rey, Refilled, Nas Leber",
-      "id": 108
+      "id": 128
     },
     {
       "title": "Bashment Sound + Friends",
@@ -2605,15 +3049,15 @@
       "end": null,
       "url": "https://posh.vip/f/ef864?t=cevenue112726",
       "genre": "Reggae & Caribbean",
-      "subgenre": "Bashment",
+      "subgenre": "bashment",
       "price": null,
       "program": [],
-      "description": "Bashment-style party with friends, open to all 21 and up.",
+      "description": "Caribbean-style party with bashment sounds and friends, open to guests 21 and up.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.cafeerzulie.com/events",
       "artist": "Bashment Sound + Friends",
-      "id": 109,
+      "id": 129,
       "venue_url": "https://www.cafeerzulie.com/events"
     },
     {
@@ -2621,7 +3065,7 @@
       "performers": [
         "VINNIE SPERRAZZA",
         "David Berkman",
-        "Rick Rosato"
+        "RIck Rosato"
       ],
       "venue": "Close Up",
       "address": "154 Orchard St, New York, NY 10002",
@@ -2635,12 +3079,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Brooklyn jazz drummer Vinnie Sperrazza leads a trio with pianist David Berkman and bassist Rick Rosato.",
+      "description": "Jazz trio led by drummer Vinnie Sperrazza with pianist David Berkman and bassist Rick Rosato.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.closeupnyc.com/calendar",
-      "artist": "VINNIE SPERRAZZA, David Berkman, Rick Rosato",
-      "id": 110
+      "artist": "VINNIE SPERRAZZA, David Berkman, RIck Rosato",
+      "id": 130
     },
     {
       "title": "Triple D's: Fucksgiving Chosen Fam Edition",
@@ -2653,22 +3097,22 @@
       "time": "10:00 PM",
       "end": "3:00 AM",
       "url": "https://clubcummingnyc.com/schedule/2026/11/27/triple-ds-fucksgiving-chosen-fam-edition",
-      "genre": "Pop",
+      "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Thanksgiving-themed party at Club Cumming running from 10:00 PM to 3:00 AM.",
+      "description": "Club night running from 10 PM to 3 AM at Club Cumming.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://clubcummingnyc.com/",
       "artist": "Triple D's: Fucksgiving Chosen Fam Edition",
-      "id": 111
+      "id": 131
     },
     {
       "title": "STAMPED: AYA X FRIENDS - BROOKLYN, NY - BLACK FRIDAY",
       "performers": [
-        "AYA",
-        "FRIENDS"
+        "Aya",
+        "Friends"
       ],
       "venue": "Elsewhere",
       "address": "599 Johnson Ave, Brooklyn, NY 11237",
@@ -2677,17 +3121,18 @@
       "date": "2026-11-27",
       "time": "10:00 PM",
       "end": null,
-      "url": "https://www.elsewhere.club/events/2002830085701",
+      "url": "https://www.eventbrite.com/e/stamped-aya-x-friends-brooklyn-ny-black-friday-tickets-2002830085701",
       "genre": "Electronic & DJ",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Club night at Elsewhere's full venue, Black Friday edition, with Aya and friends.",
+      "description": "Club night at Elsewhere's full venue featuring Aya and friends on Black Friday.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.elsewhere.club/events",
-      "artist": "AYA, FRIENDS",
-      "id": 112
+      "artist": "Aya, Friends",
+      "id": 132,
+      "venue_url": "https://www.elsewhere.club/events"
     },
     {
       "title": "Bay Day w/ Baydriana — Friends and Lovers",
@@ -2700,7 +3145,7 @@
       "time": "10:00 PM",
       "end": "4:00 AM",
       "url": "https://www.fnlbk.com/upcoming/2026/11/27/bay-day",
-      "genre": "Hip-Hop & Rap",
+      "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
@@ -2709,7 +3154,7 @@
       "source": "venue-data",
       "listing_url": "https://www.fnlbk.com/upcoming/2026/11/27/bay-day",
       "artist": "Bay Day w/ Baydriana — Friends and Lovers",
-      "id": 113
+      "id": 133
     },
     {
       "title": "House music DJs",
@@ -2731,7 +3176,7 @@
       "source": "venue-regular",
       "listing_url": "https://nyctourism.com/nightlife/gabriela/",
       "artist": "House music DJs",
-      "id": 114
+      "id": 134
     },
     {
       "title": "Eli Fola, Hyenah, & WEMI in the Onyx Room",
@@ -2757,7 +3202,7 @@
       "source": "venue-ai",
       "listing_url": "https://calendar.houseofyes.org/",
       "artist": "Eli Fola, Hyenah, WEMI",
-      "id": 115
+      "id": 135
     },
     {
       "title": "Slumber Party: Griffin Maxwell Brooks & ilykimchi",
@@ -2777,12 +3222,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Dance party with two performers at the venue.",
+      "description": "Dance party with two performers at House of Yes.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://calendar.houseofyes.org/",
       "artist": "Griffin Maxwell Brooks, ilykimchi",
-      "id": 116
+      "id": 136
     },
     {
       "title": "Yallah Habibi Crew (21+)",
@@ -2805,7 +3250,7 @@
       "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Yalla Habibi Crew",
-      "id": 117,
+      "id": 137,
       "venue_url": "https://www.irvingplaza.com/shows"
     },
     {
@@ -2828,7 +3273,7 @@
       "source": "venue-data",
       "listing_url": "https://app.discotech.me/new-york/mood-ring",
       "artist": "Waddle Presents Le Kacang",
-      "id": 118
+      "id": 138
     },
     {
       "title": "Tommy Barlow + Patrick Holland",
@@ -2851,7 +3296,7 @@
       "image": "https://s1.ticketm.net/dam/c/2e8/33262bfb-cb4b-4d42-bf4e-0134d992b2e8_106361_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Tommy Barlow",
-      "id": 119
+      "id": 139
     },
     {
       "title": "Club Night: AceMo & Swami Sound (live), GENG PTP, Princess Peggie",
@@ -2873,12 +3318,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Club night at Nowadays with live AceMo and Swami Sound set plus GENG PTP and Princess Peggie.",
+      "description": "Club night at Nowadays featuring AceMo and Swami Sound live, plus GENG PTP and Princess Peggie.",
       "image": null,
       "source": "newsletter",
       "listing_url": "https://ra.co/clubs/105873",
       "artist": "AceMo, Swami Sound, GENG PTP",
-      "id": 120,
+      "id": 140,
       "venue_url": "https://ra.co/clubs/105873"
     },
     {
@@ -2897,7 +3342,7 @@
       "end": "4:00 AM",
       "url": "https://pacha-nyc.com/event/guy-gerber-27-11-2026",
       "genre": "Electronic & DJ",
-      "subgenre": "Techno",
+      "subgenre": "House & Techno",
       "price": "$40",
       "program": [],
       "description": "Club night headlined by Guy Gerber with Heron Preston, Cameron Jack and FIFI.",
@@ -2905,7 +3350,7 @@
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://pacha-nyc.com/",
       "artist": "Heron Preston, Cameron Jack, FIFI",
-      "id": 121
+      "id": 141
     },
     {
       "title": "FRUIT GWENDOLYN",
@@ -2917,17 +3362,17 @@
       "date": "2026-11-27",
       "time": "10:00 PM",
       "end": null,
-      "url": "https://www.petescandystore.com/calendar",
+      "url": "https://www.petescandystore.com/",
       "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Listed as tonight's 10:00pm show at Pete's Candy Store.",
+      "description": null,
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.petescandystore.com/",
       "artist": "FRUIT GWENDOLYN",
-      "id": 122
+      "id": 142
     },
     {
       "title": "Christmas Spectacular Starring The Radio City Rockettes",
@@ -2952,7 +3397,7 @@
       "listing_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "venue_url": "https://www.msg.com/radio-city-music-hall/calendar?venue=radio-city-music-hall&venues=KovZpZAE7vdA",
       "artist": "The Radio City Rockettes",
-      "id": 123
+      "id": 143
     },
     {
       "title": "REFUGE FRIDAY: PATRICE BÄUMEL, SIMON VUARAMBON",
@@ -2969,7 +3414,7 @@
       "end": "9:00 AM",
       "url": "https://www.eventbrite.com/e/refuge-friday-patrice-baumel-simon-vuarambon-tickets-2003559298797",
       "genre": "Electronic & DJ",
-      "subgenre": "Techno",
+      "subgenre": "House & Techno",
       "price": "$25 – $55",
       "program": [],
       "description": "Friday night dance club party at Refuge with two DJs, running 10:00 PM to 9:00 AM.",
@@ -2977,7 +3422,7 @@
       "source": "venue-ai",
       "listing_url": "https://www.refuge.nyc/#/events",
       "artist": "Patrice Bäumel, Simon Vuarambon",
-      "id": 124,
+      "id": 144,
       "venue_url": "https://www.refuge.nyc/#/events"
     },
     {
@@ -3000,9 +3445,9 @@
       "description": null,
       "image": "https://dice-media.imgix.net/attachments/2026-11-24/232e8c74-042e-44ed-bc67-f9c29419ac65.jpg?rect=0%2C400%2C2000%2C1200",
       "source": "venue-data",
-      "listing_url": "https://dice.fm/event/mxn7kw-luciid-elivvate-me-27th-nov-silo-brooklyn-brooklyn-tickets?_branch_match_id=1655048916074702476&utm_medium=partners_api&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1c9JSjRPMUgxTDS0SLSvK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQBf5wp3OwAAAA%3D%3D&lng=en-US",
+      "listing_url": "https://dice.fm/event/mxn7kw-luciid-elivvate-me-27th-nov-silo-brooklyn-brooklyn-tickets?_branch_match_id=1655052014635139599&utm_medium=partners_api&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1c9JSjRPMUgxTDS0SLSvK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQBf5wp3OwAAAA%3D%3D&lng=en-US",
       "artist": "Luciid",
-      "id": 125,
+      "id": 145,
       "venue_url": "https://www.silobrooklyn.com/"
     },
     {
@@ -3022,12 +3467,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Blues performer inspired by B.B. King, Albert King and Stevie Ray Vaughan, known for taking performances into the crowd.",
+      "description": "Blues performer SaRon Crenshaw, playing until 3 AM, known for taking his performance into the audience.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.terrablues.com/events",
       "artist": "SaRon Crenshaw",
-      "id": 126
+      "id": 146
     },
     {
       "title": "Girl Church hosted by Amelia Ritthaler",
@@ -3051,16 +3496,16 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": null,
+      "description": "Variety-style show hosted by Amelia Ritthaler with a lineup of guest performers.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://unionhallny.com/",
       "artist": "Rachel Coster, Jamie Linn Watson, Anne Lim",
-      "id": 127,
+      "id": 147,
       "venue_url": "https://unionhallny.com/"
     },
     {
-      "title": "JASON MORAN & THE BANDWAGON",
+      "title": "Jason Moran & The Bandwagon",
       "performers": [
         "Jason Moran",
         "Tarus Mateen",
@@ -3079,13 +3524,13 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jason Moran and his trio with a special guest play a multi-night run at the club.",
+      "description": "Jazz piano trio with a bass and voice special guest, running November 24 through 29 at the club.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://villagevanguard.com/",
-      "venue_url": "https://villagevanguard.com/",
       "artist": "Jason Moran, Tarus Mateen, Nasheet Waits",
-      "id": 128
+      "id": 148,
+      "venue_url": "https://villagevanguard.com/"
     },
     {
       "title": "Love Will Tear Us Apart",
@@ -3107,7 +3552,7 @@
       "source": "venue-data",
       "listing_url": "https://www.alphavillebk.com/",
       "artist": "Love Will Tear Us Apart",
-      "id": 129,
+      "id": 149,
       "venue_url": "https://www.alphavillebk.com/"
     },
     {
@@ -3127,13 +3572,13 @@
       "subgenre": "Jazz",
       "price": "$45.76 - $56.06",
       "program": [],
-      "description": "Vocal and jazz songbook show in the Jazz Club, ages 10+. Buy tickets link.",
+      "description": "Vocal and instrumental American songbook show in the Jazz Club room.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.birdlandjazz.com/",
       "venue_url": "https://www.birdlandjazz.com/tm-event/anderson-brothers-the-american-songbook-8/",
       "artist": "Anderson Brothers",
-      "id": 130
+      "id": 150
     },
     {
       "title": "Chief Adjuah",
@@ -3158,7 +3603,7 @@
       "listing_url": "https://www.bluenotejazz.com/nyc/shows/?list_view",
       "venue_url": "https://www.bluenotejazz.com/nyc/shows/?list_view",
       "artist": "Chief Xian aTunde Adjuah",
-      "id": 131
+      "id": 151
     },
     {
       "title": "Lezzie McGuire: Dykesgiving",
@@ -3171,7 +3616,7 @@
       "time": "10:30 PM",
       "end": "4:00 AM",
       "url": "https://dice.fm/event/lezzie-mcguire-dykesgiving-27th-nov-cmon-everybody-new-york-tickets",
-      "genre": "Hip-Hop & Rap",
+      "genre": "Other",
       "subgenre": null,
       "price": "$13.39",
       "program": [],
@@ -3180,7 +3625,7 @@
       "source": "venue-data",
       "listing_url": "https://www.cmoneverybody.com/events",
       "artist": "Lezzie McGuire: Dykesgiving",
-      "id": 132,
+      "id": 152,
       "venue_url": "https://www.cmoneverybody.com/events"
     },
     {
@@ -3202,14 +3647,14 @@
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "ticketmaster",
       "artist": "Grant Stewart Quartet",
-      "id": 133
+      "id": 153
     },
     {
       "title": "BILLY DRUMMOND TRIO",
       "performers": [
-        "BILLY DRUMMOND",
-        "TYLER BULLOCK",
-        "MARK LEWANDOWSKI"
+        "Billy Drummond",
+        "Tyler Bullock",
+        "Mark Lewandowski"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -3223,13 +3668,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Trio led by drummer Billy Drummond; second set of the evening.",
+      "description": "Trio led by drummer Billy Drummond, second set of the evening.",
       "image": "https://s1.ticketm.net/dam/a/3ca/d4e4956b-a199-4fec-8a75-0b30b333d3ca_776521_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34340-billy-drummond-trio/",
-      "artist": "BILLY DRUMMOND, TYLER BULLOCK, MARK LEWANDOWSKI",
-      "id": 134
+      "artist": "Billy Drummond, Tyler Bullock, Mark Lewandowski",
+      "id": 154
     },
     {
       "title": "BRANDON LEE QUINTET",
@@ -3252,13 +3697,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Jazz quintet with trumpet, trombone, piano, bass and drums; second set.",
+      "description": "Quintet set at Smalls, second of two sets on Friday night.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34436-brandon-lee-quintet/",
       "artist": "Brandon Lee, Willie Applewhite, Martha Kato",
-      "id": 135
+      "id": 155
     },
     {
       "title": "Babyboi: Home for the Holidays Fest — 3 Dollar bill",
@@ -3280,7 +3725,7 @@
       "source": "venue-data",
       "listing_url": "https://www.3dollarbillbk.com/rsvp/2026/11/27/babyboi-home-for-the-holidays-fest",
       "artist": "Babyboi: Home for the Holidays Fest — 3 Dollar bill",
-      "id": 136
+      "id": 156
     },
     {
       "title": "RON JACKSON QUARTET",
@@ -3297,12 +3742,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Jazz quartet performance at The Django, late set on Friday night.",
+      "description": "Jazz quartet performance on Friday night at The Django, starting at 11 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thedjangonyc.com/",
       "artist": "RON JACKSON QUARTET",
-      "id": 137
+      "id": 157
     },
     {
       "title": "THANKSDIVA: A GAYGIVING PARTY",
@@ -3319,12 +3764,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night party event listed for Friday, November 27 at Market Hotel.",
+      "description": "A late-night party event with a giving theme, listed as a Friday night gathering.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.markethotel.org/calendar#/events",
       "artist": "THANKSDIVA: A GAYGIVING PARTY",
-      "id": 138
+      "id": 158
     },
     {
       "title": "ZACK MARTINO",
@@ -3341,12 +3786,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "DJ night at Nebula with Zack Martino listed as the performer.",
+      "description": "DJ night at Nebula with Zack Martino starting at 11 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.nebulanewyork.com/events",
       "artist": "ZACK MARTINO",
-      "id": 139,
+      "id": 159,
       "venue_url": "https://www.nebulanewyork.com/events"
     },
     {
@@ -3364,12 +3809,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Party featuring 2000s and 2010s music, doors at 11 PM.",
+      "description": "Themed dance party featuring 2000s and 2010s music, doors at 11:00 PM.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://sobs.com/",
       "artist": "Y2K Party: 2000’s vs 2010’s",
-      "id": 140
+      "id": 160
     },
     {
       "title": "G Dali (Single Release Party), Alec, J Salazar and more + Special Guest TBA",
@@ -3390,12 +3835,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Single release party for G Dali with DJs Alec and J Salazar plus a special guest to be announced.",
+      "description": "Single release party with DJs G Dali, Alec, J Salazar and a special guest to be announced.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.somewherenowherenyc.com/",
       "artist": "G Dali, Alec, J Salazar",
-      "id": 141
+      "id": 161
     },
     {
       "title": "Matt Pinto",
@@ -3412,12 +3857,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late show by Matt Pinto at the Bitter End.",
+      "description": "Late performance by Matt Pinto at The Bitter End.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://bitterend.com/#/events",
       "artist": "Matt Pinto",
-      "id": 142
+      "id": 162
     },
     {
       "title": "Alyssa Jolee",
@@ -3434,12 +3879,12 @@
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Late-night show at The Brooklyn Monarch with performer Alyssa Jolee.",
+      "description": "Late-night show at The Brooklyn Monarch featuring Alyssa Jolee.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.thebrooklynmonarch.com/shows",
       "artist": "Alyssa Jolee",
-      "id": 143
+      "id": 163
     },
     {
       "title": "Reggaeton Fridays @ The Delancey",
@@ -3452,7 +3897,7 @@
       "time": "11:00 PM",
       "end": null,
       "url": "https://thedelancey.com/",
-      "genre": "Hip-Hop & Rap",
+      "genre": "Other",
       "subgenre": null,
       "price": null,
       "program": [],
@@ -3461,7 +3906,7 @@
       "source": "venue-data",
       "listing_url": "https://thedelancey.com/",
       "artist": "Reggaeton Fridays @ The Delancey",
-      "id": 144
+      "id": 164
     },
     {
       "title": "ALEXANDRA RIDOUT - Evan Main - Thorbjorn Stefansson - David Sirkis - Set and Session",
@@ -3477,23 +3922,23 @@
       "lng": -73.98866,
       "date": "2026-11-27",
       "time": "11:30 PM",
-      "end": null,
+      "end": "2:00 AM",
       "url": "https://www.closeupnyc.com/calendar",
       "genre": "Jazz",
       "subgenre": null,
       "price": null,
       "program": [],
-      "description": "Trumpeter Alexandra Ridout's late-night set with pianist Evan Main, bassist Thorbjorn Stefansson and drummer David Sirkis, followed by a jam session.",
+      "description": "Late-night set by trumpeter Alexandra Ridout with a jam session to follow, part of her residency.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.closeupnyc.com/calendar",
       "artist": "ALEXANDRA RIDOUT, Evan Main, Thorbjorn Stefansson",
-      "id": 145
+      "id": 165
     },
     {
       "title": "ROUND MIDNIGHT SOLO PIANO WITH ANDREA DOMENICI",
       "performers": [
-        "ANDREA DOMENICI"
+        "Andrea Domenici"
       ],
       "venue": "Mezzrow",
       "address": "163 W 10th St, New York, NY 10014",
@@ -3507,13 +3952,13 @@
       "subgenre": "Jazz",
       "price": "$43.70",
       "program": [],
-      "description": "Solo piano performance by Andrea Domenici running past midnight.",
+      "description": "Solo piano set by Andrea Domenici running past midnight.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34507-round-midnight-solo-piano-with-andrea-domenici/",
-      "artist": "ANDREA DOMENICI",
-      "id": 146
+      "artist": "Andrea Domenici",
+      "id": 166
     },
     {
       "title": "KEN FOWSER QUINTET",
@@ -3536,13 +3981,13 @@
       "subgenre": "Jazz",
       "price": "$28",
       "program": [],
-      "description": "Late-night jazz quintet with tenor sax, trumpet, piano, bass and drums.",
+      "description": "Quintet performance at Smalls running late Friday night into early Saturday.",
       "image": "https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RETINA_PORTRAIT_16_9.jpg",
       "source": "venue-ai+ticketmaster",
       "listing_url": "https://www.smallslive.com/",
       "venue_url": "https://www.smallslive.com/events/34438-ken-fowser-quintet/",
       "artist": "Ken Fowser, Mejedi Owusu, Anthony Wonsey",
-      "id": 147
+      "id": 167
     },
     {
       "title": "DJ Alino",
@@ -3559,12 +4004,12 @@
       "subgenre": "Afrobeats & Amapiano",
       "price": null,
       "program": [],
-      "description": "DJ set with Afrobeat, Afrofusion and world music styles at Silvana's downstairs space.",
+      "description": "DJ set featuring Afrobeat, Afrofusion and world music at the Downstairs speakeasy.",
       "image": null,
       "source": "venue-ai",
       "listing_url": "https://www.silvana-nyc.com/",
       "artist": "DJ Alino",
-      "id": 148
+      "id": 168
     }
   ]
 }

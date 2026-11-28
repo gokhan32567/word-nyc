@@ -1,19 +1,19 @@
 {
  "date": "2026-11-27",
- "generated": "2026-11-27T21:24:50-05:00",
+ "generated": "2026-11-27T21:37:16-05:00",
  "totals": {
   "venues": 223,
-  "shows": 148,
-  "ok": 66,
+  "shows": 168,
+  "ok": 67,
   "none-tonight": 126,
-  "blocked": 26,
+  "blocked": 25,
   "error": 2,
   "robots": 1,
   "no-location": 0,
   "skipped": 2
  },
  "shows_by_source": {
-  "venue-ai": 112,
+  "venue-ai": 137,
   "ticketmaster": 39,
   "venue-data": 21,
   "venue-regular": 5,
@@ -21,17 +21,16 @@
  },
  "ai": {
   "nightly_missing": [
-   "Village Vanguard",
    "Smoke Jazz Club",
    "The Iridium",
    "Zinc Bar",
    "Arthur's Tavern",
    "Bar LunÀtico"
   ],
-  "calls": 178,
-  "input_tokens": 2022548,
-  "output_tokens": 61313,
-  "cost_usd": 0.2329
+  "calls": 179,
+  "input_tokens": 2025086,
+  "output_tokens": 63125,
+  "cost_usd": 0.2341
  },
  "venues": [
   {
@@ -146,20 +145,6 @@
    "examples": []
   },
   {
-   "name": "BAM",
-   "url": "https://www.bam.org/",
-   "read_url": "https://www.bam.org/",
-   "method": "AI",
-   "status": "none-tonight",
-   "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    12229,
-    3064
-   ],
-   "examples": []
-  },
-  {
    "name": "Bar Freda",
    "url": "https://www.barfreda.com/",
    "read_url": "https://www.barfreda.com/",
@@ -180,10 +165,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× date quote not found on page",
+   "detail": "calendar; dropped 3× date quote not found on page",
    "tokens": [
     27071,
-    1201
+    1756
    ],
    "examples": [
     {
@@ -198,6 +183,13 @@
      "start_time": "10:15 PM",
      "date_evidence": "NOV 27 / November 27, 2026 9:00 PM – 11:30 PM",
      "time_evidence": "TWO SETS: 9PM & 10:15PM",
+     "why": "date quote not found on page"
+    },
+    {
+     "title": "jorge roeder new quartet ft. philip dizack | dan blake | richie barshay",
+     "start_time": "9:00 PM",
+     "date_evidence": "1 (November 2026 calendar entry) 'jorge roeder new quartet ft. philip dizack'",
+     "time_evidence": "9:00 PM – 11:30 PM",
      "why": "date quote not found on page"
     }
    ]
@@ -225,7 +217,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    11228,
+    11181,
     128
    ],
    "examples": []
@@ -267,7 +259,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    22706,
+    23049,
     136
    ],
    "examples": []
@@ -291,7 +283,7 @@
    "detail": "calendar",
    "tokens": [
     12756,
-    128
+    132
    ],
    "examples": []
   },
@@ -375,6 +367,15 @@
    "examples": []
   },
   {
+   "name": "Brooklyn Music Kitchen",
+   "url": "https://www.brooklynmusickitchen.com/",
+   "read_url": "https://brooklynmusickitchen.com/",
+   "method": null,
+   "status": "blocked",
+   "shows": 0,
+   "detail": "HTTP 403"
+  },
+  {
    "name": "Brooklyn Paramount",
    "url": "https://www.brooklynparamount.com/shows",
    "read_url": "https://www.brooklynparamount.com/shows",
@@ -392,7 +393,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    23308,
+    23209,
     128
    ],
    "examples": []
@@ -418,10 +419,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× not a public performance",
+   "detail": "calendar; dropped 3× not a public performance; +1 on second look; -2 on final check",
    "tokens": [
-    11875,
-    488
+    12972,
+    1149
    ],
    "examples": [
     {
@@ -432,11 +433,28 @@
      "why": "not a public performance"
     },
     {
+     "title": "Self-Guided Tours",
+     "start_time": "9:30 AM",
+     "date_evidence": "Today, Friday, November 27",
+     "time_evidence": "9:30am - 5pm",
+     "why": "not a public performance"
+    },
+    {
      "title": "Daily Eucharist Service",
      "start_time": "12:15 PM",
-     "date_evidence": "Friday, November 27, 2026",
-     "time_evidence": "12:15 PM - 1 PM",
+     "date_evidence": "Today, Friday, November 27",
+     "time_evidence": "12:15pm - 1pm",
      "why": "not a public performance"
+    },
+    {
+     "title": "Highlights Tour",
+     "start_time": "1:00 PM",
+     "why": "removed on final check: not_a_performance: \"1pm - 2pm Highlights Tour\""
+    },
+    {
+     "title": "Daily Eucharist Service",
+     "start_time": "12:15 PM",
+     "why": "removed on final check: not_a_performance: \"12:15pm - 1pm Daily Eucharist Service\""
     }
    ]
   },
@@ -449,7 +467,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    15467,
+    15762,
     64
    ],
    "examples": []
@@ -639,10 +657,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "not_a_calendar",
+   "detail": "calendar",
    "tokens": [
     9858,
-    132
+    128
    ],
    "examples": []
   },
@@ -670,13 +688,13 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     7885,
-    285
+    252
    ],
    "examples": [
     {
      "title": "Messiah Concert Reception",
      "start_time": "5:30 PM",
-     "date_evidence": "DEC\n4\n\nCommunity Life\n\nMessiah Concert Reception\n\nFriday, 5:30 PM ET",
+     "date_evidence": "Friday, 5:30 PM ET",
      "time_evidence": "Friday, 5:30 PM ET",
      "why": "not a public performance"
     }
@@ -762,7 +780,7 @@
    "detail": "calendar; dropped 2× time quote not found on page; event page gave no time (blocked)",
    "tokens": [
     7967,
-    983
+    929
    ],
    "examples": [
     {
@@ -784,14 +802,14 @@
   {
    "name": "Grace Church",
    "url": "https://gracechurchnyc.org/",
-   "read_url": "https://gracechurchnyc.org/worship/live/",
+   "read_url": "https://gracechurchnyc.org/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
    "detail": "no_events_tonight",
    "tokens": [
-    14262,
-    132
+    6161,
+    68
    ],
    "examples": []
   },
@@ -892,7 +910,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    16192,
+    16309,
     64
    ],
    "examples": []
@@ -904,12 +922,20 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     10247,
-    331
+    453
    ],
-   "examples": []
+   "examples": [
+    {
+     "title": "WYNTON MARSALIS QUINTET",
+     "start_time": "",
+     "date_evidence": "JAN 7-9",
+     "time_evidence": "",
+     "why": "not a public performance"
+    }
+   ]
   },
   {
    "name": "Joe's Pub",
@@ -929,7 +955,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    13297,
+    13396,
     64
    ],
    "examples": []
@@ -941,10 +967,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar",
+   "detail": "no_events_tonight",
    "tokens": [
     7726,
-    64
+    68
    ],
    "examples": []
   },
@@ -999,7 +1025,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    6816,
+    6875,
     64
    ],
    "examples": []
@@ -1224,7 +1250,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    23396,
+    23612,
     136
    ],
    "examples": []
@@ -1293,7 +1319,7 @@
    "detail": "sent Friday, November 6, 2026",
    "tokens": [
     17136,
-    576
+    574
    ],
    "examples": [
     {
@@ -1315,12 +1341,12 @@
    "detail": "sent Thursday, November 5, 2026",
    "tokens": [
     17099,
-    544
+    622
    ],
    "examples": [
     {
      "title": "Club Night",
-     "start_time": "",
+     "start_time": "Unknown",
      "date_evidence": "November 27 / Club Night: AceMo & Swami Sound (live), GENG PTP, Princess Peggie",
      "time_evidence": "",
      "why": "time quote not found on page"
@@ -1334,10 +1360,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× listed at another venue",
+   "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     8128,
-    730
+    495
    ],
    "examples": [
     {
@@ -1345,13 +1371,6 @@
      "start_time": "7:00 PM",
      "date_evidence": "Friday November 27",
      "time_evidence": "7-11pm ILHAN SELECTS",
-     "why": "listed at another venue"
-    },
-    {
-     "title": "DJ NO SHAME",
-     "start_time": "11:00 PM",
-     "date_evidence": "Friday November 27",
-     "time_evidence": "11pm-4am DJ NO SHAME",
      "why": "listed at another venue"
     }
    ]
@@ -1380,7 +1399,7 @@
    "detail": "calendar; dropped 2× listed in another city, 2× listed at another venue",
    "tokens": [
     15769,
-    877
+    868
    ],
    "examples": [
     {
@@ -1416,7 +1435,7 @@
    "detail": "calendar; dropped 1× listed at another venue",
    "tokens": [
     12242,
-    647
+    726
    ],
    "examples": [
     {
@@ -1437,7 +1456,7 @@
    "shows": 0,
    "detail": "not_a_calendar",
    "tokens": [
-    4657,
+    4647,
     68
    ],
    "examples": []
@@ -1455,15 +1474,10 @@
    "name": "Park Avenue Armory",
    "url": "https://www.armoryonpark.org/",
    "read_url": "https://www.armoryonpark.org/",
-   "method": "AI",
-   "status": "none-tonight",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "calendar",
-   "tokens": [
-    10468,
-    132
-   ],
-   "examples": []
+   "detail": "HTTP 403"
   },
   {
    "name": "Pianos",
@@ -1489,7 +1503,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
    "tokens": [
     9360,
-    453
+    426
    ],
    "examples": [
     {
@@ -1553,7 +1567,7 @@
    "detail": "calendar; dropped 1× not a public performance; +1 on second look; -1 on final check",
    "tokens": [
     6835,
-    753
+    735
    ],
    "examples": [
     {
@@ -1566,7 +1580,7 @@
     {
      "title": "Binti, Sumthing Orange, and Joseph Komari",
      "start_time": "7:00 PM",
-     "why": "removed on final check: cancelled_or_postponed: \"Binti, Sumthing Orange, and Joseph Komari\nPurgatory\nNew York\nFri 27 Nov ― 7:00pm\nCANCELLED\""
+     "why": "removed on final check: cancelled_or_postponed: \"Binti, Sumthing Orange, and Joseph Komari Purgatory New York Fri 27 Nov ― 7:00pm CANCELLED\""
     }
    ]
   },
@@ -1631,7 +1645,7 @@
    "detail": "calendar",
    "tokens": [
     16297,
-    128
+    132
    ],
    "examples": []
   },
@@ -1656,10 +1670,10 @@
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "no_events_tonight",
+   "detail": "calendar",
    "tokens": [
-    5227,
-    68
+    6017,
+    64
    ],
    "examples": []
   },
@@ -1673,7 +1687,7 @@
    "detail": "calendar; dropped 1× not a public performance",
    "tokens": [
     16809,
-    343
+    350
    ],
    "examples": [
     {
@@ -1739,11 +1753,11 @@
   {
    "name": "Sid Gold's Request Room",
    "url": "https://www.sidgolds.com/",
-   "read_url": "https://www.sidgolds.com/.well-known/sgcaptcha/?r=%2F&y=ipc:100.62.139.158:1795832086.288",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://sidgolds.com/detroit/events/",
+   "method": "event data",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 202"
+   "detail": "left out 1 non-performance listing"
   },
   {
    "name": "Sistas' Place",
@@ -1799,11 +1813,16 @@
   {
    "name": "St. Ann & the Holy Trinity",
    "url": "https://www.stannholytrinity.org/",
-   "read_url": "https://www.stannholytrinity.org/.well-known/sgcaptcha/?r=%2F&y=ipc:100.62.139.158:1795832185.058",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://www.stannholytrinity.org/",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 202"
+   "detail": "calendar",
+   "tokens": [
+    8338,
+    132
+   ],
+   "examples": []
   },
   {
    "name": "St. Bartholomew's Church",
@@ -1815,7 +1834,7 @@
    "detail": "calendar; dropped 2× not a public performance",
    "tokens": [
     9612,
-    463
+    495
    ],
    "examples": [
     {
@@ -1827,9 +1846,9 @@
     },
     {
      "title": "11 am Choral Eucharist (In-Person and Livestream)",
-     "start_time": "",
+     "start_time": "11:00 AM",
      "date_evidence": "Friday, Nov 27, 2026",
-     "time_evidence": "",
+     "time_evidence": "11 am Choral Eucharist (In-Person and Livestream)",
      "why": "not a public performance"
     }
    ]
@@ -1844,7 +1863,7 @@
    "detail": "calendar; dropped 1× time quote not found on page",
    "tokens": [
     16693,
-    463
+    471
    ],
    "examples": [
     {
@@ -1860,15 +1879,10 @@
    "name": "St. Patrick's Cathedral",
    "url": "https://saintpatrickscathedral.org/",
    "read_url": "https://saintpatrickscathedral.org/",
-   "method": "AI",
-   "status": "none-tonight",
+   "method": null,
+   "status": "blocked",
    "shows": 0,
-   "detail": "not_a_calendar",
-   "tokens": [
-    9984,
-    132
-   ],
-   "examples": []
+   "detail": "HTTP 403"
   },
   {
    "name": "Sunnyvale",
@@ -1894,7 +1908,7 @@
    "detail": "calendar; dropped 2× start time not in time quote; event page gave no time (none-tonight)",
    "tokens": [
     25926,
-    1155
+    980
    ],
    "examples": [
     {
@@ -1950,8 +1964,8 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    23221,
-    319
+    23232,
+    128
    ],
    "examples": []
   },
@@ -1974,7 +1988,7 @@
    "detail": "calendar; dropped 1× date quote not found on page",
    "tokens": [
     5790,
-    433
+    473
    ],
    "examples": [
     {
@@ -2102,7 +2116,7 @@
    "detail": "not_a_calendar",
    "tokens": [
     8675,
-    132
+    136
    ],
    "examples": []
   },
@@ -2129,7 +2143,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    19450,
+    19087,
     64
    ],
    "examples": []
@@ -2143,7 +2157,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    21808,
+    21812,
     128
    ],
    "examples": []
@@ -2174,40 +2188,16 @@
   {
    "name": "United Palace",
    "url": "https://www.unitedpalace.org/",
-   "read_url": "https://www.unitedpalace.org/.well-known/sgcaptcha/?r=%2F&y=ipc:100.62.139.158:1795832368.703",
-   "method": null,
-   "status": "blocked",
-   "shows": 0,
-   "detail": "HTTP 202"
-  },
-  {
-   "name": "Village Vanguard",
-   "url": "https://villagevanguard.com/",
-   "read_url": "https://villagevanguard.com/",
+   "read_url": "https://unitedpalace.org/soniclive/",
    "method": "AI",
    "status": "none-tonight",
    "shows": 0,
-   "detail": "calendar; dropped 2× time quote not found on page; event page gave no time (none-tonight); event page gave no time (none-tonight)",
+   "detail": "single_event",
    "tokens": [
-    7786,
-    585
+    7356,
+    128
    ],
-   "examples": [
-    {
-     "title": "JASON MORAN & THE BANDWAGON",
-     "start_time": "8:00 PM",
-     "date_evidence": "NOVEMBER 24 ‑ NOVEMBER 29",
-     "time_evidence": "Sets are nightly at 8 PM and 10 PM.",
-     "why": "time quote not found on page"
-    },
-    {
-     "title": "JASON MORAN & THE BANDWAGON",
-     "start_time": "10:00 PM",
-     "date_evidence": "NOVEMBER 24 ‑ NOVEMBER 29",
-     "time_evidence": "Sets are nightly at 8 PM and 10 PM.",
-     "why": "time quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Warsaw",
@@ -2241,7 +2231,7 @@
    "shows": 0,
    "detail": "calendar",
    "tokens": [
-    5884,
+    5942,
     64
    ],
    "examples": []
@@ -2272,11 +2262,24 @@
   {
    "name": "Zinc Bar",
    "url": "https://www.zincbar.com/calendar/",
-   "read_url": "https://www.zincbar.com/.well-known/sgcaptcha/?r=%2Fcalendar%2F&y=ipr:100.62.139.158:1795832044.842",
-   "method": null,
-   "status": "blocked",
+   "read_url": "https://www.zincbar.com/calendar/",
+   "method": "AI",
+   "status": "none-tonight",
    "shows": 0,
-   "detail": "HTTP 202"
+   "detail": "calendar; dropped 1× time quote not found on page; event page gave no time (none-tonight)",
+   "tokens": [
+    9905,
+    489
+   ],
+   "examples": [
+    {
+     "title": "NICK BIELLO QUINTET",
+     "start_time": "",
+     "date_evidence": "November 27, 2026",
+     "time_evidence": "",
+     "why": "time quote not found on page"
+    }
+   ]
   },
   {
    "name": "3 Dollar Bill",
@@ -2288,13 +2291,13 @@
    "detail": "calendar; dropped 1× start time not in time quote; +1 from event page https://www.3dollarbillbk.com/rsvp/2026/11/27/babyboi-home-for-the-holidays-fest",
    "tokens": [
     24254,
-    651
+    659
    ],
    "examples": [
     {
      "title": "BABYBOI: HOME FOR THE HOLIDAYS FEST",
      "start_time": "11:00 PM",
-     "date_evidence": "Fri, Nov 27, 202611:00 PM  Sun, Nov 29, 2026",
+     "date_evidence": "Fri, Nov 27, 202611:00 PM  Sun, Nov 29, 20264:00 AM",
      "time_evidence": "Fri, Nov 27, 202611:00 PM  Sun, Nov 29, 20264:00 AM",
      "why": "start time not in time quote"
     }
@@ -2307,20 +2310,12 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× date quote not found on page; +1 on second look",
+   "detail": "calendar",
    "tokens": [
-    15598,
-    798
+    15551,
+    674
    ],
-   "examples": [
-    {
-     "title": "Right Person, Wrong Time: Musical Theatre Songs About Missed Connections",
-     "start_time": "9:30 PM",
-     "date_evidence": "NOV\n27\nRight Person, Wrong Time: Musical Theatre Songs About Missed Connections\n9:30pm",
-     "time_evidence": "9:30pm",
-     "why": "date quote not found on page"
-    }
-   ]
+   "examples": []
   },
   {
    "name": "Alphaville",
@@ -2341,7 +2336,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://wl.eventim.us/event/BABY-DANCE/712335?afflky=BabysAllRightBrooklyn",
    "tokens": [
     6794,
-    473
+    466
    ],
    "examples": [
     {
@@ -2354,6 +2349,20 @@
    ]
   },
   {
+   "name": "BAM",
+   "url": "https://www.bam.org/",
+   "read_url": "https://www.bam.org/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 24,
+   "detail": "calendar; +18 on second look",
+   "tokens": [
+    13802,
+    4351
+   ],
+   "examples": []
+  },
+  {
    "name": "Bar Bayeux",
    "url": "https://www.barbayeux.com/",
    "read_url": "https://www.barbayeux.com/jazz",
@@ -2362,8 +2371,8 @@
    "shows": 2,
    "detail": "calendar; dropped 1× start time not in time quote",
    "tokens": [
-    11783,
-    1298
+    11747,
+    1347
    ],
    "examples": [
     {
@@ -2382,10 +2391,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; dropped 1× not a public performance",
+   "detail": "calendar; dropped 1× date quote is not tonight",
    "tokens": [
     19131,
-    1073
+    856
    ],
    "examples": [
     {
@@ -2393,7 +2402,7 @@
      "start_time": "4:00 PM",
      "date_evidence": "Sat, Nov 28 2026",
      "time_evidence": "Sat, Nov 28 2026 4:00PM - 5:30PM",
-     "why": "not a public performance"
+     "why": "date quote is not tonight"
     }
    ]
   },
@@ -2407,7 +2416,7 @@
    "detail": "calendar",
    "tokens": [
     5435,
-    708
+    702
    ],
    "examples": []
   },
@@ -2420,8 +2429,8 @@
    "shows": 5,
    "detail": "calendar",
    "tokens": [
-    12721,
-    1497
+    12758,
+    1405
    ],
    "examples": []
   },
@@ -2435,7 +2444,7 @@
    "detail": "calendar",
    "tokens": [
     32165,
-    689
+    687
    ],
    "examples": []
   },
@@ -2458,18 +2467,9 @@
    "detail": "calendar",
    "tokens": [
     9942,
-    433
+    422
    ],
    "examples": []
-  },
-  {
-   "name": "Brooklyn Music Kitchen",
-   "url": "https://www.brooklynmusickitchen.com/",
-   "read_url": "https://brooklynmusickitchen.com/",
-   "method": "WordPress calendar",
-   "status": "ok",
-   "shows": 1,
-   "detail": null
   },
   {
    "name": "C'mon Everybody",
@@ -2490,7 +2490,7 @@
    "detail": "calendar",
    "tokens": [
     7056,
-    586
+    622
    ],
    "examples": []
   },
@@ -2504,7 +2504,7 @@
    "detail": "calendar",
    "tokens": [
     16563,
-    459
+    480
    ],
    "examples": []
   },
@@ -2518,7 +2518,7 @@
    "detail": "calendar",
    "tokens": [
     15444,
-    380
+    414
    ],
    "examples": []
   },
@@ -2540,7 +2540,7 @@
    "shows": 1,
    "detail": "not_a_calendar; regular night from venues.json",
    "tokens": [
-    6212,
+    6434,
     136
    ],
    "examples": []
@@ -2555,7 +2555,7 @@
    "detail": "calendar",
    "tokens": [
     13116,
-    400
+    407
    ],
    "examples": []
   },
@@ -2565,11 +2565,11 @@
    "read_url": "https://www.closeupnyc.com/calendar",
    "method": "AI",
    "status": "ok",
-   "shows": 3,
+   "shows": 2,
    "detail": "calendar",
    "tokens": [
-    15175,
-    1030
+    15101,
+    747
    ],
    "examples": []
   },
@@ -2583,7 +2583,7 @@
    "detail": "calendar",
    "tokens": [
     31537,
-    648
+    641
    ],
    "examples": []
   },
@@ -2597,7 +2597,7 @@
    "detail": "calendar",
    "tokens": [
     13380,
-    654
+    662
    ],
    "examples": []
   },
@@ -2610,8 +2610,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    14059,
-    388
+    14258,
+    394
    ],
    "examples": []
   },
@@ -2625,7 +2625,7 @@
    "detail": "calendar",
    "tokens": [
     14670,
-    414
+    410
    ],
    "examples": []
   },
@@ -2639,7 +2639,7 @@
    "detail": "calendar",
    "tokens": [
     24224,
-    511
+    484
    ],
    "examples": []
   },
@@ -2653,13 +2653,13 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.fnlbk.com/upcoming/2026/11/27/bay-day",
    "tokens": [
     13220,
-    481
+    509
    ],
    "examples": [
     {
      "title": "Bay Day w/ Baydriana",
      "start_time": "",
-     "date_evidence": "NOV 27 TO NOV 28",
+     "date_evidence": "NOV 27 TO NOV 28 Bay Day w/ Baydriana",
      "time_evidence": "",
      "why": "time quote not found on page"
     }
@@ -2689,7 +2689,7 @@
    "detail": "calendar",
    "tokens": [
     5286,
-    399
+    398
    ],
    "examples": []
   },
@@ -2717,7 +2717,7 @@
    "detail": "calendar",
    "tokens": [
     12111,
-    823
+    821
    ],
    "examples": []
   },
@@ -2731,7 +2731,7 @@
    "detail": "calendar; +1 on second look",
    "tokens": [
     16642,
-    744
+    769
    ],
    "examples": []
   },
@@ -2744,8 +2744,8 @@
    "shows": 5,
    "detail": "calendar; dropped 3× time quote not found on page; event page gave no time (none-tonight); event page gave no time (none-tonight); event page gave no time (none-tonight)",
    "tokens": [
-    16381,
-    2749
+    16385,
+    2751
    ],
    "examples": [
     {
@@ -2804,7 +2804,7 @@
    "detail": "calendar",
    "tokens": [
     13897,
-    654
+    651
    ],
    "examples": []
   },
@@ -2818,7 +2818,7 @@
    "detail": "calendar",
    "tokens": [
     28702,
-    1391
+    1331
    ],
    "examples": []
   },
@@ -2840,8 +2840,8 @@
    "shows": 1,
    "detail": "calendar",
    "tokens": [
-    10778,
-    393
+    10954,
+    395
    ],
    "examples": []
   },
@@ -2855,7 +2855,7 @@
    "detail": "sent Wednesday, November 11, 2026",
    "tokens": [
     18726,
-    491
+    493
    ],
    "examples": []
   },
@@ -2869,7 +2869,7 @@
    "detail": "calendar",
    "tokens": [
     8809,
-    666
+    669
    ],
    "examples": []
   },
@@ -2906,7 +2906,7 @@
    "detail": "calendar",
    "tokens": [
     5160,
-    765
+    724
    ],
    "examples": []
   },
@@ -2920,7 +2920,7 @@
    "detail": "calendar",
    "tokens": [
     13819,
-    367
+    368
    ],
    "examples": []
   },
@@ -2948,7 +2948,7 @@
    "detail": "calendar",
    "tokens": [
     11985,
-    779
+    780
    ],
    "examples": []
   },
@@ -2976,7 +2976,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://link.dice.fm/lba7d0d1a18a",
    "tokens": [
     8386,
-    507
+    509
    ],
    "examples": [
     {
@@ -2998,7 +2998,7 @@
    "detail": "calendar",
    "tokens": [
     13584,
-    421
+    422
    ],
    "examples": []
   },
@@ -3012,7 +3012,7 @@
    "detail": "calendar",
    "tokens": [
     28657,
-    1653
+    1615
    ],
    "examples": []
   },
@@ -3026,7 +3026,7 @@
    "detail": "calendar",
    "tokens": [
     12341,
-    372
+    380
    ],
    "examples": []
   },
@@ -3040,7 +3040,7 @@
    "detail": "calendar",
    "tokens": [
     7510,
-    845
+    830
    ],
    "examples": []
   },
@@ -3054,7 +3054,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://sonyhall.com/shows/?eid=14925043",
    "tokens": [
     10673,
-    463
+    515
    ],
    "examples": [
     {
@@ -3076,7 +3076,7 @@
    "detail": "calendar",
    "tokens": [
     7457,
-    430
+    433
    ],
    "examples": []
   },
@@ -3090,7 +3090,7 @@
    "detail": "calendar",
    "tokens": [
     27531,
-    635
+    629
    ],
    "examples": []
   },
@@ -3104,7 +3104,7 @@
    "detail": "calendar; dropped 1× time quote not found on page; +1 from event page https://www.terraza7.com/detalles-y-registro/helio-alves-trio-brazilian-jazz-sec",
    "tokens": [
     11100,
-    517
+    523
    ],
    "examples": [
     {
@@ -3140,7 +3140,7 @@
    "detail": "calendar",
    "tokens": [
     10052,
-    841
+    838
    ],
    "examples": []
   },
@@ -3160,10 +3160,10 @@
    "method": "AI",
    "status": "ok",
    "shows": 2,
-   "detail": "calendar; +1 on second look",
+   "detail": "calendar",
    "tokens": [
-    20804,
-    765
+    20823,
+    851
    ],
    "examples": []
   },
@@ -3200,7 +3200,7 @@
    "detail": "calendar",
    "tokens": [
     7460,
-    389
+    390
    ],
    "examples": []
   },
@@ -3214,7 +3214,21 @@
    "detail": "calendar",
    "tokens": [
     22922,
-    655
+    632
+   ],
+   "examples": []
+  },
+  {
+   "name": "Village Vanguard",
+   "url": "https://villagevanguard.com/",
+   "read_url": "https://villagevanguard.com/",
+   "method": "AI",
+   "status": "ok",
+   "shows": 2,
+   "detail": "calendar",
+   "tokens": [
+    8635,
+    381
    ],
    "examples": []
   },
@@ -3228,7 +3242,7 @@
    "detail": "calendar; dropped 1× date quote not found on page; +1 on second look",
    "tokens": [
     8726,
-    556
+    598
    ],
    "examples": [
     {
