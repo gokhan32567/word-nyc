@@ -86,7 +86,7 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
         row = {"name": f"{g['name']} (guide)", "url": g["url"], "method": "guide", "shows": 0}
         if not snap or not snap.ok:
             row.update(status="error", detail=(snap.error if snap else "not loaded")
-                       or f"blocked={snap.blocked} http={snap.status} chars={len(snap.text)} url={snap.final_url}")
+                       or f"blocked={snap.blocked} http={snap.status} chars={len(snap.text)} text={snap.text[:80]!r}")
             out_rows.append(row)
             log(f"  {g['name']} guide: page unreadable ({row['detail']})")
             continue
