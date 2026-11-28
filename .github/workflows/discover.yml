@@ -1,0 +1,44 @@
+name: Venue discovery
+
+# Every Monday: find music venues on listing sites that aren't on our list, test them, add the ones whose
+# calendars read cleanly, and open an issue with what was added and what wasn't.
+on:
+  schedule:
+    - cron: "41 14 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.56.0-${{ runner.os }}
+      - run: |
+          pip install --quiet playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Discover
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scraper/discover.py >> "$GITHUB_STEP_SUMMARY"
+      - name: Save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scraper/venues.json discover.json discover.md
+          git add scraper/geocache.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "Venue discovery $(date +%F) [skip ci]"; git pull --rebase -q; git push; }
+      - name: Report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Venue discovery $(date +%b\ %-d)" --body-file discover.md

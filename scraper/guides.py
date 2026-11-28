@@ -15,7 +15,13 @@ from common import ROOT, log, norm
 # Each guide: name, url, note for the reader, optional price for every event on it.
 # Not usable (Nov 2026): ClubFreeTime hides each event's venue and address behind a paid membership,
 # so its listings can't be placed on the map.
-GUIDES: list[dict] = []
+GUIDES: list[dict] = [
+    {"name": "Jazz-NYC", "url": "https://jazz-nyc.com/",
+     "note": "Daily jazz listings across the metro area, grouped by date (MM/DD/YY). Area codes: MT=Manhattan, "
+             "BK=Brooklyn, QN=Queens, BX=Bronx, NJ=New Jersey, LI=Long Island, WT=Westchester. Listings give no "
+             "street address: leave address ''. When one listing has several start times (e.g. '7:00PM & 8:45PM'), "
+             "report each set as its own event. Skip placeholder performers like 'TBD' or 'Live Music Duo'."},
+]
 
 GUIDE_TOOL = {
     "name": "report_guide_events",
