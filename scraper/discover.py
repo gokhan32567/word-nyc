@@ -43,8 +43,9 @@ SOURCES = [
     {"name": "Songkick NYC p3", "url": "https://www.songkick.com/metro-areas/7644-us-new-york-nyc?page=3"},
     {"name": "Eventbrite NYC music", "url": "https://www.eventbrite.com/d/ny--new-york/music--events--this-week/"},
     {"name": "Eventbrite Brooklyn music", "url": "https://www.eventbrite.com/d/ny--brooklyn/music--events--this-week/"},
-    {"name": "Bandsintown NYC", "url": "https://www.bandsintown.com/c/new-york-ny"},
-    {"name": "Time Out new bars", "url": "https://www.timeout.com/newyork/bars/best-new-bars-nyc"},
+    {"name": "DoNYC today", "url": "https://donyc.com/events/today"},
+    {"name": "DoNYC tomorrow", "url": "https://donyc.com/events/tomorrow"},
+    {"name": "Oh My Rockness", "url": "https://www.ohmyrockness.com/shows"},
 ]
 
 VENUES_TOOL = {
@@ -85,9 +86,10 @@ CHECK_TOOL = {
 
 NOISE = re.compile(r"\b(the|nyc|new york|brooklyn|queens|bronx|manhattan|bar|club|lounge|room|hall|"
                    r"music|jazz|cafe|café|restaurant|and|at|venue)\b", re.I)
-ALLOWED_AREAS = re.compile(r"^(mt|bk|qn|bx|si|manhattan|brooklyn|queens|bronx|staten|new york|nyc|ny|"
-                           r"jersey city|hoboken|union city|weehawken|north bergen|west new york|"
-                           r"long island city|astoria|harlem|williamsburg|bushwick|)$", re.I)
+# areas outside what we cover (the map check catches the rest)
+OUTSIDE = re.compile(r"^(li|wt|ct|pa)$|long island(?! city)|westchester|connecticut|philadelphia|newark|asbury|"
+                     r"montclair|morristown|princeton|new brunswick|yonkers|white plains|nassau|suffolk|"
+                     r"hudson valley|upstate", re.I)
 
 
 def key(name: str) -> str:
@@ -131,17 +133,17 @@ def collect(api_key: str, today: date) -> list[dict]:
         except ai.AIError as e:
             log(f"  source {s['name']}: AI error {str(e)[:120]}")
             continue
-        n = 0
-        for v in got.get("venues") or []:
+        n, listed = 0, got.get("venues") or []
+        for v in listed:
             name = (v.get("name") or "").strip()
-            if not name or not v.get("music") or not ALLOWED_AREAS.match((v.get("area") or "").strip()):
+            if not name or not v.get("music") or OUTSIDE.search((v.get("area") or "").strip()):
                 continue
             k = key(name)
             if k and k not in found:
                 found[k] = {"name": name[:80], "area": v.get("area", ""), "address": v.get("address", ""),
                             "website": v.get("website", ""), "source": s["name"]}
                 n += 1
-        log(f"  source {s['name']}: {n} venues")
+        log(f"  source {s['name']}: {len(listed)} venues listed, {n} kept")
     return list(found.values())
 
 
@@ -154,6 +156,9 @@ def test(cands: list[dict], api_key: str, today: date, geocoder) -> tuple[list[d
         snap = snaps.get(c["name"])
         if not snap or not snap.ok:
             rejected.append({**c, "why": "no readable website" if c.get("website") else "no website link"})
+            continue
+        if "eventbrite." in snap.final_url and "/o/" not in snap.final_url:
+            rejected.append({**c, "why": "only an Eventbrite event link, no venue calendar to read"})
             continue
         links = "\n".join(f"{l['text'][:60]} -> {l['href']}" for l in snap.links[:300] if l.get("text"))
         prompt = (f"Venue: {c['name']} ({c.get('area') or 'New York area'}). Today is {today:%A, %B %-d, %Y}.\n"
@@ -184,6 +189,10 @@ def test(cands: list[dict], api_key: str, today: date, geocoder) -> tuple[list[d
             why = f"address not found on the map ({addr})"
         if not why and not geo.in_nyc(*loc):
             why = "outside the area we cover"
+        if not why and re.search(r",\s*NJ\b|New Jersey", addr):
+            from areas import NJ_TOWNS, zip_of
+            if zip_of(addr) not in NJ_TOWNS:
+                why = "New Jersey town outside the ones we cover"
         if why:
             rejected.append({**c, "why": why, "address": addr})
             continue
