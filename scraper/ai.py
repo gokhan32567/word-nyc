@@ -445,6 +445,7 @@ def call_claude(api_key: str, prompt: str, max_tokens: int = 3000, tool: dict | 
             usage = {"input_tokens": int(u.get("input_tokens", 0) + 1.25 * u.get("cache_creation_input_tokens", 0)
                                          + 0.1 * u.get("cache_read_input_tokens", 0)),
                      "output_tokens": u.get("output_tokens", 0)}
+            usage["stop"] = data.get("stop_reason")
             for block in data.get("content", []):
                 if block.get("type") == "tool_use" and block.get("name") == want:
                     return block.get("input") or {}, usage

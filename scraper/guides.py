@@ -142,5 +142,6 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
                    tokens=[usage["input_tokens"], usage["output_tokens"]],
                    examples=[f"{x['time']} {x['venue']}: {x['title']}" for x in kept[:5]])
         out_rows.append(row)
-        log(f"  {g['name']} guide: {len(kept)} music events kept ({row['detail'] or 'nothing skipped'})")
+        log(f"  {g['name']} guide: {len(kept)} music events kept ({row['detail'] or 'nothing skipped'}; "
+            f"{len(got.get('events') or [])} listed, {usage['output_tokens']} tokens out, stop={usage.get('stop')})")
     return events, out_rows
