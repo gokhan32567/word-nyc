@@ -58,6 +58,10 @@ TOOL = {
                         "program": {"type": "array", "items": {"type": "string"},
                                     "description": "Works being performed, if the page lists them."},
                         "genre": {"type": "string", "enum": GENRES},
+                        "style": {"type": ["string", "null"],
+                                  "description": "Music style words the page itself uses for this event, copied exactly "
+                                                 "(e.g. 'deep house', 'afro house', 'techno', 'drill', 'boom bap'). "
+                                                 "Null if the page names no style. Never guess from an artist's name."},
                         "description": {"type": ["string", "null"],
                                         "description": "At most 25 words in your own words. Factual, no hype, no copied sentences."},
                         "link_number": {"type": ["integer", "null"],
@@ -357,12 +361,17 @@ def check(raw: dict, snap: Snapshot, links: list[dict], night: date, venue: dict
     url = links[idx]["href"] if isinstance(idx, int) and 0 <= idx < len(links) else (snap.final_url or snap.url)
     day = night + timedelta(days=1) if late else night
     genre = raw.get("genre") if raw.get("genre") in GENRES else venue.get("genre", "Other")
+    style = (raw.get("style") or "").strip()
+    if style and not words_on_page(style, page):
+        style = ""
+    from genres import subgenre_of
+    sub = subgenre_of(genre, style, title) or (venue.get("subgenre") if genre == venue.get("genre") else None)
     return {
         "title": title[:140], "performers": performers[:8], "venue": venue["name"],
         "address": venue.get("address"), "lat": venue["lat"], "lng": venue["lng"],
         "date": day.isoformat(), "time": clock_from_minutes(start),
         "end": clock_from_minutes(end) if end is not None and end != start else None,
-        "url": url, "genre": genre, "subgenre": None, "price": price[:60] if price else None,
+        "url": url, "genre": genre, "subgenre": sub or (style[:40] or None), "price": price[:60] if price else None,
         "program": program[:12], "description": desc, "image": None,
         "source": "venue-ai", "listing_url": snap.final_url or snap.url,
         "_presenter": (raw.get("presenter") or "").strip(),

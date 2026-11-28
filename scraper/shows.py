@@ -19,7 +19,8 @@ HARD = re.compile(
     r"rehearsals?|auditions?|office hours|formation|parking|"
     r"guided tours?|walking tours?|house tours?|building tours?|garden tours?|historical tours?|history tours?|"
     r"heritage tours?|museum tours?|campus tours?|tours? of|private event|on display|on view|installation|"
-    r"closed to the public|members only)\b", re.I)
+    r"closed to the public|members only|closures?|sale at the shop|black friday sale|"
+    r"(knicks|rangers|nets|liberty|islanders|yankees|mets|giants|jets) (vs|v))\b", re.I)
 
 # Usually not a show unless the title also names a performance.
 SOFT = re.compile(r"\b(mass|masses|services?|talks?|panels?|exhibitions?|markets?|forums?|retreats?|"

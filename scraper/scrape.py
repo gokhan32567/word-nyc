@@ -324,6 +324,13 @@ def merge(events: list[dict]) -> list[dict]:
         e["url"] = plain_ticket_url(e.get("url"))
         if not good_link(e.get("url")):
             e["url"] = e.get("listing_url") if good_link(e.get("listing_url")) else None
+    from genres import SUBGENRES, subgenre_of
+    for e in out:
+        if e.get("genre") in SUBGENRES:
+            names = {n for n, _ in SUBGENRES[e["genre"]]}
+            if e.get("subgenre") not in names:
+                e["subgenre"] = subgenre_of(e["genre"], e.get("subgenre") or "", e.get("title") or "",
+                                            e.get("description") or "") or e.get("subgenre")
     for e in out:
         e["performers"] = [p for p in e["performers"] if norm(p) != norm(e["title"])]
         e["artist"] = ", ".join(e["performers"][:3]) or e["title"]

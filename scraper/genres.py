@@ -42,6 +42,63 @@ BUCKETS = [
 
 GENRES = [name for name, _ in BUCKETS] + ["Other"]
 
+# Subgenres inside a genre, most specific first. Matched against the style words a page uses for a show,
+# then its title and description. Only genres listed here get a subgenre this way.
+SUBGENRES = {
+    "Hip-Hop & Rap": [
+        ("Latin Trap & Rap", [r"latin (trap|rap|hip)", r"rap en espa", r"trap latino", r"dembow"]),
+        ("Jersey Club", [r"jersey club"]),
+        ("Drill", [r"\bdrill\b"]),
+        ("Trap", [r"\btrap\b"]),
+        ("Boom Bap", [r"boom[- ]?bap"]),
+        ("Grime & UK Rap", [r"\bgrime\b", r"uk (rap|hip)"]),
+        ("Cloud & Rage", [r"cloud rap", r"emo rap", r"\bplugg", r"\brage\b", r"hyperpop"]),
+        ("Conscious", [r"conscious", r"spoken word", r"poetry"]),
+        ("Old School", [r"old[- ]school", r"golden (age|era)", r"classic hip", r"\b(80|90)'?s hip", r"throwback",
+                        r"\b45s\b", r"\bbreaks?\b", r"b-?boy", r"turntabl"]),
+        ("Freestyle & Cypher", [r"freestyle", r"\bc[iy]phers?\b", r"open mic", r"rap battle", r"battle rap",
+                                r"\bbattles?\b"]),
+        ("Beats & Instrumental", [r"beat (set|tape|showcase|battle|night)", r"\bbeats\b", r"lo-?fi",
+                                  r"instrumental", r"producers?\b"]),
+        ("Underground", [r"underground", r"indie (rap|hip)", r"alt(ernative)?[- ](rap|hip)", r"experimental (rap|hip)"]),
+        ("R&B & Hip-Hop", [r"r&b", r"\brnb\b", r"hip-?hop (and|&|vs\.?|x) "]),
+    ],
+    "Electronic & DJ": [
+        ("Afro House", [r"afro[- ]?house", r"afro[- ]?tech"]),
+        ("Afrobeats & Amapiano", [r"amapiano", r"afro[- ]?beats?"]),
+        ("Deep House", [r"deep[- ]house"]),
+        ("Tech House", [r"tech[- ]house"]),
+        ("Soulful House", [r"soulful", r"gospel house", r"garage house", r"classic house", r"vocal house"]),
+        ("Acid House", [r"\bacid\b"]),
+        ("Melodic & Progressive House", [r"melodic", r"progressive", r"organic house"]),
+        ("Ballroom & Jersey Club", [r"ballroom", r"vogue", r"jersey club", r"baltimore club"]),
+        ("Disco & Nu-Disco", [r"disco", r"boogie", r"italo", r"\bfunk"]),
+        ("Drum & Bass", [r"drum ?(and|&|n|'n') ?bass", r"\bdnb\b", r"\bd&b\b", r"jungle"]),
+        ("UK Garage & Bass", [r"uk ?garage", r"\bukg\b", r"2-?step", r"\bbass\b", r"dubstep", r"breakbeat",
+                              r"\bbreaks\b", r"footwork"]),
+        ("Hard Techno", [r"hard ?techno", r"hardcore", r"gabber", r"industrial", r"hardstyle"]),
+        ("Techno", [r"techno"]),
+        ("Trance", [r"trance"]),
+        ("EDM", [r"\bedm\b", r"big room", r"electro house", r"future bass", r"riddim"]),
+        ("Ambient & Downtempo", [r"ambient", r"downtempo", r"listening (session|bar|party)", r"balearic"]),
+        ("Reggaeton & Latin Club", [r"reggaet[oó]n", r"perreo", r"latin (club|night|party|house)", r"guaracha"]),
+        ("Hip-Hop & R&B Party", [r"hip-?hop", r"\brap\b", r"r&b", r"\brnb\b"]),
+        ("Pop & Throwback Party", [r"y2k", r"\b(19|20)\d0'?s\b", r"\b[0-9]0'?s\b", r"throwback", r"top 40",
+                                   r"emo ni(te|ght)", r"\bpop\b", r"taylor", r"indie sleaze"]),
+        ("House", [r"(?<!open )(?<!in the )(?<!full )\bhouse\b(?! (of|band|party rules|show|lights|rules))"]),
+    ],
+}
+_SUB = {g: [(n, [re.compile(p, re.I) for p in pats]) for n, pats in subs] for g, subs in SUBGENRES.items()}
+
+
+def subgenre_of(genre: str, *texts: str) -> str | None:
+    """The subgenre the first matching text points to (texts in order of trust), or None."""
+    for text in texts:
+        for name, pats in _SUB.get(genre, []):
+            if any(p.search(text or "") for p in pats):
+                return name
+    return None
+
 # Labels that carry no information (Ticketmaster uses these a lot).
 VAGUE = {"", "undefined", "other", "music", "miscellaneous", "misc", "none", "arts & theatre"}
 
