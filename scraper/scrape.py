@@ -527,7 +527,9 @@ def main() -> int:
     wanted_guides = not args.only.strip() or any(norm(g["name"]) in norm(args.only) for g in guides.GUIDES)
     if ai_key and wanted_guides and not args.no_browser:
         try:
-            found, g_rows = guides.guide_events(list(everyone.values()), rows, night, ai_key, geocoder)
+            pool_venues = list(everyone.values()) if not args.only.strip() else geo.place_venues(
+                [dict(x) for x in json.loads(Path(args.venues).read_text())["venues"]], geocoder)
+            found, g_rows = guides.guide_events(pool_venues, rows, night, ai_key, geocoder)
             collected += [e for e in found if is_show(e["title"])]
             rows += g_rows
         except Exception as e:  # noqa: BLE001
