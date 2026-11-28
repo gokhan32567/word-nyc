@@ -1572,7 +1572,21 @@
    "name": "The Jazz Club at Aman",
    "address": "9 W 56th St, New York, NY 10019",
    "url": "https://www.thejazzclub.com/programming-schedule",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "note": "Hotel jazz club in the Aman New York; sets at 6:30 and 9 PM, then a DJ, Tuesday to Saturday. Reservations required.",
+   "regular": {
+    "title": "Live jazz at The Jazz Club",
+    "time": "6:30 PM",
+    "days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "link_pattern": "\\.pdf$",
+    "description": "Two live jazz sets (6:30 and 9 PM) followed by a DJ, Tuesday to Saturday. Tap for this month's programme. Reservations required."
+   }
   },
   {
    "name": "St. Mazie Bar & Supper Club",

@@ -50,6 +50,15 @@ AI_PRICE_IN, AI_PRICE_OUT = 0.10, 0.50
 
 # ---------------------------------------------------------------- reading one venue
 
+def current_link(snap, pattern: str | None, night) -> str | None:
+    """Newest link on the venue page matching pattern, preferring one that names this month."""
+    if not snap or not pattern:
+        return None
+    hits = [l["href"] for l in snap.first_links if re.search(pattern, l["href"], re.I)]
+    month = night.strftime("%B").lower()
+    return next((h for h in hits if month in h.lower() and str(night.year) in h), None) or (hits[0] if hits else None)
+
+
 def read_venue(v: dict, snap, night: date, ai_key: str, eb_token: str) -> tuple[list[dict], dict]:
     """Returns (events, coverage row). Structured data first, AI reading as the fallback."""
     row = {"name": v["name"], "url": v["url"], "read_url": None, "method": None, "status": "error",
@@ -458,6 +467,9 @@ def main() -> int:
                           "url": v["url"], "genre": v.get("genre", "Other"), "subgenre": None, "price": None,
                           "program": [], "description": reg.get("description"), "image": None,
                           "source": "venue-regular", "listing_url": v["url"]}]
+                link = current_link(snaps.get(v["name"]), reg.get("link_pattern"), night)
+                if link:  # e.g. Jazz Club at Aman: the month's programme PDF
+                    found[0]["url"] = found[0]["listing_url"] = link
                 row.update(status="ok", shows=1, detail=(row.get("detail") or "") + "; regular night from venues.json")
             for e in found:  # a club known for one sound: use it when the listing names no style
                 if v.get("subgenre") and not e.get("subgenre") and e.get("genre") == v.get("genre"):
