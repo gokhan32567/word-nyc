@@ -118,6 +118,13 @@ def is_known(name: str, known: set[str]) -> bool:
 
 def collect(api_key: str, today: date) -> list[dict]:
     snaps = browse.snapshot_all([dict(s, no_follow=True) for s in SOURCES], today)
+    import time
+    for attempt in range(2):
+        thin = [s for s in SOURCES if not snaps.get(s["name"]) or len(snaps[s["name"]].text) < 1000]
+        if not thin:
+            break
+        time.sleep(20)
+        snaps.update(browse.snapshot_all([dict(s, no_follow=True) for s in thin], today, timeout_ms=60000))
     found: dict[str, dict] = {}
     for s in SOURCES:
         snap = snaps.get(s["name"])

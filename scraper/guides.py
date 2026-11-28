@@ -73,6 +73,13 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
     known = {norm(v["name"]): v for v in venues}
     read_ok = {r["name"] for r in rows if r.get("status") == "ok"}
     snaps = browse.snapshot_all([dict(g, no_follow=True) for g in GUIDES], night)
+    import time
+    for attempt in range(3):  # some guide pages sometimes come back nearly empty: try again after a pause
+        thin = [g for g in GUIDES if not snaps.get(g["name"]) or len(snaps[g["name"]].text) < 1000]
+        if not thin:
+            break
+        time.sleep(20)
+        snaps.update(browse.snapshot_all([dict(g, no_follow=True) for g in thin], night, timeout_ms=60000))
     events, out_rows = [], []
     for g in GUIDES:
         snap = snaps.get(g["name"])
