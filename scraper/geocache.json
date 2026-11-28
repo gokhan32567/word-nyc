@@ -56,6 +56,10 @@
   40.77374,
   -73.98496
  ],
+ "112 W 25th St, New York, NY 10001": [
+  40.74431,
+  -73.99274
+ ],
  "1120 Manhattan Ave, Brooklyn, NY 11222": [
   40.73678,
   -73.95517
@@ -108,9 +112,17 @@
   40.75981,
   -73.97928
  ],
+ "1260 Myrtle Ave, Brooklyn, NY 11221": [
+  40.69779,
+  -73.92698
+ ],
  "127 E 23rd St, New York, NY 10010": [
   40.73987,
   -73.98494
+ ],
+ "1271 Myrtle Ave, Brooklyn, NY 11221": [
+  40.69798,
+  -73.92796
  ],
  "1272 Broadway, Brooklyn, NY 11221": [
   40.6909,
@@ -140,6 +152,10 @@
   40.76394,
   -73.97946
  ],
+ "135 W 41st St, New York, NY 10036": [
+  40.75479,
+  -73.98579
+ ],
  "137-35 Northern Blvd, Flushing, NY 11354": [
   40.76391,
   -73.83007
@@ -151,6 +167,10 @@
  "14 United Nations Ave S, Queens, NY 11368": [
   40.74425,
   -73.84443
+ ],
+ "140 Stewart Ave, Brooklyn, NY 11237": [
+  40.71062,
+  -73.92618
  ],
  "140 Wilson Ave, Brooklyn, NY 11237": [
   40.70053,
@@ -252,6 +272,10 @@
   40.67302,
   -73.99103
  ],
+ "168 Delancey St, New York, NY 10002": [
+  40.718,
+  -73.98529
+ ],
  "169 Avenue A, New York, NY 10009": [
   40.72833,
   -73.98219
@@ -267,6 +291,10 @@
  "175 8th Ave, New York, NY 10011": [
   40.74282,
   -74.00071
+ ],
+ "177 Vanderbilt Ave, Brooklyn, NY 11205": [
+  40.69264,
+  -73.96947
  ],
  "178 2nd Ave, New York, NY 10003": [
   40.73046,
@@ -299,6 +327,10 @@
  "2 6th Ave, New York, NY 10013": [
   40.71931,
   -74.00484
+ ],
+ "2 Wyckoff Ave, Brooklyn, NY 11237": [
+  40.70678,
+  -73.92358
  ],
  "20 Lincoln Center Plaza, New York, NY 10023": null,
  "204 Varick St, New York, NY 10014": [
@@ -336,6 +368,10 @@
  "2271 Adam Clayton Powell Jr Blvd, New York, NY 10030": [
   40.81427,
   -73.94402
+ ],
+ "23 Meadow St, Brooklyn, NY 11206": [
+  40.71094,
+  -73.93625
  ],
  "233 Butler St, Brooklyn, NY 11217": [
   40.68217,
@@ -381,9 +417,17 @@
   40.82592,
   -73.93897
  ],
+ "260 Meserole St, Brooklyn, NY 11206": [
+  40.70846,
+  -73.93817
+ ],
  "261 Driggs Ave, Brooklyn, NY 11222": [
   40.72254,
   -73.94832
+ ],
+ "262 Starr St, Brooklyn, NY 11237": [
+  40.70645,
+  -73.92143
  ],
  "271 W 119th St, New York, NY 10026": [
   40.80613,
@@ -442,6 +486,10 @@
   40.73174,
   -74.00305
  ],
+ "325 Franklin Ave, Brooklyn, NY 11238": [
+  40.68831,
+  -73.95682
+ ],
  "325 Park Ave, New York, NY 10022": [
   40.75726,
   -73.97304
@@ -473,6 +521,10 @@
  "35 Hyatt St, Staten Island, NY 10301": [
   40.64194,
   -74.07741
+ ],
+ "366 Ten Eyck St, Brooklyn, NY 11206": [
+  40.71178,
+  -73.93517
  ],
  "37 W 26th St, New York, NY 10010": [
   40.7445,
@@ -525,6 +577,10 @@
  "44 Wyckoff Ave, Brooklyn, NY 11237": [
   40.70572,
   -73.92189
+ ],
+ "444 W 13th St, New York, NY 10014": [
+  40.74129,
+  -74.00805
  ],
  "450 Grand Concourse, Bronx, NY 10451": [
   40.81753,
@@ -593,6 +649,10 @@
  "52-19 Flushing Ave, Maspeth, NY 11378": [
   40.71528,
   -73.91367
+ ],
+ "52-19 Flushing Ave, Queens, NY 11378": [
+  40.71529,
+  -73.91365
  ],
  "543 3rd Ave, Brooklyn, NY 11215": [
   40.6685,
@@ -679,6 +739,10 @@
   40.68021,
   -73.96928
  ],
+ "641 Classon Ave, Brooklyn, NY 11238": [
+  40.67854,
+  -73.95848
+ ],
  "643 Park Ave, New York, NY 10065": [
   40.76723,
   -73.9655
@@ -727,6 +791,10 @@
   40.71809,
   -73.95029
  ],
+ "74 Wythe Ave, Brooklyn, NY 11249": [
+  40.71305,
+  -73.96577
+ ],
  "75 Christopher St, New York, NY 10014": [
   40.73363,
   -74.00328
@@ -759,6 +827,18 @@
   40.70727,
   -74.01223
  ],
+ "894 Broadway, Brooklyn, NY 11206": [
+  40.69785,
+  -73.93721
+ ],
+ "90 Scott Ave, Brooklyn, NY 11237": [
+  40.71051,
+  -73.92287
+ ],
+ "90 Wythe Ave, Brooklyn, NY 11249": [
+  40.71305,
+  -73.96577
+ ],
  "915 Wyckoff Ave, Queens, NY 11385": [
   40.69702,
   -73.90625
@@ -774,6 +854,10 @@
  "980 Park Ave, New York, NY 10028": [
   40.77864,
   -73.95876
+ ],
+ "990 Broadway, Brooklyn, NY 11221": [
+  40.69607,
+  -73.93409
  ],
  "Prospect Park West & 9th St, Brooklyn, NY 11215": [
   40.66437,
