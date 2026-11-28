@@ -13,15 +13,9 @@ from datetime import date
 from common import ROOT, log, norm
 
 # Each guide: name, url, note for the reader, optional price for every event on it.
-# Not usable (Nov 2026): ClubFreeTime hides each event's venue and address behind a paid membership,
-# so its listings can't be placed on the map.
-GUIDES: list[dict] = [
-    {"name": "Jazz-NYC", "url": "https://jazz-nyc.com/",
-     "note": "Daily jazz listings across the metro area, grouped by date (MM/DD/YY). Area codes: MT=Manhattan, "
-             "BK=Brooklyn, QN=Queens, BX=Bronx, NJ=New Jersey, LI=Long Island, WT=Westchester. Listings give no "
-             "street address: leave address ''. When one listing has several start times (e.g. '7:00PM & 8:45PM'), "
-             "report each set as its own event. Skip placeholder performers like 'TBD' or 'Live Music Duo'.", "known_only": True},
-]
+# Not usable (Nov 2026): ClubFreeTime hides venues behind a membership; Jazz-NYC sits behind a bot check
+# ("Please wait while your request is being verified"), which we don't get around.
+GUIDES: list[dict] = []
 
 GUIDE_TOOL = {
     "name": "report_guide_events",
@@ -75,7 +69,8 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
     snaps = browse.snapshot_all([dict(g, no_follow=True) for g in GUIDES], night)
     import time
     for attempt in range(3):  # some guide pages sometimes come back nearly empty: try again after a pause
-        thin = [g for g in GUIDES if not snaps.get(g["name"]) or len(snaps[g["name"]].text) < 1000]
+        thin = [g for g in GUIDES if not snaps.get(g["name"])
+                or (len(snaps[g["name"]].text) < 1000 and not snaps[g["name"]].blocked)]
         if not thin:
             break
         time.sleep(20)

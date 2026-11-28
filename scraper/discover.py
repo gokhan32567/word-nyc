@@ -34,15 +34,9 @@ MAX_ADDS = 12           # venues added per run
 RETEST_DAYS = 56
 
 SOURCES = [
-    {"name": "Jazz-NYC", "url": "https://jazz-nyc.com/",
-     "note": "Daily jazz listings across the metro area. Area codes: MT=Manhattan, BK=Brooklyn, QN=Queens, "
-             "BX=Bronx, SI=Staten Island, NJ=New Jersey, LI=Long Island, WT=Westchester. Each venue name links "
-             "to the venue's website."},
     {"name": "Songkick NYC", "url": "https://www.songkick.com/metro-areas/7644-us-new-york-nyc"},
     {"name": "Songkick NYC p2", "url": "https://www.songkick.com/metro-areas/7644-us-new-york-nyc?page=2"},
     {"name": "Songkick NYC p3", "url": "https://www.songkick.com/metro-areas/7644-us-new-york-nyc?page=3"},
-    {"name": "Eventbrite NYC music", "url": "https://www.eventbrite.com/d/ny--new-york/music--events--this-week/"},
-    {"name": "Eventbrite Brooklyn music", "url": "https://www.eventbrite.com/d/ny--brooklyn/music--events--this-week/"},
     {"name": "DoNYC today", "url": "https://donyc.com/events/today"},
     {"name": "DoNYC tomorrow", "url": "https://donyc.com/events/tomorrow"},
     {"name": "Oh My Rockness", "url": "https://www.ohmyrockness.com/shows"},
@@ -120,7 +114,8 @@ def collect(api_key: str, today: date) -> list[dict]:
     snaps = browse.snapshot_all([dict(s, no_follow=True) for s in SOURCES], today)
     import time
     for attempt in range(2):
-        thin = [s for s in SOURCES if not snaps.get(s["name"]) or len(snaps[s["name"]].text) < 1000]
+        thin = [s for s in SOURCES if not snaps.get(s["name"])
+                or (len(snaps[s["name"]].text) < 1000 and not snaps[s["name"]].blocked)]
         if not thin:
             break
         time.sleep(20)

@@ -22,7 +22,7 @@ CALENDAR_WORDS = re.compile(r"calendar|events?\b|schedule|shows?\b|concerts?|per
                             r"line-?up|upcoming|season|music|tickets|jazz|live|program", re.I)
 CLOCK = re.compile(r"\b\d{1,2}(?::\d{2})?\s*(?:a\.?m\.?|p\.?m\.?)(?![a-z])|\b\d{1,2}:\d{2}\b", re.I)
 BLOCK_SIGNS = re.compile(r"just a moment|verify you are human|access denied|attention required|"
-                         r"are you a robot|captcha|request blocked|forbidden", re.I)
+                         r"are you a robot|captcha|request blocked|forbidden|request is being verified|checking your browser", re.I)
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
           "october", "november", "december"]
 DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
