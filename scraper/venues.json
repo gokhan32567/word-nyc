@@ -1323,9 +1323,9 @@
    "subgenre": "House & Techno"
   },
   {
-   "name": "Brooklyn Pacha",
+   "name": "Pacha New York",
    "address": "140 Stewart Ave, Brooklyn, NY 11237",
-   "url": "https://pachanyc.com/",
+   "url": "https://pacha-nyc.com/",
    "genre": "Electronic & DJ",
    "note": "Pacha's Brooklyn clubs: the indoor Brooklyn Pacha (former Great Hall) and the open-air Pacha New York (summer) at the same address. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
    "subgenre": "House & Techno"
@@ -1341,10 +1341,20 @@
   {
    "name": "Gabriela",
    "address": "90 Wythe Ave, Brooklyn, NY 11249",
-   "url": "https://www.gabrielanyc.com/",
+   "url": "https://nyctourism.com/nightlife/gabriela/",
    "genre": "Electronic & DJ",
-   "note": "Eli Escobar's small house-music club. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "House"
+   "note": "Eli Escobar's small house-music club; it posts lineups only on Resident Advisor, which can't be read.",
+   "subgenre": "House",
+   "regular": {
+    "title": "House & disco DJs",
+    "time": "10:00 PM",
+    "days": [
+     3,
+     4,
+     5
+    ],
+    "description": "DJs from 10 PM at Eli Escobar's dance club (deep house, disco, R&B). Doors 9 PM; no guest list."
+   }
   },
   {
    "name": "House of Yes",
@@ -1364,10 +1374,15 @@
   {
    "name": "Bossa Nova Civic Club",
    "address": "1271 Myrtle Ave, Brooklyn, NY 11221",
-   "url": "https://www.bossanovacivicclub.com/",
+   "url": "https://app.discotech.me/new-york/bossa-nova",
    "genre": "Electronic & DJ",
-   "note": "Small Bushwick techno and house club, open nightly. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "Techno"
+   "note": "Small Bushwick house and techno club. This is its page on Discotech; list tonight's party with its DJs.",
+   "subgenre": "Techno",
+   "regular": {
+    "title": "Club night",
+    "time": "10:00 PM",
+    "description": "Nightly house and techno DJs at the 140-capacity Bushwick club; happy-hour sets from 7 PM."
+   }
   },
   {
    "name": "Basement",
@@ -1375,22 +1390,15 @@
    "url": "https://basementny.net/",
    "genre": "Electronic & DJ",
    "note": "Techno club under Knockdown Center. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "Techno"
+   "subgenre": "Techno",
+   "no_follow": true
   },
   {
    "name": "Le Bain",
-   "address": "848 Washington St, New York, NY 10014",
-   "url": "https://www.lebainnyc.com/",
+   "address": "444 W 13th St, New York, NY 10014",
+   "url": "https://www.standardhotels.com/high-line/venues/le-bain",
    "genre": "Electronic & DJ",
-   "note": "Rooftop club at The Standard, High Line (house and disco). Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "House"
-  },
-  {
-   "name": "Virgo",
-   "address": "324 Grand St, New York, NY 10002",
-   "url": "https://www.virgo.nyc/",
-   "genre": "Electronic & DJ",
-   "note": "Lower East Side house and electronic club. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
+   "note": "Rooftop club at The Standard, High Line (house and disco). The page lists 'Upcoming happenings' as 'Name (date, time)'. List the night parties with DJs named; skip the generic 'Le Bain Sunset' entries.",
    "subgenre": "House"
   },
   {
@@ -1403,30 +1411,23 @@
   {
    "name": "Jupiter Disco",
    "address": "1237 Flushing Ave, Brooklyn, NY 11237",
-   "url": "https://www.jupiterdisco.com/",
+   "url": "https://www.jupiterdisco.com/events",
    "genre": "Electronic & DJ",
    "note": "Bushwick DJ bar. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
   },
   {
    "name": "Mood Ring",
    "address": "1260 Myrtle Ave, Brooklyn, NY 11221",
-   "url": "https://www.moodringnyc.com/",
+   "url": "https://app.discotech.me/new-york/mood-ring",
    "genre": "Electronic & DJ",
-   "note": "Bushwick bar with nightly DJ parties. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
+   "note": "Bushwick bar and dance club. This is its page on Discotech; list DJ parties, skip karaoke and comedy."
   },
   {
    "name": "Paragon",
    "address": "990 Broadway, Brooklyn, NY 11221",
-   "url": "https://www.paragon.nyc/",
+   "url": "https://dice.fm/venue/paragon-n958",
    "genre": "Electronic & DJ",
-   "note": "Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
-  },
-  {
-   "name": "TBA Brooklyn",
-   "address": "395 Wythe Ave, Brooklyn, NY 11249",
-   "url": "https://www.tbabrooklyn.com/",
-   "genre": "Electronic & DJ",
-   "note": "Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
+   "note": "Bushwick dance club (house, techno, ballroom). This is its DICE page.",
    "subgenre": "House & Techno"
   },
   {
@@ -1437,26 +1438,11 @@
    "note": "Queer club and performance venue. List dance parties and concerts; skip drag-only shows without music."
   },
   {
-   "name": "Black Flamingo",
-   "address": "168 Borinquen Pl, Brooklyn, NY 11211",
-   "url": "https://www.blackflamingonyc.com/",
-   "genre": "Electronic & DJ",
-   "note": "Williamsburg basement club (house and disco). Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "House"
-  },
-  {
    "name": "Somewhere Nowhere",
    "address": "112 W 25th St, New York, NY 10001",
    "url": "https://www.somewherenowherenyc.com/",
    "genre": "Electronic & DJ",
    "note": "Chelsea rooftop club. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
-  },
-  {
-   "name": "Musica",
-   "address": "637 W 50th St, New York, NY 10019",
-   "url": "https://musicaclubnyc.com/",
-   "genre": "Electronic & DJ",
-   "note": "Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
   },
   {
    "name": "Café Erzulie",
@@ -1489,7 +1475,7 @@
   {
    "name": "Brooklyn Made",
    "address": "428 Troutman St, Brooklyn, NY 11237",
-   "url": "https://www.brooklynmade.com/",
+   "url": "https://www.brooklynmadepresents.com/",
    "genre": "Hip-Hop & Rap",
    "note": "Bushwick concert venue; rap, R&B and indie shows."
   },
@@ -1506,20 +1492,6 @@
    "url": "https://www.thedelancey.com/",
    "genre": "Hip-Hop & Rap",
    "note": "Three-floor Lower East Side club with hip-hop shows and DJ parties."
-  },
-  {
-   "name": "Katra",
-   "address": "217 Bowery, New York, NY 10002",
-   "url": "https://www.katranyc.com/",
-   "genre": "Hip-Hop & Rap",
-   "note": "Bowery lounge with hip-hop, Afrobeats and Caribbean DJ nights. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
-  },
-  {
-   "name": "Baker Falls",
-   "address": "101 Avenue A, New York, NY 10009",
-   "url": "https://www.bakerfalls.nyc/",
-   "genre": "Hip-Hop & Rap",
-   "note": "East Village venue (home of Knitting Factory shows): rap, indie and punk shows."
   },
   {
    "name": "Xanadu",
