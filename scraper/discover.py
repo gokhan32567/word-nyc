@@ -87,7 +87,9 @@ OUTSIDE = re.compile(r"^(li|wt|ct|pa)$|long island(?! city)|westchester|connecti
 
 
 def key(name: str) -> str:
-    return norm(NOISE.sub(" ", name or "")) or norm(name)
+    import unicodedata
+    name = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode()  # LunÀtico = Lunatico
+    return norm(NOISE.sub(" ", name)) or norm(name)
 
 
 def known_keys() -> set[str]:

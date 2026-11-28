@@ -1503,6 +1503,39 @@
    "url": "https://www.ohmyrockness.com/venues/sleepwalk",
    "genre": "Indie & Alternative",
    "note": "Added by the weekly discovery job (found on Oh My Rockness)."
+  },
+  {
+   "name": "181 Cabrini",
+   "address": "854 W 181st St, New York, NY 10033",
+   "url": "https://jazzwahi.org/",
+   "genre": "Jazz",
+   "note": "Jazz WaHi presents a free Saturday happy-hour jazz set at this Washington Heights bistro.",
+   "regular": {
+    "title": "Jazz WaHi Happy Hour",
+    "time": "5:00 PM",
+    "days": [
+     5
+    ],
+    "description": "Free Saturday jazz set (5–7 PM) presented by Jazz WaHi at 181 Cabrini in Washington Heights."
+   }
+  },
+  {
+   "name": "Club Room at Soho Grand",
+   "address": "310 W Broadway, New York, NY 10013",
+   "url": "https://sohogrand.com/dining/club-room",
+   "genre": "Jazz",
+   "note": "Supper club in the Soho Grand Hotel with live jazz Wednesday to Saturday evenings.",
+   "regular": {
+    "title": "Live jazz in the Parlor",
+    "time": "7:00 PM",
+    "days": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "description": "Live jazz from rotating New York artists in the Soho Grand's Club Room, Wednesday to Saturday; $20 cover for Parlor seating."
+   }
   }
  ]
 }
