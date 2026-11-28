@@ -190,6 +190,14 @@
  "Birdland Theater": {
   "name": "Birdland Theater"
  },
+ "Birds": {
+  "name": "Birds",
+  "address": "64 Downing St, New York, NY 10014",
+  "lat": 40.72883,
+  "lng": -74.00487,
+  "genre": "World",
+  "last": "2026-11-28"
+ },
  "Blue Note Jazz Club": {
   "name": "Blue Note Jazz Club",
   "address": "131 W 3rd St, New York, NY 10012",
@@ -971,7 +979,7 @@
   "lat": 40.72565,
   "lng": -73.97802,
   "genre": "Electronic & DJ",
-  "last": "2026-11-25"
+  "last": "2026-11-28"
  },
  "OPERA America National Opera Center": {
   "name": "OPERA America National Opera Center",
@@ -1466,7 +1474,7 @@
   "lat": 40.72846,
   "lng": -73.9995,
   "genre": "Rock",
-  "last": "2026-11-27"
+  "last": "2026-11-28"
  },
  "The Riverside Church": {
   "name": "The Riverside Church",
