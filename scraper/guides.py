@@ -20,7 +20,7 @@ GUIDES: list[dict] = [
      "note": "Daily jazz listings across the metro area, grouped by date (MM/DD/YY). Area codes: MT=Manhattan, "
              "BK=Brooklyn, QN=Queens, BX=Bronx, NJ=New Jersey, LI=Long Island, WT=Westchester. Listings give no "
              "street address: leave address ''. When one listing has several start times (e.g. '7:00PM & 8:45PM'), "
-             "report each set as its own event. Skip placeholder performers like 'TBD' or 'Live Music Duo'."},
+             "report each set as its own event. Skip placeholder performers like 'TBD' or 'Live Music Duo'.", "known_only": True},
 ]
 
 GUIDE_TOOL = {
@@ -80,18 +80,24 @@ def guide_events(venues: list[dict], rows: list[dict], night: date, ai_key: str,
         if not snap or not snap.ok:
             row.update(status="error", detail=(snap.error if snap else "not loaded") or "page unreadable")
             out_rows.append(row)
+            log(f"  {g['name']} guide: page unreadable ({row['detail']})")
             continue
         if os.environ.get("VENUE_FILTER"):  # test runs: keep what the guide page showed (debug branch)
             with open(ROOT / "debug.txt", "a") as f:
                 f.write(f"\n### {g['name']}\n{snap.final_url} (HTTP {snap.status}, {len(snap.text)} chars)\n"
                         f"```\n{snap.text[:20000]}\n```\n")
         links = "\n".join(f"{l['text'][:80]} -> {l['href']}" for l in snap.links[:400] if l.get("text"))
+        only_known = ""
+        if g.get("known_only"):  # listings without addresses can only be placed at venues we already know
+            only_known = ("Report only events at these venues (names may be written slightly differently): "
+                          + "; ".join(sorted(v["name"] for v in venues)) + "\n")
         prompt = (f"{g['note']}\nNight to report: {night:%A, %B %-d, %Y}. {ai.loaded_note(night)}\n"
                   f"List only events on that night at a physical place in New York City or the New Jersey towns "
-                  f"across the Hudson. Copy venue names, addresses and times exactly as listed; never guess them.\n\n"
+                  f"across the Hudson. Copy venue names, addresses and times exactly as listed; never guess them.\n"
+                  f"{only_known}\n"
                   f"PAGE TEXT ({snap.final_url}):\n{snap.text[:60_000]}\n\nLINKS:\n{links[:15_000]}")
         try:
-            got, usage = ai.call_claude(ai_key, prompt, max_tokens=4000, tool=GUIDE_TOOL,
+            got, usage = ai.call_claude(ai_key, prompt, max_tokens=12000, tool=GUIDE_TOOL,
                                         ask="Report the music events with report_guide_events.")
         except ai.AIError as e:
             row.update(status="error", detail=str(e)[:200])
