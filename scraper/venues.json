@@ -1536,6 +1536,72 @@
     ],
     "description": "Live jazz from rotating New York artists in the Soho Grand's Club Room, Wednesday to Saturday; $20 cover for Parlor seating."
    }
+  },
+  {
+   "name": "Five Spot Jazz",
+   "address": "231 E 9th St, New York, NY 10003",
+   "url": "https://www.fivespotjazz.com/upcomingshows",
+   "genre": "Jazz"
+  },
+  {
+   "name": "JazzCultural",
+   "address": "349 W 46th St, New York, NY 10036",
+   "url": "https://www.jazzcultural.com/calendar/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "One Flight Up",
+   "address": "108 Greenwich St, New York, NY 10006",
+   "url": "https://www.oneflightupjazz.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "The Pocket Jazz Club",
+   "address": "130 W 46th St, New York, NY 10036",
+   "url": "https://thepocketnyc.com/calendar/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "Winnie's Jazz Club",
+   "address": "63 W 38th St, New York, NY 10018",
+   "url": "https://winniesjazzclub.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "The Jazz Club at Aman",
+   "address": "9 W 56th St, New York, NY 10019",
+   "url": "https://www.thejazzclub.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "St. Mazie Bar & Supper Club",
+   "address": "345 Grand St, Brooklyn, NY 11211",
+   "url": "https://www.stmazie.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "The Rum House",
+   "address": "228 W 47th St, New York, NY 10036",
+   "url": "https://www.therumhousenyc.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "Knickerbocker Bar & Grill",
+   "address": "33 University Pl, New York, NY 10003",
+   "url": "https://www.knickerbockerbarandgrill.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "The Back Room",
+   "address": "102 Norfolk St, New York, NY 10002",
+   "url": "https://www.backroomnyc.com/",
+   "genre": "Jazz"
+  },
+  {
+   "name": "Barclay InterContinental (The Parlour)",
+   "address": "111 E 48th St, New York, NY 10017",
+   "url": "https://www.icbarclay.com/jazz-on-lex",
+   "genre": "Jazz"
   }
  ]
 }
