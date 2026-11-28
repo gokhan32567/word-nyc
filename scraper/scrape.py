@@ -175,7 +175,7 @@ def assign_presenter(e: dict, targets: dict) -> dict | None:
     who = norm(e.get("_presenter") or "")
     for org, t in targets.items():
         if who and (norm(org) in who or who in norm(org)):
-            e.update(venue=t["name"], address=t.get("address"), lat=t["lat"], lng=t["lng"])
+            e.update(venue=t["name"], address=t.get("address"), lat=t["lat"], lng=t["lng"], _via_campus=True)
             return e
     return None
 
@@ -262,6 +262,13 @@ def add_venue_links(events: list[dict], venues: list[dict]) -> None:
 
 def absorb(into: dict, other: dict) -> None:
     """Fill gaps in one record with another source's details."""
+    # a campus calendar only knows the presenter (Jazz at Lincoln Center); the room's own calendar knows the
+    # room (Dizzy's Club): keep the more specific one
+    if into.get("_via_campus") and not other.get("_via_campus") and other.get("venue") != into.get("venue"):
+        for f in ("venue", "address", "lat", "lng", "venue_url"):
+            if other.get(f):
+                into[f] = other[f]
+        into.pop("_via_campus", None)
     for f in FILL:
         if not into.get(f) and other.get(f):
             into[f] = other[f]
@@ -317,6 +324,8 @@ def merge(events: list[dict]) -> list[dict]:
                 break
         else:
             out.append({**e, "performers": list(e.get("performers") or []), "program": list(e.get("program") or [])})
+    for e in out:
+        e.pop("_via_campus", None)
     out = drop_cross_venue_copies(out)
     from common import good_link
     from common import plain_ticket_url
