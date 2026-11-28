@@ -450,6 +450,9 @@ def main() -> int:
                           "program": [], "description": reg.get("description"), "image": None,
                           "source": "venue-regular", "listing_url": v["url"]}]
                 row.update(status="ok", shows=1, detail=(row.get("detail") or "") + "; regular night from venues.json")
+            for e in found:  # a club known for one sound: use it when the listing names no style
+                if v.get("subgenre") and not e.get("subgenre") and e.get("genre") == v.get("genre"):
+                    e["subgenre"] = v["subgenre"]
             log(f"  {v['name']}: {row['status']} {row['shows']} {row.get('method') or ''} {row.get('detail') or ''}".rstrip())
             collected += found
             rows.append(row)

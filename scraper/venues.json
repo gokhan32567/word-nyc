@@ -1346,7 +1346,7 @@
    "note": "Eli Escobar's small house-music club; it posts lineups only on Resident Advisor, which can't be read.",
    "subgenre": "House",
    "regular": {
-    "title": "House & disco DJs",
+    "title": "House music DJs",
     "time": "10:00 PM",
     "days": [
      3,
@@ -1377,7 +1377,7 @@
    "url": "https://app.discotech.me/new-york/bossa-nova",
    "genre": "Electronic & DJ",
    "note": "Small Bushwick house and techno club. This is its page on Discotech; list tonight's party with its DJs.",
-   "subgenre": "Techno",
+   "subgenre": "House & Techno",
    "regular": {
     "title": "Club night",
     "time": "10:00 PM",
@@ -1390,8 +1390,7 @@
    "url": "https://basementny.net/",
    "genre": "Electronic & DJ",
    "note": "Techno club under Knockdown Center. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages.",
-   "subgenre": "Techno",
-   "no_follow": true
+   "subgenre": "Techno"
   },
   {
    "name": "Le Bain",
@@ -1407,13 +1406,6 @@
    "url": "https://nebulanewyork.com/events/",
    "genre": "Electronic & DJ",
    "note": "Midtown nightclub (EDM, house, hip-hop nights). Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
-  },
-  {
-   "name": "Jupiter Disco",
-   "address": "1237 Flushing Ave, Brooklyn, NY 11237",
-   "url": "https://www.jupiterdisco.com/events",
-   "genre": "Electronic & DJ",
-   "note": "Bushwick DJ bar. Dance club. List each night's party with the DJs named on the page; skip private events and table-booking pages."
   },
   {
    "name": "Mood Ring",
@@ -1471,13 +1463,6 @@
    "url": "https://www.thebrooklynmonarch.com/",
    "genre": "Hip-Hop & Rap",
    "note": "East Williamsburg venue complex (The Brooklyn Monarch, The Meadows, The Woodshop) with rap, metal and electronic shows."
-  },
-  {
-   "name": "Brooklyn Made",
-   "address": "428 Troutman St, Brooklyn, NY 11237",
-   "url": "https://www.brooklynmadepresents.com/",
-   "genre": "Hip-Hop & Rap",
-   "note": "Bushwick concert venue; rap, R&B and indie shows."
   },
   {
    "name": "Brooklyn Music Kitchen",
