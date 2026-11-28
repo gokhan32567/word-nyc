@@ -64,6 +64,7 @@ SUBGENRES = {
         ("R&B & Hip-Hop", [r"r&b", r"\brnb\b", r"hip-?hop (and|&|vs\.?|x) "]),
     ],
     "Electronic & DJ": [
+        ("House & Techno", [r"house (and|&|\+|/|,) ?techno", r"techno (and|&|\+|/|,) ?house"]),
         ("Afro House", [r"afro[- ]?house", r"afro[- ]?tech"]),
         ("Afrobeats & Amapiano", [r"amapiano", r"afro[- ]?beats?"]),
         ("Deep House", [r"deep[- ]house"]),
