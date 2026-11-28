@@ -1559,7 +1559,8 @@
    "name": "The Pocket Jazz Club",
    "address": "130 W 46th St, New York, NY 10036",
    "url": "https://thepocketnyc.com/calendar/list",
-   "genre": "Jazz"
+   "genre": "Jazz",
+   "no_follow": true
   },
   {
    "name": "Winnie's Jazz Club",
